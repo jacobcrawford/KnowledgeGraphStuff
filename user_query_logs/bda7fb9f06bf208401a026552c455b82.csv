@@ -1,0 +1,1109 @@
+,query
+0,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/South_Korea> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+1,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/United> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+2,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/North> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+3,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Collective_security> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+4,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Threat> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+5,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Allies> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+6,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Plan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+7,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Counter> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+8,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/North_Korea> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+9,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/South> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+10,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Attack> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+11,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Warship> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+12,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Ince> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+13,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Island> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+14,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Military> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+15,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/S> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+16,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Plan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+17,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Joint> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+18,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/General_officer> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+19,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Korea> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+20,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Year> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+21,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/United_States> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+22,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Commander> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+23,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/James_D._Thurman> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+24,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Friday> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+25,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Plan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+26,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Military_strategy> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+27,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Force> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+28,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Plan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+29,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Effect> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+30,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Plan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+31,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Provocation> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+32,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Plan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+33,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Military_aid> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+34,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/War> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+35,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Breakbeat> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+36,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Plan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+37,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Strategy> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+38,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Type> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+39,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Office> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+40,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Pyongyang> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+41,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Humanitarian_aid> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+42,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Dialogue> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+43,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Obligations> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+44,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Yonhap_News_Agency> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+45,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Sunday> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+46,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Official> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+47,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Park_Geun-hye> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+48,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Policy> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+49,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Administration> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+50,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Policy> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+51,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Government> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+52,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Approval> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+53,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Shipping> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+54,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Charitable_trust> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+55,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/News> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+56,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Home> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+57,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Wednesday> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+58,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Match> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+59,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Founder> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+60,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/World_Cup> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+61,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Game> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+62,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Winners> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+63,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Ronaldinho> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+64,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Brazil> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+65,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Presence> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+66,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Squad> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+67,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Clube_Atl�tico_Mineiro> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+68,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Europe> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+69,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Player> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+70,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Career> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+71,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Appearance> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+72,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Exile> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+73,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Year> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+74,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Luiz_Felipe_Scolari> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+75,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Paris> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+76,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Barcelona> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+77,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/A.C._Milan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+78,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Experience> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+79,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Saint-Germain> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+80,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Neymar> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+81,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Star> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+82,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Talent> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+83,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Santos> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+84,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Goal_(disambiguation)> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+85,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Appearance> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+86,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Selection> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+87,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Scolari> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+88,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Tuesday> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+89,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Players> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+90,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Lionel_Messi> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+91,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Ronaldo> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+92,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/World> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+93,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Scolari> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+94,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Helm> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+95,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Title> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+96,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Decade> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+97,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Experience> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+98,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/CBF> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+99,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/World_Cup> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+100,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Home_soil> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+101,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Confederation> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+102,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Crowd> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+103,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Berlin> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+104,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Thing> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+105,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Berlin_Philharmonic> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+106,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Visit> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+107,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Pergamon_Museum> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+108,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Museum_Island> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+109,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Day> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+110,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Topography> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+111,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Museum> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+112,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Bundestag> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+113,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Explorer_(disambiguation)> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+114,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Deutsches_Historisches_Museum> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+115,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Germany> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+116,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Berlin_Wall> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+117,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Memorial> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+118,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/History> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+119,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Potsdam> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+120,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Beauty> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+121,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/World_War_II> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+122,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/European_Union> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+123,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/City> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+124,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Media> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+125,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Science> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+126,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Global_city> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+127,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Politics> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+128,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Media> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+129,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Media> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+130,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Festival> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+131,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Nightlife> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+132,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Public_transport> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+133,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Arts> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+134,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Quality> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+135,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Network> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+136,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Page> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+137,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Facebook> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+138,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Sign> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+139,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Tension> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+140,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Football_player> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+141,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Move> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+142,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Eyebrow> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+143,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Jong_Tae-Se> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+144,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Samsung> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+145,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Week> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+146,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Player> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+147,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/K-League> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+148,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Jong> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+149,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Understanding> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+150,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Country> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+151,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Ambassador> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+152,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Kawasaki_Frontale> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+153,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Jong> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+154,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Club> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+155,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Cologne> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+156,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/VfL_Bochum> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+157,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Year> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+158,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Club> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+159,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Thursday> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+160,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Jong> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+161,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Club> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+162,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Physical> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+163,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/United> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+164,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Collective_security> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+165,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Plan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+166,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Attack> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+167,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Plan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+168,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/General_officer> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+169,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Year> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+170,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Plan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+171,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Military_strategy> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+172,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Plan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+173,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Effect> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+174,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Plan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+175,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Provocation> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+176,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Plan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+177,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Military_aid> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+178,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Breakbeat> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+179,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Plan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+180,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Strategy> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+181,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Type> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+182,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Obligations> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+183,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Yonhap_News_Agency> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+184,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Official> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+185,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Policy> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+186,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Administration> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+187,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Policy> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+188,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Government> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+189,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Approval> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+190,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Charitable_trust> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+191,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Founder> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+192,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/World_Cup> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+193,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Presence> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+194,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Clube_Atl�tico_Mineiro> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+195,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Player> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+196,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Appearance> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+197,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Year> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+198,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Experience> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+199,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Saint-Germain> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+200,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Talent> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+201,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Santos> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+202,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Goal_(disambiguation)> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+203,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Appearance> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+204,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Scolari> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+205,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Players> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+206,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Scolari> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+207,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Helm> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+208,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Title> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+209,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Decade> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+210,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Experience> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+211,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/CBF> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+212,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/World_Cup> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+213,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Confederation> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+214,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Home_soil> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+215,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Thing> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+216,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Visit> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+217,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Explorer_(disambiguation)> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+218,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/European_Union> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+219,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Media> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+220,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Media> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+221,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Media> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+222,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Arts> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+223,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Network> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+224,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Quality> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+225,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Page> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+226,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Tension> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+227,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Football_player> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+228,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Eyebrow> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+229,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Week> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+230,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Player> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+231,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/K-League> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+232,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Jong> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+233,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Understanding> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+234,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Jong> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+235,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Club> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+236,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Club> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+237,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Year> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+238,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Jong> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+239,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Club> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+240,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Physical> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+241,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Jan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+242,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/United> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+243,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Collective_security> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+244,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Plan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+245,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Attack> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+246,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Plan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+247,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Year> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+248,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/General_officer> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+249,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Plan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+250,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Military_strategy> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+251,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Plan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+252,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Effect> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+253,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Plan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+254,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Provocation> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+255,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Plan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+256,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Military_aid> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+257,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Breakbeat> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+258,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Plan> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+259,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Strategy> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+260,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Type> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+261,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Obligations> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+262,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Yonhap_News_Agency> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+263,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Official> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+264,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Policy> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+265,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Administration> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+266,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Policy> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+267,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Government> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+268,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Approval> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+269,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Charitable_trust> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+270,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Founder> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+271,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/World_Cup> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+272,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Presence> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+273,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Clube_Atl�tico_Mineiro> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+274,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Player> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+275,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Appearance> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"
+276,"select distinct * WHERE
+{
+<http://dbpedia.org/resource/Year> <http://dbpedia.org/ontology/thumbnail> ?thumbnail}
+"

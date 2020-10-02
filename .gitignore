@@ -1,5 +1,8 @@
 dbpedia3.8
 DBPedia3.9Full
+DBPedia3.9Unique
+
+.idea
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -1,0 +1,2006 @@
+,query
+0,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays ;
+    dbpprop:country ?pays ;
+    dbpprop:name ?nomFromage ;
+    dbpprop:source ?typeLait ;
+    dbpprop:texture ?texture ;
+    dbpprop:aging ?fraicheur .
+ 
+}"
+1,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays ;
+    dbpprop:country ?pays ;
+    dbpprop:name ?nomFromage ;
+    dbpprop:source ?typeLait ;
+    dbpprop:texture ?texture ;
+    dbpprop:aging ?fraicheur .
+ 
+}"
+2,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays ;
+    dbpprop:country ?pays ;
+    dbpprop:name ?nomFromage ;
+    dbpprop:source ?typeLait ;
+    dbpprop:texture ?texture ;
+    dbpprop:aging ?fraicheur .
+ 
+}"
+3,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays ;
+    dbpprop:country ?pays ;
+    dbpprop:name ?nomFromage ;
+    dbpprop:source ?typeLait ;
+    dbpprop:texture ?texture ;
+    dbpprop:aging ?fraicheur .
+ 
+}"
+4,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays ;
+    dbpprop:country ?pays ;
+    dbpprop:name ?nomFromage ;
+    dbpprop:source ?typeLait ;
+    dbpprop:texture ?texture ;
+    dbpprop:aging ?fraicheur .
+ 
+}"
+5,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays ;
+    dbpprop:country ?pays ;
+    dbpprop:name ?nomFromage ;
+    dbpprop:source ?typeLait ;
+    dbpprop:texture ?texture ;
+    dbpprop:aging ?fraicheur .
+ 
+}"
+6,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays ;
+    dbpprop:country ?pays ;
+    dbpprop:name ?nomFromage ;
+    dbpprop:source ?typeLait .
+ OPTIONAL (?fromage dbpprop:texture ?texture .
+ dbpprop:aging ?fraicheur) .
+ 
+}"
+7,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays ;
+    dbpprop:country ?pays ;
+    dbpprop:name ?nomFromage ;
+    dbpprop:source ?typeLait .
+ OPTIONAL {?fromage dbpprop:texture ?texture .
+ dbpprop:aging ?fraicheur} .
+ 
+}"
+8,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays ;
+    dbpprop:country ?pays ;
+    dbpprop:name ?nomFromage ;
+    dbpprop:source ?typeLait .
+ OPTIONAL {?fromage dbpprop:texture ?texture .
+ dbpprop:aging ?fraicheur . } .
+ 
+}"
+9,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays ;
+    dbpprop:country ?pays ;
+    dbpprop:name ?nomFromage ;
+    dbpprop:source ?typeLait .
+ OPTIONAL {?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur} .
+ 
+}"
+10,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays ;
+    
+ OPTIONAL {
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur} .
+ 
+}"
+11,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays ;
+    
+ OPTIONAL {
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur 
+ } .
+ 
+}"
+12,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    
+ OPTIONAL {
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur 
+ } .
+ 
+}"
+13,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    
+ OPTIONAL {
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur 
+ } .
+ 
+}"
+14,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur 
+ .
+ 
+}"
+15,"select distinct count(distinct ?tag) ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    
+ OPTIONAL {
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur 
+ } .
+ 
+}"
+16,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays count(distinct ?fromage )
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    
+ OPTIONAL {
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur 
+ } .
+ 
+}"
+17,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays count( * )
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    
+ OPTIONAL {
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur 
+ } .
+ 
+}"
+18,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays count( * )
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    
+ OPTIONAL {
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur 
+ } .
+ 
+}"
+19,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}"
+20,"select distinct (COUNT(*) as ?count) ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}"
+21,"select distinct (COUNT(*) as ?count) (SUM(?count) AS ?total) ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}"
+22,"select distinct (COUNT(*) as ?count) (SUM(?count) as ?total) ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}"
+23,"select distinct (COUNT(*) as ?count) ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}"
+24,"select distinct (COUNT(distinct ?fromage) as ?count) ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}"
+25,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays (COUNT(*) as ?count)
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}"
+26,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays (COUNT(*) as ?count)
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}GROUP BY ?fromage"
+27,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays (COUNT(*) as ?count)
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}GROUP BY ?pays"
+28,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays (COUNT(?fromage) as ?count)
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}"
+29,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays (COUNT(?fromage) as ?count)
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}"
+30,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays (COUNT(?fromage) as ?count)
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}"
+31,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays (COUNT(?fromage) as ?count)
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}"
+32,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}"
+33,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}"
+34,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}OFFSET 170"
+35,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}LIMIT 250"
+36,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}OFFSET 169"
+37,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+OPTIONAL { 
+   ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+38,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}"
+39,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+OPTIONAL { 
+   ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+40,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}LIMIT 50"
+41,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}LIMIT 50 OFFESET 50"
+42,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}
+LIMIT 50
+OFFESET 50"
+43,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}
+LIMIT 50
+OFFSET 50"
+44,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}
+LIMIT 100
+OFFSET 50"
+45,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}
+LIMIT 100
+OFFSET 100"
+46,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}
+LIMIT 100
+OFFSET 200"
+47,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}
+LIMIT 50
+OFFSET 190"
+48,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}
+LIMIT 50
+OFFSET 160"
+49,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+    ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur .
+ 
+}
+LIMIT 50
+OFFSET 160"
+50,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+OPTIONAL { 
+   ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}
+LIMIT 50
+OFFSET 160"
+51,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+OPTIONAL { 
+   ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:source ?typeLait .
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}
+LIMIT 50
+OFFSET 160"
+52,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage dbpprop:country ?pays .
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:source ?typeLait .
+OPTIONAL { 
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}
+LIMIT 50
+OFFSET 160"
+53,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage dbpprop:country ?pays .
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:source ?typeLait .
+ ?fromage dbpprop:texture ?texture .
+OPTIONAL { 
+    ?fromage dbpprop:aging ?fraicheur }.
+}"
+54,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage dbpprop:country ?pays .
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:source ?typeLait .
+OPTIONAL { 
+    ?fromage dbpprop:texture ?texture .
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+55,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ 
+OPTIONAL { 
+    ?fromage dbpprop:texture ?texture .
+?fromage dbpprop:source ?typeLait .
+ ?fromage dbpprop:country ?pays .
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+56,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ 
+ 
+OPTIONAL { 
+    ?fromage dbpprop:texture ?texture .
+?fromage dbpprop:source ?typeLait .
+ ?fromage dbpprop:country ?pays .
+?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+57,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ 
+ 
+OPTIONAL { 
+    ?fromage dbpprop:texture ?texture .
+?fromage dbpprop:source ?typeLait .
+ ?fromage dbpprop:country ?pays .
+?fromage dbpprop:name ?nomFromage .
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+58,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+?fromage dbpprop:source ?typeLait .
+ ?fromage dbpprop:country ?pays .
+ 
+OPTIONAL { 
+    
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+59,"select (distinct ?fromage) ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+?fromage dbpprop:source ?typeLait .
+ ?fromage dbpprop:country ?pays .
+ 
+OPTIONAL { 
+    
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+60,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+?fromage dbpprop:source ?typeLait .
+ ?fromage dbpprop:country ?pays .
+ 
+OPTIONAL { 
+    
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+61,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+?fromage dbpprop:source ?typeLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+ 
+OPTIONAL { 
+    
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+62,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+?fromage dbpprop:source ?typeLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays@en .
+ 
+OPTIONAL { 
+    
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+63,"select distinct ?fromage ?nomFromage ?typeLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+?fromage dbpprop:source ?typeLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+ 
+FILTER langMatches( lang(?pays), ""en"" )
+OPTIONAL { 
+    
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+64,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLaitPage .
+?sourceLaitPage rdfs:label ?sourceLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+ 
+FILTER langMatches( lang(?pays), ""en""  . lang(?sourceLait), ""en"" )
+OPTIONAL { 
+    
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+65,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLaitPage .
+?sourceLaitPage rdfs:label ?sourceLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+ 
+FILTER langMatches( lang(?pays), ""en"" && lang(?sourceLait), ""en"" )
+OPTIONAL { 
+    
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+66,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLaitPage .
+?sourceLaitPage rdfs:label ?sourceLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+ 
+FILTER langMatches( lang(?pays), ""en"" || lang(?sourceLait), ""en"" )
+OPTIONAL { 
+    
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+67,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLaitPage .
+?sourceLaitPage rdfs:label ?sourceLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+ 
+FILTER langMatches( lang(?pays), ""en"" )
+OPTIONAL { 
+    
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+68,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLaitPage .
+?sourceLaitPage rdfs:label ?sourceLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+ 
+FILTER langMatches( (lang(?pays), ""en"") )
+OPTIONAL { 
+    
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+69,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLaitPage .
+?sourceLaitPage rdfs:label ?sourceLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+ 
+FILTER langMatches( lang(?pays), ""en"" ) && langMatches(lang(?sourceLait), ""en"")
+OPTIONAL { 
+    
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+70,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLaitPage .
+?sourceLaitPage rdfs:label ?sourceLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+ 
+FILTER langMatches( lang(?pays), ""en"" ) . langMatches(lang(?sourceLait), ""en"")
+OPTIONAL { 
+    
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+71,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLaitPage .
+?sourceLaitPage rdfs:label ?sourceLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+ 
+FILTER langMatches( lang(?pays), ""en"" ) || langMatches(lang(?sourceLait), ""en"")
+OPTIONAL { 
+    
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+72,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLaitPage .
+?sourceLaitPage rdfs:label ?sourceLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+ 
+FILTER ( langMatches( lang(?pays), ""en"" ) && langMatches(lang(?sourceLait), ""en"") )
+OPTIONAL { 
+    
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+73,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLaitPage .
+?sourceLaitPage rdfs:label ?sourceLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+ 
+FILTER ( langMatches( lang(?pays), ""en"" ) && langMatches(lang(?sourceLait), ""en"") && langMatches(lang(?nomFromage ), ""en"") ) 
+OPTIONAL { 
+    
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+74,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLaitPage .
+?sourceLaitPage rdfs:label ?sourceLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+ 
+
+OPTIONAL { 
+    
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+75,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLaitPage .
+?sourceLaitPage rdfs:label ?sourceLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+ 
+FILTER ( langMatches( lang(?pays), ""en"" ) && langMatches(lang(?sourceLait), ""en"") && langMatches(lang(?nomFromage ), ""en"") ) 
+OPTIONAL { 
+    
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+76,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLaitPage .
+?sourceLaitPage rdfs:label ?sourceLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+ 
+FILTER ( langMatches( lang(?pays), ""en"" ) && langMatches(lang(?sourceLait), ""en"") ) 
+OPTIONAL { 
+    
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+77,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLaitPage .
+?sourceLaitPage rdfs:label ?sourceLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+ 
+FILTER ( langMatches( lang(?pays), ""en"" ) ) 
+OPTIONAL { 
+    
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+78,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLaitPage .
+?sourceLaitPage rdfs:label ?sourceLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+ 
+FILTER ( langMatches( lang(?pays), ""en"" )&& langMatches(lang(?sourceLait), ""en"")  ) 
+OPTIONAL { 
+    
+    ?fromage dbpprop:aging ?fraicheur }.
+ 
+}"
+79,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLaitPage .
+?sourceLaitPage rdfs:label ?sourceLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+ 
+FILTER ( langMatches( lang(?pays), ""en"" )&& langMatches(lang(?sourceLait), ""en"")  ) 
+OPTIONAL { 
+    ?fromage dbpprop:aging ?fraicheur }.
+}"
+80,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLaitPage .
+?sourceLaitPage rdfs:label ?sourceLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+ 
+FILTER ( langMatches( lang(?pays), ""en"" )&& langMatches(lang(?sourceLait), ""en"")  ) 
+OPTIONAL { 
+    ?fromage dbpprop:aging ?fraicheur }.
+}"
+81,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+ 
+FILTER ( langMatches( lang(?pays), ""en"" )) 
+OPTIONAL { 
+    ?fromage dbpprop:aging ?fraicheur }.
+}"
+82,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+ 
+FILTER ( langMatches( lang(?pays), ""en"" )) 
+OPTIONAL { 
+    ?fromage dbpprop:aging ?fraicheur }.
+}"
+83,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ 
+ 
+FILTER ( langMatches( lang(?pays), ""en"" )) 
+OPTIONAL { 
+  ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+    ?fromage dbpprop:aging ?fraicheur }.
+}"
+84,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ 
+ 
+
+OPTIONAL { 
+  ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLait .
+ ?fromage dbpprop:country ?paysPage .
+ ?paysPage rdfs:label ?pays .
+    ?fromage dbpprop:aging ?fraicheur }.
+ FILTER ( langMatches( lang(?pays), ""en"" )) 
+}"
+85,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLait .
+ ?fromage dbpprop:country ?pays .
+ 
+FILTER ( langMatches( lang(?pays), ""en"" )) 
+OPTIONAL { 
+    ?fromage dbpprop:aging ?fraicheur }.
+}"
+86,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLait .
+ ?fromage dbpprop:country ?pays .
+ 
+
+OPTIONAL { 
+    ?fromage dbpprop:aging ?fraicheur }.
+}"
+87,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ 
+ 
+
+OPTIONAL { 
+?fromage dbpprop:name ?nomFromage .
+?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+}.
+}"
+88,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+ FILTER (langMatches(lang(?nomFromage), ""en"").
+ 
+ 
+
+OPTIONAL { 
+
+?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+}.
+}"
+89,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+ FILTER langMatches(lang(?nomFromage), ""en"").
+ 
+ 
+
+OPTIONAL { 
+
+?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+}.
+}"
+90,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+ FILTER langMatches(lang(?nomFromage), ""en"").
+ 
+ 
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+}"
+91,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+ FILTER langMatches(lang(?nomFromage), ""en"").
+ 
+ 
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+}"
+92,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+ FILTER langMatches(lang(?nomFromage), ""en"").
+ 
+ 
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+!bound(?texture) || ?fromage dbpprop:texture ?texture .
+}.
+}"
+93,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+ FILTER langMatches(lang(?nomFromage), ""en"") && (!bound(?texture) || ?fromage dbpprop:texture ?texture).
+ 
+ 
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+}.
+}"
+94,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+ FILTER langMatches(lang(?nomFromage), ""en"") && !bound(?texture) || ?fromage dbpprop:texture ?texture.
+ 
+ 
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+}.
+}"
+95,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+ FILTER langMatches(lang(?nomFromage), ""en"") .
+ FILTER !bound(?texture) || ?fromage dbpprop:texture ?texture .
+ 
+ 
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+}.
+}"
+96,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+ FILTER langMatches(lang(?nomFromage), ""en"") .
+ FILTER (!bound(?texture) || ?fromage dbpprop:texture ?texture ) .
+ 
+ 
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+}.
+}"
+97,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER langMatches(lang(?nomFromage), ""en"") && !bound(?texture) .
+
+
+}"
+98,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"") && !bound(?texture) ).
+
+
+}"
+99,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"") ).
+
+
+}"
+100,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"") || !bound(?texture)  ).
+
+
+}"
+101,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}"
+102,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}"
+103,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}"
+104,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}"
+105,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}"
+106,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}"
+107,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}"
+108,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}"
+109,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}"
+110,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}
+OFFSET 200"
+111,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}
+OFFSET 200"
+112,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}
+OFFSET 50"
+113,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}
+LIMIT 100
+OFFSET 200"
+114,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}
+"
+115,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}
+LIMIT 100
+OFFSET 240"
+116,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}
+LIMIT 100
+OFFSET 300"
+117,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}
+LIMIT 100
+OFFSET 300"
+118,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}
+LIMIT 100
+OFFSET 300"
+119,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}
+"
+120,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+
+OPTIONAL { 
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+}.
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}
+"
+121,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}
+"
+122,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}
+"
+123,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}
+"
+124,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}
+"
+125,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}
+"
+126,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}
+"
+127,"select distinct ?fromage ?nomFromage ?sourceLait ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+?fromage dbpprop:source ?sourceLait .
+?fromage dbpprop:country ?pays .
+?fromage dbpprop:texture ?texture .
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+
+
+}
+"
+128,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+
+ ?fromage dbpprop:name ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLait .
+ ?fromage dbpprop:country ?pays .
+ 
+FILTER ( langMatches( lang(?pays), ""en"" ) ) 
+OPTIONAL { 
+    ?fromage dbpprop:aging ?fraicheur }.
+}"
+129,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLait .
+ ?fromage dbpprop:country ?pays .
+ 
+FILTER ( langMatches( lang(?pays), ""en"" ) ) 
+OPTIONAL { 
+    ?fromage dbpprop:aging ?fraicheur }.
+}"
+130,"select distinct ?fromage ?nomFromage ?sourceLait ?fraicheur ?texture ?pays
+where
+{
+ ?fromagesParPays skos:broader category:Cheeses_by_country .
+ ?fromage dcterms:subject ?fromagesParPays .
+ ?fromage rdfs:label ?nomFromage .
+ ?fromage dbpprop:texture ?texture .
+
+?fromage dbpprop:source ?sourceLait .
+ ?fromage dbpprop:country ?pays .
+ 
+FILTER (langMatches(lang(?nomFromage), ""en"")  ).
+OPTIONAL { 
+    ?fromage dbpprop:aging ?fraicheur }.
+}"

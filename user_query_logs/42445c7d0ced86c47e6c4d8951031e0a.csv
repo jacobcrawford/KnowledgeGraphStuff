@@ -1,0 +1,804 @@
+,query
+0,select distinct ?Concept where {[] a ?Concept} LIMIT 100
+1,"SELECT ?c
+WHERE
+{
+    ?c dbpedia:Woody_Allen dbpedia-owl:birthName .
+}"
+2,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName>
+SELECT ?c
+WHERE
+{
+    ?c dbpedia:Woody_Allen dbpedia-owl:birthName .
+}"
+3,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName>
+SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+4,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName>
+SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+5,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName>
+SELECT ?c
+WHERE
+{
+   ?c dbpedia-owl:birthName dbpedia:Woody_Allen
+}"
+6,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName#>
+SELECT ?c
+WHERE
+{
+   ?c dbpedia-owl:birthName dbpedia:Woody_Allen
+}"
+7,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName#>
+SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+8,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName#>
+SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName.
+}"
+9,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName#>
+SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+10,"PREFIX dbpedia: http://dbpedia.org/resource/Woody_Allen
+PREFIX dbpedia-owl: http://dbpedia.org/ontology/birthName
+SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+11,"PREFIX dbpedia: http://dbpedia.org/resource/Woody_Allen
+PREFIX dbpedia-owl: http://dbpedia.org/ontology/birthName
+SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+12,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName>
+SELECT ?Woody_Allen
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+13,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName>
+SELECT ?Woody_Allen
+WHERE
+{
+   dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+14,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName>
+SELECT ?Woody_Allen
+WHERE
+{
+   ?Woody_Allen dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+15,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+SELECT ?Woody_Allen
+WHERE
+{
+   ?Woody_Allen dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+16,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+17,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+18,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+19,select distinct ?WoodyAllen where {[] a ?WoodyAllen} LIMIT 100
+20,select distinct ?WoodyAllen where {[] a ?WoodyAllen} LIMIT 100
+21,"SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName .
+}"
+22,"SELECT ?c
+WHERE
+{
+   ?c [] dbpedia:Woody_Allen dbpedia-owl:birthName .
+}"
+23,"SELECT ?c
+WHERE
+{
+   ?c [] dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+24,"SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+25,"SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+26,"SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+27,"SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+28,"SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+29,"select distinct ?Concept 
+where 
+{
+    [] a ?Concept
+} 
+LIMIT 100"
+30,"select distinct ?Concept 
+where 
+{
+    [] ?Concept
+} 
+LIMIT 100"
+31,"select distinct ?Concept 
+where 
+{
+    [] a ?Concept
+} 
+LIMIT 100"
+32,"SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+      FILTER(?c = Woody Allen)
+}"
+33,"SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+      FILTER(?c = Woody Allen).
+}"
+34,"SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+      FILTER(?c = Woody_Allen).
+}"
+35,"SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+      FILTER(?c = Woody_Allen)
+}"
+36,"SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName Woody_Allen
+}"
+37,"SELECT ?c
+WHERE
+{
+   [] dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+38,"SELECT ?c
+WHERE
+{
+   [] a ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+39,"SELECT ?c
+WHERE
+{
+   [] a ?c
+}"
+40,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName>
+SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+41,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+42,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+SELECT ?c
+WHERE
+{
+   dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+43,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+SELECT ?c
+WHERE
+{
+   [] dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+44,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+SELECT ?c
+WHERE
+{
+   [] a dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+45,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+SELECT ?c
+WHERE
+{
+   ?c dbpedia:Woody_Allen dbpedia-owl:birthName
+}"
+46,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-owl:binomialAuthority dbres:Johan_Christian_Fabricius.
+ }
+
+limit 10"
+47,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-birthName dbpedia:Woody_.
+ }
+
+limit 10"
+48,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-birthName dbpedia:Woody_.
+ }
+
+limit 10"
+49,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-owl:birthName dbpedia:Woody_Allen.
+ }
+
+limit 10
+
+
+"
+50,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-owl:birthName dbres:Woody_Allen.
+ }
+
+limit 10
+
+
+"
+51,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-owl:birthName dbpedia:Woody_Allen.
+ }
+
+limit 10
+
+
+"
+52,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-owl:birthName dbpedia:Woody_Allen.
+ }
+
+limit 10
+
+
+"
+53,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-owl:birthName dbpedia:Woody_Allen.
+ }
+
+limit 10
+
+
+"
+54,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-owl:birthName dbpedia:Woody_Allen.
+ }
+
+
+"
+55,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-owl:birthName dbpedia:Woody_Allen.
+ }
+
+
+"
+56,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-owl:birthName dbpedia:Woody_Allen.
+ }
+
+
+"
+57,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-owl:birthName dbpedia:Woody_Allen.
+ }"
+58,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-owl:birthName dbpedia:Woody_Allen.
+ }"
+59,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-owl:birthName dbpedia:Woody_Allen.
+ }"
+60,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-owl:birthName dbpedia:Woody_Allen.
+ }"
+61,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-owl:birthName dbpedia:Woody_Allen.
+ }"
+62,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-owl:birthName dbpedia:Woody_Allen.
+?y dbpedia-owl:binomialAuthority dbres:Johan_Christian_Fabricius.
+ }"
+63,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+
+SELECT ?y WHERE {
+ 
+?y dbpedia-owl:binomialAuthority dbres:Johan_Christian_Fabricius.
+ }"
+64,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+
+SELECT ?y WHERE {
+?y dbpedia-owl:binomialAuthority dbres:Johan_Christian_Fabricius.
+ }"
+65,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y WHERE {
+?y dbpedia-owl:binomialAuthority dbres:Johan_Christian_Fabricius.
+ }"
+66,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y WHERE {
+?y dbpedia-owl:birthName dbres:Woody_Allen.
+ }"
+67,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y WHERE {
+?y dbpedia-owl:birthName dbres:Woody.
+ }"
+68,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y WHERE {
+?y dbpedia-owl:birthName dbres:WoodyAllen.
+ }"
+69,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbres: <http://dbpedia.org/resource/Woody_Allen>
+
+SELECT ?y WHERE {
+?y dbpedia-owl:birthName dbres:WoodyAllen.
+ }"
+70,"PREFIX dbres: <http://dbpedia.org/resource/Woody_Allen>
+
+SELECT ?y WHERE {
+?y dbpedia-owl:birthName dbres:WoodyAllen.
+ }"
+71,"PREFIX dbres: <http://dbpedia.org/resource/Woody_Allen>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName>
+SELECT ?y WHERE {
+?y dbpedia-owl:birthName dbres:WoodyAllen.
+ }"
+72,"PREFIX dbres: <http://dbpedia.org/resource/Woody_Allen>
+PREFIX dbpedia-owl: <http://dbpedia.org/property/birthName>
+
+SELECT ?y WHERE 
+{
+     ?y dbpedia-owl:birthName dbres:WoodyAllen.
+}"
+73,"PREFIX dbres: <http://dbpedia.org/resource/Woody_Allen>
+PREFIX dbpedia-owl: <http://dbpedia.org/property/birthName>
+
+SELECT ?y WHERE 
+{
+     ?y dbpedia-owl:birthName dbres:WoodyAllen.
+}"
+74,"PREFIX dbres: <http://dbpedia.org/resource/Woody_Allen>
+PREFIX dbp: <http://dbpedia.org/property/birthName>
+
+SELECT ?y WHERE 
+{
+     ?y dbp:birthName dbres:WoodyAllen.
+}"
+75,"PREFIX dbres: <http://dbpedia.org/resource/>
+PREFIX dbp: <http://dbpedia.org/property/>
+
+SELECT ?y WHERE 
+{
+     ?y dbp:birthName dbres:WoodyAllen.
+}"
+76,"PREFIX dbres: <http://dbpedia.org/resource/Woody_Allen>
+PREFIX dbp: <http://dbpedia.org/property/>
+
+SELECT ?y WHERE 
+{
+     ?y dbp:birthName dbres:WoodyAllen.
+}"
+77,"PREFIX dbres: <http://dbpedia.org/resource/Woody_Allen>
+PREFIX dbp: <http://dbpedia.org/property/birthName>
+
+SELECT ?y WHERE 
+{
+     ?y dbp:birthName dbres:WoodyAllen.
+}"
+78,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+
+SELECT ?y WHERE 
+{
+     ?y dbp:birthName dbres:WoodyAllen.
+}"
+79,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+
+SELECT ?y WHERE 
+{
+     ?y dbpedia-owl:birthName dbpedia:WoodyAllen.
+}"
+80,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+
+SELECT ?y WHERE 
+{
+     ?y rdf:label
+}"
+81,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+
+SELECT ?y WHERE 
+{
+     ?y dbpedia-owl:birthName
+}"
+82,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+
+SELECT ?y WHERE 
+{
+     ?y dbpedia-owl:birthName dbpedia
+}"
+83,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+
+SELECT ?y WHERE 
+{
+     ?y dbpedia-owl:birthName dbpedia:Woody_Allen
+}"
+84,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+
+SELECT ?y WHERE 
+{
+     ?y dbpprop:birthName dbpedia:Woody_Allen.
+}"
+85,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+
+SELECT ?y WHERE 
+{
+     ?y dbpprop:birthName rdfs:label.
+}"
+86,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+
+SELECT ?y WHERE 
+{
+     ?y rdfs:label.
+}"
+87,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/birthName/>
+
+SELECT ?y WHERE 
+{
+     ?y dbpedia-owl:birthName dbpedia:Woody_Allen;
+        dbpprop:birthName.
+}"
+88,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+PREFIX dbpedia-owl: <http://dbpedia.org/property/birthName/>
+
+SELECT ?y WHERE 
+{
+     ?y dbpedia-owl:birthName dbpedia:Woody_Allen;
+}"
+89,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+PREFIX dbpedia-owl: <http://dbpedia.org/property/birthName/>
+
+SELECT ?y WHERE 
+{
+     ?y dbpedia-owl:birthName dbpedia:Woody_Allen
+}"
+90,"PREFIX dbpedia: <http://dbpedia.org/resource/Woody_Allen/>
+PREFIX dbpedia-owl: <http://dbpedia.org/property/birthName/>
+
+SELECT ?y WHERE 
+{
+     ?y dbpedia-owl:birthName dbpedia:Woody_Allen.
+}"
+91,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-owl:binomialAuthority dbres:Johan_Christian_Fabricius.
+ }
+
+limit 10"
+92,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-owl:birthName dbres:Woody_Allen.
+ }
+
+limit 10"
+93,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-owl:director dbres:Woody_Allen.
+ }
+
+limit 10"
+94,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-owl:director dbres:Woody_Allen.
+ }"
+95,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-owl:director dbres:Woody_Allen.
+ }"
+96,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y WHERE 
+{
+    ?y dbpedia-owl:director dbres:Woody_Allen;
+       ORDER BY(dbpprop:released)
+}"
+97,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y WHERE 
+{
+    ?y dbpedia-owl:director dbres:Woody_Allen;
+       ORDER(dbpprop:released)
+}"
+98,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y WHERE 
+{
+    ?y dbpedia-owl:director dbres:Woody_Allen;
+       ORDER dbpprop:released
+}"
+99,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y ?d WHERE 
+{
+    ?y dbpedia-owl:director dbres:Woody_Allen;
+    ?d dbpprop:released
+}
+ORDER BY DESC(?d)"
+100,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y ?d WHERE 
+{
+    ?y dbpedia-owl:director dbres:Woody_Allen.
+    ?d dbpprop:released.
+}
+ORDER BY DESC(?d)"
+101,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y ?d WHERE 
+{
+    ?y dbpedia-owl:director dbres:Woody_Allen
+    ?d dbpprop:released.
+}
+ORDER BY DESC(?d)"
+102,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y ?d WHERE 
+{
+    ?y dbpedia-owl:director dbres:Woody_Allen.
+    ?d dbpprop:released ?y.
+}
+ORDER BY DESC(?d)"
+103,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y WHERE 
+{
+    ?y dbpedia-owl:director dbres:Woody_Allen.
+}"
+104,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y ?d WHERE 
+{
+    ?y dbpedia-owl:director dbres:Woody_Allen.
+    ?d dbpprop:released ?y.
+}
+ORDER BY DESC(?d)"
+105,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y ?d WHERE 
+{
+    ?y dbpedia-owl:director dbres:Woody_Allen.
+    ?d dbpprop:released ?y.
+}
+ORDER BY (?d)"
+106,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y ?d 
+WHERE 
+{
+    ?y dbpedia-owl:director dbres:Woody_Allen.
+    ?d dbpprop:released ?y.
+}
+ORDER BY(?d)"
+107,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y ?d 
+WHERE 
+{
+    ?y dbpedia-owl:director dbres:Woody_Allen.
+    ?d dbpprop:released ?y.
+}
+ORDER BY DESC (?d)"
+108,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y 
+WHERE 
+{
+    ?y dbpedia-owl:director dbres:Woody_Allen.
+}"
+109,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?reziral ?glumel ?napisal 
+WHERE 
+{
+    ?reziral dbpedia-owl:director dbres:Woody_Allen.
+    ?napisal dbpedia-owl:writer dbres:Woody_Allen.
+    ?glumel dbpedia-owl:starring dbres:Woody_Allen.
+}"
+110,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?reziral ?glumel ?napisal 
+WHERE 
+{
+    ?reziral dbpedia-owl:director dbres:Woody_Allen.
+    ?napisal dbpedia-owl:writer dbres:Woody_Allen.
+    ?glumel dbpedia-owl:starring dbres:Woody_Allen.
+}"

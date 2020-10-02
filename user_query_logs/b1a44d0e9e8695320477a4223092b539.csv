@@ -1,0 +1,1114 @@
+,query
+0,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT ?name ?alma WHERE { 
+  ?agent ont:almaMater ?alma;
+    foaf:name ?name . 
+  FILTER (
+    ?alma = ""Gadjah_Mada_University"".
+  )
+}
+LIMIT 10"
+1,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT ?name ?alma WHERE { 
+  ?agent ont:almaMater ?alma;
+    foaf:name ?name . 
+  FILTER (
+    ?alma = ""Gadjah_Mada_University""
+  )
+}
+LIMIT 10"
+2,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT ?name ?alma WHERE { 
+  ?agent ont:almaMater ?alma;
+    foaf:name ?name . 
+  FILTER (
+    ?alma = ""Gadjah_Mada_University""
+  )
+}"
+3,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT ?name ?alma ?party 
+WHERE { 
+  ?agent ont:almaMater ?alma;
+  ?agent ont:party ?party;
+    foaf:name ?name . 
+}"
+4,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT ?name ?alma ?p 
+WHERE { 
+  ?agent ont:almaMater ?alma;
+  ?agent ont:party ?p;
+    foaf:name ?name . 
+}"
+5,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT ?name ?alma  
+WHERE { 
+  ?agent ont:almaMater ?alma;
+  ?agent ont:party ?p;
+    foaf:name ?name . 
+}"
+6,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT ?name ?alma  
+WHERE { 
+  ?person ont:almaMater ?alma;
+  ?person ont:party ?p;
+    foaf:name ?name . 
+}"
+7,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT ?name ?alma ?p 
+WHERE { 
+  ?person ont:almaMater ?alma;
+  ?person ont:party ?p;
+    foaf:name ?name . 
+}"
+8,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT ?name ?alma ?part 
+WHERE { 
+  ?person ont:almaMater ?alma;
+  ?person ont:party ?part;
+    foaf:name ?name . 
+}"
+9,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT ?name ?alma ?partai 
+WHERE { 
+  ?person ont:almaMater ?alma;
+  ?person ont:party ?partai;
+    foaf:name ?name . 
+}"
+10,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT ?name  
+WHERE { 
+  ?person ont:almaMater ?alma;
+  ?person ont:party ?partai;
+    foaf:name ?name . 
+  FILTER (
+    (?alma = ""Gadjah_Mada_University"") &&
+    (?partai = ""Democratic_Party_(Indonesia)"")
+  )
+}"
+11,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT ?name  
+WHERE { 
+  ?person <dbpedia-owl:almaMater> ?alma;
+  ?person <dbpedia-owl:party> ?partai;
+    foaf:name ?name . 
+  FILTER (
+    (?alma = ""Gadjah_Mada_University"") &&
+    (?partai = ""Democratic_Party_(Indonesia)"")
+  )
+}"
+12,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT *  
+WHERE {
+  ?p ont:Person . 
+  ?p <dbpedia-owl:almaMater> ?alma .
+  ?p <dbpedia-owl:party> ?partai .
+    foaf:name ?name . 
+  FILTER (
+    (?alma = ""Gadjah_Mada_University"") &&
+    (?partai = ""Democratic_Party_(Indonesia)"")
+  )
+}"
+13,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT *  
+WHERE {
+  ?p a ont:Person . 
+  ?p <dbpedia-owl:almaMater> ?alma .
+  ?p <dbpedia-owl:party> ?partai .
+    foaf:name ?name . 
+  FILTER (
+    (?alma = ""Gadjah_Mada_University"") &&
+    (?partai = ""Democratic_Party_(Indonesia)"")
+  )
+}"
+14,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT *  
+WHERE {
+  ?p a ont:Person . 
+  ?p <dbpedia-owl:almaMater> ?alma .
+  ?p <dbpedia-owl:party> ?partai . 
+  FILTER (
+    (?alma = ""Gadjah_Mada_University"") &&
+    (?partai = ""Democratic_Party_(Indonesia)"")
+  )
+}"
+15,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT *  
+WHERE {
+  ?name a ont:person . 
+  ?name <dbpedia-owl:almaMater> ?alma .
+  ?name <dbpedia-owl:party> ?partai . 
+  FILTER (
+    (?alma = ""Gadjah_Mada_University"") &&
+    (?partai = ""Democratic_Party_(Indonesia)"")
+  )
+}"
+16,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT *  
+WHERE {
+  ?name a ont:Person . 
+  ?name <dbpedia-owl:almaMater> ?alma .
+  ?name <dbpedia-owl:party> ?partai . 
+
+}"
+17,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT *  
+WHERE {
+  ?name a ont:person . 
+  ?name <dbpedia-owl:almaMater> ?alma . 
+}
+
+LIMIT 100"
+18,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT *  
+WHERE {
+  ?name a ont:person . 
+}
+
+LIMIT 100"
+19,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT *  
+WHERE {
+  ?pers a ont:person . 
+}
+
+LIMIT 100"
+20,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+SELECT *  
+WHERE {
+  ?name a ont:person . 
+}
+
+LIMIT 100"
+21,"PREFIX ont: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#> 
+
+SELECT ?name ?date WHERE { 
+  ?person ont:birthDate ?date; 
+    foaf:name ?name . 
+  FILTER( 
+    ( ( datatype(?date) = xsd:date ) || ( datatype(?date) = xsd:dateTime ) ) && 
+    ( ?date <= ""2010-07-03""^^xsd:dateTime ) && 
+    ( regex(str(?date), ""[0-9]{4}-07-03"") ) 
+  ) 
+}
+LIMIT 10"
+22,"PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT *
+WHERE {
+    ?s dcterms:subject category:Living_people .
+    ?s foaf:name ?name
+}
+LIMIT 10000"
+23,"PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT *
+WHERE {
+    ?s dcterms:subject category:agent .
+    ?s foaf:name ?name
+}
+LIMIT 10000"
+24,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT *
+WHERE {
+    ?s dcterms:subject category:Living_people .
+    ?s foaf:name ?name
+}
+LIMIT 10000"
+25,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT *
+WHERE {
+    ?s dcterms:subject category:Living_people .
+    ?s foaf:name ?name
+}
+LIMIT 10000"
+26,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name
+WHERE {
+    ?s dcterms:subject category:Living_people .
+    ?s foaf:name ?name
+}
+LIMIT 10000"
+27,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name
+WHERE {
+    ?s foaf:name ?name
+}
+LIMIT 10000"
+28,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name
+WHERE {
+    ?s foaf:name ?name
+}
+LIMIT 10000"
+29,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name
+WHERE {
+   ?person ont:birthDate ?date; foaf:name ?name .
+}
+LIMIT 10000"
+30,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name
+WHERE {
+   ?person dbpedia:birthDate ?date; foaf:name ?name .
+}
+LIMIT 10000"
+31,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name
+WHERE {
+   ?person dbpedia:almaMater ?alma; dbpedia:party ?partai; foaf:name ?name .
+
+
+}
+
+LIMIT 10000"
+32,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name
+WHERE {
+   ?person dbpedia:almaMater ?alma; dbpedia:party ?partai; foaf:name ?name .
+FILTER (
+   ?alma = ""Gadjah_Mada_University"" 
+   )
+}
+
+LIMIT 10000"
+33,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?alma ?partai
+WHERE {
+   ?person dbpedia:almaMater ?alma; dbpedia:party ?partai; foaf:name ?name .
+
+}
+
+LIMIT 10000"
+34,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?alma ?partai
+WHERE {
+   ?person dbpedia:almaMater ?alma; dbpedia:party ?partai; foaf:name ?name .
+   ?partai rdfs:label ?partai .
+   ?alma rdfs:label ?alma .
+}
+
+LIMIT 10000"
+35,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?alma ?partai
+WHERE {
+   ?person dbpedia:almaMater ?alma; dbpedia:party ?partai; foaf:name ?name .
+   ?partai rdfs:label ?parti .
+   ?alma rdfs:label ?alm .
+}
+
+LIMIT 10000"
+36,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?alm ?parti
+WHERE {
+   ?person dbpedia:almaMater ?alma; dbpedia:party ?partai; foaf:name ?name .
+   ?partai rdfs:label ?parti .
+   ?alma rdfs:label ?alm .
+}
+
+LIMIT 10000"
+37,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT *
+WHERE {
+   ?person dbpedia:almaMater ?alma; dbpedia:party ?partai; foaf:name ?name .
+   ?partai rdfs:label ?parti .
+   ?alma rdfs:label ?alm .
+}
+
+LIMIT 10000"
+38,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?partai ?almamater
+WHERE {
+   ?person dbpedia:almaMater ?alma_mater; dbpedia:party ?party; foaf:name ?name .
+   ?party rdfs:label ?partai .
+   ?alma_mater rdfs:label ?almamater .
+}
+
+LIMIT 10000"
+39,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?partai ?almamater
+WHERE {
+   ?person dbpedia:almaMater ?alma_mater; dbpedia:party ?party; foaf:name ?name .
+   ?party rdfs:label ?partai .
+   ?alma_mater rdfs:label ?almamater .
+FILTER (
+   ?partai = ""Democratic_Party_(Indonesia)"" &&
+   ?almamater = ""Gadjah_Mada_University"" &&
+   langMatches(lang(?country_name), ""EN"") 
+   )
+}
+
+LIMIT 10000"
+40,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?partai ?almamater
+WHERE {
+   ?person dbpedia:almaMater ?alma_mater; dbpedia:party ?party; foaf:name ?name .
+   ?party rdfs:label ?partai .
+   ?alma_mater rdfs:label ?almamater .
+FILTER (
+   ?partai = ""Democratic_Party_(Indonesia)"" &&
+   ?almamater = ""Gadjah_Mada_University"" &&
+   langMatches(lang(?partai), ""EN"") 
+   )
+}
+
+LIMIT 10000"
+41,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?partai ?almamater
+WHERE {
+   ?person dbpedia:almaMater ?alma_mater; dbpedia:party ?party; foaf:name ?name .
+   ?party rdfs:label ?partai .
+   ?alma_mater rdfs:label ?almamater .
+FILTER (
+   ?almamater = ""Gadjah_Mada_University"" &&
+   langMatches(lang(?partai), ""EN"") 
+   )
+}
+
+LIMIT 10000"
+42,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?partai ?almamater
+WHERE {
+   ?person dbpedia:almaMater ?alma_mater; dbpedia:party ?party; foaf:name ?name .
+   ?party rdfs:label ?partai .
+   ?alma_mater rdfs:label ?almamater .
+FILTER (
+   ?almamater = ""Gadjah_Mada_University"" &&
+   langMatches(lang(?almamater), ""EN"") 
+   )
+}
+
+LIMIT 10000"
+43,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?partai ?almamater
+WHERE {
+   ?person dbpedia:almaMater ?alma_mater; dbpedia:party ?party; foaf:name ?name .
+   ?party rdfs:label ?partai .
+   ?alma_mater rdfs:label ?almamater .
+FILTER (
+   ?almamater = ""Gadjah_Mada_University"" &&
+   langMatches(lang(?almamater), ""en"") 
+   )
+}
+
+LIMIT 10000"
+44,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?partai ?almamater
+WHERE {
+   ?person dbpedia:almaMater ?alma_mater; dbpedia:party ?party; foaf:name ?name .
+   ?party rdfs:label ?partai .
+   ?alma_mater rdfs:label ?almamater .
+}
+
+LIMIT 10000"
+45,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?partai ?almamater
+WHERE {
+   ?person dbpedia:almaMater ?alma_mater; dbpedia:party ?party; foaf:name ?name .
+   ?party rdfs:label ?partai .
+   ?alma_mater rdfs:label ?almamater .
+}
+
+LIMIT 10"
+46,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?partai ?almamater
+WHERE {
+   ?person dbpedia:almaMater ?alma_mater; dbpedia:party ?party; foaf:name ?name .
+   ?party rdfs:label ?partai .
+   ?alma_mater rdfs:label ?almamater .
+}
+
+LIMIT 5"
+47,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?partai ?almamater
+WHERE {
+   ?person dbpedia:almaMater ?alma_mater; dbpedia:party ?party; foaf:name ?name .
+   ?party rdfs:label ?partai .
+   ?alma_mater rdfs:label ?almamater .
+}
+
+LIMIT 100"
+48,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?partai ?almamater
+WHERE {
+   ?person dbpedia:almaMater ?alma_mater; dbpedia:party ?party; foaf:name ?name .
+   ?party rdfs:label ?partai .
+   ?alma_mater rdfs:label ?almamater .
+FILTER (
+   langMatches(lang(?almamater), ""EN"")
+   )
+}
+
+LIMIT 100"
+49,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?partai ?almamater
+WHERE {
+   ?person dbpedia:almaMater ?alma_mater; dbpedia:party ?party; foaf:name ?name .
+   ?party rdfs:label ?partai .
+   ?alma_mater rdfs:label ?almamater .
+FILTER (
+   langMatches(lang(?almamater), ""EN"") &&
+   langMatches(lang(?party), ""EN"") 
+   )
+}"
+50,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?partai ?almamater
+WHERE {
+   ?person dbpedia:almaMater ?alma_mater; dbpedia:party ?party; foaf:name ?name .
+   ?party rdfs:label ?partai .
+   ?alma_mater rdfs:label ?almamater .
+FILTER (
+   (langMatches(lang(?almamater), ""EN"")) &&
+   (langMatches(lang(?party), ""EN"")) 
+   )
+}"
+51,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?partai ?almamater
+WHERE {
+   ?person dbpedia:almaMater ?alma_mater; dbpedia:party ?party; foaf:name ?name .
+   ?party rdfs:label ?partai .
+   ?alma_mater rdfs:label ?almamater .
+FILTER (
+   (langMatches(lang(?almamater), ""EN"")) 
+   )
+}"
+52,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?partai ?almamater
+WHERE {
+   ?person dbpedia:almaMater ?alma_mater; dbpedia:party ?party; foaf:name ?name .
+   ?party rdfs:label ?partai .
+   ?alma_mater rdfs:label ?almamater .
+FILTER (
+   (langMatches(lang(?almamater), ""EN"")) 
+   )
+}
+
+LIMIT 100"
+53,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name 
+WHERE {
+   ?person dbpedia:almaMater ?alma_mater; dbpedia:party ?party; foaf:name ?name .
+   ?party rdfs:label ?partai .
+   ?alma_mater rdfs:label ?almamater .
+FILTER (
+   (langMatches(lang(?almamater), ""EN"")) 
+   )
+}
+
+LIMIT 100"
+54,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT (sql:SAMPLE(?name) AS ?Name) (MIN(?birth) AS ?birthDate)
+{
+  ?person <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_television_actors> .
+  { ?person dbo:birthDate ?birth }
+  UNION
+  { ?person dbpedia2:birthdate ?birth. }       
+  ?person foaf:name ?name.
+  FILTER( REGEX( STR(?birth),""[0-9]{4}-[0-9]{2}-[0-9]{2}""))    
+}
+GROUP BY ?person"
+55,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT (sql:SAMPLE(?name) AS ?Name) (MIN(?birth) AS ?birthDate)
+{       
+  ?person foaf:name ?name.
+  FILTER( REGEX( STR(?birth),""[0-9]{4}-[0-9]{2}-[0-9]{2}""))    
+}
+GROUP BY ?person"
+56,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT (sql:SAMPLE(?name) AS ?Name) (MIN(?birth) AS ?birthDate)
+{       
+  ?person foaf:name ?name.   
+}
+GROUP BY ?person"
+57,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT (sql:SAMPLE(?name) AS ?Name) 
+{       
+  ?person foaf:name ?name.   
+}
+GROUP BY ?person"
+58,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT (sql:SAMPLE(?name) AS ?Name) 
+{       
+  ?person foaf:name ?name.   
+}
+GROUP BY ?person
+
+LIMIT 10"
+59,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT (sql:SAMPLE(?name) AS ?Name) 
+{       
+  ?person foaf:name ?name.   
+}
+GROUP BY ?person
+
+LIMIT 10"
+60,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+PREFIX property: <http://dbpedia.org/property/>
+
+SELECT ?name
+WHERE {
+    ?person foaf:name ?name .
+}
+
+LIMIT 100"
+61,"PREFIX dbpedia: <http://dbpedia.org/ontology/>
+PREFIX property: <http://dbpedia.org/property/>
+
+SELECT ?name ?alma ?partai
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai
+}
+
+LIMIT 100"
+62,"SELECT ?name ?alma ?partai
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    langMatches(lang(?almaMater), ""EN"") 
+    )
+}
+
+LIMIT 100"
+63,"SELECT ?name ?alma ?partai
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    langMatches(lang(?alma), ""EN"") 
+    )
+}
+
+LIMIT 100"
+64,"SELECT ?name ?alma ?partai
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    ?alma = ""Gadjah_Mada_University"" && 
+    langMatches(lang(?alma), ""EN"") 
+    )
+}
+
+LIMIT 100"
+65,"SELECT ?name ?alma ?partai
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+
+    langMatches(lang(?alma), ""EN"") 
+    )
+}
+
+LIMIT 100"
+66,"SELECT ?name ?alma ?partai
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    ?alma = ""University_of_Amsterdam"" && 
+    langMatches(lang(?alma), ""EN"") 
+    )
+}
+
+LIMIT 100"
+67,"SELECT ?name ?alma ?partai
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+
+    langMatches(lang(?alma), ""EN"") 
+    )
+}
+
+LIMIT 100"
+68,"SELECT ?name ?alma ?partai
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    ?alma = ""University of Amsterdam"" && 
+    langMatches(lang(?alma), ""EN"") 
+    )
+}
+
+LIMIT 100"
+69,"SELECT ?name ?alma ?partai
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    ?alma = dbpedia:Gadjah_Mada_University && 
+    langMatches(lang(?alma), ""EN"") 
+    )
+}
+
+LIMIT 100"
+70,"SELECT ?name ?alma ?partai
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    ?alma = ""dbpedia:Gadjah_Mada_University"" && 
+    langMatches(lang(?alma), ""EN"") 
+    )
+}
+
+LIMIT 100"
+71,"SELECT DISTINCT ?name ?alma ?partai
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+
+    langMatches(lang(?alma), ""EN"") 
+    )
+}
+
+LIMIT 100"
+72,"SELECT DISTINCT ?name
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+
+    langMatches(lang(?alma), ""EN"") 
+    )
+}
+
+LIMIT 100"
+73,"SELECT DISTINCT ?name
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+
+    langMatches(lang(?alma), ""ID"") 
+    )
+}
+
+LIMIT 100"
+74,"SELECT DISTINCT ?name
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+
+    langMatches(lang(?name), ""EN"") 
+    )
+}
+
+LIMIT 100"
+75,"SELECT DISTINCT ?name
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+
+    langMatches(lang(?name), ""ID"") 
+    )
+}
+
+LIMIT 100"
+76,"SELECT DISTINCT ?name
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    ?alma=""Gadjah_Mada_University""^^xsd:string
+    langMatches(lang(?name), ""EN"") 
+    )
+}
+
+LIMIT 100"
+77,"SELECT DISTINCT ?name
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    ?alma=""Gadjah_Mada_University""^^xsd:string &&
+    langMatches(lang(?name), ""EN"") 
+    )
+}
+
+LIMIT 100"
+78,"SELECT DISTINCT ?name
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    ?alma=""Gadjah_Mada_University""^^xsd:string && 
+    )
+}
+
+LIMIT 100"
+79,"SELECT DISTINCT ?name
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    ?alma=""Gadjah_Mada_University""^^xsd:string
+    )
+}
+
+LIMIT 100"
+80,"SELECT DISTINCT ?name
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    ?alma=""Gadjah Mada University""^^xsd:string
+    )
+}
+
+LIMIT 100"
+81,"SELECT DISTINCT ?name
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    ?alma=""Harvard University""^^xsd:string
+    )
+}
+
+LIMIT 100"
+82,"SELECT DISTINCT ?name
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    str(?alma) = ""Harvard University""
+    )
+}
+
+LIMIT 100"
+83,"SELECT DISTINCT ?name ?alma
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    str(?alma) = ""Harvard University""
+    )
+}
+
+LIMIT 100"
+84,"SELECT DISTINCT ?name ?alma
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    str(?alma) = ""Gadjah Mada University"" &&
+    str(?partai) = Democratic Party (Indonesia)
+    )
+}
+
+LIMIT 100"
+85,"SELECT DISTINCT ?name ?alma
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    str(?alma) = ""Gadjah Mada University""
+    )
+}
+
+LIMIT 100"
+86,"SELECT DISTINCT ?name ?alma
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    str(?alma) = ""Gadjah_Mada_University""
+    )
+}
+
+LIMIT 100"
+87,"SELECT DISTINCT ?name ?alma
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    str(?alma) = ""Universitas Gajah Mada""
+    )
+}
+
+LIMIT 100"
+88,"SELECT DISTINCT ?name ?alma
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    str(?alma) = ""Cambridge University""
+    )
+}
+
+LIMIT 100"
+89,"SELECT DISTINCT ?name ?alma
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    str(?alma) = ""Cambridge University"" || 
+    str(?partai) = ""Democratic Party""
+    )
+}
+
+LIMIT 100"
+90,"SELECT DISTINCT ?name ?alma
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    str(?alma) = ""Cambridge University"" && 
+    str(?partai) = ""Democratic Party""
+    )
+}
+
+LIMIT 100"
+91,"SELECT DISTINCT ?name ?alma
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    str(?alma) = ""Oxford University"" && 
+    str(?partai) = ""Democratic Party""
+    )
+}
+
+LIMIT 100"
+92,"SELECT DISTINCT ?name ?alma ?partai
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    str(?alma) = ""Oxford University"" && 
+    str(?partai) = ""Democratic Party""
+    )
+}
+
+LIMIT 100"
+93,"SELECT DISTINCT ?name ?alma ?partai
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    str(?alma) = ""Gadjah Mada University""
+    )
+}
+
+LIMIT 100"
+94,"SELECT DISTINCT ?name ?alma ?partai
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    str(?alma) = ""Gadjah Mada University""
+    )
+}"
+95,"SELECT DISTINCT ?name ?alma ?partai
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    REGEX(str(?alma), ""Gadjah_Mada_University"")
+    )
+}"
+96,"SELECT DISTINCT ?name ?alma ?partai
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    REGEX(str(?alma), ""Gadjah_Mada_University"") ||
+    REGEX(str(?alma), ""Democratic_Party_(Indonesia)"") 
+    )
+}"
+97,"SELECT DISTINCT ?name ?alma ?partai
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    REGEX(str(?alma), ""Gadjah_Mada_University"") ||
+    REGEX(str(?alma), ""Democratic_Party_(Indonesia)"") 
+    )
+}"
+98,"SELECT DISTINCT ?name
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    REGEX(str(?alma), ""Gadjah_Mada_University"") ||
+    REGEX(str(?alma), ""Democratic_Party_(Indonesia)"") 
+    )
+}"
+99,"SELECT DISTINCT ?name
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    REGEX(str(?alma), ""Gadjah_Mada_University"") ||
+    REGEX(str(?alma), ""Democratic_Party_(Indonesia)"") 
+    )
+}"
+100,"SELECT DISTINCT ?name
+WHERE {
+    ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+    
+    FILTER (
+    REGEX(str(?alma), ""Universitas Gadjah Mada"") ||
+    REGEX(str(?alma), ""Partai Demokrat"") 
+    )
+}"
+101,"SELECT DISTINCT ?name ?alma ?partai
+WHERE {
+   ?person foaf:name ?name; dbpprop:almaMater ?alma; dbpprop:party ?partai .
+   
+   FILTER (
+   REGEX(str(?alma), ""Gadjah_Mada_University"") ||
+   REGEX(str(?alma), ""Democratic_Party_(Indonesia)"") 
+   )
+}"

@@ -1,0 +1,1638 @@
+,query
+0,"select ?name
+where 
+{
+ dbpedia:Woody_Allen dbpedia-owl:birthName ?name
+} 
+"
+1,"select ?name
+where 
+{
+ dbpedia:Woody_Allen  dbpedia-owl:author ?name;
+
+ dbpedia-owl:director  ?name;
+
+ dbpedia-owl:starring ?name.
+} 
+"
+2,"select ?name
+where 
+{
+ dbpedia:Woody_Allen  dbpedia-owl:author ?name.
+} 
+"
+3,"select ?name
+where 
+{
+ dbpedia:Woody_Allen dbpedia-owl:author ?name.
+} 
+"
+4,"select ?name
+where 
+{
+ dbpedia:Woody_Allen is dbpedia-owl:author of ?name.
+} 
+"
+5,"select ?name
+where 
+{
+ dbpedia:Woody_Allen is dbpedia-owl:author of ?name.
+} 
+"
+6,"select ?name
+where 
+{
+ dbpedia:Woody_Allen dbpedia-owl:director ?name.
+} 
+"
+7,"select ?name
+where 
+{
+ dbpedia:Woody_Allen foaf:name ?name.
+} 
+"
+8,"select ?name
+where 
+{
+ dbpedia:Woody_Allen owl:sameAs ?name.
+} 
+"
+9,"select ?name
+where 
+{
+ dbpedia:Woody_Allen  dbpedia-owl:director ?name.
+} 
+"
+10,"select ?name
+where 
+{
+ dbpedia:Woody_Allen dbpedia-owl:director ?name.
+} 
+"
+11,"select ?name
+where 
+{
+ dbpedia:Woody_Allen  dbpedia-owl:influencedBy  ?name.
+} 
+"
+12,"select ?name
+where 
+{
+   dbpedia-owl:influencedBy dbpedia:Woody_Allen ?name.
+} 
+"
+13,"select ?name
+where 
+{
+   dbpedia:Woody_Allen ?name.
+} 
+"
+14,"select ?name
+where 
+{
+   dbpedia:Woody_Allen http://dbpedia.org/ontology/director ?name.
+} 
+"
+15,"select ?name
+where 
+{
+   http://dbpedia.org/resource/Woody_Allen http://dbpedia.org/ontology/director ?name.
+} 
+"
+16,"select ?name
+where 
+{
+   http://dbpedia.org/resource/Woody_Allen http://xmlns.com/foaf/spec/ ?name.
+} 
+"
+17,"select ?name
+where 
+{
+  dbpedia:Woody_Allen dbpedia-owl:occupation ?name
+}
+"
+18,"select ?name
+where 
+{
+  dbpedia:Woody_Allen dbpedia-owl:occupation ?name.
+}
+"
+19,"select ?name
+where 
+{
+   ?name dbpedia-owl:director dbpedia:Woody_Allen.
+}
+"
+20,"select ?name
+where 
+{
+   ?name dbpedia-owl:director dbpedia:Woody_Allen;
+         dbpedia-owl:writer dbpedia:Woody_Allen;
+          dbpedia-owl:starring dbpedia:Woody_Allen.
+}
+"
+21,"select distinct  ?name
+where 
+{
+   ?name dbpedia-owl:director dbpedia:Woody_Allen;
+         dbpedia-owl:writer dbpedia:Woody_Allen;
+          dbpedia-owl:starring dbpedia:Woody_Allen.
+}
+"
+22,"select distinct ?name
+where 
+{
+   ?name dbpedia-owl:director dbpedia:Woody_Allen;
+         dbpedia-owl:writer dbpedia:Woody_Allen;
+          dbpedia-owl:starring dbpedia:Woody_Allen.
+}
+"
+23,"select distinct ?name
+where 
+{
+   ?name dbpedia-owl:director dbpedia:Woody_Allen.
+   ?name dbpedia-owl:writer dbpedia:Woody_Allen.
+   ?name dbpedia-owl:starring dbpedia:Woody_Allen.
+}
+"
+24,"select distinct ?name
+where 
+{
+   ?name dbpedia-owl:director dbpedia:Woody_Allen.
+  
+}
+"
+25,"select distinct ?name
+where 
+{
+   ?name dbpedia-owl:director dbpedia:Woody_Allen.
+   ?name dbpedia-owl:writer dbpedia:Woody_Allen.
+   ?name dbpedia-owl:starring dbpedia:Woody_Allen.
+  
+}
+"
+26,"select ?name
+where 
+{
+ OPTIONAL { ?name dbpedia-owl:director dbpedia:Woody_Allen}
+  OPTIONAL  { ?name dbpedia-owl:writer dbpedia:Woody_Allen}
+   OPTIONAL  { ?name dbpedia-owl:starring dbpedia:Woody_Allen}
+  
+}
+"
+27,"select distinct ?name
+where 
+{
+ OPTIONAL { ?name dbpedia-owl:director dbpedia:Woody_Allen}
+  OPTIONAL  { ?name dbpedia-owl:writer dbpedia:Woody_Allen}
+   OPTIONAL  { ?name dbpedia-owl:starring dbpedia:Woody_Allen}
+  
+}
+"
+28,"select distinct ?name
+where 
+{
+ OPTIONAL { ?name dbpedia-owl:director dbpedia:Woody_Allen}
+  OPTIONAL  { ?name dbpedia-owl:writer dbpedia:Woody_Allen}
+   OPTIONAL  { ?name dbpedia-owl:starring dbpedia:Woody_Allen}
+  
+}
+"
+29,"select ?name ?n ?m
+where 
+{
+ OPTIONAL { ?name dbpedia-owl:director dbpedia:Woody_Allen}
+  OPTIONAL  { ?ndbpedia-owl:writer dbpedia:Woody_Allen}
+   OPTIONAL  { ?m dbpedia-owl:starring dbpedia:Woody_Allen}
+  
+}
+"
+30,"select ?name ?n ?m
+where 
+{
+ OPTIONAL { ?name dbpedia-owl:director dbpedia:Woody_Allen}
+  OPTIONAL  { ?n dbpedia-owl:writer dbpedia:Woody_Allen}
+   OPTIONAL  { ?m dbpedia-owl:starring dbpedia:Woody_Allen}
+  
+}
+"
+31,"select ?name
+where 
+{
+ OPTIONAL { ?name dbpedia-owl:director dbpedia:Woody_Allen}
+ 
+}
+"
+32,"select ?name
+where 
+{ ?name dbpedia-owl:director dbpedia:Woody_Allen
+ 
+}
+"
+33,"select ?name
+where 
+{ 
+  ?name dbpedia-owl:director dbpedia:Woody_Allen;
+   dbpedia-owl:author dbpedia:Woody_Allen.
+ 
+}
+"
+34,"select ?name
+where 
+{ 
+  ?name dbpedia-owl:director dbpedia:Woody_Allen.
+  ?name dbpedia-owl:author dbpedia:Woody_Allen.
+ 
+}
+"
+35,"select ?name
+where 
+{ 
+  
+  ?name dbpedia-owl:author dbpedia:Woody_Allen.
+ 
+}
+"
+36,"select ?name 
+where 
+{
+ OPTIONAL { ?name dbpedia-owl:director dbpedia:Woody_Allen}
+  OPTIONAL  { ?ndbpedia-owl:writer dbpedia:Woody_Allen}
+   OPTIONAL  { ?m dbpedia-owl:starring dbpedia:Woody_Allen}
+  
+}
+"
+37,"select ?name 
+where 
+{
+ OPTIONAL { ?name dbpedia-owl:director dbpedia:Woody_Allen}
+  OPTIONAL  { ?name dbpedia-owl:writer dbpedia:Woody_Allen}
+   OPTIONAL  { ?name dbpedia-owl:starring dbpedia:Woody_Allen}
+  
+}
+"
+38,"select ?name 
+where 
+
+{ 
+?name dbpedia-owl:director dbpedia:Woody_Allen.
+   ?name dbpedia-owl:writer dbpedia:Woody_Allen.
+    ?name dbpedia-owl:starring dbpedia:Woody_Allen.
+  
+}
+"
+39,"select ?name 
+where 
+
+{ 
+    ?name dbpedia-owl:director dbpedia:Woody_Allen.
+    ?x dbpedia-owl:writer dbpedia:Woody_Allen.
+    ?y dbpedia-owl:starring dbpedia:Woody_Allen.
+FILTER(?name=?x=?y).
+  
+}
+"
+40,"select ?name 
+where 
+
+{ 
+    ?name dbpedia-owl:director dbpedia:Woody_Allen.
+    ?x dbpedia-owl:writer dbpedia:Woody_Allen.
+    ?y dbpedia-owl:starring dbpedia:Woody_Allen.
+   FILTER(?name = ?x = ?y).
+  
+}
+"
+41,"select ?m
+where 
+
+{ 
+    ?name dbpedia-owl:director dbpedia:Woody_Allen.
+    ?x dbpedia-owl:writer dbpedia:Woody_Allen.
+    ?y dbpedia-owl:starring dbpedia:Woody_Allen.
+   FILTER(?name = ?x = ?y =?m).
+  
+}
+"
+42,"select ?name
+where 
+
+{ 
+    ?name dbpedia-owl:director dbpedia:Woody_Allen;
+    dbpedia-owl:writer dbpedia:Woody_Allen;
+    dbpedia-owl:starring dbpedia:Woody_Allen.
+ 
+  
+}
+"
+43,"select distinct ?name
+where 
+
+{ 
+    ?name dbpedia-owl:director dbpedia:Woody_Allen;
+    dbpedia-owl:writer dbpedia:Woody_Allen;
+    dbpedia-owl:starring dbpedia:Woody_Allen.
+ 
+  
+}
+"
+44,"select distinct ?n
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+ 
+  
+}
+"
+45,"select ?n
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+ 
+  
+}
+"
+46,"select distinct ?n
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+ 
+  
+}
+"
+47,"select distinct ?n
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+ 
+  
+}
+ORDER BY dbpprop:released
+
+"
+48,"select distinct ?n, dbpprop:released
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+ 
+  
+}
+ORDER BY dbpprop:released
+
+"
+49,"select distinct ?n, ?date
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+ ?n dbpprop:released ?date.
+  
+}
+ORDER BY ?date
+
+"
+50,"select distinct ?n, distinct ?date
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+ ?n dbpprop:released ?date.
+  
+}
+ORDER BY ?date
+
+"
+51,"select distinct ?n, distinct ?date
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+ ?n dbpprop:released ?date.
+  
+}
+ORDER BY ?date
+
+"
+52,"select distinct ?n, ?date
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen. 
+?n dbpprop:released ?date.}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen.
+?n dbpprop:released ?date.}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen.
+?n dbpprop:released ?date.}.
+
+ 
+  
+}
+ORDER BY ?date
+
+"
+53,"select distinct ?n, distinct ?date
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen. 
+?n dbpprop:released ?date.}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen.
+?n dbpprop:released ?date.}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen.
+?n dbpprop:released ?date.}.
+
+ 
+  
+}
+ORDER BY ?date
+
+"
+54,"select distinct ?n
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen. 
+?n dbpprop:released ?date.}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen.
+?n dbpprop:released ?date.}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen.
+?n dbpprop:released ?date.}.
+
+ 
+  
+}
+ORDER BY ?date
+
+"
+55,"select distinct ?n, ?date
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen. 
+?n dbpprop:released ?date.}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen.
+?n dbpprop:released ?date.}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen.
+?n dbpprop:released ?date.}.
+
+ 
+  
+}
+ORDER BY ?date
+
+"
+56,"select distinct ?n
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen. 
+?n dbpprop:released ?date.}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen.
+?n dbpprop:released ?date.}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen.
+?n dbpprop:released ?date.}.
+
+ 
+  
+}
+ORDER BY ?date
+
+"
+57,"select distinct ?n
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen. 
+}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen.
+}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen.
+}.
+
+ 
+  
+}
+
+
+"
+58,"select distinct ?n
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen; dbpprop:released ?date.}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen; dbpprop:released ?date.}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen; dbpprop:released ?date.}.
+
+ 
+  
+}
+ORDER BY ?date
+
+"
+59,"select distinct ?n
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen; dbpprop:released ?date.}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen; dbpprop:released ?date.}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen; dbpprop:released ?date.}.
+
+ 
+  
+}
+ORDER BY distinct ?date
+
+"
+60,"select distinct ?n
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen; dbpprop:released ?date.}.
+
+ 
+  
+}
+ORDER BY ?date
+"
+61,"select distinct ?n
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen; dbpprop:released ?date.}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen; dbpprop:released ?date.}.
+
+ 
+  
+}
+ORDER BY ?date
+"
+62,"select distinct ?n
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen; dbpprop:released ?date.}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen; dbpprop:released ?date.}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen; dbpprop:released ?date.}.
+
+ 
+  
+}
+ORDER BY  ?date
+"
+63,"select distinct ?n
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen; dbpprop:released ?date.}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen; dbpprop:released ?date.}.
+
+ 
+  
+}
+ORDER BY  ?date
+"
+64,"select distinct ?n
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}
+
+ 
+  
+}
+"
+65,"select distinct ?n
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+ 
+  
+}
+"
+66,"select  ?n
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+ 
+  
+}
+"
+67,"select distinct ?n
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+ 
+  
+}
+"
+68,"select ?n
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+ 
+  
+}
+"
+69,"select distinct ?n
+where 
+
+{ 
+  
+   ?n dbpedia-owl:starring dbpedia:Woody_Allen; dbpprop:released ?date.
+
+ 
+  
+}
+ORDER BY  ?date
+
+"
+70,"select distinct ?n, ?date
+where 
+
+{ 
+  
+   ?n dbpedia-owl:starring dbpedia:Woody_Allen; dbpprop:released ?date.
+
+ 
+  
+}
+ORDER BY  ?date
+
+"
+71,"select distinct ?n, ?date
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen; dbpprop:released ?date.}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen; dbpprop:released ?date.}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen; dbpprop:released ?date.}.
+
+ 
+  
+}
+
+"
+72,"select distinct ?n, distinct ?date
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen; dbpprop:released ?date.}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen; dbpprop:released ?date.}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen; dbpprop:released ?date.}.
+
+ 
+  
+}
+
+"
+73,"select distinct ?n, ?date
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+ ?n dbpprop:released ?date.
+  
+}
+
+"
+74,"select  ?n, ?date
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+ ?n dbpprop:released ?date.
+  
+}
+
+"
+75,"select distinct ?n
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+
+  
+}
+
+"
+76,"select distinct ?n, ?date
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+  
+}
+
+"
+77,"select distinct ?n, ?date
+where 
+
+{ 
+ optional{  { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.}
+
+optional{ ?n dbpprop:released ?date}.
+  
+}
+
+"
+78,"select distinct ?n, ?date
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+  
+}
+
+"
+79,"select distinct ?n, ?date
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+  
+}
+
+order by ?date
+
+"
+80,"select distinct ?n, ?date
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+  
+}
+
+order by desc (?date)
+
+"
+81,"select distinct ?n, ?date
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+  
+}
+
+order by desc (?date)
+
+"
+82,"select distinct ?n, ?date
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen.
+optional{ ?n dbpprop:released ?date}.}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen.
+optional{ ?n dbpprop:released ?date}.}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen.
+optional{ ?n dbpprop:released ?date}.}.
+
+
+  
+}
+
+order by desc (?date)"
+83,"select distinct ?n, ?date, ?budget
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+optional{ ?n dbpedia-owl:budget ?budget}.
+  
+}
+
+order by desc (?date)"
+84,"select distinct ?n, ?date, ?budget
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+optional{ ?n dbpedia-owl:budget ?budget}.
+
+  
+}
+
+order by desc (?date)"
+85,"select distinct ?n, ?date, ?budget
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+optional{ ?n dbpedia-owl:budget ?budget}.
+filter (?budget > ""500.000""^^<http://dbpedia.org/datatype/usDollar>).
+
+  
+}
+
+order by desc (?date)"
+86,"select distinct ?n, ?date, ?budget
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+optional{ ?n dbpedia-owl:budget ?budget}.
+
+
+  
+}
+
+order by desc (?date)"
+87,"select distinct ?n, ?date, ?budget
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+optional{ ?n dbpedia-owl:budget ?budget}.
+filter (?budget > ""500000""^^<http://dbpedia.org/datatype/usDollar>).
+
+  
+}
+
+order by desc (?date)"
+88,"select distinct ?n, ?date, ?budget
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+optional{ ?n dbpedia-owl:budget ?budget}.
+
+
+  
+}
+
+order by desc (?date)"
+89,"select distinct ?n, ?date, ?budget
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+optional{ ?n dbpedia-owl:budget ?budget}.
+filter (?budget > ""500""^^<http://dbpedia.org/datatype/usDollar>).
+
+  
+}
+
+order by desc (?date)"
+90,"select distinct ?n, ?date, ?budget
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+optional{ ?n dbpedia-owl:budget ?budget}.
+filter (?budget > ""500""^^<http://dbpedia.org/datatype/usDollar>).
+
+  
+}
+
+order by desc (?date)"
+91,"select distinct ?n, ?date, ?budget
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+optional{ ?n dbpedia-owl:budget ?budget}.
+filter (?budget > ""50""^^<http://dbpedia.org/datatype/usDollar>).
+
+  
+}
+
+order by desc (?date)"
+92,"select distinct ?n, ?date, ?budget
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+optional{ ?n dbpedia-owl:budget ?budget}.
+filter (?budget > ""50"").
+
+  
+}
+
+order by desc (?date)"
+93,"select distinct ?n, ?date, ?budget
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+optional{ ?n dbpedia-owl:budget ?budget}.
+
+filter (?budget > ""1""^^<http://dbpedia.org/datatype/usDollar>).
+  
+}
+
+order by desc (?date)"
+94,"select distinct ?n, ?date, ?budget
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+optional{ ?n dbpedia-owl:budget ?budget}.
+
+filter (?budget > ""1""^^<http://dbpedia.org/datatype/usDollar>).
+  
+}
+
+order by desc (?date)"
+95,"select distinct ?n, ?date, ?budget
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+optional{ ?n dbpedia-owl:budget ?budget}.
+
+filter (DATATYPE(?budget) > ""1""^^<http://dbpedia.org/datatype/usDollar>).
+  
+}
+
+order by desc (?date)"
+96,"select distinct ?n, ?date, ?budget
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+optional{ ?n dbpedia-owl:budget ?budget}.
+
+filter (DATATYPE(?budget) =<http://dbpedia.org/datatype/usDollar>).
+  
+}
+
+order by desc (?date)"
+97,"select distinct ?n, ?date,?budget
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+  optional{ ?n dbpedia-owl:budget ?budget}.
+}
+
+order by desc (?date)
+
+"
+98,"select distinct ?n, ?date, ?budget
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+optional{ ?n dbpedia-owl:budget ?budget}.
+
+filter (?budget = ""18000.0""^^<http://dbpedia.org/datatype/usDollar>).
+  
+}
+
+order by desc (?date)"
+99,"select distinct ?n, ?date, ?budget
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+optional{ ?n dbpedia-owl:budget ?budget}.
+
+filter (?budget >= ""18000.0""^^<http://dbpedia.org/datatype/usDollar>).
+  
+}
+
+order by desc (?date)"
+100,"select distinct ?n, ?date, ?budget
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+optional{ ?n dbpedia-owl:budget ?budget}.
+
+filter (?budget >= ""500000""^^<http://dbpedia.org/datatype/usDollar>).
+  
+}
+
+order by desc (?date)"
+101,"select distinct ?n, ?date, ?budget
+where 
+
+{ 
+   { ?n dbpedia-owl:director dbpedia:Woody_Allen}
+  UNION
+    {?n dbpedia-owl:writer dbpedia:Woody_Allen}
+  UNION
+   { ?n dbpedia-owl:starring dbpedia:Woody_Allen}.
+
+optional{ ?n dbpprop:released ?date}.
+optional{ ?n dbpedia-owl:budget ?budget}.
+
+filter (?budget >= ""500.000""^^<http://dbpedia.org/datatype/usDollar>).
+  
+}
+
+order by desc (?date)"
+102,"select ?avtor ?jazik
+where
+{
+  dbpedia:The_Little_Prince dbpedia-owl:author ?avtor;
+dbpprop:language ?jazik.
+
+}"
+103,"select ?apstrakt
+where
+{
+  dbpedia:The_Little_Prince dbpedia-owl:abstract ?apstrakt;
+
+
+}"
+104,"select ?apstrakt
+where
+{
+  dbpedia:The_Little_Prince dbpedia-owl:abstract ?apstrakt.
+
+
+}"
+105,"select ?ime, ?datumRag, ?mestoRag, ?datumUm, ?mestoUm
+where
+{
+  dbpedia:The_Little_Prince dbpedia-owl:author ?ime.
+?ime dbpedia-owl:birthDate ?datumRag;
+dbpedia-owl:birthPlace ?mestoRag;
+dbpedia-owl:deathDate ?datumUm;
+dbpedia-owl:deathPlace ?mestoUm.
+
+
+}"
+106,"select ?godina,?kuka,?naslov
+where
+{
+  dbpedia:The_Little_Prince dbpprop:titleOrig ?naslov.
+
+
+
+}"
+107,"select ?godina,?kuka,?naslov
+where
+{
+  dbpedia:The_Little_Prince dbpprop:titleOrig ?naslov.
+dbpprop:releaseDate ?godina.
+dbpprop:publisher ?kuka.
+
+
+
+}"
+108,"select ?godina,?kuka,?naslov
+where
+{
+  dbpedia:The_Little_Prince dbpprop:titleOrig ?naslov;
+dbpprop:releaseDate ?godina;
+dbpprop:publisher ?kuka.
+
+
+
+}"
+109,"select ?godina
+where
+{
+  dbpedia:The_Little_Prince 
+dbpprop:releaseDate ?godina
+
+
+
+
+}"
+110,"select top ?godina
+where
+{
+  dbpedia:The_Little_Prince 
+dbpprop:releaseDate ?godina
+
+
+
+
+}
+"
+111,"select  ?godina
+where
+{
+  dbpedia:The_Little_Prince 
+dbpprop:releaseDate ?godina
+
+
+
+
+}
+"
+112,"select  ?godina
+where
+{
+  dbpedia:The_Little_Prince 
+dbpprop:releaseDate ?godina.
+
+
+
+
+
+}
+limit 1"
+113,"select ?godina,?kuka,?naslov
+where
+{
+  dbpedia:The_Little_Prince dbpprop:titleOrig ?naslov;
+dbpprop:releaseDate ?godina;
+dbpprop:publisher ?kuka.
+
+
+
+}
+limit 1"
+114,"select ?album
+where
+{
+  ?album dbpedia-owl:artist dbpedia:Depeche_Mode
+}"
+115,"select ?x
+where
+{
+  ?album dbpedia-owl:artist dbpedia:Depeche_Mode.
+  ?x dbpprop:title ?album.
+}"
+116,"select ?x, ?album
+where
+{
+  ?album dbpedia-owl:artist dbpedia:Depeche_Mode.
+  ?x dbpprop:title ?album.
+}"
+117,"select ?x
+where
+{
+  dbpedia:Songs_of_Faith_and_Devotion dbpedia-owl:artist dbpedia:Depeche_Mode.
+  ?x dbpprop:title ?album.
+
+}"
+118,"select ?x
+where
+{
+  dbpedia:Songs_of_Faith_and_Devotion dbpedia-owl:artist dbpedia:Depeche_Mode.
+  ?x dbpprop:title dbpedia:Songs_of_Faith_and_Devotion.
+
+}"
+119,"select ?x
+where
+{
+  ?album dbpedia-owl:artist dbpedia:Depeche_Mode.
+  ?album dbpprop:title ?x.
+
+}"
+120,"select ?x
+where
+{
+  ?album dbpedia-owl:artist dbpedia:Depeche_Mode.
+  ?a dbpprop:title ?x.
+filter(?album=?a).
+
+}"
+121,"select ?album
+where
+{
+  ?album dbpedia-owl:artist dbpedia:Depeche_Mode.
+  ?album dbpedia-owl:genre dbpedia:Synthpop
+
+}"
+122,"select ?album
+where
+{
+  ?album dbpedia-owl:artist dbpedia:Depeche_Mode.
+  ?album dbpedia-owl:genre dbpedia:Synthpop.
+
+}"
+123,"select ?album
+where
+{
+  ?album dbpedia-owl:artist dbpedia:Depeche_Mode.
+  ?album dbpedia-owl:genre dbpedia:dbpedia:Alternative_dance.
+
+}"
+124,"select ?album
+where
+{
+  ?album dbpedia-owl:artist dbpedia:Depeche_Mode.
+  ?album dbpedia-owl:genre dbpedia:Alternative_dance.
+
+}"
+125,"select ?member,?his_songs
+where
+{
+   dbpedia:Depeche_Mode dbpprop:currentMembers ?member.
+   ?member dbpprop:writer ?his_songs.
+
+}"
+126,"select ?member,?his_songs
+where
+{
+   dbpedia:Depeche_Mode dbpprop:currentMembers ?member.
+    ?his_songs dbpprop:writer ?member .
+
+}"
+127,"select ?member,?his_songs
+where
+{
+   dbpedia:Depeche_Mode dbpprop:currentMembers ?member.
+    
+
+}"
+128,"select ?member
+where
+{
+   dbpedia:Depeche_Mode dbpprop:currentMembers ?member.
+    
+
+}"
+129,"select ?member,?his_songs
+where
+{
+   dbpedia:Depeche_Mode dbpprop:currentMembers ?member.
+   ?his_songs  dbpedia-owl:writer ?member.
+
+}"
+130,"select distinct ?member,?his_songs
+where
+{
+   dbpedia:Depeche_Mode dbpprop:currentMembers ?member.
+   ?his_songs  dbpedia-owl:writer ?member.
+
+}"
+131,"select ?member,?his_songs
+where
+{
+   dbpedia:Depeche_Mode dbpprop:currentMembers ?member.
+   optional{?his_songs  dbpedia-owl:writer ?member}.
+
+}"
+132,"select ?n
+where
+{
+{?n dbpedia-owl:director dbpedia:Woody_Allen}
+union
+{?n dbpedia-owl:writer dbpedia:Woody_Allen}
+union
+{?n dbpedia-owl:starring dbpedia:Woody_Allen}
+}"
+133,"select distinct ?n
+where
+{
+{?n dbpedia-owl:director dbpedia:Woody_Allen}
+union
+{?n dbpedia-owl:writer dbpedia:Woody_Allen}
+union
+{?n dbpedia-owl:starring dbpedia:Woody_Allen}
+}"
+134,"select distinct ?n
+where
+{
+{?n dbpedia-owl:director dbpedia:Woody_Allen}
+union
+{?n dbpedia-owl:writer dbpedia:Woody_Allen}
+union
+{?n dbpedia-owl:starring dbpedia:Woody_Allen}
+
+
+}"
+135,"select distinct ?n
+where
+{
+{?n dbpedia-owl:director dbpedia:Woody_Allen}
+union
+{?n dbpedia-owl:writer dbpedia:Woody_Allen}
+union
+{?n dbpedia-owl:starring dbpedia:Woody_Allen}
+
+optional{?n dbpprop:released ?date}
+
+}"
+136,"select distinct ?n
+where
+{
+{?n dbpedia-owl:director dbpedia:Woody_Allen}
+union
+{?n dbpedia-owl:writer dbpedia:Woody_Allen}
+union
+{?n dbpedia-owl:starring dbpedia:Woody_Allen}
+
+
+}"
+137,"select distinct ?n, ?date
+where
+{
+{?n dbpedia-owl:director dbpedia:Woody_Allen}
+union
+{?n dbpedia-owl:writer dbpedia:Woody_Allen}
+union
+{?n dbpedia-owl:starring dbpedia:Woody_Allen}
+
+optional{?n dbpprop:released ?date}
+
+}"
+138,"select distinct ?n, ?date
+where
+{
+{?n dbpedia-owl:director dbpedia:Woody_Allen}
+union
+{?n dbpedia-owl:writer dbpedia:Woody_Allen}
+union
+{?n dbpedia-owl:starring dbpedia:Woody_Allen}
+
+optional{?n dbpprop:released ?date}
+
+}
+limit 1"
+139,"select distinct ?n, distinct ?date
+where
+{
+{?n dbpedia-owl:director dbpedia:Woody_Allen}
+union
+{?n dbpedia-owl:writer dbpedia:Woody_Allen}
+union
+{?n dbpedia-owl:starring dbpedia:Woody_Allen}
+
+optional{?n dbpprop:released ?date}
+
+}
+"
+140,"select distinct ?n, ?date
+where
+{
+{?n dbpedia-owl:director dbpedia:Woody_Allen}
+union
+{?n dbpedia-owl:writer dbpedia:Woody_Allen}
+union
+{?n dbpedia-owl:starring dbpedia:Woody_Allen}
+
+optional{?n dbpprop:released ?date}
+
+}
+"
+141,"select distinct ?n, ?date
+where
+{
+{?n dbpedia-owl:director dbpedia:Woody_Allen}
+union
+{?n dbpedia-owl:writer dbpedia:Woody_Allen}
+union
+{?n dbpedia-owl:starring dbpedia:Woody_Allen}
+
+optional{?n dbpprop:released ?date}
+
+}
+order by desc(?date)"

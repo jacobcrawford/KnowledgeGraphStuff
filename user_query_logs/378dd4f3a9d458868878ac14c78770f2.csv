@@ -1,0 +1,689 @@
+,query
+0,select * where {<http://dbpedia.org/resource/Roger_Federer> ?p ?o filter(lang(?o) = 'en')} 
+1,select * where {<http://dbpedia.org/resource/Roger_Federer> ?p ?o filter(lang(?o) = 'en')} 
+2,"select distinct ?a ?name ?author ?isbn where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . optional{?a dbpprop:author ?author} . filter(regex(?name,'Harry Potter a k�men mudrc&#367;','i')) } LIMIT 100 "
+3,"select distinct ?a ?name ?author ?isbn where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . optional{?a dbpprop:author ?author} . filter(regex(?name,'Reading Harry Potter','i')) } LIMIT 100 "
+4,"select distinct ?a ?name ?author ?isbn where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . optional{?a dbpprop:author ?author} . filter(regex(?name,'The Kindly Ones','i')) } LIMIT 100 "
+5,"select distinct ?a ?name ?author ?isbn where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . optional{?a dbpprop:author ?author} . filter(regex(?name,'The Kindly Ones','i')) } LIMIT 100 "
+6,"select distinct ?a ?name ?author ?isbn where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . optional{?a dbpprop:author ?author} . filter(regex(?name,'The Kindly Ones','i')) } LIMIT 100 "
+7,"select distinct ?a ?name ?author ?isbn where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . optional{?a dbpprop:author ?author} . filter(regex(?name,'The Kindly Ones','i')) } LIMIT 100 "
+8,"select distinct ?a ?name ?author ?isbn where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. optional{?a dbpprop:author ?author}
+. optional{regex(?name,""Harry Potter and the Prisoner of Azkaban"",""i"")}
+. filter(regex(?name,""Harry Potter and the Prisoner of Azkaban"",""i""))
+
+} LIMIT 100"
+9,"select distinct ?a ?name ?author ?isbn where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. optional{?a dbpprop:author ?author.
+regex(?name,""Harry Potter and the Prisoner of Azkaban"",""i"")
+}
+. filter(regex(?name,""Harry Potter and the Prisoner of Azkaban"",""i""))
+
+} LIMIT 100"
+10,"select distinct ?a ?name ?author ?isbn where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. optional{?a dbpprop:author ?author.
+regex(?name,""Harry Potter and the Prisoner of Azkaban"",""i"")}
+. filter(regex(?name,""Harry Potter and the Prisoner of Azkaban"",""i""))
+
+} LIMIT 100"
+11,"select distinct ?a ?name ?author ?isbn where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. optional{?a dbpprop:author ?author.
+regex(?name,""Harry Potter and the Prisoner of Azkaban"",""i"")}
+. filter(regex(?name,""Harry Potter and the Prisoner of Azkaban"",""i""))
+} LIMIT 100"
+12,"select distinct ?a ?name ?author ?isbn where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. optional{?a dbpprop:author ?author.
+
+regex(?name,""Harry Potter and the Prisoner of Azkaban"",""i"")}
+. filter(regex(?name,""Harry Potter and the Prisoner of Azkaban"",""i""))
+} LIMIT 100"
+13,"select distinct ?a ?name ?author ?isbn where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. optional{?a dbpprop:author ?author.}
+. optional{filter(regex(?name,""Harry Potter and the Prisoner of Azkaban"",""i""))}
+. filter(regex(?name,""Harry Potter and the Prisoner of Azkaban"",""i""))
+} LIMIT 100"
+14,"select distinct ?a ?name ?author ?isbn where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. optional{?a dbpprop:author ?author.}
+. optional{. ?a dbpprop:isbn ?isbn . filter(regex(?isbn,""Harry Potter and the Prisoner of Azkaban"",""i""))}
+. filter(regex(?name,""Harry Potter and the Prisoner of Azkaban"",""i""))
+} LIMIT 100"
+15,"select distinct ?a ?name ?author ?isbn where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. optional{?a dbpprop:author ?author.}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""Harry Potter and the Prisoner of Azkaban"",""i""))}
+. filter(regex(?name,""Harry Potter and the Prisoner of Azkaban"",""i""))
+} LIMIT 100"
+16,"select distinct ?a ?name ?author ?isbn where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. optional{?a dbpprop:author ?author.}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+} LIMIT 100"
+17,"select distinct ?a ?name ?author ?isbn ?abstract where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpprop:author ?author.}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+} LIMIT 100"
+18,"select distinct ?a ?name ?author ?isbn ?abstract where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract@""en""
+. optional{?a dbpprop:author ?author.}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+} LIMIT 100"
+19,"select distinct ?a ?name ?author ?isbn ?abstract where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpprop:author ?author.}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+} LIMIT 100"
+20,"select distinct ?a ?name ?author ?isbn ?abstract where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract@en
+. optional{?a dbpprop:author ?author.}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+} LIMIT 100"
+21,"select distinct ?a ?name ?author ?isbn ?abstract@en where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpprop:author ?author.}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+} LIMIT 100"
+22,"select distinct ?a ?name ?author ?isbn ?abstractwhere {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. FILTER (LANGMATCHES(LANG(?abstract), 'en'))
+. optional{?a dbpprop:author ?author.}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+} LIMIT 100"
+23,"select distinct ?a ?name ?author ?isbn ?abstract where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. FILTER (LANGMATCHES(LANG(?abstract), 'en'))
+. optional{?a dbpprop:author ?author.}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+} LIMIT 100"
+24,"select distinct ?a ?name ?author ?isbn ?abstract ?author country_name where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:country ?country
+. ?country dbpprop:display ?country_name}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+25,"select distinct ?a ?name ?author ?isbn ?abstract ?author ?country_name where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:country ?country
+. ?country dbpprop:display ?country_name}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+26,"select distinct ?a ?name ?author ?isbn ?abstract ?author ?country_name where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:country ?country
+. ?country dbpprop:display ?country_name}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+27,"select distinct ?a ?name ?author ?isbn ?abstract ?country_name where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:country ?country
+. ?country dbpprop:display ?country_name}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+28,"select distinct ?a ?name ?author ?isbn ?abstract ?country_name where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:country ?country
+. ?country dbpprop:display ?country_name}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+29,"select distinct ?a ?name ?author ?isbn ?abstract ?country_name where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:country ?country}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+30,"select distinct ?a ?name ?author ?isbn ?abstract where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:country ?country}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+31,"select distinct ?a ?name ?author ?isbn ?abstract ?country where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:country ?country}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+32,"select distinct ?a ?name ?author ?isbn ?abstract ?language_name where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+?language dbpprop:display ?language_name}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+33,"select distinct ?a ?name ?author ?isbn ?abstract ?language_name where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+. ?language dbpprop:display ?language_name}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+34,"select distinct ?a ?name ?author ?isbn ?abstract ?language_name where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+. ?language dbpprop:display@en ?language_name}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+35,"select distinct ?a ?name ?author ?isbn ?abstract ?language_name where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+. ?language dbpprop:display@EN ?language_name}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+36,"select distinct ?a ?name ?author ?isbn ?abstract ?language_name where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+. ?language dbpprop:display ?language_name@EN}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+37,"select distinct ?a ?name ?author ?isbn ?abstract ?language_name where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+. ?language dbpprop:display ?language_name@en}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+38,"select distinct ?a ?name ?author ?isbn ?abstract ?language_name where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+. ?language dbpprop:display ?language_name@""en""}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+39,"select distinct ?a ?name ?author ?isbn ?abstract ?language_name where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+. ?language dbpprop:display ?language_name}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+40,"select distinct ?a ?name ?author ?isbn ?abstract ?language_name MAX(?numberOfPages) where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+. ?language dbpprop:display ?language_name}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpedia-owl:numberOfPages ?numberOfPages}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+41,"select distinct ?a ?name ?author ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+. ?language dbpprop:display ?language_name}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpedia-owl:numberOfPages ?numberOfPages}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+42,"select distinct ?a ?name ?author ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages CONCAT(?literary_genre) where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+. ?language dbpprop:display ?language_name}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpedia-owl:numberOfPages ?numberOfPages}
+. optional{?a dbpedia-owl:literaryGenre ?literary_genre}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+43,"select distinct ?a ?name ?author ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+. ?language dbpprop:display ?language_name}
+. optional{?a dbpprop:author ?author}
+. optional{?a rdfs:comment ?comment
+. filter (LANGMATCHES(LANG(?comment), 'en'))}
+. optional{?a dbpedia-owl:numberOfPages ?numberOfPages}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+44,"select distinct ?a ?name ?author ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?comment where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+. ?language dbpprop:display ?language_name}
+. optional{?a dbpprop:author ?author}
+. optional{?a rdfs:comment ?comment
+. filter (LANGMATCHES(LANG(?comment), 'en'))}
+. optional{?a dbpedia-owl:numberOfPages ?numberOfPages}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+45,"select distinct ?a ?name ?author ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+. ?language dbpprop:display ?language_name}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpedia-owl:numberOfPages ?numberOfPages}
+. optional{?a dbpprop:isbn ?isbn . filter(regex(?isbn,""The Kindly Ones"",""i""))}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+46,"select distinct ?a ?name ?author ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+. ?language dbpprop:display ?language_name}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpedia-owl:numberOfPages ?numberOfPages}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+47,"select distinct ?a ?name ?author ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+. ?language dbpprop:display ?language_name}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpedia-owl:numberOfPages ?numberOfPages}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+48,"select distinct ?a ?name ?author ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+. ?language dbpprop:display ?language_name}
+. optional{?a dbpprop:author ?author}
+. optional{?a dbpprop:englishReleaseDate ?release_date}
+. optional{?a dbpedia-owl:numberOfPages ?numberOfPages}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+49,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+. ?language dbpprop:display ?language_name}
+. optional{?a dbpprop:author ?author
+. ?author dbpprop:name ?author_name}
+. optional{?a dbpprop:englishReleaseDate ?release_date}
+. optional{?a dbpedia-owl:numberOfPages ?numberOfPages}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+50,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . optional{?a dbpprop:author ?author . ?author dbpprop:name ?author_name} . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?name,The Kindly Ones,'i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+51,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . optional{?a dbpprop:author ?author . ?author dbpprop:name ?author_name} . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?name,The Kindly Ones,'i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+52,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . optional{?a dbpprop:author ?author . ?author dbpprop:name ?author_name} . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?name,'The Kindly Ones','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+53,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . optional{?a dbpprop:author ?author . ?author dbpprop:name ?author_name} . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?name,'The Kindly Ones','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+54,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . optional{?a dbpprop:author ?author . ?author dbpprop:name ?author_name} . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?name,'Cracking the SAT Chemistry Subject Test','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+55,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+. ?language dbpprop:display ?language_name}
+. ?a dbpprop:author ?author
+. ?author dbpprop:name ?author_name}
+. optional{?a dbpprop:englishReleaseDate ?release_date}
+. optional{?a dbpedia-owl:numberOfPages ?numberOfPages}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter(regex(?author_name,""Jonathan Littell"",""i""))
+. filter(regex(?name,""The Kindly Ones"",""i""))
+} LIMIT 100"
+56,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+. ?language dbpprop:display ?language_name}
+. ?a dbpprop:author ?author
+. ?author dbpprop:name ?author_name
+. optional{?a dbpprop:englishReleaseDate ?release_date}
+. optional{?a dbpedia-owl:numberOfPages ?numberOfPages}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter(regex(?author_name,""Jonathan Littell"",""i""))
+. filter(regex(?name,""The Kindly Ones"",""i""))
+} LIMIT 100"
+57,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+. ?language dbpprop:display ?language_name}
+. ?a dbpprop:author ?author
+. ?author dbpprop:name ?author_name
+. optional{?a dbpprop:englishReleaseDate ?release_date}
+. optional{?a dbpedia-owl:numberOfPages ?numberOfPages}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter(regex(?author_name,""Jonathan Littell"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+58,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . optional{?a dbpprop:author ?author . ?author dbpprop:name ?author_name} . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?name,'Test Your IQ','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+59,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . optional{?a dbpprop:author ?author . ?author dbpprop:name ?author_name} . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?name,'Cracking the SAT Chemistry Subject Test','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+60,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . optional{?a dbpprop:author ?author . ?author dbpprop:name ?author_name} . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?name,'Constructing Test Items','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+61,"select distinct ?a ?name where {
+?a rdf:type dbpedia-owl:Writer
+. ?a dbpprop:name ?name
+. filter(regex(?name,""Jonathan Littell"",""i""))
+
+} LIMIT 100"
+62,"select distinct  where {
+?a rdf:type ?type
+. ?a dbpprop:name ?name
+. ?a dbpprop:isbn ?isbn 
+. ?a dbpedia-owl:abstract ?abstract
+. optional{?a dbpedia-owl:language ?language
+. ?language dbpprop:display ?language_name}
+. ?a dbpprop:author ?author
+. ?author dbpprop:name ?author_name
+. optional{?a dbpprop:englishReleaseDate ?release_date}
+. optional{?a dbpedia-owl:numberOfPages ?numberOfPages}
+. filter(regex(?name,""The Kindly Ones"",""i""))
+. filter(regex(?author_name,""Jonathan Littell"",""i""))
+. filter (LANGMATCHES(LANG(?abstract), 'en'))
+} LIMIT 100"
+63,"select distinct ?a ?name ?book where {
+?a rdf:type dbpedia-owl:Writer
+. ?a dbpprop:name ?name
+. ?book dbpprop:author ?a
+. filter(regex(?name,""Jonathan Littell"",""i""))
+
+} LIMIT 100"
+64,"select distinct ?a ?name ?book where {
+?a rdf:type dbpedia-owl:Writer
+. ?a dbpprop:name ?name
+. ?book dbpprop:author ?a
+. filter(regex(?name,""Stephen King"",""i""))
+
+} LIMIT 100"
+65,"select distinct ?a ?name ?book where {
+?a rdf:type dbpedia-owl:Writer
+. ?a dbpprop:name ?name
+. ?book dbpprop:author ?a
+. filter(regex(?name,""Dan Brown"",""i""))
+
+} LIMIT 100"
+66,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . optional{?a dbpprop:author ?author . ?author dbpprop:name ?author_name} . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?name,'|Cracking the SAT Chemistry Subject Test','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+67,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?name,' The Kindly Ones','i')) . filter(regex(?name,'undefined','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100; "
+68,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?name,' The Kindly Ones','i')) . filter(regex(?name,'undefined','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100; "
+69,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?name,' The Kindly Ones','i')) . filter(regex(?name,'undefined','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+70,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?name,' The Kindly Ones','i')) . filter(regex(?name,'undefined','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+71,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Jonathan Littell','i')) . filter(regex(?name,'The Kindly Ones','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+72,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Anthony Powell','i')) . filter(regex(?name,'The Kindly Ones','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+73,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Susan Hampton','i')) . filter(regex(?name,'The Kindly Ones','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+74,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Aur�lie Barjonet,Liran Razinsky','i')) . filter(regex(?name,'Writing the Holocaust Today','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+75,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Neil Gaiman','i')) . filter(regex(?name,'The Sandman 9','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+76,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Neil Gaiman','i')) . filter(regex(?name,'Sandman Vol. 9: the Kindly Ones (New Edition)','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+77,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Andrew Blake','i')) . filter(regex(?name,'The Irresistible Rise of Harry Potter','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+78,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Philip Nel','i')) . filter(regex(?name,'JK Rowling's Harry Potter Novels','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+79,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Daniel H. Nexon,Iver B. Neumann','i')) . filter(regex(?name,'Harry Potter and International Relations','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+80,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Alison Hansel','i')) . filter(regex(?name,'Charmed Knits','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+81,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Giselle Liza Anatol','i')) . filter(regex(?name,'Reading Harry Potter','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+82,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Susan Gunelius','i')) . filter(regex(?name,'Harry Potter','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+83,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Luke Bell','i')) . filter(regex(?name,'Baptizing Harry Potter','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+84,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'William Irwin,Gregory Bassham','i')) . filter(regex(?name,'The Ultimate Harry Potter and Philosophy','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+85,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'J. K. Rowling,Vladim�r Medek','i')) . filter(regex(?name,'Harry Potter a k�men mudrc&#367;','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+86,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Philip Nel','i')) . filter(regex(?name,'JK Rowling's Harry Potter Novels','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+87,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Alison Hansel','i')) . filter(regex(?name,'Charmed Knits','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+88,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Giselle Liza Anatol','i')) . filter(regex(?name,'Reading Harry Potter','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+89,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Susan Gunelius','i')) . filter(regex(?name,'Harry Potter','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+90,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Franti�ek Ko��k','i')) . filter(regex(?name,'Shakespeare','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+91,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'William Shakespeare','i')) . filter(regex(?name,'Shakespeare','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+92,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Jonathan Hope','i')) . filter(regex(?name,'Shakespeare's Grammar','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+93,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Vladim�r Kyas','i')) . filter(regex(?name,'&#268;esk� Bible v d&#283;jin�ch n�rodn�ho p�semnictv�','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+94,"select distinct ?a ?name where 
+{
+ ?a rdf:type dbpedia-owl:author
+ . ?a dbpprop:name ?name
+ . filter(regex(?name,'Vladimír Kyas','i'))
+ } LIMIT 100"";
+"
+95,"select distinct ?a ?name where 
+{
+ ?a rdf:type dbpedia-owl:author
+ . ?a dbpprop:name ?name
+ . filter(regex(?name,'Stephen King','i'))
+ } LIMIT 100"";
+"
+96,"select distinct ?a ?name where 
+{
+ ?a rdf:type dbpedia-owl:author
+ . ?a dbpprop:name ?name
+ . filter(regex(?name,'Stephen King','i'))
+ } LIMIT 100;
+"
+97,"select distinct ?a ?name where 
+{
+ ?a rdf:type dbpedia-owl:author
+ . ?a dbpprop:name ?name
+ . filter(regex(?name,'Stephen King','i'))
+ } LIMIT 100
+"
+98,"select distinct ?a ?name where 
+{
+ ?a rdf:type dbpedia-owl:author
+ . ?a dbpprop:name ?name
+ . filter(regex(?name,'King','i'))
+ } LIMIT 100
+"
+99,"select distinct ?a ?name where 
+{
+ [] dbpedia-owl:author ?a
+ . ?a dbpprop:name ?name
+ . filter(regex(?name,'King','i'))
+ } LIMIT 100
+"
+100,"select distinct ?a ?name where 
+{
+ [] dbpedia-owl:author ?a
+ . ?a dbpprop:name ?name
+ . filter(regex(?name,'Stephen King','i'))
+ } LIMIT 100
+"
+101,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . optional{?a dbpprop:author ?author . ?author dbpprop:name ?author_name} . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?name,'The Kindly Ones','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+102,"select distinct ?a ?name ?book where 
+{
+ ?book dbpedia-owl:author ?a
+ . ?a dbpprop:name ?name
+ . filter(regex(?name,'Stephen King','i'))
+ } LIMIT 100
+"
+103,"select distinct ?a ?name ?book ?date where 
+{
+ ?book dbpedia-owl:author ?a
+ . ?a dbpprop:name ?name
+ . ?book dbpprop:releaseDate ?date
+ . filter(regex(?name,'Stephen King','i'))
+ } LIMIT 100
+"
+104,"select distinct ?a ?name ?book ?date where 
+{
+ ?book dbpedia-owl:author ?a
+ . ?a dbpprop:name ?name
+ . ?book dbpprop:releaseDate ?date
+ . filter(regex(?name,'Stephen King','i'))
+ } LIMIT 100
+"
+105,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . optional{?a dbpprop:author ?author . ?author dbpprop:name ?author_name} . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?name,'J.K. Rowling','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+106,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . optional{?a dbpprop:author ?author . ?author dbpprop:name ?author_name} . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?name,'Life in Medieval Times','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+107,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Jonathan Littell','i')) . filter(regex(?name,'The Kindly Ones','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+108,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Jonathan Littell','i')) . filter(regex(?name,'The Kindly Ones','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+109,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Jonathan Littell','i')) . filter(regex(?name,'The Kindly Ones','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+110,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Anthony Powell','i')) . filter(regex(?name,'The Kindly Ones','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+111,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Neil Gaiman','i')) . filter(regex(?name,'Sandman Vol. 9: the Kindly Ones (New Edition)','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+112,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Neil Gaiman','i')) . filter(regex(?name,'The Sandman 9','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+113,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Neil Gaiman,Frank McConnell','i')) . filter(regex(?name,'The Sandman Vol. 9: The Kindly Ones','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+114,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Jim Cheshire','i')) . filter(regex(?name,'My Kindle Fire','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+115,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Susan Hampton','i')) . filter(regex(?name,'The Kindly Ones','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+116,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Jim Cheshire','i')) . filter(regex(?name,'My Kindle Fire','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+117,"select distinct ?a ?name ?book ?date where { ?book dbpedia-owl:author ?a . ?a dbpprop:name ?name . ?book dbpprop:releaseDate ?date . filter(regex(?name,'Anthony Powell','i')) } LIMIT 100 "
+118,"select distinct ?a ?name ?book ?date where { ?book dbpedia-owl:author ?a . ?a dbpprop:name ?name . ?book dbpprop:releaseDate ?date . filter(regex(?name,'Anthony Powell','i')) } LIMIT 100 "
+119,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Anthony Powell','i')) . filter(regex(?name,'The Kindly Ones','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+120,"select distinct ?a ?name ?author_name ?isbn ?abstract ?language_name MAX(?numberOfPages) as ?number_of_pages ?release_date where { ?a rdf:type ?type . ?a dbpprop:name ?name . ?a dbpprop:isbn ?isbn . ?a dbpedia-owl:abstract ?abstract . optional{?a dbpedia-owl:language ?language . ?language dbpprop:display ?language_name} . ?a dbpprop:author ?author . ?author dbpprop:name ?author_name . optional{?a dbpprop:englishReleaseDate ?release_date} . optional{?a dbpedia-owl:numberOfPages ?numberOfPages} . filter(regex(?author_name,'Anthony Powell','i')) . filter(regex(?name,'The Kindly Ones','i')) . filter (LANGMATCHES(LANG(?abstract), 'en')) } LIMIT 100 "
+121,"select distinct ?a ?name ?book ?date where { ?book dbpedia-owl:author ?a . ?a dbpprop:name ?name . ?book dbpprop:releaseDate ?date . filter(regex(?name,'Anthony Powell','i')) } LIMIT 100 "

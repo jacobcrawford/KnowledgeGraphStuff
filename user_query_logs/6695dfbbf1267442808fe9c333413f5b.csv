@@ -1,0 +1,1901 @@
+,query
+0,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?released ?abstract WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia2:starring <http://dbpedia.org/resource/Tom_Cruise>.
+?subject rdfs:comment ?abstract.
+?subject rdfs:label ?label.
+FILTER(lang(?abstract) = ""en"" && lang(?label) = ""en"").
+?subject <http://dbpedia.org/ontology/releaseDate> ?released.
+FILTER(xsd:date(?released) < ""2000-01-01""^^xsd:date).
+} ORDER BY ?released
+LIMIT 20
+"
+1,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?abstract WHERE{
+?subject rdf:type <http://dbpedia.org/ontology/Book>.
+?subject dbpedia2:author <http://dbpedia.org/resource/Jules_Verne>.
+?subject rdfs:comment ?abstract.
+FILTER (lang(?abstract) = ""fr"" && lang(?label) = ""fr"").
+}
+"
+2,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?abstract WHERE{
+?subject rdf:type <http://dbpedia.org/ontology/Book>.
+?subject dbpedia2:author <http://dbpedia.org/resource/Jules_Verne>.
+?subject rdfs:comment ?abstract.
+}
+"
+3,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?abstract WHERE{
+?subject rdf:type <http://dbpedia.org/ontology/Book>.
+?subject dbpedia2:author <http://dbpedia.org/resource/Jules_Verne>.
+?subject rdfs:label ?label.
+?subject rdfs:comment ?abstract.
+}
+"
+4,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?abstract WHERE{
+?subject rdf:type <http://dbpedia.org/ontology/Book>.
+?subject dbpedia2:author <http://dbpedia.org/resource/Jules_Verne>.
+?subject rdfs:label ?label.
+?subject rdfs:comment ?abstract.
+FILTER (lang(?abstract) = ""fr"" && lang(?label) = ""fr"").
+}
+"
+5,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/A_Drama_in_Livonia> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/A_Drama_in_Livonia> }
+}"
+6,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?released ?abstract ?acteur WHERE {
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> rdfs:label ?label.
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> rdfs:comment ?abstract.
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> <http://dbpedia.org/ontology/releaseDate> ?released.
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> dbpedia2:starring ?acteur.
+FILTER(lang(?abstract) = ""fr"" && lang(?label) = ""fr"").
+} ORDER BY ?released
+LIMIT 20
+"
+7,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:label ?label.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:comment ?abstract.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:genre ?genre.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:author ?aut.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:publisher ?publisher.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> <http://dbpedia.org/ontology/releaseDate> ?released.
+FILTER(lang(?abstract) = ""fr"" && lang(?label) = ""fr"").
+} ORDER BY ?released
+LIMIT 20
+"
+8,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:label ?label.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:comment ?abstract.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:genre ?genre.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:author ?aut.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:publisher ?publisher.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> <http://dbpedia.org/ontology/releaseDate> ?released.
+
+} ORDER BY ?released
+LIMIT 20
+"
+9,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:label ?label.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:comment ?abstract.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:genre ?genre.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:author ?aut.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:publisher ?publisher.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> <http://dbpedia.org/ontology/releaseDate> ?released.
+
+} ORDER BY ?released
+LIMIT 20
+"
+10,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:label ?label.
+
+FILTER(lang(?abstract) = ""fr"" && lang(?label) = ""fr"").
+} ORDER BY ?released
+LIMIT 20
+"
+11,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:label ?label.
+
+} ORDER BY ?released
+LIMIT 20
+"
+12,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:label ?label.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:comment ?abstract.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:genre ?genre.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:author ?aut.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:publisher ?publisher.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> <http://dbpedia.org/ontology/releaseDate> ?released.
+}"
+13,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:label ?label.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:comment ?abstract.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:genre ?genre.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:author ?aut.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:publisher ?publisher.
+}"
+14,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:label ?label.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:comment ?abstract.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:genre ?genre.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:author ?aut.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:publisher ?publisher.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> <http://dbpedia.org/ontology/releaseDate> ?released.
+}"
+15,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:label ?label.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:comment ?abstract.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:genre ?genre.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:author ?aut.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:publisher ?publisher.
+}"
+16,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:label ?label.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:comment ?abstract.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:genre ?genre.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:author ?aut.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:publisher ?publisher.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:releaseDate ?released.
+
+}"
+17,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+<http://dbpedia.org/resource/Voyage_au_centre_de_la_Terre> rdfs:label ?label.
+<http://dbpedia.org/resource/Voyage_au_centre_de_la_Terre> rdfs:comment ?abstract.
+<http://dbpedia.org/resource/Voyage_au_centre_de_la_Terre> dbpedia2:genre ?genre.
+<http://dbpedia.org/resource/Voyage_au_centre_de_la_Terre> dbpedia2:author ?aut.
+<http://dbpedia.org/resource/Voyage_au_centre_de_la_Terre> dbpedia2:publisher ?publisher.
+<http://dbpedia.org/resource/Voyage_au_centre_de_la_Terre> dbpedia2:releaseDate ?released.
+
+}"
+18,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+<http://fr.dbpedia.org/resource/Voyage_au_centre_de_la_Terre> rdfs:label ?label.
+<http://fr.dbpedia.org/resource/Voyage_au_centre_de_la_Terre> rdfs:comment ?abstract.
+<http://fr.dbpedia.org/resource/Voyage_au_centre_de_la_Terre> dbpedia2:genre ?genre.
+<http://fr.dbpedia.org/resource/Voyage_au_centre_de_la_Terre> dbpedia2:author ?aut.
+<http://fr.dbpedia.org/resource/Voyage_au_centre_de_la_Terre> dbpedia2:publisher ?publisher.
+<http://fr.dbpedia.org/resource/Voyage_au_centre_de_la_Terre> dbpedia2:releaseDate ?released.
+
+}"
+19,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+<http://fr.dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:label ?label.
+<http://fr.dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:comment ?abstract.
+<http://fr.dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:genre ?genre.
+<http://fr.dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:author ?aut.
+<http://fr.dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:publisher ?publisher.
+<http://fr.dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:releaseDate ?released.
+
+}"
+20,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:label ?label.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:comment ?abstract.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:genre ?genre.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:author ?aut.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:publisher ?publisher.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:releaseDate ?released.
+
+}"
+21,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+:A_Journey_to_the_Center_of_the_Earth> rdfs:label ?label.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:comment ?abstract.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:genre ?genre.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:author ?aut.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:publisher ?publisher.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:releaseDate ?released.
+
+}"
+22,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+A_Journey_to_the_Center_of_the_Earth> rdfs:label ?label.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:comment ?abstract.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:genre ?genre.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:author ?aut.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:publisher ?publisher.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:releaseDate ?released.
+
+}"
+23,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+:/A_Journey_to_the_Center_of_the_Earth> rdfs:label ?label.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:comment ?abstract.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:genre ?genre.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:author ?aut.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:publisher ?publisher.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:releaseDate ?released.
+
+}"
+24,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+:/A_Journey_to_the_Center_of_the_Earth rdfs:label ?label.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:comment ?abstract.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:genre ?genre.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:author ?aut.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:publisher ?publisher.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:releaseDate ?released.
+
+}"
+25,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+:A_Journey_to_the_Center_of_the_Earth rdfs:label ?label.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> rdfs:comment ?abstract.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:genre ?genre.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:author ?aut.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:publisher ?publisher.
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> dbpedia2:releaseDate ?released.
+
+}"
+26,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+:A_Journey_to_the_Center_of_the_Earth rdfs:label ?label.
+:A_Journey_to_the_Center_of_the_Earth rdfs:comment ?abstract.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:genre ?genre.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:author ?aut.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:publisher ?publisher.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:releaseDate ?released.
+
+}"
+27,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+:A_Journey_to_the_Center_of_the_Earth rdfs:label ?label.
+:A_Journey_to_the_Center_of_the_Earth rdfs:comment ?abstract.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:genre ?genre.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:author ?aut.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:publisher ?publisher.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:releaseDate ?released.
+FILTER (lang(?genre)=""en"")
+}"
+28,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+:A_Journey_to_the_Center_of_the_Earth rdfs:label ?label.
+:A_Journey_to_the_Center_of_the_Earth rdfs:comment ?abstract.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:genre ?genre.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:author ?aut.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:publisher ?publisher.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:releaseDate ?released.
+FILTER (lang(?genre)=""en"").
+}"
+29,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+:A_Journey_to_the_Center_of_the_Earth rdfs:label ?label.
+:A_Journey_to_the_Center_of_the_Earth rdfs:comment ?abstract.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:genre ?genre.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:author ?aut.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:publisher ?publisher.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:releaseDate ?released.
+FILTER(lang(?abstract) = ""fr"" 
+}"
+30,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+:A_Journey_to_the_Center_of_the_Earth rdfs:label ?label.
+:A_Journey_to_the_Center_of_the_Earth rdfs:comment ?abstract.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:genre ?genre.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:author ?aut.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:publisher ?publisher.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:releaseDate ?released.
+FILTER(lang(?genre) = ""fr"")
+}"
+31,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+:A_Journey_to_the_Center_of_the_Earth rdfs:label ?label.
+:A_Journey_to_the_Center_of_the_Earth rdfs:comment ?abstract.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:genre ?genre.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:author ?aut.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:publisher ?publisher.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:releaseDate ?released.
+FILTER(lang(?genre) = ""fr"")
+}"
+32,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+:A_Journey_to_the_Center_of_the_Earth rdfs:label ?label.
+:A_Journey_to_the_Center_of_the_Earth rdfs:comment ?abstract.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:genre ?genre.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:author ?aut.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:publisher ?publisher.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:releaseDate ?released.
+FILTER(lang(?genre) = ""en"")
+}"
+33,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+:A_Journey_to_the_Center_of_the_Earth rdfs:label ?label.
+:A_Journey_to_the_Center_of_the_Earth rdfs:comment ?abstract.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:genre ?genre.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:author ?aut.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:publisher ?publisher.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:releaseDate ?released.
+}"
+34,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Adventure_fiction> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Adventure_fiction> }
+}"
+35,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+:A_Journey_to_the_Center_of_the_Earth rdfs:label ?label.
+:A_Journey_to_the_Center_of_the_Earth rdfs:comment ?abstract.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:genre ?genre.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:author ?aut.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:publisher ?publisher.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:releaseDate ?released.
+}"
+36,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+:A_Journey_to_the_Center_of_the_Earth rdfs:label ?label.
+:A_Journey_to_the_Center_of_the_Earth rdfs:comment ?abstract.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:genre ?genre.
+?genre rdfs:label ?l
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:author ?aut.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:publisher ?publisher.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:releaseDate ?released.
+FILTER (lang(?l)=""en"")
+}"
+37,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+:A_Journey_to_the_Center_of_the_Earth rdfs:label ?label.
+:A_Journey_to_the_Center_of_the_Earth rdfs:comment ?abstract.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:genre ?genre.
+?genre rdfs:label ?l
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:author ?aut.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:publisher ?publisher.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:releaseDate ?released.
+
+}"
+38,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+:A_Journey_to_the_Center_of_the_Earth rdfs:label ?label.
+:A_Journey_to_the_Center_of_the_Earth rdfs:comment ?abstract.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:genre ?genre.
+
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:author ?aut.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:publisher ?publisher.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:releaseDate ?released.
+
+}"
+39,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?abstract ?genre ?aut ?released ?publisher WHERE {
+{
+:A_Journey_to_the_Center_of_the_Earth rdfs:label ?label.
+:A_Journey_to_the_Center_of_the_Earth rdfs:comment ?abstract.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:author ?aut.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:publisher ?publisher.
+:A_Journey_to_the_Center_of_the_Earth dbpedia2:releaseDate ?released.
+}
+UNION
+{:A_Journey_to_the_Center_of_the_Earth dbpedia2:genre ?genre.}
+
+}"
+40,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecr_influence WHERE {
+?ecrivain rdfs:type dbpedia:ontology/Writer
+
+}"
+41,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecr_influence WHERE {
+?ecrivain rdfs:type dbpedia:ontology:Writer
+
+}"
+42,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecr_influence WHERE {
+?ecrivain rdfs:type dbpedia/ontology/Writer
+
+}"
+43,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecr_influence WHERE {
+?ecrivain rdfs:type <<http://dbpedia.org/ontology/Film>
+
+}"
+44,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecr_influence WHERE {
+?ecrivain rdfs:type <http://dbpedia.org/ontology/Film>
+
+}"
+45,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecr_influence WHERE {
+?ecrivain rdfs:type <http://dbpedia.org/ontology/Writer>
+
+}"
+46,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain WHERE {
+?ecrivain rdfs:type <http://dbpedia.org/ontology/Writer>
+
+}"
+47,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain WHERE {
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>
+
+}"
+48,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecriv_influence WHERE {
+?ecrivain rdf:type dbpedia:ontology:Writer
+}"
+49,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecriv_influence WHERE {
+?ecrivain rdf:type dbpedia/ontology/Writer
+}"
+50,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecriv_influence WHERE {
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>
+}"
+51,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Ève_Curie> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Ève_Curie> }
+}"
+52,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_label ?ecriv_influence WHERE {
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>
+?ecrivain rdfs:label ecrivain_label
+FILTER (lan(?ecrivain_label)=""en)
+
+}
+LIMIT 20"
+53,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_label ?ecriv_influence WHERE {
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>
+?ecrivain rdfs:label ecrivain_label
+
+
+}
+LIMIT 20"
+54,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_label ?ecriv_influence WHERE {
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>
+?ecrivain rdf:label ecrivain_label
+
+
+}
+LIMIT 20"
+55,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_label ?ecriv_influence WHERE {
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ecrivain_label.
+
+
+}
+LIMIT 20"
+56,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_label ?ecriv_influence WHERE {
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+
+
+}
+LIMIT 20"
+57,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Ève_Curie> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Ève_Curie> }
+}"
+58,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecriv_influence WHERE {
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom
+
+}
+LIMIT 20"
+59,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecriv_influence WHERE {
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom
+
+FILTER (lang(?ecrivain_nom)=""en""))
+}
+LIMIT 20"
+60,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecriv_influence WHERE {
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+
+FILTER (lang(?ecrivain_nom)=""en""))
+}
+LIMIT 20"
+61,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecriv_influence WHERE {
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+
+}
+LIMIT 20"
+62,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecriv_influence WHERE {
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>
+?ecrivain rdfs:label ?ecrivain_nom.
+
+}
+LIMIT 20"
+63,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecriv_influence WHERE {
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+
+FILTER (lang(?ecrivain_nom)=""en"")).
+}
+LIMIT 20"
+64,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecriv_influence WHERE {
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+
+FILTER (lang(?ecrivain_nom)=""fr"")).
+}
+LIMIT 20"
+65,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecriv_influence WHERE {
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+
+FILTER (lang(?ecrivain_nom)=""en"")).
+}
+LIMIT 20"
+66,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecriv_influence WHERE {
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+
+FILTER (lang(?ecrivain_nom)=""en"").
+}
+LIMIT 20"
+67,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Ève_Curie> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Ève_Curie> }
+}"
+68,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+?ecrivain dbpedia2:birthPlace :Nantes
+
+
+FILTER (lang(?ecrivain_nom)=""en"" lang(?e).
+}
+LIMIT 20"
+69,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+?ecrivain dbpedia2:birthPlace :Nantes
+
+
+FILTER (lang(?ecrivain_nom)=""en"" lang(?e).
+}
+LIMIT 20"
+70,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+
+
+FILTER (lang(?ecrivain_nom)=""en"" lang(?e).
+}
+LIMIT 20"
+71,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+?ecrivain dbpedia2:birthPlace :Nantes
+
+FILTER (lang(?ecrivain_nom)=""en"").
+}
+LIMIT 20"
+72,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Jules_Verne> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Jules_Verne> }
+}"
+73,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+{
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+?ecrivain dbpedia2:birthPlace :Nantes.
+}
+UNION
+{
+?ecrivain dbpedia:ontology/influenced ?ei.
+?ei rdfs:label ?ecrivains_influences.
+}
+FILTER (lang(?ecrivains_influences)=""en"").
+FILTER (lang(?ecrivain_nom)=""en"").
+}
+LIMIT 20"
+74,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+{
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+?ecrivain dbpedia2:birthPlace :Nantes.
+}
+UNION
+{
+?ecrivain dbpedia:ontology/influenced ?ei.
+?ei rdfs:label ?ecrivains_influences.
+}
+
+FILTER (lang(?ecrivain_nom)=""en"").
+}
+LIMIT 20"
+75,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+{
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+?ecrivain dbpedia2:birthPlace :Nantes.
+}
+UNION
+{
+?ecrivain dbpedia2:influenced ?ei.
+?ei rdfs:label ?ecrivains_influences.
+}
+
+FILTER (lang(?ecrivain_nom)=""en"").
+}
+LIMIT 20"
+76,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+{
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+?ecrivain dbpedia2:birthPlace :Nantes.
+}
+UNION
+{
+?ecrivain dbpedia2:influenced ?ei.
+
+}
+
+FILTER (lang(?ecrivain_nom)=""en"").
+}
+LIMIT 20"
+77,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Jules_Verne> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Jules_Verne> }
+}"
+78,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+{
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+?ecrivain dbpedia2:birthPlace :Nantes.
+}
+UNION
+{
+?ecrivain dbpedia2:influenced ?ecrivains_influences.
+}
+
+FILTER (lang(?ecrivain_nom)=""en"").
+}
+LIMIT 20"
+79,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+{
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+?ecrivain dbpedia2:birthPlace :Nantes.
+?ecrivain dbpedia2:influenced ?ecrivains_influences.
+}
+UNION
+{
+
+}
+
+FILTER (lang(?ecrivain_nom)=""en"").
+}
+LIMIT 20"
+80,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+{
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+?ecrivain dbpedia2:birthPlace :Nantes.
+?ecrivain dbpedia2:influenced ?ei.
+?ei rdfs:label ?ecrivains_influences.
+}
+UNION
+{
+
+}
+
+FILTER (lang(?ecrivain_nom)=""en"").
+}
+LIMIT 20"
+81,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+{
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+?ecrivain dbpedia2:birthPlace :Nantes.
+?ecrivain dbpedia2:influenced ?ei.
+?ei rdfs:label ?ecrivains_influences.
+FILTER (lang(?ecrivains_influences)=""en"").
+}
+UNION
+{
+
+}
+
+FILTER (lang(?ecrivain_nom)=""en"").
+}
+LIMIT 20"
+82,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+{
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+?ecrivain dbpedia2:birthPlace :Nantes.
+}
+UNION
+{
+?ecrivain dbpedia2:influenced ?ei.
+?ei rdfs:label ?ecrivains_influences.
+FILTER (lang(?ecrivains_influences)=""en"").
+}
+
+FILTER (lang(?ecrivain_nom)=""en"").
+}
+LIMIT 20"
+83,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+?ecrivain dbpedia2:birthPlace :Nantes.
+?ecrivain dbpedia2:influenced ?ei.
+?ei rdfs:label ?ecrivains_influences.
+FILTER (lang(?ecrivains_influences)=""en"").
+
+FILTER (lang(?ecrivain_nom)=""en"").
+}
+LIMIT 20"
+84,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+?ecrivain dbpedia2:birthPlace :Nantes.
+?ecrivain dbpedia2:influenced ?ei.
+?ei rdfs:label ?ecrivains_influences.
+FILTER (lang(?ecrivains_influences)=""en"").
+
+FILTER (lang(?ecrivain_nom)=""en"").
+}
+LIMIT 40"
+85,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+?ecrivain dbpedia2:birthPlace :Nantes.
+?ecrivain dbpedia2:influenced ?ei.
+?ei rdfs:label ?ecrivains_influences.
+FILTER (lang(?ecrivains_influences)=""en"").
+
+FILTER (lang(?ecrivain_nom)=""en"").
+}
+LIMIT 100"
+86,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+?ecrivain dbpedia2:birthPlace :Nantes.
+?ecrivain dbpedia2:influenced ?ei.
+?ei rdfs:label ?ecrivains_influences.
+FILTER (lang(?ecrivains_influences)=""en"").
+
+FILTER (lang(?ecrivain_nom)=""en"").
+}"
+87,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+?ecrivain dbpedia2:birthPlace :Nantes.
+OPTIONAL{
+?ecrivain dbpedia2:influenced ?ei.
+?ei rdfs:label ?ecrivains_influences.
+FILTER (lang(?ecrivains_influences)=""en"").
+}
+FILTER (lang(?ecrivain_nom)=""en"").
+}"
+88,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+{
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+?ecrivain dbpedia2:birthPlace :Nantes.
+}
+UNION{
+OPTIONAL{
+?ecrivain dbpedia2:influenced ?ei.
+?ei rdfs:label ?ecrivains_influences.
+FILTER (lang(?ecrivains_influences)=""en"").
+}
+}
+FILTER (lang(?ecrivain_nom)=""en"").
+}"
+89,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+{
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+?ecrivain dbpedia2:birthPlace :Nantes.
+}
+UNION
+{
+?ecr rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecr dbpedia2:birthPlace :Nantes.
+?ecr dbpedia2:influenced ?ei.
+?ei rdfs:label ?ecrivains_influences.
+FILTER (lang(?ecrivains_influences)=""en"").
+}
+FILTER (lang(?ecrivain_nom)=""en"").
+}"
+90,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+{
+?ecr rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecr dbpedia2:birthPlace :Nantes.
+?ecr dbpedia2:influenced ?ei.
+?ei rdfs:label ?ecrivains_influences.
+FILTER (lang(?ecrivains_influences)=""en"").
+}
+
+{
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+?ecrivain dbpedia2:birthPlace :Nantes.
+}
+UNION
+{
+
+}
+FILTER (lang(?ecrivain_nom)=""en"").
+}"
+91,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ecrivain ?ecrivain_nom ?ecrivains_influences WHERE {
+?ecrivain rdf:type <http://dbpedia.org/ontology/Writer>.
+?ecrivain rdfs:label ?ecrivain_nom.
+?ecrivain dbpedia2:birthPlace :Nantes.
+OPTIONAL
+{
+?ecrivain dbpedia2:influenced ?ei.
+?ei rdfs:label ?ecrivains_influences.
+FILTER (lang(?ecrivains_influences)=""en"").
+}
+FILTER (lang(?ecrivain_nom)=""en"").
+}"
+92,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?entreprise ?domaine ?revenu ?pays WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Company>.
+?subject rdfs:label ?entreprise
+
+FILTER (lang(label)=""en"")
+}ORDER BY ?revenu
+LIMIT 40"
+93,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?entreprise ?domaine ?revenu ?pays WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Company>.
+?subject rdfs:label ?entreprise.
+
+FILTER (lang(label)=""en"")
+}ORDER BY ?revenu
+LIMIT 40"
+94,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?entreprise ?domaine ?revenu ?pays WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Company>.
+?subject rdfs:label ?entreprise.
+
+FILTER (lang(label)=""en"")
+}
+LIMIT 40"
+95,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?entreprise ?domaine ?revenu ?pays WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Company>.
+?subject rdfs:label ?entreprise.
+
+FILTER (lang(?label)=""en"")
+}
+LIMIT 40"
+96,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?entreprise ?domaine ?revenu ?pays WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Company>.
+
+}
+LIMIT 40"
+97,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?entreprise ?domaine ?revenu ?pays WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Company>.
+?subject rdfs:label ?entreprise.
+
+}
+LIMIT 40"
+98,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?entreprise ?domaine ?revenu ?pays WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Company>.
+?subject rdfs:label ?entreprise.
+
+FILTER (lang(?label)=""en"")
+}
+LIMIT 40"
+99,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?entreprise ?nom ?domaine ?revenu ?pays WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Company>.
+?subject rdfs:label ?nom.
+
+FILTER (lang(?nom)=""en"")
+}
+LIMIT 40"
+100,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?entreprise ?nom ?domaine ?revenu ?pays WHERE {
+?entreprise rdf:type <http://dbpedia.org/ontology/Company>.
+?entreprise rdfs:label ?nom.
+
+FILTER (lang(?nom)=""en"")
+}
+LIMIT 40"
+101,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?entreprise ?nom ?domaine ?revenu ?pays WHERE {
+?entreprise rdf:type <http://dbpedia.org/ontology/Company>.
+?entreprise rdfs:label ?nom.
+?entreprise dbpedia2:netIncome ?revenu
+
+FILTER (lang(?nom)=""en"")
+}
+LIMIT 40"
+102,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?entreprise ?nom ?domaine ?revenu ?pays WHERE {
+?entreprise rdf:type <http://dbpedia.org/ontology/Company>.
+?entreprise rdfs:label ?nom.
+?entreprise dbpedia2:netIncome ?revenu
+
+FILTER (lang(?nom)=""en"")
+}
+ORDER BY ?revenu
+LIMIT 40"
+103,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?entreprise ?nom ?domaine ?revenu ?pays WHERE {
+?entreprise rdf:type <http://dbpedia.org/ontology/Company>.
+?entreprise rdfs:label ?nom.
+?entreprise dbpedia2:netIncome ?revenu
+?entreprise dbpedia2:locationCity ?pays
+FILTER (lang(?nom)=""en"")
+}
+ORDER BY ?revenu
+LIMIT 40"
+104,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?entreprise ?nom ?domaine ?revenu ?pays WHERE {
+?entreprise rdf:type <http://dbpedia.org/ontology/Company>.
+?entreprise rdfs:label ?nom.
+?entreprise dbpedia2:netIncome ?revenu.
+?entreprise dbpedia2:locationCity ?pays.
+FILTER (lang(?nom)=""en"")
+}
+ORDER BY ?revenu
+LIMIT 40"
+105,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?entreprise ?nom ?domaine ?revenu ?pays WHERE {
+?entreprise rdf:type <http://dbpedia.org/ontology/Company>.
+?entreprise rdfs:label ?nom.
+?entreprise dbpedia2:netIncome ?revenu.
+?entreprise dbpedia2:locationCountry ?pays.
+FILTER (lang(?nom)=""en"")
+}
+ORDER BY ?revenu
+LIMIT 40"

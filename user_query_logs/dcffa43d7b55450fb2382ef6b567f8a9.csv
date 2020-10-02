@@ -1,0 +1,304 @@
+,query
+0,SELECT ?abstract ?label WHERE {<http://example.com/ldfs/def#Private> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+1,SELECT ?abstract ?label WHERE {<http://example.com/ldfs/def#Public> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+2,SELECT ?abstract ?label WHERE {<http://example.com/ldfs/def#File> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+3,SELECT ?abstract ?label WHERE {<http://example.com/ldfs/def#URL> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+4,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Home_appliance> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+5,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Oven> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+6,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Dishwasher> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+7,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Refrigerator> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+8,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Decision-making> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+9,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Semantic_Web_Services> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+10,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Semantic_Web> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+11,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Web_service> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+12,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Exhaust_hood> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+13,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Data_cube> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+14,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Vazel> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+15,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Thanasis_Antetokounmpo> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+16,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Kitchen_stove> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+17,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/OLAP_cube> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+18,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Song> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+19,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/William_Kostakis> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+20,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Secondary_consciousness> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+21,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/YouTube> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+22,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Music> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+23,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Ontario> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+24,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Indiana> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+25,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Petro_Georgiou> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+26,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Internet_tutorial> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+27,"SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/William,_Count_of_Blois> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}"
+28,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/MapReduce> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+29,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Tutorial> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+30,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Apache_Hadoop> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+31,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Software_engineering> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+32,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Research> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+33,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Alternative_rock> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+34,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Indie_folk> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+35,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Ryan_Adams> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+36,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Madonna_(entertainer)> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+37,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Steve_Jobs> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+38,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Sagarmatha_(album)> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+39,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/The_Appleseed_Cast> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+40,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Kostas> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+41,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Clone_High> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+42,SELECT ?abstract ?label WHERE {<> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+43,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Resource_Description_Framework> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+44,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/DBpedia> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+45,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Keyword> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+46,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Terminology_extraction> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+47,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Application_programming_interface> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+48,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Representational_state_transfer> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+49,SELECT ?abstract ?label WHERE {<2013-10-24T23:18:05 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+50,SELECT ?abstract ?label WHERE {<2013-12-12T10:36:44 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+51,SELECT ?abstract ?label WHERE {<2013-12-12T10:41:27 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+52,SELECT ?abstract ?label WHERE {<2013-12-12T10:44:55 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+53,SELECT ?abstract ?label WHERE {<2013-12-18T12:59:26 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+54,SELECT ?abstract ?label WHERE {<2013-10-23T14:46:23 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+55,SELECT ?abstract ?label WHERE {<2013-12-12T10:42:41 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+56,SELECT ?abstract ?label WHERE {<2013-12-12T10:38:03 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+57,SELECT ?abstract ?label WHERE {<2013-12-11T17:28:26 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+58,SELECT ?abstract ?label WHERE {<2013-11-27T18:05:39 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+59,SELECT ?abstract ?label WHERE {<2013-12-12T10:41:15 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+60,SELECT ?abstract ?label WHERE {<2013-12-12T10:38:16 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+61,SELECT ?abstract ?label WHERE {<2013-10-23T15:17:28 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+62,SELECT ?abstract ?label WHERE {<2013-10-24T10:56:16 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+63,SELECT ?abstract ?label WHERE {<2013-12-12T10:45:01 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+64,SELECT ?abstract ?label WHERE {<2013-10-23T14:50:59 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+65,SELECT ?abstract ?label WHERE {<2013-12-12T10:36:50 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+66,SELECT ?abstract ?label WHERE {<2013-11-26T10:02:45 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+67,SELECT ?abstract ?label WHERE {<2013-12-12T10:36:37 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+68,SELECT ?abstract ?label WHERE {<2013-10-31T14:27:46 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+69,SELECT ?abstract ?label WHERE {<2013-12-12T10:41:21 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+70,SELECT ?abstract ?label WHERE {<2013-10-24T10:56:41 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+71,SELECT ?abstract ?label WHERE {<2013-11-19T12:53:39 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+72,SELECT ?abstract ?label WHERE {<2013-10-30T14:43:30 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+73,SELECT ?abstract ?label WHERE {<2013-10-25T10:52:25 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+74,SELECT ?abstract ?label WHERE {<2013-12-12T10:36:17 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+75,SELECT ?abstract ?label WHERE {<2013-12-12T10:41:10 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+76,SELECT ?abstract ?label WHERE {<2013-10-31T14:28:17 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+77,SELECT ?abstract ?label WHERE {<2013-12-12T10:38:22 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+78,SELECT ?abstract ?label WHERE {<2013-11-10T15:29:40 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+79,SELECT ?abstract ?label WHERE {<2013-12-12T10:37:57 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+80,SELECT ?abstract ?label WHERE {<2013-12-12T10:42:46 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+81,SELECT ?abstract ?label WHERE {<2013-10-23T15:12:51 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+82,SELECT ?abstract ?label WHERE {<2013-12-12T10:38:09 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+83,SELECT ?abstract ?label WHERE {<2013-12-12T10:47:02 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+84,SELECT ?abstract ?label WHERE {<2013-10-23T15:12:31 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+85,SELECT ?abstract ?label WHERE {<2013-10-25T11:55:59 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+86,SELECT ?abstract ?label WHERE {<2013-11-04T20:00:57 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+87,SELECT ?abstract ?label WHERE {<2013-12-15T12:21:55 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+88,SELECT ?abstract ?label WHERE {<2013-10-24T22:16:31 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+89,SELECT ?abstract ?label WHERE {<2013-11-01T17:00:59 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+90,SELECT ?abstract ?label WHERE {<2013-11-20T15:57:21 00:00> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+91,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Home_appliance> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+92,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Semantic_Web> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+93,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Oven> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+94,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Dishwasher> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+95,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Refrigerator> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+96,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Semantic_Web_Services> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+97,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Web_service> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+98,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Decision-making> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+99,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Exhaust_hood> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+100,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Kitchen_stove> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+101,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Data_cube> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+102,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/OLAP_cube> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+103,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Vazel> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+104,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Thanasis_Antetokounmpo> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+105,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Song> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+106,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/YouTube> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+107,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/William_Kostakis> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+108,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Music> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+109,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Secondary_consciousness> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+110,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Ontario> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+111,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Indiana> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+112,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Petro_Georgiou> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+113,"SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/William,_Count_of_Blois> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}"
+114,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Internet_tutorial> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+115,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/MapReduce> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+116,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Tutorial> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+117,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Apache_Hadoop> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+118,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Software_engineering> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+119,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Ryan_Adams> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+120,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Indie_folk> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+121,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Alternative_rock> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+122,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Research> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+123,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Madonna_(entertainer)> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+124,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Steve_Jobs> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+125,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/The_Appleseed_Cast> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+126,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Clone_High> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+127,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Sagarmatha_(album)> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+128,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Kostas> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+129,SELECT ?abstract ?label WHERE {<> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+130,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Resource_Description_Framework> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+131,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/DBpedia> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+132,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Keyword> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+133,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Terminology_extraction> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+134,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Application_programming_interface> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+135,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Representational_state_transfer> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+136,SELECT ?abstract ?label WHERE {<http://example.com/ldfs/def#URL> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+137,SELECT ?abstract ?label WHERE {<http://example.com/ldfs/def#File> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+138,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Zanussi> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+139,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Siemens> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+140,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Teka> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+141,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/AEG> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+142,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Samsung> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+143,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Robert_Bosch_GmbH> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+144,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/LG_Electronics> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+145,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Home_appliance> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+146,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Oven> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+147,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Dishwasher> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+148,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Semantic_Web> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+149,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Refrigerator> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+150,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Semantic_Web_Services> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+151,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Decision-making> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+152,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Exhaust_hood> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+153,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Web_service> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+154,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/OLAP_cube> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+155,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Kitchen_stove> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+156,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Data_cube> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+157,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Vazel> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+158,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Thanasis_Antetokounmpo> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+159,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/William_Kostakis> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+160,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Song> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+161,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Music> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+162,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/YouTube> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+163,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Secondary_consciousness> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+164,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Ontario> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+165,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Indiana> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+166,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Petro_Georgiou> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+167,"SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/William,_Count_of_Blois> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}"
+168,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Internet_tutorial> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+169,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/MapReduce> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+170,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Tutorial> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+171,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Apache_Hadoop> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+172,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Software_engineering> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+173,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Ryan_Adams> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+174,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Indie_folk> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+175,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Alternative_rock> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+176,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Madonna_(entertainer)> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+177,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Research> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+178,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Steve_Jobs> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+179,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Sagarmatha_(album)> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+180,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Clone_High> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+181,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/The_Appleseed_Cast> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+182,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Kostas> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+183,SELECT ?abstract ?label WHERE {<> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+184,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Resource_Description_Framework> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+185,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/DBpedia> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+186,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Terminology_extraction> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+187,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Keyword> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+188,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Application_programming_interface> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+189,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Representational_state_transfer> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+190,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Oven> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+191,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Home_appliance> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+192,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Refrigerator> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+193,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Dishwasher> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+194,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Semantic_Web> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+195,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Semantic_Web_Services> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+196,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Web_service> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+197,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Decision-making> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+198,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Kitchen_stove> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+199,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Exhaust_hood> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+200,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/OLAP_cube> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+201,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Data_cube> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+202,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Vazel> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+203,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Thanasis_Antetokounmpo> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+204,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Song> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+205,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/William_Kostakis> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+206,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/YouTube> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+207,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Music> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+208,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Ontario> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+209,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Secondary_consciousness> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+210,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Indiana> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+211,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Petro_Georgiou> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+212,"SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/William,_Count_of_Blois> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}"
+213,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Internet_tutorial> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+214,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/MapReduce> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+215,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Tutorial> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+216,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Apache_Hadoop> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+217,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Software_engineering> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+218,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Indie_folk> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+219,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Ryan_Adams> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+220,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Alternative_rock> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+221,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Research> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+222,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Madonna_(entertainer)> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+223,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Steve_Jobs> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+224,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Sagarmatha_(album)> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+225,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Clone_High> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+226,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/The_Appleseed_Cast> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+227,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Kostas> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+228,SELECT ?abstract ?label WHERE {<> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+229,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Terminology_extraction> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+230,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/DBpedia> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+231,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Resource_Description_Framework> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+232,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Keyword> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+233,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Application_programming_interface> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+234,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Representational_state_transfer> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+235,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Siemens> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+236,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Zanussi> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+237,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Robert_Bosch_GmbH> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+238,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Teka> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+239,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/AEG> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+240,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Samsung> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+241,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/LG_Electronics> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+242,SELECT ?abstract ?label WHERE {<http://dbpedia.org/resource/Konstantinos_Mitroglou> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+243,SELECT ?abstract ?label WHERE {<Jens Lehmann> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+244,SELECT ?abstract ?label WHERE {<15  Best jQuery Page Flip Book effect with examples> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+245,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/444352/Siemens-HB23GB540.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+246,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/389617/Bosch-SMV50E70EU.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+247,SELECT ?abstract ?label WHERE {<Falcons API> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+248,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/347390/LG-GS3159PVEV.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+249,SELECT ?abstract ?label WHERE {<decisionCount.txt> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+250,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/92135/AEG-DK-6393-M.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+251,SELECT ?abstract ?label WHERE {<Syskeues - Spreadsheet> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+252,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/276391/Siemens-ET651EE11E.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+253,SELECT ?abstract ?label WHERE {<Site Tour Creator - Simple. Free. Open Source. | Amberjack> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+254,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/75502/Bosch-PKE645Q14E.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+255,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/3486829/AEG-F5403PVI0.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+256,SELECT ?abstract ?label WHERE {<Data Cube Vocabulary Overview and Example.pdf> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+257,SELECT ?abstract ?label WHERE {<reddit: the front page of the internet> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+258,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/3139977/Zanussi-ZOB35772XD.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+259,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/2306560/Samsung-RSA1UTMG.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+260,"SELECT ?abstract ?label WHERE {<The Deep Dark Woods - &quot;Hang me, oh hang me&quot; - YouTube> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}"
+261,SELECT ?abstract ?label WHERE {<dtestupload.txt> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+262,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/61897/Korting-KBO-7380-AXG.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+263,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/2883184/AEG-F54032VI0.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+264,SELECT ?abstract ?label WHERE {<add_to_cart_custom.png> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+265,SELECT ?abstract ?label WHERE {<eaccelerator-eaccelerator-42067ac (1).zip> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+266,SELECT ?abstract ?label WHERE {<Hadoop Tutorial - YDN> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+267,SELECT ?abstract ?label WHERE {<Roy Orbison - In Dreams - YouTube> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+268,SELECT ?abstract ?label WHERE {<Ryan Adams - Lucky Now - YouTube> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+269,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/4171409/Samsung-BF10C4T212.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+270,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/34290/Teka-VTC-M.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+271,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/3815216/Bosch-SMV40D90EU.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+272,SELECT ?abstract ?label WHERE {<mtsr2013 MARIOS vaf.odt> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+273,SELECT ?abstract ?label WHERE {<menu.js> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+274,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/256024/AEG-HK624000XB.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+275,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/245088/Teka-DG2-ISLA.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+276,SELECT ?abstract ?label WHERE {<cpvCodes.csv> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+277,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/75645/Korting-KECT610AXC.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+278,SELECT ?abstract ?label WHERE {<kotsovolos_prosfora_1.jpg> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+279,SELECT ?abstract ?label WHERE {<kotsovolos_prosfora_2.jpg> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+280,SELECT ?abstract ?label WHERE {<_Δ_Ζ_Δ ¦ __Ζ __Γ3.jpg> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+281,SELECT ?abstract ?label WHERE {<_Δ_Ζ_Δ ¦ __Ζ __Γ4.jpg> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+282,SELECT ?abstract ?label WHERE {<Learn REST: A Tutorial> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+283,SELECT ?abstract ?label WHERE {<http://i.imgur.com/5TpOCX0.gif> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+284,SELECT ?abstract ?label WHERE {<The Appleseed Cast - As the Little Things Go - YouTube> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+285,SELECT ?abstract ?label WHERE {<The Gaslight Anthem - &quot;The &#39;59 Sound&quot; (official video) - YouTube> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+286,SELECT ?abstract ?label WHERE {<Keyword Extraction API Documentation | AlchemyAPI> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+287,SELECT ?abstract ?label WHERE {<http://jens-lehmann.org/files/2012/aaai_dbpedia_benchmark.pdf> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+288,SELECT ?abstract ?label WHERE {<REST Tutorial - YouTube> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+289,SELECT ?abstract ?label WHERE {<15  Best jQuery Page Flip Book effect with examples> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+290,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/444352/Siemens-HB23GB540.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+291,SELECT ?abstract ?label WHERE {<Falcons API> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+292,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/347390/LG-GS3159PVEV.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+293,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/389617/Bosch-SMV50E70EU.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+294,SELECT ?abstract ?label WHERE {<decisionCount.txt> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+295,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/92135/AEG-DK-6393-M.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+296,SELECT ?abstract ?label WHERE {<Syskeues - Spreadsheet> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+297,SELECT ?abstract ?label WHERE {<Site Tour Creator - Simple. Free. Open Source. | Amberjack> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+298,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/276391/Siemens-ET651EE11E.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+299,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/3486829/AEG-F5403PVI0.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+300,SELECT ?abstract ?label WHERE {<http://www.skroutz.gr/s/75502/Bosch-PKE645Q14E.html> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+301,SELECT ?abstract ?label WHERE {<Data Cube Vocabulary Overview and Example.pdf> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}
+302,SELECT ?abstract ?label WHERE {<reddit: the front page of the internet> dbpedia-owl:abstract ?abstract ; rdfs:label ?label filter(lang(?abstract)='en'&&lang(?label)='en')}

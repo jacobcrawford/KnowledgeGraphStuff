@@ -1,0 +1,1595 @@
+,query
+0,"SELECT ?name
+WHERE {
+?director <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:luxury_cars> .
+?director foaf:name ?name .
+}
+ORDER by ?name
+limit 12"
+1,"SELECT ?name
+WHERE {
+?director <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Luxury_cars> .
+?director foaf:name ?name .
+}
+ORDER by ?name
+limit 12"
+2,"SELECT ?name
+WHERE {
+?director <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:British_museums> .
+?director foaf:name ?name .
+}
+ORDER by ?name
+limit 12"
+3,"SELECT ?name
+WHERE {
+?director <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Polish_film> .
+?director foaf:name ?name .
+}
+ORDER by ?name
+limit 12"
+4,"SELECT ?name
+WHERE {
+?director <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:American_directors> .
+?director foaf:name ?name .
+}
+ORDER by ?name
+limit 12"
+5,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?manufacturer ?name ?car
+WHERE {
+    ?car <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Luxury_vehicles> .
+    ?car foaf:name ?name .
+    ?car dbo:manufacturer ?man .
+    ?man foaf:name ?manufacturer
+}
+ORDER by ?manufacturer ?name
+"
+6,"SELECT ?name
+WHERE {
+?director <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Luxury_vehicle> .
+?director foaf:name ?name .
+}
+ORDER by ?name
+limit 12"
+7,"SELECT ?name
+WHERE {
+?director <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Luxury_vehicles> .
+?director foaf:name ?name .
+}
+ORDER by ?name
+limit 12"
+8,"SELECT ?name
+WHERE {
+?director <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Person> .
+?director foaf:name ?name .
+}
+ORDER by ?name
+limit 12"
+9,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?title
+WHERE {
+    ?game <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:First-person_shooters> .
+    ?game foaf:name ?title .
+}
+ORDER by ?title
+"
+10,"SELECT ?name
+WHERE {
+?director <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Video_games> .
+?director foaf:name ?name .
+}
+ORDER by ?name
+limit 12"
+11,"SELECT ?name
+WHERE {
+?director <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Video_games> .
+?director foaf:name ?name .
+}
+ORDER by ?name
+limit 30"
+12,"SELECT ?name
+WHERE {
+?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Video_games> .
+?game foaf:name ?name .
+UNION
+?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .}
+ORDER by ?name
+limit 30"
+13,"SELECT ?name
+WHERE {
+{?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Video_games> .
+?game foaf:name ?name .}
+UNION
+{?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .}
+}
+ORDER by ?name
+limit 30"
+14,"SELECT ?name
+WHERE {
+{?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Video_games> .
+?game foaf:name ?name .}
+UNION
+{?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .}
+}
+ORDER by ?name
+limit 10"
+15,"SELECT ?name
+WHERE {
+{?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Video_games> .
+?game foaf:name ?name .}
+UNION
+{?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .}
+}
+ORDER by ?name
+limit 10"
+16,"SELECT ?name ?abstract
+WHERE {
+{?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Video_games>
+ <http://dbpedia.org/ontology/abstract> ?abstract.
+?game foaf:name ?name .
+?abstract}
+UNION
+{?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .}
+}
+ORDER by ?name
+limit 10"
+17,"SELECT ?abstract
+WHERE {
+{
+<http://dbpedia.org/resource/Harry_Potter>
+ <http://dbpedia.org/ontology/abstract> ?abstract.
+}"
+18,"SELECT ?abstract
+WHERE {
+
+<http://dbpedia.org/resource/Harry_Potter>
+ <http://dbpedia.org/ontology/abstract> ?abstract.
+}"
+19,"SELECT ?abstract
+WHERE {
+
+<http://dbpedia.org/resource/Harry_Potter>
+ <http://dbpedia.org/ontology/abstract> ?abstract.
+}
+
+limit 5
+"
+20,"SELECT ?abstract
+WHERE {
+
+<http://dbpedia.org/resource/Harry_Potter>
+ <http://dbpedia.org/ontology/abstract> ?abstract.
+FILTER langMatches(lang(abstract)'pl')
+}
+
+limit 5
+"
+21,"SELECT ?abstract
+WHERE {
+
+<http://dbpedia.org/resource/Harry_Potter>
+ <http://dbpedia.org/ontology/abstract> ?abstract.
+FILTER langMatches(lang(?abstract)'pl')
+}
+
+limit 5
+"
+22,"SELECT ?abstract
+WHERE {
+
+{<http://dbpedia.org/resource/Harry_Potter>
+ <http://dbpedia.org/ontology/abstract> ?abstract.
+FILTER langMatches(lang(?abstract),'pl')
+}}
+
+limit 5
+"
+23,"SELECT ?abstract
+WHERE {
+
+{<http://dbpedia.org/resource/Harry_Potter>
+ <http://dbpedia.org/ontology/abstract> ?abstract.
+FILTER langMatches(lang(?abstract),'pl')
+OPTIONAL
+FILTER langMatches(lang(?abstract),'en')
+}}
+
+limit 5"
+24,"SELECT ?abstract
+WHERE {
+
+{
+OPTIONAL{
+<http://dbpedia.org/resource/Harry_Potter>
+ <http://dbpedia.org/ontology/abstract> ?abstract.
+FILTER langMatches(lang(?abstract),'pl')
+}
+OPTIONAL{
+<http://dbpedia.org/resource/Harry_Potter>
+ <http://dbpedia.org/ontology/abstract> ?abstract.
+FILTER langMatches(lang(?abstract),'en')
+}}
+
+limit 5"
+25,"SELECT ?abstract
+WHERE {
+
+{
+
+<http://dbpedia.org/resource/Harry_Potter>
+ <http://dbpedia.org/ontology/abstract> ?abstract.
+FILTER langMatches(lang(?abstract),'pl')
+}
+}
+
+limit 5"
+26,"SELECT ?abstract
+WHERE {
+{
+<http://dbpedia.org/resource/Harry_Potter>
+OPTIONAL{
+ <http://dbpedia.org/ontology/abstract> ?abstract.
+FILTER langMatches(lang(?abstract),'pl')
+}
+OPTIONAL
+{<http://dbpedia.org/ontology/abstract> ?abstract.
+FILTER langMatches(lang(?abstract),'en')
+}
+}
+}
+limit 5"
+27,"SELECT ?name
+WHERE {
+?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Books> .
+?game foaf:name ?name .
+}
+ORDER by ?name
+limit 10
+"
+28,"SELECT ?name
+WHERE {
+?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Books> .
+?game foaf:name ?name .
+}
+ORDER by ?name
+limit 10
+"
+29,"SELECT ?name
+WHERE {
+?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Films> .
+?game foaf:name ?name .
+}
+ORDER by ?name
+limit 10
+"
+30,"SELECT ?name
+WHERE {
+?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .
+?game foaf:name ?name .
+}
+ORDER by ?name
+limit 10
+"
+31,"SELECT ?name ?abstract ?game
+WHERE {
+?name <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .
+?game foaf:name ?name.
+OPTIONAL
+{FILTER langMatches( lang(?abstract), 'en')}
+OPTIONAL
+{FILTER langMatches( lang(?abstract), 'pl')}
+}
+ORDER by ?name
+limit 10"
+32,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?name ?abstract ?game
+WHERE {
+?name <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .
+?game foaf:name ?name.
+OPTIONAL
+{?game rdfs:comment ?abstract
+FILTER langMatches( lang(?abstract), 'en')}
+OPTIONAL
+?game rdfs:comment ?abstract
+{FILTER langMatches( lang(?abstract), 'pl')}
+}
+ORDER by ?name
+limit 10"
+33,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?name ?abstract ?game
+WHERE {
+?name <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .
+?game foaf:name ?name.
+OPTIONAL
+{?game rdfs:comment ?abstract
+FILTER langMatches( lang(?abstract), 'en')}
+OPTIONAL
+?game rdfs:comment ?abstract
+{FILTER langMatches( lang(?abstract), 'pl')}
+}
+ORDER by ?name
+limit 10"
+34,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?name ?abstract ?game
+WHERE {
+?name <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .
+?game foaf:name ?name.
+OPTIONAL
+{?game rdfs:comment ?abstract.
+FILTER langMatches( lang(?abstract), 'en')}
+OPTIONAL
+?game rdfs:comment ?abstract.
+{FILTER langMatches( lang(?abstract), 'pl')}
+}
+ORDER by ?name
+limit 10"
+35,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?name ?abstract ?game
+WHERE {
+?actor <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .
+?game foaf:name ?name.
+OPTIONAL
+{?game rdfs:comment ?abstract.
+FILTER langMatches( lang(?abstract), 'en')}
+OPTIONAL
+?game rdfs:comment ?abstract.
+{FILTER langMatches( lang(?abstract), 'pl')}
+}
+ORDER by ?name
+limit 10"
+36,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?name ?abstract ?game
+WHERE {
+?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .
+?game foaf:name ?name.
+OPTIONAL
+{?game rdfs:comment ?abstract.
+FILTER langMatches( lang(?abstract), 'en')}
+OPTIONAL
+?game rdfs:comment ?abstract.
+{FILTER langMatches( lang(?abstract), 'pl')}
+}
+ORDER by ?name
+limit 10"
+37,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?name ?abstract_pl ?abstract_en ?game
+WHERE {
+?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .
+?game foaf:name ?name.
+OPTIONAL
+{?game rdfs:comment ?abstract_en.
+FILTER langMatches( lang(?abstract), 'en')}
+OPTIONAL
+?game rdfs:comment ?abstract_pl.
+{FILTER langMatches( lang(?abstract), 'pl')}
+}
+ORDER by ?name
+limit 10"
+38,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?name ?description_pl ?description_en ?game
+WHERE {
+?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .
+?game foaf:name ?name.
+OPTIONAL
+{?game rdfs:comment ?description_en.
+FILTER langMatches( lang(?abstract), 'en')}
+OPTIONAL
+?game rdfs:comment ?description_pl.
+{FILTER langMatches( lang(?abstract), 'pl')}
+}
+ORDER by ?name
+limit 10"
+39,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?name ?description_pl ?description_en ?game
+WHERE {
+?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .
+?game foaf:name ?name.
+OPTIONAL
+{?game rdfs:comment ?description_en.
+FILTER langMatches( lang(?abstract), 'en')}
+OPTIONAL
+?game rdfs:comment ?description_pl.
+{FILTER langMatches( lang(?abstract), 'pl')}
+}
+ORDER by ?name
+limit 10"
+40,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?name ?description_en ?description_pl ?actor WHERE {
+?actor <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Polish_actors> .
+?actor foaf:name ?name .
+OPTIONAL {
+?actor rdfs:comment ?description_en .
+FILTER (LANG(?description_en) = 'en') .
+}
+OPTIONAL {
+?actor rdfs:comment ?description_pl .
+FILTER (LANG(?description_pl) = 'pl') .
+}
+}
+ORDER BY ?name
+limit 10"
+41,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?name ?game ?description_en ?description_pl
+WHERE {
+?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .
+?game foaf:name ?name .
+OPTIONAL {
+?game rdfs:comment ?description_en .
+FILTER (LANG(?description_en) = 'en') .
+}
+OPTIONAL {
+?game rdfs:comment ?description_pl .
+FILTER (LANG(?description_pl) = 'pl') .
+}
+}
+ORDER BY ?name
+limit 10"
+42,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?name ?game ?opis_en ?opis_pl
+WHERE {
+?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .
+?game foaf:name ?name .
+OPTIONAL {
+?game rdfs:comment ?opis_en .
+FILTER langMatches(lang(?opis_en) = 'en') .
+}
+OPTIONAL {
+?game rdfs:comment ?opis_pl .
+FILTER langMatches(lang(?opis_pl) = 'pl') .
+}
+}
+ORDER BY ?name
+limit 10"
+43,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?name ?game ?opis_en ?opis_pl
+WHERE {
+?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .
+?game foaf:name ?name .
+OPTIONAL {
+?game rdfs:comment ?opis_en .
+FILTER lang(?opis_en) = 'en' .
+}
+OPTIONAL {
+?game rdfs:comment ?opis_pl .
+FILTER lang(?opis_pl) = 'pl' .
+}
+}
+ORDER BY ?name
+limit 10"
+44,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?name ?game ?opis_en ?opis_pl
+WHERE {
+?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .
+?game foaf:name ?name .
+OPTIONAL {
+?game rdfs:comment ?opis_en .
+FILTER (lang(?opis_en) = 'en') .
+}
+OPTIONAL {
+?game rdfs:comment ?opis_pl .
+FILTER (lang(?opis_pl) = 'pl') .
+}
+}
+ORDER BY ?name
+limit 10"
+45,"
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?name ?game ?opis_en ?opis_pl
+WHERE {
+?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .
+?game foaf:name ?name .
+OPTIONAL {
+?game rdfs:comment ?opis_en .
+FILTER (lang(?opis_en) = 'en') .
+}
+OPTIONAL {
+?game rdfs:comment ?opis_pl .
+FILTER (lang(?opis_pl) = 'pl') .
+}
+}
+ORDER BY ?name
+limit 10"
+46,"
+
+SELECT ?name ?game ?opis_en ?opis_pl
+WHERE {
+?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .
+?game foaf:name ?name .
+OPTIONAL {
+?game rdfs:comment ?opis_en .
+FILTER (lang(?opis_en) = 'en') .
+}
+OPTIONAL {
+?game rdfs:comment ?opis_pl .
+FILTER (lang(?opis_pl) = 'pl') .
+}
+}
+ORDER BY ?name
+limit 10"
+47,"SELECT ?name ?game ?opis_en ?opis_fr
+WHERE {
+?game <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Party_games> .
+?game foaf:name ?name .
+OPTIONAL {
+?game rdfs:comment ?opis_en .
+FILTER (lang(?opis_en) = 'en') .
+}
+OPTIONAL {
+?game rdfs:comment ?opis_fr .
+FILTER (lang(?opis_fr) = 'fr') .
+}
+}
+
+limit 5"
+48,"SELECT ?name ?person ?birth
+WHERE {
+?person dbo:birthDate ?birth .
+?person foaf:name ?name.
+}
+order by ?birth"
+49,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?birth
+WHERE {
+?person dbo:birthDate ?birth .
+?person foaf:name ?name.
+}
+order by ?birth"
+50,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?birth
+WHERE {
+?person dbo:birthDate ?birth .
+?person foaf:name ?name.
+}
+order by ?birth
+limit 3"
+51,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?birth
+WHERE {
+?person dbo:birthDate ?birth .
+?person foaf:name ?name.
+}
+order by ?birth
+limit 6"
+52,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?birth
+WHERE {
+?person dbo:birthDate ?birth .
+?person foaf:name ?name.
+}
+order by ?birth
+limit 6"
+53,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?birth
+WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Austrian_philosophers> .
+?person dbo:birthDate ?birth .
+?person foaf:name ?name.
+}
+order by ?birth
+limit 6"
+54,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?birth
+WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:British_writers> .
+?person dbo:birthDate ?birth .
+?person foaf:name ?name.
+}
+order by ?birth
+limit 6"
+55,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?birth
+WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:American_actors> .
+?person dbo:birthDate ?birth .
+?person foaf:name ?name.
+}
+order by ?birth
+limit 6"
+56,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?birth
+WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Actors> .
+?person dbo:birthDate ?birth .
+?person foaf:name ?name.
+}
+order by ?birth
+limit 6"
+57,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?birth
+WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Actors_by_nationality> .
+?person dbo:birthDate ?birth .
+?person foaf:name ?name.
+}
+order by ?birth
+limit 6"
+58,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?birth
+WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Black_British_actors> .
+?person dbo:birthDate ?birth .
+?person foaf:name ?name.
+}
+order by ?birth
+limit 6"
+59,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?birth
+WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Black_British_actors> .
+?person dbo:birthDate ?birth .
+?person foaf:name ?name.
+}
+order by ?birth
+limit 10"
+60,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?birth
+WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Pornographic_film_actors_by_ethnicity> .
+?person dbo:birthDate ?birth .
+?person foaf:name ?name.
+}
+order by ?birth
+limit 10"
+61,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?birth
+WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Ethnic_Armenian_actors> .
+?person dbo:birthDate ?birth .
+?person foaf:name ?name.
+}
+order by ?birth
+limit 10"
+62,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?birth
+WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Ethnic_Armenian_actors> .
+?person dbo:birthDate ?birth .
+?person foaf:name ?name.
+}
+order by ?birth
+limit 10"
+63,"PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?name ?river ?lenght WHERE
+{
+?river prop:lenght ?lenght
+?river <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Rivers> .
+?river foaf:name ?name
+}
+
+ORDER BY (lenght)"
+64,"PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?name ?river ?lenght WHERE
+{
+?river prop:lenght ?lenght
+?river <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Rivers> .
+?river foaf:name ?name.
+}
+
+ORDER BY (?lenght)"
+65,"PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?name ?river  WHERE
+{
+
+?river <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Rivers> .
+?river foaf:name ?name.
+}
+
+ORDER BY (?name)"
+66,"PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?name ?river  ?length WHERE
+{
+
+?river <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Rivers> .
+?river foaf:name ?name.
+?river prop:length ?length
+}
+
+ORDER BY (?length)"
+67,"PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?name ?river  ?length WHERE
+{
+
+?river <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Rivers_of_London> .
+?river foaf:name ?name.
+?river prop:length ?length
+}
+
+ORDER BY (?length)"
+68,"PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?name ?river  ?length WHERE
+{
+
+?river <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Rivers_of_London> .
+?river foaf:name ?name.
+?river prop:length ?length
+}
+
+ORDER BY DESC(?length)"
+69,"PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?name ?river  ?length WHERE
+{
+
+?river <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Rivers_of_London> .
+?river foaf:name ?name.
+?river prop:length ?length
+}
+
+ORDER BY DESC(?length)
+LIMIT 5"
+70,"PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?name ?river  ?length WHERE
+{
+
+?river <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Rivers_of_London> .
+?river foaf:name ?name.
+?river prop:length ?length
+}
+
+ORDER BY DESC(?length)
+limit 5"
+71,"PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?name ?river  ?length WHERE
+{
+
+?river <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Rivers_of_London> .
+?river foaf:name ?name.
+?river prop:length ?length
+FILTER (?length > 40 && langMatches(lang(?name), ""en"")) .
+}
+
+
+"
+72,"PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?name ?river  ?length WHERE
+{
+
+?river <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Rivers_of_London> .
+?river foaf:name ?name.
+?river prop:length ?length
+FILTER (?length < 40 && langMatches(lang(?name), ""en"")) .
+}
+
+
+"
+73,"PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?name ?river  ?length WHERE
+{
+
+?river <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Rivers_of_Paris> .
+?river foaf:name ?name.
+?river prop:length ?length
+FILTER (?length < 40 && langMatches(lang(?name), ""fr"")) .
+}
+
+
+"
+74,"PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?name ?river  ?length WHERE
+{
+
+?river <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Rivers_of_Berlin> .
+?river foaf:name ?name.
+?river prop:length ?length
+FILTER (?length < 40 && langMatches(lang(?name), ""de"")) .
+}
+
+
+"
+75,"PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?name ?river  ?length WHERE
+{
+
+?river <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Rivers_of_Berlin> .
+?river foaf:name ?name.
+?river prop:length ?length
+FILTER (?length < 40 && langMatches(lang(?name), ""en"")) .
+}
+
+
+"
+76,"PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?name ?river  ?length WHERE
+{
+
+?river <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Rivers_of_London> .
+?river foaf:name ?name.
+?river prop:length ?length
+FILTER (?length < 40 && ?length>20) .
+}
+
+
+"
+77,"PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?name ?river  ?length WHERE
+{
+
+?river <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Rivers_of_London> .
+?river foaf:name ?name.
+?river prop:length ?length
+FILTER (?length < 60 && ?length>14) .
+}
+
+
+"
+78,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+SELECT ?person {
+    ?person a dbpedia-owl:Writer .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1942_deaths> .
+}"
+79,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+SELECT ?person {
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1942_deaths> .
+}"
+80,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+SELECT ?name ?person {
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1942_deaths> .
+    ?person foaf:name ?name.
+}"
+81,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+SELECT ?name ?person {
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1942_deaths> .
+    ?person foaf:name ?name.
+}
+
+limit 10"
+82,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+SELECT ?name ?person ?death {
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1942_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+83,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?death {
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1942_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+84,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?death {
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1992_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+85,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?person ?death {
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1992_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+86,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?person ?death {
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1992_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+87,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?person ?death 
+WHERE{
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1992_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+88,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?death 
+WHERE{
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1986_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+89,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT REDUCED ?name ?person ?death 
+WHERE{
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1986_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+90,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?person ?death 
+WHERE{
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1986_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+91,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?death 
+WHERE{
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1990_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+92,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?death 
+WHERE{
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1995_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+93,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?death 
+WHERE{
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1976_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+94,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?death 
+WHERE{
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1933_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+95,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT ?name ?person ?death 
+WHERE{
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1933_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+96,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?death 
+WHERE{
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1965_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+97,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?death 
+WHERE{
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1989_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+98,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?death 
+WHERE{
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1979_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+99,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?death 
+WHERE{
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1999_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+100,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?death 
+WHERE{
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:2000_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+101,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?death 
+WHERE{
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1579_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+102,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?death 
+WHERE{
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1879_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+103,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?death 
+WHERE{
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1867_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+104,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?death 
+WHERE{
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1866_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 10"
+105,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?death 
+WHERE{
+    ?person a dbpedia-owl:Scientist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1965_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 5"
+106,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?death ?person WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Scientists> .
+?person dbo:deathDate ?death .
+?person foaf:name ?name .
+FILTER (?death=1965) .
+}
+ORDER BY ?name"
+107,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?death ?person WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Biologists> .
+?person dbo:deathDate ?death .
+?person foaf:name ?name .
+FILTER (?death=1965) .
+}
+ORDER BY ?name"
+108,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?death ?person WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Biologists> .
+?person dbo:deathDate ?death .
+?person foaf:name ?name .
+FILTER (?death==1965) .
+}
+ORDER BY ?name"
+109,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?death ?person WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Biologists> .
+?person dbo:deathDate ?death .
+?person foaf:name ?name .
+FILTER (?death>1965) .
+}
+ORDER BY ?name"
+110,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?death ?person WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Scientists> .
+?person dbo:deathDate ?death .
+?person foaf:name ?name .
+FILTER (?death>1965) .
+}
+ORDER BY ?name"
+111,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?death ?person WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Writers> .
+?person dbo:deathDate ?death .
+?person foaf:name ?name .
+FILTER (?death>1965) .
+}
+ORDER BY ?name"
+112,"PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?person ?death 
+WHERE{
+    ?person a dbpedia-owl:Biologist .
+    ?person dct:subject <http://dbpedia.org/resource/Category:1965_deaths> .
+    ?person foaf:name ?name.
+    ?person dbo:deathDate ?death .
+}
+
+limit 5
+"
+113,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?death ?person WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Politians> .
+?person dbo:deathDate ?death .
+?person foaf:name ?name .
+FILTER (?death>1965) .
+}
+ORDER BY ?name"
+114,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?death ?person WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Physicists> .
+?person dbo:deathDate ?death .
+?person foaf:name ?name .
+FILTER (?death>1965) .
+}
+ORDER BY ?name"
+115,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?death ?person WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Physicists> .
+?person dbo:deathDate ?death .
+?person foaf:name ?name .
+FILTER (?death=1965) .
+}
+ORDER BY ?name"
+116,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?death ?person WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Scientists> .
+?person dbo:deathDate ?death .
+?person foaf:name ?name .
+FILTER (?death=1965) .
+}
+ORDER BY ?name"
+117,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?death ?person WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Person> .
+?person dbo:deathDate ?death .
+?person foaf:name ?name .
+FILTER (?death=1965) .
+}
+ORDER BY ?name"
+118,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?death ?person WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Chemists> .
+?person dbo:deathDate ?death .
+?person foaf:name ?name .
+FILTER (?death=1965) .
+}
+ORDER BY ?name"
+119,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?death ?person WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Chemists> .
+?person dbo:deathDate ?death .
+?person foaf:name ?name .
+FILTER (?death>1965) .
+}
+ORDER BY ?name"
+120,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?death ?person WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Biologists> .
+?person dbo:deathDate ?death .
+?person foaf:name ?name .
+FILTER (?death>1965) .
+}
+ORDER BY ?name"
+121,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?death ?person WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Biologists> .
+?person dbo:deathDate ?death .
+?person foaf:name ?name .
+FILTER (?death=2007) .
+}
+ORDER BY ?name"
+122,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?death ?person WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Biologists> .
+?person dbo:deathDate ?death .
+?person foaf:name ?name .
+FILTER (?death >=2007) .
+}
+ORDER BY ?name"
+123,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?death ?person WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Biologists> .
+?person dbo:deathDate ?death .
+?person foaf:name ?name .
+FILTER (?death =2007) .
+}
+ORDER BY ?name"
+124,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?death ?person WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Biologists> .
+?person dbo:deathDate ?death .
+?person foaf:name ?name .
+FILTER (?death > 2007) .
+}
+ORDER BY ?name"
+125,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?death ?person WHERE {
+?person <http://purl.org/dc/terms/subject>
+<http://dbpedia.org/resource/Category:Biologists> .
+?person dbo:deathDate ?death .
+?person foaf:name ?name .
+FILTER (?death = 1991-02-05) .
+}
+ORDER BY ?name"

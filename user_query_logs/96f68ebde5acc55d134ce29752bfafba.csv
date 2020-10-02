@@ -1,0 +1,2557 @@
+,query
+0,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Kronenbourg_Brewery>  <http://dbpedia.org/property/locationCountry>  ?hasValue }
+}"
+1,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Kronenbourg>  <http://dbpedia.org/property/locationCountry>  ?hasValue }
+}"
+2,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Kronenbourg>  ?property  ?hasValue }
+}"
+3,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Kronenbourg>  ?property  ?hasValue }
+  FILTER langMatches( lang(?beerlabel), \""EN\"" )
+}"
+4,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Kronenbourg>  ?property  ?hasValue } .
+  FILTER langMatches( lang(?beerlabel), \""EN\"" )
+}"
+5,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Kronenbourg>  ?property  ?hasValue } 
+
+}"
+6,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Kronenbourg_Brewery> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Kronenbourg_Brewery> }
+}"
+7,"SELECT ?resource ?value
+WHERE { ?resource <http://dbpedia.org/ontology/wikiPageRedirects> ?value }
+ORDER BY ?resource ?value"
+8,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Kronenbourg>  ?property  ?hasValue } 
+  {  FILTER langMatches( lang(?beerlabel), ""EN"" )}
+
+}"
+9,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Kronenbourg>  ?property  ?hasValue } 
+  {  FILTER langMatches( lang(?beerlabel), ""fr"" )}
+
+}"
+10,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Kronenbourg>  ?property  ?hasValue } 
+  {  FILTER langMatches( lang(?beerlabel), ""en"" )}
+
+}"
+11,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Kronenbourg>  ?property  ?hasValue } 
+  {  FILTER langMatches( lang(?hasvalue), ""en"" )}
+
+}"
+12,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Kronenbourg>  ?property  ?hasValue } 
+  {  FILTER langMatches( lang(?hasvalue), ""EN"" )}
+
+}"
+13,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Kronenbourg>  ?property  ?hasValue } 
+}"
+14,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg>  ?property  ?hasValue
+}"
+15,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg>  ?property  ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value}
+}"
+16,"SELECT ?resource ?value
+WHERE { ?resource <http://dbpedia.org/ontology/wikiPageRedirects> ?value }
+ORDER BY ?resource ?value"
+17,"SELECT ?resource ?value
+WHERE { ?resource <http://www.w3.org/2000/01/rdf-schema#label> ?value }
+ORDER BY ?resource ?value"
+18,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg>  ?property  ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://www.w3.org/2000/01/rdf-schema#label> ?label}
+}"
+19,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Kronenbourg_Brewery> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Kronenbourg_Brewery> }
+}"
+20,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg>  ?property  ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?label}
+}"
+21,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf ?description
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg>  ?property  ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description}
+}"
+22,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?description
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg>  ?property  ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description}
+}"
+23,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg>  ?property  ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description}
+}"
+24,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description
+WHERE {
+  <http://dbpedia.org/resource/Guinness>  ?property  ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description}
+}"
+25,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description
+WHERE {
+  <http://dbpedia.org/resource/Guinness>  ?property  ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description}
+}"
+26,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Guinness>  ?property  ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description}
+}"
+27,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description 
+WHERE {
+  <http://dbpedia.org/resource/Guinness>  ?property  ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description}
+}"
+28,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Guinness>  ?property  ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description}
+}"
+29,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Guinness>  ?property  ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description}
+}"
+30,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description}
+}"
+31,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?hasValue ?description
+WHERE {
+  <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description}
+}"
+32,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description
+WHERE {
+  <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description}
+}"
+33,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description}
+}"
+34,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description} .
+FILTER langMatches( lang(?beerlabel), \""EN\"" )
+
+}"
+35,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description} .
+FILTER langMatches( lang(?beerlabel), ""EN"" )
+
+}"
+36,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description} .
+FILTER langMatches( lang(?beerlabel), ""FR"" )
+
+}"
+37,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description} .
+  FILTER langMatches( lang(??hasValue), ""FR"" )
+
+}"
+38,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description} .
+  FILTER langMatches( lang(?hasValue), ""FR"" )
+
+}"
+39,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description} .
+  FILTER langMatches( lang(?hasValue), ""FR"" )
+  FILTER langMatches( lang(?description), ""FR"" )
+}"
+40,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description} .
+  FILTER langMatches( lang(?hasValue), ""FR"" )
+}"
+41,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description} .
+  FILTER langMatches( lang(?hasValue), ""FR"" )
+}"
+42,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description.
+              FILTER langMatches( lang(?description), ""FR"" )} .
+  FILTER langMatches( lang(?hasValue), ""FR"" )
+}"
+43,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description.
+              FILTER langMatches( lang(?description), ""FR"" )} .
+  FILTER langMatches( lang(?hasValue), ""FR"" )
+}"
+44,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description.
+              FILTER langMatches( lang(?description), ""FR"" )} .
+  FILTER langMatches( lang(?hasValue), ""FR"" )
+}"
+45,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description.
+              } .
+  FILTER langMatches( lang(?hasValue), ""FR"" )
+}"
+46,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description.
+              } .
+
+}"
+47,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description
+              } .
+
+}"
+48,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description
+              } 
+
+}"
+49,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/abstract> ?hasValue .
+ 
+
+}"
+50,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/kronenbourg> <http://dbpedia.org/ontology/abstract> ?hasValue .
+ 
+
+}"
+51,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description.
+              } .
+
+}"
+52,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description.
+              } .
+  FILTER langMatches( lang(?hasValue), ""FR"" )
+}"
+53,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description.
+              FILTER langMatches( lang(?description), ""FR"" )} .
+  FILTER langMatches( lang(?hasValue), ""FR"" )
+}"
+54,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg_Brewery> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description.
+              FILTER langMatches( lang(?description), ""FR"" )} .
+  FILTER langMatches( lang(?hasValue), ""FR"" )
+}"
+55,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg_Brewery> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg_Brewery> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description.
+              FILTER langMatches( lang(?description), ""FR"" )} .
+  FILTER langMatches( lang(?hasValue), ""FR"" )
+}"
+56,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/abstract> ?hasValue
+}"
+57,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg> ?x ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description.
+              FILTER langMatches( lang(?description), ""FR"" )} .
+  FILTER langMatches( lang(?hasValue), ""FR"" )
+}"
+58,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg> ?x ?hasValue 
+}"
+59,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?x ?hasValue 
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg> ?x ?hasValue 
+}"
+60,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg> ?x ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description.
+              FILTER langMatches( lang(?description), ""FR"" )} .
+  FILTER langMatches( lang(?hasValue), ""FR"" )
+}"
+61,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+     <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description.
+              FILTER langMatches( lang(?description), ""FR"" )}
+}"
+62,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+     <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description.
+              FILTER langMatches( lang(?description), ""FR"" )
+}"
+63,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg> ?x ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description.
+              FILTER langMatches( lang(?description), ""FR"" )}
+}"
+64,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/abstract> ?hasValue .
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description.
+              FILTER langMatches( lang(?description), ""FR"" )}
+}"
+65,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 ?description2
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+  ?hasValue <http://dbpedia.org/ontology/abstract> ?description1
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description2.
+              FILTER langMatches( lang(?description), ""FR"" )}
+}"
+66,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 ?description2
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+  ?hasValue <http://dbpedia.org/ontology/abstract> ?description1.
+  FILTER langMatches( lang(?description1), ""FR"" )
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description2.
+              FILTER langMatches( lang(?description2), ""FR"" )}
+}"
+67,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 ?description2
+WHERE {
+  <http://dbpedia.org/resource/Guiness> ?property ?hasValue .
+  ?hasValue <http://dbpedia.org/ontology/abstract> ?description1.
+  FILTER langMatches( lang(?description1), ""FR"" )
+  OPTIONAL { <http://dbpedia.org/resource/Guiness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description2.
+              FILTER langMatches( lang(?description2), ""FR"" )}
+}"
+68,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1
+WHERE {
+  <http://dbpedia.org/resource/Guiness> ?property ?hasValue .
+  ?hasValue <http://dbpedia.org/ontology/abstract> ?description1.
+  FILTER langMatches( lang(?description1), ""FR"" )
+  OPTIONAL { <http://dbpedia.org/resource/Guiness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description1.
+              FILTER langMatches( lang(?description2), ""FR"" )}
+}"
+69,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+  ?hasValue <http://dbpedia.org/ontology/abstract> ?description1.
+  FILTER langMatches( lang(?description1), ""FR"" )
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description1.
+              FILTER langMatches( lang(?description2), ""FR"" )}
+}"
+70,"SELECT ?resource ?value
+WHERE { ?resource <http://dbpedia.org/property/locationCity> ?value }
+ORDER BY ?resource ?value"
+71,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Kronenbourg_Brewery> <http://dbpedia.org/property/locationCity> ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Kronenbourg_Brewery> }
+}"
+72,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Kronenbourg_Brewery> <http://dbpedia.org/property/locationCity> ?hasValue }
+}"
+73,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+  ?hasValue <http://dbpedia.org/ontology/abstract> ?description1.
+  FILTER langMatches( lang(?description1), ""FR"" )
+  OPTIONAL { <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description1.
+              FILTER langMatches( lang(?description2), ""FR"" )}
+}"
+74,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue
+
+}"
+75,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?hasValue ?label
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg_Brewery> <http://dbpedia.org/property/locationCity> ?hasValue .
+  OPTIONAL {?hasValue <http://www.w3.org/2000/01/rdf-schema#label> ?label }
+  
+}"
+76,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ville
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg_Brewery> <http://dbpedia.org/property/locationCity> ?ville .
+  OPTIONAL {?ville <http://www.w3.org/2000/01/rdf-schema#label> ?ville }
+  
+}"
+77,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg_Brewery> <http://dbpedia.org/property/locationCity> ?ville .
+  OPTIONAL {?ville <http://www.w3.org/2000/01/rdf-schema#label> ?label }
+  
+}"
+78,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label
+WHERE {
+  <http://dbpedia.org/resource/Guiness> <http://dbpedia.org/property/locationCity> ?ville .
+  OPTIONAL {?ville <http://www.w3.org/2000/01/rdf-schema#label> ?label }
+  
+}"
+79,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?ville
+WHERE {
+  <http://dbpedia.org/resource/Guiness> <http://dbpedia.org/property/locationCity> ?ville .
+  OPTIONAL {?ville <http://www.w3.org/2000/01/rdf-schema#label> ?label }
+  
+}"
+80,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg_Brewery> <http://dbpedia.org/property/locationCity> ?ville .
+  OPTIONAL {?ville <http://www.w3.org/2000/01/rdf-schema#label> ?label }
+  
+}"
+81,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg_Brewery> <http://dbpedia.org/property/locationCity> ?ville .
+  OPTIONAL {?ville <http://www.w3.org/2000/01/rdf-schema#label> ?label 
+  FILTER langMatches( lang(?description2), 'FR' )}
+  
+}"
+82,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg_Brewery> <http://dbpedia.org/property/locationCity> ?ville .
+  OPTIONAL {?ville <http://www.w3.org/2000/01/rdf-schema#label> ?label 
+  FILTER langMatches( lang(?label), 'FR' )}
+  
+}"
+83,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?ville
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg_Brewery> <http://dbpedia.org/property/locationCity> ?ville .
+  FILTER langMatches( lang(?ville), 'FR' )
+  OPTIONAL {?ville <http://www.w3.org/2000/01/rdf-schema#label> ?label 
+  FILTER langMatches( lang(?label), 'FR' )}
+  
+}"
+84,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?ville
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg_Brewery> <http://dbpedia.org/property/locationCity> ?ville .
+  OPTIONAL {?ville <http://www.w3.org/2000/01/rdf-schema#label> ?label 
+  FILTER langMatches( lang(?label), 'FR' )}
+  
+}"
+85,"SELECT ?resource ?value
+WHERE { ?resource <http://www.w3.org/2000/01/rdf-schema#label> ?value }
+ORDER BY ?resource ?value"
+86,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?ville
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg_Brewery> <http://dbpedia.org/property/locationCity> ?ville .
+  OPTIONAL {?ville <http://www.w3.org/2000/01/rdf-schema#label> ?label 
+  FILTER langMatches( lang(?label), 'FR' )}
+  
+}"
+87,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Strasbourg> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Strasbourg> }
+}"
+88,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?ville
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg_Brewery> <http://dbpedia.org/property/locationCountry> ?ville .
+  OPTIONAL {?ville <http://www.w3.org/2000/01/rdf-schema#label> ?label 
+  FILTER langMatches( lang(?label), 'FR' )}
+  
+}"
+89,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?city ?label
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg_Brewery> <http://dbpedia.org/property/locationCountry> ?city .
+  OPTIONAL {?ville <http://www.w3.org/2000/01/rdf-schema#label> ?label 
+  FILTER langMatches( lang(?label), 'FR' )}  
+}"
+90,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?city ?label
+WHERE {
+  <http://dbpedia.org/resource/Guiness> <http://dbpedia.org/property/locationCountry> ?city .
+  OPTIONAL {?ville <http://www.w3.org/2000/01/rdf-schema#label> ?label 
+  FILTER langMatches( lang(?label), 'FR' )}  
+}"
+91,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?city ?label
+WHERE {
+  <http://dbpedia.org/resource/Guiness> <http://dbpedia.org/property/locationCity> ?city .
+  OPTIONAL {?ville <http://www.w3.org/2000/01/rdf-schema#label> ?label 
+  FILTER langMatches( lang(?label), 'FR' )}  
+}"
+92,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?city ?label
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg_Brewery> <http://dbpedia.org/property/locationCountry> ?city .
+  OPTIONAL {?ville <http://www.w3.org/2000/01/rdf-schema#label> ?label 
+  FILTER langMatches( lang(?label), 'FR' )}  
+}"
+93,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?city ?label
+WHERE {
+  <http://dbpedia.org/resource/Kronenbourg_Brewery> <http://dbpedia.org/property/locationCountry> ?city .
+  OPTIONAL {?ville <http://www.w3.org/2000/01/rdf-schema#label> ?label 
+  FILTER langMatches( lang(?label), 'FR' )}  
+}"
+94,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?city
+WHERE {
+  <http://dbpedia.org/resource/Guiness> <http://dbpedia.org/property/locationCity> ?city 
+}"
+95,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?city
+WHERE {
+  <http://dbpedia.org/resource/Kronembourg> <http://dbpedia.org/property/locationCity> ?city
+  OPTIONAL {
+             <http://dbpedia.org/resource/Kronembourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value
+  }
+}"
+96,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Guinness> ?property ?hasValue
+  ?hasValue <http://dbpedia.org/ontology/abstract> ?description1 .
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description.
+              FILTER langMatches( lang(?description), ""FR"" )} .
+  FILTER langMatches( lang(?hasValue), ""FR"" )
+}"
+97,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 ?hasValue
+WHERE {
+  <http://dbpedia.org/resource/Guinness> ?property ?hasValue
+  ?hasValue <http://dbpedia.org/ontology/abstract> ?description1.
+  OPTIONAL { <http://dbpedia.org/resource/Guinness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+              ?value <http://dbpedia.org/ontology/abstract> ?description.
+              FILTER langMatches( lang(?description), ""FR"" )} .
+  FILTER langMatches( lang(?hasValue), ""FR"" )
+}"
+98,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 WHERE {  
+				<http://dbpedia.org/resource/Kronembourg> ?property ?hasValue .
+				?hasValue <http://dbpedia.org/ontology/abstract> ?description1. 
+				FILTER langMatches( lang(?description1), 'FR' )
+				OPTIONAL {
+					<http://dbpedia.org/resource/Kronembourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+					?value <http://dbpedia.org/ontology/abstract> ?description1.
+					FILTER langMatches( lang(?description2), 'FR' )}}"
+99,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 
+WHERE {  
+       <http://dbpedia.org/resource/Kronembourg> ?property ?hasValue .
+       ?hasValue <http://dbpedia.org/ontology/abstract> ?description1. 
+       FILTER langMatches( lang(?description1), 'FR' )
+	OPTIONAL {
+	   <http://dbpedia.org/resource/Kronembourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/abstract> ?description1.
+	   FILTER langMatches( lang(?description2), 'FR' )}
+
+}"
+100,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg Brewery> ?property ?hasValue .
+       ?hasValue <http://dbpedia.org/ontology/abstract> ?description1. 
+       FILTER langMatches( lang(?description1), 'FR' )
+	OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg Brewery> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/abstract> ?description1.
+	   FILTER langMatches( lang(?description2), 'FR' )}
+
+}"
+101,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg_Brewery> ?property ?hasValue .
+       ?hasValue <http://dbpedia.org/ontology/abstract> ?description1. 
+       FILTER langMatches( lang(?description1), 'FR' )
+	OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg_Brewery> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/abstract> ?description1.
+	   FILTER langMatches( lang(?description2), 'FR' )}
+
+}"
+102,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       ?hasValue <http://dbpedia.org/ontology/abstract> ?description1. 
+       FILTER langMatches( lang(?description1), 'FR' )
+	OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg_Brewery> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/abstract> ?description1.
+	   FILTER langMatches( lang(?description2), 'FR' )}
+
+}"
+103,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       ?hasValue <http://dbpedia.org/ontology/abstract> ?description1. 
+       FILTER langMatches( lang(?description1), 'FR' )
+	OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/abstract> ?description1.
+	   FILTER langMatches( lang(?description2), 'FR' )}
+
+}"
+104,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       ?hasValue <http://dbpedia.org/ontology/country> ?description1. 
+       FILTER langMatches( lang(?description1), 'FR' )
+	OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/country> ?description1.
+	   FILTER langMatches( lang(?description2), 'FR' )}
+
+}"
+105,"SELECT ?resource ?value
+WHERE { ?resource <http://dbpedia.org/ontology/country> ?value }
+ORDER BY ?resource ?value"
+106,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       ?hasValue <http://dbpedia.org/ontology/country> ?description1. 
+       FILTER langMatches( lang(?description1), 'FR' )
+	OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/country> ?description1.
+	   FILTER langMatches( lang(?description2), 'FR' )}
+
+}"
+107,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       ?hasValue <http://dbpedia.org/ontology/country> ?description1. 
+	OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/country> ?description1.
+	   FILTER langMatches( lang(?description2), 'FR' )}
+
+}"
+108,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       ?hasValue <http://dbpedia.org/ontology/country> ?description1. 
+	OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/country> ?description1.
+	   }
+
+}"
+109,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       ?hasValue <http://dbpedia.org/ontology/country> ?description1. 
+
+
+}"
+110,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg Brewery> ?property ?hasValue .
+       ?hasValue <http://dbpedia.org/ontology/country> ?description1. 
+
+
+}"
+111,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg_Brewery> ?property ?hasValue .
+       ?hasValue <http://dbpedia.org/ontology/country> ?description1. 
+
+
+}"
+112,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       ?hasValue <http://dbpedia.org/ontology/country> ?description1. 
+	OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/country> ?description1.
+	   FILTER langMatches( lang(?description2), 'FR' )}
+
+}"
+113,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+
+}"
+114,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue 
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+
+}"
+115,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue 
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       ?hasValue <http://dbpedia.org/ontology/country> ?description1.
+
+}"
+116,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue 
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/country> ?description1.
+	   FILTER langMatches( lang(?description2), 'FR' )}
+
+
+}"
+117,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?description1.
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/country> ?description1.
+	   FILTER langMatches( lang(?description2), 'FR' )}
+
+
+}"
+118,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?description1
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/country> ?description1.
+	   FILTER langMatches( lang(?description2), 'FR' )}
+
+
+}"
+119,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?description1
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/country> ?description1.
+	   }
+
+
+}"
+120,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?description1
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/country> ?description1.
+	   }
+
+
+}"
+121,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 ?value
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       ?hasValue <http://dbpedia.org/ontology/country> ?description1. 
+	OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/country> ?description1.
+	   FILTER langMatches( lang(?description2), 'FR' )}
+
+}"
+122,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       ?hasValue <http://dbpedia.org/ontology/country> ?description1. 
+	OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/country> ?description1.
+	   FILTER langMatches( lang(?description2), 'FR' )}
+
+}"
+123,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       ?hasValue <http://dbpedia.org/ontology/country> ?description1. 
+	OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/country> ?description1.
+	   FILTER langMatches( lang(?description2), 'FR' )}
+
+}"
+124,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       ?hasValue <http://dbpedia.org/ontology/country> ?description1. 
+	OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/country> ?description1.
+	   }
+
+}"
+125,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?description1 ?value
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/country> ?description1.
+	   }
+
+
+}"
+126,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?description1 ?value
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/country> ?description1
+	   }
+
+
+}"
+127,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 ?value
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/country> ?description1
+	   }
+
+
+}"
+128,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 ?value
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   
+	   }
+
+
+}"
+129,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Kronenbourg_Brewery> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Kronenbourg_Brewery> }
+}"
+130,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?description1 ?value
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/locationCity> ?description1
+	   }
+
+
+}"
+131,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?pays ?value
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/locationCity> ?pays
+	   }
+
+
+}"
+132,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Strasbourg> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Strasbourg> }
+}"
+133,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?pays ?value
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/locationCity> ?pays
+           OPTIONAL {?pays <http://www.w3.org/2000/01/rdf-schema#label> ?label}
+	   }
+
+
+}"
+134,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?pays ?value ?label
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/locationCity> ?pays
+           OPTIONAL {?pays <http://www.w3.org/2000/01/rdf-schema#label> ?label}
+	   }
+
+
+}"
+135,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?pays ?value ?label
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/locationCity> ?pays
+           OPTIONAL {
+                    ?pays <http://www.w3.org/2000/01/rdf-schema#label> ?label.
+                     FILTER langMatches( lang(?label), 'FR' )}
+	   }
+
+
+}"
+136,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?pays ?value ?label
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/locationCity> ?pays
+           OPTIONAL {
+                    ?pays <http://www.w3.org/2000/01/rdf-schema#label> ?label.
+                     FILTER langMatches( lang(?label), 'FR' )}
+	   }
+
+
+}"
+137,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?pays ?label
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/locationCity> ?pays
+           OPTIONAL {
+                    ?pays <http://www.w3.org/2000/01/rdf-schema#label> ?label.
+                     FILTER langMatches( lang(?label), 'FR' )}
+	   }
+
+
+}"
+138,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?pays ?label
+WHERE {  
+       <http://dbpedia.org/resource/Guiness> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Guiness> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/locationCity> ?pays
+           OPTIONAL {
+                    ?pays <http://www.w3.org/2000/01/rdf-schema#label> ?label.
+                     FILTER langMatches( lang(?label), 'FR' )}
+	   }
+
+
+}"
+139,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?pays ?label
+WHERE {  
+       <http://dbpedia.org/resource/Heineken> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Heineken> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/locationCity> ?pays
+           OPTIONAL {
+                    ?pays <http://www.w3.org/2000/01/rdf-schema#label> ?label.
+                     FILTER langMatches( lang(?label), 'FR' )}
+	   }
+
+
+}"
+140,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?pays ?label ?value
+WHERE {  
+       <http://dbpedia.org/resource/Heineken> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Heineken> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/locationCity> ?pays
+           OPTIONAL {
+                    ?pays <http://www.w3.org/2000/01/rdf-schema#label> ?label.
+                     FILTER langMatches( lang(?label), 'FR' )}
+	   }
+
+
+}"
+141,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?pays ?label ?value
+WHERE {  
+       <http://dbpedia.org/resource/Heineken> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Heineken> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/locationCity> ?pays
+           OPTIONAL {
+                    ?pays <http://www.w3.org/2000/01/rdf-schema#label> ?label.
+                     FILTER langMatches( lang(?label), 'FR' )}
+	   }
+
+
+}"
+142,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?pays ?label ?value
+WHERE {  
+       <http://dbpedia.org/resource/Heineken> ?property ?hasValue
+}"
+143,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue
+WHERE {  
+       <http://dbpedia.org/resource/Heineken> ?property ?hasValue
+}"
+144,"SELECT ?resource ?value
+WHERE { ?resource <http://www.w3.org/2000/01/rdf-schema#label> ?value }
+ORDER BY ?resource ?value"
+145,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?pays ?label ?value ?property ?hasValue
+WHERE {  
+       <http://dbpedia.org/resource/Heineken> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Heineken> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/locationCity> ?pays
+           OPTIONAL {
+                    ?pays <http://www.w3.org/2000/01/rdf-schema#label> ?label.
+                     FILTER langMatches( lang(?label), 'FR' )}
+	   }
+
+
+}"
+146,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?pays ?label ?value ?property ?hasValue
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/locationCity> ?pays
+           OPTIONAL {
+                    ?pays <http://www.w3.org/2000/01/rdf-schema#label> ?label.
+                     FILTER langMatches( lang(?label), 'FR' )}
+	   }
+
+
+}"
+147,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?pays ?label
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/locationCity> ?pays
+           OPTIONAL {
+                    ?pays <http://www.w3.org/2000/01/rdf-schema#label> ?label.
+                     FILTER langMatches( lang(?label), 'FR' )}
+	   }
+
+
+}"
+148,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ville ?label
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/locationCity> ?pays
+           OPTIONAL {
+                    ?pays <http://www.w3.org/2000/01/rdf-schema#label> ?label.
+                     FILTER langMatches( lang(?label), 'FR' )}
+	   }
+
+
+}"
+149,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ville ?label
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/locationCity> ?ville
+           OPTIONAL {
+                    ?pays <http://www.w3.org/2000/01/rdf-schema#label> ?label.
+                     FILTER langMatches( lang(?label), 'FR' )}
+	   }
+
+
+}"
+150,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ville ?label
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/locationCity> ?ville
+           OPTIONAL {
+                    ?ville <http://www.w3.org/2000/01/rdf-schema#label> ?label.
+                     FILTER langMatches( lang(?label), 'FR' )}
+	   }
+
+
+}"
+151,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?ville ?label
+WHERE {  
+       <http://dbpedia.org/resource/Kronenbourg> ?property ?hasValue .
+       ?hasValue <http://dbpedia.org/ontology/locationCity> ?ville
+       OPTIONAL {
+	   <http://dbpedia.org/resource/Kronenbourg> <http://dbpedia.org/ontology/wikiPageRedirects> ?value .
+	   ?value <http://dbpedia.org/ontology/locationCity> ?ville
+           OPTIONAL {
+                    ?ville <http://www.w3.org/2000/01/rdf-schema#label> ?label.
+                     FILTER langMatches( lang(?label), 'FR' )}
+	   }
+
+
+}"

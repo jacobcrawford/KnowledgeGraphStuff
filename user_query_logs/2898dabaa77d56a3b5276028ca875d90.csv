@@ -1,0 +1,4578 @@
+,query
+0,"PREFIX foaf:  <http://xmlns.com/foaf/0.1/>
+SELECT ?name
+WHERE {
+    ?person foaf:name ?name .
+}"
+1,"PREFIX space: <http://purl.org/net/schemas/space/>
+SELECT ?craft
+{
+  ?craft a space:Spacecraft
+}
+LIMIT 50
+"
+2,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>        
+PREFIX type: <http://dbpedia.org/class/yago/>
+PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?country_name ?population
+WHERE {
+    ?country a type:LandlockedCountries ;
+             rdfs:label ?country_name ;
+             prop:populationEstimate ?population .
+    FILTER (?population > 15000000) .
+}"
+3,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+
+SELECT DISTINCT *
+WHERE
+{
+?person rdf:type dbo:TennisPlayer ;
+         foaf:name ?name ;
+         dbo:birthDate ?birthDate ;
+
+}
+LIMIT 20"
+4,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT DISTINCT *
+WHERE
+{
+?person rdf:type dbo:TennisPlayer ;
+    ?     foaf:name ?name ;
+     ?    dbo:birthDate ?birthDate ;
+
+}
+LIMIT 20"
+5,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT *
+WHERE
+{
+?person a dbo:Person .
+}
+LIMIT 20"
+6,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT *
+WHERE
+{
+?person a dbo:TennisPlayer ;
+         foaf:name ?name ;
+?name    dbo:birthDate ?birthDate ;
+
+}
+LIMIT 20
+
+
+
+"
+7,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT *
+WHERE
+{
+?person a dbo:TennisPlayer ;
+         foaf:name ?name ;
+
+}
+LIMIT 20
+
+
+
+"
+8,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT *
+WHERE
+{
+?person a dbo:TennisPlayer .
+         foaf:name ?name .
+
+}
+LIMIT 20
+
+
+
+"
+9,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT *
+WHERE
+{
+?person a dbo:TennisPlayer .
+
+
+}
+LIMIT 20
+
+
+
+"
+10,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT *
+WHERE
+{
+?person a dbo:TennisPlayer ;
+       foaf::name ?name .
+
+
+}
+LIMIT 20
+
+
+
+"
+11,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT *
+WHERE
+{
+?person a dbo:TennisPlayer .
+?person foaf::name ?name .
+
+
+}
+LIMIT 20
+
+
+
+"
+12,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?person
+WHERE
+{
+?person a dbo:TennisPlayer .
+?person foaf::name ?name .
+
+
+}
+LIMIT 20
+
+
+
+"
+13,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?person
+WHERE
+{
+?person a dbo:TennisPlayer .
+
+}
+LIMIT 20
+
+
+
+"
+14,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?person, ?BirthDate
+WHERE
+{
+?person a dbo:TennisPlayer ;
+       dbo:birthDate ?BirthDate .
+
+}
+LIMIT 20
+
+
+
+"
+15,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?tennisPlayer, ?BirthDate
+WHERE
+{
+?tennisPlayer a dbo:TennisPlayer ;
+       dbo:birthDate ?BirthDate .
+
+}
+LIMIT 20
+
+
+
+"
+16,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?Name, ?BirthDate
+WHERE
+{
+?tennisPlayer a dbo:TennisPlayer ;
+       foaf:name ?Name ;
+       dbo:birthDate ?BirthDate .
+
+}
+LIMIT 20
+
+
+
+"
+17,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?Name, ?BirthDate
+WHERE
+{
+?tennisPlayer a dbo:TennisPlayer ;
+       foaf:name ?Name ;
+       dbo:birthDate ?BirthDate .
+FILTER (langMatches(lang(?Name)), ""en""))
+
+}
+LIMIT 20
+
+
+
+"
+18,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?Name, ?BirthDate
+WHERE
+{
+?tennisPlayer a dbo:TennisPlayer ;
+       foaf:name ?Name ;
+       dbo:birthDate ?BirthDate .
+FILTER (langMatches(lang(?Name)), ""en"")) .
+
+}
+LIMIT 20
+
+
+
+"
+19,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?Name, ?BirthDate
+WHERE
+{
+?tennisPlayer a dbo:TennisPlayer ;
+       foaf:name ?Name ;
+       dbo:birthDate ?BirthDate .
+FILTER (langMatches(lang(??Name), ""EN"")) .
+
+}
+LIMIT 20
+
+
+
+"
+20,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?Name, ?BirthDate
+WHERE
+{
+?tennisPlayer a dbo:TennisPlayer ;
+       foaf:name ?Name ;
+       dbo:birthDate ?BirthDate .
+FILTER (langMatches(lang(?Name), ""EN"")) .
+
+}
+LIMIT 20
+
+
+
+"
+21,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?Name, ?BirthDate
+WHERE
+{
+?tennisPlayer a dbo:TennisPlayer ;
+       foaf:name ?Name ;
+       dbo:birthDate ?BirthDate .
+FILTER (langMatches(lang(?Name), ""ES"")) .
+
+}
+LIMIT 20
+
+
+
+"
+22,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?Name, ?BirthDate
+WHERE
+{
+?tennisPlayer a dbo:TennisPlayer ;
+       foaf:name ?Name ;
+       dbo:birthDate ?BirthDate .
+FILTER (langMatches(lang(?Name), ""en"")) .
+
+}
+LIMIT 20
+
+
+
+"
+23,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?Name, ?BirthDate
+WHERE
+{
+?tennisPlayer a dbo:TennisPlayer ;
+       foaf:name ?Name ;
+       dbo:birthDate ?BirthDate .
+FILTER (langMatches(lang(?Name), ""en"")) .
+
+}
+LIMIT 10
+
+
+
+"
+24,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+
+SELECT DISTINCT ?Name, ?BirthDate
+WHERE
+{
+?tennisPlayer a dbo:TennisPlayer ;
+       foaf:name ?Name ;
+       dbo:birthDate ?BirthDate .
+FILTER (langMatches(lang(?Name), ""en"")) .
+
+}
+LIMIT 10
+
+
+
+"
+25,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+
+SELECT DISTINCT ?capitalName
+WHERE
+{
+?capitalName a yago:CapitalsInAfrica ;
+FILTER (langMatches(lang(?capitalName), ""en"")) .
+
+
+}
+LIMIT 10
+
+
+
+"
+26,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+
+SELECT DISTINCT ?capitalName
+WHERE
+{
+?capitalName a yago:CapitalsInAfrica ;
+
+}
+LIMIT 10
+
+
+
+"
+27,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+
+SELECT DISTINCT ?capitalName
+WHERE
+{
+?capitalName yago:CapitalsInAfrica ;
+
+}
+LIMIT 10
+
+
+
+"
+28,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+
+SELECT DISTINCT ?capitalName
+WHERE
+{
+?capitalName yago:CapitalsInAfrica .
+
+}
+LIMIT 10
+
+
+
+"
+29,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+
+SELECT DISTINCT ?capitalName
+WHERE
+{
+?capitalName a yago:CapitalsInAfrica .
+
+
+}
+LIMIT 10
+
+
+
+"
+30,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+
+SELECT DISTINCT ?capitalName
+WHERE
+{
+?capitalName a yago:CapitalsInAfrica .
+FILTER (langMatches(lang(?Name), ""en"")) .
+
+}
+LIMIT 10
+
+
+
+"
+31,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+
+SELECT DISTINCT ?capitalName
+WHERE
+{
+?capitalName a yago:CapitalsInAfrica .
+FILTER (langMatches(lang(?capitalName), ""en"")) .
+
+}
+LIMIT 10
+
+
+
+"
+32,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+
+SELECT DISTINCT ?capitalName
+WHERE
+{
+?capitalName a yago:CapitalsInAfrica .
+FILTER (langMatches(lang(?capitalName), ""ES"")) .
+
+}
+LIMIT 10
+
+
+
+"
+33,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+
+SELECT DISTINCT ?capitalName
+WHERE
+{
+?capitalName a yago:CapitalsInAfrica ;
+FILTER (langMatches(lang(?capitalName), ""ES"")) .
+
+}
+LIMIT 10
+
+
+
+"
+34,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+
+SELECT DISTINCT ?capitalName
+WHERE
+{
+?capitalName a yago:CapitalsInAfrica .
+FILTER (langMatches(lang(?capitalName), ""ES"")) .
+
+}
+LIMIT 10
+
+
+
+"
+35,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+
+SELECT DISTINCT ?capitalName
+WHERE
+{
+?capitalName a yago:CapitalsInAfrica .
+FILTER (langMatches(lang(?a), ""ES"")) .
+
+}
+LIMIT 10
+
+
+
+"
+36,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+
+SELECT DISTINCT ?capitalName
+WHERE
+{
+?capitalName a yago:CapitalsInAfrica .
+FILTER (langMatches(lang(a), ""ES"")) .
+
+}
+LIMIT 10
+
+
+
+"
+37,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rif: <http://www.w3.org/2007/rif#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX dc: <http://purl.org/dc/terms/>
+
+                SELECT ?name ?long ?lat
+                WHERE {
+                  ?c a          yago:CapitalsInEurope ;
+                     rdfs:label ?name ;
+                     geo:long   ?long ;
+                     geo:lat    ?lat .
+                     FILTER( lang(?name)=""en"" )
+                }
+             "
+38,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rif: <http://www.w3.org/2007/rif#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX dc: <http://purl.org/dc/terms/>
+
+                SELECT ?name ?long ?lat
+                WHERE {
+                  ?c a          yago:CapitalsInEurope ;
+                     rdfs:label ?name ;
+                     geo:long   ?long ;
+                     geo:lat    ?lat .
+                     FILTER( lang(?name)=""en"" )
+                }
+               "
+39,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?name
+WHERE {
+?name a yago:CapitalsInAfrica ;
+  rdfs:label ?name ;
+FILTER( lang(?name)=""en"" )
+}
+LIMIT 10
+
+
+
+"
+40,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?name
+WHERE {
+?name a yago:CapitalsInAfrica ;
+  rdfs:label ?name .
+FILTER( lang(?name)=""en"" ) .
+}
+LIMIT 10
+
+
+
+"
+41,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?name
+WHERE {
+?name a yago:CapitalsInAfrica ;
+  rdfs:label ?name .
+FILTER( lang(?name)=""es"" ) .
+}
+LIMIT 10
+
+
+
+"
+42,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?name
+WHERE {
+?name a yago:CapitalsInAfrica ;
+  rdfs:label ?name .
+FILTER( langMatches((?name),""es"")) .
+}
+LIMIT 10
+
+
+
+"
+43,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?name
+WHERE {
+?name a yago:CapitalsInAfrica ;
+  rdfs:label ?name .
+FILTER( langMatches(lang(?name),""es"")) .
+}
+LIMIT 10
+
+
+
+"
+44,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?name
+WHERE {
+?name a yago:CapitalsInAfrica ;
+  rdfs:label ?name .
+FILTER( langMatches(lang(?name),""en"")) .
+}
+LIMIT 10
+
+
+
+"
+45,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?name
+WHERE {
+?name a yago:CapitalsInAfrica ;
+  rdfs:label ?name .
+
+}
+LIMIT 10
+
+
+
+"
+46,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?name
+WHERE {
+?name a yago:CapitalsInAfrica ;
+  rdfs:label ?name .
+FILTER (langMatches(lang(?Name), ""en"")) .
+
+}
+LIMIT 10
+
+
+
+"
+47,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?name
+WHERE {
+?name a yago:CapitalsInAfrica .
+
+
+}
+LIMIT 10
+
+
+
+"
+48,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?name
+WHERE {
+?capital a yago:CapitalsInAfrica ;
+        rdfs:label ?name.
+
+
+}
+LIMIT 10
+
+
+
+"
+49,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?name
+WHERE {
+?capital a yago:CapitalsInAfrica ;
+        rdfs:label ?name.
+FILTER (langMatches(lang(?Name), ""en"")) .
+
+
+}
+LIMIT 10
+
+
+
+"
+50,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?name
+WHERE {
+?capital a yago:CapitalsInAfrica ;
+        rdfs:label ?name.
+FILTER (langMatches(lang(?name), ""en"")) .
+
+
+}
+LIMIT 10
+
+
+
+"
+51,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?name
+WHERE {
+?capital a yago:CapitalsInAfrica ;
+        rdfs:label ?name.
+FILTER (langMatches(lang(?name), ""es"")) .
+
+
+}
+LIMIT 10
+
+
+
+"
+52,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?name
+WHERE {
+?capital a yago:CapitalsInAfrica ;
+        rdfs:label ?name.
+FILTER (langMatches(lang(?name), ""es"")) .
+
+}
+LIMIT 10
+
+
+
+"
+53,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?CapitalName
+WHERE {
+?capital a yago:CapitalsInAfrica ;
+        rdfs:label ?CapitalName .
+FILTER (langMatches(lang(?CapitalName), ""es"")) .
+
+}
+LIMIT 10
+
+
+
+"
+54,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?CapitalName, ?Description
+WHERE {
+?capital a yago:CapitalsInAfrica ;
+        rdfs:label ?CapitalName ;
+        rdfs:comment ?Description .
+FILTER (langMatches(lang(?CapitalName), ""es"")) .
+
+}
+LIMIT 10
+
+
+
+"
+55,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?CapitalName, ?Description
+WHERE {
+?capital a yago:CapitalsInAfrica ;
+        rdfs:label ?CapitalName ;
+        rdfs:comment ?Description .
+FILTER (langMatches(lang(?CapitalName, ?Description), ""es"")) .
+
+}
+LIMIT 10
+
+
+
+"
+56,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?CapitalName, ?Description
+WHERE {
+?capital a yago:CapitalsInAfrica ;
+        rdfs:label ?CapitalName ;
+        rdfs:comment ?Description .
+FILTER (langMatches(lang(?CapitalName), ""es"")) .
+FILTER (langMatches(lang(?Description), ""es"")) .
+
+}
+LIMIT 10
+
+
+
+"
+57,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+
+SELECT ?CapitalName, ?Description
+WHERE {
+?capital a yago:CapitalsInAfrica ;
+        rdfs:label ?CapitalName ;
+        rdfs:comment ?Description .
+FILTER (langMatches(lang(?CapitalName), ""es"")) .
+FILTER (langMatches(lang(?Description), ""es"")) .
+
+}
+LIMIT 10
+
+
+
+"
+58,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(?CapitalsAfrica), COUNT(?CapitalsEurope)
+WHERE {
+?capitalsA a yago:CapitalsInAfrica ;
+?capitalsE a yago:CapitalsInAfrica .
+
+}
+LIMIT 10
+
+
+
+"
+59,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(?CapitalsAfrica), COUNT(?CapitalsEurope)
+WHERE {
+?capitalsA a yago:CapitalsInAfrica .
+?capitalsE a yago:CapitalsInAfrica .
+
+}
+LIMIT 10
+
+
+
+"
+60,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(?CapitalsAfrica), COUNT(?CapitalsEurope)
+WHERE {
+?capitalsA a yago:CapitalsInAfrica .
+?capitalsE b yago:CapitalsInAfrica .
+
+}
+LIMIT 10
+
+
+
+"
+61,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(?CapitalsAfrica)
+WHERE {
+?CapitalsAfrica a yago:CapitalsInAfrica .
+
+
+}
+LIMIT 10
+
+
+
+"
+62,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(?CapitalsAfrica) AS ?NumberOfCapitalsInAfrica
+WHERE {
+?CapitalsAfrica a yago:CapitalsInAfrica .
+
+
+}
+LIMIT 10
+
+
+
+"
+63,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(?CapitalsAfrica) AS ?NumberOfCapitalsInAfrica, COUNT(?CapitalsInEurope) AS ?NumberOfCapitalsInEurope
+WHERE {
+?CapitalsAfrica a yago:CapitalsInAfrica .
+?CapitalsEurope a yago:CapitalsInEurope .
+
+
+}
+LIMIT 10
+
+
+
+"
+64,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(?CapitalsAfrica) AS ?NumberOfCapitalsInAfrica, COUNT(?CapitalsInEurope) AS ?NumberOfCapitalsInEurope
+WHERE {
+?CapitalsAfrica a yago:CapitalsInAfrica ;
+?CapitalsEurope a yago:CapitalsInEurope ;
+
+
+}
+LIMIT 10
+
+
+
+"
+65,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT (COUNT(?CapitalsAfrica) AS ?NumberOfCapitalsInAfrica)
+ (COUNT(?CapitalsInEurope) AS ?NumberOfCapitalsInEurope)
+WHERE {
+?CapitalsAfrica a yago:CapitalsInAfrica .
+?CapitalsEurope a yago:CapitalsInEurope .
+
+
+}
+LIMIT 10
+
+
+
+"
+66,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT (COUNT(?CapitalsAfrica) AS ?NumberOfCapitalsInAfrica)
+ (COUNT(?CapitalsInEurope) AS ?NumberOfCapitalsInEurope)
+WHERE {
+?CapitalsAfrica a yago:CapitalsInAfrica .
+?CapitalsEurope a yago:CapitalsInEurope .
+
+
+}
+LIMIT 10
+
+
+
+"
+67,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT (COUNT(?CapitalsAfrica) AS ?NumberOfCapitalsInAfrica)
+ (COUNT(?CapitalsEurope) AS ?NumberOfCapitalsInEurope)
+WHERE {
+?CapitalsAfrica a yago:CapitalsInAfrica .
+?CapitalsEurope a yago:CapitalsInEurope .
+
+
+}
+LIMIT 10
+
+
+
+"
+68,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT (COUNT(?CapitalsAfrica) AS ?NumberOfCapitalsInAfrica)
+ (COUNT(?CapitalsEurope) AS ?NumberOfCapitalsInEurope)
+WHERE {
+?CapitalsAfrica a yago:CapitalsInAfrica .
+?CapitalsEurope a yago:CapitalsInEurope .
+FILTER (langMatches(lang(?CapitalsAfrica), ""en"")) .
+FILTER (langMatches(lang(?CapitalsEurope), ""en"")) .
+
+}
+LIMIT 10
+
+
+
+"
+69,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT (COUNT(?CapitalsAfrica) AS ?NumberOfCapitalsInAfrica)
+ (COUNT(?CapitalsEurope) AS ?NumberOfCapitalsInEurope)
+WHERE {
+?CapitalsAfrica a yago:CapitalsInAfrica .
+?CapitalsEurope a yago:CapitalsInEurope .
+FILTER (langMatches(lang(?CapitalsAfrica), ""es"")) .
+FILTER (langMatches(lang(?CapitalsEurope), ""es"")) .
+
+}
+LIMIT 10
+
+
+
+"
+70,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT (COUNT(?CapitalsAfrica) AS ?NumberOfCapitalsInAfrica)
+ (COUNT(?CapitalsEurope) AS ?NumberOfCapitalsInEurope)
+WHERE {
+?CapitalsAfrica a yago:CapitalsInAfrica .
+?CapitalsEurope a yago:CapitalsInEurope .
+FILTER (langMatches(lang(?CapitalsAfrica), ""es"")) .
+FILTER (langMatches(lang(?CapitalsEurope), ""es"")) .
+
+}
+LIMIT 10
+
+
+
+"
+71,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(?CapitalsAfrica) AS ?NumberOfCapitalsInAfrica
+ 
+WHERE {
+?CapitalsAfrica a yago:CapitalsInAfrica .
+?CapitalsEurope a yago:CapitalsInEurope .
+FILTER (langMatches(lang(?CapitalsAfrica), ""es"")) .
+FILTER (langMatches(lang(?CapitalsEurope), ""es"")) .
+
+}
+LIMIT 10
+
+
+
+"
+72,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(?CapitalsAfrica) AS ?NumberOfCapitalsInAfrica
+ 
+WHERE {
+?CapitalsAfrica a yago:CapitalsInAfrica .
+?CapitalsEurope a yago:CapitalsInEurope .
+FILTER (langMatches(lang(?CapitalsAfrica), ""es"")) .
+
+
+}
+LIMIT 10
+
+
+
+"
+73,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT (?NumberOfCapitalsInEurope) (COUNT(?CapitalsAfrica) AS ?NumberOfCapitalsInAfrica)
+ 
+WHERE {
+?CapitalsAfrica a yago:CapitalsInAfrica .
+ SELECT ?CapitalsEurope
+  WHERE {
+    ?CapitalsEurope a yago:CapitalsInEurope .
+  }
+
+
+}
+LIMIT 10
+
+
+
+"
+74,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?CapitalsEurope (COUNT(?CapitalsAfrica) AS ?NumberOfCapitalsInAfrica)
+ 
+WHERE {
+?CapitalsAfrica a yago:CapitalsInAfrica .
+ SELECT ?CapitalsEurope
+  WHERE {
+    ?CapitalsEurope a yago:CapitalsInEurope .
+  }
+
+
+}
+LIMIT 10
+
+
+
+"
+75,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT (COUNT(?CapitalsAfrica) AS ?NumberOfCapitalsInAfrica)
+ 
+WHERE {
+?CapitalsAfrica a yago:CapitalsInAfrica .
+}
+LIMIT 10
+
+
+
+"
+76,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT (COUNT(?CapitalsAfrica) AS ?NumberOfCapitalsInAfrica) 
+(COUNT(?CapitalsEurope) AS ?NumberOfCapitalsInEurope)
+ 
+WHERE {
+?CapitalsAfrica a yago:CapitalsInAfrica .
+?CapitalsEurope a yago:CapitalsInEurope .
+}
+LIMIT 10
+
+
+
+"
+77,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT 
+(COUNT(?CapitalsEurope) AS ?NumberOfCapitalsInEurope)
+ 
+WHERE {
+?CapitalsAfrica a yago:CapitalsInAfrica .
+?CapitalsEurope a yago:CapitalsInEurope .
+}
+LIMIT 10
+
+
+
+"
+78,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT 
+(COUNT(?CapitalsEurope) AS ?NumberOfCapitalsInEurope)
+ 
+WHERE {
+?CapitalsEurope a yago:CapitalsInEurope .
+}
+LIMIT 10
+
+
+
+"
+79,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?NumberOfCapitalsInEurope ?NumberOfCapitalsInAfrica
+ 
+WHERE {
+       SELECT COUNT(?cInEurope) AS ?NumberOfCapitalsInEurope
+       WHERE { ?clsEurope a yago:CapitalsInEurope . }
+
+}
+LIMIT 10
+
+
+
+"
+80,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?NumberOfCapitalsInEurope ?NumberOfCapitalsInAfrica
+ 
+WHERE {
+       SELECT COUNT(?CapitalName) AS ?NumberOfCapitalsInEurope
+       WHERE { ?clsEurope a yago:CapitalsInEurope ;
+                          rdfs:label ?CapitalName . }
+
+}
+LIMIT 10
+
+
+
+"
+81,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?NumberOfCapitalsInEurope ?NumberOfCapitalsInAfrica
+ 
+WHERE {
+       SELECT COUNT(?CapitalName) AS ?NumberOfCapitalsInEurope
+       WHERE { ?clsEurope a yago:CapitalsInEurope ;
+                          rdfs:label ?CapitalName . }
+       SELECT COUNT(?CapitalName) AS ?NumberOfCapitalsInAfrica
+       WHERE { ?clsEurope a yago:CapitalsInAfrica ;
+                          rdfs:label ?CapitalName . }
+
+
+}
+LIMIT 10
+
+
+
+"
+82,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?NumberOfCapitalsInEurope ?NumberOfCapitalsInAfrica
+ 
+WHERE {
+       SELECT COUNT(?CapitalName) AS ?NumberOfCapitalsInEurope
+       WHERE { ?clsEurope a yago:CapitalsInEurope ;
+                          rdfs:label ?CapitalName . }
+       SELECT COUNT(?CapitalName) AS ?NumberOfCapitalsInAfrica
+       WHERE { ?clsAfrica a yago:CapitalsInAfrica ;
+                          rdfs:label ?CapitalName . }
+
+
+}
+LIMIT 10
+
+
+
+"
+83,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?NumberOfCapitalsInEurope
+ 
+WHERE {
+       SELECT COUNT(?CapitalName) AS ?NumberOfCapitalsInEurope
+       WHERE { ?clsEurope a yago:CapitalsInEurope ;
+                          rdfs:label ?CapitalName . }
+
+
+}
+LIMIT 10
+
+
+
+"
+84,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?NumberOfCapitalsInEurope
+ 
+WHERE {
+       SELECT COUNT(?CapitalName) AS ?NumberOfCapitalsInEurope
+       WHERE { ?clsEurope a yago:CapitalsInEurope . }
+
+
+}
+LIMIT 10
+
+
+
+"
+85,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?NumberOfCapitalsInEurope
+ 
+WHERE {
+       SELECT COUNT(*) AS ?NumberOfCapitalsInEurope
+       WHERE { ?clsEurope a yago:CapitalsInEurope . }
+
+
+}
+LIMIT 10
+
+
+
+"
+86,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?NumberOfCapitalsInEurope ?NumberOfCapitalsInAfrica
+ 
+WHERE {
+       SELECT (COUNT(?clsEurope) AS ?NumberOfCapitalsInEurope)
+            (COUNT(?clsAfrica) AS ?NumberOfCapitalsInAfrica)
+       WHERE { ?clsEurope a yago:CapitalsInEurope . 
+              ?clsEurope a yago:CapitalsInAfrica .
+}
+
+
+
+}
+LIMIT 10
+
+
+
+"
+87,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?NumberOfCapitalsInEurope ?NumberOfCapitalsInAfrica
+ 
+WHERE {
+       SELECT (COUNT(?clsEurope) AS ?NumberOfCapitalsInEurope)
+            (COUNT(?clsAfrica) AS ?NumberOfCapitalsInAfrica)
+       WHERE { ?clsEurope a yago:CapitalsInEurope . 
+              ?clsAfrica a yago:CapitalsInAfrica .
+}
+
+
+
+}
+LIMIT 10
+
+
+
+"
+88,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?NumberOfCapitalsInEurope ?NumberOfCapitalsInAfrica
+ 
+WHERE {
+       SELECT (COUNT(?clsEurope) AS ?NumberOfCapitalsInEurope)
+            (COUNT(?clsAfrica) AS ?NumberOfCapitalsInAfrica)
+       WHERE { ?clsEurope a yago:CapitalsInEurope . }
+       SELECT COUNT(?clsAfrica) AS ?NumberOfCapitalsInAfrica
+       WHERE { ?clsAfrica a yago:CapitalsInAfrica . }
+
+
+
+
+}
+LIMIT 10
+
+
+
+"
+89,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?NumberOfCapitalsInEurope ?NumberOfCapitalsInAfrica
+ 
+WHERE {
+       SELECT COUNT(?clsEurope) AS ?NumberOfCapitalsInEurope
+       WHERE { ?clsEurope a yago:CapitalsInEurope . }
+
+       SELECT COUNT(?clsAfrica) AS ?NumberOfCapitalsInAfrica
+       WHERE { ?clsAfrica a yago:CapitalsInAfrica . }
+
+
+
+
+}
+LIMIT 10
+
+
+
+"
+90,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?NumberOfCapitalsInEurope (COUNT(?clsAfrica) AS ?NumberOfCapitalsInAfrica)
+ 
+WHERE {
+       SELECT COUNT(?clsEurope) AS ?NumberOfCapitalsInEurope
+       WHERE { ?clsEurope a yago:CapitalsInEurope . }
+ ?clsAfrica a yago:CapitalsInAfrica . 
+
+
+
+
+}
+LIMIT 10
+
+
+
+"
+91,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?NumberOfCapitalsInEurope (COUNT(?clsAfrica) AS ?NumberOfCapitalsInAfrica)
+ 
+WHERE {
+        ?clsAfrica a yago:CapitalsInAfrica .
+       SELECT COUNT(?clsEurope) AS ?NumberOfCapitalsInEurope
+       WHERE { ?clsEurope a yago:CapitalsInEurope . }
+ 
+
+
+
+
+}
+LIMIT 10
+
+
+
+"
+92,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT (COUNT(?clsEurope) AS ?NumberOfCapitalsInEurope) (COUNT(?clsAfrica) AS ?NumberOfCapitalsInAfrica)
+ 
+WHERE {
+        ?clsAfrica a yago:CapitalsInAfrica .
+        ?clsEurope a yago:CapitalsInEurope . 
+ 
+
+
+
+
+}
+LIMIT 10
+
+
+
+"
+93,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?clsEurope ?clsAfrica
+ 
+WHERE {
+        ?clsAfrica a yago:CapitalsInAfrica .
+        ?clsEurope a yago:CapitalsInEurope . 
+
+}
+LIMIT 10
+
+
+
+"
+94,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?clsEurope ?clsAfrica
+ 
+WHERE {
+        ?clsAfrica a yago:CapitalsInAfrica .
+        ?clsEurope a yago:CapitalsInEurope . 
+
+}
+
+
+
+"
+95,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(?clsEurope) ?clsAfrica
+ 
+WHERE {
+        ?clsAfrica a yago:CapitalsInAfrica .
+        ?clsEurope a yago:CapitalsInEurope . 
+
+}
+
+
+
+"
+96,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(?clsEurope) COUNT(?clsAfrica)
+ 
+WHERE {
+        ?clsAfrica a yago:CapitalsInAfrica .
+        ?clsEurope a yago:CapitalsInEurope . 
+
+}
+
+
+
+"
+97,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(?clsEurope) AS ?NumberOfCapitalsInEurope
+WHERE { ?clsEurope a yago:CapitalsInEurope . }
+
+
+
+"
+98,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(?clsEurope) AS ?NumberOfCapitalsInEurope ?NumberOfCapitalsInAfrica
+WHERE { ?clsEurope a yago:CapitalsInEurope . 
+       SELECT COUNT(?clsAfrica) AS ?NumberOfCapitalsInAfrica
+       WHERE { ?clsAfrica a yago:CapitalsInAfrica .}
+}
+
+
+
+"
+99,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?clsEurope ?NumberOfCapitalsInAfrica
+WHERE { ?clsEurope a yago:CapitalsInEurope . 
+       SELECT COUNT(?clsAfrica) AS ?NumberOfCapitalsInAfrica
+       WHERE { ?clsAfrica a yago:CapitalsInAfrica .}
+}
+
+
+
+"
+100,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?clsEurope ?NumberOfCapitalsInAfrica
+WHERE { ?clsEurope a yago:CapitalsInEurope . 
+        ?clsAfrica a yago:CapitalsInAfrica .
+}
+
+
+
+"
+101,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?clsEurope ?clsAfrica
+WHERE { ?clsEurope a yago:CapitalsInEurope . 
+        ?clsAfrica a yago:CapitalsInAfrica .
+}
+
+
+
+"
+102,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT DISTINCT ?clsEurope ?clsAfrica
+WHERE { ?clsEurope a yago:CapitalsInEurope . 
+        ?clsAfrica a yago:CapitalsInAfrica .
+}
+
+
+
+"
+103,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT DISTINCT ?CapitalsEurope?clsAfrica
+WHERE { ?clsEurope a yago:CapitalsInEurope ;
+                   rdfs:label ?CapitalsEurope .
+FILTER (langMatches(lang(?CapitalName), ""en"")) .
+        ?clsAfrica a yago:CapitalsInAfrica .
+}
+
+
+
+"
+104,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT DISTINCT ?CapitalsEurope ?clsAfrica
+WHERE { ?clsEurope a yago:CapitalsInEurope ;
+                   rdfs:label ?CapitalsEurope .
+FILTER (langMatches(lang(?CapitalName), ""en"")) .
+        ?clsAfrica a yago:CapitalsInAfrica .
+}
+
+
+
+"
+105,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT DISTINCT ?CapitalsEurope ?clsAfrica
+WHERE { ?clsEurope a yago:CapitalsInEurope ;
+                   rdfs:label ?CapitalsEurope .
+FILTER (langMatches(lang(?CapitalsEurope), ""en"")) .
+        ?clsAfrica a yago:CapitalsInAfrica .
+}
+
+
+
+"
+106,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?CapitalsEurope ?clsAfrica
+WHERE { ?clsEurope a yago:CapitalsInEurope ;
+         rdfs:label ?CapitalsEurope .
+FILTER (langMatches(lang(?CapitalsEurope), ""en"")) .
+
+        ?clsAfrica a yago:CapitalsInAfrica ;
+         rdfs:label ?CapitalsAfrica .
+FILTER (langMatches(lang(?CapitalsAfrica), ""en"")) .
+}
+
+
+
+"
+107,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?CapitalsEurope ?CapitalsAfrica
+WHERE { ?clsEurope a yago:CapitalsInEurope ;
+         rdfs:label ?CapitalsEurope .
+FILTER (langMatches(lang(?CapitalsEurope), ""en"")) .
+
+        ?clsAfrica a yago:CapitalsInAfrica ;
+         rdfs:label ?CapitalsAfrica .
+FILTER (langMatches(lang(?CapitalsAfrica), ""en"")) .
+}
+
+
+
+"
+108,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?CapitalsEurope ?CapitalsAfrica
+WHERE { ?clsEurope a yago:CapitalsInEurope ;
+         rdfs:label ?CapitalsEurope .
+        ?clsAfrica a yago:CapitalsInAfrica ;
+         rdfs:label ?CapitalsAfrica .
+
+FILTER (langMatches(lang(?CapitalsEurope), ""en"")) .
+FILTER (langMatches(lang(?CapitalsAfrica), ""en"")) .
+}
+
+
+
+"
+109,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(?CapitalsEurope) ?CapitalsAfrica
+WHERE { ?clsEurope a yago:CapitalsInEurope ;
+         rdfs:label ?CapitalsEurope .
+        ?clsAfrica a yago:CapitalsInAfrica ;
+         rdfs:label ?CapitalsAfrica .
+
+FILTER (langMatches(lang(?CapitalsEurope), ""en"")) .
+FILTER (langMatches(lang(?CapitalsAfrica), ""en"")) .
+}
+
+
+
+"
+110,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(?CapitalsEurope) COUNT(?CapitalsAfrica)
+WHERE { ?clsEurope a yago:CapitalsInEurope ;
+         rdfs:label ?CapitalsEurope .
+        ?clsAfrica a yago:CapitalsInAfrica ;
+         rdfs:label ?CapitalsAfrica .
+
+FILTER (langMatches(lang(?CapitalsEurope), ""en"")) .
+FILTER (langMatches(lang(?CapitalsAfrica), ""en"")) .
+}
+
+
+
+"
+111,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(?CapitalsEurope) COUNT(?clsAfrica)
+WHERE { ?clsEurope a yago:CapitalsInEurope ;
+         rdfs:label ?CapitalsEurope .
+        ?clsAfrica a yago:CapitalsInAfrica .
+
+FILTER (langMatches(lang(?CapitalsEurope), ""en"")) .
+
+}
+
+
+
+"
+112,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(?CapitalsEurope) ?clsAfrica
+WHERE { ?clsEurope a yago:CapitalsInEurope ;
+         rdfs:label ?CapitalsEurope .
+        ?clsAfrica a yago:CapitalsInAfrica .
+
+FILTER (langMatches(lang(?CapitalsEurope), ""en"")) .
+
+}
+
+
+
+"
+113,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT DISTINCT COUNT(?CapitalsEurope) ?clsAfrica
+WHERE { ?clsEurope a yago:CapitalsInEurope ;
+         rdfs:label ?CapitalsEurope .
+        ?clsAfrica a yago:CapitalsInAfrica .
+
+FILTER (langMatches(lang(?CapitalsEurope), ""en"")) .
+
+}
+
+
+
+"
+114,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT DISTINCT COUNT(?CapitalsEurope) COUNT(?clsAfrica)
+WHERE { ?clsEurope a yago:CapitalsInEurope ;
+         rdfs:label ?CapitalsEurope .
+        ?clsAfrica a yago:CapitalsInAfrica .
+
+FILTER (langMatches(lang(?CapitalsEurope), ""en"")) .
+
+}
+
+
+
+"
+115,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT DISTINCT ?CapitalsEurope ?clsAfrica
+WHERE { ?clsEurope a yago:CapitalsInEurope ;
+         rdfs:label ?CapitalsEurope .
+        ?clsAfrica a yago:CapitalsInAfrica .
+
+FILTER (langMatches(lang(?CapitalsEurope), ""en"")) .
+
+}
+
+
+
+"
+116,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT ?CapitalsEurope COUNT(DISTINCT ?clsAfrica)
+WHERE { ?clsEurope a yago:CapitalsInEurope ;
+         rdfs:label ?CapitalsEurope .
+        ?clsAfrica a yago:CapitalsInAfrica .
+
+FILTER (langMatches(lang(?CapitalsEurope), ""en"")) .
+
+}
+
+
+
+"
+117,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(?CapitalsEurope) COUNT(DISTINCT ?clsAfrica)
+WHERE { ?clsEurope a yago:CapitalsInEurope ;
+         rdfs:label ?CapitalsEurope .
+        ?clsAfrica a yago:CapitalsInAfrica .
+
+FILTER (langMatches(lang(?CapitalsEurope), ""en"")) .
+
+}
+
+
+
+"
+118,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(DISTINCT ?CapitalsEurope) COUNT(DISTINCT ?clsAfrica)
+WHERE { ?clsEurope a yago:CapitalsInEurope ;
+         rdfs:label ?CapitalsEurope .
+        ?clsAfrica a yago:CapitalsInAfrica .
+
+FILTER (langMatches(lang(?CapitalsEurope), ""en"")) .
+
+}
+
+
+
+"
+119,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(DISTINCT ?clsEurope) AS ?NumberOfCapitalsInEurope COUNT(DISTINCT ?clsAfrica) AS ?NumberOfCapitalsInAfrica
+WHERE { ?clsEurope a yago:CapitalsInEurope .
+        ?clsAfrica a yago:CapitalsInAfrica .
+}
+
+
+
+"
+120,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(DISTINCT ?clsEurope) AS ?NumberOfCapitalsInEurope COUNT(DISTINCT ?clsAfrica) AS ?NumberOfCapitalsInAfrica SUM(?NumberOfCapitalsInEurope ?NumberOfCapitalsInAfrica)
+WHERE { ?clsEurope a yago:CapitalsInEurope .
+        ?clsAfrica a yago:CapitalsInAfrica .
+}
+
+
+
+"
+121,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(DISTINCT ?clsEurope) AS ?NumberOfCapitalsInEurope COUNT(DISTINCT ?clsAfrica) AS ?NumberOfCapitalsInAfrica SUM(?NumberOfCapitalsInEurope, ?NumberOfCapitalsInAfrica)
+WHERE { ?clsEurope a yago:CapitalsInEurope .
+        ?clsAfrica a yago:CapitalsInAfrica .
+}
+
+
+
+"
+122,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(DISTINCT ?clsEurope) AS ?NumberOfCapitalsInEurope COUNT(DISTINCT ?clsAfrica) AS ?NumberOfCapitalsInAfrica (?NumberOfCapitalsInEurope    ?NumberOfCapitalsInAfrica)
+WHERE { ?clsEurope a yago:CapitalsInEurope .
+        ?clsAfrica a yago:CapitalsInAfrica .
+}
+
+
+
+"
+123,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(DISTINCT ?clsEurope) AS ?NumberOfCapitalsInEurope COUNT(DISTINCT ?clsAfrica) AS ?NumberOfCapitalsInAfrica (COUNT(DISTINCT ?clsEurope)   COUNT(DISTINCT ?clsAfrica)a)
+WHERE { ?clsEurope a yago:CapitalsInEurope .
+        ?clsAfrica a yago:CapitalsInAfrica .
+}
+
+
+
+"
+124,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(DISTINCT ?clsEurope) AS ?NumberOfCapitalsInEurope COUNT(DISTINCT ?clsAfrica) AS ?NumberOfCapitalsInAfrica (COUNT(DISTINCT ?clsEurope)   COUNT(DISTINCT ?clsAfrica))
+WHERE { ?clsEurope a yago:CapitalsInEurope .
+        ?clsAfrica a yago:CapitalsInAfrica .
+}
+
+
+
+"
+125,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(DISTINCT ?clsEurope) AS ?NumberOfCapitalsInEurope COUNT(DISTINCT ?clsAfrica) AS ?NumberOfCapitalsInAfrica (COUNT(DISTINCT ?clsEurope)   COUNT(DISTINCT ?clsAfrica)) AS SUM
+WHERE { ?clsEurope a yago:CapitalsInEurope .
+        ?clsAfrica a yago:CapitalsInAfrica .
+}
+
+
+
+"
+126,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(DISTINCT ?clsEurope) AS ?NumberOfCapitalsInEurope COUNT(DISTINCT ?clsAfrica) AS ?NumberOfCapitalsInAfrica (COUNT(DISTINCT ?clsEurope)   COUNT(DISTINCT ?clsAfrica)) AS sum
+WHERE { ?clsEurope a yago:CapitalsInEurope .
+        ?clsAfrica a yago:CapitalsInAfrica .
+}
+
+
+
+"
+127,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(DISTINCT ?clsEurope) AS ?NumberOfCapitalsInEurope COUNT(DISTINCT ?clsAfrica) AS ?NumberOfCapitalsInAfrica (COUNT(DISTINCT ?clsEurope)   COUNT(DISTINCT ?clsAfrica))
+WHERE { ?clsEurope a yago:CapitalsInEurope .
+        ?clsAfrica a yago:CapitalsInAfrica .
+}
+
+
+
+"
+128,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(DISTINCT ?clsEurope) AS ?NumberOfCapitalsInEurope COUNT(DISTINCT ?clsAfrica) AS ?NumberOfCapitalsInAfrica (COUNT(DISTINCT ?clsEurope)   COUNT(DISTINCT ?clsAfrica)) AS asas
+WHERE { ?clsEurope a yago:CapitalsInEurope .
+        ?clsAfrica a yago:CapitalsInAfrica .
+}
+
+
+
+"
+129,"PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+SELECT COUNT(DISTINCT ?clsEurope) AS ?NumberOfCapitalsInEurope COUNT(DISTINCT ?clsAfrica) AS ?NumberOfCapitalsInAfrica (COUNT(DISTINCT ?clsEurope)   COUNT(DISTINCT ?clsAfrica)) AS asas 
+WHERE { ?clsEurope a yago:CapitalsInEurope .
+        ?clsAfrica a yago:CapitalsInAfrica .
+}
+
+
+
+"
+130,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?BirthDate
+WHERE
+{
+?tennisPlayer a dbo:Rafael_Nadal ;
+       dbo:birthDate ?BirthDate .
+FILTER (langMatches(lang(?Name), ""es"")) .
+
+}
+LIMIT 10
+
+"
+131,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?BirthDate
+WHERE
+{
+?tennisPlayer a dbo:Rafael_Nadal ;
+       dbo:birthDate ?BirthDate .
+
+}
+
+
+"
+132,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+
+SELECT ?BirthDate
+WHERE
+{
+?tennisPlayer a :Rafael_Nadal ;
+       dbo:birthDate ?BirthDate .
+
+}
+
+
+"
+133,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?Name, ?BirthDate
+WHERE
+{
+?tennisPlayer a dbo:TennisPlayer ;
+       foaf:name ?Name ;
+       dbo:birthDate ?BirthDate .
+FILTER (langMatches(lang(?Name), ""en"")) .
+
+}
+LIMIT 10
+
+"
+134,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?Name, ?BirthDate
+WHERE
+{
+?tennisPlayer a dbo:TennisPlayer ;
+       foaf:name ?Name ""Rafael Nadal"";
+       dbo:birthDate ?BirthDate .
+FILTER (langMatches(lang(?Name), ""en"")) .
+
+}
+LIMIT 10
+
+"
+135,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT DISTINCT ?Name
+WHERE
+{
+?v a :Rafael_Nadal ;
+       foaf:name ?Name;
+
+
+}
+LIMIT 10
+
+"
+136,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT DISTINCT ?Name
+WHERE
+{
+?v a :Rafael_Nadal ;
+       foaf:name ?Name .
+
+
+}
+LIMIT 10
+
+"
+137,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT *
+WHERE
+{
+?v a :Rafael_Nadal ;
+       foaf:name ?Name .
+
+}
+LIMIT 10
+
+"
+138,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT *
+WHERE
+{
+?v a :Rafael_Nadal .
+
+}
+
+
+"
+139,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT *
+WHERE
+{
+?v a dbo:Rafael_Nadal .
+
+}
+
+
+"
+140,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT *
+WHERE
+{
+?v a foaf:Rafael_Nadal .
+
+}
+
+
+"
+141,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT *
+WHERE
+{
+?v a dbpedia2:Rafael_Nadal .
+
+}
+
+
+"
+142,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT *
+WHERE
+{
+:Rafael_Nadal ?p.
+
+}
+
+
+"
+143,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT *
+WHERE
+{
+:Rafael_Nadal ?p
+
+}
+
+
+"
+144,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT *
+WHERE
+{
+:Rafael_Nadal ?p ?o
+
+}
+
+
+"
+145,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT *
+WHERE
+{
+dbo:Rafael_Nadal ?p ?o
+
+}
+
+
+"
+146,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT *
+WHERE
+{
+?rafa dbo:Rafael_Nadal .
+
+}
+
+
+"
+147,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT *
+WHERE
+{
+?rafa dbo:Rafael_Nadal :Rafael_Nadal .
+
+}
+
+
+"
+148,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT *
+WHERE
+{
+?rafa dbo:TennisPlayer :Rafael_Nadal .
+
+}
+
+
+"
+149,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT *
+WHERE
+{
+?rafa  a dbo:Rafael_Nadal .
+
+}
+
+
+"
+150,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT *
+WHERE
+{
+?rafa  a dbo:Rafael_Nadal 
+
+}
+
+
+"
+151,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT *
+WHERE
+{
+?rafa a dbo:Rafael_Nadal ;
+       foaf:?name .
+
+}
+
+
+"
+152,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT *
+WHERE
+{
+?rafa a dbo:Rafael_Nadal ;
+       foaf:?name .
+
+}
+
+
+"
+153,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT *
+WHERE
+{
+?rafa a dbo:Rafael_Nadal ;
+       foaf:name ?Name .
+
+}
+
+
+"
+154,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?Desc
+WHERE
+{
+?rafa a dbo:Rafael_Nadal ;
+       dbo:abstract ?Desc .
+}
+
+
+"
+155,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+SELECT * WHERE
+{ 
+  <http://dbpedia.org/resource/David_Beckham> ?p ?o .
+  FILTER(?p != rdf:type && ?p != rdfs:comment && ?p != rdfs:label)
+}
+
+"
+156,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rafa: <http://dbpedia.org/resource/Rafael_Nadal> 
+
+SELECT DISTINCT ?Name, ?BirthDate
+WHERE
+{
+?tennisPlayer a rafa:TennisPlayer ;
+       foaf:name ?Name ;
+       dbo:birthDate ?BirthDate .
+FILTER (langMatches(lang(?Name), ""en"")) .
+
+}"
+157,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rafa: <http://dbpedia.org/resource/Rafael_Nadal> 
+
+SELECT ?Name, ?BirthDate
+WHERE
+{
+ rafa ?p ?o
+
+}"
+158,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rafa: <http://dbpedia.org/resource/Rafael_Nadal> 
+
+SELECT *
+WHERE
+{
+ rafa ?p ?o
+
+}"
+159,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rafa: <http://dbpedia.org/resource/Rafael_Nadal> 
+
+SELECT *
+WHERE
+{
+ rafa ?p ?o .
+
+}"
+160,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rafa: <http://dbpedia.org/resource/Rafael_Nadal> 
+
+SELECT *
+WHERE
+{
+ rafa ?p ?o .
+
+}"
+161,"PREFIX : <http://dbpedia.org/resource/>
+
+SELECT *
+WHERE
+{
+ ?rafa a :Rafael_Nadal .
+
+}"
+162,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT *
+WHERE
+{
+ ?rafa a :Rafael_Nadal .
+       foaf:name ?Name ;
+       dbo:birthDate ?BirthDate .
+FILTER (langMatches(lang(?Name), ""en"")) .
+}
+"
+163,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT *
+WHERE
+{
+ ?rafa a :Rafael_Nadal ;
+       foaf:name ?Name ;
+       dbo:birthDate ?BirthDate .
+FILTER (langMatches(lang(?Name), ""en"")) .
+}
+"
+164,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT *
+WHERE
+{
+ ?rafa a dbo:Rafael_Nadal ;
+       foaf:name ?Name ;
+       dbo:birthDate ?BirthDate .
+FILTER (langMatches(lang(?Name), ""en"")) .
+}
+"
+165,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?Name
+WHERE
+{
+ ?rafa a dbo:Rafael_Nadal ;
+       foaf:name ?Name ;
+       dbo:birthDate ?BirthDate .
+FILTER (langMatches(lang(?Name), ""en"")) .
+}
+"
+166,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?Name
+WHERE
+{
+ ?rafa a <http://dbpedia.org/resource/David_Beckham> ;
+       foaf:name ?Name ;
+       dbo:birthDate ?BirthDate .
+
+}
+"
+167,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT *
+WHERE
+{
+ ?rafa a <http://dbpedia.org/resource/David_Beckham> .
+
+}
+"
+168,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT *
+WHERE
+{
+ ?rafa a <http://dbpedia.org/resource/David_Beckham> ;
+  foaf:name ?Name .
+
+}
+"
+169,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT *
+WHERE
+{
+<http://dbpedia.org/resource/David_Beckham> 
+  foaf:name ?Name .
+
+}
+"
+170,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX : <http://dbpedia.org/resource/> 
+
+
+SELECT *
+WHERE
+{
+:Rafael_Nadal
+  foaf:name ?Name .
+
+}
+"
+171,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX : <http://dbpedia.org/resource/> 
+
+
+SELECT *
+WHERE
+{
+:Rafael_Nadal
+  foaf:name ?Name ;
+  dbo:abstract ?Desc .
+
+  
+
+}
+"
+172,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX : <http://dbpedia.org/resource/> 
+
+
+SELECT *
+WHERE
+{
+:Rafael_Nadal
+  dbo:abstract ?Desc .
+
+FILTER (langMatches(lang(?Desc), ""es"")) .
+  
+
+}
+"
+173,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX : <http://dbpedia.org/resource/> 
+
+
+SELECT ?Description
+WHERE {
+  :Rafael_Nadal dbo:abstract ?Description .
+  FILTER (langMatches(lang(?Description), ""es"")) .
+}
+"
+174,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX : <http://dbpedia.org/resource/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+
+
+SELECT ?Description
+WHERE {
+  yago:RiversOfGalicia dbo:abstract ?Description .
+  FILTER (langMatches(lang(?Description), ""es"")) .
+}
+"
+175,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?riverName ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?riverLength .
+}"
+176,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?riverName ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?riverLength .
+ FILTER (langMatches(lang(?Description), ""en"")) .
+}"
+177,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?riverName ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?riverLength .
+ FILTER (langMatches(lang(?riverName), ""en"")) .
+}"
+178,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?riverName ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?riverLength .
+ FILTER (langMatches(lang(?riverName), ""es"")) .
+}"
+179,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?riverName ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?riverLength .
+ FILTER (langMatches(lang(?riverName), ""gl"")) .
+}"
+180,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?riverName ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?riverLength .
+ FILTER (langMatches(lang(?riverName), ""es"")) .
+}"
+181,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?riverName ?riverLength
+WHERE {
+  ?river a :Sil_(river) ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?riverLength .
+ FILTER (langMatches(lang(?riverName), ""es"")) .
+}"
+182,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?riverName
+WHERE {
+  ?river a :Sil_(river) ;
+        rdfs:label ?riverName .
+}"
+183,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?riverName
+WHERE {
+  ?river  :Sil_(river) ;
+        rdfs:label ?riverName .
+}"
+184,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT ?riverName
+WHERE {
+ :Sil_(river) ;
+        rdfs:label ?riverName .
+}"
+185,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT *
+WHERE {
+ :Sil_(river) ."
+186,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+SELECT *
+WHERE {
+ :Sil_(river) .
+}"
+187,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ""Río_Sil"" ;
+        dbpedia2:length ?riverLength .
+ FILTER (langMatches(lang(?riverName), ""es"")) ."
+188,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+    ?riverName    rdfs:label  ""Río_Sil"" ;
+        dbpedia2:length ?riverLength .
+ FILTER (langMatches(lang(?riverName), ""es"")) ."
+189,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+    ?riverName    rdfs:label  ""Río_Sil"" ;
+        dbpedia2:length ?riverLength .
+ FILTER (langMatches(lang(?riverName), ""es"")) ."
+190,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?riverLength .
+ FILTER (langMatches(lang(?riverName), ""es"")) .
+}"
+191,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?riverLength .
+ FILTER (langMatches(lang(?riverName), ""es"")) .
+FILTER (?riverName = Río Sil) .
+}"
+192,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?riverLength .
+ FILTER (langMatches(lang(?riverName), ""es"")) .
+FILTER (?riverName = Río_Sil) .
+}"
+193,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?riverLength .
+ FILTER (langMatches(lang(?riverName), ""es"")) .
+FILTER (?riverName = Sil_(river)) .
+}"
+194,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?riverLength .
+ FILTER (langMatches(lang(?riverName), ""es"")) .
+FILTER (?riverName = str(Sil_(river))) .
+}"
+195,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?riverLength .
+ FILTER (langMatches(lang(?riverName), ""es"")) .
+FILTER (?riverName = str(Río Sil)) .
+}"
+196,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName .
+}"
+197,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName .
+}"
+198,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName .
+FILTER (langMatches(lang(?riverName), ""en"")) .
+}"
+199,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName .
+FILTER (langMatches(lang(?riverName), ""en"")) .
+FILTER (CONTAINS(?riverName, ""Sil_(river)""@en)) .
+}"
+200,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName .
+FILTER (CONTAINS(?riverName, ""Sil_(river)""@en)) .
+}"
+201,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName .
+#FILTER (CONTAINS(?riverName, ""Sil_(river)""@en)) .
+}"
+202,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName .
+FILTER (CONTAINS(?riverName, ""Sil (river)""@en)) .
+}"
+203,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ""Sil (river)"".
+
+}"
+204,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ""Sil (river)"" .
+
+}"
+205,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ""Sil_(river)"" .
+
+}"
+206,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ""Sil_(river)"" .
+
+}"
+207,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName .
+
+}"
+208,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName .
+FILTER (langMatches(lang(?riverName), ""es"")) .
+
+}"
+209,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName .
+FILTER (langMatches(lang(?riverName), ""es"")) .
+FILTER regex(str(?riverName), ""Sil$"") }
+
+}"
+210,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName .
+FILTER (langMatches(lang(?riverName), ""es"")) .
+FILTER regex(str(?riverName), ""Sil"") }
+
+}"
+211,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName .
+FILTER (langMatches(lang(?riverName), ""es"")) .
+FILTER regex(str(?riverName), ""Sil"") .
+
+}"
+212,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName .
+FILTER (langMatches(lang(?riverName), ""es"")) .
+FILTER regex(str(?riverName), ""Sil"") .
+FILTER regex(str(?riverName), ""Miño"") .
+
+}"
+213,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName .
+FILTER (langMatches(lang(?riverName), ""es"")) .
+#FILTER regex(str(?riverName), ""Sil"") .
+FILTER regex(str(?riverName), ""Miño"") .
+
+}"
+214,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?silLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?silLength .
+FILTER (langMatches(lang(?riverName), ""es"")) .
+FILTER regex(str(?riverName), ""Sil"") .
+
+FILTER regex(str(?riverName), ""Miño"") .
+
+}"
+215,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?silLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?silLength .
+FILTER (langMatches(lang(?riverName), ""es"")) .
+FILTER regex(str(?riverName), ""Sil"") .
+
+#FILTER regex(str(?riverName), ""Miño"") .
+
+}"
+216,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?silLength ?miLength
+WHERE {
+  ?riverSil a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?silLength .
+FILTER (langMatches(lang(?riverName), ""es"")) .
+FILTER regex(str(?riverName), ""Sil"") .
+
+  ?riverMi a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?miLength .
+FILTER (langMatches(lang(?riverName), ""es"")) .
+FILTER regex(str(?riverName), ""Miño"") .
+
+}"
+217,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?silLength ?miLength
+WHERE {
+
+
+  ?riverMi a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?miLength .
+FILTER (langMatches(lang(?riverName), ""es"")) .
+FILTER regex(str(?riverName), ""Miño"") .
+
+}"
+218,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?miLength
+WHERE {
+
+
+  ?riverMi a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?miLength .
+FILTER (langMatches(lang(?riverName), ""es"")) .
+FILTER regex(str(?riverName), ""Miño"") .
+
+}"
+219,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?miLength
+WHERE {
+  ?riverMi a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?miLength .
+FILTER (langMatches(lang(?riverName), ""es"")) .
+FILTER regex(str(?riverName), ""Miño"") .
+
+
+
+}"
+220,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?miLength   ?silName
+WHERE {
+  ?riverMi a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?miLength .
+FILTER (langMatches(lang(?riverName), ""es"")) .
+FILTER regex(str(?riverName), ""Miño"") .
+
+  ?riverSil a yago:RiversOfGalicia ;
+        rdfs:label ?silName ;
+        dbpedia2:length ?miLength .
+FILTER (langMatches(lang(?riverName), ""es"")) .
+FILTER regex(str(?riverName), ""Sil"") .
+
+
+}"
+221,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?miLength
+WHERE {
+  ?riverMi a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?miLength .
+FILTER (langMatches(lang(?riverName), ""es"")) .
+FILTER regex(str(?riverName), ""Miño"" || ""Sil"") .
+
+
+
+}"
+222,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?riverName
+WHERE {
+  ?riverMi a yago:RiversOfGalicia ;
+        rdfs:label ?riverName ;
+        dbpedia2:length ?miLength .
+FILTER (langMatches(lang(?riverName), ""es"")) .
+FILTER regex(str(?riverName), ""Miño"" || ""Sil"") .
+
+
+
+}"
+223,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?riverName
+WHERE {
+  ?riverMi a yago:RiversOfGalicia ;
+        rdfs:label ?riverName .
+FILTER (langMatches(lang(?riverName), ""es"")) .
+FILTER regex(str(?riverName), ""Miño"" || ""Sil"") .
+
+
+
+}"
+224,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?riverName
+WHERE {
+  ?riverMi a yago:RiversOfGalicia ;
+        rdfs:label ?riverName .
+FILTER (langMatches(lang(?riverName), ""es"")) .
+
+
+
+}"
+225,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?riverName
+WHERE {
+  ?riverMi a yago:RiversOfGalicia ;
+        rdfs:label ?riverName .
+FILTER (langMatches(lang(?riverName), ""es"" || ""en"")) .
+
+
+
+}"
+226,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+
+SELECT  ?riverName
+WHERE {
+:Sil (river) dbo:abstract ?Description .
+  FILTER (langMatches(lang(?Description), ""es"")) .
+}"
+227,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+
+SELECT  ?Description
+WHERE {
+:Sil (river) dbo:abstract ?Description .
+  FILTER (langMatches(lang(?Description), ""es"")) .
+}"
+228,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+
+SELECT  ?Description
+WHERE {
+:""Sil (river)"" dbo:abstract ?Description .
+  FILTER (langMatches(lang(?Description), ""es"")) .
+}"
+229,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+
+SELECT  ?Description
+WHERE {
+:Sil_(river) dbo:abstract ?Description .
+  FILTER (langMatches(lang(?Description), ""es"")) .
+}"
+230,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+
+SELECT  ?Description
+WHERE {
+:Sil_(river) dbo:abstract ?Description .
+  FILTER (langMatches(lang(?Description), ""es"")) .
+}"
+231,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT ?riverName ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ""Sil"" ;
+        dbpedia2:length ?riverLength .
+ FILTER (langMatches(lang(?riverName), ""es"")) .
+ FILTER () .
+}"
+232,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ""Sil"" ;
+        dbpedia2:length ?riverLength .
+
+}"
+233,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  *
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ""Sil"" ;
+        dbpedia2:length ?riverLength .
+
+}"
+234,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  *
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ""Sil"" .
+
+}"
+235,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?name
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?name .
+
+}"
+236,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?name
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?name .
+FILTER (langMatches(lang(?name), ""es"")) .
+}"
+237,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?name
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?name .
+FILTER (langMatches(lang(?name), ""es"")) .
+FILTER regex(str(?name), ""Sil"") }
+}"
+238,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?name
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?name .
+FILTER (langMatches(lang(?name), ""es"")) .
+FILTER regex(str(?name), ""Sil"") .
+}"
+239,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?name
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?name .
+#FILTER (langMatches(lang(?name), ""es"")) .
+FILTER regex(str(?name), ""Sil"") .
+}"
+240,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?name ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?name ;
+        dbpedia2:length ?riverLength .
+FILTER (langMatches(lang(?name), ""es"")) .
+FILTER regex(str(?name), ""Sil"") .
+}"
+241,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?name ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?name ;
+        dbpedia2:length ?riverLength .
+FILTER (langMatches(lang(?name), ""es"")) .
+FILTER regex(str(?name), ""Sil"") .
+FILTER regex(str(?name), ""Min"") .
+}"
+242,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?name ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?name ;
+        dbpedia2:length ?riverLength .
+FILTER (langMatches(lang(?name), ""es"")) .
+FILTER regex(str(?name), ""Sil"") .
+OR
+FILTER regex(str(?name), ""Min"") .
+}"
+243,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?name ?riverLength
+WHERE {
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?name ;
+        dbpedia2:length ?riverLength .
+FILTER (langMatches(lang(?name), ""es"")) .
+OPTIONAL (FILTER regex(str(?name), ""Sil"") ) .
+}"
+244,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?silRiver ?minRiver
+WHERE {
+{
+ SELECT ?silRiver WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?silRiver ;
+        dbpedia2:length ?riverLength .
+  FILTER (langMatches(lang(?silRiver), ""es"")) .
+  FILTER regex(str(?silRiver), ""Sil"")  .
+ }
+}
+
+{
+ SELECT ?minRiver WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?minRiver ;
+        dbpedia2:length ?riverLength .
+  FILTER (langMatches(lang(?minRiver), ""es"")) .
+  FILTER regex(str(?minRiver), ""Miño"")  .
+ }
+}
+  
+
+}"
+245,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?riverSilLength ?riverMinoLength
+WHERE {
+{
+ SELECT ?riverSilLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?silRiver ;
+        dbpedia2:length ?riverSilLength .
+  FILTER (langMatches(lang(?silRiver), ""es"")) .
+  FILTER regex(str(?silRiver), ""Sil"")  .
+ }
+}
+
+{
+ SELECT ?riverMinoLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?minRiver ;
+        dbpedia2:length ?riverMinoLength .
+  FILTER (langMatches(lang(?minRiver), ""es"")) .
+  FILTER regex(str(?minRiver), ""Miño"")  .
+ }
+}
+  
+
+}"
+246,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  AVG(?riverSilLength, ?riverMinoLength) AS AVERAGE
+WHERE {
+{
+ SELECT ?riverSilLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?silRiver ;
+        dbpedia2:length ?riverSilLength .
+  FILTER (langMatches(lang(?silRiver), ""es"")) .
+  FILTER regex(str(?silRiver), ""Sil"")  .
+ }
+}
+
+{
+ SELECT ?riverMinoLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?minRiver ;
+        dbpedia2:length ?riverMinoLength .
+  FILTER (langMatches(lang(?minRiver), ""es"")) .
+  FILTER regex(str(?minRiver), ""Miño"")  .
+ }
+}
+  
+
+}"
+247,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  AVG(?riverSilLength ?riverMinoLength) AS AVERAGE
+WHERE {
+{
+ SELECT ?riverSilLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?silRiver ;
+        dbpedia2:length ?riverSilLength .
+  FILTER (langMatches(lang(?silRiver), ""es"")) .
+  FILTER regex(str(?silRiver), ""Sil"")  .
+ }
+}
+
+{
+ SELECT ?riverMinoLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?minRiver ;
+        dbpedia2:length ?riverMinoLength .
+  FILTER (langMatches(lang(?minRiver), ""es"")) .
+  FILTER regex(str(?minRiver), ""Miño"")  .
+ }
+}
+  
+
+}"
+248,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  AVG(?riverSilLength  ?riverMinoLength) AS AVERAGE
+WHERE {
+{
+ SELECT ?riverSilLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?silRiver ;
+        dbpedia2:length ?riverSilLength .
+  FILTER (langMatches(lang(?silRiver), ""es"")) .
+  FILTER regex(str(?silRiver), ""Sil"")  .
+ }
+}
+
+{
+ SELECT ?riverMinoLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?minRiver ;
+        dbpedia2:length ?riverMinoLength .
+  FILTER (langMatches(lang(?minRiver), ""es"")) .
+  FILTER regex(str(?minRiver), ""Miño"")  .
+ }
+}
+  
+
+}"
+249,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  AVG(?riverSilLength,?riverMinoLength)
+WHERE {
+{
+ SELECT ?riverSilLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?silRiver ;
+        dbpedia2:length ?riverSilLength .
+  FILTER (langMatches(lang(?silRiver), ""es"")) .
+  FILTER regex(str(?silRiver), ""Sil"")  .
+ }
+}
+
+{
+ SELECT ?riverMinoLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?minRiver ;
+        dbpedia2:length ?riverMinoLength .
+  FILTER (langMatches(lang(?minRiver), ""es"")) .
+  FILTER regex(str(?minRiver), ""Miño"")  .
+ }
+}
+  
+
+}"
+250,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  AVG(?riverSilLength ?riverMinoLength)
+WHERE {
+{
+ SELECT ?riverSilLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?silRiver ;
+        dbpedia2:length ?riverSilLength .
+  FILTER (langMatches(lang(?silRiver), ""es"")) .
+  FILTER regex(str(?silRiver), ""Sil"")  .
+ }
+}
+
+{
+ SELECT ?riverMinoLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?minRiver ;
+        dbpedia2:length ?riverMinoLength .
+  FILTER (langMatches(lang(?minRiver), ""es"")) .
+  FILTER regex(str(?minRiver), ""Miño"")  .
+ }
+}
+  
+
+}"
+251,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  AVG(?riverMinoLength)
+WHERE {
+{
+ SELECT ?riverSilLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?silRiver ;
+        dbpedia2:length ?riverSilLength .
+  FILTER (langMatches(lang(?silRiver), ""es"")) .
+  FILTER regex(str(?silRiver), ""Sil"")  .
+ }
+}
+
+{
+ SELECT ?riverMinoLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?minRiver ;
+        dbpedia2:length ?riverMinoLength .
+  FILTER (langMatches(lang(?minRiver), ""es"")) .
+  FILTER regex(str(?minRiver), ""Miño"")  .
+ }
+}
+  
+
+}"
+252,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?riverMinoLength ?riverSilLength
+WHERE {
+{
+ SELECT ?riverSilLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?silRiver ;
+        dbpedia2:length ?riverSilLength .
+  FILTER (langMatches(lang(?silRiver), ""es"")) .
+  FILTER regex(str(?silRiver), ""Sil"")  .
+ }
+}
+
+{
+ SELECT ?riverMinoLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?minRiver ;
+        dbpedia2:length ?riverMinoLength .
+  FILTER (langMatches(lang(?minRiver), ""es"")) .
+  FILTER regex(str(?minRiver), ""Miño"")  .
+ }
+}
+  
+
+}"
+253,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  (?riverMinoLength ?riverSilLength)/2
+WHERE {
+{
+ SELECT ?riverSilLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?silRiver ;
+        dbpedia2:length ?riverSilLength .
+  FILTER (langMatches(lang(?silRiver), ""es"")) .
+  FILTER regex(str(?silRiver), ""Sil"")  .
+ }
+}
+
+{
+ SELECT ?riverMinoLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?minRiver ;
+        dbpedia2:length ?riverMinoLength .
+  FILTER (langMatches(lang(?minRiver), ""es"")) .
+  FILTER regex(str(?minRiver), ""Miño"")  .
+ }
+}
+  
+
+}"
+254,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ((?riverMinoLength ?riverSilLength)/2) AS Average
+WHERE {
+{
+ SELECT ?riverSilLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?silRiver ;
+        dbpedia2:length ?riverSilLength .
+  FILTER (langMatches(lang(?silRiver), ""es"")) .
+  FILTER regex(str(?silRiver), ""Sil"")  .
+ }
+}
+
+{
+ SELECT ?riverMinoLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?minRiver ;
+        dbpedia2:length ?riverMinoLength .
+  FILTER (langMatches(lang(?minRiver), ""es"")) .
+  FILTER regex(str(?minRiver), ""Miño"")  .
+ }
+}
+  
+
+}"
+255,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  (?riverMinoLength ?riverSilLength)/2
+WHERE {
+{
+ SELECT ?riverSilLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?silRiver ;
+        dbpedia2:length ?riverSilLength .
+  FILTER (langMatches(lang(?silRiver), ""es"")) .
+  FILTER regex(str(?silRiver), ""Sil"")  .
+ }
+}
+
+{
+ SELECT ?riverMinoLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?minRiver ;
+        dbpedia2:length ?riverMinoLength .
+  FILTER (langMatches(lang(?minRiver), ""es"")) .
+  FILTER regex(str(?minRiver), ""Miño"")  .
+ }
+}
+  
+
+}"
+256,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  (?riverMinoLength ?riverSilLength)/2
+WHERE {
+{
+ SELECT ?riverSilLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?silRiver ;
+        dbpedia2:length ?riverSilLength .
+  FILTER (langMatches(lang(?silRiver), ""es"")) .
+  FILTER regex(str(?silRiver), ""Sil"")  .
+ }
+}
+
+{
+ SELECT ?riverMinoLength WHERE { 
+  ?river a yago:RiversOfGalicia ;
+        rdfs:label ?minRiver ;
+        dbpedia2:length ?riverMinoLength .
+  FILTER (langMatches(lang(?minRiver), ""es"")) .
+  FILTER regex(str(?minRiver), ""Miño"")  .
+ }
+}
+}"
+257,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?person
+WHERE 
+{
+ ?person a dbo:Person .
+}"
+258,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?person
+WHERE 
+{
+ ?person a dbo:Person .
+}
+
+LIMIT 20"
+259,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?person
+WHERE 
+{
+ ?person a dbo:Person ;
+  dbo:birthPlace ?BirthPlace ;
+
+
+FILTER (langMatches(lang(?BirthPlace), ""en"")) .
+
+}
+
+LIMIT 20"
+260,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?person
+WHERE 
+{
+ ?person a dbo:Person ;
+  dbo:birthPlace ?BirthPlace .
+
+
+FILTER (langMatches(lang(?BirthPlace), ""en"")) .
+
+}
+
+LIMIT 20"
+261,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?BirthPlace
+WHERE 
+{
+ ?person a dbo:Person ;
+  dbo:birthPlace ?BirthPlace .
+
+FILTER (langMatches(lang(?BirthPlace), ""en"")) .
+
+}
+
+LIMIT 20"
+262,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  ?BirthPlace
+WHERE 
+{
+ ?person a dbo:Person ;
+  dbo:birthPlace ?BirthPlace .
+
+#FILTER (langMatches(lang(?BirthPlace), ""en"")) .
+
+}
+
+LIMIT 20"
+263,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT  *
+WHERE 
+{
+ ?person a dbo:Person ?p ;
+  dbo:birthPlace ?BirthPlace .
+
+#FILTER (langMatches(lang(?BirthPlace), ""en"")) .
+
+}
+
+LIMIT 20"
+264,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT DISTINCT *
+WHERE
+{
+?person a dbo:Person .
+}
+LIMIT 20
+"
+265,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT DISTINCT ?person
+WHERE
+{
+ ?person dbpedia-owl:birthPlace dbpedia:New_York
+
+}
+LIMIT 20
+"
+266,"SELECT DISTINCT ?s ?date
+
+WHERE
+  {
+    ?s ?p ?date . FILTER( ?date >= xsd:date(""1945-01-01"") && ?date < xsd:date(""1946-01-01"") && (str(?p) != str(rdfs:label)) )
+  }
+LIMIT 10"
+267,"SELECT ?s ?date 
+FROM <http://dbpedia.org> 
+WHERE 
+  { 
+    ?s ?p ?date . FILTER ( ?date >= ""19450101""^^xsd:date && ?date <= ""19451231""^^xsd:date )  
+  } 
+LIMIT 100"
+268,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT DISTINCT ?person
+WHERE
+{
+ ?person dbpedia-owl:birthPlace dbpedia:New_York ;
+  dbo:birthDate ?BirthDate ;
+  FILTER ( ?BirthDate >= ""19300101""^^xsd:date && ?BirthDate <= ""19391231""^^xsd:date )
+
+}
+LIMIT 20
+"
+269,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT DISTINCT ?person
+WHERE
+{
+ ?person dbpedia-owl:birthPlace dbpedia:New_York ;
+  dbo:birthDate ?BirthDate .
+  FILTER ( ?BirthDate >= ""19300101""^^xsd:date && ?BirthDate <= ""19391231""^^xsd:date )
+
+}
+LIMIT 20
+"
+270,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT DISTINCT ?person ?BirthDate
+WHERE
+{
+ ?person dbpedia-owl:birthPlace dbpedia:New_York ;
+  dbo:birthDate ?BirthDate .
+  FILTER ( ?BirthDate >= ""19300101""^^xsd:date && ?BirthDate <= ""19391231""^^xsd:date )
+
+}
+LIMIT 20
+"
+271,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT DISTINCT ?person ?BirthDate ?DeathDate
+WHERE
+{
+ ?person dbpedia-owl:birthPlace dbpedia:New_York ;
+  dbo:birthDate ?BirthDate ;
+  dbo:deathDate ?DeathDate . 
+  FILTER ( ?BirthDate >= ""19300101""^^xsd:date && ?BirthDate <= ""19391231""^^xsd:date )
+
+}
+LIMIT 20
+"
+272,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+
+SELECT DISTINCT ?person ?BirthDate ?DeathDate
+WHERE
+{
+ ?person dbpedia-owl:birthPlace dbpedia:New_York ;
+  dbo:birthDate ?BirthDate ;
+  dbo:deathDate ?DeathDate . 
+  FILTER ( ?BirthDate >= ""19300101""^^xsd:date && ?BirthDate <= ""19391231""^^xsd:date )
+
+}
+ORDER BY ?person
+LIMIT 20
+"
+273,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+SELECT DISTINCT ?person ?BirthDate ?DeathDate
+WHERE
+{
+ ?person dbpedia-owl:birthPlace dbpedia:New_York ;
+  dbo:birthDate ?BirthDate ;
+  dbo:deathDate ?DeathDate . 
+  FILTER ( ?BirthDate >= ""19300101""^^xsd:date && ?BirthDate <= ""19391231""^^xsd:date )
+
+}
+ORDER BY ?person
+LIMIT 20
+"
+274,"
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+SELECT DISTINCT ?person ?BirthDate ?DeathDate
+WHERE
+{
+ ?person dbpedia-owl:birthPlace dbpedia:New_York ;
+  dbo:birthDate ?BirthDate ;
+  dbo:deathDate ?DeathDate . 
+  FILTER ( ?BirthDate >= ""19300101""^^xsd:date && ?BirthDate <= ""19391231""^^xsd:date )
+
+}
+ORDER BY ?person
+LIMIT 20
+"
+275,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?person ?BirthDate ?DeathDate
+WHERE
+{
+ ?person dbpedia-owl:birthPlace dbpedia:New_York ;
+  dbo:birthDate ?BirthDate ;
+  dbo:deathDate ?DeathDate . 
+  FILTER ( ?BirthDate >= ""19300101""^^xsd:date && ?BirthDate <= ""19391231""^^xsd:date )
+
+}
+ORDER BY ?person
+LIMIT 20
+"
+276,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?person ?BirthDate ?DeathDate
+WHERE
+{
+ ?person dbpedia-owl:birthPlace dbpedia:New_York ;
+  dbo:birthDate ?BirthDate ;
+  dbo:deathDate ?DeathDate . 
+  FILTER ( ?BirthDate >= ""19300101""^^xsd:date && ?BirthDate <= ""19391231""^^xsd:date )
+  FILTER ( regex(str(?name), ""z"")) ) .
+}
+ORDER BY ?person
+LIMIT 20
+"
+277,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?person ?BirthDate ?DeathDate
+WHERE
+{
+ ?person dbpedia-owl:birthPlace dbpedia:New_York ;
+  dbo:birthDate ?BirthDate ;
+  dbo:deathDate ?DeathDate ;
+  foaf:name ?name . 
+  FILTER ( ?BirthDate >= ""19300101""^^xsd:date && ?BirthDate <= ""19391231""^^xsd:date )
+  FILTER ( regex(str(?name), ""z"")) ) .
+}
+ORDER BY ?person
+LIMIT 20
+"
+278,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?person ?BirthDate ?DeathDate
+WHERE
+{
+ ?person dbpedia-owl:birthPlace dbpedia:New_York ;
+  dbo:birthDate ?BirthDate ;
+  dbo:deathDate ?DeathDate ;
+  foaf:name ?name . 
+  FILTER ( ?BirthDate >= ""19300101""^^xsd:date && ?BirthDate <= ""19391231""^^xsd:date )
+  FILTER ( regex(str(?name), ""z"") ) .
+}
+ORDER BY ?person
+LIMIT 20
+"
+279,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT *
+WHERE
+{
+ ?person foaf:name  dbpedia:Paris;
+
+}
+
+LIMIT 20
+"
+280,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT *
+WHERE
+{
+ ?person foaf:name  dbpedia:Paris .
+
+}
+
+LIMIT 20
+"
+281,"PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+SELECT  ?lat ?long WHERE {
+  <http://dbpedia.org/resource/Eiffel_Tower>
+  ?subject geo:lat ?lat .
+  ?subject geo:long ?long .
+}"
+282,"PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+SELECT  ?lat ?long WHERE {
+  <http://dbpedia.org/resource/Eiffel_Tower> ;
+  ?subject geo:lat ?lat .
+  ?subject geo:long ?long .
+}"
+283,"SELECT ?lat ?long WHERE {  
+?subject owl:sameAs <http://dbpedia.org/resource/Paris> .
+<http://dbpedia.org/resource/Paris> geo:lat ?lat .
+<http://dbpedia.org/resource/Paris> geo:long ?long .
+<http://dbpedia.org/resource/Eiffel_Tower> rdfs:label ?label . 
+}"
+284,"SELECT ?lat ?long WHERE {  
+?subject dbpprop:location <http://dbpedia.org/resource/Paris> .
+<http://dbpedia.org/resource/Paris> geo:lat ?lat .
+<http://dbpedia.org/resource/Paris> geo:long ?long .
+<http://dbpedia.org/resource/Eiffel_Tower> rdfs:label ?label . 
+}"
+285,"SELECT DISTINCT ?lat ?long WHERE {  
+?subject dbpprop:location <http://dbpedia.org/resource/Paris> .
+<http://dbpedia.org/resource/Paris> geo:lat ?lat .
+<http://dbpedia.org/resource/Paris> geo:long ?long .
+<http://dbpedia.org/resource/Eiffel_Tower> rdfs:label ?label . 
+}"
+286,"SELECT DISTINCT ?lat ?long WHERE {  
+?subject dbpprop:name <http://dbpedia.org/resource/Paris> .
+<http://dbpedia.org/resource/Paris> geo:lat ?lat .
+<http://dbpedia.org/resource/Paris> geo:long ?long .
+<http://dbpedia.org/resource/Eiffel_Tower> rdfs:label ?label . 
+}"
+287,"SELECT DISTINCT ?lat ?long WHERE {  
+?subject dbpprop:name ""Paris"" .
+<http://dbpedia.org/resource/Paris> geo:lat ?lat .
+<http://dbpedia.org/resource/Paris> geo:long ?long .
+<http://dbpedia.org/resource/Eiffel_Tower> rdfs:label ?label . 
+}"
+288,"SELECT DISTINCT ?lat ?long WHERE {  
+?subject dbpprop:name ""Paris"" ;
+  geo:lat ?lat ;
+  geo:long ?long .
+}"
+289,"SELECT DISTINCT ?lat ?long WHERE {  
+?subject owl:sameAs ""Paris"" ;
+  geo:lat ?lat ;
+  geo:long ?long .
+}"
+290,"SELECT DISTINCT ?lat ?long WHERE {  
+?subject owl:sameAs <http://dbpedia.org/resource/Paris> ;
+  geo:lat ?lat ;
+  geo:long ?long .
+}"
+291,"SELECT  ?lat ?long WHERE {  
+?subject owl:sameAs <http://dbpedia.org/resource/Paris> ;
+  geo:lat ?lat ;
+  geo:long ?long .
+}"
+292,"SELECT ?lat ?long WHERE {  
+?subject owl:sameAs <http://dbpedia.org/resource/Paris> ;
+  geo:lat ?lat ;
+  geo:long ?long .
+}"
+293,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?Name, ?BirthDate
+WHERE
+{
+
+?tennisPlayer a dbo:TennisPlayer ;
+       dbpedia-owl:birthPlace dbpedia:Spain ;
+       foaf:name ?Name ;
+       dbo:birthDate ?BirthDate .
+FILTER (langMatches(lang(?Name), ""es"")) .
+
+}
+LIMIT 10"
+294,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?Name, ?BirthDate
+WHERE
+{
+
+?tennisPlayer a dbo:TennisPlayer ;
+       dbpedia-owl:birthPlace dbpedia:Spain ;
+       foaf:name ?Name ;
+       dbo:birthDate ?BirthDate .
+#FILTER (langMatches(lang(?Name), ""es"")) .
+
+}
+LIMIT 10"
+295,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?tennisPlayer
+WHERE
+{
+
+?tennisPlayer a dbo:TennisPlayer ;
+       dbpedia-owl:birthPlace dbpedia:Spain .
+#FILTER (langMatches(lang(?Name), ""es"")) .
+
+}
+LIMIT 10"
+296,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?tennisPlayer
+WHERE
+{
+{
+SELECT ?tennisPlayer WHERE
+{
+?tennisPlayer a dbo:TennisPlayer ;
+       dbpedia-owl:birthPlace dbpedia:Spain .
+#FILTER (langMatches(lang(?Name), ""es"")) .
+}
+}
+}
+LIMIT 10"
+297,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?tennisPlayer
+WHERE
+{
+{
+ SELECT ?tennisPlayer WHERE
+ {
+ ?tennisPlayer a dbo:TennisPlayer ;
+       dbpedia-owl:birthPlace dbpedia:Spain .
+ FILTER (langMatches(lang(?Name), ""es"")) .
+ }
+}
+}
+LIMIT 10"
+298,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+ SELECT ?tennisPlayer WHERE {
+  ?tennisPlayer a dbo:TennisPlayer ;
+        dbpedia-owl:birthPlace dbpedia:Spain .}"
+299,"PREFIX : <http://dbpedia.org/resource/> 
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX yago: <http://dbpedia.org/class/yago/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX dbpedia2: <http://dbpedia.org/property/> 
+
+ SELECT  ?tennisPlayer WHERE 
+{
+  ?tennisPlayer a dbo:TennisPlayer ;
+        dbpedia-owl:birthPlace dbpedia:Spain . 
+}
+
+
+LIMIT 10"
+300,"PREFIX dbo: <http://dbpedia.org/ontology/> 
+
+ SELECT  ?tennisPlayer WHERE 
+{
+  ?tennisPlayer a dbo:TennisPlayer ;
+        dbpedia-owl:birthPlace dbpedia:Spain . 
+}
+
+LIMIT 10"
+301,"PREFIX dbo: <http://dbpedia.org/ontology/> 
+
+ SELECT  ?cyclist WHERE 
+{
+  ?cyclist a dbo:Cyclist  ;
+        dbpedia-owl:birthPlace dbpedia:Spain . 
+}
+
+LIMIT 10"

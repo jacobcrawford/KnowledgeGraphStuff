@@ -1,0 +1,1458 @@
+,query
+0,"PREFIX rdf: <http://www.w3.org/1999/02/22­rdf­syntax­ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+}
+LIMIT 100
+"
+1,"PREFIX rdf: <http://www.w3.org/1999/02/22­rdf­syntax­ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+}
+"
+2,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?starring
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpediaowl:
+starring ?starring.
+}
+LIMIT 100"
+3,"PREFIX rdf: <http://www.w3.org/1999/02/22­rdf­syntax­ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+}
+LIMIT 100"
+4,"SELECT ?subject WHERE { ?subject rdf:type <http://dbpedia.org/ontology/Film>. }
+"
+5,PREFIX rdf: <http://www.w3.org/1999/02/22­rdf­syntax­ns#> PREFIX dbpedia: <http://dbpedia.org/> SELECT ?subject WHERE { ?subject a <http://dbpedia.org/ontology/Film>. } LIMIT 100
+6,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+}
+LIMIT 100"
+7,"PREFIX rdf: <http://www.w3.org/1999/02/22­rdf­syntax­ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject
+WHERE {
+   ?subject a <http://dbpedia.org/ontology/Film>.
+}
+LIMIT 100"
+8,"SELECT ?subject WHERE { ?subject rdf:type <http://dbpedia.org/ontology/Film>. } LIMIT 100
+"
+9,PREFIX rdf: <http://www.w3.org/1999/02/22­rdf­syntax­ns#> PREFIX dbpedia: <http://dbpedia.org/> SELECT ?subject WHERE { ?subject a <http://dbpedia.org/ontology/Film>. } LIMIT 100
+10,"PREFIX rdf: <http://www.w3.org/1999/02/22­rdf­syntax­ns#> 
+
+  PREFIX dbpedia: <http://dbpedia.org/> 
+
+
+
+ SELECT ?subject 
+
+ WHERE { 
+
+ ?subject a <http://dbpedia.org/ontology/Film>. 
+
+ } 
+
+  LIMIT 100"
+11,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film/Tempo>.
+}
+LIMIT 100"
+12,"PREFIX rdf: <http://www.w3.org/1999/02/22­rdf­syntax­ns#>
+ PREFIX dbpedia: <http://dbpedia.org/> 
+SELECT ?subject WHERE { 
+?subject a <http://dbpedia.org/ontology/Film>. } LIMIT 100"
+13,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT ?subject, ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpediaowl:
+starring ?starring.
+?subject foaf:name ?film_name.
+FILTER(?starring = rsc:Tom_Cruise)
+}
+LIMIT 100"
+14,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject 
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+} 
+LIMIT 100"
+15,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?subject, ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpediaowl:
+starring ?starring.
+?subject foaf:name ?film_name.
+FILTER(?starring = rsc:Tom_Cruise)
+}
+LIMIT 100"
+16,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject 
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+} 
+LIMIT 100"
+17,PREFIX rdf: <http://www.w3.org/1999/02/22­rdf­syntax­ns#> PREFIX dbpedia: <http://dbpedia.org/> SELECT ?subject WHERE { ?subject a <http://dbpedia.org/ontology/Film>. } LIMIT 100
+18,PREFIX rdf: <http://www.w3.org/1999/02/22­rdf­syntax­ns#> PREFIX dbpedia: <http://dbpedia.org/> SELECT ?subject WHERE { ?subject a <http://dbpedia.org/ontology/Film>. } LIMIT 100
+19,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject
+WHERE {?subject rdf:type <http://dbpedia.org/ontology/Film>}"
+20,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?starring
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpediaowl:
+starring ?starring.
+}
+LIMIT 100"
+21,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject
+WHERE {?subject rdf:type <http://dbpedia.org/ontology/Film>}"
+22,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject ?starring
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpediaowl:
+starring ?starring.
+}
+LIMIT 100"
+23,"PREFIX rdf: <http://www.w3.org/1999/02/22­rdf­syntax­ns#>
+ PREFIX dbpedia: <http://dbpedia.org/> 
+SELECT ?subject WHERE { 
+?subject a <http://dbpedia.org/ontology/Film>. } LIMIT 100"
+24,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject ?starring
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpediaowl:
+starring ?starring.
+}
+LIMIT 100"
+25,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?starring
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+}
+LIMIT 100ntology/Film>}"
+26,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?starring
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>
+?subject dbpedia-owl:starring ?starring
+}
+LIMIT 100ntology/Film>}"
+27,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?starring
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>
+?subject dbpedia-owl:starring ?starring}
+LIMIT 100ntology/Film>}"
+28,PREFIX rdf: <http://www.w3.org/1999/02/22­rdf­syntax­ns#> PREFIX dbpedia: <http://dbpedia.org/> SELECT ?subject ?starring WHERE { ?subject rdf:type <http://dbpedia.org/ontology/Film>. ?subject dbpedia­owl:starring ?starring. } LIMIT 100
+29,PREFIX rdf: <http://www.w3.org/1999/02/22­rdf­syntax­ns#> PREFIX dbpedia: <http://dbpedia.org/> SELECT ?subject ?starring WHERE { ?subject rdf:type <http://dbpedia.org/ontology/Film>. ?subject dbpedia­owl:starring ?starring. } LIMIT 100
+30,"SELECT ?subject
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpediaowl:starring ?starring.
+}
+LIMIT 100"
+31,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <https://dbpedia.org/>
+SELECT ?subject ?starring
+WHERE {
+?subject rdf:type <https://dbpedia.org/ontology/Film>.
+?subject dbpediaowl:
+starring ?starring.
+}
+LIMIT 100"
+32,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?estrela
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject a <http://dbpedia.org/ontology/Film#Starring>.
+}
+LIMIT 100"
+33,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?starring
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpediaowl:
+starring ?starring.
+}
+LIMIT 100"
+34,PREFIX rdf: <http://www.w3.org/1999/02/22­rdf­syntax­ns#> PREFIX dbpedia: <http://dbpedia.org/> SELECT ?subject ?starring WHERE { ?subject rdf:type <http://dbpedia.org/ontology/Film>. ?subject dbpedia­owl:starring ?starring. } LIMIT 100
+35,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <https://dbpedia.org/>
+SELECT ?subject ?starring
+WHERE {
+?subject rdf:type <https://dbpedia.org/ontology/Film>.
+?subject dbpediaowl:
+starring ?starring.
+}
+LIMIT 100"
+36,PREFIX rdf: <http://www.w3.org/1999/02/22­rdf­syntax­ns#> PREFIX dbpedia: <http://dbpedia.org/> SELECT ?subject ?starring WHERE { ?subject rdf:type <http://dbpedia.org/ontology/Film>. ?subject dbpedia­owl:starring ?starring. } LIMIT 100
+37,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject ?starring
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+}
+LIMIT 100"
+38,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?estrela
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject a <http://dbpedia.org/ontology/Film#Starring> ?estrela
+}
+LIMIT 100"
+39,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?starring
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpediaowl:starring ?starring.
+}
+LIMIT 100"
+40,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?starring
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+}
+LIMIT 100"
+41,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?starring
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpediaowl:starring ?starring.
+}
+LIMIT 100"
+42,PREFIX rdf: <http://www.w3.org/1999/02/22­rdf­syntax­ns#> PREFIX dbpedia: <http://dbpedia.org/> SELECT ?subject ?starring WHERE { ?subject rdf:type <http://dbpedia.org/ontology/Film>. ?subject dbpedia­owl:starring ?starring. } LIMIT 100
+43,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?estrela
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?estrela a <http://dbpedia.org/ontology/Film#Starring>.
+}
+LIMIT 100"
+44,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX dbpediaowl:
+<http://dbpedia.org/ontology/>
+SELECT ?subject ?starring
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpediaowl:
+starring ?starring.
+}
+LIMIT 100"
+45,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX dbpediaowl:<http://dbpedia.org/ontology/>
+SELECT ?subject ?starring
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpediaowl:
+starring ?starring.
+}
+LIMIT 100"
+46,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject ?starring
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+}
+LIMIT 100"
+47,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX dbpediaowl:<http://dbpedia.org/ontology/>
+SELECT ?subject ?starring
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpediaowl:starring ?starring.
+}
+LIMIT 100"
+48,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject ?starring
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+}
+LIMIT 100"
+49,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject 
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>."
+50,"SELECT ?subject 
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+} "
+51,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX dbpediaowl:<http://dbpedia.org/ontology/>
+SELECT ?subject ?starring
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+
+}
+LIMIT 100"
+52,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX dbpediaowl:<http://dbpedia.org/ontology/>
+SELECT ?subject
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+
+}
+LIMIT 100"
+53,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?estrela
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpediaowl:starring ?estrela
+}
+LIMIT 100"
+54,"SELECT ?subject 
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+} LIMIT 5"
+55,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject 
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+} 
+LIMIT 100"
+56,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+
+}
+LIMIT 100"
+57,"SELECT ?subject 
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+} LIMIT 5"
+58,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+
+}
+LIMIT 100"
+59,"SELECT ?subject 
+WHERE {
+?subject d <http://dbpedia.org/ontology/Film>.
+} LIMIT 5"
+60,"SELECT ?subject 
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+} LIMIT 5"
+61,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?subject ?starring ?name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?name.
+}
+LIMIT 100"
+62,"Retornar todos os filmes e suas respectivas estrelas
+PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?starring
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpediaowl:
+starring ?starring.
+}
+LIMIT 100"
+63,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?estrela
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?estrela
+}
+LIMIT 100"
+64,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?subject, ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+
+FILTER(?starring = rsc:Tom_Cruise)
+
+}
+LIMIT 100"
+65,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX dbprop: <http://dbpedia.org/property/starring>
+SELECT ?subject ?starring
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring. 
+}
+LIMIT 100"
+66,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?estrela
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?estrela
+}
+LIMIT 100"
+67,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject ?starring
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring. 
+}
+LIMIT 100"
+68,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject ?starring
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring. 
+}
+order by (starring)
+LIMIT 100"
+69,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?estrela
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?estrela
+}
+LIMIT 100
+order by (?subject) (?estrela)"
+70,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject ?starring
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring. 
+}
+order by starring
+LIMIT 100"
+71,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?subject, ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+
+FILTER(?starring = rsc:Tom_Cruise)
+
+}
+LIMIT 100"
+72,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?estrela
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?estrela
+}
+LIMIT 100
+orderby ?subject ?estrela"
+73,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject ?starring
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring. 
+}
+LIMIT 100
+order by starring"
+74,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?estrela
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?estrela
+}
+LIMIT 100
+order by ?subject ?estrela"
+75,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject ?starring
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring. 
+}
+LIMIT 100
+orderby starring"
+76,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?estrela
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?estrela
+}
+LIMIT 100
+order by ?subject"
+77,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject ?starring
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring. 
+}
+LIMIT 100
+orderby ?starring"
+78,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?estrela
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?estrela
+}
+order by ?subject
+LIMIT 100
+"
+79,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject ?starring
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring. 
+}
+LIMIT 100
+order by ?starring"
+80,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?estrela
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?estrela
+}
+order by ?subject ?estrela
+LIMIT 100
+"
+81,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject ?starring
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring. 
+}
+LIMIT 100
+order by (?starring)"
+82,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject ?starring
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring. 
+}
+LIMIT 100
+order (?starring)"
+83,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?estrela
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?estrela
+}
+order by  ?estrela ?subject
+LIMIT 100
+"
+84,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject ?starring
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring. 
+}
+LIMIT 100
+orderby (?starring)"
+85,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject ?starring
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring. 
+}
+LIMIT 100
+"
+86,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?estrela
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?estrela
+}
+
+LIMIT 100
+"
+87,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?subject, ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+
+FILTER(?starring = rsc:Tom_Cruise)
+
+}
+LIMIT 10"
+88,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?subject ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+
+FILTER(?starring = rsc:Tom_Cruise)
+
+}
+LIMIT 100"
+89,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?subject ?estrela
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?estrela
+}
+
+LIMIT 100
+"
+90,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?subject, ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+
+FILTER(?starring = rsc:Tom_Cruise)
+
+}
+LIMIT 100
+"
+91,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?subject, ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+
+FILTER(?starring = rsc:Tom_Cruise)
+
+}
+LIMIT 10"
+92,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT ?subject, ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpediaowl:
+starring ?starring.
+?subject foaf:name ?film_name.
+FILTER(?starring = rsc:Tom_Cruise)
+}
+LIMIT 100
+"
+93,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?subject ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+
+FILTER(?starring = rsc:Xuxa)
+
+}
+LIMIT 100"
+94,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT ?subject, ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpediaowl:starring ?starring.
+?subject foaf:name ?film_name.
+FILTER(?starring = rsc:Tom_Cruise)
+}
+LIMIT 100
+"
+95,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?subject, ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+
+FILTER(?starring = rsc:Tom_Cruise)
+
+}
+LIMIT 100
+"
+96,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?subject, ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+
+FILTER(?starring = rsc:Tom_Cruise)
+
+}
+LIMIT 100"
+97,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?subject, ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+
+}
+LIMIT 10"
+98,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?subject ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+
+FILTER(?starring = rsc:Tom_Cruise)
+
+}
+LIMIT 100"
+99,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?subject, ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+
+FILTER(?starring = rsc:Tom_Cruise)
+
+}
+LIMIT 100
+"
+100,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT ?subject, ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+FILTER(?starring = rsc:Tom_Cruise)
+}"
+101,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT ?subject, ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+FILTER(?starring = rsc:Tom_Cruise)
+}
+LIMIT 100
+"
+102,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?subject, ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+
+FILTER(?starring = rsc:Tom_Cruise)
+
+}
+LIMIT 10"
+103,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?film_name
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+}
+
+LIMIT 100
+"
+104,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?subject ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+
+FILTER(?starring = rsc:Patricia)
+
+}
+LIMIT 100"
+105,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?film_name
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ""Tom Cruise""
+}
+
+LIMIT 100
+"
+106,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT ?subject ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+FILTER(?starring = rsc:Tom_Cruise)
+}
+LIMIT 100
+"
+107,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject ?movie
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+}
+LIMIT 100"
+108,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject ?name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+}
+LIMIT 100"
+109,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?subject, ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+
+FILTER(?starring = rsc:Tom_Cruise)
+
+}
+LIMIT 10"
+110,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+SELECT ?subject ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+FILTER(?starring = rsc:Tom_Cruise)
+}
+LIMIT 100
+"
+111,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?film_name
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name
+}
+
+LIMIT 100
+"
+112,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?subject, ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+
+FILTER(?starring = rsc:Tom_Cruise)
+
+}
+LIMIT 100"
+113,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT ?subject ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpediaowl:starring ?starring.
+?subject foaf:name ?film_name.
+FILTER(?starring = rsc:Tom_Cruise)
+}
+LIMIT 100
+"
+114,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?subject, ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+FILTER(?starring = rsc:Tom_Cruise)
+}"
+115,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT ?subject ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+FILTER(?starring = rsc:Tom_Cruise)
+}
+LIMIT 100
+"
+116,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT ?subject ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+FILTER(?starring = rsc:Tom_Cruise)
+}
+LIMIT 100
+"
+117,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?film_name
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+FILTER(?starring = rsc:Tom_Cruise)
+}
+
+LIMIT 100
+"
+118,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = rsc:Brad_Pitt || ?actor =  rsc:Angelina_Jolie)
+}"
+119,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+SELECT ?film_name
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+FILTER(?starring = rsc:Tom_Cruise)
+}
+
+LIMIT 100
+"
+120,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = rsc:Brad_Pitt || ?actor =  rsc:Angelina_Jolie)
+}
+"
+121,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = rsc:Brad_Pitt || ?actor =  rsc:Angelina_Jolie)
+}
+"
+122,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+FILTER (?actor = rsc:Brad_Pitt || ?actor = rsc:Angelina_Jolie)
+}"
+123,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = rsc:Brad_Pitt || ?actor =  rsc:Angelina_Jolie)
+}"
+124,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+SELECT ?film_name
+WHERE {
+?subject a <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+FILTER(?starring = rsc:Tom_Cruise)
+}
+
+LIMIT 100
+"
+125,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = rsc:Brad_Pitt || ?actor =  rsc:Stevenn)
+}
+"
+126,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = rsc:Brad_Pitt || ?actor =  rsc:Arnold_Schwarzenegger)
+}
+"
+127,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = rsc:Brad_Pitt || ?actor =  rsc:Steven)
+}
+"
+128,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = rsc:Brad_Pitt || ?actor =  rsc:arnold_schwarzenegger)
+}
+"
+129,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = rsc:Brad_Pitt || ?actor =  rsc:Angelina)
+}
+"
+130,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = rsc:Brad_Pitt || ?actor =  rsc:Arnold_Schwarzenegger)
+}
+"
+131,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?subject, ?film_name
+WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia-owl:starring ?starring.
+?subject foaf:name ?film_name.
+
+FILTER(?starring = rsc:Tom_Cruise)
+
+}
+LIMIT 100"
+132,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = rsc:Brad_Pitt || ?actor =  rsc:Angelina_Jolie)
+}
+"
+133,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = rsc:Brad* || ?actor =  rsc:Angelina_Jolie)
+}"
+134,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = rsc:BradPitt || ?actor =  rsc:Angelina_Jolie)
+}
+"
+135,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = rsc:Brad Pitt || ?actor =  rsc:Angelina_Jolie)
+}
+"
+136,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = rsc:Brad% || ?actor =  rsc:Angelina_Jolie)
+}"
+137,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = rsc:Brad_Pitt || ?actor =  rsc:Leonardo_Dicaprio)
+}
+"
+138,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = foaf:name =""Brad Pitt"" || ?actor =  foaf:name = ""Angelina_Jolie"")
+}
+"
+139,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = rsc:Brad_Pitt || ?actor =  rsc:Leonardo_DiCaprio)
+}
+"
+140,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor foaf:name= ""Brad Pitt"" || ?actor  foaf:name = ""Angelina_Jolie"")
+}
+"
+141,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor foaf:name ""Brad Pitt"" || ?actor  foaf:name  ""Angelina_Jolie"")
+}
+"
+142,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = rsc:Brad% || ?actor =  rsc:Angelina_Jolie)
+}"
+143,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = rsc:Brad_Pitty || ?actor =  rsc:Angelina_Jolie)
+}"
+144,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = rsc:Xuxa || ?actor =  rsc:Angelina_Jolie)
+}"
+145,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX rsc: <http://dbpedia.org/resource/>
+
+SELECT ?actor (COUNT(DISTINCT ?movie) as ?quantOfMovies)
+WHERE {
+?movie a <http://dbpedia.org/ontology/Film>.
+?movie dbpprop:starring ?actor
+
+FILTER (?actor = rsc:Didi || ?actor =  rsc:Angelina_Jolie)
+}"
+146,"SELECT ?subject
+WHERE {
+?subject a <http://dbpedia.org/class/yago/AmericanFilmDirectorsOfItalianDescent>.
+}"
+147,"SELECT ?subject
+WHERE {
+?subject a <http://dbpedia.org/class/yago/AmericanFilmDirectorsOfItalianDescent>.
+}"
+148,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject
+WHERE {
+?subject a <http://dbpedia.org/class/yago/AmericanFilmDirectorsOfItalianDescent>.
+}
+"
+149,"PREFIX rdf: <http://www.w3.org/1999/02/22rdfsyntaxns#>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?subject
+WHERE {
+?subject a <http://dbpedia.org/class/yago/AmericanFilmDirectorsOfItalianDescent>.
+}
+"
+150,"PREFIX rsc:<http://dbpedia.org/resource/>
+
+SELECT ?subject ?birthDate ?birthPlace ?sameAs
+WHERE {
+?subject a <http://dbpedia.org/class/yago/AmericanFilmDirectorsOfItalianDescent>.
+?subject  dbpedia-owl:birthDate ?birthDate.
+?subject dbpprop:birthPlace ?birthPlace.
+?subject owl:sameAs ?sameAs.
+
+FILTER(?subject = rsc:Francis_Ford_Coppola)
+
+}"
+151,"PREFIX rsc:<http://dbpedia.org/resource/>
+
+SELECT ?subject ?birthDate ?birthPlace ?sameAs
+WHERE {
+?subject a <http://dbpedia.org/class/yago/AmericanFilmDirectorsOfItalianDescent>.
+?subject  dbpedia-owl:birthDate ?birthDate.
+?subject dbpprop:birthPlace ?birthPlace.
+?subject owl:sameAs ?sameAs.
+
+FILTER(?subject = rsc:Francis_Ford_Coppola)
+
+}"
+152,"PREFIX rsc:<http://dbpedia.org/resource/>
+
+SELECT ?subject ?birthDate ?birthPlace ?sameAs
+WHERE {
+?subject a <http://dbpedia.org/class/yago/AmericanFilmDirectorsOfItalianDescent>.
+?subject  dbpedia-owl:birthDate ?birthDate.
+?subject dbpprop:birthPlace ?birthPlace.
+?subject owl:sameAs ?sameAs.
+
+FILTER(?subject = rsc:Steven_Spielberg)
+
+}"

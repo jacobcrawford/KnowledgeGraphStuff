@@ -1,0 +1,1203 @@
+,query
+0,"PREFIX  dbpedia:  <http://dbpedia.org/ontology/> 
+PREFIX  resource:  <http://nl.dbpedia.org/resource/>  
+SELECT  ?price ?title 
+WHERE   { ?price dbpedia:birthPlace resource:Amsterdam }"
+1,"PREFIX  dbpedia:  <http://dbpedia.org/ontology/> 
+PREFIX  resource:  <http://nl.dbpedia.org/resource/>  
+SELECT  ?price
+WHERE   { ?price dbpedia:birthPlace resource:Amsterdam }"
+2,"PREFIX  dbpedia:  <http://dbpedia.org/ontology/> 
+PREFIX  resource:  <http://us.dbpedia.org/resource/>  
+SELECT  ?price
+WHERE   { ?price dbpedia:birthPlace resource:Amsterdam }"
+3,"PREFIX  dbpedia:  <http://dbpedia.org/ontology/> 
+PREFIX  resource:  <http://dbpedia.org/resource/>  
+SELECT  ?price
+WHERE   { ?price dbpedia:birthPlace resource:Amsterdam }"
+4," SELECT ?page ?lat ?long (bif:st_distance(?geo, bif:st_point(42.883, -72.8981)))
+    WHERE{
+    ?m foaf:page ?page.
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    FILTER (bif:st_intersects (?geo, bif:st_point(42.883, -72.8981), 300))
+    }
+    ORDER BY ASC 4 LIMIT 5"
+5," SELECT ?page ?lat ?long (bif:st_distance(?geo, bif:st_point(42.883, -72.8981)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    FILTER (bif:st_intersects (?geo, bif:st_point(42.883, -72.8981), 300))
+    }
+    ORDER BY ASC 4 LIMIT 5"
+6," SELECT ?lat ?long (bif:st_distance(?geo, bif:st_point(42.883, -72.8981)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    FILTER (bif:st_intersects (?geo, bif:st_point(42.883, -72.8981), 300))
+    }
+    ORDER BY ASC 4 LIMIT 5"
+7," SELECT ?lat ?long (bif:st_distance(?geo, bif:st_point(42.883, -72.8981)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    FILTER (bif:st_intersects (?geo, bif:st_point(42.883, -72.8981), 300))
+    }
+    LIMIT 5"
+8," SELECT ?m ?lat ?long (bif:st_distance(?geo, bif:st_point(42.883, -72.8981)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    FILTER (bif:st_intersects (?geo, bif:st_point(42.883, -72.8981), 300))
+    }
+    LIMIT 5"
+9," SELECT ?m ?lat ?long (bif:st_distance(?geo, bif:st_point(42.883, -72.8981)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    FILTER (bif:st_intersects (?geo, bif:st_point(42.883, -72.8981), 300))
+    }
+    LIMIT 5"
+10," SELECT ?m ?lat ?long (bif:st_distance(?geo, bif:st_point(42.883, -72.8981)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    FILTER (bif:st_intersects (?geo, bif:st_point(42.883, -72.8981), 3000))
+    }
+    LIMIT 5"
+11," SELECT ?m ?lat ?long (bif:st_distance(?geo, bif:st_point(42.883, -72.8981)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    FILTER (bif:st_intersects (?geo, bif:st_point(42.883, -72.8981), 3000))
+    }
+    LIMIT 500"
+12," SELECT ?m ?lat ?long (bif:st_distance(?geo, bif:st_point(42.883, -72.8981)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    FILTER (bif:st_intersects (?geo, bif:st_point(42.883, -72.8981), 3000))
+    }
+    LIMIT 500"
+13," SELECT ?m ?lat ?long (bif:st_distance(?geo, bif:st_point(42.883, -72.8981)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    FILTER (bif:st_intersects (?geo, bif:st_point(42.883, -72.8981), 300))
+    }
+    LIMIT 500"
+14," SELECT ?m ?lat ?long (bif:st_distance(?geo, bif:st_point(42.883, -72.8981)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    FILTER (bif:st_intersects (?geo, bif:st_point(52.0749, 4.297), 300))
+    }
+    LIMIT 500"
+15," SELECT ?m ?lat ?long (bif:st_distance(?geo, bif:st_point(42.883, -72.8981)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 300))
+    }
+    LIMIT 500"
+16," SELECT ?m ?lat ?long (bif:st_distance(?geo, bif:st_point(52.0749,4.297)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    FILTER (bif:st_intersects (?geo, bif:st_point(52.0749,4.297), 300))
+    }
+    LIMIT 500"
+17," SELECT ?m ?lat ?long (bif:st_distance(?geo, bif:st_point(4.297,52.0749)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 300))
+    }
+    LIMIT 500"
+18," SELECT ?m ?lat ?long (bif:st_distance(?geo, bif:st_point(4.297,52.0749)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 30))
+    }
+    LIMIT 500"
+19," SELECT ?m ?lat ?long (bif:st_distance(?geo, bif:st_point(4.297,52.0749)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+20,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rif: <http://www.w3.org/2007/rif#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX dc: <http://purl.org/dc/terms/>
+
+                SELECT ?name ?long ?lat
+                WHERE {
+                  ?c a          yago:CapitalsInEurope ;
+                     rdfs:label ?name ;
+                     geo:long   ?long ;
+                     geo:lat    ?lat .
+                     FILTER( lang(?name)=""en"" )
+                }
+               "
+21,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rif: <http://www.w3.org/2007/rif#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX dc: <http://purl.org/dc/terms/>
+
+                SELECT ?name ?long ?lat
+                WHERE {
+                  ?c a          yago:CapitalsInEurope ;
+                     rdfs:label ?name ;
+                     geo:long   ?long ;
+                     geo:lat    ?lat .
+                     FILTER( lang(?name)=""en"" )
+                }
+             "
+22," SELECT ?m ?lat ?long (bif:st_distance(?geo, bif:st_point(4.297,52.0749)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+?m a          yago:CapitalsInEurope ;
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 300))
+    }
+    LIMIT 500"
+23," SELECT ?m ?lat ?long (bif:st_distance(?geo, bif:st_point(4.297,52.0749)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+?m a          yago:CapitalsInEurope
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 300))
+    }
+    LIMIT 500"
+24," SELECT ?m ?lat ?long (bif:st_distance(?geo, bif:st_point(4.297,52.0749)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+?m a          yago:CapitalsInEurope.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 300))
+    }
+    LIMIT 500"
+25,"PREFIX owl: <http://www.w3.org/2002/07/owl#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX dbpedia2: <http://dbpedia.org/property/> PREFIX dbpedia: <http://dbpedia.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX dcterms: <http://purl.org/dc/terms/> SELECT DISTINCT ?category ?label COUNT(?o) AS ?numOfInstances  WHERE { ?category rdfs:label ?label .  ?label bif:contains ""'german 'and' physicists'"" .  ?o dcterms:subject ?category .  FILTER (lang(?label) = 'en' || lang(?label) = '') } ORDER BY DESC(?numOfInstances) LIMIT 30  "
+26,SELECT DISTINCT ?validChild ?label_child ?comment_child WHERE { ?validChild dcterms:subject <http://dbpedia.org/resource/Category:German_physicists> . ?validChild rdfs:label ?label_child. FILTER (lang(?label_child) = 'en' ) OPTIONAL {  ?validChild rdfs:comment ?comment_child FILTER (lang(?comment_child) = 'en' )}} LIMIT 1000 OFFSET 0 
+27,SELECT ?type ?class ?labelOfType ?labelOfClass COUNT(DISTINCT ?o) AS ?numOfInstances WHERE {  ?s dcterms:subject <http://dbpedia.org/resource/Category:German_physicists> . ?s ?type ?o . ?o dcterms:subject ?class . ?type rdfs:label ?labelOfType . ?class rdfs:label ?labelOfClass . FILTER (lang(?labelOfClass) = 'en') } ORDER BY DESC(?numOfInstances) LIMIT 40 
+28,SELECT DISTINCT ?parent ?label_parent ?comment_parent ?validChild ?label_child ?comment_child WHERE { ?parent dcterms:subject <http://dbpedia.org/resource/Category:German_physicists> . ?parent <http://dbpedia.org/ontology/doctoralAdvisor> ?validChild. ?parent rdfs:label ?label_parent. FILTER (lang(?label_parent) = 'en' ) OPTIONAL {  ?parent rdfs:comment ?comment_parent FILTER (lang(?comment_parent) = 'en' )}?validChild dcterms:subject <http://dbpedia.org/resource/Category:German_physicists> . ?validChild rdfs:label ?label_child. FILTER (lang(?label_child) = 'en' ) OPTIONAL {  ?validChild rdfs:comment ?comment_child FILTER (lang(?comment_child) = 'en' )}} LIMIT 1000 OFFSET 0 
+29,SELECT ?type ?class ?labelOfType ?labelOfClass COUNT(DISTINCT ?o) AS ?numOfInstances WHERE {  ?s dcterms:subject <http://dbpedia.org/resource/Category:German_physicists> . ?s ?type ?o . ?o dcterms:subject ?class . ?type rdfs:label ?labelOfType . ?class rdfs:label ?labelOfClass . FILTER (lang(?labelOfClass) = 'en') } ORDER BY DESC(?numOfInstances) LIMIT 40 
+30,"PREFIX owl: <http://www.w3.org/2002/07/owl#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX dbpedia2: <http://dbpedia.org/property/> PREFIX dbpedia: <http://dbpedia.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX dcterms: <http://purl.org/dc/terms/> SELECT DISTINCT ?category ?label COUNT(?o) AS ?numOfInstances  WHERE { ?category rdfs:label ?label .  ?label bif:contains ""'haarlem'"" .  ?o dcterms:subject ?category .  FILTER (lang(?label) = 'en' || lang(?label) = '') } ORDER BY DESC(?numOfInstances) LIMIT 30  "
+31,SELECT DISTINCT ?validChild ?label_child ?comment_child WHERE { ?validChild dcterms:subject <http://dbpedia.org/resource/Category:Haarlem> . ?validChild rdfs:label ?label_child. FILTER (lang(?label_child) = 'en' ) OPTIONAL {  ?validChild rdfs:comment ?comment_child FILTER (lang(?comment_child) = 'en' )}} LIMIT 1000 OFFSET 0 
+32,SELECT ?type ?class ?labelOfType ?labelOfClass COUNT(DISTINCT ?o) AS ?numOfInstances WHERE {  ?s dcterms:subject <http://dbpedia.org/resource/Category:Haarlem> . ?s ?type ?o . ?o dcterms:subject ?class . ?type rdfs:label ?labelOfType . ?class rdfs:label ?labelOfClass . FILTER (lang(?labelOfClass) = 'en') } ORDER BY DESC(?numOfInstances) LIMIT 40 
+33,SELECT DISTINCT ?parent ?label_parent ?comment_parent ?validChild ?label_child ?comment_child WHERE { ?parent dcterms:subject <http://dbpedia.org/resource/Category:Haarlem> . ?parent <http://dbpedia.org/ontology/type> ?validChild. ?parent rdfs:label ?label_parent. FILTER (lang(?label_parent) = 'en' ) OPTIONAL {  ?parent rdfs:comment ?comment_parent FILTER (lang(?comment_parent) = 'en' )}?validChild dcterms:subject <http://dbpedia.org/resource/Category:Administrative_divisions> . ?validChild rdfs:label ?label_child. FILTER (lang(?label_child) = 'en' ) OPTIONAL {  ?validChild rdfs:comment ?comment_child FILTER (lang(?comment_child) = 'en' )}} LIMIT 1000 OFFSET 0 
+34,SELECT ?type ?class ?labelOfType ?labelOfClass COUNT(DISTINCT ?o) AS ?numOfInstances WHERE {  ?s dcterms:subject <http://dbpedia.org/resource/Category:Administrative_divisions> . ?s ?type ?o . ?o dcterms:subject ?class . ?type rdfs:label ?labelOfType . ?class rdfs:label ?labelOfClass . FILTER (lang(?labelOfClass) = 'en') } ORDER BY DESC(?numOfInstances) LIMIT 40 
+35,SELECT DISTINCT ?parent ?label_parent ?comment_parent ?validChild ?label_child ?comment_child WHERE { ?parent dcterms:subject <http://dbpedia.org/resource/Category:Haarlem> . ?parent <http://dbpedia.org/ontology/territory> ?validChild. ?parent rdfs:label ?label_parent. FILTER (lang(?label_parent) = 'en' ) OPTIONAL {  ?parent rdfs:comment ?comment_parent FILTER (lang(?comment_parent) = 'en' )}?validChild dcterms:subject <http://dbpedia.org/resource/Category:Provinces_of_the_Netherlands> . ?validChild rdfs:label ?label_child. FILTER (lang(?label_child) = 'en' ) OPTIONAL {  ?validChild rdfs:comment ?comment_child FILTER (lang(?comment_child) = 'en' )}} LIMIT 1000 OFFSET 0 
+36,SELECT ?type ?class ?labelOfType ?labelOfClass COUNT(DISTINCT ?o) AS ?numOfInstances WHERE {  ?s dcterms:subject <http://dbpedia.org/resource/Category:Provinces_of_the_Netherlands> . ?s ?type ?o . ?o dcterms:subject ?class . ?type rdfs:label ?labelOfType . ?class rdfs:label ?labelOfClass . FILTER (lang(?labelOfClass) = 'en') } ORDER BY DESC(?numOfInstances) LIMIT 40 
+37,SELECT DISTINCT ?validChild ?label_child ?comment_child WHERE { ?validChild dcterms:subject <http://dbpedia.org/resource/Category:People_from_Haarlem> . ?validChild rdfs:label ?label_child. FILTER (lang(?label_child) = 'en' ) OPTIONAL {  ?validChild rdfs:comment ?comment_child FILTER (lang(?comment_child) = 'en' )}} LIMIT 1000 OFFSET 0 
+38,SELECT ?type ?class ?labelOfType ?labelOfClass COUNT(DISTINCT ?o) AS ?numOfInstances WHERE {  ?s dcterms:subject <http://dbpedia.org/resource/Category:People_from_Haarlem> . ?s ?type ?o . ?o dcterms:subject ?class . ?type rdfs:label ?labelOfType . ?class rdfs:label ?labelOfClass . FILTER (lang(?labelOfClass) = 'en') } ORDER BY DESC(?numOfInstances) LIMIT 40 
+39," SELECT ?m ?lat ?long (bif:st_distance(?geo, bif:st_point(4.297,52.0749)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m a yago:Municipalities_of_South_Holland.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 300))
+    }
+    LIMIT 500"
+40," SELECT ?m ?lat ?long (bif:st_distance(?geo, bif:st_point(4.297,52.0749)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m ?b yago:Municipalities_of_South_Holland.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 300))
+    }
+    LIMIT 500"
+41," SELECT ?m ?lat ?long (bif:st_distance(?geo, bif:st_point(4.297,52.0749)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m ?b yago:Municipalities_of_South_Holland.
+    
+    }
+    LIMIT 500"
+42," SELECT ?m
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m ?b yago:Municipalities_of_South_Holland.
+    
+    }
+    LIMIT 500"
+43," SELECT ?m ?lat ?long (bif:st_distance(?geo, bif:st_point(4.297,52.0749)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+44," SELECT ?m ?lat ?long ?thumbnail (bif:st_distance(?geo, bif:st_point(4.297,52.0749)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+45," SELECT ?m ?lat ?long ?thumbnail (bif:st_distance(?geo, bif:st_point(4.297,52.0749)))
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+46," SELECT ?k
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?m <http://dbpedia.org/ontology/birthPlace> ?k
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+47," SELECT ?k
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/birthPlace> ?k
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 30))
+    }
+    LIMIT 500"
+48,"SELECT ?m
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?m <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/page/Carel_Hendrik_Ver_Huell>
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+49,"SELECT ?k
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+50,"SELECT ?m
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    <http://dbpedia.org/page/Carel_Hendrik_Ver_Huell> <http://dbpedia.org/ontology/birthPlace> ?m
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+51,"SELECT ?k
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+52,"PREFIX owl: <http://www.w3.org/2002/07/owl#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX dbpedia2: <http://dbpedia.org/property/> PREFIX dbpedia: <http://dbpedia.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX dcterms: <http://purl.org/dc/terms/> SELECT DISTINCT ?category ?label COUNT(?o) AS ?numOfInstances  WHERE { ?category rdfs:label ?label .  ?label bif:contains ""'den 'and' haag'"" .  ?o dcterms:subject ?category .  FILTER (lang(?label) = 'en' || lang(?label) = '') } ORDER BY DESC(?numOfInstances) LIMIT 30  "
+53,SELECT DISTINCT ?validChild ?label_child ?comment_child WHERE { ?validChild dcterms:subject <http://dbpedia.org/resource/Category:ADO_Den_Haag_players> . ?validChild rdfs:label ?label_child. FILTER (lang(?label_child) = 'en' ) OPTIONAL {  ?validChild rdfs:comment ?comment_child FILTER (lang(?comment_child) = 'en' )}} LIMIT 1000 OFFSET 0 
+54,SELECT ?type ?class ?labelOfType ?labelOfClass COUNT(DISTINCT ?o) AS ?numOfInstances WHERE {  ?s dcterms:subject <http://dbpedia.org/resource/Category:ADO_Den_Haag_players> . ?s ?type ?o . ?o dcterms:subject ?class . ?type rdfs:label ?labelOfType . ?class rdfs:label ?labelOfClass . FILTER (lang(?labelOfClass) = 'en') } ORDER BY DESC(?numOfInstances) LIMIT 40 
+55,"PREFIX owl: <http://www.w3.org/2002/07/owl#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX foaf: <http://xmlns.com/foaf/0.1/> PREFIX dc: <http://purl.org/dc/elements/1.1/> PREFIX dbpedia2: <http://dbpedia.org/property/> PREFIX dbpedia: <http://dbpedia.org/> PREFIX skos: <http://www.w3.org/2004/02/skos/core#> PREFIX dcterms: <http://purl.org/dc/terms/> SELECT DISTINCT ?category ?label COUNT(?o) AS ?numOfInstances  WHERE { ?category rdfs:label ?label .  ?label bif:contains ""'ajax'"" .  ?o dcterms:subject ?category .  FILTER (lang(?label) = 'en' || lang(?label) = '') } ORDER BY DESC(?numOfInstances) LIMIT 30  "
+56,SELECT DISTINCT ?validChild ?label_child ?comment_child WHERE { ?validChild dcterms:subject <http://dbpedia.org/resource/Category:AFC_Ajax_players> . ?validChild rdfs:label ?label_child. FILTER (lang(?label_child) = 'en' ) OPTIONAL {  ?validChild rdfs:comment ?comment_child FILTER (lang(?comment_child) = 'en' )}} LIMIT 1000 OFFSET 0 
+57,SELECT ?type ?class ?labelOfType ?labelOfClass COUNT(DISTINCT ?o) AS ?numOfInstances WHERE {  ?s dcterms:subject <http://dbpedia.org/resource/Category:AFC_Ajax_players> . ?s ?type ?o . ?o dcterms:subject ?class . ?type rdfs:label ?labelOfType . ?class rdfs:label ?labelOfClass . FILTER (lang(?labelOfClass) = 'en') } ORDER BY DESC(?numOfInstances) LIMIT 40 
+58,"SELECT ?k ?depiction
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m
+    ?k foaf:depiction ?depiction
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+59,"SELECT ?k ?depiction
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m
+    ?k <http://foaf.org/ontology/depiction> ?depiction
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+60,"SELECT ?k ?depiction
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m
+    ?k <http://foaf.org/ontology/depiction> ?depiction
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+61,"SELECT ?k ?depiction
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m
+    ?k <http://xmlns.com/foaf/0.1/depiction> ?depiction
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+62,"@PREFIX foaf http://xmlns.com/foaf/0.1/
+
+SELECT ?k ?depiction
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m
+    ?k foaf:depiction ?depiction
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+63,"PREFIX foaf http://xmlns.com/foaf/0.1/
+
+SELECT ?k ?depiction
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m
+    ?k foaf:depiction ?depiction
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+64,"PREFIX foaf: http://xmlns.com/foaf/0.1/
+
+SELECT ?k ?depiction
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m
+    ?k foaf:depiction ?depiction
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+65,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?k ?depiction
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m
+    ?k foaf:depiction ?depiction
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+66,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?k
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+67,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?k ?b
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m
+    ?k <http://dbpedia.org/ontology/birthDate> ?b
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+68,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?k ?b
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m.
+?k <http://dbpedia.org/ontology/birthDate> ?b
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+69,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?k ?b
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m.
+?k foaf:depiction ?b
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+70,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?k ?b ?lat ?lon
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m.
+?k foaf:depiction ?b
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+71,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?k ?b ?lat ?long
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m.
+?k foaf:depiction ?b
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 500"
+72,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?k ?b ?lat ?long
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m.
+?k foaf:depiction ?b
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 30))
+    }
+    LIMIT 500"
+73,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?k ?b ?lat ?long
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m.
+    ?k foaf:depiction ?b
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 30))
+    }
+    LIMIT 500"
+74,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?k 
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m.
+    ?k foaf:depiction ?b
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 30))
+    }
+    LIMIT 500"
+75,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?k
+SELECT ?m
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m.
+    ?k foaf:depiction ?b
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 30))
+    }
+    LIMIT 500"
+76,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?k ?m
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m.
+    ?k foaf:depiction ?b
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 30))
+    }
+    LIMIT 500"
+77,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?k ?m ?b
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m.
+    ?k foaf:depiction ?b
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 30))
+    }
+    LIMIT 500"
+78,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?k ?m ?b ?lat ?long
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m.
+    ?k foaf:depiction ?b
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 30))
+    }
+    LIMIT 500"
+79,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT (?k ?m ?b ?lat ?long)
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m.
+    ?k foaf:depiction ?b
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 30))
+    }
+    LIMIT 500"
+80,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?k ?m ?b ?lat ?long
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m.
+    ?k foaf:depiction ?b
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 30))
+    }
+    LIMIT 500"
+81,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?k ?m ?b ?d
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m.
+    ?k foaf:depiction ?b
+    ?k a ?d
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 30))
+    }
+    LIMIT 500"
+82,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?k ?m ?b ?d
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m.
+    ?k foaf:depiction ?b.
+    ?k a ?d
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 30))
+    }
+    LIMIT 500"
+83,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?k ?m ?b ?d
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m.
+    ?k foaf:depiction ?b.
+    ?k a ?d
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 5000"
+84,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?k ?m ?b ?s ?d
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m.
+    ?k foaf:depiction ?b.
+    ?k ?s ?d
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 5000"
+85,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?k ?m ?b ?s ?d
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m.
+    ?k foaf:depiction ?b.
+    ?k ?s ?d
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 50000"
+86,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?k ?m ?b ?s ?d
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m.
+    ?k foaf:depiction ?b.
+    
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 50000"
+87,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?k ?m ?b
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?k <http://dbpedia.org/ontology/birthPlace> ?m.
+    ?k foaf:depiction ?b.
+    
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(4.297,52.0749), 3))
+    }
+    LIMIT 50000"
+88,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?k ?m ?b
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+  
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(6.59139 53.2061), 3))
+    }
+    LIMIT 50000"
+89,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?m ?thumbnail
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+  
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(6.59139 53.2061), 3))
+    }
+    LIMIT 50000"
+90,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?m ?thumbnail
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+  
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(6.59139, 53.2061), 3))
+    }
+    LIMIT 50000"
+91,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?m ?thumbnail ?lat ?long
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+  
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(6.59139, 53.2061), 3))
+    }
+    LIMIT 50000"
+92,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?m ?thumbnail ?lat ?long
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+  
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(6.59139, 53.2061), 3))
+    }
+    LIMIT 50000"
+93,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?name ?m ?thumbnail ?lat ?long
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?m dbpprop:fullname ?name
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(6.59139, 53.2061), 3))
+    }
+    LIMIT 50000"
+94,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?name ?m ?thumbnail ?lat ?long
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    ?m dbpprop:name ?name
+    
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(6.59139, 53.2061), 3))
+    }
+    LIMIT 50000"
+95,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?name ?m ?thumbnail ?lat ?long
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    }
+UNION
+{?m dbpprop:name ?name
+ }   
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(6.59139, 53.2061), 3))
+    }
+    LIMIT 50000"
+96,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?name ?m ?thumbnail ?lat ?long
+    WHERE{
+   {
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+    }
+UNION
+{?m dbpprop:name ?name
+ }   
+    
+	
+    FILTER (bif:st_intersects (?geo, bif:st_point(6.59139, 53.2061), 3))
+    }
+    LIMIT 50000"
+97,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?name ?m ?thumbnail ?lat ?long
+    WHERE{
+   {
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+FILTER (bif:st_intersects (?geo, bif:st_point(6.59139, 53.2061), 3))
+    }
+UNION
+{?m dbpprop:name ?name
+ }   
+    
+	
+    
+    }
+    LIMIT 50000"
+98,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?name ?m ?thumbnail ?lat ?long
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+FILTER (bif:st_intersects (?geo, bif:st_point(6.59139, 53.2061), 3))
+    
+UNION
+{?m dbpprop:name ?name
+ }   
+    
+	
+    
+    }
+    LIMIT 500"
+99,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?name ?m ?thumbnail ?lat ?long
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+?m dbpprop:name ?name.
+FILTER (bif:st_intersects (?geo, bif:st_point(6.59139, 53.2061), 3))
+    
+    
+	
+    
+    }
+    LIMIT 500"
+100,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?name ?m ?thumbnail ?lat ?long
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+
+FILTER (bif:st_intersects (?geo, bif:st_point(6.59139, 53.2061), 3))
+    
+    
+	
+    
+    }
+    LIMIT 500"
+101,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT  ?m ?thumbnail ?lat ?long
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+
+FILTER (bif:st_intersects (?geo, bif:st_point(6.59139, 53.2061), 3))
+    
+    
+	
+    
+    }
+    LIMIT 500"
+102,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT  ?m ?thumbnail ?lat ?long
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+
+FILTER (bif:st_intersects (?geo, bif:st_point(6.59139, 53.2061), 3))
+    
+    
+	
+    
+    }
+    LIMIT 500"
+103,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT  ?m ?thumbnail ?lat ?long
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+
+
+FILTER (bif:st_intersects (?geo, bif:st_point(6.59139, 53.2061), 3))
+    
+    
+	
+    
+    }
+    LIMIT 500"
+104,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT  ?m  ?lat ?long
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+
+
+FILTER (bif:st_intersects (?geo, bif:st_point(6.59139, 53.2061), 3))
+    
+    
+	
+    
+    }
+    LIMIT 500"
+105,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT  ?m  ?lat ?long
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+
+FILTER (bif:st_intersects (?geo, bif:st_point(6.59139, 53.2061), 30))
+    
+    
+	
+    
+    }
+    LIMIT 500"
+106,"PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT  ?m  ?lat ?long ?thumbnail
+    WHERE{
+   
+    ?m geo:geometry ?geo.
+    ?m geo:lat ?lat.
+    ?m geo:long ?long.
+    ?m <http://dbpedia.org/ontology/thumbnail> ?thumbnail.
+
+FILTER (bif:st_intersects (?geo, bif:st_point(6.59139, 53.2061), 30))
+    
+    
+	
+    
+    }
+    LIMIT 500"

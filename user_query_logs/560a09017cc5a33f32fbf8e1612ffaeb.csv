@@ -1,0 +1,3683 @@
+,query
+0,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX resource:<http://dbpedia.org/resource/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?album ?albumName ?image
+WHERE {
+	?album dbpedia-owl:artist resource:Enter_Shikari ;
+		rdfs:label ?albumName .
+	OPTIONAL { ?album foaf:depiction ?image }
+
+	FILTER langMatches( lang(?albumName), ""en"" )
+}"
+1,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX resource:<http://dbpedia.org/resource/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?album ?albumName ?image
+WHERE {
+	?album dbpedia-owl:artist resource:Enter_Shikari ;
+		dbpprop:name ?albumName .
+	OPTIONAL { ?album foaf:depiction ?image }
+
+	FILTER langMatches( lang(?albumName), ""en"" )
+}"
+2,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX artist:<http://dbpedia.org/resource/>
+
+SELECT ?single ?singleName ?image
+WHERE {
+	?single dbpedia-owl:musicalArtist artist: ;
+		rdfs:label ?singleName.
+	OPTIONAL { ?single foaf:depiction ?image }
+}"
+3,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX artist:<http://dbpedia.org/resource/Queen_(band)>
+
+SELECT ?single ?singleName ?image
+WHERE {
+	?single dbpedia-owl:musicalArtist artist: ;
+		rdfs:label ?singleName.
+	OPTIONAL { ?single foaf:depiction ?image }
+}"
+4,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX artist:<http://dbpedia.org/resource/Queen_(band)>
+
+SELECT ?album ?albumName ?image
+WHERE {
+	?album dbpedia-owl:artist artist: ;
+		dbpprop:name ?albumName .
+	OPTIONAL { ?album foaf:depiction ?image }
+
+	FILTER langMatches( lang(?albumName), ""en"" )
+}"
+5,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX artist:<http://dbpedia.org/resource/Queen_(band)>
+
+SELECT ?single ?singleName ?image
+WHERE {
+	?single dbpedia-owl:musicalArtist artist: ;
+		dbpprop:name ?singleName.
+	OPTIONAL { ?single foaf:depiction ?image }
+	
+	FILTER langMatches( lang(?singleName), ""en"" )
+}"
+6,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX artist:<http://dbpedia.org/resource/Queen_(band)>
+
+SELECT ?Album ?AlbumName ?Image
+WHERE {
+	?Album dbpedia-owl:artist artist: ;
+		dbpprop:name ?AlbumName .
+	OPTIONAL { ?Album foaf:depiction ?Image }
+
+	FILTER langMatches( lang(?AlbumName), ""en"" )
+}"
+7,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX artist:<http://dbpedia.org/resource/Queen_(band)>
+
+SELECT ?Single ?SingleName ?Image
+WHERE {
+	?Single dbpedia-owl:musicalArtist artist: ;
+		dbpprop:name ?SingleName.
+	OPTIONAL { ?Single foaf:depiction ?Image }
+	
+	FILTER langMatches( lang(?SingleName), ""en"" )
+}"
+8,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/>
+
+SELECT DISTINCT ?Song
+WHERE { 
+	album: dbpprop:title ?Song
+	FILTER langMatches( lang(?Song), ""en"" )
+}"
+9,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX artist:<http://dbpedia.org/resource/Queen_(band)>
+
+SELECT ?Album ?AlbumName ?Image
+WHERE {
+	?Album dbpedia-owl:artist artist: ;
+		dbpprop:name ?AlbumName .
+	OPTIONAL { ?Album foaf:depiction ?Image }
+
+	FILTER langMatches( lang(?AlbumName), ""en"" )
+}"
+10,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album) >
+
+SELECT DISTINCT ?Song
+WHERE { 
+	album: dbpprop:title ?Song
+	FILTER langMatches( lang(?Song), ""en"" )
+}
+"
+11,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song
+WHERE { 
+	album: dbpprop:title ?Song
+	FILTER langMatches( lang(?Song), ""en"" )
+}
+"
+12,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song
+WHERE { 
+	album: dbpprop:title ?Song
+}
+"
+13,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?SongName
+WHERE { 
+	album: dbpprop:title ?Song
+        BIND ((?Song AS ?SongName)
+	FILTER langMatches( lang(?SongName), ""en"" )
+}"
+14,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?SongName
+WHERE { 
+	album: dbpprop:title ?Song
+        BIND (?Song AS ?SongName)
+	FILTER langMatches( lang(?SongName), ""en"" )
+}"
+15,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName 
+WHERE { 
+	album: dbpprop:title ?Song
+        BIND (?Song AS ?SongName)
+	FILTER langMatches( lang(?SongName), ""en"" )
+}"
+16,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song  
+WHERE { 
+	album: dbpprop:title ?Song
+}"
+17,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Seven_Seas_of_Rhye> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Seven_Seas_of_Rhye> }
+}"
+18,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Sssnakebite> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Sssnakebite> }
+}"
+19,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Sssnakepit> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Sssnakepit> }
+}"
+20,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song  
+WHERE { 
+	album: dbpprop:title ?Song
+        ?Song dbprop:name ?SongName
+
+}"
+21,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song  
+WHERE { 
+	album: dbpprop:title ?Song .
+        ?Song dbprop:name ?SongName
+
+}"
+22,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        ?Song dbprop:name ?SongName
+}"
+23,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        ?Song dbpprop:name ?SongName
+}"
+24,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        ?Song dbpprop:name ?SongName
+}"
+25,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?SongName }
+}"
+26,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        BIND (?Song AS ?SongName)
+        OPTIONAL { ?Song dbpprop:name ?SongName }
+
+        
+}"
+27,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        BIND (?Song AS ?SongName) .
+        OPTIONAL { ?Song dbpprop:name ?SongName }
+
+        
+}"
+28,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        BIND (?Song AS ?SongName)
+        OPTIONAL { ?Song dbpprop:name ?NewSongName }
+BIND (?NewSongName AS ?SongName)
+        
+}"
+29,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        BIND (?Song AS ?SongName)
+        ?Song dbpprop:name ?NewSongName
+        BIND (?NewSongName AS ?SongName)     
+}"
+30,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName }
+        BIND (?NewSongName AS ?SongName)     
+}"
+31,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+}
+GROUP BY ?Song"
+32,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+}
+"
+33,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?SongName } 
+}
+"
+34,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?SongName } 
+}
+GROUP BY ?Song"
+35,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?SongName } 
+        { SELECT ?Song WHERE { album: dbpprop:title ?Song } LIMIT 1 }
+}
+GROUP BY ?Song"
+36,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?SongName } 
+        { SELECT ?SongName WHERE { album: dbpprop:title ?Song } LIMIT 1 }
+}
+GROUP BY ?Song"
+37,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?SongName } 
+        { SELECT ?Song WHERE { album: dbpprop:title ?Song } LIMIT 1 }
+}
+GROUP BY ?Song"
+38,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?SongName } 
+        { SELECT ?SongName WHERE { album: dbpprop:title ?SongName } LIMIT 1 }
+}
+GROUP BY ?Song"
+39,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?SongName } 
+        { SELECT ?SongName WHERE { album: dbpprop:title ?Song . ?Song dbpprop:name ?SongName } LIMIT 1 }
+}
+GROUP BY ?Song"
+40,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?SongName } 
+        { SELECT ?SongName WHERE { album: dbpprop:title ?Song . ?Song dbpprop:name ?SongName } LIMIT 1 }
+}
+"
+41,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?SongName } 
+        { SELECT ?SongName WHERE { album: dbpprop:title ?Song . ?Song dbpprop:name ?SongName } }
+}
+"
+42,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?SongName }
+ 
+        { SELECT ?SongName WHERE { album: dbpprop:title ?Song . ?Song dbpprop:name ?SongName } }
+}
+"
+43,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?SongName }
+ 
+        { SELECT ?SongName WHERE { album: dbpprop:title ?Song . ?Song dbpprop:name ?SongName } LIMIT 2 }
+}
+"
+44,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?SongName }
+ 
+        { SELECT ?SongName WHERE { album: dbpprop:title ?Song . ?Song dbpprop:name ?SongName } LIMIT 100 }
+}
+"
+45,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName ?NewSongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        BIND(?Song AS ?SongName
+        OPTIONAL { ?Song dbpprop:name ?NewSongName }
+        
+ 
+        
+}
+"
+46,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName ?NewSongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        BIND(?Song AS ?SongName)
+        OPTIONAL { ?Song dbpprop:name ?NewSongName }
+        
+}
+"
+47,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName ?NewSongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song rdfs:label ?NewSongName }
+        
+}
+"
+48,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName ?NewSongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song rdfs:label ?SongName }
+        
+}
+"
+49,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song rdfs:label ?SongName }
+        
+}
+"
+50,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        { ?Song rdfs:label ?SongName }
+        UNION
+        { ?Song a ?SongName }
+        
+}
+"
+51,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        { ?Song rdfs:label ?SongName }
+        UNION
+        { ?Song }
+        
+}
+"
+52,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        { ?Song rdfs:label ?SongName }
+        UNION
+        { ?Song rdf:String ?SongName}
+        
+}
+"
+53,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+
+        { ?Song rdf:String ?SongName}
+        
+}
+"
+54,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+
+        { ?Song rdf:string ?SongName}
+        
+}
+"
+55,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        ?Song rdfs:label ?SongName
+        
+}
+"
+56,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        ?Song rdfs:label ?SongName
+        
+        FILTER (str(?Song) = ?Song)
+}"
+57,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song rdfs:label ?SongName }
+        
+        FILTER (str(?Song) = ?Song)
+}"
+58,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song rdfs:label ?SongName }
+        
+
+}"
+59,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song rdfs:label ?SongName }
+
+   VALUES ?Songs { ?Song ?SongName }
+   ?Songs dbpprop:title ?Song ;
+          rdfs:label ?SongName
+ 
+}"
+60,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT ?Song (datatype (?Song) AS ?type) (lang(?SongName) AS ?lang)
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song rdfs:label ?SongName } 
+}"
+61,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song rdfs:label ?SongName } 
+        BIND ( IF (isBLANK(?SongName), ?Song, ?SongName )  as ?SongName  )
+}"
+62,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song rdfs:label ?SongName } 
+        BIND ( IF (isBLANK(?SongName), ?SongName, ?Song )  as ?SongName  )
+}"
+63,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song rdfs:label ?SongName } 
+        BIND (isBLANK(?SongName)  as ?SongName  )
+}"
+64,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT ?Song ?NewSongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song rdfs:label ?SongName } 
+        BIND (isBLANK(?SongName)  as ?NewSongName  )
+}"
+65,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT ?Song ?SongName ?NewSongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song rdfs:label ?SongName } 
+        BIND (isBLANK(?SongName)  as ?NewSongName  )
+}"
+66,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT ?Song ?SongName ?NewSongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song rdfs:label ?SongName } 
+        BIND ( ISBLANK(?SongName)  as ?NewSongName  )
+}"
+67,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT ?Song ?SongName ?NewSongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song rdfs:label ?SongName } 
+        BIND ( ISURI(?Song)  as ?NewSongName  )
+}"
+68,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT ?Song ?SongName ?NewSongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song rdfs:label ?SongName } 
+        BIND ( IF( ISURI(?Song), ?SongName, ?Song)  as ?SongName  )
+}"
+69,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT ?Song ?SongName ?NewSongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song rdfs:label ?SongName } 
+        BIND ( IF( ISURI(?Song), ?SongName, ?Song)  as ?NewSongName  )
+}"
+70,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song rdfs:label ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName  )
+}"
+71,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+}"
+72,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+}"
+73,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song (SAMPLE(?name) AS ?SongName)
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?name )
+}"
+74,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song (SAMPLE(?name) AS ?SongName)
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?name )
+} GROUP BY ?Song"
+75,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName count(distinct ?SongName)
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+}"
+76,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+}"
+77,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT ?Song (DISTINCT ?SongName)
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+}"
+78,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT ?Song (distinct ?SongName)
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+}"
+79,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT (distinct ?SongName) ?Song 
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+}"
+80,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT distinct ?SongName ?Song 
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+}"
+81,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT distinct ?SongName ?Song 
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+}
+GROUP BY ?Song
+HAVING (COUNT(?SongName) = 2)"
+82,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT distinct ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+}
+GROUP BY ?Song
+HAVING (COUNT(?NewSongName) = 2)"
+83,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT distinct ?SongName ?Song 
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+
+{ SELECT ?Song WHERE { ?Song dbpprop:name ?SongName } GROUP BY ?Song HAVING (COUNT(?SongName) = 2) }
+}"
+84,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT distinct ?SongName ?Song 
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+
+{ SELECT ?Song WHERE { ?Song dbpprop:name ?NewSongName } GROUP BY ?Song HAVING (COUNT(?SongName) = 2) }
+}"
+85,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT distinct ?SongName ?Song 
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+
+{ SELECT ?Song WHERE { album: dbpprop:title ?Song } GROUP BY ?Song HAVING (COUNT(?SongName) = 2) }
+}"
+86,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT distinct ?SongName ?Song 
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+
+{ SELECT ?Song WHERE { album: dbpprop:title ?Song . OPTIONAL { ?Song dbpprop:name ?NewSongName } } GROUP BY ?Song HAVING (COUNT(?SongName) = 2) }
+}"
+87,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT distinct ?SongName ?Song 
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+}"
+88,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT distinct ?Song ?SongName 
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+}"
+89,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT distinct ?Song ?SongName (count(?SongName) as ?cnt
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+}"
+90,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT distinct ?Song ?SongName count(distinct ?SongName)
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+}"
+91,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT distinct ?Song ?SongName count(?SongName)
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+}"
+92,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT distinct ?SongName count(?SongName)
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+}"
+93,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISITINCT ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+}"
+94,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+}"
+95,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+}"
+96,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+        BIND ( IF( ISURI(?Song), ?Song, ) as ?Song
+}"
+97,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+        BIND ( IF( ISURI(?Song), ?Song, ) as ?Song )
+}"
+98,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?Song .
+        OPTIONAL { ?Song dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?Song)  as ?SongName )
+        BIND ( IF( ISURI(?Song), ?Song, """" ) as ?Song )
+}"
+99,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { ?NewSong dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+}"
+100,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { ?NewSong dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, - ) as ?Song )
+}"
+101,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { ?NewSong dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, NULL ) as ?Song )
+}"
+102,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { ?NewSong dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, rdf:NULL ) as ?Song )
+}"
+103,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://www.w3.org/1999/02/22-rdf-syntax-ns#NULL> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://www.w3.org/1999/02/22-rdf-syntax-ns#NULL> }
+}"
+104,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { ?NewSong dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+}"
+105,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX artist:<http://dbpedia.org/resource/Queen_(band)>
+
+SELECT ?Album ?AlbumName ?Image
+WHERE {
+	?Album dbpedia-owl:artist artist: ;
+		dbpprop:name ?AlbumName .
+	OPTIONAL { ?Album foaf:depiction ?Image }
+
+	FILTER langMatches( lang(?AlbumName), ""en"" )
+}"
+106,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { ?NewSong dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?Song), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+}"
+107,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { ?NewSong dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+}"
+108,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { ?NewSong dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+}"
+109,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Fat_Bottomed_Girls> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Fat_Bottomed_Girls> }
+}"
+110,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { ?NewSong dbpprop:name ?NewSongName } 
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong ) as ?Song )
+}"
+111,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           { ?NewSong dbpprop:name ?NewSongName }
+           UNION
+           { ?NewSong rdfs:label ?NewSongName }
+        }
+        
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+}"
+112,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           { ?NewSong dbpprop:name ?NewSongName }
+           UNION
+           { ?NewSong rdfs:label ?NewSongName }
+        }
+        FILTER langMatches( lang(?SingleName), ""en"" )
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+
+}"
+113,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           { ?NewSong dbpprop:name ?NewSongName }
+           UNION
+           { ?NewSong rdfs:label ?NewSongName }
+        }
+        FILTER langMatches( lang(?NewSongName), ""en"" )
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+
+}"
+114,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           { ?NewSong dbpprop:name ?NewSongName }
+           UNION
+           { ?NewSong rdfs:label ?NewSongName }
+        }
+        FILTER langMatches( lang(?NewSongName), ""en"" )
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+} ORDER BY ?Song"
+115,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName1 .
+           ?NewSong rdfs:label ?NewSongName2
+           BIND( IF( BOUND(?NewSongName1), NewSongName1, NewSongName2) AS NewSongName )
+        }
+        FILTER langMatches( lang(?NewSongName), ""en"" )
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+} ORDER BY ?Song"
+116,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongNameO .
+           ?NewSong rdfs:label ?NewSongNameT
+           BIND( IF( BOUND(?NewSongNameO), NewSongNameO, NewSongNameT) AS NewSongName )
+        }
+        FILTER langMatches( lang(?NewSongName), ""en"" )
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+} ORDER BY ?Song"
+117,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName1 .
+           ?NewSong rdfs:label ?NewSongName2
+           BIND( IF( BOUND(?NewSongName1), ?NewSongName1, ?NewSongName2) AS ?NewSongName )
+        }
+        FILTER langMatches( lang(?NewSongName), ""en"" )
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+} ORDER BY ?Song"
+118,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName1 .
+           ?NewSong rdfs:label ?NewSongName2
+           BIND( IF( BOUND(?NewSongName1), ?NewSongName1, ?NewSongName2) AS ?NewSongName )
+        }
+        FILTER langMatches( lang(?NewSongName), ""en"" )
+
+
+} ORDER BY ?Song"
+119,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName1 .
+        }
+        FILTER langMatches( lang(?NewSongName), ""en"" )
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+} ORDER BY ?Song"
+120,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName .
+        }
+        FILTER langMatches( lang(?NewSongName), ""en"" )
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+} ORDER BY ?Song"
+121,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName .
+        }
+        FILTER langMatches( lang(?NewSongName), ""en"" )
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+} ORDER BY ?Song"
+122,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName .
+        }
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+} ORDER BY ?Song"
+123,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName .
+            FILTER langMatches( lang(?NewSongName), ""en"" )
+        }
+        
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+} ORDER BY ?Song"
+124,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName1 .
+           ?NewSong rdfs:label ?NewSongName2
+           BIND( IF( BOUND(?NewSongName1), ?NewSongName1, ?NewSongName2) AS ?NewSongName )
+FILTER langMatches( lang(?NewSongName), ""en"" )
+        }
+        
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+} ORDER BY ?Song"
+125,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName1 .
+           ?NewSong rdfs:label ?NewSongName2
+           BIND( IF( !BOUND(?NewSongName1), ?NewSongName1, ?NewSongName2) AS ?NewSongName )
+FILTER langMatches( lang(?NewSongName), ""en"" )
+        }
+        
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+} ORDER BY ?Song"
+126,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName1 .
+           ?NewSong rdfs:label ?NewSongName2
+           BIND( IF( BOUND(?NewSongName1), ?NewSongName1, ?NewSongName2) AS ?NewSongName )
+FILTER( NOT EXISTS { ?NewSong dbpprop:name ?NewSongName1 })
+        }
+        
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+} ORDER BY ?Song"
+127,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName1 .
+           ?NewSong rdfs:label ?NewSongName2
+           BIND( IF( BOUND(?NewSongName1), ?NewSongName1, ?NewSongName2) AS ?NewSongName )
+        }
+        
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+} ORDER BY ?Song"
+128,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName1 .
+           ?NewSong rdfs:label ?NewSongName2
+           BIND( IF( BOUND(?NewSongName1), ?NewSongName1, ?NewSongName2) AS ?NewSongName )
+        }
+        
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+}"
+129,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName1 
+        }
+        
+           ?NewSong rdfs:label ?NewSongName2
+           BIND( IF( BOUND(?NewSongName1), ?NewSongName1, ?NewSongName2) AS ?NewSongName )
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+}"
+130,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName1 
+        }
+        
+        ?NewSong rdfs:label ?NewSongName2
+        BIND( IF( BOUND(?NewSongName1), ?NewSongName1, ?NewSongName2) AS ?NewSongName )
+        FILTER langMatches( lang(?SingleName), ""en"" )
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+}"
+131,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName1 
+        }
+        
+        ?NewSong rdfs:label ?NewSongName2
+        BIND( IF( BOUND(?NewSongName1), ?NewSongName1, ?NewSongName2) AS ?NewSongName )
+        FILTER langMatches( lang(?NewSongName), ""en"" )
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+}"
+132,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName1 
+        FILTER langMatches( lang(?NewSongName), ""en"" )
+        }
+        
+        ?NewSong rdfs:label ?NewSongName2
+        BIND( IF( BOUND(?NewSongName1), ?NewSongName1, ?NewSongName2) AS ?NewSongName )
+        
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+}"
+133,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName1 
+        
+        }
+        
+        ?NewSong rdfs:label ?NewSongName2
+FILTER langMatches( lang(?NewSongName2), ""en"" )
+        BIND( IF( BOUND(?NewSongName1), ?NewSongName1, ?NewSongName2) AS ?NewSongName )
+        
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+}"
+134,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName1 
+        
+        }
+        
+        ?NewSong rdfs:label ?NewSongName2
+        BIND( IF( BOUND(?NewSongName1), ?NewSongName1, ?NewSongName2) AS ?NewSongName )
+        
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+}"
+135,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName1 
+          FILTER langMatches( lang(?NewSongName), ""en"" )
+        }
+        
+        ?NewSong rdfs:label ?NewSongName2
+        BIND( IF( BOUND(?NewSongName1), ?NewSongName1, ?NewSongName2) AS ?NewSongName )
+        
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+}"
+136,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName
+        }
+        
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+}"
+137,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { ?NewSong rdfs:label ?NewSongName }
+
+        OPTIONAL { 
+           ?NewSong dbpprop:name ?NewSongName
+        }
+        
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+}"
+138,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { ?NewSong rdfs:label ?NewSongName 
+FILTER langMatches( lang(?NewSongName), ""en"" )}
+        OPTIONAL { ?NewSong dbpprop:name ?NewSongName }        
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+}"
+139,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { ?NewSong rdfs:label ?NewSongName }
+        OPTIONAL { ?NewSong dbpprop:name ?NewSongName } 
+FILTER langMatches( lang(?NewSongName), ""en"" )       
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+}"
+140,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+            ?NewSong rdfs:label ?NewSongName 
+             FILTER langMatches( lang(?NewSongName), ""en"" )}
+        OPTIONAL { ?NewSong dbpprop:name ?NewSongName }        
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+}"
+141,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { 
+            ?NewSong rdfs:label ?NewSongName 
+             FILTER langMatches( lang(?NewSongName), ""en"" )}
+        OPTIONAL { ?NewSong dbpprop:name ?NewSongName }        
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+}
+ORDER BY ?SongName"
+142,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Greatest_Hits_(Queen_album)>
+
+SELECT DISTINCT ?Song ?SongName
+WHERE { 
+	album: dbpprop:title ?NewSong .
+        OPTIONAL { ?NewSong dbpprop:name ?NewSongName }        
+
+        BIND ( IF( ISURI(?NewSong), ?NewSongName, ?NewSong)  as ?SongName )
+        BIND ( IF( ISURI(?NewSong), ?NewSong, """" ) as ?Song )
+}
+ORDER BY ?SongName"
+143,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX resource:<http://dbpedia.org/resource/>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+PREFIX artist:<http://dbpedia.org/resource/Enter_Shikari>
+
+SELECT ?Genre ?Name
+WHERE {
+	artist: dbpedia-owl:genre ?Genre .
+	?Genre rdfs:label ?Name
+  
+	FILTER langMatches( lang(?Name), ""en"" )
+}"
+144,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX resource:<http://dbpedia.org/resource/>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+PREFIX artist:<http://dbpedia.org/resource/Queen_(band)>
+
+SELECT ?Genre ?Name
+WHERE {
+	artist: dbpedia-owl:genre ?Genre .
+	?Genre rdfs:label ?Name
+  
+	FILTER langMatches( lang(?Name), ""en"" )
+}"
+145,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX resource:<http://dbpedia.org/resource/>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+PREFIX artist:<http://dbpedia.org/resource/Metallica>
+
+SELECT ?Genre ?Name
+WHERE {
+	artist: dbpedia-owl:genre ?Genre .
+	?Genre rdfs:label ?Name
+  
+	FILTER langMatches( lang(?Name), ""en"" )
+}"
+146,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX artist:<http://dbpedia.org/resource/Enter_Shikari>
+
+SELECT DISTINCT ?Artist
+WHERE {
+	{ ?Artist dbpedia-owl:associatedBand artist: }
+	UNION
+	{ ?Artist dbpedia-owl:associatedMusicalArtist artist: }
+}"
+147,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX artist:<http://dbpedia.org/resource/Metallica>
+
+SELECT DISTINCT ?Artist
+WHERE {
+	{ ?Artist dbpedia-owl:associatedBand artist: }
+	UNION
+	{ ?Artist dbpedia-owl:associatedMusicalArtist artist: }
+}"
+148,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX resource:<http://dbpedia.org/resource/>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+PREFIX artist:<http://dbpedia.org/resource/Enter_Shikari>
+
+SELECT ?Name ?Abstract ?Comment ?ActiveSince ?Image
+WHERE {
+	artist: rdfs:label ?Name .
+	OPTIONAL { 
+		artist: dbpedia-owl:abstract ?Abstract ;
+			rdfs:comment ?Comment ;
+			dbpedia-owl:activeYearsStartYear ?ActiveSince ;
+			foaf:depiction ?Image
+	}
+
+	FILTER langMatches( lang(?Name), ""en"" )
+	FILTER langMatches( lang(?Abstract), ""en"" )
+	FILTER langMatches( lang(?Comment), ""en"" )
+}
+"
+149,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX resource:<http://dbpedia.org/resource/>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+PREFIX artist:<http://dbpedia.org/resource/Queen_(band)>
+
+SELECT ?Name ?Abstract ?Comment ?ActiveSince ?Image
+WHERE {
+	artist: rdfs:label ?Name .
+	OPTIONAL { 
+		artist: dbpedia-owl:abstract ?Abstract ;
+			rdfs:comment ?Comment ;
+			dbpedia-owl:activeYearsStartYear ?ActiveSince ;
+			foaf:depiction ?Image
+	}
+
+	FILTER langMatches( lang(?Name), ""en"" )
+	FILTER langMatches( lang(?Abstract), ""en"" )
+	FILTER langMatches( lang(?Comment), ""en"" )
+}"
+150,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX resource:<http://dbpedia.org/resource/>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+PREFIX album:<http://dbpedia.org/resource/Watch_the_Throne>
+
+SELECT DISTINCT ?Artist ?ArtistName ?Image
+WHERE {
+	album: dbpedia-owl:artist ?Artist .
+	?Artist rdfs:label ?ArtistName .
+
+	OPTIONAL { 
+		album: dbpedia-owl:abstract ?Abstract ;
+            rdfs:comment ?Comment ;
+            dbpedia-owl:releaseDate ?ReleaseDate ;
+            foaf:depiction ?Image
+  }
+
+  FILTER langMatches( lang(?ArtistName), ""en"" )
+}"
+151,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX resource:<http://dbpedia.org/resource/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+
+SELECT ?Genre ?Name
+WHERE {
+	album: dbpedia-owl:genre ?Genre .
+	?Genre rdfs:label ?Name
+  
+	FILTER langMatches( lang(?Name), ""en"" )
+}"
+152,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX resource:<http://dbpedia.org/resource/>
+PREFIX album:<http://dbpedia.org/resource/Metallica_(album)>
+
+SELECT ?Genre ?Name
+WHERE {
+	album: dbpedia-owl:genre ?Genre .
+	?Genre rdfs:label ?Name
+  
+	FILTER langMatches( lang(?Name), ""en"" )
+}
+"
+153,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX resource:<http://dbpedia.org/resource/>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+PREFIX album:<http://dbpedia.org/resource/Master_of_Puppets>
+
+SELECT ?Name ?Abstract ?Comment ?ReleaseDate ?Producer ?Image
+WHERE {
+	album: rdfs:label ?Name .
+	OPTIONAL { 
+		album: dbpedia-owl:abstract ?Abstract ;
+            rdfs:comment ?Comment ;
+            dbpedia-owl:releaseDate ?ReleaseDate ;
+            foaf:depiction ?Image
+  }
+
+	FILTER langMatches( lang(?Name), ""en"" )
+	FILTER langMatches( lang(?Abstract), ""en"" )
+	FILTER langMatches( lang(?Comment), ""en"" )
+}"
+154,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX album:<http://dbpedia.org/resource/Take_to_the_Skies>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+
+SELECT ?Single
+WHERE {
+	?Single dbpprop:fromAlbum album:
+}"
+155,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX album:<http://dbpedia.org/resource/Master_of_Puppets>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+
+SELECT ?Single
+WHERE {
+	?Single dbpprop:fromAlbum album:
+}"
+156,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX resource:<http://dbpedia.org/resource/>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+PREFIX album:<http://dbpedia.org/resource/Master_of_Puppets>
+
+SELECT ?Name ?Abstract ?Comment ?ReleaseDate ?Producer ?Image
+WHERE {
+	album: rdfs:label ?Name .
+	OPTIONAL { 
+		album: dbpedia-owl:abstract ?Abstract ;
+            rdfs:comment ?Comment ;
+            dbpedia-owl:releaseDate ?ReleaseDate ;
+            foaf:depiction ?Image
+  }
+
+	FILTER langMatches( lang(?Name), ""en"" )
+	FILTER langMatches( lang(?Abstract), ""en"" )
+	FILTER langMatches( lang(?Comment), ""en"" )
+}"
+157,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX resource:<http://dbpedia.org/resource/>
+PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+PREFIX album:<http://dbpedia.org/resource/Master_of_Puppets_(song)>
+
+SELECT ?Name ?Abstract ?Comment ?ReleaseDate ?Producer ?Image
+WHERE {
+	album: rdfs:label ?Name .
+	OPTIONAL { 
+		album: dbpedia-owl:abstract ?Abstract ;
+            rdfs:comment ?Comment ;
+            dbpedia-owl:releaseDate ?ReleaseDate ;
+            foaf:depiction ?Image
+  }
+
+	FILTER langMatches( lang(?Name), ""en"" )
+	FILTER langMatches( lang(?Abstract), ""en"" )
+	FILTER langMatches( lang(?Comment), ""en"" )
+}"
+158,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Master_of_Puppets>
+
+SELECT DISTINCT ?Producer ?NewArtist ?AlbumSameProducer ?AlbumSameProducerAndGenre
+WHERE {
+	album: dbpprop:producer ?Producer ;
+         dbpedia-owl:genre ?Genre ;
+         dbpedia-owl:artist ?Artist .
+
+	{ ?AlbumSameProducer dbpedia-owl:producer ?Producer }
+	UNION
+	{ ?AlbumSameProducer dbpprop:producer ?Producer }
+  
+	FILTER (!regex(?Producer, ?Artist, ""i""))
+	FILTER (!regex(album:, ?AlbumSameProducer , ""i""))
+
+	?AlbumSameProducer dbpprop:genre ?NewGenre 
+	BIND ((regex(?NewGenre, ?Genre, ""i"")) AS ?AlbumSameProducerAndGenre)
+}"
+159,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/A_Flash_Flood_of_Colour>
+
+SELECT DISTINCT ?Producer ?NewArtist ?AlbumSameProducer ?AlbumSameProducerAndGenre
+WHERE {
+	album: dbpprop:producer ?Producer ;
+         dbpedia-owl:genre ?Genre ;
+         dbpedia-owl:artist ?Artist .
+
+	{ ?AlbumSameProducer dbpedia-owl:producer ?Producer }
+	UNION
+	{ ?AlbumSameProducer dbpprop:producer ?Producer }
+  
+	FILTER (!regex(?Producer, ?Artist, ""i""))
+	FILTER (!regex(album:, ?AlbumSameProducer , ""i""))
+
+	?AlbumSameProducer dbpprop:genre ?NewGenre 
+	BIND ((regex(?NewGenre, ?Genre, ""i"")) AS ?AlbumSameProducerAndGenre)
+}"
+160,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/A_Flash_Flood_of_Colour>
+
+SELECT DISTINCT ?Producer ?AlbumSameProducer ?AlbumSameProducerAndGenre
+WHERE {
+	album: dbpprop:producer ?Producer ;
+         dbpedia-owl:genre ?Genre ;
+         dbpedia-owl:artist ?Artist .
+
+	{ ?AlbumSameProducer dbpedia-owl:producer ?Producer }
+	UNION
+	{ ?AlbumSameProducer dbpprop:producer ?Producer }
+  
+	FILTER (!regex(?Producer, ?Artist, ""i""))
+	FILTER (!regex(album:, ?AlbumSameProducer , ""i""))
+
+	?AlbumSameProducer dbpprop:genre ?NewGenre 
+	BIND ((regex(?NewGenre, ?Genre, ""i"")) AS ?AlbumSameProducerAndGenre)
+}"
+161,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/A_Night_at_the_Opera_(Queen_album)>
+
+SELECT DISTINCT ?Producer ?AlbumSameProducer ?AlbumSameProducerAndGenre
+WHERE {
+	album: dbpprop:producer ?Producer ;
+         dbpedia-owl:genre ?Genre ;
+         dbpedia-owl:artist ?Artist .
+
+	{ ?AlbumSameProducer dbpedia-owl:producer ?Producer }
+	UNION
+	{ ?AlbumSameProducer dbpprop:producer ?Producer }
+  
+	FILTER (!regex(?Producer, ?Artist, ""i""))
+	FILTER (!regex(album:, ?AlbumSameProducer , ""i""))
+
+	?AlbumSameProducer dbpprop:genre ?NewGenre 
+	BIND ((regex(?NewGenre, ?Genre, ""i"")) AS ?AlbumSameProducerAndGenre)
+}"
+162,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Watch_the_Throne>
+
+SELECT DISTINCT ?Producer ?AlbumSameProducer ?AlbumSameProducerAndGenre
+WHERE {
+	album: dbpprop:producer ?Producer ;
+         dbpedia-owl:genre ?Genre ;
+         dbpedia-owl:artist ?Artist .
+
+	{ ?AlbumSameProducer dbpedia-owl:producer ?Producer }
+	UNION
+	{ ?AlbumSameProducer dbpprop:producer ?Producer }
+  
+	FILTER (!regex(?Producer, ?Artist, ""i""))
+	FILTER (!regex(album:, ?AlbumSameProducer , ""i""))
+
+	?AlbumSameProducer dbpprop:genre ?NewGenre 
+	BIND ((regex(?NewGenre, ?Genre, ""i"")) AS ?AlbumSameProducerAndGenre)
+}"
+163,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Watch_the_Throne>
+
+SELECT DISTINCT ?Producer ?AlbumSameProducer ?AlbumSameProducerAndGenre
+WHERE {
+	album: dbpprop:producer ?Producer ;
+         dbpedia-owl:genre ?Genre ;
+         dbpedia-owl:artist ?Artist .
+
+	{ ?AlbumSameProducer dbpedia-owl:producer ?Producer }
+	UNION
+	{ ?AlbumSameProducer dbpprop:producer ?Producer }
+  
+	FILTER (!regex(?Producer, ?Artist, ""i""))
+	FILTER (!regex(album:, ?AlbumSameProducer , ""i""))
+
+	?AlbumSameProducer dbpprop:genre ?NewGenre 
+	BIND ((regex(?NewGenre, ?Genre, ""i"")) AS ?AlbumSameProducerAndGenre)
+}"
+164,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Watch_the_Throne>
+
+SELECT DISTINCT ?Producer ?AlbumSameProducer ?AlbumSameProducerAndGenre
+WHERE {
+	album: dbpprop:producer ?Producer ;
+         dbpedia-owl:genre ?Genre ;
+         dbpedia-owl:artist ?Artist .
+
+	{ ?AlbumSameProducer dbpedia-owl:producer ?Producer }
+	UNION
+	{ ?AlbumSameProducer dbpprop:producer ?Producer }
+  
+	FILTER (!regex(?Producer, ?Artist, ""i""))
+	FILTER (!regex(album:, ?AlbumSameProducer , ""i""))
+
+	?AlbumSameProducer dbpprop:genre ?NewGenre 
+	BIND ((regex(?NewGenre, ?Genre, ""i"")) AS ?AlbumSameProducerAndGenre)
+}"
+165,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbpedia-owl:<http://dbpedia.org/ontology/>
+PREFIX dbpprop:<http://dbpedia.org/property/>
+PREFIX album:<http://dbpedia.org/resource/Watch_the_Throne>
+
+SELECT DISTINCT ?Producer ?AlbumSameProducer ?AlbumSameProducerAndGenre
+WHERE {
+	album: dbpprop:producer ?Producer ;
+         dbpedia-owl:genre ?Genre ;
+         dbpedia-owl:artist ?Artist .
+
+	{ ?AlbumSameProducer dbpedia-owl:producer ?Producer }
+	UNION
+	{ ?AlbumSameProducer dbpprop:producer ?Producer }
+  
+	FILTER (!regex(?Producer, ?Artist, ""i""))
+	FILTER (!regex(album:, ?AlbumSameProducer , ""i""))
+
+	?AlbumSameProducer dbpprop:genre ?NewGenre 
+	BIND ((regex(?NewGenre, ?Genre, ""i"")) AS ?AlbumSameProducerAndGenre)
+}"

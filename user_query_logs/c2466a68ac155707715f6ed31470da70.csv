@@ -1,0 +1,2070 @@
+,query
+0,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?released ?abstract WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia2:starring <http://dbpedia.org/resource/Tom_Cruise>.
+?subject rdfs:comment ?abstract.
+?subject rdfs:label ?label.
+FILTER(lang(?abstract) = ""en"" && lang(?label) = ""en"").
+?subject <http://dbpedia.org/ontology/releaseDate> ?released.
+FILTER(xsd:date(?released) < ""2000-01-01""^^xsd:date).
+} ORDER BY ?released
+LIMIT 20
+"
+1,"SELECT ?subject ?label ?abstract WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia2:starring <http://dbpedia.org/resource/Sophie_Marceau>.
+?subject rdfs:label ?label.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""fr"" && lang(?label) = ""fr"").
+}
+"
+2,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?abstract WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia2:starring <http://dbpedia.org/resource/Sophie_Marceau>.
+?subject rdfs:label ?label.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""fr"" && lang(?label) = ""fr"").
+}"
+3,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?released ?abstract ?actor WHERE {
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> rdfs:label ?label.
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> rdfs:comment ?abstract.
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> dbpedia2:starring ?actor.
+FILTER(lang(?abstract) = ""fr"" && lang(?label) = ""fr"").
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> <http://dbpedia.org/ontology/releaseDate> ?released.
+} ORDER BY ?released
+LIMIT 20
+"
+4,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?released ?abstract ?actor WHERE { {
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> rdfs:label ?label.
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> rdfs:comment ?abstract.
+
+FILTER(lang(?abstract) = ""fr"" && lang(?label) = ""fr"").
+http://dbpedia.org/resource/The_Chorus_(2004_film) <http://dbpedia.org/ontology/releaseDate> ?released.
+}
+UNION 
+{
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> dbpedia2:starring ?actor.
+}
+}
+LIMIT 20
+"
+5,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?released ?abstract ?actor WHERE { {
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> rdfs:label ?label.
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> rdfs:comment ?abstract.
+
+FILTER(lang(?abstract) = ""fr"" && lang(?label) = ""fr"").
+http://dbpedia.org/resource/The_Chorus_(2004_film) <http://dbpedia.org/ontology/releaseDate> ?released.
+}
+UNION 
+{
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> dbpedia2:starring ?actor.
+}
+}
+"
+6,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?released ?abstract ?actor WHERE { {
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> rdfs:label ?label.
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> rdfs:comment ?abstract.
+
+FILTER(lang(?abstract) = ""fr"" && lang(?label) = ""fr"").
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> <http://dbpedia.org/ontology/releaseDate> ?released.
+}
+UNION 
+{
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> dbpedia2:starring ?actor.
+}
+}
+"
+7,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?name ?description ?homepage WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia2:starring <http://dbpedia.org/resource/Tom_Cruise>.
+
+<http://dbpedia.org/resource/Tom_Cruise> foaf:name ?name.
+<http://dbpedia.org/resource/Tom_Cruise> dc:description ?description.
+<http://dbpedia.org/resource/Tom_Cruise> foaf :homepage ?homepage
+}
+"
+8,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?name ?description ?homepage WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia2:starring <http://dbpedia.org/resource/Tom_Cruise>.
+
+<http://dbpedia.org/resource/Tom_Cruise> foaf:name ?name.
+<http://dbpedia.org/resource/Tom_Cruise> dc:description ?description.
+<http://dbpedia.org/resource/Tom_Cruise> foaf:homepage ?homepage
+}
+"
+9,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?name ?birthplace ?description ?website WHERE
+
+{
+
+<http://dbpedia.org/resource/Tom_Cruise> dbpprop:name ?name.
+<http://dbpedia.org/resource/Tom_Cruise> dbpprop:birthPlace ?birthplace.
+<http://dbpedia.org/resource/Tom_Cruise> dc:description ?description.
+<http://dbpedia.org/resource/Tom_Cruise> foaf:homepage ?website
+
+}
+"
+10,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?name ?birthplace ?description ?website WHERE
+
+{
+
+<http://dbpedia.org/resource/Tom_Cruise> dbpprop:name ?name.
+<http://dbpedia.org/resource/Tom_Cruise> dbpprop:birthPlace ?birthplace.
+<http://dbpedia.org/resource/Tom_Cruise> dc:description ?description.
+<http://dbpedia.org/resource/Tom_Cruise> foaf:homepage ?website
+
+}
+"
+11,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?name ?description ?homepage WHERE {
+
+?subject dbpedia2:starring <http://dbpedia.org/resource/Tom_Cruise>.
+
+<http://dbpedia.org/resource/Tom_Cruise> foaf:name ?name.
+<http://dbpedia.org/resource/Tom_Cruise> dc:description ?description.
+<http://dbpedia.org/resource/Tom_Cruise> foaf:homepage ?homepage
+}
+"
+12,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?name ?birthplace ?description ?website WHERE
+{
+<http://dbpedia.org/resource/Tom_Cruise> dbpedia2:name ?name.
+<http://dbpedia.org/resource/Tom_Cruise> dbpprop:birthPlace ?birthplace.
+<http://dbpedia.org/resource/Tom_Cruise> dc:description ?description.
+<http://dbpedia.org/resource/Tom_Cruise> foaf:homepage ?website
+}
+"
+13,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?abstract WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia2:starring <http://dbpedia.org/resource/Sophie_Marceau>.
+?subject rdfs:label ?label.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""fr"" && lang(?label) = ""fr"").
+}
+"
+14,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?Author WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia2:author ?Author
+}
+LIMIT 20
+"
+15,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?Author WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia2:author ?Author
+FILTER(lang(?abstract) = ""fr"" && lang(?label) = ""fr"").
+}
+LIMIT 20"
+16,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?basedOn WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia2:basedOn ?basedOn.
+}
+LIMIT 20
+"
+17,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?released ?abstract ?actor WHERE {
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> rdfs:label ?label.
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> rdfs:comment ?abstract.
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> dbpedia2:starring ?actor.
+FILTER(lang(?abstract) = ""fr"" && lang(?label) = ""fr"").
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> <http://dbpedia.org/ontology/releaseDate> ?released.
+} ORDER BY ?released
+LIMIT 20
+"
+18,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?abstract ?label ?actor ?released WHERE {
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> rdfs:comment ?abstract.
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> rdfs:label ?label.
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> dbpedia2:starring ?actor.
+FILTER(lang(?abstract) = ""fr"" && lang(?label) = ""fr"").
+<http://dbpedia.org/resource/The_Chorus_(2004_film)><http://dbpedia.org/ontology/releaseDate> ?released.
+}
+ORDER BY ?released
+LIMIT 20
+"
+19,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?released ?abstract ?actor WHERE { {
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> rdfs:label ?label.
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> rdfs:comment ?abstract.
+
+FILTER(lang(?abstract) = ""fr"" && lang(?label) = ""fr"").
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> <http://dbpedia.org/ontology/releaseDate> ?released.
+}
+UNION 
+{
+<http://dbpedia.org/resource/The_Chorus_(2004_film)> dbpedia2:starring ?actor.
+}
+}
+LIMIT 20
+"
+20,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?name ?birthplace ?description ?website WHERE
+{
+<http://dbpedia.org/resource/Tom_Cruise> dbpedia2:name ?name.
+<http://dbpedia.org/resource/Tom_Cruise> dbpprop:birthPlace ?birthplace.
+<http://dbpedia.org/resource/Tom_Cruise> dc:description ?description.
+<http://dbpedia.org/resource/Tom_Cruise> foaf:homepage ?website
+}
+"
+21,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT * WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Book>.
+?subject dbpedia2:author <http://dbpedia.org/resource/Jules_Verne>.
+} 
+LIMIT 20
+"
+22,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Book>.
+?subject dbpedia2:author <http://dbpedia.org/resource/Jules_Verne>.
+} 
+LIMIT 20
+"
+23,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Book>.
+?subject dbpedia2:author <http://dbpedia.org/resource/Jules_Verne>.
+}
+"
+24,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Book>.
+?subject dbpedia2:author <http://dbpedia.org/resource/Jules_Verne>.
+}
+LIMIT 20"
+25,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf WHERE { { 
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> ?property ?hasValue 
+} UNION{ 
+?isValueOf ?property <http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> }
+}
+"
+26,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT * WHERE { { 
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> ?property ?hasValue 
+} UNION{ 
+?isValueOf ?property <http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> }
+}
+"
+27,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT * WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Book>.
+?subject dbpedia2:author <http://dbpedia.org/resource/Jules_Verne>.
+}
+"
+28,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?name ?influence WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpprop:name ?name.
+OPTIONAL {
+?subject dbpprop:influenced ?influence.
+}
+}
+"
+29,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?name ?influence WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpprop:name ?name.
+OPTIONAL {
+?subject dbpprop:influenced ?influence.
+}
+}
+"
+30,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?name ?influence WHERE { {
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpprop:name ?name.
+OPTIONAL {
+
+}
+}
+UNION{
+?subject dbpprop:influenced ?influence.
+}
+}"
+31,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?name ?influence WHERE { {
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpprop:name ?name.
+OPTIONAL {
+
+}
+}
+UNION{
+?subject dbpprop:influenced ?influence.
+}
+}
+LIMIT 20"
+32,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?name ?influence WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpprop:name ?name.
+OPTIONAL {
+?subject dbpprop:influenced ?influence.
+}
+}
+LIMIT 20"
+33,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?name ?influence WHERE { {
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpprop:name ?name.
+OPTIONAL {
+
+}
+}
+UNION{
+?subject dbpprop:influenced ?influence.
+}
+}
+LIMIT 20"
+34,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?name ?influence WHERE { {
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+
+?subject dbpprop:name ?name.
+OPTIONAL {
+
+}
+}
+UNION{
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpprop:influenced ?influence.
+}
+}
+LIMIT 20"
+35,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?name ?influence WHERE { {
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpprop:influenced ?influence.
+?subject dbpprop:name ?name.
+OPTIONAL {
+
+}
+}
+UNION{
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+}
+}
+LIMIT 20"
+36,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?name ?influence WHERE { {
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpprop:influenced ?influence.
+?subject dbpprop:name ?name.
+OPTIONAL {
+
+}
+}
+UNION{
+?subject dbpprop:influenced ?influence.
+}
+}
+LIMIT 20"
+37,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?name ?influence WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpedia2:name ?name.
+OPTIONAL {
+?subject dbpprop:influenced ?influence.
+}
+}
+"
+38,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?name ?influence WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpedia2:name ?name.
+OPTIONAL {
+?subject dbpedia2:influenced ?influence.
+}
+}
+"
+39,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?name ?influence WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpedia2:name ?name.
+OPTIONAL {
+?subject dbpedia2:influenced ?influence.
+}
+}
+
+"
+40,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?name ?influence WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpedia2:name ?name.
+
+}
+
+"
+41,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?name ?influence WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpedia2:name ?name.
+OPTIONAL {
+?subject dbpedia2:influenced ?influence.
+}
+}
+"
+42,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?name ?influence WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpedia2:name ?name.
+
+?subject dbpedia2:influenced ?influence.
+}
+"
+43,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?name ?influence WHERE {{
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpedia2:name ?name.
+}
+UNION{
+?subject dbpedia2:influenced ?influence.
+}}
+"
+44,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?name ?influence WHERE {{
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpedia2:name ?name.
+}
+UNION{
+?subject dbpedia2:influenced ?influence.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+}}"
+45,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?name ?influence WHERE {{
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpedia2:name ?name.
+}
+UNION{
+?subject dbpedia2:influenced ?influence.
+?subject dbpedia2:name ?name.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+}}"
+46,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?name ?influence WHERE {{
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpedia2:name ?name.
+}UNION{
+?subject dbpedia2:influenced ?influence.
+}
+UNION{
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpedia2:name ?name.
+}
+}"
+47,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?name ?influence WHERE {{
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpedia2:name ?name.
+}UNION{
+?subject dbpedia2:influenced ?influence.
+}
+}"
+48,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?name ?influence WHERE {{
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpedia2:name ?name.
+?subject dbpedia2:influenced ?influence.
+}"
+49,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?name ?influence WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpedia2:name ?name.
+?subject dbpedia2:influenced ?influence.
+}"
+50,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?name ?influence WHERE {{
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpedia2:name ?name.
+}UNION {
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpedia2:name ?name.
+?subject dbpedia2:influenced ?influence.
+}
+}"
+51,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?name ?influence WHERE {{
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpedia2:name ?name.
+}UNION {
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpedia2:name ?name.
+}UNION{
+?subject dbpedia2:influenced ?influence.
+}
+}
+}"
+52,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?name ?influence WHERE {{
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpedia2:name ?name.
+}UNION {
+?subject rdf:type <http://dbpedia.org/ontology/Writer>.
+?subject dbpprop:birthPlace <http://dbpedia.org/resource/Nantes>.
+?subject dbpedia2:name ?name.
+}UNION{
+?subject dbpedia2:influenced ?influence.
+}
+}"
+53,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+}"
+54,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?class WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class ?class
+}"
+55,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?class WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class
+}"
+56,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?class WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?class dbpedia2:class ?class
+}"
+57,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?class ?label WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class
+?subject rdfs:label ?label
+}"
+58,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?class ?label WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+}"
+59,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?class ?label WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+
+FILTER(lang(?label) = ""fr"").
+}"
+60,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?class ?label WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?label rdfs:label ?label.
+
+FILTER(lang(?label) = ""fr"" && ?label=""Audi"").
+}"
+61,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?class ?label WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?label rdfs:label ?label.
+
+FILTER(lang(?label) = ""fr"").
+}"
+62,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?class ?label WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+
+FILTER(lang(?label) = ""fr"" && ?label=""Audi"").
+}"
+63,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?class ?label WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+
+FILTER(lang(?label) = ""fr"" ).
+}"
+64,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?class ?label WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+
+FILTER(lang(?label) = ""fr"" && ?label=""Audi RS4"").
+}"
+65,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?class ?label WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+
+?t rdfs:label ""Audi RS4"".
+
+FILTER(lang(?label) = ""fr"" ).
+}"
+66,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?class ?label WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+
+?t rdfs:label ""Audi RS4"".
+
+FILTER(lang(?label) = ""fr"" ).
+}"
+67,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?class ?label WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+
+FILTER(lang(?label) = ""fr"").
+}"
+68,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?class ?label WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+
+FILTER(lang(?label) = ""fr"" && contains(?label,""Audi"")).
+}"
+69,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?class ?label WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+}"
+70,"SELECT ?instance
+WHERE { ?instance a <http://dbpedia.org/resource/Concept_car> }
+ORDER BY ?instance"
+71,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?instance
+WHERE { ?instance a <http://dbpedia.org/resource/Concept_car> }
+ORDER BY ?instance"
+72,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?subject ?class ?label WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+}"
+73,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct (?subject) ?class ?label WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+}"
+74,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?class ?label WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject foaf:name ?label.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+}"
+75,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?class ?nameWHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject foaf:name ?name.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+}"
+76,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct (?subject) ?class ?label ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+}"
+77,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct (?subject) ?class ?label ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+
+?test foaf:name
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+}"
+78,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct (?subject) ?class ?label ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+
+?test foaf:name ?test
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+}"
+79,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct (?subject) ?class ?label ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+
+?test foaf:name ?test.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+}"
+80,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct (?subject) ?class ?label ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+
+?test foaf:name
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+}"
+81,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct (?subject) ?class ?label ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+
+?test foaf:name.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+}"
+82,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct (?subject) ?class ?label ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+
+?subject foaf:name ?test.
+}"
+83,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct (?subject) ?class ?label WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+
+?subject foaf:name ?label.
+}"
+84,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct (?subject) ?class ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+
+?subject foaf:name ?test.
+}"
+85,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct (?subject) ?class ?label ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+?subject foaf:name ?test.
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+
+
+}"
+86,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct (?subject) ?class ?label ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+
+
+?subject foaf:name ?test.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+
+
+}"
+87,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct (?subject) ?class ?label ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+?subject foaf:name ?depiction.
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+
+
+}"
+88,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct (?subject) ?class ?label ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+?subject foaf:depiction ?test.
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+
+
+}"
+89,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://upload.wikimedia.org/wikipedia/commons/c/cb/2006-2008_Audi_RS_4_(8ED)_quattro_Avant_(2011-09-03)_01.jpg> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://upload.wikimedia.org/wikipedia/commons/c/cb/2006-2008_Audi_RS_4_(8ED)_quattro_Avant_(2011-09-03)_01.jpg> }
+}"
+90,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct (?subject) ?class ?label ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:layout ?layout.
+?subject rdfs:label ?label.
+?subject foaf:depiction ?test.
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+
+
+}"
+91,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct (?subject) ?layout?label ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:layout ?layout.
+?subject rdfs:label ?label.
+?subject foaf:depiction ?test.
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+
+
+}"
+92,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct (?subject) ?class ?label ?lienImage WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+?subject foaf:depiction ?lienImage.
+
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+
+
+}"
+93,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?class ?label ?lienImage WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject dbpedia2:class ?class.
+?subject rdfs:label ?label.
+?subject foaf:depiction ?lienImage.
+
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+
+
+}"
+94,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?lienImage WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject rdfs:label ?label.
+?subject foaf:depiction ?lienImage.
+
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+
+
+}"
+95,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?lienImage ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject rdfs:label ?label.
+?subject foaf:depiction ?lienImage.
+?subject foaf:name ?test.
+
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+
+
+}"
+96,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?lienImage ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject rdfs:label ?label.
+?subject foaf:depiction ?lienImage.
+?subject foaf:name ?test.
+
+
+FILTER(lang(?test) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+
+
+}"
+97,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?lienImage ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject rdfs:label ?label.
+?subject foaf:depiction ?lienImage.
+?subject dbpedia2:modelStartDate ?test.
+
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+
+
+}"
+98,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?lienImage ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject rdfs:label ?label.
+?subject foaf:depiction ?lienImage.
+
+
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+
+
+}"
+99,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?lienImage ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject rdfs:label ?label.
+?subject foaf:depiction ?lienImage.
+
+?subject dbpedia2:powerType ?test.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+
+
+}"
+100,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?lienImage WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject rdfs:label ?label.
+?subject foaf:depiction ?lienImage.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+
+
+}"
+101,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?lienImage ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject rdfs:label ?label.
+?subject foaf:depiction ?lienImage.
+?subject dbpprop:engine ?test.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+
+}"
+102,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?lienImage ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject rdfs:label ?label.
+?subject foaf:depiction ?lienImage.
+?subject dbpprop:transmission ?test.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW""))).
+
+}"
+103,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?lienImage ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject rdfs:label ?label.
+?subject foaf:depiction ?lienImage.
+?subject dbpprop:transmission ?test.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW"")) && datatype(?test) = xsd:integer )).
+
+}"
+104,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?lienImage ?test WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject rdfs:label ?label.
+?subject foaf:depiction ?lienImage.
+?subject dbpprop:transmission ?test.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW"")) && datatype(?test) = xsd:integer ).
+
+}"
+105,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?lienImage max(?test) WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject rdfs:label ?label.
+?subject foaf:depiction ?lienImage.
+?subject dbpprop:transmission ?test.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW"")) && datatype(?test) = xsd:integer ).
+
+}"
+106,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?lienImage ?transmission WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject rdfs:label ?label.
+?subject foaf:depiction ?lienImage.
+?subject dbpprop:transmission ?transmission.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW"")) && datatype(?transmission) = xsd:integer ).
+
+}"
+107,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?lienImage ?transmission WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject rdfs:label ?label.
+?subject foaf:depiction ?lienImage.
+?subject dbpprop:transmission ?transmission.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW"")) && datatype(?transmission) = xsd:integer && ?transmission > 5).
+
+}"
+108,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?lienImage Max(?transmission) WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Automobile>.
+?subject dbpedia2:class <http://dbpedia.org/resource/Sports_car>.
+?subject rdfs:label ?label.
+?subject foaf:depiction ?lienImage.
+?subject dbpprop:transmission ?transmission.
+
+FILTER(lang(?label) = ""fr"" && ( contains(?label,""Audi"") || contains(?label,""BMW"")) && datatype(?transmission) = xsd:integer && ?transmission > 5).
+
+}"
+109,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf WHERE { { 
+<http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> ?property ?hasValue 
+} UNION{ 
+?isValueOf ?property <http://dbpedia.org/resource/A_Journey_to_the_Center_of_the_Earth> }
+}
+"

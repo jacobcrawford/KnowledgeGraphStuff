@@ -1,0 +1,127 @@
+,query
+0,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Galileo_Galilei> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+1,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Galileo_Galilei>} LIMIT 100
+2,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Ostilio_Ricci> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+3,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/University_of_Pisa> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+4,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Ostilio_Ricci>} LIMIT 100
+5,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/University_of_Pisa>} LIMIT 100
+6,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Duchy_of_Florence> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+7,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Duchy_of_Florence>} LIMIT 100
+8,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Pisa> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+9,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Pisa>} LIMIT 100
+10,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Grand_Duchy_of_Tuscany> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+11,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Arcetri> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+12,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Grand_Duchy_of_Tuscany>} LIMIT 100
+13,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Arcetri>} LIMIT 100
+14,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Physics> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+15,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Physics>} LIMIT 100
+16,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Catholic_Church> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+17,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Catholic_Church>} LIMIT 100
+18,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/University_of_Padua> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+19,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/University_of_Padua>} LIMIT 100
+20,"SELECT DISTINCT *  WHERE  {{<http://dbpedia.org/resource/Galileo_Galilei> ?property ?object. FILTER(!isLiteral(?object))} UNION 	 {<http://dbpedia.org/resource/Galileo_Galilei> ?property 	 ?object.FILTER(isLiteral(?object)).FILTER(lang(?object) =""it"")} UNION 	 {<http://dbpedia.org/resource/Galileo_Galilei> ?property 	 ?object.FILTER(isLiteral(?object)).FILTER(lang(?object) =""en"")}}  ORDER BY ?property"
+21,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/legge.rdf/L1990_149>}
+22,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/legge.rdf/L1990_149~~nodeID://b519930050126448>}
+23,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/legislatura.rdf/repubblica_10>}
+24,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/legge>}
+25,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/assemblea.rdf/a10>}
+26,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/legislatura>}
+27,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1211>}
+28,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1212>}
+29,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1213>}
+30,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1214>}
+31,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1216>}
+32,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1217>}
+33,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1218>}
+34,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/sistemaElettorale.rdf/se8>}
+35,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1219>}
+36,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1220>}
+37,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1221>}
+38,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1222>}
+39,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1215>}
+40,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1223>}
+41,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1227>}
+42,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1242>}
+43,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1245>}
+44,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1234>}
+45,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1246>}
+46,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1254>}
+47,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1251>}
+48,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1249>}
+49,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1250>}
+50,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1225>}
+51,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/organo.rdf/o10_1228>}
+52,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/legislatura.rdf/repubblica_10>}
+53,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/legislatura>}
+54,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/assemblea.rdf/a10>}
+55,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/deputato.rdf/d29290_10>}
+56,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.culturaitalia.it/resource/title/biblioteca-universitaria-alessandrina>}
+57,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma>}
+58,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/avvisi>}
+59,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/strade-di-propriet-dell-amministrazione-provinciale>}
+60,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/provinciawifi>}
+61,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/dati-statistici-sulla-popolazione>}
+62,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/iscrizioni-ai-centri-per-l-impiego>}
+63,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/consultori-di-roma-e-provincia>}
+64,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/retribuzione-annua-lorda-dei-dirigenti>}
+65,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/parchi-gioco-di-roma-e-provincia>}
+66,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/centri-ascolto-femminile>}
+67,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/elenco-news-portale-istituzionale>}
+68,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/sportelli-antiviolenza>}
+69,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/tirocini-stipulati-dai-cpi-come-soggetto-promotore>}
+70,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/roma-pi-guida-alle-meraviglie-intorno-a-roma>}
+71,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/indennit-degli-eletti-al-consiglio-provinciale>}
+72,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/cessazioni-anticipate-contratti-e-lavoratori-2011>}
+73,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/situazione-patrimoniale-membri-della-giunta>}
+74,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/censimento-impianti-sportivi-di-roma-e-provincia>}
+75,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/elenco-impianti-di-produzione-di-energia-da-fonti-rinnovabili-autorizzati-dalla-provincia>}
+76,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/richieste-di-lavoro-pervenute-ai-cpi-preselezioni>}
+77,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/censimento-agricoltura-2010>}
+78,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/siti-di-interesse-archeologico-nel-territorio-provinciale>}
+79,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/centri-per-l-impiego>}
+80,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/istituti-scolastici-di-competenza-della-provincia-di-roma>}
+81,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/corsi-apprendistato-professionalizzante>}
+82,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/situazione-patrimoniale-membri-della-giunta>}
+83,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/situazione-patrimoniale-membri-della-giunta/distribution/dis0>}
+84,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/situazione-patrimoniale-membri-della-giunta/distribution/dis1>}
+85,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/situazione-patrimoniale-membri-della-giunta/distribution/dis2>}
+86,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/situazione-patrimoniale-membri-della-giunta/distribution/dis3>}
+87,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/membri-della-giunta>}
+88,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/situazione-patrimoniale>}
+89,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/trasparenza>}
+90,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma>}
+91,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/avvisi>}
+92,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/hotspot>}
+93,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/localizzazione>}
+94,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/strade>}
+95,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/popolazione>}
+96,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/residenti>}
+97,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/centri-per-impiego>}
+98,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/iscrizioni>}
+99,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/bambini>}
+100,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/news>}
+101,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/notizie>}
+102,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/tirocini>}
+103,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/eletti>}
+104,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/2011>}
+105,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/anticipate>}
+106,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/cessazioni>}
+107,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/lavoratori>}
+108,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/lavoro>}
+109,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/contratti>}
+110,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/energia>}
+111,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/impianti>}
+112,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/offerte-di-lavoro>}
+113,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/preselezioni>}
+114,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/siti-archeologici>}
+115,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/provinciawifi>}
+116,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/provinciawifi/distribution/dis0>}
+117,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/provinciawifi/distribution/dis1>}
+118,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/provinciawifi/distribution/dis2>}
+119,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/provinciawifi/distribution/dis3>}
+120,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/provinciawifi/distribution/dis4>}
+121,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/provinciawifi/distribution/dis5>}
+122,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/dati.provinciaRoma/provinciawifi/distribution/dis6>}
+123,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/hotspot>}
+124,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/localizzazione>}
+125,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://data.opendataday.it/resource/tag/turismo>}

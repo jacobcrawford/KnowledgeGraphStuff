@@ -1,0 +1,3270 @@
+,query
+0,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct  ?test ?beerlabel ?abstract  ?country ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+  ?test dbo:abstract ?abstract .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+OPTIONAL {
+{?test dbpedia2:location ?country}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+""FILTER langMatches( lang(?beerlabel), \""EN\"" ) . "" 
+""FILTER langMatches( lang(?abstract), \""EN\"" ) ."" 
+""}"""
+1,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract  ?country ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+  ?test dbo:abstract ?abstract .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+OPTIONAL {
+{?test dbpedia2:location ?country}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+""FILTER langMatches( lang(?beerlabel), \""EN\"" ) . "" 
+""FILTER langMatches( lang(?abstract), \""EN\"" ) ."" 
+""}"""
+2,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract  ?country ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+  ?test dbo:abstract ?abstract .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+OPTIONAL {
+{?test dbpedia2:location ?country}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+""FILTER langMatches( lang(?beerlabel), ""EN"" ) . "" 
+""FILTER langMatches( lang(?abstract), ""EN"" ) ."" 
+""}"""
+3,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract  ?country ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+  ?test dbo:abstract ?abstract .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+OPTIONAL {
+{?test dbpedia2:location ?country}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""EN"" ) .
+FILTER langMatches( lang(?abstract), ""EN"" ) .
+""}"""
+4,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract  ?country ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+  ?test dbo:abstract ?abstract .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+OPTIONAL {
+{?test dbpedia2:location ?country}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""EN"" ) .
+FILTER langMatches( lang(?abstract), ""EN"" ) .
+}"
+5,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?country}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""EN"" ) .
+FILTER langMatches( lang(?abstract), ""EN"" ) .
+}"
+6,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?country}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""EN"" ) .
+FILTER langMatches( lang(?abstract), ""EN"" ) .
+}"
+7,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?country}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+8,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Carlsberg"") .
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?country}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+9,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Carlsberg"") .
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+10,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Carlsberg"") .
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+11,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Carlsberg"") .
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+12,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+13,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?logo where {
+  ?beer skos:broader* category:Beer .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+14,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?logo where {
+  ?beer skos:broader* category:Beer .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Erdinger"") .
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+15,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?logo where {
+  ?beer skos:broader* category:Beer .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Guiness"") .
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+16,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?logo where {
+  ?beer skos:broader* category:Beer .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Guinness"") .
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+17,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Guinness"") .
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+18,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT UNIQUE distinct  ?test ?beerlabel ?abstract ?country ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Guinness"") .
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+19,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT DISTINCT distinct  ?test ?beerlabel ?abstract ?country ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Guinness"") .
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+20,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Guinness"") .
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+21,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Guinness"") .
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+22,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Guinness> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Guinness> }
+}"
+23,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+  ?test rdfs:label Guinness
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+24,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+  ?test rdfs:label 'Guinness'
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+25,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+  ?test rdfs:label 'Guinness'
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+26,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+  ?test rdfs:label ""Guinness""
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+27,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+  ?test rdfs:label ""Guinness"" .
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+28,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+  ?beerlabel rdfs:label ""Guinness"" .
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+29,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+  ?beerlabel rdfs:label ""Guinness"" .
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+30,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?test ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Guinness"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+31,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Guinness"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+32,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Guinness"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?location}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+33,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Guinness"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+34,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbpedia2:location ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+35,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dpo:locationCity ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+36,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+37,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city}
+UNION
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+38,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city}
+UNION
+{?test dbo:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+39,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city}
+UNION
+{?test dbo:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+40,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+{?test dbo:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+41,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+{?test dbo:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+42,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Carlsberg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+{?test dbo:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+43,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Erdinger"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+{?test dbo:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+44,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Erdinger"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+45,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+46,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+47,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Carlsberg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+48,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Heineken"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+49,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kilkenny"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+50,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Battin"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+51,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Bofferding"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+52,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Jever"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+53,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Erdinger"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+54,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country}
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+55,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Germany> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Germany> }
+}"
+56,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Germany> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Germany> }
+}"
+57,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+{?country rdfs:label ?country } .
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} 
+
+
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+58,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+{?country rdfs:label ?country } .
+
+UNION
+{?test dbpedia2:locationCountry ?country} 
+
+{?test dbo:locationCountry ?country}
+
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+59,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+{?country rdfs:label ?country } .
+
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+{?test dbo:locationCountry ?country}
+
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+60,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+} .
+
+OPTIONAL {
+{?country rdfs:label ?country } .
+
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+61,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+} .
+
+OPTIONAL {
+{?country dbpedia2:label ?country } .
+
+}
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+62,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+OPTIONAL {
+{?country rdfs:label ?country } .
+
+}
+
+
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+63,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+OPTIONAL {
+{?country rdfs:label ?labell } .
+
+}
+
+
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+}"
+64,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+OPTIONAL {
+{?country rdfs:label ?labell } .
+
+}
+
+
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+}"
+65,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+OPTIONAL {
+{?test rdfs:label ?labell } .
+
+}
+
+
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+}"
+66,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+OPTIONAL {
+{?country rdfs:label ?labell } .
+
+}
+
+
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+}"
+67,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+OPTIONAL {
+{?country rdfs:label ?country } .
+
+}
+
+
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+}"
+68,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+OPTIONAL {
+{?country rdfs:label ?label } .
+
+}
+
+
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+}"
+69,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+OPTIONAL {
+{?country rdfs:label ?label } .
+
+}
+
+
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+}"
+70,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+
+
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+}"
+71,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+}"
+72,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+
+}"
+73,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+
+OPTIONAL {
+{?country rdfs:label ?label } .
+
+}
+}"
+74,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+
+
+{?country rdfs:label ?label } .
+
+
+}"
+75,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+{?country rdfs:label ?label } .
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+
+
+
+
+
+}"
+76,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+{?country rdfs:label ?labell } .
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+
+
+
+
+}"
+77,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+{?country rdfs:label ?labell } .
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+
+
+
+
+}"
+78,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Heineken"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+{?country rdfs:label ?labell } .
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+
+
+
+
+}"
+79,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Guinness"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+{?country rdfs:label ?labell } .
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+
+
+
+
+}"
+80,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Guinness"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+
+
+
+
+
+}"
+81,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Guinness"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+OPTIONAL{
+{?country rdfs:label ?labell } .
+}
+
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+
+
+
+
+
+}"
+82,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Guinness"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+
+
+
+
+
+
+}"
+83,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Guinness"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+} 
+
+OPTION{
+{?country rdfs:label ?labell } .
+
+}
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+
+
+
+
+
+
+}"
+84,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Guinness"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+} .
+
+OPTION{
+{?country rdfs:label ?labell } .
+
+}
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+
+
+
+
+
+
+}"
+85,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Guinness"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+} .
+
+OPTIONAL{
+{?country rdfs:label ?labell } .
+
+}
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+
+
+
+
+
+
+}"
+86,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+} .
+
+OPTIONAL{
+{?country rdfs:label ?labell } .
+
+}
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+
+
+
+
+
+
+}"
+87,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+} .
+
+OPTIONAL{
+{?country rdfs:label ?labell } .
+
+}
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+
+
+
+
+
+}"
+88,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+} .
+
+OPTIONAL{
+{?country rdfs:label ?labell } .
+
+}
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+
+
+
+
+
+
+}"
+89,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+{?country rdfs:label ?labell } .
+} 
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+
+
+
+
+
+
+}"
+90,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Guinness"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+{?country rdfs:label ?labell } .
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+
+
+
+
+}"
+91,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+{?country rdfs:label ?labell } .
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+
+
+
+
+}"
+92,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+{?country rdfs:label ?labell } .
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+
+
+
+
+}"
+93,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+
+
+
+
+}"
+94,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+
+
+
+
+}"
+95,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+
+
+
+
+
+}"
+96,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+{?country rdfs:label ?labell } .
+
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+
+}"
+97,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+OPTIONAL{
+{?country rdfs:label ?labell } .
+}
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+
+}"
+98,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+OPTIONAL{
+{?country rdfs:label ?labell } .
+}
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+
+
+}"
+99,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+OPTIONAL{
+{?country rdfs:label ?labell } .
+}
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+
+
+}"
+100,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Paulaner"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+OPTIONAL{
+{?country rdfs:label ?labell } .
+}
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+
+}"
+101,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT distinct  ?beerlabel ?abstract ?country ?city ?logo ?labell where {
+  ?beer skos:broader* category:Beer_and_breweries_by_region .
+  ?test dcterms:subject ?beer .
+  ?test rdfs:label ?beerlabel .
+FILTER regex(?beerlabel, ""^Kronenbourg"") .
+
+  ?test dbo:abstract ?abstract .
+
+OPTIONAL {
+{?test dbo:locationCity ?city} .
+
+{?test dbo:locationCountry ?country}
+UNION
+{?test dbpedia2:locationCountry ?country} .
+
+OPTIONAL{
+{?country rdfs:label ?labell } .
+}
+} 
+
+FILTER langMatches( lang(?beerlabel), ""FR"" ) .
+FILTER langMatches( lang(?abstract), ""FR"" ) .
+FILTER langMatches( lang(?labell), ""FR"" ) .
+
+}"

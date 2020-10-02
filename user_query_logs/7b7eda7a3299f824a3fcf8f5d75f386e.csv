@@ -1,0 +1,2296 @@
+,query
+0,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						SELECT ?comment ?label WHERE { 
+						?entity rdfs:label ?label . 
+						?entity dbpedia-owl:abstract ?abstract . 
+						?entity rdfs:comment ?comment . 
+						?label <bif:contains> 
+						 'senado'.
+						FILTER (lang(?abstract) = 'pt'). 
+						FILTER (lang(?comment) = 'pt').} LIMIT 10"
+1,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						SELECT ?comment ?label WHERE { 
+						?entity rdfs:label ?label . 
+						?entity dbpedia-owl:abstract ?abstract . 
+						?entity rdfs:comment ?comment . 
+						?label <bif:contains> 
+						 'senado'.
+						FILTER (lang(?abstract) = 'pt'). 
+						FILTER (lang(?comment) = 'pt').} LIMIT 10"
+2,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						SELECT ?comment ?label WHERE { 
+						?entity rdfs:label ?label . 
+						?entity dbpedia-owl:abstract ?abstract . 
+						?entity rdfs:comment ?comment . 
+						?label ?A 'senado'.
+						FILTER (lang(?abstract) = 'pt'). 
+						FILTER (lang(?comment) = 'pt').} LIMIT 10"
+3,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						SELECT ?comment ?label WHERE { 
+						?entity rdfs:label ?label . 
+						?entity dbpedia-owl:abstract ?abstract . 
+						?entity rdfs:comment ?comment . 
+						?label <bif:contains> 'reforma política'.
+						FILTER (lang(?abstract) = 'pt'). 
+						FILTER (lang(?comment) = 'pt').} LIMIT 10"
+4,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						SELECT ?comment ?label WHERE { 
+						?entity rdfs:label ?label . 
+						?entity dbpedia-owl:abstract ?abstract . 
+						?entity rdfs:comment ?comment . 
+						?label <bif:contains> 'reforma politica'.
+						FILTER (lang(?abstract) = 'pt'). 
+						FILTER (lang(?comment) = 'pt').} LIMIT 10"
+5,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						SELECT ?comment ?label WHERE { 
+						?entity rdfs:label ?label . 
+						?entity dbpedia-owl:abstract ?abstract . 
+						?entity rdfs:comment ?comment . 
+						?label <bif:contains> 'reforma'.
+						FILTER (lang(?abstract) = 'pt'). 
+						FILTER (lang(?comment) = 'pt').} LIMIT 10"
+6,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						SELECT ?comment ?label WHERE { 
+						?entity rdfs:label ?label . 
+						?entity dbpedia-owl:abstract ?abstract . 
+						?entity rdfs:comment ?comment . 
+						?label <bif:contains> 'democracia'.
+						FILTER (lang(?abstract) = 'pt'). 
+						FILTER (lang(?comment) = 'pt').} LIMIT 10"
+7,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						SELECT ?comment ?label WHERE { 
+						?entity rdfs:label ?label . 
+						?entity dbpedia-owl:abstract ?abstract . 
+						?entity rdfs:comment ?comment . 
+						?label <bif:contains> 'voto'.
+						FILTER (lang(?abstract) = 'pt'). 
+						FILTER (lang(?comment) = 'pt').} LIMIT 10"
+8,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						SELECT ?comment ?label WHERE { 
+						?entity rdfs:label ?label . 
+						?entity dbpedia-owl:abstract ?abstract . 
+						?entity rdfs:comment ?comment . 
+						?label <bif:contains> 'eleitoral'.
+						FILTER (lang(?abstract) = 'pt'). 
+						FILTER (lang(?comment) = 'pt').} LIMIT 10"
+9,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						SELECT ?comment ?label WHERE { 
+						?entity rdfs:label ?label . 
+						?entity dbpedia-owl:abstract ?abstract . 
+						?entity rdfs:comment ?comment . 
+						?label <bif:contains> 'eleição'.
+						FILTER (lang(?abstract) = 'pt'). 
+						FILTER (lang(?comment) = 'pt').} LIMIT 10"
+10,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						SELECT ?comment ?label WHERE { 
+						?entity rdfs:label ?label . 
+						?entity dbpedia-owl:abstract ?abstract . 
+						?entity rdfs:comment ?comment . 
+						?label <bif:contains> 'eleicao'.
+						FILTER (lang(?abstract) = 'pt'). 
+						FILTER (lang(?comment) = 'pt').} LIMIT 10"
+11,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						SELECT ?comment ?label WHERE { 
+						?entity rdfs:label ?label . 
+						?entity dbpedia-owl:abstract ?abstract . 
+						?entity rdfs:comment ?comment . 
+						?label <bif:contains> 'mandato'.
+						FILTER (lang(?abstract) = 'pt'). 
+						FILTER (lang(?comment) = 'pt').} LIMIT 10"
+12,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						SELECT ?comment ?label WHERE { 
+						?entity rdfs:label ?label . 
+						?entity dbpedia-owl:abstract ?abstract . 
+						?entity rdfs:comment ?comment . 
+						?label <bif:contains> 'financiamento campanha'.
+						FILTER (lang(?abstract) = 'pt'). 
+						FILTER (lang(?comment) = 'pt').} LIMIT 10"
+13,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						SELECT ?comment ?label WHERE { 
+						?entity rdfs:label ?label . 
+						?entity dbpedia-owl:abstract ?abstract . 
+						?entity rdfs:comment ?comment . 
+						?label <bif:contains> '""financiamento campanha'"".
+						FILTER (lang(?abstract) = 'pt'). 
+						FILTER (lang(?comment) = 'pt').} LIMIT 10"
+14,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						SELECT ?comment ?label WHERE { 
+						?entity rdfs:label ?label . 
+						?entity dbpedia-owl:abstract ?abstract . 
+						?entity rdfs:comment ?comment . 
+						?label <bif:contains> ""\\bfinanciamento campanha\\b"".
+						FILTER (lang(?abstract) = 'pt'). 
+						FILTER (lang(?comment) = 'pt').} LIMIT 10"
+15,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						SELECT ?comment ?label WHERE { 
+						?entity rdfs:label ?label . 
+						?entity dbpedia-owl:abstract ?abstract . 
+						?entity rdfs:comment ?comment . 
+						?label <bif:contains> ""\\bfinanciamento campanha\\b"".
+						FILTER (lang(?abstract) = 'pt'). 
+						FILTER (lang(?comment) = 'pt').} LIMIT 10"
+16,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						SELECT ?comment ?label WHERE { 
+						?entity rdfs:label ?label . 
+						?entity dbpedia-owl:abstract ?abstract . 
+						?entity rdfs:comment ?comment . 
+						?label <bif:contains> 'financiamento'.
+						FILTER (lang(?abstract) = 'pt'). 
+						FILTER (lang(?comment) = 'pt').} LIMIT 10"
+17,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'tribunal superior'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+18,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'financiamento campanha'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+19,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'financiamento público'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+20,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'financiamento publico'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+21,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'formação política'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+22,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'política'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+23,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'politica'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+24,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'voto obrigatório'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+25,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'transparência'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+26,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'sonegação'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+27,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'sonegar'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+28,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'caixa dois'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+29,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'público'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+30,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'empreiteira'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+31,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'corrupção'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+32,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'politica'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+33,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'reeleição'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+34,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'legislativo'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+35,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'re-election'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+36,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'election'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+37,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'legislativo'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+38,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'Executivo'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+39,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'presidente'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+40,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'brasil'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+41,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'brazil'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+42,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'privado'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+43,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'transporte'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+44,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'regulamentação'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+45,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'regulament'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+46,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'regulation'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+47,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'ficha limpa'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+48,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'manifestação'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+49,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'parlamentar'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+50,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'reforma política'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+51,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'oligarquização'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+52,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'oligarquia'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+53,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'plenária'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+54,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'plenário'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+55,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'assembléia'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+56,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'assembleia'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+LIMIT   10
+"
+57,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'assembleia'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+58,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'assembleia publica'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+59,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'audiencia'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+60,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'audiência'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+61,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'senador'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+62,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'senadores'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+63,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'câmara'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+64,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'vereador'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+65,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'dilma'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+66,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'eduardo paes'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+67,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'pt'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+68,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'partido trabalhista'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+69,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'cabral'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+70,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'candidato'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+71,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'candidatura'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+72,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'governador'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+73,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'sérgio cabral'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+74,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'padrinho politico '""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+75,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'partidos dos trabalhadores'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+76,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'partido dos trabalhadores'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+77,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'pmdb'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+78,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'fernando henrique'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+79,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'crivela'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+80,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'facebook'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+81,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'constituinte'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+82,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'congresso'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+83,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'governo'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+84,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'popular'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+85,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'plebiscito'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+86,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'manifestações'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+87,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'patrimônio'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+88,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'eleições'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+89,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'eleições unificadas'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+90,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'massa'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+91,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'população'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+92,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'Audiência Pública'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+93,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'midia ninja'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+94,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'mídia ninja'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+95,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'reivindicação'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+96,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'corrupto'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+97,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'parlamentares'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+98,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'saude'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+99,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'saúde'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+100,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'educação'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+101,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'transporte'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+102,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'juridico'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+103,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'jurídico'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+104,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'jurídica'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+105,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'médico'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+106,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'legislatura'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+107,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'colonização'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+108,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'Senzala'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+109,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'Senzala'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+110,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'partido'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+111,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'partidária'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+112,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'partido político'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+113,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'comício'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+114,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'comicio'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+115,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'plenario'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+116,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'plenário'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+117,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'justiça social'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+118,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'República'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+119,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'administração pública'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+120,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'Federação'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+121,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'Sindical'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+122,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'estelionato eleitoral'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+123,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'estelionato'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+124,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'sigilo fiscal'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+125,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'cassado'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+126,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'voto facultativo'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+127,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'Código Penal'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+128,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'Art. 171'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+129,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'sigilo fiscal'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+130,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'foro privilegiado'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+131,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'foro'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+132,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'foro por prerrogativa de função'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+133,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'corporativismo'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+134,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'voto secreto'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+135,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'filiação'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+136,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'partido filiação'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+137,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'Foro privilegiado'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+138,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'imunidade parlamentar'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+139,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'impunidade'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+140,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'junta militar'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+141,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'ditadura'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+142,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'império'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+143,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'TSE'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+144,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'regalias'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+145,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'regalia'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+146,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'pop'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+147,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'mobilização popular'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+148,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'camara'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+149,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'câmara dos deputados'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+150,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'projeto de lei'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+151,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'mandado de prisão'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+152,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'poder judiciário'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+153,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'cofres públicos'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+154,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'Eleição Unificada'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+155,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'Observatório Social'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+156,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'3 poderes'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+157,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'três poderes'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+158,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'democratização'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+159,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'democratico'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+160,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'Eleições Limpas'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+161,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'OAB'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+162,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'ordem dos advogados do brasil'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+163,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'comissionado'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+164,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'comissionados'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+165,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'licitação'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+166,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'ministério público'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+167,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'público'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+168,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'lei de acesso a informação'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+169,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'portal da transparencia'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+170,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'licitação'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+171,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'improbidade administrativa'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+172,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'improbidade'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+173,"PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						
+
+						select ?resumo where { 
+
+						?recurso owl:sameAs <http://pt.dbpedia.org/resource/Improbidade_administrativa>.
+						?recurso  rdfs:comment ?resumo. 
+						 FILTER (LANG(?resumo) = 'pt') 
+
+						  }"
+174,"PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						
+
+						select ?resumo where { 
+
+						?recurso owl:sameAs <pt.dbpedia.org/resource/Improbidade_administrativa>.
+						?recurso  rdfs:comment ?resumo. 
+						 FILTER (LANG(?resumo) = 'pt') 
+
+						  }"
+175,"PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						
+
+						select ?resumo where { 
+
+						?recurso owl:sameAs <dbpedia.org/resource/Improbidade_administrativa>.
+						?recurso  rdfs:comment ?resumo. 
+						 FILTER (LANG(?resumo) = 'pt') 
+
+						  }"
+176,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'Delegacia de Ordem Politica e Social'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+177,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'Dops'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"
+178,"PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?comment ?label
+WHERE
+  { ?entity rdfs:label ?label .
+    ?entity dbpedia-owl:abstract ?abstract .
+    ?entity rdfs:comment ?comment .
+    ?label <bif:contains> ""'DEPARTAMENTO DE ORDEM POLITICA E SOCIAL'""
+    FILTER ( lang(?abstract) = ""pt"" )
+    FILTER ( lang(?comment) = ""pt"" )
+  }
+"

@@ -1,0 +1,1147 @@
+,query
+0,select distinct ?Concept where {[] a ?Concept} LIMIT 100
+1,"PREFIX rdfs: <http://dbpedia.org/ontology/Band#>
+SELECT ?subject ?label
+WHERE { ?subject rdfs:label ?label } LIMIT 100"
+2,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bc: <http://www.base22.com/ontologies/2010/5/bc.owl#>
+SELECT *
+WHERE {
+  ?subject bc:hasEmployer <http://www.base22.com/ontologies/2010/5/my-contacts.owl#IBM> .
+           ?subject bc:hasBusinessEmail ?email .
+}"
+3,"SELECT *
+WHERE {
+  ?subject bc:hasEmployer <http://www.base22.com/ontologies/2010/5/my-contacts.owl#IBM> .
+           ?subject bc:hasBusinessEmail ?email .
+}"
+4,"SELECT *
+WHERE {
+  ?subject hasEmployer <http://dbpedia.org/ontology/Band> .
+           ?subject
+}"
+5,"SELECT *
+WHERE {
+  ?subject <http://dbpedia.org/ontology/Band> .
+           ?subject
+}"
+6,"SELECT subject
+WHERE {
+  ?subject <http://dbpedia.org/ontology/Band> ?subject
+}"
+7,"SELECT subject
+WHERE {
+  ?subject <http://dbpedia.org/ontology/Band> ?subject
+}"
+8,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?name ?birth ?death ?person WHERE {
+     ?person dbo:birthPlace :Berlin .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:deathDate ?death .
+     FILTER (?birth < ""1900-01-01""^^xsd:date) .
+}
+ORDER BY ?name"
+9,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?birth WHERE {
+     ?person dbo:birthDate ?birth .
+     FILTER (?person = :Kevin_Bacon)
+}"
+10,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+SELECT ?birth WHERE {
+     ?person dbo:birthDate ?birth .
+     FILTER (?person = :Kevin_Bacon)
+}"
+11,"PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT ?birth WHERE {
+     ?person dbo:birthDate ?birth .
+     FILTER (?person = :Kevin_Bacon)
+}"
+12,"PREFIX dbo: <http://dbpedia.org/ontology/>
+SELECT ?birth WHERE {
+     ?person dbo:birthDate ?birth .
+     FILTER (?person = :Kevin_Bacon)
+}"
+13,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/> 
+
+SELECT ?filmname WHERE {
+      ?film foaf:name ?filmname .
+      ?film dbo:starring ?person .
+      FILTER (?person = :Kevin_Bacon)
+}"
+14,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+
+SELECT ?filmname WHERE {
+      ?film foaf:name ?filmname .
+      ?film dbo:starring ?person .
+      FILTER (?person = :Kevin_Bacon)
+}"
+15,"
+
+SELECT ?film WHERE {
+      ?film starring ?person .
+      FILTER (?person = :Kevin_Bacon)
+}"
+16,"
+
+SELECT ?film WHERE {
+      ?film starring ?person .
+      FILTER (?person = :Kevin_Bacon)
+}"
+17,"SELECT ?film WHERE {
+      ?film starring ?person .     
+}"
+18,"SELECT ?film WHERE {
+      ?film starring ?person .     
+}"
+19,"SELECT ?film WHERE {
+      ?film birthName ?person .     
+}"
+20,"SELECT ?person WHERE {
+      ?person birthName ?person     
+}"
+21,"SELECT ?person WHERE {
+      ?person birthName ?name .
+     FILTER (?name = :Kevin_Bacon) .    
+}"
+22,"SELECT ?person WHERE {
+      ?person birthName ?name .
+     FILTER (?name = :Kevin_Bacon)   
+}"
+23,"SELECT ?person WHERE {
+      ?person birthName ?name .
+     FILTER (?name = :Kevin_Bacon)   
+}"
+24,"PREFIX dbo: <http://dbpedia.org/ontology/Person/>
+SELECT ?person WHERE {
+      ?person dbo:birthName ?name .
+     FILTER (?name = :Kevin_Bacon)   
+}"
+25,"PREFIX dbo: <http://dbpedia.org/ontology/Person/>
+SELECT ?person WHERE {
+     ?person dbo:birthName ?name .
+     FILTER (?name = :Kevin_Bacon)   
+}"
+26,"PREFIX dbo: <http://dbpedia.org/ontology/Person/>
+SELECT ?person WHERE {
+     ?person dbo:birthName ?name .
+     FILTER (?name = :Kevin_Bacon)   
+}"
+27,"PREFIX dbo: <http://dbpedia.org/ontology/Person/>
+SELECT ?person WHERE {
+     ?person dbo:birthName ?name .      
+}"
+28,"PREFIX dbo: <http://dbpedia.org/ontology/Person/>
+SELECT * WHERE {
+     ?person dbo:birthName ?name .     
+    
+}"
+29,"PREFIX dbo: <http://dbpedia.org/resource/Person/>
+SELECT * WHERE {
+     ?person dbo:birthName ?name .     
+    
+}"
+30,"PREFIX dbo: <http://dbpedia.org/resource/Person/>
+SELECT * WHERE {
+     
+    
+}"
+31,"PREFIX dbo: <http://dbpedia.org/resource/The_Lord_of_the_Rings>
+SELECT * WHERE {
+     ?person dbpprop:name ?name .     
+    
+}"
+32,"PREFIX dbpprop: <http://dbpedia.org/resource/The_Lord_of_the_Rings>
+SELECT * WHERE {
+     ?person dbpprop:name ?name .     
+    
+}"
+33,"PREFIX dbpprop: <http://dbpedia.org/resource/The_Lord_of_the_Rings>
+SELECT * WHERE {
+     ?person dbpprop:name ?name   
+    
+}"
+34,"PREFIX dbpprop: <http://dbpedia.org/resource/The_Lord_of_the_Rings/>
+SELECT * WHERE {
+     ?person dbpprop:name ?name   
+    
+}"
+35,"PREFIX dbpprop: <http://dbpedia.org/resource/The_Lord_of_the_Rings/>
+SELECT * WHERE {
+     * dbpprop:name ?name   
+    
+}"
+36,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?date
+WHERE
+{
+       ?person dbo:birthDate ?date ;
+       foaf:name ""Kevin Norwood Bacon""
+}"
+37,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?filmname ?birth
+WHERE
+{
+ ?film foaf:name ?filmname .
+ ?film dbo:starring ?person .
+ ?person dbo:birthDate ?birth ;
+ foaf:name ""May Robson""@en .
+}"
+38,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?filmname ?birth
+WHERE
+{
+ ?film foaf:name ?filmname .
+ ?film dbo:starring ?person .
+ ?person dbo:birthDate ?birth ;
+ foaf:name ""May Robson""@en .
+}"
+39,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?filmname ?birth
+WHERE
+{
+ ?film foaf:name ?filmname .
+ ?film dbo:starring ?person .
+ ?person dbo:birthDate ?birth ;
+ foaf:name ""May Robson""@en .
+}"
+40,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX : <http://dbpedia.org/resource/>
+
+SELECT ?filmname ?birth
+WHERE
+{
+ ?film foaf:name ?filmname .
+ ?film dbo:starring ?person .
+ ?person dbo:birthDate ?birth ;
+ foaf:name ""May Robson""@en .
+}"
+41,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?filmname ?birth
+WHERE
+{
+ ?film foaf:name ?filmname .
+ ?film dbo:starring ?person .
+ ?person dbo:birthDate ?birth ;
+ foaf:name ""May Robson""@en .
+}"
+42,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+
+SELECT ?filmname ?birth
+WHERE
+{
+ 
+ ?film dbo:starring ?person .
+ ?person dbo:birthDate ?birth ;
+ foaf:name ""May Robson""@en .
+}"
+43,"PREFIX plant:   <http://www.linkeddatatools.com/plants>
+FROM <http://www.linkeddatatools.com/plantsdata/plants.rdf>
+SELECT ?name WHERE {
+  ?planttype plant:planttype ?name.
+}
+ORDER BY ?name
+"
+44,"PREFIX plant:   <http://www.linkeddatatools.com/plants>
+FROM <http://www.linkeddatatools.com/plantsdata/plants.rdf>
+SELECT ?name WHERE {
+  ?planttype plant:planttype ?name.
+}
+ORDER BY ?name
+"
+45,"PREFIX sch-ont:   <http://education.data.gov.uk/def/school/>
+SELECT ?name WHERE {
+  ?school a sch-ont:School.
+  ?school sch-ont:establishmentName ?name.
+  ?school sch-ont:districtAdministrative <http://statistics.data.gov.uk/id/local-authority-district/00AA>.
+}
+ORDER BY ?name
+"
+46,"PREFIX sch-ont:   <http://education.data.gov.uk/def/school/>
+SELECT ?name WHERE {
+  ?school a sch-ont:School.
+  ?school sch-ont:establishmentName ?name.
+  
+}
+ORDER BY ?name
+"
+47,"PREFIX sch-ont:   <http://education.data.gov.uk/def/school/>
+SELECT ?name WHERE {
+  ?school a sch-ont:School.
+  ?school sch-ont:establishmentName ?name.
+  ?school sch-ont:districtAdministrative <http://statistics.data.gov.uk/id/local-authority-district/00AA>.
+}
+ORDER BY ?name
+"
+48,"PREFIX sch-ont:   <http://dbpedia.org/ontology/School>
+SELECT ?name WHERE {
+  ?school a sch-ont:School.
+  ?school sch-ont:establishmentName ?name.
+  
+}
+ORDER BY ?name
+"
+49,"PREFIX dbo:   <http://dbpedia.org/ontology/School>
+SELECT ?name WHERE {
+  ?school a dbo:School.
+  ?school dbo:ageRange ?name.
+  
+}
+ORDER BY ?name
+"
+50,"PREFIX dbo:   <http://dbpedia.org/ontology/School>
+SELECT ?name WHERE {
+  ?school a dbo:School.
+  
+  
+}
+ORDER BY ?name
+"
+51,"PREFIX dbo:   <http://dbpedia.org/ontology/School>
+SELECT ?name WHERE {
+  ?school a dbo:School $name
+  
+  
+}
+ORDER BY ?name
+"
+52,"PREFIX dbo:   <http://dbpedia.org/ontology/School>
+SELECT ?name WHERE {
+  ?school a dbo:School $name. 
+  
+  
+}
+ORDER BY ?name
+"
+53,"PREFIX dbo:   <http://dbpedia.org/ontology/School>
+SELECT ?name WHERE {
+  ?school a dbo:School $name . 
+  
+  
+}
+ORDER BY ?name
+"
+54,"PREFIX dbo:   <http://dbpedia.org/ontology/School>
+SELECT ?name WHERE {
+  ?school a dbo:equivalentClass $name . 
+  
+  
+}
+ORDER BY ?name
+"
+55,"PREFIX dbo:   <http://dbpedia.org/ontology/School>
+SELECT ?name WHERE {
+  ?school a dbo:equivalentClass $name
+  
+  
+}
+ORDER BY ?name
+"
+56,"PREFIX dbo:   <http://dbpedia.org/ontology/School>
+SELECT ?name WHERE {
+  ?school a dbo:School $name
+  
+  
+}
+ORDER BY ?name
+"
+57,"PREFIX dbo:   <http://dbpedia.org/ontology/School>
+SELECT ?name WHERE {
+  ?school a dbo:School $name
+}
+ORDER BY ?name
+"
+58,"PREFIX dbo:   <http://dbpedia.org/ontology/School>
+SELECT ?name WHERE {
+  ?school dbo:School $name
+}
+ORDER BY ?name
+"
+59,"PREFIX dbo:   <http://dbpedia.org/ontology/Band>
+SELECT ?name WHERE {
+  ?school dbo:School $name
+}
+ORDER BY ?name
+"
+60,"PREFIX dbo:   <http://dbpedia.org/ontology/Band>
+SELECT ?name WHERE {
+  ?band dbo:Band $name
+}
+ORDER BY ?name
+"
+61,"PREFIX dbo:   <http://dbpedia.org/ontology/Band>
+SELECT ?name WHERE {
+  ?band a dbo:Band $name .
+}
+
+"
+62,"PREFIX dbo:   <http://dbpedia.org/ontology/Band>
+SELECT ?name WHERE {
+  ?band dbo:bandMember $name .
+}
+
+"
+63,"PREFIX plants: <http://www.linkeddatatools.com/plants>
+SELECT * WHERE
+{
+   ?name plants:family ""Magnoliaceae""
+}
+"
+64,"SELECT ?node ?name
+ WHERE{
+   ?node <http://xmlns.com/foaf/0.1/givenname> ?name .
+   ?node <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+ }
+ LIMIT 10"
+65,"SELECT ?node ?name
+ WHERE{
+   ?node <http://xmlns.com/foaf/0.1/givenname> ?name .
+   ?node <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+ }
+ LIMIT 10"
+66,"SELECT ?node ?name
+ WHERE{
+   ?node <http://xmlns.com/foaf/0.1/givenname> ?name .
+   ?node <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+ }
+ LIMIT 10"
+67," SELECT ?node ?name
+ WHERE{
+   ?node <http://xmlns.com/foaf/0.1/givenname> ?name .
+   ?node <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+ }
+ LIMIT 10"
+68," PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+ SELECT ?node ?name
+ WHERE{
+   ?node foaf:givenname ?name .
+   ?nore rdf:type foaf:Person .
+ }
+ LIMIT 10"
+69," PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+ SELECT   ?node ?name ?givenname
+ WHERE{
+     ?node foaf:name ?name .
+     ?node foaf:givenname ?givenname .
+     FILTER regex(?name, ""Biden"") .
+ }"
+70," PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+ SELECT   ?node ?name ?givenname
+ WHERE{
+     ?node foaf:name ?name .
+     ?node foaf:givenname ?givenname .
+     FILTER regex(?name, ""Biden"") .
+ }"
+71," PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+ SELECT   ?node ?name ?givenname
+ WHERE{
+     ?node foaf:name ?name .
+     ?node foaf:givenname ?givenname .
+     FILTER regex(?name, ""Biden"") .
+ }"
+72," PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+ SELECT   ?node ?name ?givenname
+ WHERE{
+     ?node foaf:name ?name .
+     ?node foaf:givenname ?givenname .
+     
+ }"
+73," PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+ SELECT   ?node ?name ?givenname
+ WHERE{
+     ?node foaf:name ?name .
+     ?node foaf:givenname ?givenname .     
+ }"
+74," PREFIX dbo: <http://dbpedia.org/ontology/>
+ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+ SELECT   ?node ?name ?givenname
+ WHERE{
+     ?node dbo:name ?name .
+     ?node foaf:givenname ?givenname .     
+ }"
+75," PREFIX dbo: <http://dbpedia.org/ontology/>
+ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+ SELECT   ?node ?name ?givenname
+ WHERE{
+     ?node dbo:name ?name .
+   
+ }"
+76," PREFIX dbo: <http://dbpedia.org/ontology/>
+ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+ SELECT   ?node ?name ?givenname
+ WHERE{
+     ?node foaf:name ?name .
+   
+ }"
+77," PREFIX dbo: <http://dbpedia.org/ontology/>
+ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+ SELECT   ?node ?name
+ WHERE{
+     ?node foaf:name ?name .   
+ }"
+78," PREFIX dbo: <http://dbpedia.org/ontology/>
+ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+ 
+ SELECT   ?node ?name
+ WHERE{
+     ?node dbo:name ?name .   
+ }"
+79,"PREFIX dbo: <http://dbpedia.org/ontology>
+SELECT ?filmname ?birth
+WHERE
+{
+ ?film foaf:name ?filmname .
+ ?film dbo:starring ?person .
+ ?person dbo:birthDate ?birth ;
+ foaf:name ""May Robson""@en .
+}"
+80,"PREFIX dbo: <http://dbpedia.org/ontology>
+REFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT ?filmname ?birth
+WHERE
+{
+ ?film foaf:name ?filmname .
+ ?film dbo:starring ?person .
+ ?person dbo:birthDate ?birth ;
+ foaf:name ""May Robson""@en .
+}"
+81,"PREFIX dbo: <http://dbpedia.org/ontology>
+REFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT ?filmname ?birth
+WHERE
+{
+ ?film foaf:name ?filmname .
+ ?film dbo:starring ?person .
+ ?person dbo:birthDate ?birth ;
+ foaf:name ""May Robson""@en .
+}"
+82,"PREFIX dbo: <http://dbpedia.org/ontology/>
+REFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT ?filmname ?birth
+WHERE
+{
+ ?film foaf:name ?filmname .
+ ?film dbo:starring ?person .
+ ?person dbo:birthDate ?birth ;
+ foaf:name ""May Robson""@en .
+}"
+83,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?filmname ?birth
+WHERE
+{
+ ?film foaf:name ?filmname .
+ ?film dbo:starring ?person .
+ ?person dbo:birthDate ?birth ;
+ foaf:name ""May Robson""@en .
+}"
+84,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?filmname ?birth
+WHERE
+{
+?film foaf:name ?filmname .
+ ?film dbo:starring ?person .
+ ?person dbo:birthDate ?birth ;
+ foaf:name ?name .
+ FILTER (str(?name) = ""May Robson"")
+}"
+85,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?filmname ?birth
+WHERE
+{
+ ?film foaf:name ?filmname .
+ ?film dbo:starring ?person .
+ ?person dbo:birthDate ?birth ;
+ foaf:name ""May Robson""@en .
+}"
+86,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+
+SELECT ?filmname ?birth
+WHERE
+{
+ ?film foaf:name ?filmname .
+ ?film dbo:starring ?person .
+ ?person dbo:birthDate ?birth ;
+ foaf:name ""May Robson""@en .
+}"
+87," SELECT ?node ?name
+ WHERE{
+   ?node <http://xmlns.com/foaf/0.1/givenname> ?name .
+   ?node <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+ }
+ LIMIT 10"
+88," SELECT ?node ?name
+ WHERE{
+   ?node <http://xmlns.com/foaf/0.1/givenname> ?name .
+   ?node <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+ }
+ LIMIT 10"
+89,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+
+SELECT ?filmname ?birth
+WHERE
+{
+ ?film foaf:name ?filmname .
+ ?film dbo:starring ?person .
+ ?person dbo:birthDate ?birth ;
+ foaf:name ""May Robson""@en .
+}"
+90,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+
+SELECT ?band ?singer
+WHERE
+{
+ ?band foaf:band ?bandname .
+ ?band dbo:bandMember ?person . 
+}"
+91,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+
+SELECT ?band ?person
+WHERE
+{
+ ?band foaf:band ?bandname .
+ ?band dbo:bandMember ?person . 
+}"
+92,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+
+SELECT ?band ?person
+WHERE
+{
+ ?band foaf:band ?bandname
+ ?band dbo:bandMember ?person 
+}"
+93,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+
+SELECT ?band ?person
+WHERE
+{
+ 
+ ?band dbo:bandMember ?person 
+}"
+94,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?band ?person
+WHERE
+{ 
+ ?band dbo:bandMember ?person 
+}"
+95,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?band ?person
+WHERE
+{ 
+ ?band dbo:bandMember ?person 
+}
+LIMIT 10"
+96,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?band ?person
+WHERE
+{ 
+ ?band dbo:bandMember ?person 
+ 
+}
+LIMIT 10"
+97,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname
+ 
+}
+LIMIT 10"
+98,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname ?bandort 
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname
+ ?band dbo:locationCity ?bandort 
+}
+LIMIT 10"
+99,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname ?bandort 
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname .
+ ?band dbo:locationCity ?bandort .
+}
+LIMIT 10"
+100,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname ?bandort 
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname .
+ ?bandname dbo:locationCity ?bandort .
+}
+LIMIT 10"
+101,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname ?bandort 
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname .
+ ?bandname dbo:locationCity ?bandort .
+}
+LIMIT 10"
+102,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname ?bandort 
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname .
+ ?band dbo:locationCity ?bandort .
+}
+LIMIT 10"
+103,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname ?bandort 
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname
+ ?band dbo:locationCity ?bandort
+}
+LIMIT 10"
+104,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname ?bandort 
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname .
+ ?band dbo:locationCity ?bandort
+}
+LIMIT 10"
+105,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname ?bandort 
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname .
+ ?bandname dbo:locationCity ?bandort 
+}
+LIMIT 10"
+106,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname ?bandort 
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname 
+ ?bandname dbo:locationCity ?bandort 
+}
+LIMIT 10"
+107,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname ?bandort 
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname 
+ 
+}
+LIMIT 10"
+108,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname ?bandort 
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname .
+ 
+}
+LIMIT 10"
+109,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname 
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname .
+ 
+}
+LIMIT 10"
+110,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname 
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname 
+ 
+}
+LIMIT 10"
+111,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT * 
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname 
+ 
+}
+LIMIT 10"
+112,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT * 
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname .
+ 
+}
+LIMIT 10"
+113,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT * 
+WHERE
+{ 
+ ?band dbo:bandMember 
+ 
+}
+LIMIT 10"
+114,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT * 
+WHERE
+{ 
+ ?band dbo:bandMember .
+ 
+}
+LIMIT 10"
+115,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname .
+ 
+}
+LIMIT 10"
+116,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname ;
+ 
+}
+LIMIT 10"
+117,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname ;
+ a dbo:locationCity .
+}
+LIMIT 10"
+118,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname .
+ ?band dbo:locationCity ?bandname .
+}
+LIMIT 10"
+119,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname .
+ ?band dbo:locationCity ?bandname *
+}
+LIMIT 10"
+120,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname ;
+ ?band dbo:locationCity ?bandname .
+}
+LIMIT 10"
+121,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname ;
+ ?bandname dbo:locationCity ?bandname .
+}
+LIMIT 10"
+122,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname .
+ ?bandname dbo:locationCity ?bandname .
+}
+LIMIT 10"
+123,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname .
+ ?bandname dbo:locationCity ?bandort .
+}
+LIMIT 10"
+124,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandort 
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname .
+ ?bandname dbo:locationCity ?bandort .
+}
+LIMIT 10"
+125,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandort 
+WHERE
+{ 
+// ?band dbo:bandMember ?bandname .
+ ?bandname dbo:locationCity ?bandort .
+}
+LIMIT 10"
+126,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandort 
+WHERE
+{ 
+# ?band dbo:bandMember ?bandname .
+ ?bandname dbo:locationCity ?bandort .
+}
+LIMIT 10"
+127,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandort 
+WHERE
+{ 
+# ?band dbo:bandMember ?bandname .
+ ?band dbo:locationCity ?bandort .
+}
+LIMIT 10"
+128,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandort 
+WHERE
+{ 
+# ?band dbo:bandMember ?bandname .
+dbo:locationCity ?bandort .
+}
+LIMIT 10"
+129,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandort 
+WHERE
+{ 
+# ?band dbo:bandMember ?bandname ;
+dbo:locationCity ?bandort .
+}
+LIMIT 10"
+130,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandort 
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname ;
+dbo:locationCity ?bandort .
+}
+LIMIT 10"
+131,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandort 
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname .
+dbo:locationCity ?bandort .
+}
+LIMIT 10"
+132,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandort 
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname .
+  OPTIONAL{
+       ?band dbo:locationCity ?bandort .
+     }
+}
+LIMIT 10"
+133,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname ?bandort 
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname .
+  OPTIONAL{
+       ?band dbo:locationCity ?bandort .
+     }
+}
+LIMIT 10"
+134,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname ?bandort 
+WHERE
+{ 
+ ?band dbo:bandMember ?bandname .
+  OPTIONAL{
+       ?bandname dbo:locationCity ?bandort .
+     }
+}
+LIMIT 10"
+135,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname ?bandort 
+WHERE
+{ 
+ ?band dbo:locationCity ?bandort .
+ ?band dbo:bandMember ?bandname . 
+}
+LIMIT 10"
+136,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname ?bandort 
+WHERE
+{ 
+ 
+ ?band dbo:bandMember ?bandname . 
+?band dbo:locationCity ?bandort .
+}
+LIMIT 10"
+137,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname ?bandort 
+WHERE
+{  
+ ?band dbo:bandMember ?bandname . 
+ ?band dbo:locationCity ?bandort .
+}
+LIMIT 10"
+138,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname ?bandort 
+WHERE
+{  
+ ?s ?p ?band
+ ?band dbo:bandMember ?bandname . 
+
+}
+LIMIT 10"
+139,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname ?bandort 
+WHERE
+{  
+ ?s ?p ?band .
+ ?band dbo:bandMember ?bandname . 
+
+}
+LIMIT 10"
+140,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname ?bandort 
+WHERE
+{  
+
+ ?band dbo:bandMember ?bandname . 
+   ?band dbo:locationCity ?bandort .
+}
+LIMIT 10"
+141,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?bandname ?bandort 
+WHERE
+{  
+
+ ?band dbo:bandMember ?bandname . 
+   ?band dbo:locationCity ?bandort .
+}
+LIMIT 10"

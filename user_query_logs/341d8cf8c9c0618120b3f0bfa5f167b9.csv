@@ -1,0 +1,1124 @@
+,query
+0,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains ""Pertti Pasanen"" .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""fi"")
+LIMIT 10"
+1,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains ""Pertti Pasanen"" .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""fi"")
+} LIMIT 10"
+2,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Pertti Pasanen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""fi"")
+} LIMIT 10"
+3,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Spede Pasanen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""fi"")
+} LIMIT 10"
+4,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Liisa Kauppinen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""fi"")
+} LIMIT 10"
+5,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Liisa Kauppinen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+} LIMIT 10"
+6,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Nelson Mandela""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+} LIMIT 10"
+7,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Nelson Mandela""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""fi"")
+} LIMIT 10"
+8,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Spede Pasanen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+} LIMIT 10"
+9,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Liisa Kauppinen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+} LIMIT 10"
+10,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Spede Pasanen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""fi"")
+} LIMIT 10"
+11,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Spede Pasanen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""en"")
+} LIMIT 10"
+12,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Spede Pasanen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""fi"")               
+} LIMIT 10"
+13,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Spede Pasanen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""en"")               
+} LIMIT 10"
+14,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Spede Pasanen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""fi"")               
+} LIMIT 10"
+15,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Spede Pasanen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""fi"")               
+} LIMIT 10
+"
+16,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Spede Pasanen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""en"")               
+} LIMIT 10
+"
+17,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Sauli Niinistö""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""en"")               
+} LIMIT 10
+"
+18,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Tarja Halonen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""en"")               
+} LIMIT 10
+"
+19,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Raimo Helminen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""en"")               
+} LIMIT 10
+"
+20,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Raimo Helminen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""fi"")               
+} LIMIT 10
+"
+21,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Sauli Niinistö""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""fi"")               
+} LIMIT 10
+"
+22,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Tarja Halonen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""fi"")               
+} LIMIT 10
+"
+23,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Tarja Halonen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""fi"")               
+} LIMIT 10
+"
+24,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Tarja Halonen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""fi"")               
+} LIMIT 10
+"
+25,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Spede Pasanen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""fi"")               
+} LIMIT 10
+
+"
+26,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Spede Pasanen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""en"")               
+} LIMIT 10
+
+"
+27,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x ?y FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Spede Pasanen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+         
+} LIMIT 10
+
+"
+28,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x ?y FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Sauli Niinistö""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+         
+} LIMIT 10
+
+"
+29,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x ?y FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Sauli Niinistö""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+         
+} LIMIT 10
+
+"
+30,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x ?y FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Helsinki""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+         
+} LIMIT 10
+
+"
+31,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x ?y FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Helsinki""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+         
+} LIMIT 10
+
+"
+32,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x ?y FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Helsinki""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""fi"")                        
+} LIMIT 10
+
+"
+33,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x ?y FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Helsinki""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+                      
+} LIMIT 10
+
+"
+34,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x ?y FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Helsinki""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))     
+} LIMIT 10
+"
+35,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x ?y FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (regex(?label, ""Helsinki""))                      
+} LIMIT 10
+
+"
+36,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x ?y FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (regex(?y, ""Helsinki""))                      
+} LIMIT 10
+
+"
+37,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x ?y FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Helsinki""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))     
+FILTER (lang(?y)=""fi"")               
+} LIMIT 10
+"
+38,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x ?y FROM <http://fi.dbpedia.org/>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Helsinki""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))     
+             
+} LIMIT 10
+"
+39,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x ?y FROM <http://fi.dbpedia.org/>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Helsinki""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))     
+ FILTER (lang(?y)=""fi"")                           
+} LIMIT 10
+"
+40,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x  FROM <http://dbpedia.org/>
+WHERE {
+?x rdfs:label ""Helsinki""@fi.
+                       
+} LIMIT 10
+"
+41,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://wikidata.dbpedia.org/resource/Q1757> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://wikidata.dbpedia.org/resource/Q1757> }
+}"
+42,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x  FROM <http://dbpedia.org/>
+WHERE {
+?x rdfs:label ""Helsinki""@fi.
+                      
+} LIMIT 10
+"
+43,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://wikidata.dbpedia.org/resource/Q10779007> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://wikidata.dbpedia.org/resource/Q10779007> }
+}"
+44,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://fi.dbpedia.org/resource/Helsinki_(t�smennyssivu)> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://fi.dbpedia.org/resource/Helsinki_(t�smennyssivu)> }
+}"
+45,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x  FROM <http://dbpedia.org/>
+WHERE {
+?x rdfs:label ""Helsinki""@fi.
+                     
+} LIMIT 10
+"
+46,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://wikidata.dbpedia.org/resource/Q1757> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://wikidata.dbpedia.org/resource/Q1757> }
+}"
+47,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x  FROM <http://dbpedia.org/>
+WHERE {
+?x rdfs:label ""Helsinki""@fi.
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))                       
+} LIMIT 10
+"
+48,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Spede Pasanen""' .
+FILTER (lang(?y)=""fi"")               
+} LIMIT 10
+
+"
+49,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Spede Pasanen""' .
+FILTER (lang(?y)=""fi"")               
+} LIMIT 10
+
+"
+50,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://wikidata.dbpedia.org/resource/Q10779007> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://wikidata.dbpedia.org/resource/Q10779007> }
+}"
+51,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://wikidata.dbpedia.org/resource/Q11651459> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://wikidata.dbpedia.org/resource/Q11651459> }
+}"
+52,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://wikidata.dbpedia.org/resource/Q1011613> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://wikidata.dbpedia.org/resource/Q1011613> }
+}"
+53,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x ?y FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Helsinki""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))     
+} LIMIT 10
+
+"
+54,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x ?y FROM <http://dbpedia.org>
+WHERE {
+<http://dbpedia.org/resource/Helsinki> ?y ?z.
+} 
+
+"
+55,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?y ?z FROM <http://dbpedia.org>
+WHERE {
+<http://dbpedia.org/resource/Helsinki> ?y ?z.
+} 
+
+"
+56,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ""Hel'sinki""@fi.
+} 
+
+"
+57,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Hel'sinki""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))              
+} LIMIT 10
+"
+58,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains ""Hel'sinki"".
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))              
+} LIMIT 10
+"
+59,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Hel'sinki""'.
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))              
+} LIMIT 10
+"
+60,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ""Hel'sinki""@fi.
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))              
+} LIMIT 10
+"
+61,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?y ?z FROM <http://dbpedia.org>
+WHERE {
+<http://dbpedia.org/resource/Helsinki> ?y ?z.
+}
+
+"
+62,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://fi.dbpedia.org/resource/Helsinki> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://fi.dbpedia.org/resource/Helsinki> }
+}"
+63,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://wikidata.dbpedia.org/resource/Q1757> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://wikidata.dbpedia.org/resource/Q1757> }
+}"
+64,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x ?y FROM <http://dbpedia.org>
+WHERE {
+<http://wikidata.dbpedia.org/resource/Q1757>  rdfs:label ?y.
+FILTER (lang(?y)=""fi"")               
+} LIMIT 10
+"
+65,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?y FROM <http://dbpedia.org>
+WHERE {
+<http://wikidata.dbpedia.org/resource/Q1757>  rdfs:label ?y.
+FILTER (lang(?y)=""fi"")               
+} LIMIT 10
+"
+66,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?y FROM <http://dbpedia.org>
+WHERE {
+<http://wikidata.dbpedia.org/resource/Q1757>  rdfs:label ?y.
+            
+} LIMIT 10
+"
+67,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x ?y FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Spede Pasanen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))     
+} LIMIT 10
+
+"
+68,"
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Spede Pasanen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""en"")               
+} LIMIT 10
+
+"
+69,"
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Helsinki""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""en"")               
+} LIMIT 10
+
+"
+70,"
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Helsinki""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""en"")               
+} LIMIT 10
+
+"
+71,"
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Helsinki""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""fi"")               
+} LIMIT 10
+
+"
+72,"
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Helsinki""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))            
+} LIMIT 10
+
+"
+73,"
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x ?y FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Helsinki""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))            
+} LIMIT 10
+
+"
+74,"
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x ?y FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Helsinki""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))  
+FILTER (lang(?y)=""en"")                         
+} LIMIT 10
+
+"
+75,"
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x ?y FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Helsinki""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))  
+FILTER (lang(?y)=""fi"")                         
+} LIMIT 10
+
+"
+76,"
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x ?y FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Helsinki""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))  
+FILTER (lang(?y)=""en"")                         
+} LIMIT 10
+
+"
+77,"
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?y ?z FROM <http://dbpedia.org>
+WHERE {
+<http://dbpedia.org/resource/Helsinki> rdfs:label ?label.
+}
+
+"
+78,"
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?label FROM <http://dbpedia.org>
+WHERE {
+<http://dbpedia.org/resource/Helsinki> rdfs:label ?label.
+}
+
+"
+79,"
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?label FROM <http://dbpedia.org>
+WHERE {
+<http://dbpedia.org/resource/Helsinki> owl:sameAs ?sameAs_uri.
+FILTER (regex(?x, ""http://wikidata.dbpedia.org/resource/""))
+}
+
+"
+80,"
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?sameAs_uri FROM <http://dbpedia.org>
+WHERE {
+<http://dbpedia.org/resource/Helsinki> owl:sameAs ?sameAs_uri.
+FILTER (regex(?sameAs_uri, ""http://wikidata.dbpedia.org/resource/""))
+}
+
+"
+81,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?sameAs_uri FROM <http://dbpedia.org>
+WHERE {
+<http://dbpedia.org/resource/Helsinki> owl:sameAs ?sameAs_uri.
+FILTER (regex(?sameAs_uri, ""http://wikidata.dbpedia.org/resource/""))
+}
+
+"
+82,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?sameAs_uri FROM <http://dbpedia.org>
+WHERE {
+<http://dbpedia.org/resource/Helsinki> owl:sameAs ?sameAs_uri.
+}
+
+"
+83,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?sameAs_uri FROM <http://dbpedia.org>
+WHERE {
+<http://dbpedia.org/resource/Helsinki> owl:sameAs ?sameAs_uri.
+FILTER (regex(?sameAs_uri, ”http://www.wikidata.org/entity/""))
+}
+"
+84,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?sameAs_uri FROM <http://dbpedia.org>
+WHERE {
+<http://dbpedia.org/resource/Helsinki> owl:sameAs ?sameAs_uri.
+FILTER (regex(?sameAs_uri, ”http://www.wikidata.org/entity/""))
+}
+"
+85,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?sameAs_uri FROM <http://dbpedia.org>
+WHERE {
+<http://dbpedia.org/resource/Helsinki> owl:sameAs ?sameAs_uri.
+FILTER (regex(?sameAs_uri, ""http://www.wikidata.org/entity/""))
+}
+"
+86,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?sameAs_uri ?label FROM <http://dbpedia.org>
+WHERE {
+<http://dbpedia.org/resource/Helsinki> owl:sameAs ?sameAs_uri.
+?sameAs_uri rdfs:label ?label.
+FILTER (regex(?sameAs_uri, ""http://www.wikidata.org/entity/""))
+}
+"
+87,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?sameAs_uri ?label FROM <http://dbpedia.org>
+WHERE {
+<http://dbpedia.org/resource/Helsinki> owl:sameAs ?sameAs_uri.
+FILTER (regex(?sameAs_uri, ""wikidata""))
+}
+"
+88,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?sameAs_uri  FROM <http://dbpedia.org>
+WHERE {
+<http://dbpedia.org/resource/Helsinki> owl:sameAs ?sameAs_uri.
+FILTER (regex(?sameAs_uri, ""wikidata""))
+}
+"
+89,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?y FROM <http://dbpedia.org>
+WHERE {
+<http://wikidata.dbpedia.org/resource/Q1757>  rdfs:label ?y.
+FILTER (lang(?y)=""fi"")               
+} 
+"
+90,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?y FROM <http://dbpedia.org>
+WHERE {
+<http://wikidata.dbpedia.org/resource/Q1757>  rdfs:label ?y.
+           
+} 
+"
+91,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Spede Pasanen""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""en"")               
+} LIMIT 10
+"
+92,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?sameAs_uri FROM <http://dbpedia.org>
+WHERE {
+<http://dbpedia.org/resource/Spede_Pasanen> owl:sameAs ?sameAs_uri.
+FILTER (regex(?sameAs_uri, ”http://www.wikidata.org/entity/""))
+}
+
+"
+93,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?sameAs_uri FROM <http://dbpedia.org>
+WHERE {
+<http://dbpedia.org/resource/Spede_Pasanen> owl:sameAs ?sameAs_uri.
+FILTER (regex(?sameAs_uri, ""http://www.wikidata.org/entity/""))
+}
+
+"
+94,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?y FROM <http://dbpedia.org>
+WHERE {
+<http://wikidata.dbpedia.org/resource/Q3735273>  rdfs:label ?y.
+FILTER (lang(?y)=""fi"")               
+} 
+"
+95,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?y FROM <http://dbpedia.org>
+WHERE {
+<http://wikidata.dbpedia.org/resource/Q3735273>  rdfs:label ?y.
+             
+} 
+"
+96,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Sauli Niinistö""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""en"")               
+} LIMIT 10
+
+VAstaus:"
+97,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Sauli Niinistö""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""en"")               
+} LIMIT 10
+
+VAstaus:"
+98,"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?x FROM <http://dbpedia.org>
+WHERE {
+?x rdfs:label ?y.
+?y bif:contains '""Sauli Niinistö""' .
+FILTER (regex(?x, ""http://dbpedia.org/resource/""))
+FILTER (!regex(?x, ""http://dbpedia.org/resource/Category:""))
+FILTER (lang(?y)=""en"")               
+} LIMIT 10
+
+"
+99,"
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?sameAs_uri FROM <http://dbpedia.org>
+WHERE {
+<http://dbpedia.org/resource/Sauli_Niinistö> owl:sameAs ?sameAs_uri.
+FILTER (regex(?sameAs_uri, ""http://www.wikidata.org/entity/""))
+}
+
+
+
+
+"
+100,"
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?y FROM <http://dbpedia.org>
+WHERE {
+<http://wikidata.dbpedia.org/resource/Q29207>  rdfs:label ?y.
+FILTER (lang(?y)=""fi"")               
+} 
+
+
+"
+101,"
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?y FROM <http://dbpedia.org>
+WHERE {
+<http://wikidata.dbpedia.org/resource/Q29207>  rdfs:label ?y.
+            
+} 
+
+
+"
+102,"
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?y FROM <http://dbpedia.org>
+WHERE {
+<http://wikidata.dbpedia.org/resource/Q29207>  rdfs:label ?y.
+ FILTER (lang(?y)=""fi"")    
+ FILTER (lang(?y)=""sv"")       
+} 
+
+
+"
+103,"
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?y FROM <http://dbpedia.org>
+WHERE {
+<http://wikidata.dbpedia.org/resource/Q29207>  rdfs:label ?y.
+
+ FILTER (lang(?y)=""sv"")       
+} 
+
+
+"
+104,"
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?y FROM <http://dbpedia.org>
+WHERE {
+<http://wikidata.dbpedia.org/resource/Q29207>  rdfs:label ?y.
+
+ FILTER ((lang(?y)=""sv"") || (lang(?y)=""fi""))      
+} 
+
+
+"

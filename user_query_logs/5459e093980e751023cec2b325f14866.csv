@@ -1,0 +1,5409 @@
+,query
+0,select distinct ?Concept where {[] a ?Concept} LIMIT 100
+1,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?manufacturer ?name ?car
+WHERE {
+    ?car <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Luxury_vehicles> .
+    ?car foaf:name ?name .
+    ?car dbo:manufacturer ?man .
+    ?man foaf:name ?manufacturer
+}"
+2,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?manufacturer ?name ?car
+WHERE {
+    ?car <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Luxury_vehicles> .
+    ?car foaf:name ?name .
+    ?car dbo:manufacturer ?man .
+    ?man foaf:name ?manufacturer
+}"
+3,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bc: <http://www.base22.com/ontologies/2010/5/bc.owl#>
+SELECT ?subject
+WHERE { ?subject bc:hasEmployer <http://www.base22.com/ontologies/2010/5/my-contacts.owl#IBM> } LIMIT 100"
+4,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bc: <http://www.base22.com/ontologies/2010/5/bc.owl#>
+SELECT ?subject
+WHERE { ?subject bc:hasEmployer <http://www.base22.com/ontologies/2010/5/my-contacts.owl#IBM> } 
+LIMIT 100"
+5,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?subject
+WHERE { ?subject bc:hasEmployer <http://www.base22.com/ontologies/2010/5/my-contacts.owl#IBM> } 
+LIMIT 100"
+6,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?subject
+WHERE { ?subject bc:hasEmployer } 
+LIMIT 100"
+7,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX beer: <http://www.purl.org/net/ontology/beer#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?beer 
+FROM <http://www.purl.org/net/ontology/beer>
+WHERE {
+   ?beer rdf:type beer:Beer .
+"
+8,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX beer: <http://www.purl.org/net/ontology/beer#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?beer 
+FROM <http://www.purl.org/net/ontology/beer>
+WHERE {
+   ?beer rdf:type beer:Beer . }
+"
+9,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX beer: <http://www.purl.org/net/ontology/beer#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?beer 
+FROM <http://www.purl.org/net/ontology/beer>
+WHERE {
+   ?beer rdf:type beer:Beer . 
+}
+"
+10,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX foaf:  <http://xmlns.com/foaf/0.1/>
+SELECT ?name
+WHERE {
+    ?person foaf:name ?name .
+}"
+11,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX foaf:  <http://xmlns.com/foaf/0.1/>
+SELECT ?name
+WHERE {
+    ?person foaf:name ?name .
+}
+
+limit 100"
+12,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX foaf:  <http://xmlns.com/foaf/0.1/>
+SELECT ?name
+WHERE {
+    ?person foaf:name ?name .
+?person foaf:mbox ?email . 
+}
+
+limit 100"
+13,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX foaf:  <http://xmlns.com/foaf/0.1/>
+SELECT ?name
+WHERE {
+    ?person foaf:name ?name .
+    ?person foaf:mbox ?email . 
+}
+
+limit 100"
+14,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX foaf:  <http://xmlns.com/foaf/0.1/>
+SELECT ?name
+WHERE {
+    ?person foaf:name ?name .
+    ?person foaf:mbox ?email . 
+}
+
+"
+15,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX foaf:  <http://xmlns.com/foaf/0.1/>
+SELECT ?name
+WHERE {
+    ?person foaf:name ?name .
+    ?person foaf:occupation ?occupation . 
+}
+
+"
+16,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+foaf : <http://dbpedia.org/resource/Businessman>
+SELECT ?name ?birth ?person ?occupation WHERE {
+     ?person dbo:birthPlace :Vienna .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person foaf:occupation :Businessperson  .  
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+17,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Entrepreneur> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Businessman> }
+}"
+18,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?death ?person WHERE {
+     ?person dbo:birthPlace :Vienna .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+19,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?manufacturer ?name ?car
+WHERE {
+    ?car <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Luxury_vehicles> .
+    ?car foaf:name ?name .
+    ?car dbo:manufacturer ?man .
+    ?man foaf:name ?manufacturer
+}
+ORDER by ?manufacturer ?name
+"
+20,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+foaf : <http://dbpedia.org/resource/Businessman>
+SELECT ?name ?birth ?person ?occupation WHERE {
+     ?person dbo:birthPlace :Vienna .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person foaf:occupation :Businessperson  .  
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+21,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX swrc: <http://swrc.ontoware.org/ontology#>
+
+SELECT distinct ?Person1_name ?Project1_startDate ?Project1_endDate
+WHERE{
+?Person1 rdf:type swrc:Person .
+?Person1 swrc:name ?Person1_name .
+?Person1 swrc:researchTopic ?Project1 .
+?Project1 rdf:type swrc:Project .
+?Project1 swrc:startDate ?Project1_startDate .
+?Project1 swrc:endDate ?Project1_endDate .}
+
+"
+22,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX swrc: <http://swrc.ontoware.org/ontology#>
+
+SELECT distinct ?Person1_name ?Project1_startDate ?Project1_endDate
+WHERE{
+?Person1 rdf:type swrc:Person .
+?Person1 swrc:name ?Person1_name .
+?Person1 swrc:researchTopic ?Project1 .
+?Project1 rdf:type swrc:Project .
+}
+
+"
+23,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX swrc: <http://swrc.ontoware.org/ontology#>
+
+SELECT distinct ?Person1_name 
+WHERE{
+?Person1 rdf:type swrc:Person .
+?Person1 swrc:name ?Person1_name .
+?Person1 swrc:researchTopic ?Project1 .
+?Project1 rdf:type swrc:Project .
+}
+
+"
+24,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX swrc: <http://swrc.ontoware.org/ontology#>
+
+SELECT distinct ?Person1_name ?ResearchPaper1_title
+WHERE{
+?Person1 rdf:type swrc:Person .
+?Person1 swrc:name ?Person1_name .
+?Person1 swrc:publication ?ResearchPaper1 .
+?ResearchPaper1 rdf:type swrc:ResearchPaper .
+?ResearchPaper1 swrc:title ?ResearchPaper1_title .}
+"
+25,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person WHERE {
+     ?person dbo:birthPlace :Vienna .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+26,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person WHERE {
+     ?person dbo:birthPlace :New York .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+27,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person WHERE {
+     ?person dbo:birthPlace :NewYork .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+28,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person WHERE {
+     ?person dbo:birthPlace :Berlin .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+29,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation WHERE {
+     ?person dbo:birthPlace :Berlin .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+30,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation WHERE {
+     ?person dbo:birthPlace :Berlin .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation . 
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+31,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation WHERE {
+     ?person dbo:birthPlace :Berlin .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+32,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation WHERE {
+     ?person dbo:birthPlace :Berlin .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Writer. 
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+33,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation WHERE {
+     ?person dbo:birthPlace :Vienna .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Writer. 
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+34,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation WHERE {
+     ?person dbo:birthPlace :California .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Writer. 
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+35,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation WHERE {
+     ?person dbo:birthPlace :California .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer. 
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+36,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation WHERE {
+     ?person dbo:birthPlace :California .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer. 
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+37,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation WHERE {
+     ?person dbo:birthPlace  .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer. 
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+38,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation WHERE {
+     ?person dbo:birthPlace  :California.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer. 
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+39,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer. 
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+40,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer. 
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+41,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Nancy_J._Currie> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Nancy_J._Currie> }
+}"
+42,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation WHERE {
+     ?person dbo:birthPlace :California .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer. 
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+43,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+44,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?name dbo:occupation :Engineer. 
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+45,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+46,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Kevin_Whitrick> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Kevin_Whitrick> }
+}"
+47,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 200
+"
+48,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+49,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Ann_Brickley> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Ann_Brickley> }
+}"
+50,"SELECT ?resource ?value
+WHERE { ?resource <http://dbpedia.org/property/children> ?value }
+ORDER BY ?resource ?value"
+51,"SELECT ?resource ?value
+WHERE { ?resource <http://dbpedia.org/property/votesmart> ?value }
+ORDER BY ?resource ?value"
+52,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation ?children WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+     ?person dbo:children ?two children.
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+53,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation ?children WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+     ?person dbo:children ?two children .
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+54,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation ?children WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+     ?person dbo:children ?Two Children .
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+55,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation ?children WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+     ?person dbo:children  .
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+56,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation  WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+     
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+57,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/David_C._Hilmers> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/David_C._Hilmers> }
+}"
+58,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation  WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+     
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+59,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Helena_Bulaja> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Helena_Bulaja> }
+}"
+60,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Designer> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Designer> }
+}"
+61,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Aki_Kondo> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Aki_Kondo> }
+}"
+62,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://xmlns.com/foaf/0.1/Person> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://xmlns.com/foaf/0.1/Person> }
+}"
+63,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://xmlns.com/foaf/0.1/Person> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://xmlns.com/foaf/0.1/Person> }
+}"
+64,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation ?salary WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+     ?person dbo:salary
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+65,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation ?salary WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+     ?person dbo:salary ?double .
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+66,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation ?salary WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+     ?person dbo:salary ?$ .
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+67,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation ?salary WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+     ?person dbo:salary ?averagesalary .
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+68,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation ?salary WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+     ?person dbo:salary ?salary .
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+69,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation ?partner WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+     ?person dbo:partner ?Designer .
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+70,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation ?partner WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+     ?person dbo:partner ?worker .
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+71,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation ?partner WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+     ?person dbo:partner ?Actor .
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+72,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation ?partner WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+     ?person dbo:partner ?person .
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+73,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Ian_Watkins_(Lostprophets)> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Ian_Watkins_(Lostprophets)> }
+}"
+74,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation ?child WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+     ?person dbo:child ?person .
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+75,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation ?age WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+     ?person ex:age ?age  .
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+76,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation ?age WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+     ?person dbo:age ?age  .
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+77,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation  WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+     
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+78,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation  WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+     
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+79,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation  WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+     
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+
+ORDER BY ?name
+
+limit 100
+"
+80,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation  WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+     
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+
+ORDER BY ?name
+
+limit 100
+"
+81,"PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person ?occupation  WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+     
+}
+
+ORDER BY ?name
+
+limit 100
+"
+82,"select * where {
+  values ?company { dbpedia:Microsoft
+                    <http://dbpedia.org/resource/Apple_Inc.>
+                    dbpedia:Kimberly-Clark
+                  } 
+  OPTIONAL { { ?company dbpprop:logo ?logo  FILTER(isIRI(?logo)) }
+             UNION 
+             { ?company foaf:depiction ?logo FILTER(isIRI(?logo)) } }
+  OPTIONAL { ?company dbpedia-owl:abstract ?abstract 
+             FILTER(langMatches(lang(?abstract),""EN"")) }
+  OPTIONAL { ?company geo:lat ?latitude ;
+                      geo:long ?longitude }
+  OPTIONAL { ?company dbpedia-owl:foundingDate ?foundingDate }
+  OPTIONAL { ?company dbpedia-owl:wikiPageExternalLink ?externalLink }
+  OPTIONAL { ?company dbpprop:symbol ?stockSymbol }
+  OPTIONAL { ?company dbpedia-owl:subsidiary ?subsidiaryPage }
+}
+"
+83,"select distinct ?iri ?logo ?description {
+  values ?hasLogo { foaf:depiction dbpedia-owl:thumbnail }
+  values ?hasName { foaf:name rdfs:label }
+  ?iri a dbpedia-owl:Company ;
+       dbpedia-owl:abstract ?description ;
+       ?hasLName ""Apple Inc.""@en ;
+       ?hasLogo ?logo .
+  filter( langMatches(lang(?description),""en"") )
+}
+"
+84,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbpprop: <http://dbpedia.org/property/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?name ?birth  ?person ?occupation  WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+     
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+85,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbpprop: <http://dbpedia.org/property/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?name ?birth  ?person ?occupation  WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+     ?person dbpprop:occupation ?string .
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+86,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbpprop: <http://dbpedia.org/property/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?name ?birth  ?person ?occupation  WHERE {
+     
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+     
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+87,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbpprop: <http://dbpedia.org/property/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+SELECT ?name ?birth  ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+88,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbpprop: <http://dbpedia.org/property/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+89,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX dbpprop: <http://dbpedia.org/property/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+90,"PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+91,"PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+    FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+92,"PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+    FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+93,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+    FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+94,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+    FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+95,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+    FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+96,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person foaf:name ?name .
+     ?person dbpedia-owl:birthPlace ?birthplace .
+     ?person dbo:birthDate ?birth .
+     
+     ?person dbo:occupation :Designer . 
+    FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+97,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+?person foaf:name ?name.
+?person dbpedia-owl:birthPlace ?birthplace.
+?person dbo:birthDate ?birth.
+     
+?person dbo:occupation :Designer. 
+FILTER (?birth > ""1950-01-01""^^xsd:date).
+}
+ORDER BY ?name
+limit 100"
+98,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+?person foaf:name ?name.
+?person dbpedia-owl:birthPlace ?birthplace.
+?person dbo:birthDate ?birth.
+     
+?person dbo:occupation :Designer. 
+FILTER (?birth > ""1950-01-01""^^xsd:date).}
+ORDER BY ?name
+limit 100"
+99,"PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+?person foaf:name ?name.
+?person dbpedia-owl:birthPlace ?birthplace.
+?person dbo:birthDate ?birth.
+     
+?person dbo:occupation :Designer. 
+}
+ORDER BY ?name
+limit 100"
+100,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Designer . 
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+101,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+102,"    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+103,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+104,"    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+105,"    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+106,"    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . }
+"
+107,"    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer. }
+"
+108,"    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer. }
+"
+109,"    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+  }
+"
+110,"    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+SELECT ?name ?birth ?birthplace ?person  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+  }
+"
+111,"    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+SELECT ?name ?birth ?birthplace ?person  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+  }
+"
+112,"
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+113,"
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+SELECT ?name ?birth ?birthplace ?person WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+      
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+114,"
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+SELECT ?name ?birth ?birthplace ?person WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+      
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+115,"
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+SELECT ?name ?birth ?birthplace ?person WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+      
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+116,"
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+SELECT ?name ?birth ?birthplace ?person ?ocupation WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+      
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+117,"
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+SELECT ?name ?birth ?birthplace ?person ?ocupation WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:ocuaption ?Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+118,"
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+SELECT ?name ?birth ?birthplace ?person ?ocupation WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:ocupation ?Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+119,"
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+SELECT ?name ?birth ?birthplace ?person ?ocupation WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:ocupation ?Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+120,"
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+SELECT ?name ?birth ?birthplace ?person ?ocupation WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:ocupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+121,"
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+SELECT ?name ?birth ?birthplace ?person ?ocupation WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:ocupation :Writer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+122,"
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+SELECT ?name ?birth ?birthplace ?person ?ocupation WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:ocupation :person .
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+123,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Bruce_Robb> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Bruce_Robb> }
+}"
+124,"
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+SELECT ?name ?birth ?birthplace ?person ?ocupation WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:ocupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+125,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer .
+     ?person dbpedia-owl:gender dbpedia:Female.
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+126,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+SELECT ?name ?birth ?birthplace ?person ?occupation ?gender WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer .
+     ?person dbpedia-owl:gender dbpedia:Female.
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+127,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+SELECT ?name ?birth ?birthplace ?person ?occupation ?gender WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer .
+     ?person dbpedia-owl:gender ?g.
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+128,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>PREFIX category: <http://dbpedia.org/resource/Category:>
+SELECT ?name ?birth ?birthplace ?person ?occupation ?gl WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer .
+     ?person dbpedia-owl:gender ?g.
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+129,"SELECT ?pn ?gl
+WHERE {
+  ?person dbpedia-owl:gender ?g.
+  ?person a dbpedia-owl:Person.
+  ?person dbpprop:name ?pn.
+  {
+    ?person dbpedia-owl:gender dbpedia:Man.
+  } UNION {
+    ?person dbpedia-owl:gender dbpedia:Woman.
+  }.
+  ?g rdfs:label ?gl.
+  FILTER(lang(?gl) = ""en"").
+}"
+130,"SELECT ?pn ?gl
+WHERE {
+  ?person dbpedia-owl:gender ?g.
+  ?person a dbpedia-owl:Person.
+  ?person dbpprop:name ?pn.
+  {
+    ?person dbpedia-owl:gender dbpedia:Male.
+  } UNION {
+    ?person dbpedia-owl:gender dbpedia:Female.
+  }.
+  ?g rdfs:label ?gl.
+  FILTER(lang(?gl) = ""en"").
+}"
+131,"SELECT ?pn ?gl
+WHERE {
+  ?person dbpedia-owl:gender ?g.
+  ?person a dbpedia-owl:Person.
+  ?person dbpprop:name ?pn.
+  {
+    ?person dbpedia-owl:gender dbpedia:Male.
+  } UNION {
+    ?person dbpedia-owl:gender dbpedia:Female.
+  }.
+  ?g rdfs:label ?gl.
+  FILTER(lang(?gl) = ""en"").
+}"
+132,"SELECT ?pn ?gl
+WHERE {
+  ?person dbpedia-owl:gender ?g.
+  ?person a dbpedia-owl:Person.
+  ?person dbpprop:name ?pn.
+  {
+    ?person dbpedia-owl:gender dbpedia:Male.
+  } UNION {
+    ?person dbpedia-owl:gender dbpedia:Female.
+  }.
+  ?g rdfs:label ?gl.
+  FILTER(lang(?gl) = ""en"").
+}"
+133,"SELECT ?pn ?gl
+WHERE {
+  ?person dbpedia-owl:gender ?g.
+  ?person a dbpedia-owl:Person.
+  ?person dbpprop:name ?pn.
+  {
+    ?person dbpedia-owl:gender dbpedia:Male.
+  } UNION {
+    ?person dbpedia-owl:gender dbpedia:Female.
+  }.
+  ?g rdfs:label ?gl.
+  FILTER(lang(?gl) = ""en"").
+}"
+134,"SELECT ?pn ?gl
+WHERE {
+  ?person dbpedia-owl:gender ?g.
+  ?person a dbpedia-owl:Person.
+  ?person dbpprop:name ?pn.
+  {
+    ?person dbpedia-owl:gender dbpedia:Male.
+  } UNION {
+    ?person dbpedia-owl:gender dbpedia:Female.
+  }.
+  ?g rdfs:label ?gl.
+  FILTER(lang(?gl) = ""en"").
+}"
+135,"SELECT ?pn ?gl
+WHERE {
+  ?person dbpedia-owl:gender ?g.
+  ?person a dbpedia-owl:Person.
+  ?person dbpprop:name ?pn.
+  {
+    ?person dbpedia-owl:gender dbpedia:Male.
+  } UNION {
+    ?person dbpedia-owl:gender dbpedia:Female.
+  }.
+  ?g rdfs:label ?gl.
+  FILTER(lang(?gl) = ""en"").
+}"
+136,"SELECT ?pn ?gl
+WHERE {
+  ?person dbpedia-owl:gender ?g.
+  ?person a dbpedia-owl:Person.
+  ?person dbpprop:name ?pn.
+  {
+    ?person dbpedia-owl:gender dbpedia:Male.
+  } UNION {
+    ?person dbpedia-owl:gender dbpedia:Female.
+  }.
+  ?g rdfs:label ?gl.
+  FILTER(lang(?gl) = ""en"").
+}"
+137,"SELECT DISTINCT ?P ?N WHERE {
+?P <http://dbpedia.org/ontology/employer> :IBM  .
+?P a foaf:Person .
+?P foaf:name ?N
+}
+"
+138,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT DISTINCT ?P ?N WHERE {
+?P <http://dbpedia.org/ontology/employer> :IBM  .
+?P a foaf:Person .
+?P foaf:name ?N
+}"
+139,"SELECT DISTINCT ?P ?N WHERE {
+?P <http://dbpedia.org/ontology/employer> :IBM  .
+?P a foaf:Person .
+?P foaf:name ?N
+}
+"
+140,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT DISTINCT ?P ?N WHERE {
+?P <http://dbpedia.org/ontology/employer> :IBM  .
+?P a foaf:Person .
+?P foaf:name ?N
+?p dbpedia-owl:birthPlace ?birthplace.
+?p dbo:birthDate ?birth 
+}"
+141,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT DISTINCT ?P ?N ?birthplace ?birth WHERE {
+?P <http://dbpedia.org/ontology/employer> :IBM  .
+?P a foaf:Person .
+?P foaf:name ?N
+?p dbpedia-owl:birthPlace ?birthplace.
+?p dbo:birthDate ?birth 
+}"
+142,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT DISTINCT ?P ?N ?birthplace ?birth WHERE {
+?P <http://dbpedia.org/ontology/employer> :IBM  .
+?P a foaf:Person .
+?P foaf:name ?N
+?p <http://dbpedia.org/ontology/> :birthPlace ?birthplace.
+?p <http://dbpedia.org/ontology/> :birthDate ?birth 
+}"
+143,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT DISTINCT ?P ?N ?birthOlace ?birth WHERE {
+?P <http://dbpedia.org/ontology/employer> :IBM  .
+?P a foaf:Person .
+?P foaf:name ?N
+?p <http://dbpedia.org/ontology/> :birthPlace ?birthplace.
+?p <http://dbpedia.org/ontology/> :birthDate ?birth 
+}"
+144,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT DISTINCT ?P ?N ?birthOlace ?birth WHERE {
+?P <http://dbpedia.org/ontology/employer> :IBM  .
+?P a foaf:Person .
+?P foaf:name ?N
+?P <http://dbpedia.org/ontology/> :birthPlace ?birthplace.
+?P <http://dbpedia.org/ontology/> :birthDate ?birth 
+}"
+145,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT DISTINCT ?P ?N ?birthOlace ?birth WHERE {
+?P <http://dbpedia.org/ontology/employer> :IBM  .
+?P a foaf:Person .
+?P foaf:name ?N
+?P <http://dbpedia.org/ontology/> :birthPlace ?birthplace .
+?P <http://dbpedia.org/ontology/> :birthDate ?birth .
+}"
+146,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT DISTINCT ?P ?N ?birthOlace ?birth WHERE {
+?P <http://dbpedia.org/ontology/employer> :IBM  .
+?P a foaf:Person .
+?P foaf:name ?N .
+?P <http://dbpedia.org/ontology/> :birthPlace ?birthplace .
+?P <http://dbpedia.org/ontology/> :birthDate ?birth .
+}"
+147,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT DISTINCT ?P ?N ?birthOlace ?birth WHERE {
+?P <http://dbpedia.org/ontology/employer> :IBM  .
+?P a foaf:Person .
+?P foaf:name ?N .
+?P <http://dbpedia.org/ontology/> :birthPlace ?birthplace .
+?P <http://dbpedia.org/ontology/> :birthDate ?birth .
+}"
+148,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT DISTINCT ?P ?N ?birthOlace ?birth WHERE {
+?P <http://dbpedia.org/ontology/employer> :IBM  .
+?P a foaf:Person .
+?P foaf:name ?N .
+?P <http://dbpedia.org/ontology/> :birthPlace ?birthPlace .
+?P <http://dbpedia.org/ontology/> :birthDate ?birth .
+}"
+149,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT DISTINCT ?P ?N ?birthOlace ?birth WHERE {
+?P <http://dbpedia.org/ontology/employer> :IBM  .
+?P a foaf:Person .
+?P foaf:name ?N .
+?P <http://dbpedia.org/ontology/> :birthPlace ?birthplace.
+?P <http://dbpedia.org/ontology/> :birthDate ?birth .
+}"
+150,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+151,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+152,"PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+153,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+      ?person dbpedia-owl:gender dbpedia:Male.
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+154,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+      ?person dbpedia-owl:gender ?Male.
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+155,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation ?gender WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+      ?person dbpedia-owl:gender ?Male.
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+156,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation ?gender WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+     ?person dbpedia-owl:gender .
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+157,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation ?gender WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+     
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+158,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+     
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+159,"PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person <http://dbpedia.org/ontology/> :Engineer . 
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+160,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/West_Point,_Pennsylvania> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/West_Point,_Pennsylvania> }
+}"
+161,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Alex_Newport> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Alex_Newport> }
+}"
+162,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation ?gender WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+     
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+163,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation ?gender WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+     ?person dbpedia-owl:gender ?g.
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+164,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation ?gender WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+     ?person dbpedia-owl:gender ?g.
+  ?person a dbpedia-owl:Person.
+  ?person dbpprop:name ?pn.
+  {
+    ?person dbpedia-owl:gender dbpedia:Male.
+  } UNION {
+    ?person dbpedia-owl:gender dbpedia:Female.}.
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+165,"PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+    
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+166,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+167,"select {
+<http://dbpedia.org/resource/Steve_Jobs> <http://dbpedia.org/property/nationality> ?nationality.
+<http://dbpedia.org/resource/Steve_Jobs> <http://dbpedia.org/property/boards> ?boards.
+<http://dbpedia.org/resource/Steve_Jobs> <http://dbpedia.org/property/occupation> ?occupation.
+}
+WHERE{ 
+<http://dbpedia.org/resource/Steve_Jobs> <http://dbpedia.org/property/nationality> ?nationality.
+<http://dbpedia.org/resource/Steve_Jobs> <http://dbpedia.org/property/boards> ?boards.
+<http://dbpedia.org/resource/Steve_Jobs> <http://dbpedia.org/property/occupation> ?occupation.
+}"
+168,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/> <http://dbpedia.org/property/occupation>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+169,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX dbo:<http://dbpedia.org/property/occupation>
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+170,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/> 
+   
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+171,"
+    PREFIX dbo: <http://dbpedia.org/ontology/> 
+   
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person <http://dbpedia.org/property/occupation> :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+172,"
+    PREFIX dbo: <http://dbpedia.org/ontology/> 
+   
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person <http://dbpedia.org/property/occupation> :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+173,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/> , <http://dbpedia.org/property/occupation> 
+   
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+174,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/> . <http://dbpedia.org/property/occupation> 
+   
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+175,"
+    PREFIX dbo: <http://dbpedia.org/ontology/> .
+   
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/> .
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/> .
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person <http://dbpedia.org/property/occupation> :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+176,"
+    PREFIX dbo: <http://dbpedia.org/ontology/> 
+  
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/> 
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person <http://dbpedia.org/property/occupation> :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+177,"
+    PREFIX dbo: <http://dbpedia.org/ontology/> 
+  
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/> 
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person <http://dbpedia.org/property/occupation> :Engineer . 
+
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+178,"
+    PREFIX dbo: <http://dbpedia.org/ontology/> 
+  
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/> 
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person <http://dbpedia.org/property/occupation> :occupation. 
+
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+179,"
+    PREFIX dbo: <http://dbpedia.org/ontology/> 
+  
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/> 
+
+SELECT ?name ?birth ?birthplace ?person   WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+
+
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+180,"SELECT DISTINCT ? person ? label
+ WHERE { ? person rdf: type dbo: Person .
+ { ? person dbo: occupation res: Writer . }
+ UNION
+ { ? person dbo: occupation res: Surfing . }
+ ? person dbo: birthDate ? date .
+FILTER(? date > "" 1950 "" ^^xsd: date ) .
+ OPTIONAL {? person rdfs: label ? label
+ FILTER ( lang (? label ) = "" en "" ) } }"
+181,"SELECT DISTINCT ? person ? label
+ WHERE { ? person rdf: type dbo: Person .
+ { ?person dbo: occupation res: Writer . }
+ UNION
+ { ?person dbo: occupation res: Surfing . }
+ ?person dbo: birthDate ? date .
+FILTER(? date > "" 1950 "" ^^xsd: date ) .
+ OPTIONAL {? person rdfs: label ? label
+ FILTER ( lang (? label ) = "" en "" ) } }"
+182,"SELECT DISTINCT ? person ? label
+ WHERE { ?person rdf: type dbo: Person .
+ { ?person dbo: occupation res: Writer . }
+ UNION
+ { ?person dbo: occupation res: Surfing . }
+ ?person dbo: birthDate ? date .
+FILTER(? date > "" 1950 "" ^^xsd: date ) .
+ OPTIONAL {? person rdfs: label ? label
+ FILTER ( lang (? label ) = "" en "" ) } }"
+183,"SELECT DISTINCT ? person ? label
+ WHERE { ?person rdf: type dbo: Person .
+ { ?person dbo: occupation res: Writer . }
+ UNION
+ { ?person dbo: occupation res: Surfing . }
+ ?person dbo: birthDate ? date .
+FILTER(? date > "" 1950 "" ^^xsd: date ) .
+ OPTIONAL {?person rdfs: label ? label
+ FILTER ( lang (? label ) = "" en "" ) } }"
+184,"SELECT DISTINCT ? person ? label
+ WHERE { ?person rdf: type dbo: Person .
+ ?person dbo: occupation res: Writer . }
+ UNION
+ { ?person dbo: occupation res: Surfing . }
+ ?person dbo: birthDate ? date .
+FILTER(? date > "" 1950 "" ^^xsd: date ) .
+ OPTIONAL {?person rdfs: label ? label
+ FILTER ( lang (? label ) = "" en "" ) } }"
+185,"SELECT DISTINCT ? person ? label
+ WHERE { ?person rdf: type dbo: Person .
+ ?person dbo: occupation res: Writer . }
+ UNION
+ { ?person dbo: occupation res: Surfing . 
+ ?person dbo: birthDate ? date .}
+FILTER(? date > "" 1950 "" ^^xsd: date ) .
+ OPTIONAL {?person rdfs: label ? label
+ FILTER ( lang (? label ) = "" en "" ) } }"
+186,"
+    PREFIX dbo: <http://dbpedia.org/ontology/> 
+   
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+187,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/> 
+   
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer .
+     ?person  foaf:occupation ?occupation . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+188,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    PREFIX dbo: <http://dbpedia.org/ontology/> 
+   
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+189,"
+    PREFIX dbo: <http://dbpedia.org/ontology/> 
+   
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+190,"
+    PREFIX dbo: <http://dbpedia.org/ontology/> 
+   
+    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+    PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person ?occupation  WHERE {
+     ?person dbpedia-owl:birthPlace ?birthplace.
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+191,"SELECT ?name ?birth ?birthplace ?person  WHERE {
+    ?person dbpedia-owl:birthPlace ?birthplace.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+192,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person  WHERE {
+    ?person dbpedia-owl:birthPlace ?birthplace.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+193,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person  WHERE {
+    ?person dbpedia-owl:birthPlace ?birthplace.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+194,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person  WHERE {
+    ?person dbpedia-owl:birthPlace ?birthplace.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+195,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person  WHERE {
+    ?person dbpedia-owl:birthPlace ?birthplace.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+196,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?birth ?name ?birthplace  WHERE {
+    ?person dbpedia-owl:birthPlace ?birthplace.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+197,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?birth ?name ?birthplace  WHERE {
+    ?person dbpedia-owl:birthPlace ?birthplace.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+198,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?birth ?name ?birthplace  WHERE {
+    ?person dbpedia-owl:birthPlace ?birthplace.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+199,"
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?birth ?name ?birthplace  WHERE {
+    ?person dbpedia-owl:birthPlace ?birthplace.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+200,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?birth ?name ?birthplace  WHERE {
+    ?person dbo:birthPlace ?birthplace.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+201,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?birth ?name ?birthplace  WHERE {
+    ?person dbo:birthPlace ?Japan .
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+202,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?birth ?name ?birthplace  WHERE {
+    ?person dbo:birthPlace ?Japan .
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+203,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person  WHERE {
+    ?person dbpedia-owl:birthPlace ?birthplace.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+204,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?cityofbirth ?person  WHERE {
+    ?person dbpedia-owl:p:cityofbirth ?city.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+205,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person  WHERE {
+    ?person dbpedia-owl:birthPlace ?city.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+206,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person  WHERE {
+    ?person dbpedia-owl:birthPlace ?United_States.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+207,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person  WHERE {
+    ?person dbpedia-owl:birthPlace ?United_States .
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+208,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person  WHERE {
+    ?person dbpedia-owl:birthPlace ?city .
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+209,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?city ?person  WHERE {
+    ?person dbpedia-owl:birthPlace ?city .
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+210,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?city ?person  WHERE {
+    ?person dbpedia-owl:birthPlace ?city .
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+211,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person  WHERE {
+    ?person dbpedia-owl:cityofbirth ?birthplace .
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+212,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person  WHERE {
+    ?person dbpedia-owl:cityofbirth ?city .
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+213,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?city ?person  WHERE {
+    ?person dbpedia-owl:cityofbirth ?city .
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+214,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?city ?person  WHERE {
+    ?person dbpedia-owl:birthplace ?city .
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+215,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?city ?person  WHERE {
+    ?person dbpedia-owl:birthplace ?city .
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+216,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person  WHERE {
+    ?person dbpedia-owl:birthPlace ?city.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+217,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person  WHERE {
+    ?person dbpedia-owl:citybirthPlace ?bithplace
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+218,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person  WHERE {
+    ?person dbpedia-owl:city ?bithplace
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+219,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person  WHERE {
+    ?person dbpedia-owl:cityofbirth ?bithplace
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+220,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person  WHERE {
+    ?person dbpedia-owl:cityofbirth ?bithplace
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+221,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?person  WHERE {
+    
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer . 
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+222,"PREFIX:  <http://dbpedia.org/property/>    
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?city ?person  WHERE {
+   
+    ?person p:cityofbirth ?city
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+223,"PREFIX:  <http://dbpedia.org/property/>    
+PREFIX: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?city ?person  WHERE {
+   
+    ?person p:cityofbirth ?city
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+224,"PREFIX:  <http://dbpedia.org/property/>    
+PREFIX: p: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?city ?person  WHERE {
+   
+    ?person p:cityofbirth ?city
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+225,"PREFIX:  <http://dbpedia.org/property/>    
+PREFIX: p: <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?city ?person  WHERE {
+   
+    ?person p:cityofbirth ?city
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+226,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?city ?person  WHERE {
+    ?person dbpedia-owl:birthPlace ?city.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+227,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?city ?person  WHERE {
+    ?person dbpedia-owl:birthPlace ?city.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+228,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?city ?person  WHERE {
+    ?person dbpedia-owl:citybirthPlace ?city.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+229,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?nationality ?person  WHERE {
+    ?person dbpedia-owl:nationality ?nationality .
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+230,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?nationality ?person  WHERE {
+    ?person dbpedia-owl:nationality ?nationality .
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+231,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?nationality ?person ?status WHERE {
+    ?person dbpedia-owl:nationality ?nationality .
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer .
+    ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+232,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?nationality ?person ?status WHERE {
+    ?person dbpedia-owl:nationality ?nationality .
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer .
+    ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+233,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?nationality ?person ?status WHERE {
+    ?person dbpedia-owl:nationality ?nationality .
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Designer .
+    ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+234,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?nationality ?person ?status WHERE {
+    ?person dbpedia-owl:nationality ?nationality .
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Manager .
+    ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+235,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?nationality ?person ?status WHERE {
+    ?person dbpedia-owl:nationality ?nationality .
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Manager .
+    ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+236,"
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?nationality ?person ?status WHERE {
+    ?person dbpedia-owl:nationality ?nationality .
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer .
+    ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+237,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?person  WHERE {
+    ?person dbpedia-owl:birthPlace ?birthplace.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+238,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?status ?person  WHERE {
+    ?person dbpedia-owl:status ?status.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+239,"
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?status ?person  WHERE {
+    ?person dbpedia-owl:status ?status.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+240,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?status ?person  WHERE {
+    ?person dbpedia-owl:status ?status.
+    ?person dbo:birthDate ?birth .
+    ?person foaf:name ?name .
+    ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100"
+241,"SELECT ?name ?birth ?birthplace ?label ?person  WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = “en"") 
+}
+ORDER BY ?name
+limit 100"
+242,"SELECT ?name ?birth ?birthplace ?label ?person  WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = “en"") 
+}
+ORDER BY ?name
+limit 100"
+243,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?label ?person  WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = “en"") 
+}
+ORDER BY ?name
+limit 100"
+244,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?label ?person  WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = “en"") 
+}
+ORDER BY ?name
+limit 100"
+245,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?label ?person  WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+ 
+}
+ORDER BY ?name
+limit 100"
+246,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?label ?person  WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date)
+FILTER (lang(?label) = “en"")  
+ }
+ORDER BY ?name
+limit 100"
+247,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?label ?person  WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date)
+FILTER (lang  (?label) = “en"")  
+ }
+ORDER BY ?name
+limit 100"
+248,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?label ?person  WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date)
+FILTER (?label = “en"")  
+ }
+ORDER BY ?name
+limit 100"
+249,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?label ?person  WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date)
+FILTER (lang(?label) = 'en') 
+ }
+ORDER BY ?name
+limit 100"
+250,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth  ?label ?person  WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date)
+FILTER (lang(?label) = 'en') 
+ }
+ORDER BY ?name
+limit 100"
+251,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?label ?person  WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date)
+FILTER (lang(?label) = 'en') 
+ }
+ORDER BY ?name
+limit 100"
+252,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?label ?person  WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date)
+FILTER (lang(?label) = 'en') 
+ }
+ORDER BY ?name
+limit 100"
+253,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?person ?name ?birth ?label WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date)
+FILTER (lang(?label) = 'en') 
+ }
+ORDER BY ?name
+limit 100"
+254,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?person ?name ?birth ?label WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date)
+FILTER (lang(?label) = 'en') 
+ }
+ORDER BY ?name
+limit 100"
+255,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?person ?name ?birth ?label WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date)
+FILTER (lang(?label) = 'en') 
+ }
+ORDER BY ?name
+limit 100"
+256,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?person ?name ?birth ?label WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbpedia-owl:birthPlace ?birthPlace.
+   ?birthPlace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date)
+FILTER (lang(?label) = 'en') 
+ }
+ORDER BY ?name
+limit 100"
+257,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?person ?name ?birth ?label WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbpedia-owl:birthPlace ?birthPlace.
+   ?birthPlace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date)
+FILTER (lang(?label) = 'en') 
+ }
+ORDER BY ?name
+limit 100"
+258,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?person ?name ?birth ?label ?label1 WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbpedia-owl:birthPlace ?birthPlace.
+   ?birthPlace rdfs:label1 ?label1.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date)
+FILTER (lang(?label) = 'en') 
+ }
+ORDER BY ?name
+limit 100"
+259,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?person ?name ?birth ?label WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date)
+FILTER (lang(?label) = 'en') 
+ }
+ORDER BY ?name
+limit 100"
+260,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT  ?person ?name ?birth ?label WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date)
+FILTER (lang(?label) = 'en') 
+ }
+ORDER BY ?name
+limit 100"
+261,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?label ?person  WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = “en"") 
+}
+ORDER BY ?name
+limit 100"
+262,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?label ?person  WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang (?label) = “en"") 
+}
+ORDER BY ?name
+limit 100"
+263,"
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?label ?person  WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = “en"") 
+}
+ORDER BY ?name
+limit 100"
+264,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?label ?person  WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = “en"") 
+}
+ORDER BY ?name
+limit 100"
+265,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?label ?person  WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+266,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person?name ?birth  ?label   WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+267,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person?name ?birth  ?label   WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+268,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person?name ?birth  ?label   WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+269,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person?name ?birth  ?label   WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+270,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person?name ?birth  ?label   WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+271,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person?name ?birth  ?label   WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+272,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person?name ?birth  ?label   WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+273,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person?name ?birth  ?label  ?status  WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+274,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person?name ?birth  ?label  ?status  WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1960-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+275,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person?name ?birth  ?label  ?status  WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status .
+FILTER (?birth > ""1960-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+276,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person?name ?birth  ?label  ?status  WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status .
+FILTER (?birth > ""1960-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+277,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person?name ?birth  ?label  ?status  WHERE {
+ 
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status .
+FILTER (?birth > ""1960-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+278,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person?name ?birth   ?status  WHERE {
+ 
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status .
+FILTER (?birth > ""1960-01-01""^^xsd:date) 
+}
+ORDER BY ?name
+limit 100"
+279,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?birthplace ?label ?person  WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+280,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?birthplace ?label  WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+281,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person 
+FILTER (?birth > ""1960-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+282,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1960-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+283,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1970-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+284,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+285,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+286,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+287,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1960-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+288,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1960-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 130"
+289,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1940-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 130"
+290,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1953-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 130"
+291,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1953-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+292,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+293,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation  .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+294,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation  : Desighner.
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+295,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation  :Designer.
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+296,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation  :Designer.
+   
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+297,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation  :Designer.
+   
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+298,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person  ?birth ?label WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation  :Designer.
+   
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+299,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person  ?birth ?label WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+ 
+   ?person dbo:occupation  :Designer.
+   
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+300,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person  ?birth ?label WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+ 
+   ?person dbo:occupation  :Engineer.
+   
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+301,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person  ?birth ?name ?label WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+ 
+   ?person dbo:occupation  :Engineer.
+   
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+302,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person  ?birth ?name ?label WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+  ?person foaf:name ?name .
+   ?person dbo:occupation  :Engineer.
+   
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+303,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1953-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+304,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1958-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+305,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1959-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+306,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1959-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+"
+307,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1958-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+"
+308,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1959-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+"
+309,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+"
+310,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+"
+311,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1953-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+"
+312,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:birthplace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1959-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+"
+313,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:birthplace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1959-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+"
+314,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person  ?birth ?name ?label ?status WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation  :Engineer.
+   ?person dbpedia-owl:status ?status
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+315,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person  ?birth ?name ?label ?status WHERE {
+   ?person dbpedia-owl:birthPlace ?birthplace.
+   ?birthplace rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation  :Engineer.
+   ?person dbpedia-owl:status ?status
+FILTER (?birth > ""1950-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name
+limit 100"
+316,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?person ?position WHERE {
+     ?person dbo:birthPlace :Vienna .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+    
+     FILTER (?birth > ""1950-01-01""^^xsd:date) .
+}
+ORDER BY ?name
+limit 100
+"
+317,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+select ?person ?
+"
+318,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+select ?person ?name ?birth ?label ?status where {
+       ?person foaf:name ?name .
+       ?person dbo:birthDate ?birth .
+       ?person dbpedia-owl:status ?status .
+       ?"
+319,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+select ?person ?name ?birth ?label ?status where {
+       ?person foaf:name ?name .
+       ?person dbo:birthDate ?birth .
+       ?person dbpedia-owl:status ?status .
+       ?person dbo:occupation ?Engineer .
+       ?person dbpredia-owl:nationality ?nationality .
+       ?nationality rdfs:label ?label .
+}"
+320,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?label ?status WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1959-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name"
+321,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?person ?name ?birth ?nationality ?status WHERE {
+   ?person dbpedia-owl:nationality ?nationality.
+   ?nationality rdfs:label ?label.
+   ?person dbo:birthDate ?birth .
+   ?person foaf:name ?name .
+   ?person dbo:occupation :Engineer .
+   ?person dbpedia-owl:status ?status.
+FILTER (?birth > ""1959-01-01""^^xsd:date) 
+FILTER (lang(?label) = ""en"") 
+}
+ORDER BY ?name"

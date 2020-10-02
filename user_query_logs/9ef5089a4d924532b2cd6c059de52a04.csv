@@ -1,0 +1,2376 @@
+,query
+0,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX band: <http://dbpedia.org/ontology/Band>
+PREFIX artist: <http://dbpedia.org/ontology/MusicalArtist>
+PREFIX genre: <http://dbpedia.org/ontology/MusicGenre>
+
+SELECT distinct ?search ?name ?type WHERE {
+?search rdfs:subClassOf* owl:Thing.
+?search rdf:type ?type.
+FILTER( (?type = band:) || (?type = artist:) || (?type = genre:).
+?thing rdfs:label ?name.
+FILTER(lang(?Name) = ""en"").
+FILTER (regex(?search, ""resource/.*mot.*"", ""i"")).
+}ORDER BY ?type
+LIMIT 200"
+1,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX band: <http://dbpedia.org/ontology/Band>
+PREFIX artist: <http://dbpedia.org/ontology/MusicalArtist>
+PREFIX genre: <http://dbpedia.org/ontology/MusicGenre>
+
+SELECT distinct ?search ?name ?type WHERE {
+?search rdfs:subClassOf* owl:Thing.
+?search rdf:type ?type.
+FILTER( (?type = band:) || (?type = artist:) || (?type = genre:)).
+?thing rdfs:label ?name.
+FILTER(lang(?Name) = ""en"").
+FILTER (regex(?search, ""resource/.*mot.*"", ""i"")).
+}ORDER BY ?type
+LIMIT 200"
+2,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX band: <http://dbpedia.org/ontology/Band>
+PREFIX artist: <http://dbpedia.org/ontology/MusicalArtist>
+PREFIX genre: <http://dbpedia.org/ontology/MusicGenre>
+
+SELECT distinct ?search ?name ?type WHERE {
+?search rdfs:subClassOf* owl:Thing.
+?search rdf:type ?type.
+FILTER( (?type = band:) || (?type = artist:) || (?type = genre:)).
+?thing rdfs:label ?name.
+FILTER(lang(?Name) = ""en"").
+FILTER (regex(?search, ""resource/.*mot.*"", ""i"")).
+}ORDER BY ?type
+LIMIT 200"
+3,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?name WHERE {
+?album rdf:type <http://dbpedia.org/ontology/Musical>.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER regex(str(?artist), ""resource/.*mot.*"", ""i"").
+}ORDER BY ?artist
+LIMIT 100"
+4,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX agent: <http://dbpedia.org/ontology/Agent>
+PREFIX band: <http://dbpedia.org/ontology/Band>
+PREFIX artist: <http://dbpedia.org/ontology/MusicalArtist>
+
+SELECT distinct ?artist ?artistName ?artistGenre WHERE {
+?artist rdf:type agent:.
+?artist rdfs:subClassOf* ?subclass.
+?subclass rdf:type ?subType.
+FILTER ((?subType= band:) || (?subType= artist:)).
+?artist rdfs:label ?artistName.
+FILTER(lang(?artistName) = ""en"").
+?artist dbpedia2:genre ?artistGenre.
+FILTER (regex(?artist, ""resource/.*h.*"", ""i"")).
+}ORDER BY ?artistName
+OFFSET 500
+LIMIT 200"
+5,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?name WHERE {
+?album rdf:type <http://dbpedia.org/ontology/Musical>.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER regex(str(?artist), ""resource/.*mot.*"", ""i"").
+}ORDER BY ?artist
+LIMIT 100"
+6,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?artist ?artistName ?artistGenre WHERE {
+?artist rdf:type agent:.
+?artist rdfs:subClassOf* ?subclass.
+?subclass rdf:type ?subType.
+FILTER ((?subType= band:) || (?subType= artist:)).
+?artist rdfs:label ?artistName.
+FILTER(lang(?artistName) = ""en"").
+?artist dbpedia2:genre ?artistGenre.
+FILTER (regex(?artistGenre, ""resource/.*h.*"", ""i"").
+FILTER (regex(?artist, ""resource/.*h.*"", ""i"")).
+}ORDER BY ?artistName
+OFFSET 500
+LIMIT 200"
+7,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?artist ?artistName ?artistGenre WHERE {
+?artist rdf:type agent:.
+?artist rdfs:subClassOf* ?subclass.
+?subclass rdf:type ?subType.
+FILTER ((?subType= band:) || (?subType= artist:)).
+?artist rdfs:label ?artistName.
+FILTER(lang(?artistName) = ""en"").
+?artist dbpedia2:genre ?artistGenre.
+FILTER (regex(?artistGenre, ""resource/.*h.*"", ""i"")).
+FILTER (regex(?artist, ""resource/.*h.*"", ""i"")).
+}ORDER BY ?artistName
+OFFSET 500
+LIMIT 200"
+8,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX agent: <http://dbpedia.org/ontology/Agent>
+PREFIX band: <http://dbpedia.org/ontology/Band>
+PREFIX artist: <http://dbpedia.org/ontology/MusicalArtist>
+
+SELECT distinct ?artist ?artistName ?artistGenre WHERE {
+?artist rdf:type agent:.
+?artist rdfs:subClassOf* ?subclass.
+?subclass rdf:type ?subType.
+FILTER ((?subType= band:) || (?subType= artist:)).
+?artist rdfs:label ?artistName.
+FILTER(lang(?artistName) = ""en"").
+?artist dbpedia2:genre ?artistGenre.
+FILTER (regex(?artistGenre, ""resource/.*h.*"", ""i"")).
+FILTER (regex(?artist, ""resource/.*h.*"", ""i"")).
+}ORDER BY ?artistName
+OFFSET 500
+LIMIT 200"
+9,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX agent: <http://dbpedia.org/ontology/Agent>
+PREFIX band: <http://dbpedia.org/ontology/Band>
+PREFIX artist: <http://dbpedia.org/ontology/MusicalArtist>
+
+SELECT distinct ?artist ?artistName ?artistGenre WHERE {
+?artist rdf:type agent:.
+?artist rdfs:subClassOf* ?subclass.
+?subclass rdf:type ?subType.
+FILTER ((?subType= band:) || (?subType= artist:)).
+?artist rdfs:label ?artistName.
+FILTER(lang(?artistName) = ""en"").
+?artist dbpedia2:genre ?artistGenre.
+FILTER (regex(?artistGenre, ""[resource/]?.*h.*"", ""i"")).
+FILTER (regex(?artist, ""resource/.*h.*"", ""i"")).
+}ORDER BY ?artistName
+OFFSET 500
+LIMIT 200"
+10,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX agent: <http://dbpedia.org/ontology/Agent>
+PREFIX band: <http://dbpedia.org/ontology/Band>
+PREFIX artist: <http://dbpedia.org/ontology/MusicalArtist>
+
+SELECT distinct ?artist ?artistName ?artistGenre WHERE {
+?artist rdf:type agent:.
+?artist rdfs:subClassOf* ?subclass.
+?subclass rdf:type ?subType.
+FILTER ((?subType= band:) || (?subType= artist:)).
+?artist rdfs:label ?artistName.
+FILTER(lang(?artistName) = ""en"").
+?artist dbpedia2:genre ?artistGenre.
+FILTER (regex(?artistGenre, ""(resource/)?.*h.*"", ""i"")).
+FILTER (regex(?artist, ""resource/.*h.*"", ""i"")).
+}ORDER BY ?artistName
+OFFSET 500
+LIMIT 200"
+11,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?album ?name ?artist WHERE {
+?album rdf:type <http://dbpedia.org/ontology/MusicalWork>.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, (resource/)?.*mot.*, ""i"").
+?album dbpedia2:relyear ?released.
+}ORDER BY ?artist
+LIMIT 100"
+12,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?album ?name ?artist ?relyear WHERE {
+?album rdf:type <http://dbpedia.org/ontology/MusicalWork>.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, (resource/)?.*mot.*, ""i"")).
+?album dbpedia2:relyear ?released.
+}ORDER BY ?artist
+LIMIT 100"
+13,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type <http://dbpedia.org/ontology/MusicalWork>.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, (resource/)?.*mot.*, ""i"")).
+?album dbpedia2:relyear ?released.
+}ORDER BY ?artist
+LIMIT 100"
+14,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type <http://dbpedia.org/ontology/MusicalWork>.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""(resource/)?.*mot.*"", ""i"")).
+?album dbpedia2:relyear ?released.
+}ORDER BY ?artist
+LIMIT 100"
+15,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type <http://dbpedia.org/ontology/MusicalWork>.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+?album dbpedia2:relyear ?released.
+}ORDER BY ?artist
+LIMIT 100"
+16,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type <http://dbpedia.org/ontology/MusicalWork>.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,""(resource/)?.*mot.*"", ""i"")).
+?album dbpedia2:relyear ?released.
+}ORDER BY ?artist
+LIMIT 100"
+17,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type <http://dbpedia.org/ontology/MusicalWork>.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,""(resource/)?.*m.*"", ""i"")).
+?album dbpedia2:relyear ?released.
+}ORDER BY ?artist
+LIMIT 100"
+18,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type <http://dbpedia.org/ontology/MusicalWork>.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,""motorhead"", ""i"")).
+?album dbpedia2:relyear ?released.
+}ORDER BY ?artist
+LIMIT 100"
+19,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type <http://dbpedia.org/ontology/MusicalWork>.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,"".*motorhead"", ""i"")).
+?album dbpedia2:relyear ?released.
+}ORDER BY ?artist
+LIMIT 100"
+20,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type <http://dbpedia.org/ontology/MusicalWork>.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,"".*motörhead"", ""i"")).
+?album dbpedia2:relyear ?released.
+}ORDER BY ?artist
+LIMIT 100"
+21,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type <http://dbpedia.org/ontology/MusicalWork>.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,""motÃ¶rhead"", ""i"")).
+?album dbpedia2:relyear ?released.
+}ORDER BY ?artist
+LIMIT 100"
+22,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type <http://dbpedia.org/ontology/MusicalWork>.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,"".*motÃÂ¶rhead"", ""i"")).
+?album dbpedia2:relyear ?released.
+}ORDER BY ?artist
+LIMIT 100"
+23,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type <http://dbpedia.org/ontology/MusicalWork>.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,"".*mot.*"", ""i"")).
+?album dbpedia2:relyear ?released.
+}ORDER BY ?artist
+LIMIT 100"
+24,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type <http://dbpedia.org/ontology/MusicalWork>.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,"".*ac.*"", ""i"")).
+?album dbpedia2:relyear ?released.
+}ORDER BY ?artist
+LIMIT 100"
+25,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type <http://dbpedia.org/ontology/MusicalWork>.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,"".*head.*"", ""i"")).
+?album dbpedia2:relyear ?released.
+}ORDER BY ?artist
+LIMIT 100"
+26,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type <http://dbpedia.org/ontology/Album>.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,"".*head.*"", ""i"")).
+?album dbpedia2:relyear ?released.
+}ORDER BY ?artist
+LIMIT 100"
+27,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type <http://dbpedia.org/ontology/Album>.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,"".*r.*"", ""i"")).
+?album dbpedia2:relyear ?released.
+}ORDER BY ?artist
+LIMIT 100"
+28,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type <http://dbpedia.org/ontology/Album>.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,"".*r.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 100"
+29,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/Album>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,"".*r.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 100"
+30,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/Album>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,"".*ozzy.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 100"
+31,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/Album>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,"".*oz.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 100"
+32,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,"".*oz.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 100"
+33,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/Work>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,"".*oz.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 100"
+34,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,"".*oz.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 100"
+35,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,"".*h.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 100"
+36,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,""(resource/)?.*h.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 100"
+37,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,""(resource/)?.*h(.)*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 100"
+38,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX agent: <http://dbpedia.org/ontology/Agent>
+PREFIX band: <http://dbpedia.org/ontology/Band>
+PREFIX artist: <http://dbpedia.org/ontology/MusicalArtist>
+
+SELECT distinct ?artist ?artistName ?artistGenre WHERE {
+?artist rdf:type agent:.
+?artist rdfs:subClassOf* ?subclass.
+?subclass rdf:type ?subType.
+FILTER ((?subType= band:) || (?subType= artist:)).
+?artist rdfs:label ?artistName.
+FILTER(lang(?artistName) = ""en"").
+?artist dbpedia2:genre ?artistGenre.
+FILTER (regex(?artistGenre, ""(resource/)?.*g.*"", ""i"")).
+FILTER (regex(?artist, ""resource/.*g*"", ""i"")).
+}ORDER BY ?artistName
+OFFSET 500
+LIMIT 200"
+39,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX agent: <http://dbpedia.org/ontology/Agent>
+PREFIX band: <http://dbpedia.org/ontology/Band>
+PREFIX artist: <http://dbpedia.org/ontology/MusicalArtist>
+
+SELECT distinct ?artist ?artistName ?artistGenre WHERE {
+?artist rdf:type agent:.
+?artist rdfs:subClassOf* ?subclass.
+?subclass rdf:type ?subType.
+FILTER ((?subType= band:) || (?subType= artist:)).
+?artist rdfs:label ?artistName.
+FILTER(lang(?artistName) = ""en"").
+?artist dbpedia2:genre ?artistGenre.
+FILTER (regex(?artistGenre, ""(resource/)?.*g.*"", ""i"")).
+FILTER (regex(?artist, ""resource/.*g.*"", ""i"")).
+}ORDER BY ?artistName
+OFFSET 500
+LIMIT 200"
+40,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX agent: <http://dbpedia.org/ontology/Agent>
+PREFIX band: <http://dbpedia.org/ontology/Band>
+PREFIX artist: <http://dbpedia.org/ontology/MusicalArtist>
+
+SELECT distinct ?artist ?artistName ?artistGenre WHERE {
+?artist rdf:type agent:.
+?artist rdfs:subClassOf* ?subclass.
+?subclass rdf:type ?subType.
+FILTER ((?subType= band:) || (?subType= artist:)).
+?artist rdfs:label ?artistName.
+FILTER(lang(?artistName) = ""en"").
+?artist dbpedia2:genre ?artistGenre.
+FILTER (regex(?artistGenre, ""(resource/)?.*n.*"", ""i"")).
+FILTER (regex(?artist, ""resource/.*g.*"", ""i"")).
+}ORDER BY ?artistName
+OFFSET 500
+LIMIT 200"
+41,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,""(resource/)?.*g.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 100"
+42,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,""(resource/)?.*n.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 100"
+43,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,""(resource/)?.*moy.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 100"
+44,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,""(resource/)?.*mot.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 100"
+45,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,""(resource/)?.*motor.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 100"
+46,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,""(resource/)?.*mot.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 100"
+47,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,""resource/?.*mot.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 100"
+48,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,""resource/?.*h.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 100"
+49,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX agent: <http://dbpedia.org/ontology/Agent>
+PREFIX band: <http://dbpedia.org/ontology/Band>
+PREFIX artist: <http://dbpedia.org/ontology/MusicalArtist>
+
+SELECT distinct ?artist ?artistName ?artistGenre WHERE {
+?artist rdf:type agent:.
+?artist rdfs:subClassOf* ?subclass.
+?subclass rdf:type ?subType.
+FILTER ((?subType= band:) || (?subType= artist:)).
+?artist rdfs:label ?artistName.
+FILTER(lang(?artistName) = ""en"").
+?artist dbpedia2:genre ?artistGenre.
+FILTER (regex(?artistGenre, ""(resource/)?.*n.*"", ""i"")).
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+}ORDER BY ?artistName
+OFFSET 500
+LIMIT 200"
+50,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX agent: <http://dbpedia.org/ontology/Agent>
+PREFIX band: <http://dbpedia.org/ontology/Band>
+PREFIX artist: <http://dbpedia.org/ontology/MusicalArtist>
+
+SELECT distinct ?artist ?artistName ?artistGenre WHERE {
+?artist rdf:type agent:.
+?artist rdfs:subClassOf* ?subclass.
+?subclass rdf:type ?subType.
+FILTER ((?subType= band:) || (?subType= artist:)).
+?artist rdfs:label ?artistName.
+FILTER(lang(?artistName) = ""en"").
+?artist dbpedia2:genre ?artistGenre.
+FILTER (regex(?artistGenre, ""(resource/)?.*h.*"", ""i"")).
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+}ORDER BY ?artistName
+OFFSET 500
+LIMIT 200"
+51,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX agent: <http://dbpedia.org/ontology/Agent>
+PREFIX band: <http://dbpedia.org/ontology/Band>
+PREFIX artist: <http://dbpedia.org/ontology/MusicalArtist>
+
+SELECT distinct ?artist ?artistName ?artistGenre WHERE {
+?artist rdf:type agent:.
+?artist rdfs:subClassOf* ?subclass.
+?subclass rdf:type ?subType.
+FILTER ((?subType= band:) || (?subType= artist:)).
+?artist rdfs:label ?artistName.
+FILTER(lang(?artistName) = ""en"").
+?artist dbpedia2:genre ?artistGenre.
+FILTER (regex(?artistGenre, ""(resource/)?.*h.*"", ""i"")).
+FILTER (regex(?artist, ""resource/.*mo.*"", ""i"")).
+}ORDER BY ?artistName
+OFFSET 500
+LIMIT 200"
+52,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX agent: <http://dbpedia.org/ontology/Agent>
+PREFIX band: <http://dbpedia.org/ontology/Band>
+PREFIX artist: <http://dbpedia.org/ontology/MusicalArtist>
+
+SELECT distinct ?artist ?artistName ?artistGenre WHERE {
+?artist rdf:type agent:.
+?artist rdfs:subClassOf* ?subclass.
+?subclass rdf:type ?subType.
+FILTER ((?subType= band:) || (?subType= artist:)).
+?artist rdfs:label ?artistName.
+FILTER(lang(?artistName) = ""en"").
+?artist dbpedia2:genre ?artistGenre.
+FILTER (regex(?artistGenre, ""(resource/)?.*h.*"", ""i"")).
+FILTER (regex(?artist, ""resource/.*mo.*"", ""i"")).
+}ORDER BY ?artistName
+LIMIT 200"
+53,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX agent: <http://dbpedia.org/ontology/Agent>
+PREFIX band: <http://dbpedia.org/ontology/Band>
+PREFIX artist: <http://dbpedia.org/ontology/MusicalArtist>
+
+SELECT distinct ?artist ?artistName ?artistGenre WHERE {
+?artist rdf:type agent:.
+?artist rdfs:subClassOf* ?subclass.
+?subclass rdf:type ?subType.
+FILTER ((?subType= band:) || (?subType= artist:)).
+?artist rdfs:label ?artistName.
+FILTER(lang(?artistName) = ""en"").
+?artist dbpedia2:genre ?artistGenre.
+FILTER (regex(?artistGenre, ""(resource/)?.*h.*"", ""i"")).
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+}ORDER BY ?artistName
+LIMIT 200"
+54,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX agent: <http://dbpedia.org/ontology/Agent>
+PREFIX band: <http://dbpedia.org/ontology/Band>
+PREFIX artist: <http://dbpedia.org/ontology/MusicalArtist>
+
+SELECT distinct ?artist ?artistName ?artistGenre WHERE {
+?artist rdf:type agent:.
+?artist rdfs:subClassOf* ?subclass.
+?subclass rdf:type ?subType.
+FILTER ((?subType= band:) || (?subType= artist:)).
+?artist rdfs:label ?artistName.
+FILTER(lang(?artistName) = ""en"").
+?artist dbpedia2:genre ?artistGenre.
+FILTER (regex(?artistGenre, ""(resource/)?.*h.*"", ""i"")).
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+}ORDER BY ?artistName
+OFFSET 200
+LIMIT 200"
+55,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Motörhead> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Motörhead> }
+}"
+56,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,""resource/?.*mot%.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 100"
+57,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,""resource/?.*%.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 100"
+58,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist,""resource/?.*%.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 200"
+59,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+FILTER regex(?name, "".*bomber.*"", ""i"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+60,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+FILTER regex(?name, "".* bomber .*"", ""i"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+61,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+FILTER regex(?name, "".*bomber.*"", ""i"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+62,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+FILTER regex(?name, "".*Bomber.*"", ""i"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+63,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+FILTER regex(?name, "".*Bomber.*"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+64,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+FILTER(?name = ""Bomber"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+65,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+FILTER(?name = ""Blizzard_of_ozz"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+66,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+FILTER(?name = ""Blizzard of ozz"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+67,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+FILTER(?name = ""Blizzard of Ozz"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+68,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+FILTER(?name = ""Back in Black"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+69,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+FILTER(?name = ""Back In Black"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+70,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+FILTER(?name = ""Back in black"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+71,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+FILTER regex(?name, "".*back.*"", ""i"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+72,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+FILTER regex(?name, "".*blizz.*"", ""i"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+73,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/Album>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+FILTER regex(?name, "".*blizz.*"", ""i"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+74,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER(lang(?name) = ""en"").
+FILTER regex(?name, "".*blizz.*"", ""i"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+75,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album dbpedia2:name ?name.
+FILTER(lang(?name) = ""en"").
+FILTER regex(?name, "".*blizz.*"", ""i"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+76,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album dbpedia2:name ?name.
+FILTER(lang(?name) = ""en"").
+FILTER regex(?name, "".*blizz.*"", ""i"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+77,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album dbpedia2:name ?name.
+FILTER(lang(?name) = ""en"").
+FILTER regex(?name, "".*back.*"", ""i"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+78,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album dbpedia2:name ?name.
+FILTER(lang(?name) = ""en"").
+FILTER regex(?name, "".*bl.*"", ""i"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+79,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album dbpedia2:name ?name.
+FILTER(lang(?name) = ""en"").
+FILTER regex(?name, "".*bli.*"", ""i"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+80,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album dbpedia2:name ?name.
+FILTER regex(?name, "".*bli.*"", ""i"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+81,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER regex(?name, "".*bli.*"", ""i"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+82,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER regex(?name, "".*blizz.*"", ""i"").
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+83,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+}ORDER BY ?artist
+LIMIT 200"
+84,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 200"
+85,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*ac.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 200"
+86,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+?album dbpedia2:relyear ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 200"
+87,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 200"
+88,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+?album dbpedia2:releaseDate ?released.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+}ORDER BY ?artist
+LIMIT 200"
+89,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+?album dbpedia2:releaseDate ?released.
+}ORDER BY ?artist
+LIMIT 200"
+90,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+PREFIX relYear <http://dbpedia.org/ontology/> 
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+?album relYear:releaseDate ?released.
+}ORDER BY ?artist
+LIMIT 200"
+91,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+PREFIX ont: <http://dbpedia.org/ontology/> 
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+?album ont:releaseDate ?released.
+}ORDER BY ?artist
+LIMIT 200"
+92,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+PREFIX ont: <http://dbpedia.org/ontology/> 
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER (lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+?album ont:releaseDate ?released.
+}ORDER BY ?artist
+LIMIT 200"
+93,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+PREFIX ont: <http://dbpedia.org/ontology/> 
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER (lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+?album ont:releaseDate ?date.
+?date rdfs:label ?released.
+}ORDER BY ?artist
+LIMIT 200"
+94,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+PREFIX ont: <http://dbpedia.org/ontology/> 
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER (lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+?album ont:releaseDate ?date.
+?date rdfs:label ?released.
+}ORDER BY ?artist
+LIMIT 200"
+95,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+PREFIX ont: <http://dbpedia.org/ontology/> 
+
+SELECT distinct ?album ?name ?artist ?released WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER (lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+?album ont:releaseDate ?released.
+
+}ORDER BY ?artist
+LIMIT 200"
+96,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+
+SELECT ?name ?birth ?death ?person WHERE {
+     ?person dbo:birthPlace :Berlin .
+     ?person dbo:birthDate ?birth .
+     ?person foaf:name ?name .
+     ?person dbo:deathDate ?death .
+     FILTER (?birth < ""1900-01-01""^^xsd:date) .
+}
+ORDER BY ?name"
+97,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+PREFIX ont: <http://dbpedia.org/ontology/> 
+
+SELECT distinct ?album ?name ?artist ?genre ?date WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER (lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+?album dbperdia2:genre ?genre.
+FILTER (regex(?genre, ""(resource/)?.*h.*"", ""i"")).
+?album ont:releaseDate ?date.
+}ORDER BY ?artist
+LIMIT 200"
+98,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+PREFIX ont: <http://dbpedia.org/ontology/> 
+
+SELECT distinct ?album ?name ?artist ?genre ?date WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER (lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+?album dbpedia2:genre ?genre.
+FILTER (regex(?genre, ""(resource/)?.*h.*"", ""i"")).
+?album ont:releaseDate ?date.
+}ORDER BY ?artist
+LIMIT 200"
+99,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+PREFIX ont: <http://dbpedia.org/ontology/> 
+
+SELECT distinct ?album ?name ?artist ?genre ?date WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER (lang(?name) = ""en"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+?album dbpedia2:genre ?genre.
+FILTER (regex(?genre, ""resource/.*h.*"", ""i"")).
+?album ont:releaseDate ?date.
+}ORDER BY ?artist
+LIMIT 200"
+100,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+PREFIX ont: <http://dbpedia.org/ontology/> 
+
+SELECT distinct ?album ?name ?artist ?genre ?date WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name.
+FILTER (lang(?name) = ""en"").
+FILTER regex(?name, "".*b.*"", ""i"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+?album dbpedia2:genre ?genre.
+FILTER (regex(?genre, ""resource/.*h.*"", ""i"")).
+?album ont:releaseDate ?date.
+}ORDER BY ?artist
+LIMIT 200"
+101,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+PREFIX ont: <http://dbpedia.org/ontology/> 
+
+SELECT distinct ?name ?artist ?genre WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name
+FILTER (lang(?name) = ""en"").
+FILTER regex(?name, "".*b.*"", ""i"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+?album dbpedia2:genre ?genre.
+FILTER (regex(?genre, ""resource/.*h.*"", ""i"")).
+OPTIONAL{
+?album ont:thumbnail ?thumbnail.
+}
+?album ont:abstract ?abstract
+?album ont:releaseDate ?date.
+}ORDER BY ?artist
+LIMIT 200"
+102,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+PREFIX ont: <http://dbpedia.org/ontology/> 
+
+SELECT distinct ?name ?artist ?genre WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name
+FILTER (lang(?name) = ""en"").
+FILTER regex(?name, "".*b.*"", ""i"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+?album dbpedia2:genre ?genre.
+FILTER (regex(?genre, ""resource/.*h.*"", ""i"")).
+OPTIONAL{
+?album ont:thumbnail ?thumbnail.
+}
+?album ont:abstract ?abstract.
+?album ont:releaseDate ?date.
+}ORDER BY ?artist
+LIMIT 200"
+103,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+PREFIX ont: <http://dbpedia.org/ontology/> 
+
+SELECT distinct ?name ?artist ?genre ?thumbnail ?abstract WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name
+FILTER (lang(?name) = ""en"").
+FILTER regex(?name, "".*b.*"", ""i"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+?album dbpedia2:genre ?genre.
+FILTER (regex(?genre, ""resource/.*h.*"", ""i"")).
+OPTIONAL{
+?album ont:thumbnail ?thumbnail.
+}
+?album ont:abstract ?abstract.
+?album ont:releaseDate ?date.
+}ORDER BY ?artist
+LIMIT 200"
+104,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+PREFIX ont: <http://dbpedia.org/ontology/> 
+
+SELECT distinct ?name ?artist ?genre ?thumbnail WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name
+FILTER (lang(?name) = ""en"").
+FILTER regex(?name, "".*b.*"", ""i"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+?album dbpedia2:genre ?genre.
+FILTER (regex(?genre, ""resource/.*h.*"", ""i"")).
+OPTIONAL{
+?album ont:thumbnail ?thumbnail.
+}
+?album ont:abstract ?abstract.
+?album ont:releaseDate ?date.
+}ORDER BY ?artist
+LIMIT 200"
+105,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Cometary_Orbital_Drive.jpg/200px-Cometary_Orbital_Drive.jpg> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Cometary_Orbital_Drive.jpg/200px-Cometary_Orbital_Drive.jpg> }
+}"
+106,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+PREFIX ont: <http://dbpedia.org/ontology/> 
+
+SELECT distinct ?name ?artist ?genre ?thumbnail ?abstract WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name
+FILTER (lang(?name) = ""en"").
+FILTER regex(?name, "".*b.*"", ""i"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+?album dbpedia2:genre ?genre.
+FILTER (regex(?genre, ""resource/.*h.*"", ""i"")).
+OPTIONAL{
+?album ont:thumbnail ?thumbnail.
+}
+?album ont:abstract ?abstract.
+?album ont:releaseDate ?date.
+}ORDER BY ?artist
+LIMIT 200"
+107,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+PREFIX ont: <http://dbpedia.org/ontology/> 
+
+SELECT distinct ?name ?artist ?genre ?thumbnail WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name
+FILTER (lang(?name) = ""en"").
+FILTER regex(?name, "".*b.*"", ""i"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+?album dbpedia2:genre ?genre.
+FILTER (regex(?genre, ""resource/.*h.*"", ""i"")).
+OPTIONAL{
+?album ont:thumbnail ?thumb.
+?thumb rdfs:label ?thumbnail.
+}
+?album ont:abstract ?abstract.
+?album ont:releaseDate ?date.
+}ORDER BY ?artist
+LIMIT 200"
+108,"select ?abstract ?thumbnail where { 
+  dbpedia:Ernest_Hemingway dbpedia-owl:abstract ?abstract ;
+                           dbpedia-owl:thumbnail ?thumbnail .
+  filter(langMatches(lang(?abstract),""en""))
+}"
+109,"select ?abstract ?thumbnail where { 
+  dbpedia:Ernest_Hemingway dbpedia-owl:abstract ?abstract ;
+                           dbpedia-owl:thumbnail ?thumbnail .
+  filter(langMatches(lang(?abstract),""en""))
+}"
+110,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX album: <http://dbpedia.org/ontology/MusicalWork>
+PREFIX ont: <http://dbpedia.org/ontology/> 
+
+SELECT distinct ?name ?artist ?genre ?thumbnail WHERE {
+?album rdf:type album:.
+?album rdfs:label ?name
+FILTER (lang(?name) = ""en"").
+FILTER regex(?name, "".*b.*"", ""i"").
+?album dbpedia2:artist ?artist.
+FILTER (regex(?artist, ""resource/.*mot.*"", ""i"")).
+?album dbpedia2:genre ?genre.
+FILTER (regex(?genre, ""resource/.*h.*"", ""i"")).
+OPTIONAL{
+?album ont:thumbnail ?thumbnail.
+}
+?album ont:abstract ?abstract.
+?album ont:releaseDate ?date.
+}ORDER BY ?artist
+LIMIT 200"

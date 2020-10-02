@@ -1,0 +1,1245 @@
+,query
+0,select ?subject ?verb ?object where {:Quentin_Tarantino ?verb ?object} LIMIT 100
+1,select ?subject ?verb ?object where {http://dbpedia.org/Quentin_Tarantino ?verb ?object} LIMIT 100
+2,select ?subject ?verb ?object where {<http://dbpedia.org/Quentin_Tarantino> ?verb ?object} LIMIT 100
+3,select ?verb ?object where {<http://dbpedia.org/Quentin_Tarantino> ?verb ?object} LIMIT 100
+4,select distinct * {?subjectURI ?verbURI ?objectURI}
+5,"select distinct * {?subjectURI ?verbURI ?objectURI} FILTER(?subjectURI=<http://dbpedia.org/resource/Quentin_Tarantino>)FILTER( regex(?objectURI,""http:/"") || langmatches(lang(?objectURI),""en"")"
+6,"select distinct * {?subjectURI ?verbURI ?objectURI . OPTIONAL { ?subjectURI <http://www.w3.org/2000/01/rdf-schema#label> ?subjectLabel FILTER langMatches(lang(?subjectLabel), 'en') } . OPTIONAL { ?verbURI <http://www.w3.org/2000/01/rdf-schema#label> ?verbLabel FILTER langMatches(lang(?verbLabel), 'en') } . OPTIONAL { ?objectURI <http://www.w3.org/2000/01/rdf-schema#label> ?objectLabel FILTER langMatches(lang(?objectLabel), 'en') } FILTER(?subjectURI=<http://dbpedia.org/resource/Quentin_Tarantino>)FILTER( regex(?objectURI,""http:/"") || langmatches(lang(?objectURI),""en"") || datatype(?objectURI) != """" ) } limit 100000"
+7,"select distinct * {?subjectURI ?verbURI ?objectURI . OPTIONAL  FILTER(?subjectURI=<http://dbpedia.org/resource/Quentin_Tarantino>)FILTER( regex(?objectURI,""http:/"") || langmatches(lang(?objectURI),""en"") || datatype(?objectURI) != """" ) } limit 100000"
+8,"select distinct * {?subjectURI ?verbURI ?objectURI . FILTER(?subjectURI=<http://dbpedia.org/resource/Quentin_Tarantino>)FILTER( regex(?objectURI,""http:/"") || langmatches(lang(?objectURI),""en"") || datatype(?objectURI) != """" ) } limit 100000"
+9,"select distinct * {?subjectURI ?verbURI ?objectURI . FILTER(?objectURI=<http://dbpedia.org/resource/Quentin_Tarantino>)FILTER( regex(?objectURI,""http:/"") || langmatches(lang(?objectURI),""en"") || datatype(?objectURI) != """" ) } limit 100000"
+10,"SELECT ?person ?genre ?died ?born
+       ( 
+         IF 
+           (
+             ( datatype (?born) in (xsd:dateTime, xsd:date) ) 
+             and
+             ( datatype (?died) in (xsd:dateTime, xsd:date) ),
+             bif:datediff( 'year', xsd:dateTime( str(?born) ), xsd:dateTime( str(?died) ) ),
+             ""error"" 
+           ) 
+       ) AS ?age
+WHERE 
+  { 
+    {
+      SELECT DISTINCT ?person ?genre ?died ?born 
+      FROM <http://dbpedia.org> 
+      WHERE 
+        { 
+          ?person a <http://dbpedia.org/ontology/MusicalArtist> ;
+                     <http://dbpedia.org/ontology/genre> ?genre ;
+                  <http://dbpedia.org/ontology/deathDate> ?died ;
+                  <http://dbpedia.org/ontology/birthDate> ?born .
+        }      
+      ORDER BY DESC ( <LONG::IRI_RANK> (?person) ) 
+      LIMIT 100  
+    }
+  } "
+11,"SELECT ?person ?genre ?died <LONG::IRI_RANK>
+       ( 
+         IF 
+           (
+             ( datatype (?born) in (xsd:dateTime, xsd:date) ) 
+             and
+             ( datatype (?died) in (xsd:dateTime, xsd:date) ),
+             bif:datediff( 'year', xsd:dateTime( str(?born) ), xsd:dateTime( str(?died) ) ),
+             ""error"" 
+           ) 
+       ) AS ?age
+WHERE 
+  { 
+    {
+      SELECT DISTINCT ?person ?genre ?died ?born 
+      FROM <http://dbpedia.org> 
+      WHERE 
+        { 
+          ?person a <http://dbpedia.org/ontology/MusicalArtist> ;
+                     <http://dbpedia.org/ontology/genre> ?genre ;
+                  <http://dbpedia.org/ontology/deathDate> ?died ;
+                  <http://dbpedia.org/ontology/birthDate> ?born .
+        }      
+      ORDER BY DESC ( <LONG::IRI_RANK> (?person) ) 
+      LIMIT 100  
+    }
+  } "
+12,"SELECT ?person ?genre ?died <LONG::IRI_RANK>
+       ( 
+         IF 
+           (
+             ( datatype (?born) in (xsd:dateTime, xsd:date) ) 
+             and
+             ( datatype (?died) in (xsd:dateTime, xsd:date) ),
+             bif:datediff( 'year', xsd:dateTime( str(?born) ), xsd:dateTime( str(?died) ) ),
+             ""error"" 
+           ) 
+       ) AS ?age
+WHERE 
+  { 
+    {
+      SELECT DISTINCT ?person ?genre ?died <LONG::IRI_RANK>
+      FROM <http://dbpedia.org> 
+      WHERE 
+        { 
+          ?person a <http://dbpedia.org/ontology/MusicalArtist> ;
+                     <http://dbpedia.org/ontology/genre> ?genre ;
+                  <http://dbpedia.org/ontology/deathDate> ?died ;
+                  <http://dbpedia.org/ontology/birthDate> ?born .
+        }      
+      ORDER BY DESC ( <LONG::IRI_RANK> (?person) ) 
+      LIMIT 100  
+    }
+  } "
+13,"SELECT ?person ?genre ?died <LONG::IRI_RANK>
+       ( 
+         IF 
+           (
+             ( datatype (?born) in (xsd:dateTime, xsd:date) ) 
+             and
+             ( datatype (?died) in (xsd:dateTime, xsd:date) ),
+             bif:datediff( 'year', xsd:dateTime( str(?born) ), xsd:dateTime( str(?died) ) ),
+             ""error"" 
+           ) 
+       ) AS ?age
+WHERE 
+  { 
+    {
+      SELECT DISTINCT ?person ?genre ?died ?born
+      FROM <http://dbpedia.org> 
+      WHERE 
+        { 
+          ?person a <http://dbpedia.org/ontology/MusicalArtist> ;
+                     <http://dbpedia.org/ontology/genre> ?genre ;
+                  <http://dbpedia.org/ontology/deathDate> ?died ;
+                  <LONG::IRI_RANK> ?born .
+        }      
+      ORDER BY DESC ( <LONG::IRI_RANK> (?person) ) 
+      LIMIT 100  
+    }
+  } "
+14,"SELECT ?person ?genre ?died ?born
+       ( 
+         IF 
+           (
+             ( datatype (?born) in (xsd:dateTime, xsd:date) ) 
+             and
+             ( datatype (?died) in (xsd:dateTime, xsd:date) ),
+             bif:datediff( 'year', xsd:dateTime( str(?born) ), xsd:dateTime( str(?died) ) ),
+             ""error"" 
+           ) 
+       ) AS ?age
+WHERE 
+  { 
+    {
+      SELECT DISTINCT ?person ?genre ?died ?born
+      FROM <http://dbpedia.org> 
+      WHERE 
+        { 
+          ?person a <http://dbpedia.org/ontology/MusicalArtist> ;
+                     <http://dbpedia.org/ontology/genre> ?genre ;
+                  <http://dbpedia.org/ontology/deathDate> ?died ;
+                  <LONG::IRI_RANK> ?born .
+        }      
+      ORDER BY DESC ( <LONG::IRI_RANK> (?person) ) 
+      LIMIT 100  
+    }
+  } "
+15,"select distinct * {?subjectURI ?verbURI ?objectURI . FILTER(?objectURI=<http://dbpedia.org/resource/Quentin_Tarantino>)FILTER( regex(?objectURI,""http:/"") || langmatches(lang(?objectURI),""en"") || datatype(?objectURI) != """" ) } limit 100000"
+16,"SELECT ?label ?URI WHERE { ?URI <http://www.w3.org/2000/01/rdf-schema#label> ?label. ?label bif:contains '""Quentin""'. FILTER langMatches(lang(?label), 'en') } ORDER BY ?label"
+17,"SELECT ?label ?URI WHERE { ?URI <http://www.w3.org/2000/01/rdf-schema#label> ?label. ?label bif:contains '""Quentin""'. FILTER langMatches(lang(?label), 'en') } ORDER BY DESC ( <LONG::IRI_RANK> (?URI) ) "
+18,"SELECT ?label ?URI WHERE { ?URI <http://www.w3.org/2000/01/rdf-schema#label> ?label. ?label bif:contains '""Quentin""'. FILTER langMatches(lang(?label), 'en') } ORDER BY DESC ( <LONG::IRI_RANK> (?URI) ) "
+19,"SELECT ?label ?URI WHERE { ?URI <http://www.w3.org/2000/01/rdf-schema#label> ?label. ?label bif:contains '""Quentin""'. FILTER langMatches(lang(?label), 'en') } ORDER BY DESC ( <LONG::IRI_RANK> (?label) ) "
+20,"select distinct * {?subjectURI ?verbURI ?objectURI . OPTIONAL { ?subjectURI <http://www.w3.org/2000/01/rdf-schema#label> ?subjectLabel FILTER langMatches(lang(?subjectLabel), 'en') } . OPTIONAL { ?verbURI <http://www.w3.org/2000/01/rdf-schema#label> ?verbLabel FILTER langMatches(lang(?verbLabel), 'en') } . OPTIONAL { ?objectURI <http://www.w3.org/2000/01/rdf-schema#label> ?objectLabel FILTER langMatches(lang(?objectLabel), 'en') } FILTER(?subjectURI=<http://dbpedia.org/resource/Sydenham>)FILTER( regex(?objectURI,""http:/"") || langmatches(lang(?objectURI),""en"") || datatype(?objectURI) != """" ) } limit 100000"
+21,select distinct ?subject ?verb ?object where {:Quentin_Tarantini ?verb ?object} LIMIT 100
+22,select distinct ?subject ?verb ?object where {<:Quentin_Tarantino> ?verb ?object} LIMIT 100
+23,select distinct ?subject ?verb ?object where {<http://dbpedia.org/Quentin_Tarantino> ?verb ?object} LIMIT 100
+24,select distinct ?verb ?object where {<http://dbpedia.org/Quentin_Tarantino> ?verb ?object} LIMIT 100
+25,select distinct ?verb ?object where {<http://dbpedia.org/resource/Quentin_Tarantino> ?verb ?object} LIMIT 100
+26,select distinct ?verb ?object where {<http://dbpedia.org/resource/Quentin_Tarantino> ?verb ?object}
+27,select distinct ?subject ?object where {?subject <http://dbpedia.org/property/22-rdf-syntax-ns#type> ?object}
+28,select distinct ?verb ?object where {?<http://dbpedia.org/resource/Quentin_Tarantino> ?verb ?object}
+29,select distinct ?verb ?object where {<http://dbpedia.org/resource/Quentin_Tarantino> ?verb ?object}
+30,select distinct ?subject ?object where {?subject <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object}
+31,"select distinct ?subject ?object where {
+
+<http://dbpedia.org/resource/Quentin_Tarantino> ?verb ?object1 .
+?subject ?verb ?object2
+
+} limit 1000"
+32,"select distinct ?subject ?object2 where {
+
+<http://dbpedia.org/resource/Quentin_Tarantino> ?verb ?object1 .
+?subject ?verb ?object2
+
+} limit 1000"
+33,"select distinct ?object1 where {
+
+<http://dbpedia.org/resource/Luton> :type ?object1 .
+
+} limit 1000"
+34,"select distinct ?object1 where {
+
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1 .
+
+} limit 1000"
+35,"select distinct ?object1 where {
+
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1 .
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1
+} limit 1000"
+36,"select distinct ?object1 count (distinct ?object1) where {
+
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1 .
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1
+} limit 1000"
+37,"select distinct ?object1 count (?object1) where {
+
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1 .
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1
+} limit 1000"
+38,"select distinct count (?object1) where {
+
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1 .
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1
+} limit 1000"
+39,"select distinct count (?object1 as ""test"") where {
+
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1 .
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1
+} limit 1000"
+40,"select distinct count (?object1 as ?number_of_connections) where {
+
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1 .
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1
+} limit 1000"
+41,"select distinct count (?object1 as ?number_of_connections) where {
+
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1 . OPTIONAL {?subjectLabel FILTER langMatches(lang(?subjectLabel), 'en') }
+} limit 1000"
+42,"select distinct count (?object1 as ?number_of_connections) where {
+
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1 . ?subjectLabel FILTER langMatches(lang(?subjectLabel), 'en') 
+} limit 1000"
+43,"select distinct count (?object1 as ?number_of_connections) where {
+
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/2000/01/rdf-schema#label> subject1 .
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1 . FILTER langMatches(lang(?subject1), 'en') 
+} limit 1000"
+44,"select distinct count ?subject1 (?object1 as ?number_of_connections) where {
+
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/2000/01/rdf-schema#label> subject1 .
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1
+} limit 1000"
+45,"select ?subject1 count (?object1 as ?number_of_connections) where {
+
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/2000/01/rdf-schema#label> subject1 .
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1
+} limit 1000"
+46,"select ?subject1 count (?object1 as ?number_of_connections) where {
+
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1
+} limit 1000"
+47,"select ?subject count (?object as ?number_of_occurrences) WHERE
+{
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/2000/01/rdf-schema#label> ?subject
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object
+}
+LIMIT 1000"
+48,"select ?subject count (?object as ?number_of_occurrences) WHERE
+{
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/2000/01/rdf-schema#label> ?subject .
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object
+}
+LIMIT 1000"
+49,"select ?subject count (?object as ?number_of_occurrences) WHERE
+{
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/2000/01/rdf-schema#label> ?subject .
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject) = 'en')
+}
+LIMIT 1000"
+50,"select ?subject1 ?subject2 count (?object as ?number_of_occurrences) WHERE
+{
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en')
+}
+LIMIT 1000"
+51,"select ?subject1 ?subject2 count (?object as ?number_of_occurrences) WHERE
+{
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en')
+}
+LIMIT 1000"
+52,"select ?subject1 ?subject2 count (?object as ?number_of_occurrences) WHERE
+{
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en')
+}
+LIMIT 1000"
+53,"select ?subject1 ?subject2 count (?object as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+54,"select ?subject1 ?subject2 count (?object as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Quentin_Tarantino>)
+}
+LIMIT 1000"
+55,"select ?subject1 ?subject2 count (?object as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI1 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+56,"select ?subject1 ?subject2 count (?object as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+57,"select ?subject1 ?subject2 count (?object as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Quentin_Tarantino>)
+}
+LIMIT 1000"
+58,"select ?subject1 ?subject2 count (?object as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Quentin_Tarantino>)
+}
+LIMIT 1000"
+59,"select ?subject1 ?subject2 count (?verb as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Quentin_Tarantino>)
+}
+LIMIT 1000"
+60,"select ?subject1 ?subject2 count (?verb as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+61,"select ?subject1 ?subject2 count (?verb as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Quentin_Tarantino>)
+}
+LIMIT 1000"
+62,"select ?subject1 ?subject2 count (?verb as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb2 ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Quentin_Tarantino>)
+}
+LIMIT 1000"
+63,"select ?subject1 ?subject2 count (?verb as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+64,"select ?subject1 ?subject2 count (?verb as ?number_of_occurrences / 10) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+65,"select ?subject1 ?subject2 count (?verb/10 as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+66,"select ?subject1 ?subject2 count ((?verb/10) as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+67,"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select ?subject1 ?subject2 count (xsd:integer(?verb)/10) as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+68,"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select ?subject1 ?subject2 count (xsd:integer(?verb)/10 as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+69,"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select ?subject1 ?subject2 count (xsd:integer(?verb) 1 as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+70,"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select ?subject1 ?subject2 count (xsd:integer(?verb) as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+71,"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select ?subject1 ?subject2 count (?verb as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+72,"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select ?subject1 ?subject2 count (?verb as ?number) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+73,"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select ?subject1 ?subject2 count (xsd:integer(?verb)) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+74,"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select ?subject1 ?subject2 count (xsd:integer(?verb) xsd:integer(10)) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+75,"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select ?subject1 ?subject2 count (?verb AS ?test) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+?URI1 ?verb ?nullnode3 .
+?URI2 ?verb ?nullnode4 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+76,"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select ?subject1 ?subject2 count (?verb AS ?test) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+77,"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select ?subject1 ?subject2 count distinct (?verb AS ?test) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+78,"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select ?subject1 ?subject2 count(?verb AS ?test) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+79,"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select (?subject1 ?subject2 count(?verb AS ?test)) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+80,"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select (?subject1 ?subject2 count(?verb AS ?test)) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+81,"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select ?subject1 ?subject2 count(?verb AS ?test) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+82,"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select ?subject1 ?subject2 count(?verb AS ?test) count(?verb1 AS ?test1) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+?URI1 ?verb1 ?nullnode3 .
+?URI2 ?verb2 ?nullnode4 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+83,"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select ?subject1 ?subject2 count(?verb1 AS ?test) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 ?verb ?nullnode1 .
+?URI2 ?verb ?nullnode2 .
+?URI1 ?verb1 ?nullnode3 .
+?URI2 ?verb2 ?nullnode4 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+84,"
+//calculates the similarity between two noeds based on the number of types (http://www.w3.org/1999/02/22-rdf-syntax-ns#type)they have in common
+
+select ?subject1  WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Quentin""'
+}
+LIMIT 1000"
+85,"select ?subject1  WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Quentin""'
+}
+LIMIT 1000"
+86,"select ?subject1  WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Quentin""' .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+}
+LIMIT 1000"
+87,"select ?subject1  WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Quentin""' .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') 
+}
+LIMIT 1000"
+88,"select ?subject1  WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?subject1 bif:contains '""Quentin""' .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+89,"select ?subject1 count (?object as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?subject1 bif:contains '""Quentin""' .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+90,"select ?subject1 count (?object as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?subject1 bif:contains '""Luton""' .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 100000"
+91,"select ?subject1 count (?object as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+#?subject1 bif:contains '""Luton""' .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Luton>) 
+}
+LIMIT 100000"
+92,"select ?subject1 count (?object as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+#?subject1 bif:contains '""Luton""' .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Luton>) 
+}
+LIMIT 100000"
+93,"select ?subject1 count (?object as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Luton>) 
+}
+LIMIT 100000"
+94,"select ?subject1 count (?object as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Luton>) 
+}
+LIMIT 1000"
+95,"select ?subject1 ?subject2 count (?object as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Luton""' .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+96,"select ?subject1 count (?object as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Luton""' .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+}
+LIMIT 1000"
+97,"select ?subject1 count (?object as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Luton""' .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en')
+}
+LIMIT 1000"
+98,"select ?subject1 ?URI1 count (?object as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Luton""' .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en')
+}
+LIMIT 1000"
+99,"select ?subject1 ?URI1 count (?object as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Luton""' .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en')
+}
+GROUP BY ?URI1
+LIMIT 1000"
+100,"select ?URI1 count (?object as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Luton""' .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en')
+}
+GROUP BY ?URI1
+LIMIT 1000"
+101,"select ?object WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Luton""' .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en')
+}
+GROUP BY ?URI1
+LIMIT 1000"
+102,"select ?object WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Luton""' .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en')
+}
+GROUP BY ?URI1"
+103,"select ?object WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Luton""' .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en')
+}
+GROUP BY ?URI1"
+104,"select ?object WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Luton""' .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+<http://dbpedia.org/resource/Luton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en')
+}"
+105,"select ?object WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Luton""' .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en')
+}"
+106,"select ?URI1 count (?object) WHERE
+{
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+{
+select ?object WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Luton""' .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en')
+}
+}"
+107,"select ?URI1 count (?object) WHERE
+{
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+{
+select ?object WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Luton""' .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en')
+}
+}
+}"
+108,"select ?URI1 WHERE
+{
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object 
+}
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) ."
+109,"select ?URI1 WHERE
+{
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object 
+}
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>)"
+110,"select ?URI1 WHERE
+{
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>)
+}"
+111,"select ?subject1 ?URI1 WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Luton""'
+}"
+112,"select ?subject1 ?URI1 WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Luton""' .
+FILTER (lang(?subject1) = 'en')
+}"
+113,"select ?subject1 ?URI1 WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Luton""' .
+FILTER (lang(?subject1) = 'en')
+}"
+114,"select ?subject1 ?URI1 WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Luton""' .
+FILTER (lang(?subject1) = 'en') .
+ORDER BY DESC ( <LONG::IRI_RANK> (?URI1) )
+}"
+115,"select ?subject1 ?URI1 WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?subject1 bif:contains '""Luton""' .
+FILTER (lang(?subject1) = 'en') .
+}
+ORDER BY DESC ( <LONG::IRI_RANK> (?URI1) )"
+116,"select ?subject1 ?URI1 COUNT (?object) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?subject1 bif:contains '""Luton""' .
+FILTER (lang(?subject1) = 'en') .
+}
+ORDER BY DESC ( <LONG::IRI_RANK> (?URI1) )
+"
+117,"select ?subject1 ?URI1 COUNT (?object) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?subject1 bif:contains '""Luton""' .
+FILTER (lang(?subject1) = 'en') .
+}
+ORDER BY DESC ( <LONG::IRI_RANK> (?URI1) )
+"
+118,"select ?subject1 ?URI1 COUNT (?object) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+{
+select ?object WHERE
+{
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object
+}
+}
+?subject1 bif:contains '""Luton""' .
+FILTER (lang(?subject1) = 'en') .
+}
+ORDER BY DESC ( <LONG::IRI_RANK> (?URI1) )
+"
+119,"select ?URI1 COUNT (?object) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+{
+select ?object WHERE
+{
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object
+}
+}
+?subject1 bif:contains '""Luton""' .
+FILTER (lang(?subject1) = 'en') .
+}
+ORDER BY DESC ( <LONG::IRI_RANK> (?URI1) )
+"
+120,"select ?URI1 COUNT (?object) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+{
+select ?object WHERE
+{
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object
+}
+}
+?subject1 bif:contains '""Luton""' .
+FILTER (lang(?subject1) = 'en')
+}
+ORDER BY DESC ( <LONG::IRI_RANK> (?URI1) )
+"
+121,"select ?URI1 COUNT (?object) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object
+?subject1 bif:contains '""Luton""' .
+FILTER (lang(?subject1) = 'en')
+}
+GROUP BY (?URI1)
+"
+122,"select ?URI1 COUNT (?object) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+<http://dbpedia.org/resource/Dunstable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?subject1 bif:contains '""Luton""' .
+FILTER (lang(?subject1) = 'en')
+}
+GROUP BY (?URI1)
+"
+123,"select ?URI1 ?object WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?subject1 bif:contains '""Luton""' .
+FILTER (lang(?subject1) = 'en')
+}
+"
+124,"select ?URI1 count (?object) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?subject1 bif:contains '""Luton""' .
+FILTER (lang(?subject1) = 'en')
+}
+GROUP BY (?URI)"
+125,"select ?URI1 count (?object) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?subject1 bif:contains '""Luton""' .
+FILTER (lang(?subject1) = 'en')
+}
+GROUP BY (?URI1)"
+126,"select ?URI1 count (?object) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?subject1 bif:contains '""Luton""' .
+FILTER (lang(?subject1) = 'en')
+}"
+127,"select ?URI2 ?object WHERE
+{
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (?URI2=<http://dbpedia.org/resource/Dunstable>)
+FILTER (lang(?subject2) = 'en')
+}"
+128,"select ?subject1 ?subject2 ?object WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+129,"select ?object WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+130,"select ?object WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+?subject1 bif:contains '""Luton""' .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+131,"select ?URI1 count (?object) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+?subject1 bif:contains '""Luton""' .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+GROUP BY (?URI1)"
+132,"select ?subject1 ?subject2 count (?object as ?number_of_occurrences) WHERE
+{
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+{
+select ?URI1 ?object WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?subject1 bif:contains '""Luton""' .
+FILTER (lang(?subject1) = 'en')
+}
+}
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+133,"select ?subject1 ?subject2 count (?object as ?number_of_occurrences) WHERE
+{
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+{
+select ?subject1 ?URI1 ?object WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?subject1 bif:contains '""Luton""' .
+FILTER (lang(?subject1) = 'en')
+}
+}
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+134,"select ?subject1 ?subject2 count (?object as ?number_of_occurrences) WHERE
+{
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+FILTER (lang(?subject2) = 'en') .
+{
+select ?subject1 ?URI1 ?object WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object .
+?subject1 bif:contains '""Luton""' .
+FILTER (lang(?subject1) = 'en')
+}
+}
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>)
+}
+LIMIT 1000"
+135,"select ?subject1 ?subject2 count (?object as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1 .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>) .
+FILTER (?object1 = ?object2)
+}
+LIMIT 1000"
+136,"select ?subject1 ?subject2 count (?object1 as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1 .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+FILTER (?URI1 = <http://dbpedia.org/resource/Luton>) .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>) .
+FILTER (?object1 = ?object2)
+}
+LIMIT 1000"
+137,"select ?subject1 ?subject2 count (?object1 as ?number_of_occurrences) WHERE
+{
+?URI1 <http://www.w3.org/2000/01/rdf-schema#label> ?subject1 .
+?URI2 <http://www.w3.org/2000/01/rdf-schema#label> ?subject2 .
+?URI1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object1 .
+?URI2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?object2 .
+FILTER (lang(?subject1) = 'en') .
+FILTER (lang(?subject2) = 'en') .
+?subject1 bif:contains '""Luton""' .
+FILTER (?URI2 = <http://dbpedia.org/resource/Dunstable>) .
+FILTER (?object1 = ?object2)
+}
+LIMIT 1000"
+138,"select ?start ?end (count(?mid) as ?length)
+where {
+  values (?start ?end) { (<http://dbpedia.org/resource/Dunstable> <http://dbpedia.org/resource/Luton>) }
+  ?start :p  ?mid .
+  ?mid :p* ?end .
+}
+group by ?start ?end "

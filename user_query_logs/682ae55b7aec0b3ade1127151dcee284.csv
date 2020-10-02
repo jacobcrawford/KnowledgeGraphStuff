@@ -1,0 +1,2073 @@
+,query
+0,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?p ?o ?l ?id where {
+?s a ont:InformationAppliance .
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER NOT EXISTS {?s a ont:operatingSystem .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+1,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?p ?o ?l ?id where {
+?s a ont:InformationAppliance .
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER NOT EXISTS {?s a dbpprop:operatingSystem .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+2,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?p ?o ?l ?id ?s where {
+?s a ont:InformationAppliance .
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER NOT EXISTS {?s a dbpprop:operatingSystem .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+3,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?p ?o ?l ?id ?s where {
+?s a ont:InformationAppliance .
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER NOT EXISTS {?s a ont:Software .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+4,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?p ?o ?l ?id ?s where {
+?s a ont:InformationAppliance .
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER NOT EXISTS {?s rdf:type ont:Software .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+5,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?p ?o ?l ?id ?s where {
+?s a ont:InformationAppliance .
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER NOT EXISTS {?s rdf:type ont:Software .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+6,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?p ?o ?l ?id ?s where {
+?s a ont:InformationAppliance .
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+MINUS {?s rdf:type ont:Software .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+7,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?p ?o ?l ?id ?s where {
+?s a ont:InformationAppliance .
+MINUS {?s a ont:Software .}
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+8,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?p ?o ?l ?id ?s where {
+?s a ont:InformationAppliance
+MINUS {?s a ont:Software .} .
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+9,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s a ont:InformationAppliance
+MINUS {?s a ont:Software .} .
+}
+ORDER BY ?s
+LIMIT 10000"
+10,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s a ont:InformationAppliance
+MINUS {
+?s a ont:Software .
+?s a yago:ComputingPlatforms.
+} .
+}
+ORDER BY ?s
+LIMIT 10000"
+11,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s a ont:InformationAppliance
+NOT EXISTS {
+?s a ont:Software .
+?s a yago:ComputingPlatforms.
+} .
+}
+ORDER BY ?s
+LIMIT 10000"
+12,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s a ont:InformationAppliance .
+FILTER NOT EXISTS {
+?s a ont:Software .
+?s a yago:ComputingPlatforms.
+}
+}
+ORDER BY ?s
+LIMIT 10000"
+13,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s a ont:InformationAppliance .
+?s !a ont:Software .
+#FILTER NOT EXISTS {
+#?s a ont:Software .
+#?s a yago:ComputingPlatforms.
+#}
+}
+ORDER BY ?s
+LIMIT 10000"
+14,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s rdf:type ont:InformationAppliance .
+?s !rdf:type ont:Software .
+#FILTER NOT EXISTS {
+#?s a ont:Software .
+#?s a yago:ComputingPlatforms.
+#}
+}
+ORDER BY ?s
+LIMIT 10000"
+15,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s rdf:type ont:InformationAppliance .
+#?s !rdf:type ont:Software .
+#FILTER NOT EXISTS {
+#?s a ont:Software .
+#?s a yago:ComputingPlatforms.
+#}
+}
+ORDER BY ?s
+LIMIT 10000"
+16,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+#?s rdf:type ont:InformationAppliance .
+?s !rdf:type ont:Software .
+#FILTER NOT EXISTS {
+#?s a ont:Software .
+#?s a yago:ComputingPlatforms.
+#}
+}
+ORDER BY ?s
+LIMIT 10000"
+17,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+#?s rdf:type ont:InformationAppliance .
+?s ! rdf:type ont:Software .
+#FILTER NOT EXISTS {
+#?s a ont:Software .
+#?s a yago:ComputingPlatforms.
+#}
+}
+ORDER BY ?s
+LIMIT 10000"
+18,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+#?s rdf:type ont:InformationAppliance .
+?s rdf:instanceOf ont:Software .
+#FILTER NOT EXISTS {
+#?s a ont:Software .
+#?s a yago:ComputingPlatforms.
+#}
+}
+ORDER BY ?s
+LIMIT 10000"
+19,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+#?s rdf:type ont:InformationAppliance .
+?s rdf:type ont:Software .
+#FILTER NOT EXISTS {
+#?s a ont:Software .
+#?s a yago:ComputingPlatforms.
+#}
+}
+ORDER BY ?s
+LIMIT 10000"
+20,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+#?s rdf:type ont:InformationAppliance .
+?s !rdf:type ont:Software .
+#FILTER NOT EXISTS {
+#?s a ont:Software .
+#?s a yago:ComputingPlatforms.
+#}
+}
+ORDER BY ?s
+LIMIT 10000"
+21,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+#?s rdf:type ont:InformationAppliance .
+?s !rdf:type ont:operatingSystem .
+#FILTER NOT EXISTS {
+#?s a ont:Software .
+#?s a yago:ComputingPlatforms.
+#}
+}
+ORDER BY ?s
+LIMIT 10000"
+22,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+#?s rdf:type ont:InformationAppliance .
+?s rdf:type ont:operatingSystem .
+#FILTER NOT EXISTS {
+#?s a ont:Software .
+#?s a yago:ComputingPlatforms.
+#}
+}
+ORDER BY ?s
+LIMIT 10000"
+23,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+#?s rdf:type ont:InformationAppliance .
+?s rdf:type ont:Software .
+#FILTER NOT EXISTS {
+#?s a ont:Software .
+#?s a yago:ComputingPlatforms.
+#}
+}
+ORDER BY ?s
+LIMIT 10000"
+24,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+#?s rdf:type ont:InformationAppliance .
+?s !(rdf:type) ont:Software .
+#FILTER NOT EXISTS {
+#?s a ont:Software .
+#?s a yago:ComputingPlatforms.
+#}
+}
+ORDER BY ?s
+LIMIT 10000"
+25,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s rdf:type ont:InformationAppliance .
+?s !(rdf:type) ont:Software .
+#FILTER NOT EXISTS {
+#?s a ont:Software .
+#?s a yago:ComputingPlatforms.
+#}
+}
+ORDER BY ?s
+LIMIT 10000"
+26,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+#?s rdf:type ont:InformationAppliance .
+?s !(rdf:type) ont:operatingSystem .
+#FILTER NOT EXISTS {
+#?s a ont:Software .
+#?s a yago:ComputingPlatforms.
+#}
+}
+ORDER BY ?s
+LIMIT 10000"
+27,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s rdf:type ont:InformationAppliance .
+#?s !(rdf:type) ont:operatingSystem .
+FILTER NOT EXISTS {
+?s a ont:Software .
+#?s a yago:ComputingPlatforms.
+}
+}
+ORDER BY ?s
+LIMIT 10000"
+28,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s rdf:type ont:InformationAppliance .
+#?s !(rdf:type) ont:operatingSystem .
+FILTER NOT EXISTS {
+#?s a ont:Software .
+?s rdf:type yago:ComputingPlatforms.
+}
+}
+ORDER BY ?s
+LIMIT 10000"
+29,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s rdf:type ont:InformationAppliance .
+#?s !(rdf:type) ont:operatingSystem .
+FILTER NOT EXISTS {
+#?s a ont:Software .
+?s rdf:type yago:ComputingPlatforms.
+}
+}
+ORDER BY ?s
+LIMIT 10000"
+30,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s rdf:type ont:InformationAppliance .
+#?s !(rdf:type) ont:operatingSystem .
+FILTER NOT EXISTS {
+#?s a ont:Software .
+?s dcterms:subject category:Computing_platforms.
+}
+}
+ORDER BY ?s
+LIMIT 10000"
+31,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s rdf:type ont:InformationAppliance .
+FILTER NOT EXISTS {
+?s dcterms:subject category:Computing_platforms.
+}
+}
+ORDER BY ?s
+LIMIT 10000"
+32,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s rdf:type ont:InformationAppliance .
+MINUS {
+?s dcterms:subject category:Computing_platforms.
+}
+}
+ORDER BY ?s
+LIMIT 10000"
+33,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s a ?t .
+?t rdf:class ont:InformationAppliance .
+#MINUS {
+#?s dcterms:subject category:Computing_platforms.
+#}
+}
+ORDER BY ?s
+LIMIT 10000"
+34,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s a ?t .
+#?t rdf:class ont:InformationAppliance .
+#MINUS {
+#?s dcterms:subject category:Computing_platforms.
+#}
+}
+ORDER BY ?s
+LIMIT 100"
+35,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s a ?t .
+#?t rdf:class ont:InformationAppliance .
+#MINUS {
+#?s dcterms:subject category:Computing_platforms.
+#}
+}
+ORDER BY ?s
+LIMIT 100"
+36,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s a ?t .
+?t rdfs:subClassOf ont:InformationAppliance .
+#MINUS {
+#?s dcterms:subject category:Computing_platforms.
+#}
+}
+ORDER BY ?s
+LIMIT 100"
+37,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s a ?t .
+?t rdfs:subClassOf yago:ComputingPlatforms .
+#MINUS {
+#?s dcterms:subject category:Computing_platforms.
+#}
+}
+ORDER BY ?s
+LIMIT 100"
+38,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?t rdfs:subClassOf yago:ComputingPlatforms .
+?s a ?t .
+#MINUS {
+#?s dcterms:subject category:Computing_platforms.
+#}
+}
+ORDER BY ?s
+LIMIT 100"
+39,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?t rdfs:subClassOf ont:Device .
+?s a ?t .
+#MINUS {
+#?s dcterms:subject category:Computing_platforms.
+#}
+}
+ORDER BY ?s
+LIMIT 100"
+40,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?t rdfs:subClassOf ont:InformationAppliance .
+?s a ?t .
+#MINUS {
+#?s dcterms:subject category:Computing_platforms.
+#}
+}
+ORDER BY ?s
+LIMIT 100"
+41,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?t rdfs:subClassOf ont:Device .
+?s a ?t .
+#MINUS {
+#?s dcterms:subject category:Computing_platforms.
+#}
+}
+ORDER BY ?s
+LIMIT 100"
+42,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?t rdfs:subClassOf ont:Device .
+?s a ?t .
+?s dcterms:subject category:Computing_platforms.
+#MINUS {
+#?s dcterms:subject category:Computing_platforms.
+#}
+}
+ORDER BY ?s
+LIMIT 100"
+43,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+#?t rdfs:subClassOf ont:Device .
+#?s a ?t .
+?s dcterms:subject category:Computing_platforms.
+#MINUS {
+#?s dcterms:subject category:Computing_platforms.
+#}
+}
+ORDER BY ?s
+LIMIT 100"
+44,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+#?t rdfs:subClassOf ont:Device .
+#?s a ?t .
+?s dcterms:subject category:Computers.
+#MINUS {
+#?s dcterms:subject category:Computing_platforms.
+#}
+}
+ORDER BY ?s
+LIMIT 100"
+45,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+#?t rdfs:subClassOf ont:Device .
+#?s a ?t .
+?s dcterms:subject category:Smartphones.
+#MINUS {
+#?s dcterms:subject category:Computing_platforms.
+#}
+}
+ORDER BY ?s
+LIMIT 100"
+46,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+#?t rdfs:subClassOf ont:Device .
+#?s a ?t .
+?s dcterms:subject category:Tablets.
+#MINUS {
+#?s dcterms:subject category:Computing_platforms.
+#}
+}
+ORDER BY ?s
+LIMIT 100"
+47,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+#?t rdfs:subClassOf ont:Device .
+#?s a ?t .
+?s dcterms:subject category:Tablet_computers.
+#MINUS {
+#?s dcterms:subject category:Computing_platforms.
+#}
+}
+ORDER BY ?s
+LIMIT 100"
+48,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s dcterms:subject category:Smartphones
+} LIMIT 100"
+49,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s dcterms:subject [category:Smartphones category:Tablet_computers].
+} LIMIT 100"
+50,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s dcterms:subject [category:Smartphones; category:Tablet_computers].
+} LIMIT 100"
+51,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s dcterms:subject [category:Smartphones category:Tablet_computers].
+} LIMIT 100"
+52,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s dcterms:subject category:Smartphones.
+} LIMIT 100"
+53,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s dcterms:subject [category:Smartphones category:Android_devices].
+} LIMIT 100"
+54,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s dcterms:subject [category:Smartphones; category:Android_devices].
+} LIMIT 100"
+55,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+?s dcterms:subject [category:Smartphones category:Android_devices].
+} LIMIT 100"
+56,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+{?s dcterms:subject category:Smartphones.}
+UNION
+{?s dcterms:subject category:Android_devices].
+} LIMIT 100"
+57,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?s where {
+{?s dcterms:subject category:Smartphones.}
+UNION
+{?s dcterms:subject category:Android_devices}.
+} LIMIT 100"
+58,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select distinct ?p ?o ?l ?id where {
+{?s dcterms:subject category:Smartphones.}
+UNION
+{?s dcterms:subject category:Tablet_computers}.
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER NOT EXISTS {?s ont:operatingSystem ?os .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+59,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select count( ?p ?o ?l ?id) where {
+{?s dcterms:subject category:Smartphones.}
+UNION
+{?s dcterms:subject category:Tablet_computers}.
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER NOT EXISTS {?s ont:operatingSystem ?os .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+60,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+select count( ?s) where {
+{?s dcterms:subject category:Smartphones.}
+UNION
+{?s dcterms:subject category:Tablet_computers}.
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER NOT EXISTS {?s ont:operatingSystem ?os .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+#ORDER BY ?o ?l
+LIMIT 10000"
+61,PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX ont: <http://dbpedia.org/ontology/> PREFIX dbpprop: <http://dbpedia.org/property/> PREFIX dbpres: <http://dbpedia.org/resource/> PREFIX dbpcat: <http://dbpedia.org/resource/Category:> PREFIX yago: <http://dbpedia.org/class/yago/> PREFIX purl: <http://purl.org/dc/terms/> SELECT DISTINCT ?id WHERE { ?s rdf:type yago:ElectronicEquipment103278248. ?s ont:wikiPageID ?id. } LIMIT 10
+62,PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX ont: <http://dbpedia.org/ontology/> PREFIX dbpprop: <http://dbpedia.org/property/> PREFIX dbpres: <http://dbpedia.org/resource/> PREFIX dbpcat: <http://dbpedia.org/resource/Category:> PREFIX yago: <http://dbpedia.org/class/yago/> PREFIX purl: <http://purl.org/dc/terms/> SELECT DISTINCT ?id WHERE { ?s rdf:type yago:ElectronicEquipment103278248. ?s ont:wikiPageID ?id. } LIMIT 10
+63,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?p ?o ?l ?id where {
+{?s dcterms:subject category:Smartphones.}
+UNION
+{?s dcterms:subject category:Tablet_computers}.
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER NOT EXISTS {?s ont:operatingSystem ?os .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+64,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?p ?o ?l ?id where {
+{?s dcterms:subject category:Smartphones.}
+UNION
+{?s dcterms:subject category:Tablet_computers.}
+UNION
+{?s a ont:Device}
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER NOT EXISTS {?s ont:operatingSystem ?os .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+65,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?p ?o ?l ?id where {
+{?s dcterms:subject category:Smartphones.}
+UNION
+{?s dcterms:subject category:Tablet_computers.}
+?s a ont:Device.
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER NOT EXISTS {?s ont:operatingSystem ?os .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+66,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?p ?o ?l ?id where {
+{?s dcterms:subject category:Smartphones.}
+UNION
+{?s dcterms:subject category:Tablet_computers.}
+#?s a ont:Device.
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER NOT EXISTS {?s ont:operatingSystem ?os .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+67,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?p ?o ?l ?id where {
+{?s dcterms:subject category:Smartphones.}
+UNION
+{?s dcterms:subject category:Tablet_computers.}
+?s a ont:Device.
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER NOT EXISTS {?s ont:operatingSystem ?os .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+68,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?p ?o ?l ?id where {
+{?s dcterms:subject category:Smartphones.}
+UNION
+{?s dcterms:subject category:Tablet_computers.}
+UNION
+{?s dcterms:subject category:Mobile_phones.}
+?s a ont:Device.
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER NOT EXISTS {?s ont:operatingSystem ?os .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+69,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?p ?o ?l ?id where {
+#{?s dcterms:subject category:Smartphones.}
+#UNION
+#{?s dcterms:subject category:Tablet_computers.}
+#UNION
+{?s dcterms:subject category:Mobile_phones.}
+?s a ont:Device.
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER NOT EXISTS {?s ont:operatingSystem ?os .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+70,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?p ?o ?l ?id ?s where {
+#{?s dcterms:subject category:Smartphones.}
+#UNION
+#{?s dcterms:subject category:Tablet_computers.}
+#UNION
+{?s dcterms:subject category:Mobile_phones.}
+?s a ont:Device.
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER NOT EXISTS {?s ont:operatingSystem ?os .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+71,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?p ?o ?l ?id ?s where {
+#{?s dcterms:subject category:Smartphones.}
+#UNION
+#{?s dcterms:subject category:Tablet_computers.}
+#UNION
+{?s dcterms:subject category:Consumer_electronics.}
+?s a ont:Device.
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER NOT EXISTS {?s ont:operatingSystem ?os .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+72,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?p ?o ?l ?id ?s where {
+#{?s dcterms:subject category:Smartphones.}
+#UNION
+#{?s dcterms:subject category:Tablet_computers.}
+#UNION
+{?s dcterms:subject category:Mobile_computers.}
+?s a ont:Device.
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER NOT EXISTS {?s ont:operatingSystem ?os .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+73,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?p ?o ?l ?id ?s where {
+{?s dcterms:subject category:Smartphones.}
+UNION
+{?s dcterms:subject category:Tablet_computers.}
+UNION
+{?s dcterms:subject category:Mobile_computers.}
+?s a ont:Device.
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER NOT EXISTS {?s ont:operatingSystem ?os .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+74,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?p ?o ?l ?id ?s where {
+{?s dcterms:subject category:Smartphones.}
+UNION
+{?s dcterms:subject category:Tablet_computers.}
+UNION
+{?s dcterms:subject category:Mobile_computers.}
+UNION
+{?s dcterms:subject category:Mobile_phones.}
+?s a ont:Device.
+?s rdfs:label ?l .
+?s ont:wikiPageID ?id .
+BIND (rdf:nil AS ?o).
+BIND (rdfs:label AS ?p).
+FILTER NOT EXISTS {?s ont:operatingSystem ?os .}
+FILTER langMATCHES(lang(?l), ""en"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+75,PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX ont: <http://dbpedia.org/ontology/> PREFIX dbpprop: <http://dbpedia.org/property/> PREFIX dbpres: <http://dbpedia.org/resource/> PREFIX dbpcat: <http://dbpedia.org/resource/Category:> PREFIX yago: <http://dbpedia.org/class/yago/> PREFIX purl: <http://purl.org/dc/terms/> SELECT DISTINCT ?id WHERE { ?s rdf:type yago:ElectronicEquipment103278248. ?s ont:wikiPageID ?id. } LIMIT 10
+76,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX ont: <http://dbpedia.org/ontology/> PREFIX dbpprop: <http://dbpedia.org/property/> PREFIX dbpres: <http://dbpedia.org/resource/> PREFIX dbpcat: <http://dbpedia.org/resource/Category:> PREFIX yago: <http://dbpedia.org/class/yago/> PREFIX purl: <http://purl.org/dc/terms/> SELECT DISTINCT ?id WHERE { ?s rdf:type ont:InformationAppliance. ?s ont:operatingSystem ?v0. ?v0 rdfs:label ?l0. ?s ont:wikiPageID ?id. FILTER ( regex(?l0, '^android. operating. system', 'i') ) } LIMIT 10"
+77,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX ont: <http://dbpedia.org/ontology/> PREFIX dbpprop: <http://dbpedia.org/property/> PREFIX dbpres: <http://dbpedia.org/resource/> PREFIX dbpcat: <http://dbpedia.org/resource/Category:> PREFIX yago: <http://dbpedia.org/class/yago/> PREFIX purl: <http://purl.org/dc/terms/> SELECT DISTINCT ?id WHERE { ?s rdf:type ont:InformationAppliance. ?s dbpprop:manufacturer ?v0. ?v0 rdfs:label ?l0. ?s dbpprop:type ?v1. ?v1 rdfs:label ?l1. ?s ont:wikiPageID ?id. FILTER ( regex(?l0, '^htc', 'i') ) FILTER ( regex(?l1, '^smartphone', 'i') ) } LIMIT 10"
+78,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX ont: <http://dbpedia.org/ontology/> PREFIX dbpprop: <http://dbpedia.org/property/> PREFIX dbpres: <http://dbpedia.org/resource/> PREFIX dbpcat: <http://dbpedia.org/resource/Category:> PREFIX yago: <http://dbpedia.org/class/yago/> PREFIX purl: <http://purl.org/dc/terms/> SELECT DISTINCT ?id WHERE { ?s rdf:type ont:InformationAppliance. ?s dbpprop:manufacturer ?v0. ?v0 rdfs:label ?l0. ?s ont:wikiPageID ?id. FILTER ( regex(?l0, '^HTC', 'i') ) } LIMIT 10"
+79,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?s where {
+?o a ?s.
+?s rdfs:label ?l .
+FILTER langMATCHES(lang(?l), ""en"")
+FILTER REGEX(?l, ""^htc one v"", ""i"")
+}
+ORDER BY ?o ?l
+LIMIT 10000"
+80,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?s where {
+?o a ?s.
+?s rdfs:label ?l .
+FILTER langMATCHES(lang(?l), ""en"")
+FILTER REGEX(?l, ""^htc one v"", ""i"")
+}
+#ORDER BY ?o ?l
+LIMIT 10"
+81,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?s where {
+?s rdfs:label ?l .
+#FILTER langMATCHES(lang(?l), ""en"")
+FILTER REGEX(?l, ""^htc one v"", ""i"")
+}
+#ORDER BY ?o ?l
+LIMIT 10"
+82,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?s where {
+s a ont:Device
+?s rdfs:label ?l .
+#FILTER langMATCHES(lang(?l), ""en"")
+FILTER REGEX(?l, ""^htc one v"", ""i"")
+}
+#ORDER BY ?o ?l
+LIMIT 10"
+83,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?s where {
+s a ont:Device .
+?s rdfs:label ?l .
+#FILTER langMATCHES(lang(?l), ""en"")
+FILTER REGEX(?l, ""^htc one v"", ""i"")
+}
+#ORDER BY ?o ?l
+LIMIT 10"
+84,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?s where {
+?s a ont:Device .
+?s rdfs:label ?l .
+#FILTER langMATCHES(lang(?l), ""en"")
+FILTER REGEX(?l, ""^htc one v"", ""i"")
+}
+#ORDER BY ?o ?l
+LIMIT 10"
+85,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ont: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbpres: <http://dbpedia.org/resource/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX yago: <http://dbpedia.org/class/yago/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?s where {
+?s a ont:Device .
+?s rdfs:label ?l .
+#FILTER langMATCHES(lang(?l), ""en"")
+FILTER REGEX(?l, ""^htc one v"", ""i"")
+}
+#ORDER BY ?o ?l
+LIMIT 10"
+86,PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX ont: <http://dbpedia.org/ontology/> PREFIX dbpprop: <http://dbpedia.org/property/> PREFIX dbpres: <http://dbpedia.org/resource/> PREFIX category: <http://dbpedia.org/resource/Category:> PREFIX yago: <http://dbpedia.org/class/yago/> PREFIX purl: <http://purl.org/dc/terms/> PREFIX dcterms: <http://purl.org/dc/terms/> SELECT DISTINCT ?id WHERE { ?s rdf:type yago:ElectronicEquipment103278248. ?s ont:wikiPageID ?id. } LIMIT 10
+87,PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX ont: <http://dbpedia.org/ontology/> PREFIX dbpprop: <http://dbpedia.org/property/> PREFIX dbpres: <http://dbpedia.org/resource/> PREFIX category: <http://dbpedia.org/resource/Category:> PREFIX yago: <http://dbpedia.org/class/yago/> PREFIX purl: <http://purl.org/dc/terms/> PREFIX dcterms: <http://purl.org/dc/terms/> SELECT DISTINCT ?id WHERE { ?s rdf:type yago:ElectronicEquipment103278248. ?s ont:wikiPageID ?id. } LIMIT 10
+88,"PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?s where {
+?o dcterms:subject ?s
+} LIMIT 100"
+89,"PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?s where {
+?o dcterms:subject ?s.
+?s rdfs:labe ?l.
+FILTER REGEX(?l, ""^mobile"", ""i"")
+} LIMIT 100"
+90,"PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?s ?l where {
+?o dcterms:subject ?s.
+?s rdfs:label ?l.
+#FILTER REGEX(?l, ""^mobile"", ""i"")
+} LIMIT 100"
+91,"PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?s ?l where {
+?o dcterms:subject ?s.
+?s rdfs:label ?l.
+FILTER REGEX(?l, ""^mobile"", ""i"")
+} LIMIT 100"
+92,"PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?s ?l where {
+#?o dcterms:subject category:Mobile_phones.
+?s skos:broader category:Mobile_phones.
+?s rdfs:label ?l.
+#FILTER REGEX(?l, ""^mobile"", ""i"")
+} LIMIT 100"
+93,"PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?s ?l where {
+#?o dcterms:subject category:Mobile_phones.
+?s skos:broader category:Smartphones.
+?s rdfs:label ?l.
+#FILTER REGEX(?l, ""^mobile"", ""i"")
+} LIMIT 100"
+94,"PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?s ?l where {
+#?o dcterms:subject category:Mobile_phones.
+?s skos:narrow category:Mobile_phones.
+?s rdfs:label ?l.
+#FILTER REGEX(?l, ""^mobile"", ""i"")
+} LIMIT 100"
+95,"PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?s ?l where {
+#?o dcterms:subject category:Mobile_phones.
+?s skos:broader category:Mobile_phones.
+?s rdfs:label ?l.
+#FILTER REGEX(?l, ""^mobile"", ""i"")
+} LIMIT 100"
+96,"PREFIX dcterms: <http://purl.org/dc/terms/>
+select distinct ?s ?l where {
+#?o dcterms:subject category:Mobile_phones.
+?s skos:narrower category:Mobile_phones.
+?s rdfs:label ?l.
+#FILTER REGEX(?l, ""^mobile"", ""i"")
+} LIMIT 100"
+97,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+select distinct ?s ?l where {
+#?o dcterms:subject category:Mobile_phones.
+?s skos:narrower category:Mobile_phones.
+?s rdfs:label ?l.
+#FILTER REGEX(?l, ""^mobile"", ""i"")
+} LIMIT 100"
+98,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+select distinct ?s ?l where {
+#?o dcterms:subject category:Mobile_phones.
+?s skos:broader category:Mobile_phones.
+?s rdfs:label ?l.
+#FILTER REGEX(?l, ""^mobile"", ""i"")
+} LIMIT 100"
+99,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+select distinct ?s ?l where {
+#?o dcterms:subject category:Mobile_phones.
+#?s skos:broader category:Mobile_phones.
+?s skos:narrower category:Smartphones.
+?s rdfs:label ?l.
+#FILTER REGEX(?l, ""^mobile"", ""i"")
+} LIMIT 100"
+100,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+select distinct ?s ?l where {
+#?o dcterms:subject category:Mobile_phones.
+#?s skos:broader category:Mobile_phones.
+?s skos:narrower category:Smartphones.
+?s rdfs:label ?l.
+#FILTER REGEX(?l, ""^mobile"", ""i"")
+} LIMIT 100"
+101,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+select distinct ?s ?l where {
+#?o dcterms:subject category:Mobile_phones.
+#?s skos:broader category:Mobile_phones.
+?r a skos:Concept.
+?r skos:narrower category:Smartphones.
+?s rdfs:label ?l.
+#FILTER REGEX(?l, ""^mobile"", ""i"")
+} LIMIT 100"
+102,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+select distinct ?s ?l where {
+#?o dcterms:subject category:Mobile_phones.
+#?s skos:broader category:Mobile_phones.
+category:Smartphones skos:narrower ?s.
+?s rdfs:label ?l.
+#FILTER REGEX(?l, ""^mobile"", ""i"")
+} LIMIT 100"
+103,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?narrowerLabel
+WHERE {
+?uri a skos:Concept.
+?uri skos:narrower ?narrower.
+?narrower skos:prefLabel ?narrowerLabel.
+?uri skos:prefLabel ?label.
+FILTER (lang(?label) = “en”)
+FILTER (lang(?narrowerLabel) = “en”)
+}
+ORDER BY ?label ?narrowerLabel"
+104,PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX ont: <http://dbpedia.org/ontology/> PREFIX dbpprop: <http://dbpedia.org/property/> PREFIX dbpres: <http://dbpedia.org/resource/> PREFIX category: <http://dbpedia.org/resource/Category:> PREFIX yago: <http://dbpedia.org/class/yago/> PREFIX purl: <http://purl.org/dc/terms/> PREFIX dcterms: <http://purl.org/dc/terms/> SELECT DISTINCT ?id WHERE { ?s rdf:type yago:ElectronicEquipment103278248. ?s ont:wikiPageID ?id. } LIMIT 10
+105,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?narrowerLabel
+WHERE {
+?uri a skos:Concept.
+?uri skos:narrower ?narrower.
+?narrower skos:prefLabel ?narrowerLabel.
+?uri skos:prefLabel ?label.
+FILTER (lang(?label) = ""en"")
+FILTER (lang(?narrowerLabel) = ""en"")
+}
+ORDER BY ?label ?narrowerLabel"
+106,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?narrowerLabel 
+WHERE {
+?uri a category:Mobile_phones.
+?uri skos:narrower ?narrower.
+?narrower skos:prefLabel ?narrowerLabel.
+?uri skos:prefLabel ?label.
+FILTER (lang(?label) = ""en"")
+FILTER (lang(?narrowerLabel) = ""en"")
+}
+ORDER BY ?label ?narrowerLabel"
+107,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?narrowerLabel 
+WHERE {
+?uri a skos:Concept.
+?uri skos:narrower ?narrower.
+?narrower skos:prefLabel ?narrowerLabel.
+?uri skos:prefLabel ?label.
+FILTER (lang(?label) = ""en"")
+FILTER (lang(?narrowerLabel) = ""en"")
+}
+ORDER BY ?label ?narrowerLabel"
+108,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label 
+WHERE {
+?uri a skos:Concept.
+?uri skos:prefLabel ?label.
+FILTER (lang(?label) = ""en"")
+}
+ORDER BY ?label"
+109,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label 
+WHERE {
+?uri a skos:Concept.
+?uri skos:prefLabel ?label.
+FILTER (lang(?label) = ""en"")
+}
+ORDER BY ?label
+LIMIT 100"
+110,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label 
+WHERE {
+category:Mobile_phones a skos:Concept.
+category:Mobile_phones skos:prefLabel ?label.
+FILTER (lang(?label) = ""en"")
+}
+ORDER BY ?label
+LIMIT 100"
+111,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?b
+WHERE {
+category:Mobile_phones a skos:Concept.
+category:Mobile_phones skos:prefLabel ?label.
+category:Mobile_phones skos:broader ?b.
+FILTER (lang(?label) = ""en"")
+}
+ORDER BY ?label
+LIMIT 100"
+112,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?b
+WHERE {
+category:Mobile_phones a skos:Concept.
+category:Mobile_phones skos:prefLabel ?label.
+category:Mobile_phones skos:narrower ?b.
+FILTER (lang(?label) = ""en"")
+}
+ORDER BY ?label
+LIMIT 100"
+113,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?b
+WHERE {
+category:Mobile_phones a skos:Concept.
+category:Mobile_phones skos:prefLabel ?label.
+category:Mobile_phones skos:related ?b.
+FILTER (lang(?label) = ""en"")
+}
+ORDER BY ?label
+LIMIT 100"
+114,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?b
+WHERE {
+category:Mobile_phones a skos:Concept.
+category:Mobile_phones skos:prefLabel ?label.
+category:Mobile_phones skos:broader ?b.
+FILTER (lang(?label) = ""en"")
+}
+ORDER BY ?label
+LIMIT 100"
+115,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?b
+WHERE {
+category:Mobile_phones a skos:Concept.
+category:Mobile_phones skos:prefLabel ?label.
+#category:Mobile_phones skos:broader ?b.
+?b skos:broader category:Mobile_phones.
+FILTER (lang(?label) = ""en"")
+}
+ORDER BY ?label
+LIMIT 100"
+116,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?b
+WHERE {
+category:Mobile_phones a skos:Concept.
+category:Mobile_phones skos:prefLabel ?label.
+category:Mobile_phones skos:broader ?b.
+?n skos:broader category:Mobile_phones.
+FILTER (lang(?label) = ""en"")
+}
+ORDER BY ?label
+LIMIT 100"
+117,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?n ?b
+WHERE {
+category:Mobile_phones a skos:Concept.
+category:Mobile_phones skos:prefLabel ?label.
+category:Mobile_phones skos:broader ?b.
+?n skos:broader category:Mobile_phones.
+FILTER (lang(?label) = ""en"")
+}
+ORDER BY ?label
+LIMIT 100"
+118,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?b
+WHERE {
+category:Mobile_phones a skos:Concept.
+category:Mobile_phones skos:prefLabel ?label.
+category:Telephony_equipment:broader ?b.
+#?n skos:broader category:Mobile_phones.
+FILTER (lang(?label) = ""en"")
+}
+ORDER BY ?label
+LIMIT 100"
+119,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?b
+WHERE {
+category:Mobile_phones a skos:Concept.
+category:Mobile_phones skos:prefLabel ?label.
+category:Telephony_equipment skos:broader ?b.
+#?n skos:broader category:Mobile_phones.
+FILTER (lang(?label) = ""en"")
+}
+ORDER BY ?label
+LIMIT 100"
+120,"SELECT ?root ?leaf
+ WHERE {
+    ?root skos:narrower  ?leaf .
+    NOT EXISTS {?leaf skos:narrower ?node }
+ }
+LIMIT 100"
+121,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?root ?leaf
+ WHERE {
+    ?root skos:narrower  ?leaf .
+    NOT EXISTS {?leaf skos:narrower ?node .}
+ }
+LIMIT 100"
+122,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?root ?leaf
+ WHERE {
+    ?root skos:narrower  ?leaf .
+    FILTER NOT EXISTS {?leaf skos:narrower ?node .}
+ }
+LIMIT 100"
+123,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?node2
+ WHERE {
+    ?node1 skos:narrower ?node2 .
+    OPTIONAL {?node2 skos:narrower ?node3 }
+    FILTER(!BOUND(?node3))
+ }
+LIMIT 100"
+124,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?node1 ?node2
+ WHERE {
+    ?node1 skos:narrower ?node2 .
+    OPTIONAL {?node2 skos:narrower ?node3 }
+    FILTER(!BOUND(?node3))
+ }
+LIMIT 100"
+125,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?b
+WHERE {
+category:Mobile_phones a skos:Concept.
+category:Mobile_phones skos:prefLabel ?label.
+category:Telephony_equipment skos:broader ?b.
+#?n skos:broader category:Mobile_phones.
+FILTER (lang(?label) = ""en"")
+}
+ORDER BY ?label
+LIMIT 100"
+126,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?b
+WHERE {
+category:Mobile_phones a skos:Concept.
+category:Mobile_phones skos:prefLabel ?label.
+category:Telecommunications equipment skos:broader ?b.
+#?n skos:broader category:Mobile_phones.
+FILTER (lang(?label) = ""en"")
+}
+ORDER BY ?label
+LIMIT 100"
+127,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?label ?b
+WHERE {
+category:Mobile_phones a skos:Concept.
+category:Mobile_phones skos:prefLabel ?label.
+category:Telecommunications_equipment skos:broader ?b.
+#?n skos:broader category:Mobile_phones.
+FILTER (lang(?label) = ""en"")
+}
+ORDER BY ?label
+LIMIT 100"
+128,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?n1 ?n2
+WHERE {
+#category:Mobile_phones a skos:Concept.
+#category:Mobile_phones skos:prefLabel ?label.
+#category:Telecommunications_equipment skos:broader ?b.
+?n1 skos:broader category:Telecommunications_equipment.
+?n2 skos:broader n1.
+#FILTER (lang(?label) = ""en"")
+}
+ORDER BY ?label
+LIMIT 100"
+129,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?n1 ?n2
+WHERE {
+#category:Mobile_phones a skos:Concept.
+#category:Mobile_phones skos:prefLabel ?label.
+#category:Telecommunications_equipment skos:broader ?b.
+?n1 skos:broader category:Telecommunications_equipment.
+?n2 skos:broader n1.
+#FILTER (lang(?label) = ""en"")
+}
+#ORDER BY ?label
+LIMIT 100"
+130,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?n1 ?n2
+WHERE {
+#category:Mobile_phones a skos:Concept.
+#category:Mobile_phones skos:prefLabel ?label.
+#category:Telecommunications_equipment skos:broader ?b.
+?n1 skos:broader category:Telecommunications_equipment.
+?n2 skos:broader ?n1.
+#FILTER (lang(?label) = ""en"")
+}
+#ORDER BY ?label
+LIMIT 100"
+131,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?n1 ?n2 ?n3
+WHERE {
+#category:Mobile_phones a skos:Concept.
+#category:Mobile_phones skos:prefLabel ?label.
+#category:Telecommunications_equipment skos:broader ?b.
+?n1 skos:broader category:Telecommunications_equipment.
+?n2 skos:broader ?n1.
+?n3 skos:broader ?n2.
+#FILTER (lang(?label) = ""en"")
+}
+#ORDER BY ?label
+LIMIT 100"
+132,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT count(?n1 ?n2 ?n3)
+WHERE {
+#category:Mobile_phones a skos:Concept.
+#category:Mobile_phones skos:prefLabel ?label.
+#category:Telecommunications_equipment skos:broader ?b.
+?n1 skos:broader category:Telecommunications_equipment.
+?n2 skos:broader ?n1.
+?n3 skos:broader ?n2.
+#FILTER (lang(?label) = ""en"")
+}
+#ORDER BY ?label
+LIMIT 100"
+133,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT count(distinct ?n1 ?n2 ?n3)
+WHERE {
+#category:Mobile_phones a skos:Concept.
+#category:Mobile_phones skos:prefLabel ?label.
+#category:Telecommunications_equipment skos:broader ?b.
+?n1 skos:broader category:Telecommunications_equipment.
+?n2 skos:broader ?n1.
+?n3 skos:broader ?n2.
+#FILTER (lang(?label) = ""en"")
+}
+#ORDER BY ?label
+LIMIT 100"
+134,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?n1 ?n2 ?n3
+WHERE {
+#category:Mobile_phones a skos:Concept.
+#category:Mobile_phones skos:prefLabel ?label.
+#category:Telecommunications_equipment skos:broader ?b.
+?n1 skos:broader category:Telecommunications_equipment.
+?n2 skos:broader ?n1.
+?n3 skos:broader ?n2.
+#FILTER (lang(?label) = ""en"")
+}
+#ORDER BY ?label
+LIMIT 100"
+135,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT COUNT( ?n1 ?n2 ?n3 )
+WHERE {
+#category:Mobile_phones a skos:Concept.
+#category:Mobile_phones skos:prefLabel ?label.
+#category:Telecommunications_equipment skos:broader ?b.
+?n1 skos:broader category:Telecommunications_equipment.
+?n2 skos:broader ?n1.
+?n3 skos:broader ?n2.
+#FILTER (lang(?label) = ""en"")
+}
+#ORDER BY ?label
+LIMIT 100"
+136,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT COUNT( ?n1 ?n2 ?n3 )
+WHERE {
+#category:Mobile_phones a skos:Concept.
+#category:Mobile_phones skos:prefLabel ?label.
+#category:Telecommunications_equipment skos:broader ?b.
+?n1 skos:broader category:Telecommunications_equipment.
+?n2 skos:broader ?n1.
+?n3 skos:broader ?n2.
+#FILTER (lang(?label) = ""en"")
+}
+#ORDER BY ?label
+LIMIT 1000"
+137,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX category: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?n1 ?n2 ?n3
+WHERE {
+#category:Mobile_phones a skos:Concept.
+#category:Mobile_phones skos:prefLabel ?label.
+#category:Telecommunications_equipment skos:broader ?b.
+?n1 skos:broader category:Telecommunications_equipment.
+?n2 skos:broader ?n1.
+?n3 skos:broader ?n2.
+#FILTER (lang(?label) = ""en"")
+}
+#ORDER BY ?label
+LIMIT 1000"

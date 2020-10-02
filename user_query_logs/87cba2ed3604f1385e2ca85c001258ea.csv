@@ -1,0 +1,1167 @@
+,query
+0,select distinct ?Concept where {[] a ?Concept} LIMIT 100
+1,"select ?x
+where { ?x a dbpedia-owl:Person. ?g a dbpedia-owl:Guitar. ?x dbpedia-owl:instrument ?g. LIMIT 100 }"
+2,"select ?x
+where { ?x a dbpedia-owl:Person. ?g a dbpedia-owl:Guitar. ?x dbpedia-owl:instrument ?g. LIMIT 100. }"
+3,"select ?x
+where { ?x a dbpedia-owl:Person. ?g a dbpedia-owl:Guitar. ?x dbpedia-owl:instrument ?g. } LIMIT 100"
+4,"select ?x
+where { ?x a dbpedia-owl:Person. ?g a dbpedia-owl:Guitare. ?x dbpedia-owl:instrument ?g. } LIMIT 100"
+5,"select ?x
+where { ?x a dbpedia-owl:Person. ?g a dbpedia-owl:Guitare. ?x dbpedia-owl:Instrument ?g. } LIMIT 100"
+6,"select ?x
+where { ?x a dbpedia-owl:Person.  ?x dbpedia-owl:Instrument ?g. } LIMIT 100"
+7,"select ?x
+where { ?x a dbpedia-owl:Person. } LIMIT 100"
+8,"select ?x
+where { ?x a dbpedia-owl:instrument. } LIMIT 100"
+9,"select ?x
+where { ?x a dbpedia-owl:Instrument. } LIMIT 100"
+10,"select ?x
+where { ?x a dbpedia-owl:Person. ?g a dbpedia:Guitar. ?x owl:instrument ?g. } LIMIT 100"
+11,"select ?x
+where { ?x a dbpedia-owl:Person. ?g a dbpedia-owl:Guitar. ?x owl:instrument ?g. } LIMIT 100"
+12,"select ?x
+where { ?x a dbpedia-owl:Person. ?g a dbpedia:Guitar. ?x owl:instrument ?g. } LIMIT 100"
+13,"select ?x
+where { ?x a dbpedia-owl:Person. ?g a dbpedia-owl:Guitar. ?x owl:instrument ?g. } LIMIT 100"
+14,"select ?x
+where { ?x a dbpedia-owl:Person. ?g a dbpedia-owl:Guitar. ?g owl:instrument ?x. } LIMIT 100"
+15,"select ?x
+where { ?x a dbpedia:Guitar. } LIMIT 100"
+16,"select ?x
+where { ?x a dbpedia:Person. } LIMIT 100"
+17,"select ?x
+where { ?x a dbpedia-owl:Person. } LIMIT 100"
+18,"select ?x
+where { ?x a dbpedia-owl:Person. ?x dbpedia-owl:birthplace dbpedia:Boston. } LIMIT 100"
+19,"select ?x
+where { ?x a dbpedia-owl:Person. ?x dbpedia-owl:birthPlace dbpedia:Boston. } LIMIT 100"
+20,"select ?x
+where { ?x a dbpedia-owl:Person. ?x dbpedia-owl:birthPlace dbpedia:Boston. ?x a dbpedia:MusicalArtist. } LIMIT 100"
+21,"select ?x
+where { ?x a dbpedia:MusicalArtist. } LIMIT 100"
+22,"select ?x
+where { ?x a dbpedia-owl:Person. ?x dbpedia-owl:birthPlace dbpedia:Boston. ?x a dbpedia-owl:MusicalArtist. } LIMIT 100"
+23,"select ?x
+where { ?x a dbpedia-owl:Person. ?x dbpedia-owl:birthPlace dbpedia:Boston. ?x a dbpedia-owl:MusicalArtist. ?x dbpedia-owl:instrument dbpedia:Guitar. } LIMIT 100"
+24,"select ?x
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. } LIMIT 100"
+25,"select ?x
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. } LIMIT 100"
+26,"select distinct ?x ?y
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?x dbpedia-owl:spouse ?y.
+} LIMIT 100"
+27,"select distinct ?x ?y
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+} LIMIT 100"
+28,"select distinct ?x ?y
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?x dbpedia-owl:spouse ?y.
+} LIMIT 100"
+29,"select distinct ?x ?y
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y dbpedia-owl:spouse ?x.
+} LIMIT 100"
+30,"select distinct ?x ?y
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y dbpedia-owl:spouse ?x.
+} LIMIT 100"
+31,"select distinct ?y
+where { ?y a dbpedia-owl:Woman.
+} LIMIT 100"
+32,"select distinct ?y
+where { ?y a dbpedia:Woman.
+} LIMIT 100"
+33,"PREFIX dbpo: <http://dbpedia.org/ontology/>
+SELECT DISTINCT ?artist ?instrument ?birthplace1
+FROM <http://dbpedia.org>
+WHERE {
+      ?artist a dbpo:MusicalArtist ;
+      dbpo:instrument ?instrument ;
+       dbpo:birthPlace ?birthplace1.
+      
+  }
+}"
+34,"select distinct ?y
+where { ?y a dbpedia-owl:Actor.
+} LIMIT 100"
+35,"PREFIX dbpo: <http://dbpedia.org/ontology/>
+SELECT DISTINCT ?artist ?instrument ?birthplace1
+FROM <http://dbpedia.org>
+WHERE {
+      ?artist a dbpo:MusicalArtist ;
+      dbpo:instrument ?instrument ;
+       dbpo:birthPlace ?birthplace1.
+      
+  }
+"
+36,"select distinct ?y ?z
+where { ?y a dbpedia-owl:Actor.
+ ?z a dbpedia:Movie.
+} LIMIT 100"
+37,"select distinct ?y ?z
+where { ?y a dbpedia-owl:Actor.
+ ?z a dbpedia-owl:Movie.
+} LIMIT 100"
+38,"select distinct ?y ?z
+where { ?y a dbpedia-owl:Actor.
+ ?z a dbpedia-owl:Film.
+} LIMIT 100"
+39,"select distinct ?y
+where { ?y a dbpedia-owl:Actor.
+} LIMIT 100"
+40,"select distinct ?y
+where { ?y a dbpedia-owl:Actor.
+ ?z a dbpedia-owl:Film.
+ ?y dbpedia-owl:movie ?z.
+} LIMIT 100"
+41,"select distinct ?y ?z
+where { ?y a dbpedia-owl:Actor.
+ ?z a dbpedia-owl:Film.
+ ?y dbpedia-owl:movie ?z.
+} LIMIT 100"
+42,"select distinct ?y ?z
+where { ?y a dbpedia-owl:Actor.
+ ?z a dbpedia-owl:Film.
+} LIMIT 100"
+43,"select distinct ?y ?z
+where { ?y a dbpedia-owl:Actor.
+ ?z a dbpedia-owl:Film.
+ ?z dbpedia-owl:movie ?y.
+} LIMIT 100"
+44,"select distinct ?y ?z
+where { ?y a dbpedia-owl:Actor.
+ ?z dbpedia-owl:movie dbpedia-owl:Film.
+} LIMIT 100"
+45,"select distinct ?y ?z
+where { ?y a dbpedia-owl:Actor.
+ ?z dbpedia-owl:movie dbpedia-owl:Film.
+} LIMIT 100"
+46,"select distinct ?y ?z
+where { ?y a dbpedia-owl:Actor.
+ ?z a dbpedia:Film.
+} LIMIT 100"
+47,"PREFIX dbpo: <http://dbpedia.org/ontology/>
+SELECT DISTINCT ?artist ?instrument ?birthplace1
+FROM <http://dbpedia.org>
+WHERE {
+      ?artist a dbpo:MusicalArtist ;
+      dbpo:instrument ?instrument ;
+       dbpo:birthPlace ?birthplace1.
+ 
+  }
+"
+48,"select distinct ?y ?z ?p
+where { ?y a dbpedia-owl:Actor.
+ ?z a dbpedia-owl:Film.
+ ?p a dbpedia-owl:Nazi_Germany.
+} LIMIT 100"
+49,"select distinct ?y ?z ?p
+where { ?y a dbpedia-owl:Actor.
+ ?z a dbpedia-owl:Film.
+ ?z dbprop:country dbpedia:Nazi_Germany.
+} LIMIT 100"
+50,"select distinct ?y ?z ?p
+where { ?y a dbpedia-owl:Actor.
+ ?z a dbpedia-owl:Film.
+ ?z dbpprop:country dbpedia:Nazi_Germany.
+} LIMIT 100"
+51,"select distinct ?y ?z
+where { ?y a dbpedia-owl:Actor.
+ ?z a dbpedia-owl:Film.
+ ?z dbpprop:country dbpedia:Nazi_Germany.
+} LIMIT 100"
+52,"select distinct ?y ?z
+where { ?y a dbpedia-owl:Actor.
+ ?z a dbpedia-owl:Film.
+ ?z dbpprop:country dbpedia:Nazi_Germany.
+ ?y dbpedia-owl:movie ?z.
+} LIMIT 100"
+53,"PREFIX dbpo: <http://dbpedia.org/ontology/>
+SELECT DISTINCT ?artist ?instrument ?birthplace1
+FROM <http://dbpedia.org>
+WHERE {
+      ?artist a dbpo:MusicalArtist ;
+      dbpo:instrument ?instrument ;
+       dbpo:birthPlace ?birthplace1.
+FILTER  REGEX ( ?instrument, ""guitar"", ""i"" ) 
+ 
+  }
+"
+54,"PREFIX dbpo: <http://dbpedia.org/ontology/>
+SELECT DISTINCT ?artist ?instrument ?birthplace1
+FROM <http://dbpedia.org>
+WHERE {
+      ?artist a dbpo:MusicalArtist ;
+      dbpo:instrument ?instrument ;
+       dbpo:birthPlace ?birthplace1.
+FILTER  REGEX ( ?instrument, ""guitar"", ""i"" ) 
+ FILTER  REGEX ( ?birthplace1, ""Boston"", ""i"" )
+  }
+"
+55,"select distinct ?x
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+} LIMIT 100"
+56,"select distinct ?y
+where { ?y a dbpedia-owl:Actor.
+ ?y dbpprop:country dbpedia:Nazi_Germany.
+} LIMIT 100"
+57,"select distinct ?y ?z
+where { ?y a dbpedia-owl:Actor.
+ ?z a dbpedia-owl:Film.
+ ?z dbpprop:country dbpedia:Nazi_Germany.
+ ?y dbpedia-owl:starring ?z.
+} LIMIT 100"
+58,"select distinct ?y ?z
+where { ?y a dbpedia-owl:Actor.
+ ?z a dbpedia-owl:Film.
+ ?z dbpprop:country dbpedia:Nazi_Germany.
+ ?y dbpedia-owl:starring_of ?z.
+} LIMIT 100"
+59,"select distinct ?y ?z
+where { ?y a dbpedia-owl:Actor.
+ ?z a dbpedia-owl:Film.
+ ?z dbpprop:country dbpedia:Nazi_Germany.
+} LIMIT 100"
+60,"select distinct ?y
+where { ?y a dbpedia-owl:Actor.
+ ?y dbpedia-owl:movie dbpedia-owl:Film.
+} LIMIT 100"
+61,"select distinct ?y
+where { ?y a dbpedia-owl:Actor.
+ ?y dbpedia-owl:movie dbpedia:Film.
+} LIMIT 100"
+62,"select distinct ?y
+where { ?y a dbpedia-owl:Actor.
+ ?y dbpedia-owl:movie dbpedia:Movie.
+} LIMIT 100"
+63,"select distinct ?y
+where { ?y a dbpedia-owl:Actor.
+ ?y dbpedia-owl:movie dbpedia-owl:Movie.
+} LIMIT 100"
+64,"select distinct ?y
+where { ?y a dbpedia-owl:Actor.
+ ?y dbpedia-owl:starring dbpedia-owl:Film.
+} LIMIT 100"
+65,"select distinct ?y
+where { ?y a dbpedia-owl:Actor.
+ ?y dbpedia-owl:starring_of dbpedia-owl:Film.
+} LIMIT 100"
+66,"select distinct ?y
+where { ?y a dbpedia-owl:GermanFilmsActor.
+} LIMIT 100"
+67,"select distinct ?y
+where { ?y a yago:GermanFilmsActor.
+} LIMIT 100"
+68,"select distinct ?y
+where { ?y a yago:GermanFilmActors.
+} LIMIT 100"
+69,"select distinct ?z
+where { ?y a yago:GermanFilmActors.
+ ?z dbpprop:name ?y.
+} LIMIT 100"
+70,"select distinct ?z ?y
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?z dbpprop:name ?x.
+ ?y a dbpedia-owl:Person.
+} LIMIT 100"
+71,"SELECT ?movie ?genre ?actor
+ WHERE {
+  ?movie a dbpedia-owl:Film ;
+    dbpprop:starring ?actor ;
+    dbpprop:genre ?genre.
+  FILTER(contains(?genre, ""Nazi"")
+}
+"
+72,"SELECT ?movie ?genre ?actor
+ WHERE {
+  ?movie a dbpedia-owl:Film ;
+    dbpprop:starring ?actor ;
+    dbpprop:genre ?genre.
+  FILTER(contains(?genre, ""Nazi""))
+}
+"
+73,"SELECT ?movie ?genre ?actor
+ WHERE {
+  ?movie a dbpedia-owl:Film ;
+    dbpprop:starring ?actor ;
+    dbpprop:genre ?genre.
+  FILTER(contains(?genre, ""Nazi""))
+}
+"
+74,"SELECT ?movie ?genre ?actor
+ WHERE {
+  ?movie a dbpedia-owl:Film ;
+    dbpprop:starring ?actor ;
+    dbpprop:genre ?genre.
+  FILTER(contains(""Nazi"",?genre ))
+}
+"
+75,"SELECT ?movie ?genre ?actor
+ WHERE {
+  ?movie a dbpedia-owl:Film ;
+    dbpprop:starring ?actor ;
+    dbpprop:genre ?genre.
+ 
+}
+"
+76,"select distinct ?z
+where { ?y a yago:GermanFilmActors.
+ ?z foaf:givenName ?y.
+} LIMIT 100"
+77,"select distinct ?z
+where { ?y a yago:GermanFilmActors.
+ ?z foaf:givenname ?y.
+} LIMIT 100"
+78,"select distinct ?z
+where { ?y a yago:GermanFilmActors.
+ ?z foaf:given_name ?y.
+} LIMIT 100"
+79,"select distinct ?z
+where { ?y a yago:GermanFilmActors.
+ ?z foaf:givenName ?y.
+} LIMIT 100"
+80,"select distinct ?y
+where { ?y a yago:GermanFilmActors.
+} LIMIT 100"
+81,"select distinct ?y
+where { ?y a yago:GermanFilmActors.
+} LIMIT 1000"
+82,"select distinct ?z
+where { ?y a yago:GermanFilmActors.
+ ?z dbpprop:name ?y.
+} LIMIT 1000"
+83,"select distinct ?z
+where { ?y a yago:GermanFilmActors.
+ ?y rdfs:label ?z.
+} LIMIT 1000"
+84,"select distinct ?z
+where { ?y a yago:GermanFilmActors.
+ ?y rdfs:label dbpprop:name ?z.
+} LIMIT 1000"
+85,"select distinct ?z
+where { ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+} LIMIT 100"
+86,"select distinct ?z
+where { ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+} LIMIT 1000"
+87,"SELECT ?movie ?author ?genre ?actor ?cate
+WHERE { 
+  ?movie a dbpedia-owl:Film ;
+    dbpprop:author ?author ;
+    dbpprop:starring ?actor ;
+     dbpprop:genre ?genre ;
+      dbpprop:category ?cate.
+  
+}"
+88,"SELECT ?movie ?author ?genre ?actor ?cate
+FROM <http://dbpedia.org>
+WHERE { 
+  ?movie a dbpedia-owl:Film ;
+    dbpprop:author ?author ;
+    dbpprop:starring ?actor ;
+     dbpprop:genre ?genre ;
+      dbpprop:category ?cate.
+  
+}"
+89,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX db: <http://dbpedia.org/ontology/> 
+PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?movie ?author ?genre ?actor ?cate
+WHERE { 
+  ?movie a dbpedia-owl:Film ;
+    dbpprop:author ?author ;
+    dbpprop:starring ?actor ;
+     dbpprop:genre ?genre ;
+      dbpprop:category ?cate.
+  
+}"
+90,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX db: <http://dbpedia.org/ontology/> 
+PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?movie ?author ?genre ?actor ?cate
+FROM <http://dbpedia.org>
+WHERE { 
+  ?movie a dbpedia-owl:Film ;
+    dbpprop:author ?author ;
+    dbpprop:starring ?actor ;
+     dbpprop:genre ?genre ;
+      dbpprop:category ?cate.
+  
+}"
+91,"select distinct ?x ?z
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+} LIMIT 1000"
+92,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX db: <http://dbpedia.org/ontology/> 
+PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?movie ?author ?genre ?actor ?cate
+FROM <http://dbpedia.org>
+WHERE { 
+  ?movie a dbpedia-owl:Film ;
+    dbpprop:author ?author ;
+    dbpprop:starring ?actor ;
+     dbpprop:genre ?genre .
+     
+  
+}"
+93,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX db: <http://dbpedia.org/ontology/> 
+PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?movie ?author ?genre ?actor 
+FROM <http://dbpedia.org>
+WHERE { 
+  ?movie a dbpedia-owl:Film ;
+    dbpprop:author ?author ;
+    dbpprop:starring ?actor ;
+     dbpprop:genre ?genre .
+     
+  
+}"
+94,"select distinct ?x ?a
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?a dbpedia-owl:abstract ?x.
+} LIMIT 1000"
+95,"select distinct ?x ?a
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+} LIMIT 1000"
+96,"select distinct ?x ?a
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ filter regex(?a,?z,""i"").
+} LIMIT 1000"
+97,"select distinct ?x ?a
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ filter regex(?a,""Leni"",""i"").
+} LIMIT 1000"
+98,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX db: <http://dbpedia.org/ontology/> 
+PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?movie ?author ?genre ?actor ?cate 
+FROM <http://dbpedia.org>
+WHERE { 
+  ?movie a dbpedia-owl:Film ;
+    dbpprop:author ?author ;
+    dbpprop:starring ?actor ;
+     dbpprop:genre ?genre;
+        dbpprop:Category ?cate.
+  
+}"
+99,"select distinct ?x ?a
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ ?x foaf:name ?b.
+ filter regex(?a,""Leni"" "" "" ?b,""i"").
+} LIMIT 1000"
+100,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX db: <http://dbpedia.org/ontology/> 
+PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?movie ?author ?genre ?actor ?cate 
+FROM <http://dbpedia.org>
+WHERE { 
+  ?movie a dbpedia-owl:Film ;
+    dbpprop:author ?author ;
+    dbpprop:starring ?actor ;
+     dbpprop:genre ?genre;
+  
+}"
+101,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX db: <http://dbpedia.org/ontology/> 
+PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?movie ?author ?genre ?actor ?cate 
+FROM <http://dbpedia.org>
+WHERE { 
+  ?movie a dbpedia-owl:Film ;
+    dbpprop:author ?author ;
+    dbpprop:starring ?actor ;
+     dbpprop:genre ?genre.
+  
+}"
+102,"select distinct ?x ?a
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ ?x foaf:name ?b.
+ filter regex(?a,concat(?z,"" "",?b,""i"")).
+} LIMIT 1000"
+103,"select distinct ?x ?a
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ ?x foaf:name ?b.
+ filter regex(?a,concat(?z,"" "",?b),""i"").
+} LIMIT 1000"
+104,"select distinct ?x ?a
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ ?x foaf:name ?b.
+ filter regex(?a,""Leni Stern"",""i"").
+} LIMIT 1000"
+105,"select distinct ?x ?a
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ ?x foaf:name ?b.
+ filter regex(?a,concat(?z,"" "",?b) as ?c,""i"").
+} LIMIT 1000"
+106,"select distinct ?x ?b
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ ?x foaf:name ?b.
+} LIMIT 1000"
+107,"select distinct ?x ?b
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ ?x foaf:givenName ?b.
+} LIMIT 1000"
+108,"select distinct ?x ?b
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ ?x foaf:lastName ?b.
+} LIMIT 1000"
+109,"select distinct ?x ?b
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ ?x foaf:birthName ?b.
+} LIMIT 1000"
+110,"select distinct ?x ?b
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ ?x dbpedia-owl:birthName ?b.
+} LIMIT 1000"
+111,"PREFIX db: <http://dbpedia.org/ontology/>
+PREFIX prop: <http://dbpedia.org/property/>
+
+SELECT DISTINCT ?artist ?instrument ?birthplace1
+FROM <http://dbpedia.org>
+WHERE {
+      ?artist a dbpo:MusicalArtist ;
+      db:instrument ?instrument ;
+       db:birthPlace ?birthplace1.
+
+SELECT ?movie ?author ?genre ?actor
+FROM <http://dbpedia.org>
+WHERE { 
+  ?movie a dbpedia-owl:Film ;
+    dbpprop:author ?author ;
+    dbpprop:starring ?actor ;
+     dbpprop:genre ?genre.
+  
+}
+
+	FILTER REGEX (?instrument, ""guitar"", ""i"" )  
+      FILTER REGEX ( ?birthplace1, ""Boston"", ""i"" ) 
+        FILTER REGEX ( ?actor, ?artist, ""i"" ) 
+	
+ 
+  }
+"
+112,"PREFIX db: <http://dbpedia.org/ontology/>
+PREFIX prop: <http://dbpedia.org/property/>
+
+SELECT DISTINCT ?artist ?instrument ?birthplace1
+FROM <http://dbpedia.org>
+WHERE {
+      ?artist a db:MusicalArtist ;
+      db:instrument ?instrument ;
+       db:birthPlace ?birthplace1.
+
+SELECT ?movie ?author ?genre ?actor
+FROM <http://dbpedia.org>
+WHERE { 
+  ?movie a dbpedia-owl:Film ;
+    dbpprop:author ?author ;
+    dbpprop:starring ?actor ;
+     dbpprop:genre ?genre.
+  
+}
+
+	FILTER REGEX (?instrument, ""guitar"", ""i"" )  
+      FILTER REGEX ( ?birthplace1, ""Boston"", ""i"" ) 
+        FILTER REGEX ( ?actor, ?artist, ""i"" ) 
+	
+ 
+  }
+"
+113,"select distinct ?x ?b
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ ?x foaf:surname ?b.
+} LIMIT 1000"
+114,"PREFIX db: <http://dbpedia.org/ontology/>
+PREFIX prop: <http://dbpedia.org/property/>
+
+SELECT DISTINCT ?artist ?instrument ?birthplace1 ?movie ?author ?genre ?actor
+FROM <http://dbpedia.org>
+WHERE {
+      ?artist a db:MusicalArtist ;
+      db:instrument ?instrument ;
+       db:birthPlace ?birthplace1;
+  ?movie a dbpedia-owl:Film ;
+    dbpprop:author ?author ;
+    dbpprop:starring ?actor ;
+     dbpprop:genre ?genre.
+    FILTER REGEX (?instrument, ""guitar"", ""i"" )  
+      FILTER REGEX ( ?birthplace1, ""Boston"", ""i"" ) 
+     FILTER REGEX ( ?actor, ?artist, ""i"" ) 
+}
+"
+115,"select distinct ?x ?b
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ ?x foaf:surname ?b.
+ filter regex(?a,concat(?z,"" "",?b) as ?c,""i"").
+} LIMIT 1000"
+116,"select distinct ?x ?a
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ ?x foaf:surname ?b.
+ filter regex(?a,concat(?z,"" "",?b) as ?c,""i"").
+} LIMIT 1000"
+117,"select distinct ?x ?a
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ ?x foaf:surname ?b.
+ filter regex(?a,concat(?z,"" "",?b) as ?c,""i"").
+ ?y dbpedia-owl:abstract ?abs
+ filter regex(?abs,""nazi"",""i"").
+} LIMIT 1000"
+118,"select distinct ?x ?a
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ ?x foaf:surname ?b.
+ filter regex(?a,concat(?z,"" "",?b) as ?c,""i"").
+ ?y dbpedia-owl:abstract ?abs
+ filter regex(?abs,""nazi"",""i"").
+ filter (langMatches(lang(?a), ""en"") && langMatches(lang(?abs), ""en"")).
+} LIMIT 1000"
+119,"select distinct ?x ?a
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ ?x foaf:surname ?b.
+ filter regex(?a,concat(?z,"" "",?b) as ?c,""i"").
+ ?y dbpedia-owl:abstract ?abs
+ filter regex(?abs,""nazi"",""i"").
+ filter (langMatches(lang(?a), ""en"")).
+} LIMIT 1000"
+120,"select distinct ?x ?a
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ filter (langMatches(lang(?a), ""en"")).
+ ?x foaf:surname ?b.
+ filter regex(?a,concat(?z,"" "",?b) as ?c,""i"").
+ ?y dbpedia-owl:abstract ?abs
+ filter regex(?abs,""nazi"",""i"").
+} LIMIT 1000"
+121,"select distinct ?x ?a
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ ?x foaf:surname ?b.
+ filter regex(?a,concat(?z,"" "",?b) as ?c,""i"").
+ ?y dbpedia-owl:abstract ?abs
+ filter regex(?abs,""nazi"",""i"").
+} LIMIT 1000"
+122,"select distinct ?x ?a
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ ?x foaf:surname ?b.
+ filter regex(?a,concat(?z,"" "",?b) as ?c,""i"").
+ ?y dbpedia-owl:abstract ?abs
+ filter regex(?abs,""nazi"",""i"").
+ filter (langMatches(lang(?a), ""fr"")).
+} LIMIT 1000"
+123,"select distinct ?x ?y
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?z.
+ ?x dbpedia-owl:abstract ?a.
+ ?x foaf:surname ?b.
+ filter regex(?a,concat(?z,"" "",?b) as ?c,""i"").
+ ?y dbpedia-owl:abstract ?abs
+ filter regex(?abs,""nazi"",""i"").
+ filter (langMatches(lang(?a), ""fr"")).
+} LIMIT 1000"
+124,"select distinct ?x ?y
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?ygn.
+ ?x dbpedia-owl:abstract ?a.
+ ?x foaf:surname ?b.
+ filter regex(?a,concat(?ygn,"" "",?b) as ?c,""i"").
+ ?y dbpedia-owl:abstract ?abs
+ filter regex(?abs,""nazi"",""i"").
+ filter (langMatches(lang(?a), ""fr"")).
+}"
+125,"select distinct ?x ?y
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?ygn.
+ ?x dbpedia-owl:abstract ?xabs.
+ ?x foaf:surname ?b.
+ filter regex(?xabs,concat(?ygn,"" "",?b) as ?c,""i"").
+ ?y dbpedia-owl:abstract ?yabs
+ filter regex(?yabs,""nazi"",""i"").
+ filter (langMatches(lang(?xabs), ""fr"")).
+}"
+126,"select distinct ?x ?y
+where { ?x a dbpedia-owl:Person.
+ ?x dbpedia-owl:birthPlace dbpedia:Boston.
+ ?x a dbpedia-owl:MusicalArtist.
+ ?x dbpedia-owl:instrument dbpedia:Guitar. 
+ ?y a dbpedia-owl:Person.
+ ?y a yago:GermanFilmActors.
+ ?y foaf:givenName ?ygn.
+ ?x dbpedia-owl:abstract ?xabs.
+ ?x foaf:surname ?xsurname.
+ filter regex(?xabs,concat(?ygn,"" "",?xsurname) as ?ccat,""i"").
+ ?y dbpedia-owl:abstract ?yabs
+ filter regex(?yabs,""nazi"",""i"").
+ filter (langMatches(lang(?xabs), ""fr"")).
+}"
+127,"select distinct ?x
+where { ?x a dbpedia-owl:Lake.
+} LIMIT 100"
+128,"select distinct ?x ?m
+where { ?x a dbpedia-owl:Lake.
+ ?m a dbpedia-owl:Mammal.
+} LIMIT 100"
+129,"select distinct ?x ?m
+where { ?x a dbpedia-owl:Lake.
+ ?m a dbpedia-owl:MarineMammal.
+} LIMIT 100"
+130,"select distinct ?x ?m
+where { ?x a dbpedia-owl:Lake.
+ ?m a dbpedia-owl:MarineMammals.
+} LIMIT 100"
+131,"select distinct ?x ?m
+where { ?x a dbpedia-owl:Lake.
+ ?m a yago:MarineMammals.
+} LIMIT 100"
+132,"select distinct ?x ?m
+where { ?x a dbpedia-owl:Lake.
+ ?m a yago:MarineMammals.
+ filter regex(?m,""Ness"",""i"").
+} LIMIT 100"
+133,"select distinct ?x ?m
+where { ?x a dbpedia-owl:Lake.
+ ?m a yago:MarineMammals.
+} LIMIT 100"
+134,"select distinct ?m
+where { ?x a dbpedia-owl:Lake.
+ ?m a yago:MarineMammals.
+} LIMIT 100"
+135,"select distinct ?m
+where { ?x a dbpedia-owl:Lake.
+ ?m a yago:Marine_mammal.
+} LIMIT 100"
+136,"select distinct ?m
+where { ?x a dbpedia-owl:Lake.
+ ?m a dbpedia-owl:Marine_mammal.
+} LIMIT 100"
+137,"select distinct ?m
+where { ?x a dbpedia-owl:Lake.
+ ?m a dbpedia-owl:Marine_mammals.
+} LIMIT 100"
+138,"select distinct ?m
+where { ?x a dbpedia-owl:Lake.
+ ?m a yago:MarineMammals.
+} LIMIT 100"
+139,"select distinct ?m
+where { ?m a yago:MarineMammals.
+} LIMIT 100"
+140,"select distinct ?m
+where { ?x a dbpedia:Lake.
+ ?m a yago:MarineMammals.
+} LIMIT 100"
+141,"select distinct ?m
+where { ?m a dbpedia-owl:Mammals.
+} LIMIT 100"
+142,"select distinct ?m
+where { ?m a yago:Mammals.
+} LIMIT 100"
+143,"select distinct ?m
+where { ?m a yago:Mammals.
+} LIMIT 1000"
+144,"select distinct ?m
+where { ?m a dbpedia-owl:Animals.
+} LIMIT 1000"
+145,"select distinct ?m
+where { ?m a dbpedia-owl:Animal.
+} LIMIT 1000"
+146,"select distinct ?l
+where { ?m a dbpedia-owl:Animal.
+ ?m rdfs:label ?l.
+} LIMIT 1000"
+147,"select distinct ?l
+where { ?m a dbpedia-owl:Animal.
+ ?m rdfs:label ?l.
+ filter regex(?l, ""dauphin"", ""i"").
+} LIMIT 1000"
+148,"select distinct ?l
+where { ?m a dbpedia-owl:Animal.
+ ?m rdfs:label ?l.
+ filter regex(?l, ""dauphin"", ""i"").
+} LIMIT 1000"
+149,"select distinct ?m
+where { ?m a dbpedia-owl:Animal.
+ ?m rdfs:label ?l.
+ filter regex(?l, ""dauphin"", ""i"").
+} LIMIT 1000"
+150,"select distinct ?m
+where { ?x a dbpedia-owl:Lake.
+ ?m a yago:MarineMammals.
+} LIMIT 100
+"
+151,"select distinct ?x
+where { ?x a dbpedia-owl:Lake.
+} LIMIT 100
+"
+152,"PREFIX dbpo: <http://dbpedia.org/ontology/>
+SELECT DISTINCT ?artist ?instrument ?birthplace1
+FROM <http://dbpedia.org>
+WHERE {
+      ?artist a dbpo:MusicalArtist ;
+      dbpo:instrument ?instrument ;
+      dbpedia-owl:abstract ?abstract ;
+       dbpo:birthPlace ?birthplace1.
+	FILTER REGEX (?instrument, ""guitar"", ""i"" )  
+      FILTER REGEX ( ?birthplace1, ""Boston"", ""i"" ) 
+      FILTER REGEX ( ?abstract, ""Nazi"", ""i"" ) 
+ 
+  }"
+153,"select distinct ?x
+where { ?m a dbpedia-owl:Animal.
+ ?m dbpprop:habitat ?x.
+} LIMIT 1000"
+154,"
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX db: <http://dbpedia.org/ontology/> 
+PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?movie ?author ?genre ?actor
+FROM <http://dbpedia.org>
+WHERE { 
+  ?movie a dbpedia-owl:Film ;
+    dbpprop:author ?author ;
+     dbpedia-owl:abstract ?abstract ;
+    dbpprop:starring ?actor ;
+     dbpprop:genre ?genre.
+ 
+ FILTER REGEX ( ?abstract, ""Nazi"", ""i"" )
+}
+"
+155,"select distinct ?m ?cat ?l
+where { ?l a dbpedia-owl:Lake.
+ ?l dcterms:subject ?cat.
+ ?m dcterms:subject ?cat.
+ ?m a dbpedia-owl:Mammal.
+} LIMIT 1000"
+156,"select distinct ?m ?cat ?l
+where { ?l a dbpedia-owl:Lake.
+ ?l dcterms:subject ?cat.
+ ?m dcterms:subject ?cat.
+ ?m a dbpedia-owl:Mammal.
+} LIMIT 1000"
+157,"select distinct ?m ?category ?l
+where { ?l a dbpedia-owl:Lake.
+ ?l dcterms:subject ?category.
+ ?m dcterms:subject ?category.
+ ?m a dbpedia-owl:Mammal.
+ ?m dbpedia-owl:abstract ?mabs.
+filter (?mabs, ""earless"", ""i"").
+} LIMIT 1000"
+158,"
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX db: <http://dbpedia.org/ontology/> 
+PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?movie ?author ?genre ?actor
+FROM <http://dbpedia.org>
+WHERE { 
+  ?movie a dbpedia-owl:Film ;
+    dbpprop:author ?author ;
+     dbpedia-owl:abstract ?abstract ;
+    dbpprop:starring ?actor ;
+     dbpprop:genre ?genre.
+ 
+ FILTER REGEX ( ?abstract, ""Nazi"", ""i"" )
+}
+"
+159,"select distinct ?m ?category ?l
+where { ?l a dbpedia-owl:Lake.
+ ?l dcterms:subject ?category.
+ ?m dcterms:subject ?category.
+ ?m a dbpedia-owl:Mammal.
+ ?m dbpedia-owl:abstract ?mabs.
+filter regex(?mabs, ""earless"", ""i"").
+} LIMIT 1000"
+160,"select distinct ?m ?category ?l
+where { ?l a dbpedia-owl:Lake.
+ ?l dcterms:subject ?category.
+ ?m dcterms:subject ?category.
+ ?m a dbpedia-owl:Mammal.
+ ?m dbpedia-owl:abstract ?mabs.
+filter regex(?mabs, ""earless"", ""i"").
+} LIMIT 1000"
+161,"select distinct ?m ?category ?l
+where { ?l a dbpedia-owl:Lake.
+ ?l dcterms:subject ?category.
+ ?m dcterms:subject ?category.
+ ?m a dbpedia-owl:Mammal.
+ ?m dbpedia-owl:abstract ?mabs.
+filter regex(?mabs, ""earless"", ""i"").
+} LIMIT 1000"
+162,"select distinct ?m ?category ?l
+where { ?l a dbpedia-owl:Lake.
+ ?l dcterms:subject ?category.
+ ?m dcterms:subject ?category.
+ ?m a dbpedia-owl:Mammal.
+ ?m dbpedia-owl:abstract ?mabs.
+filter regex(?mabs, ""earless"", ""i"").
+} LIMIT 100"
+163,"select distinct ?m ?category ?l
+where { ?l a dbpedia-owl:Lake.
+ ?l dcterms:subject ?category.
+ ?m dcterms:subject ?category.
+ ?m a dbpedia-owl:Mammal.
+ ?m dbpedia-owl:abstract ?mabs.
+filter regex(?mabs, ""earless"", ""i"").
+} LIMIT 1000"
+164,"select distinct ?m ?category ?l
+where { ?l a dbpedia-owl:Lake.
+ ?l dcterms:subject ?category.
+ ?m dcterms:subject ?category.
+ ?m a dbpedia-owl:Mammal.
+ ?m dbpedia-owl:abstract ?mabs.
+filter regex(?mabs, ""earless"", ""i"").
+} LIMIT 100"
+165,"
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX db: <http://dbpedia.org/ontology/> 
+PREFIX prop: <http://dbpedia.org/property/>
+SELECT ?movie ?author ?genre ?actor
+FROM <http://dbpedia.org>
+WHERE { 
+  ?movie a dbpedia-owl:Film ;
+    dbpprop:author ?author ;
+     dbpedia-owl:abstract ?abstract .
+    dbpprop:starring ?actor ;
+     dbpprop:genre ?genre.
+ 
+ FILTER REGEX ( ?abstract, ""Nazi"", ""i"" )
+}
+"
+166,"select distinct ?m ?l
+where { ?l a dbpedia-owl:Lake.
+ ?l dcterms:subject ?category.
+ ?m dcterms:subject ?category.
+ ?m a dbpedia-owl:Mammal.
+ ?m dbpedia-owl:abstract ?mabs.
+filter regex(?mabs, ""earless"", ""i"").
+}"
+167,"
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX db: <http://dbpedia.org/ontology/> 
+PREFIX prop: <http://dbpedia.org/property/>
+SELECT  DISTINCT ?actor
+FROM <http://dbpedia.org>
+WHERE { 
+  ?movie a dbpedia-owl:Film ;
+    dbpprop:author ?author ;
+     dbpedia-owl:abstract ?abstract ;
+    dbpprop:starring ?actor ;
+     dbpprop:genre ?genre.
+ 
+ FILTER REGEX ( ?abstract, ""Nazi"", ""i"" )
+}
+"

@@ -1,0 +1,1063 @@
+,query
+0,"select distinct ?member where {
+  ?member
+  <http://purl.org/dc/terms/subject> ?cat .
+  ?cat skos:broader* <http://dbpedia.org/resource/Category:Members_of_the_United_States_House_of_Representatives>
+}"
+1,"select distinct ?member ?cat where {
+  ?member
+  <http://purl.org/dc/terms/subject> ?cat .
+  ?cat skos:broader* <http://dbpedia.org/resource/Category:Members_of_the_United_States_House_of_Representatives>
+}"
+2,"PREFIX dbpcat: <http://dbpedia.org/resource/Category:>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?commonBroader
+WHERE {
+  ?concept1 skos:broader ?commonBroader OPTION (transitive, t_max(5), t_in(?concept1), t_out(?commonBroader), t_step(""step_no"") as ?dist1) .
+  FILTER (?concept1 = dbpcat:RDF_data_access)
+  ?concept2 skos:broader ?commonBroader OPTION (transitive, t_max(5), t_in(?concept2), t_out(?commonBroader), t_step(""step_no"") as ?dist2) .
+  FILTER (?concept2 = dbpcat:Semantic_wiki_software)
+}
+ORDER BY ASC(?dist1   ?dist2)
+LIMIT 1"
+3,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+
+SELECT ?a ?b
+WHERE {  
+  ?a skos:broaderTransitive  ?b
+}
+"
+4,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?res ?wikipage ?extpage
+WHERE {
+  {
+  ?res dcterms:subject category:Sports ;
+       foaf:isPrimaryTopicOf ?wikipage ;
+       dbpedia-owl:wikiPageExternalLink ?extpage }
+}
+LIMIT 50"
+5,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+
+SELECT ?res ?wikipage ?extpage
+WHERE {
+  {
+  ?res dcterms:subject category:Sports ;
+       foaf:isPrimaryTopicOf ?wikipage ;
+       dbpedia-owl:wikiPageExternalLink ?extpage }
+  UNION
+  {?res dcterms:subject ?cat;
+       foaf:isPrimaryTopicOf ?wikipage ;
+       dbpedia-owl:wikiPageExternalLink ?extpage .
+  ?cat skos:broader category:Sports }
+}
+LIMIT 50"
+6,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+
+SELECT ?res ?wikipage ?extpage
+WHERE {
+  ?cat skos:broader category:Sports 
+}
+LIMIT 50"
+7,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+
+SELECT ?cat
+WHERE {
+  ?cat skos:broader category:Sports 
+}
+LIMIT 50"
+8,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+
+SELECT ?cat
+WHERE {
+  ?cat skos:broaderTransitive category:Sports 
+}
+LIMIT 50"
+9,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+
+SELECT ?cat
+WHERE {
+  ?cat skos:narrowerTransitive category:Sports 
+}
+LIMIT 50"
+10,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+
+SELECT ?cat
+WHERE {
+  ?cat skos:broader category:Sports 
+}
+LIMIT 50"
+11,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+
+SELECT ?cat
+WHERE {
+  { ?cat skos:broader category:Sports  }
+  UNION 
+  { ?cat skos:broader ?cat2 ;
+    ?cat2 skos:broader category:Sports  }
+}
+LIMIT 50"
+12,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+
+SELECT ?cat
+WHERE {
+  { ?cat skos:broader category:Sports  }
+  UNION 
+  { ?cat skos:broader ?cat2 .
+    ?cat2 skos:broader category:Sports  }
+}
+LIMIT 50"
+13,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+
+SELECT ?cat
+WHERE {
+  { ?cat skos:broader category:Sports  }
+  UNION 
+  { ?cat skos:broader ?cat2 .
+    ?cat2 skos:broader ?cat3 . 
+    ?cat3 skos:broader category:Sports }
+}
+LIMIT 50"
+14,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+
+SELECT ?cat
+WHERE {
+  { ?cat skos:broader category:Sports  }
+  UNION 
+  { ?cat skos:broader ?cat2 .
+    ?cat2 skos:broader ?cat3 . 
+    ?cat3 skos:broader category:Sports }
+}
+"
+15,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+
+SELECT ?cat
+WHERE {
+  { ?cat skos:broaderTransitive category:Sports  }
+  
+}
+"
+16,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+
+SELECT ?cat
+WHERE {
+  { ?cat skos:related category:Sports  }
+}
+"
+17,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+select ?categorie ?broader
+where {
+?categorie skos:broader ?broader 
+OPTION(TRANSITIVE, T_DISTINCT, t_in(?categorie), t_out(?broader), t_max(2), t_step('path_id') as ?path, t_step(?categorie) as ?route, t_step('step_no') AS ?jump, T_DIRECTION 2 )
+}"
+18,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+select ?categorie ?broader
+where {
+?categorie skos:broader ?broader 
+}
+OPTION(TRANSITIVE, T_DISTINCT, t_in(?categorie), t_out(?broader), t_max(2), t_step('path_id') as ?path, t_step(?categorie) as ?route, t_step('step_no') AS ?jump, "
+19,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?cat
+WHERE {
+ ?cat skos:related category:Sports
+}"
+20,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?cat
+WHERE {
+ ?cat (skos:broader)|(skos:broader/skos:broader)|(skos:broader/skos:broader/skos:broader) category:Sports
+}"
+21,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT count(?cat)
+WHERE {
+ ?cat (skos:broader)|(skos:broader/skos:broader)|(skos:broader/skos:broader/skos:broader) category:Sports
+}"
+22,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+
+SELECT count(?cat)
+WHERE {
+  { ?cat skos:related category:Sports  }
+  UNION 
+  { ?cat skos:broader ?cat2 .
+    ?cat2 skos:broader category:Sports . 
+  }
+  UNION 
+  { ?cat skos:broader ?cat2 .
+    ?cat2 skos:broader ?cat3 . 
+    ?cat3 skos:broader category:Sports }
+}
+"
+23,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+SELECT ?cat
+WHERE {
+ ?cat (skos:broader)|(skos:broader/skos:broader)|(skos:broader/skos:broader/skos:broader) category:Sports
+}"
+24,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+
+
+SELECT ?cat ?cat2 ?cat3
+WHERE {
+  { ?cat skos:related category:Sports  }
+  UNION 
+  { ?cat skos:broader ?cat2 .
+    ?cat2 skos:broader category:Sports . 
+  }
+  UNION 
+  { ?cat skos:broader ?cat2 .
+    ?cat2 skos:broader ?cat3 . 
+    ?cat3 skos:broader category:Sports }
+}
+"
+25,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+?cat (skos:broader)|(skos:broader/skos:broader) category:Transport
+}"
+26,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+?cat (skos:broader)|(skos:broader/skos:broader) category:Cultural_studies
+}"
+27,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+?cat (skos:broader)|(skos:broader/skos:broader) category::Linguistics
+}"
+28,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+?cat (skos:broader)|(skos:broader/skos:broader) category:Linguistics
+}"
+29,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+category:Amateur_radio (skos:broader/skos:broader/skos:broader) ?cat
+}"
+30,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+?cat (skos:broader)|(skos:broader/skos:broader) category:Recreation
+}"
+31,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+?cat (skos:broader)|(skos:broader/skos:broader) category:Broadcasting
+}"
+32,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+category: Morse_code   (skos:broader/skos:broader/skos:broader) ?cat
+}"
+33,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+category:Morse_code   (skos:broader/skos:broader/skos:broader) ?cat
+}"
+34,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+category:Rescue   (skos:broader/skos:broader/skos:broader) ?cat
+}"
+35,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+?cat (skos:broader)|(skos:broader/skos:broader) category:Public_safety
+}"
+36,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+category:Government-related_organizations (skos:broader/skos:broader/skos:broader) ?cat
+}"
+37,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+?cat (skos:broader)|(skos:broader/skos:broader) category:Government-related_organizations
+}"
+38,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+?cat (skos:broader)|(skos:broader/skos:broader) category:Childrens_television_networks
+}"
+39,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+?cat (skos:broader)|(skos:broader/skos:broader) category:Childrens_television_networks
+}"
+40,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+?cat (skos:broader)|(skos:broader/skos:broader) category:Children's_television_networks
+}"
+41,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+?cat (skos:broader)|(skos:broader/skos:broader) category:Children\'s_television_networks
+}"
+42,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+?cat (skos:broader)|(skos:broader/skos:broader) category:Children''s_television_networks
+}"
+43,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+?cat (skos:broader)|(skos:broader/skos:broader) category:Children\'s_television_networks
+}"
+44,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+?cat (skos:broader)|(skos:broader/skos:broader) `iri(category:Children\'s_television_networks)
+}"
+45,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+?cat (skos:broader)|(skos:broader/skos:broader) `iri(category:Children\'s_television_networks)`
+}"
+46,"PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?cat
+WHERE 
+{  
+?cat (skos:broader)|(skos:broader/skos:broader) `iri('category:Children\'s_television_networks')`
+}"
+47,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+						SELECT ?cat
+						WHERE { category:Bisexual_men (skos:broader)|(skos:broader/skos:broader) ?cat }"
+48,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Bisexual_men (skos:broader) ?cat }"
+49,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Bisexual_men (skos:broader)|(skos:broader/skos:broader) ?cat }"
+50,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:American_relationships_and_sexuality_writers (skos:broader)|(skos:broader/skos:broader) ?cat }"
+51,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Bisexual_feminists (skos:broader)|(skos:broader/skos:broader) ?cat }"
+52,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Bisexual_men (skos:broader)|(skos:broader/skos:broader) ?cat }"
+53,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Homosexuality_and_religion (skos:broader)|(skos:broader/skos:broader) ?cat }"
+54,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Intersexuality (skos:broader)|(skos:broader/skos:broader) ?cat }"
+55,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Intersexuality (skos:broader) ?cat }"
+56,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Single-sex_worlds (skos:broader) ?cat }"
+57,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Environmental_treaties (skos:broader) ?cat }"
+58,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Environmental_treaties (skos:broader) ?cat }"
+59,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Environmental_law (skos:broader) ?cat }"
+60,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Environmental_treaties (skos:broader)|(skos:broader/skos:broader) ?cat }"
+61,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Environmental_treaties  }"
+62,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { ?cat (skos:broader) category:Environmental_treaties }"
+63,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Waste_treaties (skos:broader) ?cat }"
+64,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Waste_treaties(skos:broader)|(skos:broader/skos:broader) ?cat }"
+65,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Sport_in_Seoul (skos:broader) ?cat }"
+66,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Sport_in_Seoul (skos:broader)|(skos:broader/skos:broader) ?cat }"
+67,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Sport_in_Seoul (skos:broader) ?cat }"
+68,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Sport_by_city (skos:broader) ?cat }"
+69,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Dalai_Lamas (skos:broader) ?cat }"
+70,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Palladian_asteroids (skos:broader) ?cat }"
+71,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Palladian_asteroids (skos:broader)|(skos:broader/skos:broader) ?cat }"
+72,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { ?cat (skos:broader) category:SNOBOL_programming_language_family }"
+73,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { ?cat (skos:broader) category:SNOBOL_programming_language_family }"
+74,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:SNOBOL_programming_language_family (skos:broader)|(skos:broader/skos:broader) ?cat }"
+75,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { ?cat (skos:narrower) category:SNOBOL_programming_language_family }"
+76,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { ?cat (skos:narrower) ?cat2 }"
+77,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { ?cat (skos:relatedMatch) ?cat2 }"
+78,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { ?cat (skos:relatedMatch) category:Programming_languages }"
+79,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Programming_languages (skos:relatedMatch) ?cat }"
+80,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:SNOBOL_programming_language_family (skos:broader)|(skos:broader/skos:broader) ?cat }"
+81,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:SNOBOL_programming_language_family (skos:relatedMatch)|(skos:relatedMatch/skos:relatedMatch) ?cat }"
+82,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:SNOBOL_programming_language_family (skos:broader) ?cat }"
+83,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Programming_language_families (skos:broader) ?cat }"
+84,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Assassination_attempts (skos:broader) ?cat }"
+85,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { ?cat (skos:broader) category:Assassination_attempts }"
+86,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { ?cat (skos:broader) category:Gunpowder_Plot }"
+87,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Gunpowder_Plot (skos:broader) ?cat }"
+88,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { ?cat (skos:broader) category:2000_Summer_Olympics }"
+89,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:2000_Summer_Olympics (skos:broader) ?cat }"
+90,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { 
+category:2000_Summer_Olympics (skos:broader) ?cat 
+FILTER regex(?cat, ""_olympic_games"", ""i"")
+}"
+91,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:2002_in_tennis (skos:broader) ?cat }"
+92,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Networking_companies (skos:broader) ?cat }"
+93,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Networking_companies (skos:broader)|(skos:broader/skos:broader) ?cat }"
+94,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:American_female_pornographic_film_actors (skos:broader) ?cat }"
+95,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Pornographic_actor_stubs (skos:broader)|(skos:broader/skos:broader) ?cat }"
+96,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { ?cat (skos:broader) category:Pornographic_actor_stubs}"
+97,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { ?cat (skos:broader) category:American_female_pornographic_film_actors}"
+98,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { ?cat (skos:broader)|(skos:broader/skos:broader) category:American_female_pornographic_film_actors}"
+99,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { ?cat (skos:broader) category:Pornographic_actor_stubs}"
+100,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:American_female_pornographic_film_actors (skos:broader)|(skos:broader/skos:broader) ?cat }"
+101,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { ?cat (skos:broader)|(skos:broader/skos:broader) category:Female_pornographic_film_actors_by_nationality}"
+102,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { ?cat (skos:broader)|(skos:broader/skos:broader) category:Towns_in_Illinois}"
+103,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Towns_in_Illinois (skos:broader)|(skos:broader/skos:broader) ?cat }"
+104,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Sex_worker_activists (skos:broader)|(skos:broader/skos:broader) ?cat }"
+105,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:LGBT_prostitutes (skos:broader)|(skos:broader/skos:broader) ?cat }"
+106,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:American_pornographers (skos:broader)|(skos:broader/skos:broader) ?cat }"
+107,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Italian_female_pornographic_film_actors (skos:broader)|(skos:broader/skos:broader) ?cat }"
+108,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Actors_in_gay_pornographic_films (skos:broader)|(skos:broader/skos:broader) ?cat }"
+109,"PREFIX dcterms: <http://purl.org/dc/terms/>
+						PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+						PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+						PREFIX category: <http://dbpedia.org/resource/Category:>
+						PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+						PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+						SELECT ?cat
+						WHERE { category:Playboy_photographers (skos:broader)|(skos:broader/skos:broader) ?cat }"

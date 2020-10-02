@@ -1,0 +1,497 @@
+,query
+0,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rif: <http://www.w3.org/2007/rif#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX dc: <http://purl.org/dc/terms/>
+
+                SELECT ?name ?long ?lat
+                WHERE {
+                  ?c a          yago:CapitalsInEurope ;
+                     rdfs:label ?name ;
+                     geo:long   ?long ;
+                     geo:lat    ?lat .
+                     FILTER( lang(?name)=""en"" )
+                }
+             "
+1,"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rif: <http://www.w3.org/2007/rif#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX dc: <http://purl.org/dc/terms/>
+
+                SELECT ?name ?long ?lat
+                WHERE {
+                  ?c a          yago:CapitalsInEurope ;
+                     rdfs:label ?name ;
+                     geo:long   ?long ;
+                     geo:lat    ?lat .
+                     FILTER( lang(?name)=""en"" )
+                }
+               "
+2,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?film
+WHERE { ?film <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:French_films> }"
+3,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/resource/Sarah's_Key> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/resource/Sarah's_Key> }
+}"
+4,"SELECT ?property ?hasValue ?isValueOf
+WHERE {
+  { <http://dbpedia.org/class/yago/French-languageFilms> ?property ?hasValue }
+  UNION
+  { ?isValueOf ?property <http://dbpedia.org/class/yago/French-languageFilms> }
+}"
+5,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbp: <http://dbpedia.org/ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?label ?sub ?date ?place ?lat ?lon
+WHERE {
+?sub rdf:type dbp:LawFirm;
+rdfs:label ?label;
+?pred_place ?place;
+dbp:foundingDate ?date;
+dbp:headquarter ?place.
+?place rdf:type ?class ;
+wgs:lat ?lat ;
+wgs:long ?lon. 
+?class rdfs:subClassOf* dbp:PopulatedPlace .
+FILTER ( ?date >= '2013-01-01'^^xsd:date && ?date <= ""2014-01-01""^^xsd:date )
+FILTER ( ?lat >= ""49.955269""^^xsd:float && ?lat <= ""60.6311""^^xsd:float && ?lon <= ""1.7425""^^xsd:float && ?lon >= ""-8.164723""^^xsd:float )
+FILTER ( langMatches(lang(?label), ""EN""))
+}
+ORDER BY ASC(?date)"
+6,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbp: <http://dbpedia.org/ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?label ?sub ?date ?place ?lat ?lon
+WHERE {
+?sub rdf:type dbp:Artist;
+rdfs:label ?label;
+?pred_place ?place;
+dbp:birthDate ?date;
+dbp:birthPlace ?place.
+?place rdf:type ?class ;
+wgs:lat ?lat ;
+wgs:long ?lon. 
+?class rdfs:subClassOf* dbp:PopulatedPlace .
+FILTER ( ?date >= '1985-01-01'^^xsd:date && ?date <= ""2014-01-01""^^xsd:date )
+FILTER ( ?lat >= ""41.366379""^^xsd:float && ?lat <= ""51.091099""^^xsd:float && ?lon <= ""9.543055""^^xsd:float && ?lon >= ""-4.790556""^^xsd:float )
+FILTER ( langMatches(lang(?label), ""EN""))
+}
+ORDER BY ASC(?date)"
+7,"SELECT ?abstract
+WHERE {
+<http://dbpedia.org/resource/Lorena_(singer)> <http://dbpedia.org/ontology/abstract> ?abstract .
+FILTER ( langMatches(lang(?abstract), ""en""))
+}"
+8,"SELECT DISTINCT lang(?abstract) as ?lang
+WHERE {
+<http://dbpedia.org/resource/Lorena_(singer)> <http://dbpedia.org/ontology/abstract> ?abstract .
+}"
+9,"SELECT ?abstract
+WHERE {
+<http://dbpedia.org/resource/C-Sick> <http://dbpedia.org/ontology/abstract> ?abstract .
+FILTER ( langMatches(lang(?abstract), ""en""))
+}"
+10,"SELECT DISTINCT lang(?abstract) as ?lang
+WHERE {
+<http://dbpedia.org/resource/C-Sick> <http://dbpedia.org/ontology/abstract> ?abstract .
+}"
+11,"SELECT ?abstract
+WHERE {
+<http://dbpedia.org/resource/Leslie_(singer)> <http://dbpedia.org/ontology/abstract> ?abstract .
+FILTER ( langMatches(lang(?abstract), ""en""))
+}"
+12,"SELECT DISTINCT lang(?abstract) as ?lang
+WHERE {
+<http://dbpedia.org/resource/Leslie_(singer)> <http://dbpedia.org/ontology/abstract> ?abstract .
+}"
+13,"SELECT ?abstract
+WHERE {
+<http://dbpedia.org/resource/Jacopo_Sarno> <http://dbpedia.org/ontology/abstract> ?abstract .
+FILTER ( langMatches(lang(?abstract), ""en""))
+}"
+14,"SELECT DISTINCT lang(?abstract) as ?lang
+WHERE {
+<http://dbpedia.org/resource/Jacopo_Sarno> <http://dbpedia.org/ontology/abstract> ?abstract .
+}"
+15,"SELECT ?abstract
+WHERE {
+<http://dbpedia.org/resource/Jérémy_Amelin> <http://dbpedia.org/ontology/abstract> ?abstract .
+FILTER ( langMatches(lang(?abstract), ""en""))
+}"
+16,"SELECT DISTINCT lang(?abstract) as ?lang
+WHERE {
+<http://dbpedia.org/resource/Jérémy_Amelin> <http://dbpedia.org/ontology/abstract> ?abstract .
+}"
+17,"SELECT ?abstract
+WHERE {
+<http://dbpedia.org/resource/Fortesa_Hoti_(singer)> <http://dbpedia.org/ontology/abstract> ?abstract .
+FILTER ( langMatches(lang(?abstract), ""en""))
+}"
+18,"SELECT DISTINCT lang(?abstract) as ?lang
+WHERE {
+<http://dbpedia.org/resource/Fortesa_Hoti_(singer)> <http://dbpedia.org/ontology/abstract> ?abstract .
+}"
+19,"SELECT ?abstract
+WHERE {
+<http://dbpedia.org/resource/Luce_(singer)> <http://dbpedia.org/ontology/abstract> ?abstract .
+FILTER ( langMatches(lang(?abstract), ""en""))
+}"
+20,"SELECT DISTINCT lang(?abstract) as ?lang
+WHERE {
+<http://dbpedia.org/resource/Luce_(singer)> <http://dbpedia.org/ontology/abstract> ?abstract .
+}"
+21,"SELECT ?abstract
+WHERE {
+<http://dbpedia.org/resource/Leslie_(singer)> <http://dbpedia.org/ontology/abstract> ?abstract .
+FILTER ( langMatches(lang(?abstract), ""en""))
+}"
+22,"SELECT DISTINCT lang(?abstract) as ?lang
+WHERE {
+<http://dbpedia.org/resource/Leslie_(singer)> <http://dbpedia.org/ontology/abstract> ?abstract .
+}"
+23,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbp: <http://dbpedia.org/ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?label ?sub ?date ?place ?lat ?lon
+WHERE {
+?sub rdf:type dbp:Politician;
+rdfs:label ?label;
+?pred_place ?place;
+dbp:activeYearsStartDate ?date;
+dbp:nationality ?place.
+?place rdf:type ?class ;
+wgs:lat ?lat ;
+wgs:long ?lon. 
+?class rdfs:subClassOf* dbp:PopulatedPlace .
+FILTER ( ?date >= '1954-01-01'^^xsd:date && ?date <= ""2014-01-01""^^xsd:date )
+FILTER ( ?lat >= ""41.366379""^^xsd:float && ?lat <= ""51.091099""^^xsd:float && ?lon <= ""9.543055""^^xsd:float && ?lon >= ""-4.790556""^^xsd:float )
+FILTER ( langMatches(lang(?label), ""EN""))
+}
+ORDER BY ASC(?date)"
+24,"SELECT ?abstract
+WHERE {
+<http://dbpedia.org/resource/Bart_De_Wever> <http://dbpedia.org/ontology/abstract> ?abstract .
+FILTER ( langMatches(lang(?abstract), ""en""))
+}"
+25,"SELECT DISTINCT lang(?abstract) as ?lang
+WHERE {
+<http://dbpedia.org/resource/Bart_De_Wever> <http://dbpedia.org/ontology/abstract> ?abstract .
+}"
+26,"SELECT ?abstract
+WHERE {
+<http://dbpedia.org/resource/Rémy_Pagani> <http://dbpedia.org/ontology/abstract> ?abstract .
+FILTER ( langMatches(lang(?abstract), ""en""))
+}"
+27,"SELECT DISTINCT lang(?abstract) as ?lang
+WHERE {
+<http://dbpedia.org/resource/Rémy_Pagani> <http://dbpedia.org/ontology/abstract> ?abstract .
+}"
+28,"SELECT ?abstract
+WHERE {
+<http://dbpedia.org/resource/Eduardo_Frei_Ruiz-Tagle> <http://dbpedia.org/ontology/abstract> ?abstract .
+FILTER ( langMatches(lang(?abstract), ""en""))
+}"
+29,"SELECT DISTINCT lang(?abstract) as ?lang
+WHERE {
+<http://dbpedia.org/resource/Eduardo_Frei_Ruiz-Tagle> <http://dbpedia.org/ontology/abstract> ?abstract .
+}"
+30,"SELECT ?abstract
+WHERE {
+<http://dbpedia.org/resource/Alain_Joyandet> <http://dbpedia.org/ontology/abstract> ?abstract .
+FILTER ( langMatches(lang(?abstract), ""en""))
+}"
+31,"SELECT DISTINCT lang(?abstract) as ?lang
+WHERE {
+<http://dbpedia.org/resource/Alain_Joyandet> <http://dbpedia.org/ontology/abstract> ?abstract .
+}"
+32,"SELECT ?abstract
+WHERE {
+<http://dbpedia.org/resource/Marie-Guite_Dufay> <http://dbpedia.org/ontology/abstract> ?abstract .
+FILTER ( langMatches(lang(?abstract), ""en""))
+}"
+33,"SELECT DISTINCT lang(?abstract) as ?lang
+WHERE {
+<http://dbpedia.org/resource/Marie-Guite_Dufay> <http://dbpedia.org/ontology/abstract> ?abstract .
+}"
+34,"SELECT ?abstract
+WHERE {
+<http://dbpedia.org/resource/Marie-Guite_Dufay> <http://dbpedia.org/ontology/abstract> ?abstract .
+FILTER ( langMatches(lang(?abstract), ""en""))
+}"
+35,"SELECT DISTINCT lang(?abstract) as ?lang
+WHERE {
+<http://dbpedia.org/resource/Marie-Guite_Dufay> <http://dbpedia.org/ontology/abstract> ?abstract .
+}"
+36,"SELECT ?abstract
+WHERE {
+<http://dbpedia.org/resource/Sylvie_Vermeillet> <http://dbpedia.org/ontology/abstract> ?abstract .
+FILTER ( langMatches(lang(?abstract), ""en""))
+}"
+37,"SELECT DISTINCT lang(?abstract) as ?lang
+WHERE {
+<http://dbpedia.org/resource/Sylvie_Vermeillet> <http://dbpedia.org/ontology/abstract> ?abstract .
+}"
+38,"PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbp: <http://dbpedia.org/ontology/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?label ?sub ?date ?place ?lat ?lon
+WHERE {
+?sub rdf:type dbp:PrimeMinister;
+rdfs:label ?label;
+?pred_place ?place;
+dbp:activeYearsStartDate ?date;
+dbp:birthPlace ?place.
+?place rdf:type ?class ;
+wgs:lat ?lat ;
+wgs:long ?lon. 
+?class rdfs:subClassOf* dbp:PopulatedPlace .
+FILTER ( ?date >= '1952-01-01'^^xsd:date && ?date <= ""2014-01-01""^^xsd:date )
+FILTER ( ?lat >= ""49.955269""^^xsd:float && ?lat <= ""60.6311""^^xsd:float && ?lon <= ""1.7425""^^xsd:float && ?lon >= ""-8.164723""^^xsd:float )
+FILTER ( langMatches(lang(?label), ""EN""))
+}
+ORDER BY ASC(?date)"
+39,"SELECT ?abstract
+WHERE {
+<http://dbpedia.org/resource/Terence_O'Neill,_Baron_O'Neill_of_the_Maine> <http://dbpedia.org/ontology/abstract> ?abstract .
+FILTER ( langMatches(lang(?abstract), ""en""))
+}"
+40,"SELECT DISTINCT lang(?abstract) as ?lang
+WHERE {
+<http://dbpedia.org/resource/Terence_O'Neill,_Baron_O'Neill_of_the_Maine> <http://dbpedia.org/ontology/abstract> ?abstract .
+}"
+41,"SELECT ?abstract
+WHERE {
+<http://dbpedia.org/resource/Premiership_of_Tony_Blair> <http://dbpedia.org/ontology/abstract> ?abstract .
+FILTER ( langMatches(lang(?abstract), ""en""))
+}"
+42,"SELECT DISTINCT lang(?abstract) as ?lang
+WHERE {
+<http://dbpedia.org/resource/Premiership_of_Tony_Blair> <http://dbpedia.org/ontology/abstract> ?abstract .
+}"
+43,"SELECT ?abstract
+WHERE {
+<http://dbpedia.org/resource/Premiership_of_Gordon_Brown> <http://dbpedia.org/ontology/abstract> ?abstract .
+FILTER ( langMatches(lang(?abstract), ""en""))
+}"
+44,"SELECT DISTINCT lang(?abstract) as ?lang
+WHERE {
+<http://dbpedia.org/resource/Premiership_of_Gordon_Brown> <http://dbpedia.org/ontology/abstract> ?abstract .
+}"
+45,"SELECT ?abstract
+WHERE {
+<http://dbpedia.org/resource/James_Chichester-Clark> <http://dbpedia.org/ontology/abstract> ?abstract .
+FILTER ( langMatches(lang(?abstract), ""en""))
+}"
+46,"SELECT DISTINCT lang(?abstract) as ?lang
+WHERE {
+<http://dbpedia.org/resource/James_Chichester-Clark> <http://dbpedia.org/ontology/abstract> ?abstract .
+}"
+47,"SELECT ?abstract
+WHERE {
+<http://dbpedia.org/resource/Premiership_of_Gordon_Brown> <http://dbpedia.org/ontology/abstract> ?abstract .
+FILTER ( langMatches(lang(?abstract), ""en""))
+}"
+48,"SELECT DISTINCT lang(?abstract) as ?lang
+WHERE {
+<http://dbpedia.org/resource/Premiership_of_Gordon_Brown> <http://dbpedia.org/ontology/abstract> ?abstract .
+}"
+49,"SELECT ?abstract
+WHERE {
+<http://dbpedia.org/resource/Premiership_of_Tony_Blair> <http://dbpedia.org/ontology/abstract> ?abstract .
+FILTER ( langMatches(lang(?abstract), ""en""))
+}"
+50,"SELECT DISTINCT lang(?abstract) as ?lang
+WHERE {
+<http://dbpedia.org/resource/Premiership_of_Tony_Blair> <http://dbpedia.org/ontology/abstract> ?abstract .
+}"
+51,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+52,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart>} LIMIT 100
+53,"SELECT DISTINCT *  WHERE  {{<http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ?property ?object. FILTER(!isLiteral(?object))} UNION 	 {<http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ?property 	 ?object.FILTER(isLiteral(?object)).FILTER(lang(?object) =""it"")} UNION 	 {<http://dbpedia.org/resource/Wolfgang_Amadeus_Mozart> ?property 	 ?object.FILTER(isLiteral(?object)).FILTER(lang(?object) =""en"")}}  ORDER BY ?property"
+54,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Salzburg> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+55,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Salzburg>} LIMIT 100
+56,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Austria> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+57,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Austria>} LIMIT 100
+58,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Heinz_Schaden> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+59,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Heinz_Schaden>} LIMIT 100
+60,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Social_Democratic_Party_of_Austria> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+61,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Social_Democratic_Party_of_Austria>} LIMIT 100
+62,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/List_of_World_Heritage_Sites> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+63,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/List_of_World_Heritage_Sites>} LIMIT 100
+64,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Central_Institution_for_Meteorology_and_Geodynamics> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+65,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Central_Institution_for_Meteorology_and_Geodynamics>} LIMIT 100
+66,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Spain> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+67,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Spain>} LIMIT 100
+68,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Madrid> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+69,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Madrid>} LIMIT 100
+70,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Euro> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+71,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Euro>} LIMIT 100
+72,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Telephone_numbers_in_Spain> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+73,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Telephone_numbers_in_Spain>} LIMIT 100
+74,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Cortes_Generales> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+75,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Cortes_Generales>} LIMIT 100
+76,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Congress_of_Deputies_(Spain)> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+77,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Congress_of_Deputies_(Spain)>} LIMIT 100
+78,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/History_of_Spain> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+79,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/History_of_Spain>} LIMIT 100
+80,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Central_European_Time> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+81,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Central_European_Time>} LIMIT 100
+82,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Senate_of_Spain> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+83,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Senate_of_Spain>} LIMIT 100
+84,"SELECT DISTINCT *  WHERE  {{<http://dbpedia.org/resource/Spain> ?property ?object. FILTER(!isLiteral(?object))} UNION 	 {<http://dbpedia.org/resource/Spain> ?property 	 ?object.FILTER(isLiteral(?object)).FILTER(lang(?object) =""it"")} UNION 	 {<http://dbpedia.org/resource/Spain> ?property 	 ?object.FILTER(isLiteral(?object)).FILTER(lang(?object) =""en"")}}  ORDER BY ?property"
+85,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Mayor–council_government> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+86,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Mayor–council_government>} LIMIT 100
+87,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Community_of_Madrid> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+88,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Community_of_Madrid>} LIMIT 100
+89,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Ana_Botella> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+90,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Ana_Botella>} LIMIT 100
+91,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/People's_Party_(Spain)> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+92,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/People's_Party_(Spain)>} LIMIT 100
+93,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Valencia> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+94,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Valencia>} LIMIT 100
+95,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Alcalde> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+96,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Bilbao> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+97,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Alcalde>} LIMIT 100
+98,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Bilbao>} LIMIT 100
+99,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Barcelona> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+100,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/A_Coruña> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+101,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Barcelona>} LIMIT 100
+102,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/A_Coruña>} LIMIT 100
+103,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Postal_code> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+104,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Agencia_Estatal_de_Meteorología> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+105,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Postal_code>} LIMIT 100
+106,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Agencia_Estatal_de_Meteorología>} LIMIT 100
+107,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Catalonia> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+108,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Catalonia>} LIMIT 100
+109,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Xavier_Trias> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+110,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Xavier_Trias>} LIMIT 100
+111,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Convergence_and_Union> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+112,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Convergence_and_Union>} LIMIT 100
+113,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Municipalities_of_Spain> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+114,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Languages_of_Spain> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+115,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Municipalities_of_Spain>} LIMIT 100
+116,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Languages_of_Spain>} LIMIT 100
+117,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Montjuïc> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+118,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Montjuïc>} LIMIT 100
+119,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Districts_of_Barcelona> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+120,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Districts_of_Barcelona>} LIMIT 100
+121,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Ovid> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+122,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Ovid>} LIMIT 100
+123,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Ars_Amatoria> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+124,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Ars_Amatoria>} LIMIT 100
+125,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Constanța> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+126,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Constanța>} LIMIT 100
+127,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Roman_Empire> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+128,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Roman_Empire>} LIMIT 100
+129,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Romania> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+130,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Romania>} LIMIT 100
+131,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Charles_Baudelaire> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+132,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Charles_Baudelaire>} LIMIT 100
+133,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Dante_Alighieri> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+134,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Dante_Alighieri>} LIMIT 100
+135,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Apuleius> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+136,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Apuleius>} LIMIT 100
+137,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Ovid> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+138,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Ovid>} LIMIT 100
+139,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Marcus_Porcius_Latro> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+140,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Marcus_Porcius_Latro>} LIMIT 100
+141,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Cicero> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+142,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Cicero>} LIMIT 100
+143,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Homer> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+144,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Homer>} LIMIT 100
+145,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Virgil> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+146,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Virgil>} LIMIT 100
+147,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Propertius> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+148,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Propertius>} LIMIT 100
+149,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Catullus> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+150,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Catullus>} LIMIT 100
+151,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/John_Milton> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+152,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/John_Milton>} LIMIT 100
+153,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Geoffrey_Chaucer> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+154,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Geoffrey_Chaucer>} LIMIT 100
+155,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Gualterus_Anglicus> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+156,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Gualterus_Anglicus>} LIMIT 100
+157,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/William_Shakespeare> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+158,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/William_Shakespeare>} LIMIT 100
+159,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Petrarch> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+160,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Petrarch>} LIMIT 100
+161,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Percy_Bysshe_Shelley> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+162,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Percy_Bysshe_Shelley>} LIMIT 100
+163,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Giovanni_Boccaccio> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+164,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Giovanni_Boccaccio>} LIMIT 100
+165,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Christopher_Marlowe> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+166,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Christopher_Marlowe>} LIMIT 100
+167,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Charles_Baudelaire> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+168,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Charles_Baudelaire>} LIMIT 100
+169,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Dante_Alighieri> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+170,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Dante_Alighieri>} LIMIT 100
+171,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Apuleius> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+172,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Apuleius>} LIMIT 100
+173,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Renaissance_art> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+174,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Renaissance_art>} LIMIT 100
+175,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/George_Chapman> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+176,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/George_Chapman>} LIMIT 100
+177,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Eugène_Delacroix> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+178,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Eugène_Delacroix>} LIMIT 100
+179,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Bob_Dylan> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+180,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Bob_Dylan>} LIMIT 100
+181,"SELECT DISTINCT *  WHERE  {{<http://dbpedia.org/resource/George_Chapman> ?property ?object. FILTER(!isLiteral(?object))} UNION 	 {<http://dbpedia.org/resource/George_Chapman> ?property 	 ?object.FILTER(isLiteral(?object)).FILTER(lang(?object) =""it"")} UNION 	 {<http://dbpedia.org/resource/George_Chapman> ?property 	 ?object.FILTER(isLiteral(?object)).FILTER(lang(?object) =""en"")}}  ORDER BY ?property"
+182,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/John_Milton> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+183,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/John_Milton>} LIMIT 100
+184,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Geoffrey_Chaucer> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+185,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Geoffrey_Chaucer>} LIMIT 100
+186,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Gualterus_Anglicus> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+187,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Gualterus_Anglicus>} LIMIT 100
+188,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/William_Shakespeare> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+189,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/William_Shakespeare>} LIMIT 100
+190,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Petrarch> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+191,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Petrarch>} LIMIT 100
+192,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Percy_Bysshe_Shelley> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+193,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Percy_Bysshe_Shelley>} LIMIT 100
+194,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Giovanni_Boccaccio> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+195,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Giovanni_Boccaccio>} LIMIT 100
+196,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Christopher_Marlowe> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+197,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Christopher_Marlowe>} LIMIT 100
+198,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Renaissance_art> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+199,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Renaissance_art>} LIMIT 100
+200,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/George_Chapman> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+201,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/George_Chapman>} LIMIT 100
+202,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Eugène_Delacroix> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+203,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Eugène_Delacroix>} LIMIT 100
+204,SELECT DISTINCT * WHERE {<http://dbpedia.org/resource/Bob_Dylan> ?property ?object.FILTER ((( isIRI(?object) && ?property != <http://xmlns.com/foaf/0.1/depiction> )|| ?property = <http://www.w3.org/2000/01/rdf-schema#label>  || ?property = <http://www.georss.org/georss/point> || ?property = <http://xmlns.com/foaf/0.1/surname> || ?property = <http://xmlns.com/foaf/0.1/name> || ?property = <http://purl.org/dc/elements/1.1/title>))}  ORDER BY ?property
+205,SELECT DISTINCT * WHERE {?object ?property <http://dbpedia.org/resource/Bob_Dylan>} LIMIT 100

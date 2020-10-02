@@ -1,0 +1,609 @@
+,query
+0,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Social_studies> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+1,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Language_arts> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+2,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Local_search> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+3,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Object_Management_Group> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+4,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://lod.xdams.org/reload/oad/event/T01620>}
+5,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Online_database> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+6,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Conference_and_Labs_of_the_Evaluation_Forum> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+7,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Partial_word> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+8,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Trauma_team> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+9,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/legge.rdf/L1960_15>}
+10,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Software_design_document> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+11,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/seduta.rdf/s13_061>}
+12,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Jena_(framework)> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+13,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://lod.xdams.org/reload/oad/event/G08508>}
+14,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Cohen&#39;s_kappa> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+15,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Heuristic> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+16,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Complex_sentence> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+17,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Syntax> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+18,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Canonical_form> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+19,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://lod.xdams.org/reload/oad/event/M02577>}
+20,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Description_language> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+21,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Industrial_applicability> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+22,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Categorial_grammar> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+23,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Finite_verb> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+24,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://lod.xdams.org/reload/oad/event/S01071>}
+25,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/String_searching_algorithm> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+26,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Computing> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+27,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Audio-visual_speech_recognition> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+28,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Best,_worst_and_average_case> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+29,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/seduta.rdf/s13_668>}
+30,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://lod.xdams.org/reload/oad/event/B07428>}
+31,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Travel_class> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+32,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Genome_size> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+33,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Data_frame> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+34,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://lod.xdams.org/reload/oad/event/A05772>}
+35,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Google_Earth> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+36,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Present> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+37,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/World_Financial_Group> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+38,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Record_(computer_science)> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+39,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Input/output> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+40,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Computer-mediated_communication> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+41,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Confidence_interval> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+42,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Battle_command> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+43,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Profanity> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+44,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://lod.xdams.org/reload/oad/event/C16004>}
+45,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Digital_signal_processing> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+46,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Dimensionality_reduction> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+47,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Discrete_mathematics> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+48,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://lod.xdams.org/reload/oad/event/A00254>}
+49,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Factored_language_model> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+50,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Error_message> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+51,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/English_translations_of_the_Bible> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+52,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Graphical_model> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+53,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://lod.xdams.org/reload/oad/event/A05174>}
+54,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Standard_design> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+55,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Latent_variable_model> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+56,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Feature_(linguistics)> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+57,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Logistic_regression> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+58,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Loss_function> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+59,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/New_Mexico_State_University> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+60,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Artificial_neural_network> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+61,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Perceptron> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+62,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Statistical_model> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+63,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Noisy_text> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+64,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Referring_expression> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+65,"prefix dbpo: <http://dbpedia.org/ontology/> prefix foaf: <http://xmlns.com/foaf/0.1/> select distinct ?title, ?pict, ?label, ?abstract where {<http://dbpedia.org/resource/Andronikos_II_Palaiologos> dbpo:title ?title ; foaf:depiction ?pict ; rdfs:label ?label ; dbpo:abstract ?abstract FILTER ( lang(?abstract) = ""en"" )}"
+66,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Subject–object–verb> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+67,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/seduta.rdf/s16_537>}
+68,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://lod.xdams.org/reload/oad/event/C09474>}
+69,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/persona.rdf/p27490>}
+70,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Transitive_closure> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+71,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Text_messaging> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+72,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Underlying_representation> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+73,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT * WHERE {
+?rc foaf:page <http://en.wikipedia.org/wiki/Japan>.
+}
+"
+74,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/persona.rdf/pr2728>}
+75,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Automated_reasoning> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+76,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Word_usage> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+77,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Winnow_(algorithm)> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+78,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://lod.xdams.org/reload/oad/event/A04254>}
+79,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/English_Training:_Have_Fun_Improving_Your_Skills!> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+80,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Electronics> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+81,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Business_process_management> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+82,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Latent_Dirichlet_allocation> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+83,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Financial_domain> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+84,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Software_design> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+85,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Service_model> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+86,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Sound_change> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+87,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Texas_Instruments> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+88,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Whois> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+89,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/persona.rdf/pr90>}
+90,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://lod.xdams.org/reload/oad/event/D02064>}
+91,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Nearest_neighbor_search> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+92,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Scientific_control> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+93,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Evaluation_of_machine_translation> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+94,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Open_domain_question_answering> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+95,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/F_B> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+96,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/legge.rdf/L1978_3>}
+97,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://lod.xdams.org/reload/oad/event/D06580>}
+98,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://lod.xdams.org/reload/oad/event/C01184>}
+99,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Linear_programming_relaxation> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+100,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Batch_processing> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+101,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://lod.xdams.org/reload/oad/event/C03170>}
+102,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Legacy_system> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+103,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Automatic_indexing> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+104,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Motor_system> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+105,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/QA_Technologies> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+106,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Human_subject_research> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+107,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Standard_Generalized_Markup_Language> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+108,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Idiom> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+109,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://lod.xdams.org/reload/oad/event/C10141>}
+110,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Article_(grammar)> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+111,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/persona.rdf/p3630>}
+112,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://lod.xdams.org/reload/oad/event/S05766>}
+113,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Direct_reference_theory> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+114,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Reference_type> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+115,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://lod.xdams.org/reload/oad/event/P06844>}
+116,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Formal_theory> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+117,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Baum–Welch_algorithm> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+118,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Rendering_engine> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+119,SELECT DISTINCT * WHERE {?object <http://www.w3.org/2002/07/owl#sameAs> <http://dati.camera.it/ocd/seduta.rdf/s13_090>}
+120,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Conditional_mutual_information> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+121,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Disambiguation_(disambiguation)> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+122,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Object_(grammar)> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "
+123,"
+select ?resource ?abstract where {
+	VALUES ?resource { <http://dbpedia.org/resource/Depth-first_search> }
+	?resource dbpedia-owl:abstract ?abstract . filter (lang(?abstract)='en')
+}
+ "

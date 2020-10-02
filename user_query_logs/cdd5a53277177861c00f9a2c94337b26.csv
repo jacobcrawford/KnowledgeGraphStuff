@@ -1,0 +1,1251 @@
+,query
+0,"SELECT distinct ?subject ?fnavn ?aar ?sted ?category WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Puerto Rico"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+1,"SELECT distinct ?subject ?fnavn ?aar ?sted ?category WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Puerto_Rico"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+2,"SELECT distinct ?subject ?fnavn ?aar ?sted ?category WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Syria"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+3,"SELECT distinct ?subject ?fnavn ?aar ?sted ?category WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Trinidad_and_Tobago"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+4,"SELECT distinct ?subject ?fnavn ?aar ?sted ?category WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Costa_Rica"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+5,"SELECT distinct ?subject ?fnavn ?aar ?sted ?category WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Iraq"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+6,"SELECT distinct ?subject ?fnavn ?aar ?sted ?category WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Bangladesh"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+7,"SELECT distinct ?subject ?fnavn ?aar ?sted ?category WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Hong_Kong"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+8,"SELECT distinct ?subject ?fnavn ?aar ?sted ?category WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Jamaica"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+9,"SELECT distinct ?subject ?fnavn ?aar ?sted ?category WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Albania"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+10,"SELECT distinct ?subject ?fnavn ?aar ?sted ?category WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Israel"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+11,"SELECT distinct ?subject ?fnavn ?aar ?sted ?category WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Indonesia"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+12,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?population WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/City>.
+?subject <http://dbpedia.org/ontology/populationUrban> ?population.
+FILTER (xsd:integer(?population) > 2000000)
+}
+ORDER BY DESC(xsd:integer(?population))
+LIMIT 20"
+13,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?subject ?label ?released ?abstract WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia2:starring <http://dbpedia.org/resource/Tom_Cruise>.
+?subject rdfs:comment ?abstract.
+?subject rdfs:label ?label.
+FILTER(lang(?abstract) = ""en"" && lang(?label) = ""en"").
+?subject <http://dbpedia.org/ontology/releaseDate> ?released.
+FILTER(xsd:date(?released) < ""2000-01-01""^^xsd:date).
+} ORDER BY ?released
+LIMIT 20
+"
+14,"SELECT ?subject ?country ?aar WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/birthPlace>.
+?subject <http://dbpedia.org/ontology/birthPlace> ?country.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+FILTER(xsd:date(?aar) > ""1913-01-01""^^xsd:date).
+}
+LIMIT 20"
+15,"SELECT ?subject ?country ?aar WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/birthPlace>.
+?subject <http://dbpedia.org/ontology/birthPlace> ?country.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+}
+LIMIT 20"
+16,"SELECT ?subject ?country ?aar WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/birthPlace>.
+}
+LIMIT 20"
+17,"SELECT ?subject WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/birthPlace>.
+}
+LIMIT 20"
+18,"SELECT ?subject ?label ?released ?abstract WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Film>.
+?subject dbpedia2:starring <http://dbpedia.org/resource/Tom_Cruise>.
+?subject rdfs:comment ?abstract.
+?subject rdfs:label ?label.
+FILTER(lang(?abstract) = ""en"" && lang(?label) = ""en"").
+?subject <http://dbpedia.org/ontology/releaseDate> ?released.
+FILTER(xsd:date(?released) < ""2000-01-01""^^xsd:date).
+} ORDER BY ?released
+LIMIT 20"
+19,"SELECT ?subject ?population WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/City>.
+?subject <http://dbpedia.org/ontology/populationUrban> ?population.
+FILTER (xsd:integer(?population) > 2000000)
+}
+ORDER BY DESC(xsd:integer(?population))
+LIMIT 20"
+20,"SELECT ?subject  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/birthPlace>.
+
+}
+LIMIT 20"
+21,"SELECT ?subject  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Canada> .
+
+}
+LIMIT 20"
+22,"SELECT ?subject  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/birthPlace> Canada .
+
+}
+LIMIT 20"
+23,"SELECT ?subject  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/birthPlace> Canada.
+
+}
+LIMIT 20"
+24,"SELECT ?subject  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/birthPlace>Canada.
+
+}
+LIMIT 20"
+25,"SELECT ?subject  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/birthPlace>.
+
+}
+LIMIT 20"
+26,"SELECT ?subject  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/City>.
+
+}
+LIMIT 20
+"
+27,"SELECT ?subject  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/birthPlace>.
+
+}
+LIMIT 20
+"
+28,"SELECT ?subject  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/birthDate>.
+
+}
+LIMIT 20
+"
+29,"SELECT ?subject  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/givenName>.
+
+}
+LIMIT 20
+"
+30,"SELECT ?subject  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Country>.
+
+}
+LIMIT 20
+"
+31,"SELECT ?subject  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+
+}
+LIMIT 20
+"
+32,"SELECT ?subject ?aar  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+}
+LIMIT 20
+"
+33,"SELECT ?subject ?aar  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+FILTER(xsd:date(?aar) > ""1913-01-01""^^xsd:date).
+}
+LIMIT 20
+"
+34,"SELECT ?subject ?aar  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+FILTER(xsd:date(?aar) > ""2000-01-01""^^xsd:date).
+}
+LIMIT 20
+"
+35,"SELECT ?subject ?aar  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+}
+LIMIT 20
+"
+36,"SELECT ?subject ?aar  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+FILTER(xsd:date(?aar) > ""2000-01-01""^^xsd:date).
+}
+LIMIT 20
+"
+37,"SELECT ?subject ?aar  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+FILTER(xsd:date(?aar) > ""1913""^^xsd:date).
+}
+LIMIT 20
+"
+38,"SELECT ?subject ?aar ?sted  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+}
+LIMIT 20
+"
+39,"SELECT ?subject ?aar ?sted ?fnavn  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://dbpedia.org/ontology/givenName> ?fnavn.
+}
+LIMIT 20
+"
+40,"SELECT ?subject ?aar ?sted ?fnavn  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject rdfs:givenName ?fnavn.
+}
+LIMIT 20
+"
+41,"SELECT ?subject ?aar ?sted ?fnavn  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+}
+LIMIT 20
+"
+42,"SELECT ?subject ?aar ?sted ?fnavn  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+}
+LIMIT 20
+"
+43,"SELECT ?subject ?aar ?sted ?fnavn  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+FILTER(?sted =  ""http://dbpedia.org/resource/Budapest"").
+}
+LIMIT 20
+"
+44,"SELECT ?subject ?aar ?sted ?fnavn  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+FILTER(?sted =  http://dbpedia.org/resource/Budapest).
+}
+LIMIT 20
+"
+45,"SELECT ?subject ?aar ?sted ?fnavn  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+FILTER(?sted = ""http://dbpedia.org/resource/Budapest"").
+}
+LIMIT 20
+"
+46,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT DISTINCT ?subject 
+                ?employees 
+                ?homepage 
+  WHERE 
+    {
+      ?subject  rdf:type               <http://dbpedia.org/class/yago/Company108058098>  .
+      ?subject  dbpedia2:numEmployees  ?employees
+        FILTER  ( xsd:integer(?employees) >= 50000 )                                     .
+      ?subject  foaf:homepage          ?homepage                                         .
+    } 
+  ORDER BY  DESC(xsd:integer(?employees))
+  LIMIT  20
+"
+47,"SELECT ?subject ?aar ?sted ?fnavn  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Budapest"").
+}
+LIMIT 20
+"
+48,"SELECT ?subject ?fnavn ?aar ?sted  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+}
+LIMIT 20
+"
+49,"SELECT ?subject ?fnavn ?aar ?sted  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+}
+LIMIT 100
+"
+50,"SELECT ?subject ?fnavn ?aar ?sted  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+}
+ORDER BY DESC(xsd:date(?aar))
+LIMIT 100
+"
+51,"SELECT ?subject ?fnavn ?aar ?sted  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+}
+ORDER BY DESC(xsd:date(?aar))
+LIMIT 100
+"
+52,"SELECT ?subject ?fnavn ?aar ?sted  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+}
+ORDER BY DESC(?aar)
+LIMIT 100
+"
+53,"SELECT ?subject ?fnavn ?aar ?sted  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 100
+"
+54,"SELECT ?subject ?fnavn ?aar ?sted ?sex  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://xmlns.com/foaf/0.1/Sex> ?sex.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 100
+"
+55,"SELECT ?subject ?fnavn ?aar ?sted ?sex  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://xmlns.com/foaf/0.1/sex> ?sex.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 100
+"
+56,"SELECT ?subject ?fnavn ?aar ?sted ?sex  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/sex> ?sex.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 100
+"
+57,"SELECT ?subject ?fnavn ?aar ?sted ?category  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 100
+"
+58,"SELECT ?subject ?fnavn ?aar ?sted ?category  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+FILTER(regex (str(?category), ""female"", ""i"")).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 100
+"
+59,"SELECT ?subject ?fnavn ?aar ?sted ?category  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+
+FILTER(regex (str(?category), ""female"", ""i"")).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 100
+"
+60,"SELECT ?subject ?fnavn ?aar ?sted ?category  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+
+FILTER(regex (str(?category), ""female"", ""i"") AND (str(?sted) = ""http://dbpedia.org/resource/Egypt"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 100
+"
+61,"SELECT ?subject ?fnavn ?aar ?sted ?category  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+
+FILTER(regex (str(?category), ""female"", ""i"") & (str(?sted) = ""http://dbpedia.org/resource/Egypt"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 100
+"
+62,"SELECT ?subject ?fnavn ?aar ?sted ?category  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+
+FILTER(regex (str(?category), ""female"", ""i"") && (str(?sted) = ""http://dbpedia.org/resource/Egypt"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 100
+"
+63,"SELECT ?subject ?fnavn ?aar ?sted ?category  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(regex (str(?category), ""female"", ""i"")).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 100
+"
+64,"SELECT ?subject ?fnavn ?aar ?sted ?category  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(regex (str(?category), ""female"", ""i"")).
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 100
+"
+65,"SELECT ?subject ?fnavn ?aar ?sted ?category  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(regex (str(?category), ""female"", ""i"")).
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Norway"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 100
+"
+66,"SELECT ?subject ?fnavn ?aar ?sted ?category  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Norway"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 100
+"
+67,"SELECT ?subject ?fnavn ?aar ?sted ?category  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Norway"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Norway"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 100
+"
+68,"SELECT ?subject ?fnavn ?aar ?sted ?category  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(regex (str(?category), ""female"", ""i"")).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 100
+"
+69,"SELECT ?subject ?fnavn ?aar ?sted ?category  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(regex (str(?category), ""female"", ""i"")).
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Brazil"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 100
+"
+70,"SELECT ?subject ?fnavn ?aar ?sted ?category  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(regex (str(?category), ""female"", ""i"")).
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Brazil"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 100
+"
+71,"SELECT ?subject ?fnavn ?aar ?sted ?category  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(regex (str(?category), ""female"", ""i"")).
+FILTER(str(?sted) = ""http://dbpedia.org/resource/USA"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 100
+"
+72,"SELECT ?subject ?fnavn ?aar ?sted ?category  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(regex (str(?category), ""female"", ""i"")).
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Germany"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 100
+"
+73,"SELECT ?subject ?fnavn ?aar ?sted ?category  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 100
+"
+74,"SELECT ?subject ?fnavn ?aar ?sted ?category  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+75,"PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX : <http://dbpedia.org/resource/>
+PREFIX dbpedia2: <http://dbpedia.org/property/>
+PREFIX dbpedia: <http://dbpedia.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?name ?description_en ?description_de ?musician WHERE {
+     ?musician <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:German_musicians> .
+     ?musician foaf:name ?name .
+     OPTIONAL {
+         ?musician rdfs:comment ?description_en .
+         FILTER (LANG(?description_en) = 'en') .
+     }
+     OPTIONAL {
+         ?musician rdfs:comment ?description_de .
+         FILTER (LANG(?description_de) = 'de') .
+     }
+   }"
+76,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+77,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+78,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+FILTER(regex (str(?category), ""female"", ""i"") || regex (str(?abstract), ""she"", ""i"")).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+79,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+FILTER(regex (str(?category), ""female"", ""i"") || regex (str(?abstract), ""She"", ""c"")).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+80,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+FILTER(regex (str(?category), ""female"", ""i"") || regex (str(?abstract), ""she "", ""i"")).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+81,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+FILTER(regex (str(?category), ""female"", ""i"") || regex (str(?abstract), "" she "", ""i"") || regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+82,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+FILTER(regex (str(?category), ""female"", ""i"") || regex (str(?abstract), "" she "", ""i"") || regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+83,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Egypt"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+84,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Afghanistan"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+85,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Algeria"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+86,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Angola"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+87,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Bahamas"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+88,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/The_Bahamas"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+89,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Antigua_and_Barbuda"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+90,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Bangladesh"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+91,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Barbados"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+92,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Belize"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+93,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Benin"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+94,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Bhutan"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+95,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Bolivia"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+96,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Brunei"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+97,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Burkina_Faso"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+98,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Burundi"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+99,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Burkina_Faso"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+100,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Brunei"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+101,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Bhutan"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+102,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/United_Arab_Emirates"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+103,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Democratic_Republic_of_the_Congo"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+104,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Central_African_Republic"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+105,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Djibouti"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+106,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Djibouti"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+107,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Dominica"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+108,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Ivory_Coast"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+109,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Eritrea"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+110,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Ethiopia"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+111,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/Fiji"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
+112,"SELECT ?subject ?fnavn ?aar ?sted ?category ?abstract  WHERE {
+?subject rdf:type <http://dbpedia.org/ontology/Person>.
+?subject <http://dbpedia.org/ontology/birthDate> ?aar.
+?subject <http://dbpedia.org/ontology/birthPlace> ?sted.
+?subject <http://xmlns.com/foaf/0.1/givenName> ?fnavn.
+?subject <http://purl.org/dc/elements/1.1/description> ?category.
+?subject rdfs:comment ?abstract.
+FILTER(lang(?abstract) = ""en"").
+FILTER(str(?sted) = ""http://dbpedia.org/resource/China"").
+FILTER(!regex (str(?category), ""female"", ""i"") && !regex (str(?abstract), "" she "", ""i"") && !regex (str(?abstract), "" her "", ""i"") ).
+}
+ORDER BY ASC(?fnavn)
+LIMIT 1000
+"
