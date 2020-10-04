@@ -32,8 +32,8 @@ def downloadSelectedFiles(path_to_dest):
         if name in selected:
             filepath = path_to_dest + "/" + name
             urllib.request.urlretrieve(file, filepath)
-            print("Downloaded")
-            break
+            print("Downloaded:" + str(name) + " at " + str(filepath))
+
 
 def downLoadDBPedia39():
     url = 'http://downloads.dbpedia.org/3.9/en/'
