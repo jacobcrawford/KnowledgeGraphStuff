@@ -1,6 +1,4 @@
-import pandas as pd
-import sparql
-from SPARQLWrapper import SPARQLWrapper, JSON, CSV, XML, JSONLD, SPARQLExceptions
+from SPARQLWrapper import SPARQLWrapper, JSON, SPARQLExceptions
 
 import QueryLogReader
 
