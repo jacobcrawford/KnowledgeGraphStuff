@@ -1,4 +1,5 @@
 import subprocess
+import sys
 import urllib.request
 from os import listdir
 from os.path import isfile, join
@@ -17,6 +18,22 @@ def listFD(url, ext=''):
     page = requests.get(url).text
     soup = BeautifulSoup(page, 'html.parser')
     return [url + '/' + node.get('href') for node in soup.find_all('a') if node.get('href').endswith(ext)]
+
+def downloadSelectedFiles(path_to_dest):
+    url = 'http://downloads.dbpedia.org/3.9/en/'
+    ext = 'nt.bz2'
+    print('Beginning file download with urllib2...')
+    selected = ["article_categories_en.nt.bz2", "category_labels_en.nt.bz2",
+                    "geo_coordinates_en.nt.bz2", "instance_types_en.nt.bz2",
+                    "long_abstract_mod.nt.bz2", "mappingbased_properties_en.nt.bz2",
+                    "persondata_en.nt.bz2", "topical_concepts_en.nt.bz2" ]
+    for file in listFD(url, ext):
+        name = file.split("http://downloads.dbpedia.org/3.9/en//")[1]
+        if name in selected:
+            filepath = path_to_dest + "/" + name
+            urllib.request.urlretrieve(file, filepath)
+            print("Downloaded")
+            break
 
 def downLoadDBPedia39():
     url = 'http://downloads.dbpedia.org/3.9/en/'
@@ -155,4 +172,7 @@ def extractAnswersToQuery():
 #analyseIRIUse()
 #analyseFilesForIriUse()
 #collapseIriNamespace()
-extractAnswersToQuery()
+#extractAnswersToQuery()
+
+path_to_dest = sys.argv[1]
+downloadSelectedFiles(path_to_dest)
