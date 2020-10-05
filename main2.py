@@ -43,7 +43,7 @@ user_log_test = [f for c in user_answers[split_index_train:] for f in c if KG.is
 
 # model user pref
 logging.info("Running GLIMPSE")
-summary = GLIMPSE(KG,10000,user_log_train)
+summary = GLIMPSE(KG,10000,user_log_train, 1e-2)
 logging.info("done")
 
 entities_test = len(user_log_test)
