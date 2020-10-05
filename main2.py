@@ -25,7 +25,7 @@ def loadDBPedia(path):
 
 df = pd.read_csv("user_query_log_answers/6d418da8de1b4e19787dc71797f22003.csv")
 # list of lists of answers as iris
-answers = ["<" + f.split(" ")+">" for f in df['answers']]
+answers = [ ["<" +iri+">" for iri in f.split(" ")] for f in df['answers']]
 
 path = sys.argv[1]
 KG = loadDBPedia(path)
