@@ -4,7 +4,7 @@ Python script for removing the last entity of a triple and putting ""@en in stea
 
 import sys
 
-file = sys.argv[0]
+file = sys.argv[1]
 
 reading_file = open(file, "r")
 
