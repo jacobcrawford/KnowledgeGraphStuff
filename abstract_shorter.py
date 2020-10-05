@@ -15,11 +15,13 @@ for line in reading_file:
     continue
   stripped_line = line.strip()
   stripped_line = stripped_line.split(" ")
+  if(len(stripped_line)!= 3):
+    print(line)
   new_line = stripped_line[0] + " " + stripped_line[1] + " \"" +str(i)+"\"@en ."
   i+=1
   new_file_content += new_line +"\n"
 reading_file.close()
 
-writing_file = open("long_abstract_mod.nt", "w")
+writing_file = open("long_abstract_en_mod.nt", "w")
 writing_file.write(new_file_content)
 writing_file.close()
