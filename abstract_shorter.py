@@ -15,10 +15,6 @@ for i,line in enumerate(reading_file):
     continue
   stripped_line = line.strip()
   stripped_line = stripped_line.split(" ")
-  if(len(stripped_line)!= 3):
-    print("\n" + str(i))
-    print(line)
-    print("\n")
   new_line = stripped_line[0] + " " + stripped_line[1] + " \"" +str(i)+"\"@en ."
   i+=1
   new_file_content += new_line +"\n"
