@@ -1,4 +1,4 @@
-from SPARQLWrapper import SPARQLWrapper, JSON, SPARQLExceptions
+from SPARQLWrapper import SPARQLWrapper, JSON, SPARQLExceptions, RDF
 
 import QueryLogReader
 
@@ -33,7 +33,7 @@ class VirtuosoConnector:
     def __init__(self, url="http://localhost:8890/sparql", defaultgraph='http://www.purl.com/KG_SUMMARY/DBPedia3.9_SMALL'):
         self.sparql = SPARQLWrapper(url)
         self.sparql.setTimeout(100)
-        self.sparql.setReturnFormat(JSON)
+        self.sparql.setReturnFormat(RDF)
         if defaultgraph:
             self.sparql.addParameter('default-graph-uri', defaultgraph)
 

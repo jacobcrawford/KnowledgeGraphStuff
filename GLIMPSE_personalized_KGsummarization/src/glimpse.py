@@ -112,7 +112,7 @@ def GLIMPSE(KG, K, query_log, epsilon=1e-3, power=1):
             S.add_triple(triple)
             heap.update(S, sample_size)
             i+=1
-            if i % 10:
+            if i % 1000 == 0:
                 logging.info("      Added " + str(i) + " triples")
 
     S.fill(KG.triples(), K)
