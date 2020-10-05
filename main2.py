@@ -38,8 +38,8 @@ logging.info("KG triples: " +str(KG.number_of_triples_))
 split_index_train = int(len(user_answers)*0.7)
 
 # collapse to one list of entities
-user_log_train = [f for f in user_answers[:split_index_train] if KG.is_entity(f)]
-user_log_test = [f for f in user_answers[split_index_train:] if KG.is_entity(f)]
+user_log_train = [f for c in user_answers[:split_index_train] for f in c if KG.is_entity(f)]
+user_log_test = [f for c in user_answers[split_index_train:] for f in c if KG.is_entity(f)]
 
 # model user pref
 logging.info("Running GLIMPSE")
