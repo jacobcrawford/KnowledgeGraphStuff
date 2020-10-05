@@ -23,7 +23,7 @@ def downloadSelectedFiles(path_to_dest):
     url = 'http://downloads.dbpedia.org/3.9/en/'
     ext = 'nt.bz2'
     print('Beginning file download with urllib2...')
-    selected = ["long_abstracts.nt.bz2"]
+    selected = ["long_abstracts_en.nt.bz2"]
     not_selected = ["article_categories_en.nt.bz2", "category_labels_en.nt.bz2",
                     "geo_coordinates_en.nt.bz2", "instance_types_en.nt.bz2"
                     , "mappingbased_properties_en.nt.bz2",
