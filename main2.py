@@ -1,13 +1,15 @@
 import logging
 import sys
-
 import pandas as pd
+from GLIMPSE_personalized_KGsummarization.src.base import DBPedia
+
+
 
 logging.basicConfig(format='[%(asctime)s] - %(message)s',
                     level=logging.DEBUG)
 
 
-from .src.base import DBPedia
+
 
 
 def loadDBPedia(path):
@@ -21,7 +23,7 @@ def loadDBPedia(path):
     return KG
 
 
-df = pd.read_csv("../user_query_log_answers.csv")
+df = pd.read_csv("user_query_log_answers/6d418da8de1b4e19787dc71797f22003.csv")
 # list of lists of answers as iris
 answers = [f.split(" ") for f in df['answers']]
 
