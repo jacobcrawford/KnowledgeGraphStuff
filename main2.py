@@ -61,18 +61,18 @@ for i in range(number_of_users):
     logging.info("user answers:" + str(len(user_log_train[i])+len(user_log_test[i])))
 
 
+for i in range(number_of_users):
+    KG.reset()
+    # model user pref
+    logging.info("Running GLIMPSE")
+    summary = GLIMPSE(KG,KG.number_of_triples()*0.001,user_log_train, 1e-2)
+    logging.info("done")
 
+    entities_test = len(user_log_test)
+    count = 0
+    for iri in user_log_test:
+        if summary.has_entity(iri):
+            count +=1
 
-# model user pref
-logging.info("Running GLIMPSE")
-summary = GLIMPSE(KG,10000,user_log_train, 1e-2)
-logging.info("done")
-
-entities_test = len(user_log_test)
-count = 0
-for iri in user_log_test:
-    if summary.has_entity(iri):
-        count +=1
-
-logging.info("Summary contained" + str(count) + "/" + str(entities_test) + " :" + str(count/entities_test) + "%")
+    logging.info("Summary contained " + str(count) + "/" + str(entities_test) + " :" + str(count/entities_test) + "%")
 
