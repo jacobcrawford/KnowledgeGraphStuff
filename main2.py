@@ -1,5 +1,7 @@
 import logging
 import sys
+import time
+
 from os import listdir
 from os.path import isfile, join
 
@@ -46,6 +48,8 @@ for file in user_log_answer_files:
 
 path = sys.argv[1]
 KG = loadDBPedia(path)
+K = KG.number_of_triples()*0.00001
+e = 1e-2
 
 logging.info("KG entities: " +str(len(KG.entity_id_)))
 logging.info("KG triples: " +str(KG.number_of_triples_))
@@ -60,14 +64,15 @@ for i in range(number_of_users):
     user_log_test.append([f for c in user_answers[i][split_index_train:] for f in c if KG.is_entity(f)])
     logging.info("user answers:" + str(len(user_log_train[i])+len(user_log_test[i])))
 
-
+rows = []
 for i in range(number_of_users):
     KG.reset()
     # model user pref
     logging.info("Running GLIMPSE")
-    summary = GLIMPSE(KG,KG.number_of_triples()*0.001,user_log_train[i], 1e-2)
+    t1 = time.time()
+    summary = GLIMPSE(KG,K,user_log_train[i], e)
     logging.info("done")
-
+    t2 = time.time()
     entities_test = len(user_log_test[i])
     count = 0
     for iri in user_log_test[i]:
@@ -75,4 +80,7 @@ for i in range(number_of_users):
             count +=1
 
     logging.info("Summary contained " + str(count) + "/" + str(entities_test) + " :" + str(count/entities_test) + "%")
+    rows.append({'match': count, 'total': entities_test, '%': count/entities_test, 'runtime': t2-t1 })
+
+pd.DataFrame(rows).to_csv("experiments_results/"+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(K)+"e#"+str(e)+ ".csv")
 
