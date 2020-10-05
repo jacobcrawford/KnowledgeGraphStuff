@@ -2,6 +2,7 @@ import logging
 import sys
 import pandas as pd
 from GLIMPSE_personalized_KGsummarization.src.base import DBPedia
+from GLIMPSE_personalized_KGsummarization.src.glimpse import GLIMPSE
 
 
 
@@ -25,25 +26,31 @@ def loadDBPedia(path):
 
 df = pd.read_csv("user_query_log_answers/6d418da8de1b4e19787dc71797f22003.csv")
 # list of lists of answers as iris
-answers = [ ["<" +iri+">" for iri in f.split(" ")] for f in df['answers']]
+user_answers = [ ["<" +iri+">" for iri in f.split(" ")] for f in df['answers']]
 
 path = sys.argv[1]
 KG = loadDBPedia(path)
 
-print("checking " + "<http://dbpedia.org/resource/Artur_%C5%BBmijewski_(actor)>")
-print(KG.is_entity("<http://dbpedia.org/resource/Artur_%C5%BBmijewski_(actor)>"))
+logging.info("KG entities: " +str(len(KG.entity_id_)))
+logging.info("KG triples: " +str(KG.number_of_triples_))
 
+# Split log in 70%
+split_index_train = int(len(user_answers)*0.7)
 
-print("KG entities: " +str(len(KG.entity_id_)))
-print("KG triples: " +str(KG.number_of_triples_))
-print("entities head")
+# collapse to one list of entities
+user_log_train = [f for f in user_answers[:split_index_train] if KG.is_entity(f)]
+user_log_test = [f for f in user_answers[split_index_train:] if KG.is_entity(f)]
 
-for i in range(10):
-    print(KG.id_entity(i))
-print("\n")
+# model user pref
+logging.info("Running GLIMPSE")
+summary = GLIMPSE(KG,10000,user_log_train)
+logging.info("done")
 
+entities_test = len(user_log_test)
+count = 0
+for iri in user_log_test:
+    if summary.has_entity(iri):
+        count +=1
 
-for i in answers[0][:10]:
-    print("checking iri" + i)
-    print(KG.is_entity(i))
+logging.info("Summary contained" + str(count) + "/" + str(entities_test) + " :" + str(count/entities_test) + "%")
 
