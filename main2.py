@@ -70,7 +70,7 @@ for i in range(number_of_users):
 
     entities_test = len(user_log_test[i])
     count = 0
-    for iri in user_log_test:
+    for iri in user_log_test[i]:
         if summary.has_entity(iri):
             count +=1
 
