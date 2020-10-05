@@ -65,10 +65,10 @@ for i in range(number_of_users):
     KG.reset()
     # model user pref
     logging.info("Running GLIMPSE")
-    summary = GLIMPSE(KG,KG.number_of_triples()*0.001,user_log_train, 1e-2)
+    summary = GLIMPSE(KG,KG.number_of_triples()*0.001,user_log_train[i], 1e-2)
     logging.info("done")
 
-    entities_test = len(user_log_test)
+    entities_test = len(user_log_test[i])
     count = 0
     for iri in user_log_test:
         if summary.has_entity(iri):
