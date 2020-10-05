@@ -1,4 +1,4 @@
-import random
+import logging
 
 import numpy as np
 
@@ -87,7 +87,9 @@ def GLIMPSE(KG, K, query_log, epsilon=1e-3, power=1):
     :return S: Summary
     """
     # Estimate user preferences over KG
+    logging.info("  moddeling user prefs")
     KG.model_user_pref(query_log, power=power)
+    logging.info("  done")
 
     # Greedily select top-k triples for summary S
     heap = Heap(KG)

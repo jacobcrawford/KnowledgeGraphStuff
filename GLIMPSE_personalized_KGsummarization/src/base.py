@@ -3,6 +3,7 @@ import gzip
 import re
 
 import numpy as np
+import logging
 
 from collections import defaultdict
 from scipy.sparse import csr_matrix
@@ -226,12 +227,21 @@ class KnowledgeGraph(object):
             entity = self.id_entity(eid)
             self.entity_value_[entity] = np.log(val + 1)
 
+        step = 20
+        pct = 0
+        triples_done = 0
+        triples_step = self.number_of_triples() / step
+        logging.info("      "+str(pct) + "% done")
         for e1 in self.triples_:
             for r in self.triples_[e1]:
                 for e2 in self.triples_[e1][r]:
                     triple = (e1, r, e2)
                     eid1, eid2 = self.entity_id(e1), self.entity_id(e2)
                     self.triple_value_[triple] = np.log(x[eid1] * x[eid2] + 1)
+            triples_done += 1
+            if triples_done % triples_step == 0:
+                pct += 100/step
+                logging.info("      " + str(pct) + "% done")
 
     def query_dir(self):
         raise NotImplementedError
