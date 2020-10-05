@@ -1,6 +1,5 @@
 import os
 import gzip
-import json
 import re
 
 import numpy as np
@@ -398,8 +397,7 @@ class DBPedia(KnowledgeGraph):
         self.mid_dir_ = os.path.join(DBPEDIA_DATA_DIR, mid_dir)
 
     def is_entity(self, s):
-        raise NameError("IMPLEMENTATION MISSING")
-        #return s.startswith('<') and s.endswith('>')
+        return s in self.entity_id_
 
     def query_dir(self):
         return self.query_dir_
