@@ -1,5 +1,8 @@
 import logging
 import sys
+from os import listdir
+from os.path import isfile, join
+
 import pandas as pd
 from GLIMPSE_personalized_KGsummarization.src.base import DBPedia
 from GLIMPSE_personalized_KGsummarization.src.glimpse import GLIMPSE
@@ -23,10 +26,23 @@ def loadDBPedia(path):
     logging.info('Loaded {}'.format(KG.name()))
     return KG
 
+path = "user_query_log_answers/"
+user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
+number_of_users = len(user_log_answer_files)
 
-df = pd.read_csv("user_query_log_answers/6d418da8de1b4e19787dc71797f22003.csv")
-# list of lists of answers as iris
-user_answers = [ ["<" +iri+">" for iri in f.split(" ")] for f in df['answers']]
+
+user_log_train = []
+user_log_test = []
+user_answers = []
+
+for file in user_log_answer_files:
+
+    df = pd.read_csv(path+str(file))
+    # list of lists of answers as iris
+    user_answers.append([ ["<" +iri+">" for iri in f.split(" ")] for f in df['answers']])
+
+
+
 
 path = sys.argv[1]
 KG = loadDBPedia(path)
@@ -34,12 +50,18 @@ KG = loadDBPedia(path)
 logging.info("KG entities: " +str(len(KG.entity_id_)))
 logging.info("KG triples: " +str(KG.number_of_triples_))
 
-# Split log in 70%
-split_index_train = int(len(user_answers)*0.7)
+for i in range(number_of_users):
+    logging.info("user answers:" + str(len(user_answers[i])))
+    # Split log in 70%
+    split_index_train = int(len(user_answers[i])*0.7)
 
-# collapse to one list of entities
-user_log_train = [f for c in user_answers[:split_index_train] for f in c if KG.is_entity(f)]
-user_log_test = [f for c in user_answers[split_index_train:] for f in c if KG.is_entity(f)]
+    # collapse to one list of entities
+    user_log_train.append([f for c in user_answers[i][:split_index_train] for f in c if KG.is_entity(f)])
+    user_log_test.append([f for c in user_answers[i][split_index_train:] for f in c if KG.is_entity(f)])
+
+
+
+
 
 # model user pref
 logging.info("Running GLIMPSE")
