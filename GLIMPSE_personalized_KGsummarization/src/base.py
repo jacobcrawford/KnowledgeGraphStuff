@@ -420,11 +420,16 @@ class DBPedia(KnowledgeGraph):
                 for line in f:
                     if line.startswith("#"):
                         continue
+
                     fact = line.rstrip('\n')[:-2].split(' ')
                     e1, r = fact[:2]
                     e2 = ' '.join(fact[2:])
 
                     if not e1 or not e2:
+                        continue
+
+                    # remove property values
+                    if not (e1.startwith("<") and e1.endswith(">") and e2.startswith("<") and e2.endswith(">")):
                         continue
 
                     triple = (e1, r, e2)
