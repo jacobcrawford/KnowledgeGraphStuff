@@ -58,7 +58,7 @@ for i in range(number_of_users):
     # collapse to one list of entities
     user_log_train.append([f for c in user_answers[i][:split_index_train] for f in c if KG.is_entity(f)])
     user_log_test.append([f for c in user_answers[i][split_index_train:] for f in c if KG.is_entity(f)])
-
+    logging.info("user answers:" + str(len(user_log_train)+len(user_log_test)))
 
 
 
