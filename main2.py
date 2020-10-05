@@ -34,9 +34,12 @@ print("checking " + "http://dbpedia.org/resource/Artur_%C5%BBmijewski_(actor)")
 print(KG.is_entity("http://dbpedia.org/resource/Artur_%C5%BBmijewski_(actor)"))
 
 
-print("KG entities: " +str(KG.entity_id_))
+print("KG entities: " +str(len(KG.entity_id_)))
 print("KG triples: " +str(KG.number_of_triples_))
-print("entities head" + KG.entity_id_.keys()[:10])
+print("entities head")
+
+for i in range(10):
+    print(KG.id_entity(i))
 print("\n")
 
 
