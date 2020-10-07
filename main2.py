@@ -48,14 +48,13 @@ for file in user_log_answer_files:
 
 path = sys.argv[1]
 KG = loadDBPedia(path)
-K = KG.number_of_triples()*0.00001
+K = KG.number_of_triples()*0.001
 e = 1e-2
 
 logging.info("KG entities: " +str(len(KG.entity_id_)))
 logging.info("KG triples: " +str(KG.number_of_triples_))
 
 for i in range(number_of_users):
-    logging.info("user answers:" + str(len(user_answers[i])))
     # Split log in 70%
     split_index_train = int(len(user_answers[i])*0.7)
 
