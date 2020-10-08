@@ -1,17 +1,23 @@
 import subprocess
 import sys
+import time
 import urllib.request
 from os import listdir
 from os.path import isfile, join
+import re
 
+import numpy as np
 import pandas as pd
 import requests
+from SPARQLWrapper import SPARQLWrapper, RDF, N3
 from bs4 import BeautifulSoup
 
 # mypath = "dbpedia3.9"
 # parsed_logs = QueryLogReader.parseDirectoryOfLogs(mypath)
 # df = pd.DataFrame(parsed_logs)
 # d = queryDBPediaResourceAnalysis(df)
+from GLIMPSE_personalized_KGsummarization.src.algorithms import query_vector, random_walk_with_restart
+from main2 import loadDBPedia
 from virtuoso_connector import makeQueryLogsUserList, VirtuosoConnector
 
 def listFD(url, ext=''):
@@ -165,7 +171,57 @@ def extractAnswersToQuery():
         pd.DataFrame(rows).to_csv("user_query_log_answers/" + uid + ".csv")
 
 
+def pageRankExperiment(path):
+    KG = loadDBPedia(path)
 
+    path = "user_query_log_answers/"
+    user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
+    number_of_users = len(user_log_answer_files)
+
+    user_log_train = []
+    user_log_test = []
+    user_answers = []
+
+    for i in range(number_of_users):
+
+        for file in user_log_answer_files:
+            df = pd.read_csv(path + str(file))
+            # list of lists of answers as iris
+            user_answers.append([["<" + iri + ">" for iri in f.split(" ")] for f in df['answers']])
+
+        # Split log in 70%
+        split_index_train = int(len(user_answers[i]) * 0.7)
+
+        # collapse to one list of entities
+        user_log_train.append([f for c in user_answers[i][:split_index_train] for f in c if KG.is_entity(f)])
+        user_log_test.append([f for c in user_answers[i][split_index_train:] for f in c if KG.is_entity(f)])
+
+
+
+    K = [int(47408064*i) for i in [0.001,0.0001,0.00001]]
+
+    for ppr in [2,5]:
+        for k in K :
+            rows = []
+            for i in range(number_of_users):
+                t1 = time.time()
+                qv = query_vector(KG, user_log_train[i])
+                M = KG.transition_matrix()
+                ppr_v = random_walk_with_restart(M,qv,0.15,ppr)
+
+                t2 = time.time()
+
+                # Extract k indexes
+                indexes = np.argpartition(ppr_v,-k)[-k:]
+                summary = [KG.id_entity(i) for i in indexes]
+
+                count = 0
+                total = len(user_log_test[i])
+                for iri in user_log_test[i]:
+                    if iri in summary:
+                        count += 1
+                rows.append({'match': count, 'total': total, '%': count / total, 'runtime': t2 - t1})
+            pd.DataFrame(rows).to_csv("experiments_results_pagerank/" + "T#" + str(KG.number_of_triples()) + "_E#" + str(KG.number_of_entities()) + "K#" + ".csv")
 
 #analyseIRIUse(df)
 #getFileContaining("<http://www.w3.org/2004/02/skos/core")
@@ -175,5 +231,8 @@ def extractAnswersToQuery():
 #collapseIriNamespace()
 #extractAnswersToQuery()
 
-path_to_dest = sys.argv[1]
-downloadSelectedFiles(path_to_dest)
+#path_to_dest = sys.argv[1]
+#downloadSelectedFiles(path_to_dest)
+
+path = sys.argv[1]
+pageRankExperiment(path)
