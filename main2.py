@@ -48,7 +48,7 @@ for file in user_log_answer_files:
 
 path = sys.argv[1]
 KG = loadDBPedia(path)
-K = KG.number_of_triples()*0.001
+K = KG.number_of_triples()*0.0001
 e = 1e-2
 
 logging.info("KG entities: " +str(len(KG.entity_id_)))
