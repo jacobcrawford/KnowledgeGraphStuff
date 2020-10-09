@@ -17,7 +17,7 @@ from bs4 import BeautifulSoup
 # df = pd.DataFrame(parsed_logs)
 # d = queryDBPediaResourceAnalysis(df)
 from GLIMPSE_personalized_KGsummarization.src.algorithms import query_vector, random_walk_with_restart
-from main2 import loadDBPedia
+from main2 import loadDBPedia, runGLIMPSEExperiment
 from virtuoso_connector import makeQueryLogsUserList, VirtuosoConnector
 
 def listFD(url, ext=''):
@@ -198,7 +198,7 @@ def pageRankExperiment(path):
 
 
 
-    K = [int(47408064*i) for i in [0.001,0.0001,0.00001]]
+    K = [int(47408064*i) for i in [0.01]]
 
     for ppr in [2,5]:
         for k in K :
@@ -236,3 +236,33 @@ def pageRankExperiment(path):
 
 path = sys.argv[1]
 pageRankExperiment(path)
+runGLIMPSEExperiment()
+
+
+def printResults():
+    path1 = "experiments_results"
+    path2 = "experiments_results_pagerank"
+
+    ppr2 = [f for f in listdir(path2) if isfile(join(path2, f)) and f.endswith(".csv") and "PPR#2" in f]
+    ppr5 = [f for f in listdir(path2) if isfile(join(path2, f)) and f.endswith(".csv") and "PPR#2" in f]
+    glimpse = [f for f in listdir(path1) if isfile(join(path1, f)) and f.endswith(".csv") ]
+
+    print("PPR2")
+    for p in ppr2:
+        df = pd.read_csv(path2+ "/"+p)
+        print("k = " + str(p.split("K#")[1].split("_PPR")[0]))
+        print(df['%'].sum()/len(df['%']))
+
+    print("\nPPR5")
+
+    for p in ppr5:
+        df = pd.read_csv(path2+ "/"+p)
+        print("k = " + str(p.split("K#")[1].split("_PPR")[0]))
+        print(df['%'].sum()/len(df['%']))
+
+    print("\nGLIMPSE")
+    for p in glimpse:
+        df = pd.read_csv(path1 + "/" + p)
+        print("k = " + str(p.split("K#")[1].split("e#")[0]))
+        print(df['%'].sum() / len(df['%']))
+#printResults()

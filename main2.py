@@ -42,12 +42,9 @@ def runGLIMPSEExperiment():
         # list of lists of answers as iris
         user_answers.append([ ["<" +iri+">" for iri in f.split(" ")] for f in df['answers']])
 
-
-
-
     path = sys.argv[1]
     KG = loadDBPedia(path)
-    K = KG.number_of_triples()*0.0001
+    K = KG.number_of_triples()*0.01
     e = 1e-2
 
     logging.info("KG entities: " +str(len(KG.entity_id_)))
@@ -55,7 +52,7 @@ def runGLIMPSEExperiment():
 
     for i in range(number_of_users):
         # Split log in 70%
-        split_index_train = int(len(user_answers[i])*0.7)
+        split_index_train = int(len(user_answers[i]) * 0.7)
 
         # collapse to one list of entities
         user_log_train.append([f for c in user_answers[i][:split_index_train] for f in c if KG.is_entity(f)])
@@ -80,5 +77,5 @@ def runGLIMPSEExperiment():
         logging.info("Summary contained " + str(count) + "/" + str(entities_test) + " :" + str(count/entities_test) + "%")
         rows.append({'match': count, 'total': entities_test, '%': count/entities_test, 'runtime': t2-t1 })
 
-    pd.DataFrame(rows).to_csv("experiments_results/"+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(K)+"e#"+str(e)+ ".csv")
+    pd.DataFrame(rows).to_csv("experiments_results/"+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(K))+"e#"+str(e)+ ".csv")
 
