@@ -221,7 +221,7 @@ def pageRankExperiment(path):
                     if iri in summary:
                         count += 1
                 rows.append({'match': count, 'total': total, '%': count / total, 'runtime': t2 - t1})
-            pd.DataFrame(rows).to_csv("experiments_results_pagerank/" + "T#" + str(KG.number_of_triples()) + "_E#" + str(KG.number_of_entities()) + "K#" + ".csv")
+            pd.DataFrame(rows).to_csv("experiments_results_pagerank/" + "T#" + str(KG.number_of_triples()) + "_E#" + str(KG.number_of_entities()) + "_K#" + str(k) +"_PPR#" + str(ppr)+ ".csv")
 
 #analyseIRIUse(df)
 #getFileContaining("<http://www.w3.org/2004/02/skos/core")
