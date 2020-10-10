@@ -45,7 +45,7 @@ def runGLIMPSEExperiment():
     path = sys.argv[1]
     KG = loadDBPedia(path)
 
-    K = [10**-x for x in range(2,6)]
+    K = [(10**-x)*KG.number_of_triples() for x in range(2,6)]
     e = 1e-3
 
     logging.info("KG entities: " +str(len(KG.entity_id_)))
