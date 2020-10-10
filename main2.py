@@ -81,3 +81,4 @@ def runGLIMPSEExperiment():
 
         pd.DataFrame(rows).to_csv("experiments_results/"+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+ ".csv")
 
+runGLIMPSEExperiment()
