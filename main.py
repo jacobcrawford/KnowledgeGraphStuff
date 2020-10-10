@@ -234,9 +234,9 @@ def pageRankExperiment(path):
 #path_to_dest = sys.argv[1]
 #downloadSelectedFiles(path_to_dest)
 
-path = sys.argv[1]
-pageRankExperiment(path)
-runGLIMPSEExperiment()
+#path = sys.argv[1]
+#pageRankExperiment(path)
+#runGLIMPSEExperiment()
 
 
 def printResults():
