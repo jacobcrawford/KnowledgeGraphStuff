@@ -61,6 +61,7 @@ def runGLIMPSEExperiment():
         user_log_test.append([f for c in user_answers[i][split_index_train:] for f in c if KG.is_entity(f)])
         logging.info("user answers:" + str(len(user_log_train[i])+len(user_log_test[i])))
 
+    exit(0)
     for k in K:
         rows = []
         for i in range(number_of_users):
@@ -82,4 +83,4 @@ def runGLIMPSEExperiment():
 
         pd.DataFrame(rows).to_csv("experiments_results/"+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+ ".csv")
 
-#runGLIMPSEExperiment()
+runGLIMPSEExperiment()
