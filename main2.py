@@ -52,6 +52,7 @@ def runGLIMPSEExperiment():
     logging.info("KG triples: " +str(KG.number_of_triples_))
 
     for i in range(number_of_users):
+        print("User log queries: " + str(len(user_answers[i])))
         # Split log in 70%
         split_index_train = int(len(user_answers[i]) * 0.7)
 
@@ -81,4 +82,4 @@ def runGLIMPSEExperiment():
 
         pd.DataFrame(rows).to_csv("experiments_results/"+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+ ".csv")
 
-runGLIMPSEExperiment()
+#runGLIMPSEExperiment()

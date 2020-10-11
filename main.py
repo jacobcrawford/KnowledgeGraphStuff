@@ -245,7 +245,8 @@ def printResults():
 
     ppr2 = [f for f in listdir(path2) if isfile(join(path2, f)) and f.endswith(".csv") and "PPR#2" in f]
     ppr5 = [f for f in listdir(path2) if isfile(join(path2, f)) and f.endswith(".csv") and "PPR#2" in f]
-    glimpse = [f for f in listdir(path1) if isfile(join(path1, f)) and f.endswith(".csv") ]
+    glimpse1 = [f for f in listdir(path1) if isfile(join(path1, f)) and f.endswith(".csv") and "e#0.01" in f]
+    glimpse2 = [f for f in listdir(path1) if isfile(join(path1, f)) and f.endswith(".csv") and "e#0.001" in f]
 
     print("PPR2")
     for p in ppr2:
@@ -260,9 +261,15 @@ def printResults():
         print("k = " + str(p.split("K#")[1].split("_PPR")[0]))
         print(df['%'].sum()/len(df['%']))
 
-    print("\nGLIMPSE")
-    for p in glimpse:
+    print("\nGLIMPSE e=0.01")
+    for p in glimpse1:
         df = pd.read_csv(path1 + "/" + p)
         print("k = " + str(p.split("K#")[1].split("e#")[0]))
         print(df['%'].sum() / len(df['%']))
-#printResults()
+
+    print("\nGLIMPSE e=0.001")
+    for p in glimpse2:
+        df = pd.read_csv(path1 + "/" + p)
+        print("k = " + str(p.split("K#")[1].split("e#")[0]))
+        print(df['%'].sum() / len(df['%']))
+printResults()
