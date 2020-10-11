@@ -1,0 +1,16 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "Stock prices of 5 Tech Companies over Time.",
+  "width": 200,
+  "data": {"values":[{"acc": "0.4098189323948761", "algo": "ppr2", "k": "47408"}, {"acc": "0.1960305440492181", "algo": "ppr2", "k": "4740"}, {"acc": "0.5658482008845739", "algo": "ppr2", "k": "474080"}, {"acc": "0.10051439564924781", "algo": "ppr2", "k": "474"}, {"acc": "0.250930692551852", "algo": "ppr5", "k": "47408"}, {"acc": "0.07819270109837603", "algo": "ppr5", "k": "474"}, {"acc": "0.5413825540364959", "algo": "ppr5", "k": "474080"}, {"acc": "0.13272998726947713", "algo": "ppr5", "k": "4740"}, {"acc": "0.5815304821038598", "algo": "glimpse-2", "k": "474080"}, {"acc": "0.49797172280921814", "algo": "glimpse-2", "k": "47408"}, {"acc": "0.17408270851492716", "algo": "glimpse-2", "k": "474"}, {"acc": "0.4206649770608553", "algo": "glimpse-2", "k": "4740"}, {"acc": "0.5013864919727993", "algo": "glimpse-3", "k": "47408"}, {"acc": "0.17622706152183074", "algo": "glimpse-3", "k": "474"}, {"acc": "0.4165335210675861", "algo": "glimpse-3", "k": "4740"}, {"acc": "0.5984554757459114", "algo": "glimpse-3", "k": "474080"}]
+},
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": { "field": "k"},
+    "y": {"field": "acc", "type": "quantitative"},
+    "color": {"field": "algo", "type": "nominal"}
+  }
+}

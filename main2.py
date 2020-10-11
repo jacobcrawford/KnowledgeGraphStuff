@@ -45,8 +45,8 @@ def runGLIMPSEExperiment():
     path = sys.argv[1]
     KG = loadDBPedia(path)
 
-    K = [(10**-x)*KG.number_of_triples() for x in range(2,6)]
-    e = 1e-3
+    k = 0.1*KG.number_of_triples()
+    E = [1e-2,1e-3]
 
     logging.info("KG entities: " +str(len(KG.entity_id_)))
     logging.info("KG triples: " +str(KG.number_of_triples_))
@@ -61,8 +61,7 @@ def runGLIMPSEExperiment():
         user_log_test.append([f for c in user_answers[i][split_index_train:] for f in c if KG.is_entity(f)])
         logging.info("user answers:" + str(len(user_log_train[i])+len(user_log_test[i])))
 
-    exit(0)
-    for k in K:
+    for e in E:
         rows = []
         for i in range(number_of_users):
             KG.reset()

@@ -4,6 +4,7 @@ import time
 import urllib.request
 from os import listdir
 from os.path import isfile, join
+import json
 import re
 
 import numpy as np
@@ -198,7 +199,7 @@ def pageRankExperiment(path):
 
 
 
-    K = [int(47408064*i) for i in [0.01]]
+    K = [int(KG.number_of_triples()*i) for i in [0.1]]
 
     for ppr in [2,5]:
         for k in K :
@@ -234,9 +235,9 @@ def pageRankExperiment(path):
 #path_to_dest = sys.argv[1]
 #downloadSelectedFiles(path_to_dest)
 
-#path = sys.argv[1]
-#pageRankExperiment(path)
-#runGLIMPSEExperiment()
+path = sys.argv[1]
+pageRankExperiment(path)
+runGLIMPSEExperiment()
 
 
 def printResults():
@@ -244,32 +245,49 @@ def printResults():
     path2 = "experiments_results_pagerank"
 
     ppr2 = [f for f in listdir(path2) if isfile(join(path2, f)) and f.endswith(".csv") and "PPR#2" in f]
-    ppr5 = [f for f in listdir(path2) if isfile(join(path2, f)) and f.endswith(".csv") and "PPR#2" in f]
+    ppr5 = [f for f in listdir(path2) if isfile(join(path2, f)) and f.endswith(".csv") and "PPR#5" in f]
     glimpse1 = [f for f in listdir(path1) if isfile(join(path1, f)) and f.endswith(".csv") and "e#0.01" in f]
     glimpse2 = [f for f in listdir(path1) if isfile(join(path1, f)) and f.endswith(".csv") and "e#0.001" in f]
+
+    rows = []
 
     print("PPR2")
     for p in ppr2:
         df = pd.read_csv(path2+ "/"+p)
-        print("k = " + str(p.split("K#")[1].split("_PPR")[0]))
-        print(df['%'].sum()/len(df['%']))
+        k = str(p.split("K#")[1].split("_PPR")[0])
+        print("k = " +k )
+        acc = df['%'].sum()/len(df['%'])
+        print(acc)
+        rows.append({'acc':str(acc), 'algo':"ppr2", 'k':str(k)})
 
     print("\nPPR5")
 
     for p in ppr5:
         df = pd.read_csv(path2+ "/"+p)
-        print("k = " + str(p.split("K#")[1].split("_PPR")[0]))
-        print(df['%'].sum()/len(df['%']))
+        k = str(p.split("K#")[1].split("_PPR")[0])
+        print("k = " + k)
+        acc = df['%'].sum() / len(df['%'])
+        print(acc)
+        rows.append({'acc': str(acc), 'algo': "ppr5", 'k': str(k)})
 
     print("\nGLIMPSE e=0.01")
     for p in glimpse1:
         df = pd.read_csv(path1 + "/" + p)
-        print("k = " + str(p.split("K#")[1].split("e#")[0]))
-        print(df['%'].sum() / len(df['%']))
+        k = str(p.split("K#")[1].split("e#")[0])
+        print("k = " + k)
+        acc = df['%'].sum() / len(df['%'])
+        print(acc)
+        rows.append({'acc': str(acc), 'algo': "glimpse-2", 'k': str(k)})
 
     print("\nGLIMPSE e=0.001")
     for p in glimpse2:
         df = pd.read_csv(path1 + "/" + p)
-        print("k = " + str(p.split("K#")[1].split("e#")[0]))
-        print(df['%'].sum() / len(df['%']))
-printResults()
+        k = str(p.split("K#")[1].split("e#")[0])
+        print("k = " + k)
+        acc = df['%'].sum() / len(df['%'])
+        print(acc)
+        rows.append({'acc': str(acc), 'algo': "glimpse-3", 'k': str(k)})
+
+
+    print(json.dumps(rows))
+#printResults()
