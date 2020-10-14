@@ -83,3 +83,5 @@ def runGLIMPSEExperiment():
                 rows.append({'match': count, 'total': entities_test, '%': count/entities_test, 'runtime': t2-t1 })
 
             pd.DataFrame(rows).to_csv("experiments_results/v"+version+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+ ".csv")
+
+runGLIMPSEExperiment()
