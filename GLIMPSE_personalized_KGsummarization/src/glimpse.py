@@ -105,15 +105,11 @@ def GLIMPSE(KG, K, query_log, epsilon=1e-3, power=1):
         sample_size = len(heap) if epsilon is None else \
                 int(len(heap) / K * np.log(1 / epsilon))
         logging.info("  Adding triples to summary")
-        i = 0
         while len(heap) and S.number_of_triples() < K:
 
             triple = heap.pop()
             S.add_triple(triple)
             heap.update(S, sample_size)
-            i+=1
-            if i % 1000 == 0:
-                logging.info("      Added " + str(i) + " triples")
 
     S.fill(KG.triples(), K)
     return S
