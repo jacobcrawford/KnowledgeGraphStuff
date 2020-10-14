@@ -1,0 +1,7 @@
+,id,answers
+0,0,http://dbpedia.org/resource/France http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://schema.org/Country
+1,1,http://dbpedia.org/resource/France http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://schema.org/Place
+2,2,http://dbpedia.org/resource/France http://dbpedia.org/ontology/capital http://dbpedia.org/resource/Paris
+3,3,http://dbpedia.org/resource/France http://dbpedia.org/ontology/capital http://dbpedia.org/resource/Paris
+4,4,http://dbpedia.org/resource/France http://dbpedia.org/ontology/capital http://dbpedia.org/resource/Paris
+5,5,http://dbpedia.org/resource/France http://dbpedia.org/ontology/capital http://dbpedia.org/resource/Paris

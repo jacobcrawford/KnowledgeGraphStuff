@@ -45,7 +45,7 @@ def runGLIMPSEExperiment():
 
     path = sys.argv[1]
     KG = loadDBPedia(path)
-    K = [10*(10**-i) for i in range(-1, 4)]
+    K = [10*(10**-i)*KG.number_of_triples() for i in range(1, 6)]
     ##k = 0.1*KG.number_of_triples()
     E = [1e-2,1e-3]
 
