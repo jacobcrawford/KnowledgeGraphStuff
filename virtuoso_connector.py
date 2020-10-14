@@ -22,7 +22,7 @@ def makeQueryLogsUserList():
 
     delete = []
     for k in user_list.keys():
-        if len(user_list[k]) < 100:
+        if len(user_list[k]) < 20: # CHANGED FROM 100
             delete.append(k)
     for k in delete:
         del user_list[k]
@@ -30,10 +30,10 @@ def makeQueryLogsUserList():
 
 class VirtuosoConnector:
 
-    def __init__(self, url="http://localhost:8890/sparql", defaultgraph='http://www.purl.com/KG_SUMMARY/DBPedia3.9_SMALL'):
+    def __init__(self, url="http://localhost:8890/sparql", defaultgraph='http://www.purl.com/KG_SUMMARY/DBPedia3.9_SMALL', format=JSON):
         self.sparql = SPARQLWrapper(url)
         self.sparql.setTimeout(100)
-        self.sparql.setReturnFormat(JSON)
+        self.sparql.setReturnFormat(format)
         if defaultgraph:
             self.sparql.addParameter('default-graph-uri', defaultgraph)
 

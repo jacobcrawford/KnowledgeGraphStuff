@@ -1,6 +1,7 @@
 import subprocess
-import sys
+import math
 import time
+from rdflib import URIRef, Literal
 import urllib.request
 from os import listdir
 from os.path import isfile, join
@@ -10,7 +11,7 @@ import re
 import numpy as np
 import pandas as pd
 import requests
-from SPARQLWrapper import SPARQLWrapper, RDF, N3
+from SPARQLWrapper import SPARQLWrapper, RDF, N3, RDFXML
 from bs4 import BeautifulSoup
 
 # mypath = "dbpedia3.9"
@@ -152,7 +153,7 @@ def main3(key):
 def extractAnswersToQuery():
     user_list = makeQueryLogsUserList()
     df = pd.read_csv("user_stats2.csv")
-    df = df[df['answers'] >= 40]
+    df = df[df['answers'] >= 15]
     v = VirtuosoConnector()
     for uid in df['uid']:
         rows = []
@@ -169,7 +170,104 @@ def extractAnswersToQuery():
             except Exception as e:
                 print(e)
 
-        pd.DataFrame(rows).to_csv("user_query_log_answers/" + uid + ".csv")
+        pd.DataFrame(rows).to_csv("user_query_log_answers2/" + uid + ".csv")
+
+def extractAnswersToQueryInRDF():
+    def removeOptional(query):
+        o_idx = query.lower().find("optional")
+        rem_o_end = query[o_idx:len(query)].find("}")
+        result = query[0: o_idx] + query[o_idx + rem_o_end: len(query)]
+        print(result)
+        if "optional" in result.lower():
+            print("MORE")
+            return removeOptional(result)
+        return result
+
+    def makeConstructQuery(q):
+
+        select_idx = q.lower().find("select")
+        # remove select
+        first = q[:select_idx]
+        # extract where
+        brac_start_idx = q.find('{')
+        brac_end_idx = len(q)  - q[::-1].find('}') - 1
+        where  = q[brac_start_idx:brac_end_idx + 1]
+        if "filter" in where.lower():
+            f = where.lower().find("filter")
+            where_c = where[0:f] + "}"
+        else:
+            where_c = where
+        if "optional" in where.lower():
+            where_c = removeOptional(where_c)
+        return first + "CONSTRUCT " + where_c + "WHERE" + where + q[brac_end_idx + 2: len(q)+1]
+
+    def extractTriples(results_rdf_lib):
+        results_triple = []
+        for triple in results_rdf_lib:
+            e1 = triple[0]
+            r = triple[1]
+            e2 = triple[2]
+            # Skip triples with property values
+            if type(e1) == Literal or type(e2) == Literal:
+                break
+            result = str(e1) + " " + str(r) + " " + str(e2)
+            results_triple.append(result)
+        return results_triple
+
+    a = "SELECT ?name ?description_en ?description_de ?musician WHERE { \
+         ?musician <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:German_musicians> .\
+         ?musician foaf:name ?name .\
+         OPTIONAL {\
+             ?musician rdfs:comment ?description_en .\
+             FILTER (LANG(?description_en) = 'en') .\
+         }\
+         OPTIONAL {\
+             ?musician rdfs:comment ?description_de .\
+             FILTER (LANG(?description_de) = 'de') .\
+         }\
+       }\
+        "
+    #print(makeConstructQuery(a))
+
+    user_list = makeQueryLogsUserList()
+    df = pd.read_csv("user_stats2.csv")
+    df = df[df['answers'] >= 20]
+    v = VirtuosoConnector(format=RDFXML)
+    v1 = VirtuosoConnector()
+    for uid in df['uid']:
+        rows = []
+        i = 0
+        success = 0
+        for q in user_list[uid]:
+            try:
+                results = v1.query(q)
+                if len(results) == 0:
+                    continue
+                else:
+                    success += 1
+            except:
+                continue
+            try:
+                qc = makeConstructQuery(q)
+                results = v.query(qc)
+
+                if len(results) == 0:
+                    continue
+                results = extractTriples(results)
+                if len(results) != 0:
+                    rows.append({'id': i, 'answers': " ".join(results)})
+                    i += 1
+            except Exception as e:
+                print("ERROR")
+                print(e)
+                print("\n####################")
+                print(q)
+                print("&&&&&&&&&&&&&&&&&&&")
+                print(qc)
+                print("####################\n")
+        print("Number of success queries:" + str(success))
+        print("Queries with results:" + str(len(rows)))
+        pd.DataFrame(rows).to_csv("user_query_log_answersRDF/" + uid + ".csv")
 
 
 def pageRankExperiment(path):
@@ -235,11 +333,6 @@ def pageRankExperiment(path):
 #path_to_dest = sys.argv[1]
 #downloadSelectedFiles(path_to_dest)
 
-path = sys.argv[1]
-pageRankExperiment(path)
-runGLIMPSEExperiment()
-
-
 def printResults():
     path1 = "experiments_results"
     path2 = "experiments_results_pagerank"
@@ -250,44 +343,65 @@ def printResults():
     glimpse2 = [f for f in listdir(path1) if isfile(join(path1, f)) and f.endswith(".csv") and "e#0.001" in f]
 
     rows = []
-
+    div = 10000
+    tms = 1000000
     print("PPR2")
+    def pctf(x):
+        f = math.ceil(int(x)/47408000*tms)/div
+        print("F:" + str(f), str(type(f)))
+        if f > 1:
+            print(f)
+            return str(math.floor(f))
+        f = str(f)
+        return f[0:f.find("1")+1]
+
+
     for p in ppr2:
         df = pd.read_csv(path2+ "/"+p)
         k = str(p.split("K#")[1].split("_PPR")[0])
         print("k = " +k )
+        pct = pctf(k)
         acc = df['%'].sum()/len(df['%'])
         print(acc)
-        rows.append({'acc':str(acc), 'algo':"ppr2", 'k':str(k)})
+        rows.append({'Accuracy':str(acc), 'Algorithm':"ppr2", 'K in % of |T|': pct})
 
     print("\nPPR5")
 
     for p in ppr5:
         df = pd.read_csv(path2+ "/"+p)
         k = str(p.split("K#")[1].split("_PPR")[0])
+        pct = pctf(k)
         print("k = " + k)
         acc = df['%'].sum() / len(df['%'])
         print(acc)
-        rows.append({'acc': str(acc), 'algo': "ppr5", 'k': str(k)})
+        rows.append({'Accuracy': str(acc), 'Algorithm': "ppr5", 'K in % of |T|': pct})
 
     print("\nGLIMPSE e=0.01")
     for p in glimpse1:
         df = pd.read_csv(path1 + "/" + p)
         k = str(p.split("K#")[1].split("e#")[0])
+        pct = pctf(k)
         print("k = " + k)
         acc = df['%'].sum() / len(df['%'])
         print(acc)
-        rows.append({'acc': str(acc), 'algo': "glimpse-2", 'k': str(k)})
+        rows.append({'Accuracy': str(acc), 'Algorithm': "glimpse-2", 'K in % of |T|': pct})
 
     print("\nGLIMPSE e=0.001")
     for p in glimpse2:
         df = pd.read_csv(path1 + "/" + p)
         k = str(p.split("K#")[1].split("e#")[0])
+        pct = pctf(k)
         print("k = " + k)
         acc = df['%'].sum() / len(df['%'])
         print(acc)
-        rows.append({'acc': str(acc), 'algo': "glimpse-3", 'k': str(k)})
+        rows.append({'Accuracy': str(acc), 'Algorithm': "glimpse-3", 'K in % of |T|': pct})
 
 
     print(json.dumps(rows))
+
+
+#path = sys.argv[1]
+#pageRankExperiment(path)
+#runGLIMPSEExperiment()
 #printResults()
+extractAnswersToQuery()
