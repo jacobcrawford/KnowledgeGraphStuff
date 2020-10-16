@@ -127,7 +127,15 @@ class KnowledgeGraph(object):
 
             # Record new entities
             for entity in (e1, e2):
+                # Add property uniqueness
+                if "http" not in entity:
+                    self.entity_id_[entity] = self.eid_
+                    self.id_entity_[self.eid_] = entity
+                    self.entities_.add(entity)
+                    self.eid_ += 1
+
                 if not self.has_entity(entity):
+
                     self.entity_id_[entity] = self.eid_
                     self.id_entity_[self.eid_] = entity
                     self.entities_.add(entity)

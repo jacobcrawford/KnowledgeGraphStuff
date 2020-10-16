@@ -6,6 +6,7 @@ from os import listdir
 from os.path import isfile, join
 import logging
 
+import numpy as np
 import pandas as pd
 
 from GLIMPSE_personalized_KGsummarization.src.algorithms import query_vector, random_walk_with_restart
@@ -15,8 +16,8 @@ from GLIMPSE_personalized_KGsummarization.src.glimpse import GLIMPSE
 logging.basicConfig(format='[%(asctime)s] - %(message)s',
                     level=logging.DEBUG)
 
-def loadDBPedia(path):
 
+def loadDBPedia(path):
     print("loading from: " + path)
     KG = DBPedia(rdf_gz=path)
     # Load the KG into memory
@@ -46,7 +47,6 @@ def printResults():
             return str(math.floor(f))
         f = str(f)
         return f[0:f.find("1")+1]
-
 
     for p in ppr2:
         df = pd.read_csv(path2+ "/"+p)
@@ -87,10 +87,7 @@ def printResults():
         acc = df['%'].sum() / len(df['%'])
         print(acc)
         rows.append({'Accuracy': str(acc), 'Algorithm': "glimpse-3", 'K in % of |T|': pct})
-
     print(json.dumps(rows))
-
-
 
 def pageRankExperiment(path):
     KG = loadDBPedia(path)
@@ -142,8 +139,6 @@ def pageRankExperiment(path):
                 rows.append({'match': count, 'total': total, '%': count / total, 'runtime': t2 - t1})
             pd.DataFrame(rows).to_csv("experiments_results_pagerank/v" +version+ "T#" + str(KG.number_of_triples()) + "_E#" + str(KG.number_of_entities()) + "_K#" + str(k) +"_PPR#" + str(ppr)+ ".csv")
 
-
-
 def runGLIMPSEExperiment():
     version = "2"
     path = "user_query_log_answers"+version+"/"
@@ -190,7 +185,7 @@ def runGLIMPSEExperiment():
             for i in range(number_of_users):
                 KG.reset()
                 # model user pref
-                logging.info("      Running GLIMPSE on user" + user_ids[i])
+                logging.info("      Running GLIMPSE on user: " + user_ids[i])
                 t1 = time.time()
                 summary = GLIMPSE(KG, k, user_log_train[i], e)
                 logging.info("      Done")
@@ -212,3 +207,4 @@ def f1skew(fn):
 
 path = sys.argv[1]
 pageRankExperiment(path)
+

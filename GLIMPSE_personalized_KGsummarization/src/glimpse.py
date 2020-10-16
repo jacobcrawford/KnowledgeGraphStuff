@@ -87,24 +87,18 @@ def GLIMPSE(KG, K, query_log, epsilon=1e-3, power=1):
     :return S: Summary
     """
     # Estimate user preferences over KG
-    logging.info("  moddeling user prefs")
     KG.model_user_pref(query_log, power=power)
-    logging.info("  done")
 
     # Greedily select top-k triples for summary S
     heap = Heap(KG)
     S = Summary(KG)
 
     if len(heap) <= K:
-        logging.info("  Filling heap with triples")
         S.fill(heap.triples(), K)
-        logging.info("  done")
     else:
-        logging.info("  Updating heap")
         heap.update(S, len(heap)) # update all marginals
         sample_size = len(heap) if epsilon is None else \
                 int(len(heap) / K * np.log(1 / epsilon))
-        logging.info("  Adding triples to summary")
         while len(heap) and S.number_of_triples() < K:
 
             triple = heap.pop()
