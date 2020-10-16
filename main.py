@@ -290,9 +290,7 @@ def pageRankExperiment(path):
         user_log_train.append([f for c in user_answers[i][:split_index_train] for f in c if KG.is_entity(f)])
         user_log_test.append([f for c in user_answers[i][split_index_train:] for f in c if KG.is_entity(f)])
 
-
-
-    K = [int(KG.number_of_triples()*i) for i in [0.1]]
+    K = [10*(10**-i)*KG.number_of_triples() for i in range(2, 7)]
 
     for ppr in [2,5]:
         for k in K :
@@ -387,9 +385,8 @@ def f1skew(fn):
     return (2/(1 + fn))/(1+(1/(1+fn)))
 
 #path = sys.argv[1]
-#pageRankExperiment(path)
+pageRankExperiment(path)
 #runGLIMPSEExperiment()
 #printResults()
 #extractAnswersToQuery()
-
 #print(f1skew(1))
