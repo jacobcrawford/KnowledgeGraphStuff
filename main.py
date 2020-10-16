@@ -392,4 +392,4 @@ def f1skew(fn):
 #printResults()
 #extractAnswersToQuery()
 
-print(f1skew(1))
+#print(f1skew(1))
