@@ -99,6 +99,7 @@ def GLIMPSE(KG, K, query_log, epsilon=1e-3, power=1):
         heap.update(S, len(heap)) # update all marginals
         sample_size = len(heap) if epsilon is None else \
                 int(len(heap) / K * np.log(1 / epsilon))
+
         while len(heap) and S.number_of_triples() < K:
 
             triple = heap.pop()
