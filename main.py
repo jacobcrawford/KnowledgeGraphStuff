@@ -14,12 +14,8 @@ import requests
 from SPARQLWrapper import SPARQLWrapper, RDF, N3, RDFXML
 from bs4 import BeautifulSoup
 
-# mypath = "dbpedia3.9"
-# parsed_logs = QueryLogReader.parseDirectoryOfLogs(mypath)
-# df = pd.DataFrame(parsed_logs)
-# d = queryDBPediaResourceAnalysis(df)
 from GLIMPSE_personalized_KGsummarization.src.algorithms import query_vector, random_walk_with_restart
-from main2 import loadDBPedia, runGLIMPSEExperiment
+from main2 import loadDBPedia
 from virtuoso_connector import makeQueryLogsUserList, VirtuosoConnector
 
 def listFD(url, ext=''):
@@ -227,7 +223,6 @@ def extractAnswersToQueryInRDF():
          }\
        }\
         "
-    #print(makeConstructQuery(a))
 
     user_list = makeQueryLogsUserList()
     df = pd.read_csv("user_stats2.csv")
@@ -272,8 +267,8 @@ def extractAnswersToQueryInRDF():
 
 def pageRankExperiment(path):
     KG = loadDBPedia(path)
-
-    path = "user_query_log_answers/"
+    version = "2"
+    path = "user_query_log_answers" + version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
     number_of_users = len(user_log_answer_files)
 
@@ -320,18 +315,7 @@ def pageRankExperiment(path):
                     if iri in summary:
                         count += 1
                 rows.append({'match': count, 'total': total, '%': count / total, 'runtime': t2 - t1})
-            pd.DataFrame(rows).to_csv("experiments_results_pagerank/" + "T#" + str(KG.number_of_triples()) + "_E#" + str(KG.number_of_entities()) + "_K#" + str(k) +"_PPR#" + str(ppr)+ ".csv")
-
-#analyseIRIUse(df)
-#getFileContaining("<http://www.w3.org/2004/02/skos/core")
-#makeUniqueIriFiles()
-#analyseIRIUse()
-#analyseFilesForIriUse()
-#collapseIriNamespace()
-#extractAnswersToQuery()
-
-#path_to_dest = sys.argv[1]
-#downloadSelectedFiles(path_to_dest)
+            pd.DataFrame(rows).to_csv("experiments_results_pagerank/v" +version+ "T#" + str(KG.number_of_triples()) + "_E#" + str(KG.number_of_entities()) + "_K#" + str(k) +"_PPR#" + str(ppr)+ ".csv")
 
 def printResults():
     path1 = "experiments_results"
@@ -399,9 +383,13 @@ def printResults():
 
     print(json.dumps(rows))
 
+def f1skew(fn):
+    return (2/(1 + fn))/(1+(1/(1+fn)))
 
 #path = sys.argv[1]
 #pageRankExperiment(path)
 #runGLIMPSEExperiment()
 #printResults()
-extractAnswersToQuery()
+#extractAnswersToQuery()
+
+print(f1skew(1))

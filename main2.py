@@ -36,16 +36,18 @@ def runGLIMPSEExperiment():
     user_log_train = []
     user_log_test = []
     user_answers = []
+    user_ids = []
 
     for file in user_log_answer_files:
 
         df = pd.read_csv(path+str(file))
+        user_ids.append(file.split(".csv")[0])
         # list of lists of answers as iris
         user_answers.append([ ["<" +iri+">" for iri in f.split(" ")] for f in df['answers']])
 
     path = sys.argv[1]
     KG = loadDBPedia(path)
-    K = [10*(10**-i)*KG.number_of_triples() for i in range(1, 6)]
+    K = [10*(10**-i)*KG.number_of_triples() for i in range(2, 7)]
     ##k = 0.1*KG.number_of_triples()
     E = [1e-2,1e-3]
 
@@ -62,16 +64,18 @@ def runGLIMPSEExperiment():
         user_log_test.append([f for c in user_answers[i][split_index_train:] for f in c if KG.is_entity(f)])
         logging.info("user answers:" + str(len(user_log_train[i])+len(user_log_test[i])))
 
-    for k in K:
+    for k in [10**-5]:
+        logging.info("Running for K=" + str(k))
         for e in E:
+            logging.info("  Running for e=" + str(e))
             rows = []
             for i in range(number_of_users):
                 KG.reset()
                 # model user pref
-                logging.info("Running GLIMPSE")
+                logging.info("      Running GLIMPSE on user" + user_ids[i])
                 t1 = time.time()
-                summary = GLIMPSE(KG,k,user_log_train[i], e)
-                logging.info("done")
+                summary = GLIMPSE(KG, k, user_log_train[i], e)
+                logging.info("      Done")
                 t2 = time.time()
                 entities_test = len(user_log_test[i])
                 count = 0
@@ -79,9 +83,9 @@ def runGLIMPSEExperiment():
                     if summary.has_entity(iri):
                         count +=1
 
-                logging.info("Summary contained " + str(count) + "/" + str(entities_test) + " :" + str(count/entities_test) + "%")
+                logging.info("      Summary contained " + str(count) + "/" + str(entities_test) + " :" + str(count/entities_test) + "%")
                 rows.append({'match': count, 'total': entities_test, '%': count/entities_test, 'runtime': t2-t1 })
 
             pd.DataFrame(rows).to_csv("experiments_results/v"+version+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+ ".csv")
 
-runGLIMPSEExperiment()
+#runGLIMPSEExperiment()
