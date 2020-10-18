@@ -208,7 +208,7 @@ def runGLIMPSEExperiment():
                     accuracies.append(count/total_answers)
 
                 mean_accuracy = np.mean(np.array(accuracies))
-                logging.info("      Summary  accuracy " + mean_accuracy + "%")
+                logging.info("      Summary  accuracy " + str(mean_accuracy) + "%")
                 rows.append({'match': total_count, 'total': total_entities, '%':mean_accuracy , 'runtime': t2-t1 })
 
             pd.DataFrame(rows).to_csv("experiments_results/v"+version+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+ ".csv")
