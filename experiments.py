@@ -92,7 +92,8 @@ def printResults():
 def pageRankExperiment(path):
     KG = loadDBPedia(path)
     version = "2"
-    path = "user_query_log_answers" + version + "/"
+    answers_version = "2"
+    path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
     number_of_users = len(user_log_answer_files)
 
@@ -137,7 +138,7 @@ def pageRankExperiment(path):
                     if iri in summary:
                         count += 1
                 rows.append({'match': count, 'total': total, '%': count / total, 'runtime': t2 - t1})
-            pd.DataFrame(rows).to_csv("experiments_results_pagerank/v" +version+ "T#" + str(KG.number_of_triples()) + "_E#" + str(KG.number_of_entities()) + "_K#" + str(k) +"_PPR#" + str(ppr)+ ".csv")
+            pd.DataFrame(rows).to_csv("experiments_results_pagerank/v" +version+ "T#" + str(KG.number_of_triples()) + "_E#" + str(KG.number_of_entities()) + "_K#" + str(int(k)) +"_PPR#" + str(ppr)+ ".csv")
 
 def runGLIMPSEExperiment():
     version = "3"
@@ -162,7 +163,7 @@ def runGLIMPSEExperiment():
     path = sys.argv[1]
     KG = loadDBPedia(path)
     K = [10*(10**-i)*KG.number_of_triples() for i in range(2, 7)]
-    E = [1e-2,1e-3]
+    E = [1e-2]
 
     logging.info("KG entities: " +str(len(KG.entity_id_)))
     logging.info("KG triples: " +str(KG.number_of_triples_))
@@ -200,12 +201,15 @@ def runGLIMPSEExperiment():
                 for answers_to_query in user_log_test[idx_u]:
                     count = 0
                     total_answers = len(answers_to_query)
-                    total_entities += total_answers
-                    for iri in answers_to_query:
-                        if summary.has_entity(iri):
-                            count += 1
-                            total_count +=1
-                    accuracies.append(count/total_answers)
+                    if total_answers == 0:
+                        continue
+                    else:
+                        total_entities += total_answers
+                        for iri in answers_to_query:
+                            if summary.has_entity(iri):
+                                count += 1
+                                total_count +=1
+                        accuracies.append(count/total_answers)
 
                 mean_accuracy = np.mean(np.array(accuracies))
                 logging.info("      Summary  accuracy " + str(mean_accuracy) + "%")
