@@ -177,7 +177,7 @@ def runGLIMPSEExperiment():
         user_log_test.append([f for c in user_answers[i][split_index_train:] for f in c if KG.is_entity(f)])
         logging.info("user answers:" + str(len(user_log_train[i])+len(user_log_test[i])))
 
-    for k in [10**-5]:
+    for k in [10**-5*KG.number_of_triples()]:
         logging.info("Running for K=" + str(k))
         for e in E:
             logging.info("  Running for e=" + str(e))
