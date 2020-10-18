@@ -140,7 +140,7 @@ def pageRankExperiment(path):
             pd.DataFrame(rows).to_csv("experiments_results_pagerank/v" +version+ "T#" + str(KG.number_of_triples()) + "_E#" + str(KG.number_of_entities()) + "_K#" + str(k) +"_PPR#" + str(ppr)+ ".csv")
 
 def runGLIMPSEExperiment():
-    version = "2"
+    version = "3"
     path = "user_query_log_answers"+version+"/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
     number_of_users = len(user_log_answer_files)
@@ -161,7 +161,6 @@ def runGLIMPSEExperiment():
     path = sys.argv[1]
     KG = loadDBPedia(path)
     K = [10*(10**-i)*KG.number_of_triples() for i in range(2, 7)]
-    ##k = 0.1*KG.number_of_triples()
     E = [1e-2,1e-3]
 
     logging.info("KG entities: " +str(len(KG.entity_id_)))
@@ -172,32 +171,44 @@ def runGLIMPSEExperiment():
         # Split log in 70%
         split_index_train = int(len(user_answers[i]) * 0.7)
 
-        # collapse to one list of entities
-        user_log_train.append([f for c in user_answers[i][:split_index_train] for f in c if KG.is_entity(f)])
-        user_log_test.append([f for c in user_answers[i][split_index_train:] for f in c if KG.is_entity(f)])
+        # TODO make a list of lists where each list is the answers to one query
+        user_log_train.append([[entity for entity in answers_to_query if KG.is_entity(entity)]
+                               for answers_to_query in user_answers[i][:split_index_train] ])
+        user_log_test.append([[entity for entity in answers_to_query if KG.is_entity(entity)]
+                               for answers_to_query in user_answers[i][split_index_train:] ])
+
         logging.info("user answers:" + str(len(user_log_train[i])+len(user_log_test[i])))
 
-    for k in [10**-5*KG.number_of_triples()]:
+    for k in K:
         logging.info("Running for K=" + str(k))
         for e in E:
             logging.info("  Running for e=" + str(e))
             rows = []
-            for i in range(number_of_users):
+            for idx_u in range(number_of_users):
                 KG.reset()
                 # model user pref
-                logging.info("      Running GLIMPSE on user: " + user_ids[i])
+                logging.info("      Running GLIMPSE on user: " + user_ids[idx_u])
                 t1 = time.time()
-                summary = GLIMPSE(KG, k, user_log_train[i], e)
+                summary = GLIMPSE(KG, k, user_log_train[idx_u], e)
                 logging.info("      Done")
                 t2 = time.time()
-                entities_test = len(user_log_test[i])
-                count = 0
-                for iri in user_log_test[i]:
-                    if summary.has_entity(iri):
-                        count +=1
+                total_count = 0
+                total_entities = 0
 
-                logging.info("      Summary contained " + str(count) + "/" + str(entities_test) + " :" + str(count/entities_test) + "%")
-                rows.append({'match': count, 'total': entities_test, '%': count/entities_test, 'runtime': t2-t1 })
+                accuracies = []
+                for answers_to_query in user_log_test[idx_u]:
+                    count = 0
+                    total_answers = len(answers_to_query)
+                    total_entities += total_answers
+                    for iri in answers_to_query:
+                        if summary.has_entity(iri):
+                            count += 1
+                            total_count +=1
+                    accuracies.append(count/total_answers)
+
+                mean_accuracy = np.mean(np.array(accuracies))
+                logging.info("      Summary  accuracy " + mean_accuracy + "%")
+                rows.append({'match': total_count, 'total': total_entities, '%':mean_accuracy , 'runtime': t2-t1 })
 
             pd.DataFrame(rows).to_csv("experiments_results/v"+version+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+ ".csv")
 

@@ -8,13 +8,10 @@ def query_vector(KG, query_log_answers):
     :return x: query vector (n_entities,)
     """
     x = np.zeros(KG.number_of_entities())
-    #for query in query_log:
-    #    parse = query['Parse']
-    #    topic_eid = KG.entity_id(parse['TopicEntityMid'])
-    #    x[topic_eid] += 1
-    for entity in query_log_answers:
-        entity_id = KG.entity_id(entity)
-        x[entity_id] += 1
+    for i in range(len(query_log_answers)):
+        for entity in query_log_answers[i]:
+            entity_id = KG.entity_id(entity)
+            x[entity_id] += 1/len(query_log_answers[i])
     return x
 
 def random_walk_with_restart(M, x, c=0.15, power=1):
