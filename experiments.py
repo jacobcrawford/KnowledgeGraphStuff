@@ -141,7 +141,8 @@ def pageRankExperiment(path):
 
 def runGLIMPSEExperiment():
     version = "3"
-    path = "user_query_log_answers"+version+"/"
+    answers_version = "2"
+    path = "user_query_log_answers"+answers_version+"/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
     number_of_users = len(user_log_answer_files)
 
