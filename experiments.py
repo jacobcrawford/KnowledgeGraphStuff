@@ -206,5 +206,5 @@ def f1skew(fn):
     return (2/(1 + fn))/(1+(1/(1+fn)))
 
 path = sys.argv[1]
-pageRankExperiment(path)
-
+#pageRankExperiment(path)
+runGLIMPSEExperiment()
