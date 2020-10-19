@@ -357,7 +357,7 @@ def parse_args():
 
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--KG-path', default='../dpbedia3.9/', help='Path to the KG files')
+    parser.add_argument('--KG-path', default='../dbpedia3.9/', help='Path to the KG files')
 
     parser.add_argument('--percent-triples', type=float_in_zero_one, default=0.001,
             help='Ratio of number of triples of KG to use as K '
