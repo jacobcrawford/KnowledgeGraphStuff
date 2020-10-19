@@ -247,3 +247,29 @@ ZeroDivisionError: division by zero
 [2020-10-19 12:34:41,558] -       Done
 [2020-10-19 12:34:41,581] -       Summary  accuracy 0.438254292575%
 [2020-10-19 12:34:49,211] -       Running GLIMPSE on user: 6d418da8de1b4e19787dc71797f22003
+[2020-10-19 12:52:31,268] -       Done
+[2020-10-19 12:52:31,268] -       Summary  accuracy 0.0844444444444%
+[2020-10-19 12:52:35,855] -       Running GLIMPSE on user: 14bd03bd4ce49c81dc98369ff75bf1d9
+[2020-10-19 13:18:53,286] -       Done
+[2020-10-19 13:18:53,287] -       Summary  accuracy 0.428571428571%
+[2020-10-19 13:19:03,299] -       Running GLIMPSE on user: d0e1d796c308100bd2eef558311f8eae
+[2020-10-19 13:45:59,683] -       Done
+[2020-10-19 13:45:59,683] -       Summary  accuracy 0.666666666667%
+[2020-10-19 13:46:05,576] -       Running GLIMPSE on user: c1065e0ce541801df42f864ce5c0da31
+[2020-10-19 14:04:24,974] -       Done
+[2020-10-19 14:04:24,975] -       Summary  accuracy 0.479349415205%
+[2020-10-19 14:04:29,888] -       Running GLIMPSE on user: b7f0932b03213ed5af523bce495c882e
+[2020-10-19 14:28:50,492] -       Done
+[2020-10-19 14:28:50,493] -       Summary  accuracy 0.132558407513%
+[2020-10-19 14:28:55,700] -       Running GLIMPSE on user: c437c7c6be16e7b5aa0b4fbed3aa3304
+[2020-10-19 14:50:01,084] -       Done
+[2020-10-19 14:50:01,084] -       Summary  accuracy 1.0%
+[2020-10-19 14:50:01,086] - Running for K=474.08063999999996
+[2020-10-19 14:50:01,086] -   Running for e=0.01
+[2020-10-19 14:50:06,210] -       Running GLIMPSE on user: e501b61d45deb9937635cacba1c3b87a
+[2020-10-19 15:13:37,415] -       Done
+[2020-10-19 15:13:37,424] -       Summary  accuracy 0.400006666667%
+[2020-10-19 15:13:40,887] -       Running GLIMPSE on user: 0126ace40b97576faafdc04d352bf2e2
+[2020-10-19 15:31:57,227] -       Done
+[2020-10-19 15:31:57,227] -       Summary  accuracy 0.369744950754%
+[2020-10-19 15:32:00,417] -       Running GLIMPSE on user: d936a43387bad69a70f2adf35a7c80e4

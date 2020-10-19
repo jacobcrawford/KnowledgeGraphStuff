@@ -1,0 +1,19 @@
+[2020-10-19 13:37:20,742] - Loading DBPedia
+[2020-10-19 13:43:21,186] - Loaded DBPedia
+[2020-10-19 13:43:21,186] - Number of relationships: 1377
+[2020-10-19 13:43:23,429] - NO entity or relation: <Maria>
+[2020-10-19 13:43:23,429] - NO entity or relation: <Brizzihttp://en.wikipedia.org/wiki/Wikipedia:New_contributors%27_help_page>
+[2020-10-19 13:43:23,429] - NO entity or relation: <Giorgi>
+[2020-10-19 13:43:24,075] - unique entities: [143386, 6109, 468, 50405, 50220, 5114, 51025, 183291, 104142, 398, 52664, 81628, 920, 55066, 49251]
+[2020-10-19 13:43:24,076] - unique relations: [1, 99, 2, 103, 19, 0, 44, 185, 24, 0, 35, 0, 0, 16, 58]
+[2020-10-19 13:43:24,076] - unique entities avg: 55605.8
+[2020-10-19 13:43:24,076] - unique relations avg: 39.0666666667
+loading from: ../dbpedia3.9/
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//long_abstract_en_mod.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//topical_concepts_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//mappingbased_properties_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//instance_types_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//persondata_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//article_categories_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//geo_coordinates_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//category_labels_en.nt.gz' encoding='UTF-8'>
