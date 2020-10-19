@@ -277,7 +277,7 @@ def runGLIMPSEExperimentOnce(k, e,version, answers_version, kg_path):
 
     user_log_train, user_log_test = makeTrainingAndTestData(number_of_users,user_answers, KG)
 
-    k = k*KG.number_of_entities()
+    k = k*KG.number_of_triples()
 
     logging.info("KG entities: " + str(len(KG.number_of_entities())))
     logging.info("KG triples: " + str(KG.number_of_triples_))
@@ -308,7 +308,7 @@ def pageRankExperimentOnce(k,ppr,version,answers_version, kg_path):
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
     number_of_users = len(user_log_answer_files)
 
-    k = k*KG.number_of_entities()
+    k = k*KG.number_of_triples()
 
     user_answers = []
     user_ids = []
@@ -322,9 +322,9 @@ def pageRankExperimentOnce(k,ppr,version,answers_version, kg_path):
     user_log_train, user_log_test = makeTrainingAndTestData(number_of_users,user_answers, KG)
 
     rows = []
-    for i in range(number_of_users):
+    for idx_u in range(number_of_users):
         t1 = time.time()
-        qv = query_vector(KG, user_log_train[i])
+        qv = query_vector(KG, user_log_train[idx_u])
         M = KG.transition_matrix()
         ppr_v = random_walk_with_restart(M, qv, 0.15, ppr)
 
@@ -334,12 +334,9 @@ def pageRankExperimentOnce(k,ppr,version,answers_version, kg_path):
         indexes = np.argpartition(ppr_v, -k)[-k:]
         summary = [KG.id_entity(i) for i in indexes]
 
-        count = 0
-        total = len(user_log_test[i])
-        for iri in user_log_test[i]:
-            if iri in summary:
-                count += 1
-        rows.append({'match': count, 'total': total, '%': count / total, 'runtime': t2 - t1})
+        mean_accuracy, total_entities,total_count = calculateAccuracyAndTotals(user_log_test[idx_u], summary)
+        logging.info("      Summary  accuracy " + str(mean_accuracy) + "%")
+        rows.append({'match': total_count, 'total': total_entities, '%': mean_accuracy, 'runtime': t2 - t1})
     pd.DataFrame(rows).to_csv(
         "experiments_results_pagerank/v" + version + "T#" + str(KG.number_of_triples()) + "_E#" + str(
             KG.number_of_entities()) + "_K#" + str(int(k)) + "_PPR#" + str(ppr) + ".csv")
