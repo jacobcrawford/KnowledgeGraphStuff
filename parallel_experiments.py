@@ -6,8 +6,8 @@ import logging
 logging.basicConfig(format='[%(asctime)s] - %(message)s',
                     level=logging.DEBUG)
 
-answer_version = "v2"
-version = "v3"
+answer_version = "2"
+version = "3"
 
 if (False):
     for k in K:
