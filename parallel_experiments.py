@@ -5,8 +5,6 @@ import os
 answer_version = "v2"
 version = "v3"
 
-os.system('conda activate glimpse')
-
 if (False):
     for k in K:
         for e in E:
