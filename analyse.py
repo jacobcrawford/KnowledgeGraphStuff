@@ -161,7 +161,7 @@ def analyseIRIUse(path):
 def analyseAnswersFull(KG: KnowledgeGraph):
     logging.info("Number of relationships: "+ str(KG.number_of_relationships()))
 
-    path = "user_query_log_answers" + 2 + "/"
+    path = "user_query_log_answers" + str(2) + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
     number_of_users = len(user_log_answer_files)
 
