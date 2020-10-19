@@ -10,7 +10,6 @@ import argparse
 import numpy as np
 import pandas as pd
 
-from GLIMPSE_personalized_KGsummarization.main import float_in_zero_one
 from GLIMPSE_personalized_KGsummarization.src.algorithms import query_vector, random_walk_with_restart
 from GLIMPSE_personalized_KGsummarization.src.base import DBPedia
 from GLIMPSE_personalized_KGsummarization.src.glimpse import GLIMPSE
@@ -18,6 +17,12 @@ from GLIMPSE_personalized_KGsummarization.src.glimpse import GLIMPSE
 logging.basicConfig(format='[%(asctime)s] - %(message)s',
                     level=logging.DEBUG)
 
+def float_in_zero_one(value):
+    """Check if a float value is in [0, 1]"""
+    value = float(value)
+    if value < 0 or value > 1:
+        raise argparse.ArgumentTypeError('Value must be a float between 0 and 1')
+    return value
 
 def loadDBPedia(path):
     print("loading from: " + path)
