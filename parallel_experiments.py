@@ -23,7 +23,6 @@ if (False):
 
 for k in K:
     for ppr in [2,5]:
-        logging.info("Starting ppr"+str(ppr)+" for k="+ str(k))
         os.system('nohup python experiments.py'
                   + ' --method ppr'
                   + ' --walk '+str(ppr)

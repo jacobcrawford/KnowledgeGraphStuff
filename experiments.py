@@ -294,6 +294,7 @@ def runGLIMPSEExperimentOnce(k, e,version, answers_version, kg_path):
         KG.number_of_entities()) + "K#" + str(int(k)) + "e#" + str(e) + ".csv")
 
 def pageRankExperimentOnce(k,ppr,version,answers_version, kg_path):
+    logging.info("Starting ppr"+str(ppr)+" for k="+ str(k))
     KG = loadDBPedia(kg_path)
     path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
@@ -392,9 +393,11 @@ def main():
     if args.method == 'glimpse':
         e = args.epsilon
         runGLIMPSEExperimentOnce(k,e,version, answer_version, kg_path)
-    if args.method == 'ppr':
+    elif args.method == 'ppr':
         ppr = args.walk
         pageRankExperimentOnce(k,ppr,version,answer_version, kg_path )
+    else:
+        logging.info("running nothing. method parameter not set")
 
 
 if __name__ == '__main__':
