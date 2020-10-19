@@ -12,7 +12,7 @@ import pandas as pd
 
 from GLIMPSE_personalized_KGsummarization.src.algorithms import query_vector, random_walk_with_restart
 from GLIMPSE_personalized_KGsummarization.src.base import DBPedia
-from GLIMPSE_personalized_KGsummarization.src.glimpse import GLIMPSE
+from GLIMPSE_personalized_KGsummarization.src.glimpse import GLIMPSE, Summary
 
 logging.basicConfig(format='[%(asctime)s] - %(message)s',
                     level=logging.DEBUG)
@@ -332,7 +332,8 @@ def pageRankExperimentOnce(k,ppr,version,answers_version, kg_path):
 
         # Extract k indexes
         indexes = np.argpartition(ppr_v, -k)[-k:]
-        summary = [KG.id_entity(i) for i in indexes]
+        summary = Summary(KG)
+        summary.entities_ = set([KG.id_entity(i) for i in indexes])
 
         mean_accuracy, total_entities,total_count = calculateAccuracyAndTotals(user_log_test[idx_u], summary)
         logging.info("      Summary  accuracy " + str(mean_accuracy) + "%")

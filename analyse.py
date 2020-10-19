@@ -1,3 +1,4 @@
+import logging
 import re
 import subprocess
 from os import listdir
@@ -5,6 +6,11 @@ from os.path import isfile, join, getsize
 
 import pandas as pd
 import QueryLogReader
+from GLIMPSE_personalized_KGsummarization.src.base import KnowledgeGraph
+
+
+logging.basicConfig(format='[%(asctime)s] - %(message)s',
+                    level=logging.DEBUG)
 
 
 def keyword_analysis(df:pd.DataFrame):
@@ -150,3 +156,6 @@ def analyseIRIUse(path):
         rows.append({'iri': k, 'count': iri_count[k]})
     df = pd.DataFrame(rows)
     df.to_csv("query_log_iri_count.csv")
+
+def analyseRelationships(KG: KnowledgeGraph):
+    logging.info("Number of relationships: "+ str(KG.number_of_relationships()))
