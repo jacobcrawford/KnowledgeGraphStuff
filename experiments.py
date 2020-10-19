@@ -297,6 +297,8 @@ def pageRankExperimentOnce(k,ppr,version,answers_version, kg_path):
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
     number_of_users = len(user_log_answer_files)
 
+    k = k*KG.number_of_entities()
+
     user_log_train = []
     user_log_test = []
     user_answers = []
@@ -337,6 +339,7 @@ def pageRankExperimentOnce(k,ppr,version,answers_version, kg_path):
     pd.DataFrame(rows).to_csv(
         "experiments_results_pagerank/v" + version + "T#" + str(KG.number_of_triples()) + "_E#" + str(
             KG.number_of_entities()) + "_K#" + str(int(k)) + "_PPR#" + str(ppr) + ".csv")
+    logging.info("Done")
 
 
 def f1skew(fn):
