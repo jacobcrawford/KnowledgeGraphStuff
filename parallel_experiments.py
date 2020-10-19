@@ -1,4 +1,4 @@
-K = [10*(10**-i) for i in range(2, 7)]
+K = [10**-i for i in range(1, 6)]
 E = [1e-2]
 import os
 import logging
@@ -29,7 +29,7 @@ for k in K:
                + ' --percent-triples ' + str(k)\
                + ' --version ' + version\
                + ' --version-answers ' + answer_version\
-               + ' > ' + 'PPR'+str(ppr) + version+'a' + answer_version + '#K' + str(k) + '.out'\
+               + ' > ' + 'PPR'+str(ppr) +'v'+ version+'a' + answer_version + '#K' + str(k) + '.out'\
                + ' &'
         logging.info(call)
         os.system(call)
