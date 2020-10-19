@@ -206,3 +206,41 @@ ZeroDivisionError: division by zero
 [2020-10-19 07:43:27,682] -       Done
 [2020-10-19 07:43:27,683] -       Summary  accuracy 0.604395604396%
 [2020-10-19 07:43:42,780] -       Running GLIMPSE on user: d0e1d796c308100bd2eef558311f8eae
+[2020-10-19 08:09:46,650] -       Done
+[2020-10-19 08:09:46,650] -       Summary  accuracy 0.755555555556%
+[2020-10-19 08:10:03,648] -       Running GLIMPSE on user: c1065e0ce541801df42f864ce5c0da31
+[2020-10-19 08:28:46,458] -       Done
+[2020-10-19 08:28:46,459] -       Summary  accuracy 0.853801169591%
+[2020-10-19 08:28:55,198] -       Running GLIMPSE on user: b7f0932b03213ed5af523bce495c882e
+[2020-10-19 08:54:15,501] -       Done
+[2020-10-19 08:54:15,502] -       Summary  accuracy 0.3192568556%
+[2020-10-19 08:54:30,145] -       Running GLIMPSE on user: c437c7c6be16e7b5aa0b4fbed3aa3304
+[2020-10-19 09:16:32,016] -       Done
+[2020-10-19 09:16:32,017] -       Summary  accuracy 1.0%
+[2020-10-19 09:16:32,018] - Running for K=4740.8064
+[2020-10-19 09:16:32,018] -   Running for e=0.01
+[2020-10-19 09:16:47,045] -       Running GLIMPSE on user: e501b61d45deb9937635cacba1c3b87a
+[2020-10-19 09:41:26,182] -       Done
+[2020-10-19 09:41:26,193] -       Summary  accuracy 0.450023333333%
+[2020-10-19 09:41:32,916] -       Running GLIMPSE on user: 0126ace40b97576faafdc04d352bf2e2
+[2020-10-19 10:00:55,261] -       Done
+[2020-10-19 10:00:55,261] -       Summary  accuracy 0.682497524809%
+[2020-10-19 10:01:00,379] -       Running GLIMPSE on user: d936a43387bad69a70f2adf35a7c80e4
+[2020-10-19 10:15:09,277] -       Done
+[2020-10-19 10:15:09,278] -       Summary  accuracy 1.0%
+[2020-10-19 10:15:13,344] -       Running GLIMPSE on user: a61a81e4f9d8d569bfeaea6d4075fb8c
+[2020-10-19 10:41:35,994] -       Done
+[2020-10-19 10:41:35,994] -       Summary  accuracy 0.440196078431%
+[2020-10-19 10:41:41,546] -       Running GLIMPSE on user: 2898dabaa77d56a3b5276028ca875d90
+[2020-10-19 11:05:08,060] -       Done
+[2020-10-19 11:05:08,061] -       Summary  accuracy 0.5075%
+[2020-10-19 11:05:14,420] -       Running GLIMPSE on user: cdd5a53277177861c00f9a2c94337b26
+[2020-10-19 11:24:55,722] -       Done
+[2020-10-19 11:24:55,723] -       Summary  accuracy 0.35116162863%
+[2020-10-19 11:25:00,918] -       Running GLIMPSE on user: 5459e093980e751023cec2b325f14866
+[2020-10-19 11:48:38,204] -       Done
+[2020-10-19 11:48:38,205] -       Summary  accuracy 0.732146209259%
+[2020-10-19 11:48:43,386] -       Running GLIMPSE on user: f5a1c1793e4bbf386227a23af86cc580
+[2020-10-19 12:13:12,515] -       Done
+[2020-10-19 12:13:12,544] -       Summary  accuracy 0.0546697882095%
+[2020-10-19 12:13:21,771] -       Running GLIMPSE on user: 3281fc5f2013da01fc918488c5882e2c
