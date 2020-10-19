@@ -10,7 +10,7 @@ if (False):
         for e in E:
             os.system('nohup python experiments.py'
                       + ' --method glimpse'
-                      + ' --persent-triples ' + str(k)
+                      + ' --percent-triples ' + str(k)
                       + ' --version ' + version
                       + ' --version ' + answer_version
                       + ' --epsilon ' + str(e)
@@ -22,7 +22,7 @@ for k in K:
         os.system('nohup python experiments.py'
                   + ' --method ppr'
                   + ' --walk '+str(ppr)
-                  + ' --persent-triples ' + str(k)
+                  + ' --percent-triples ' + str(k)
                   + ' --version ' + version
                   + ' --version ' + answer_version
                   + ' > ' + 'PPR'+str(ppr) + version+'a' + answer_version + '#K' + str(k) + '.out'
