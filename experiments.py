@@ -376,7 +376,7 @@ def parse_args():
     parser.add_argument('--epsilon',
             help='Set this flag to the epsilon parameter.Defines the sampling size.', default=1e-2)
 
-    parser.add_argument('--method', nargs='+', default=['glimpse'],
+    parser.add_argument('--method', default=['glimpse'],
             choices=list(METHODS),
             help='Experiments to run')
 
@@ -384,7 +384,6 @@ def parse_args():
 
 def main():
     args = parse_args()
-
     k = args.percent_triples
     version = args.version
     answer_version = args.version_answers
