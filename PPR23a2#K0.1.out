@@ -1,15 +1,7 @@
-[2020-10-19 11:01:31,640] - Starting ppr2 for k=0.1
-[2020-10-19 11:01:31,641] - Loading DBPedia
-[2020-10-19 11:06:30,713] - Loaded DBPedia
+[2020-10-19 12:41:51,096] - Starting ppr2 for k=0.1
+[2020-10-19 12:41:51,096] - Loading DBPedia
+[2020-10-19 12:46:54,146] - Loaded DBPedia
 experiments.py:334: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
   indexes = np.argpartition(ppr_v, -k)[-k:]
-[2020-10-19 11:32:18,985] - Done
-loading from: ../dbpedia3.9/
-Loaded: <_io.TextIOWrapper name='../dbpedia3.9//long_abstract_en_mod.nt.gz' encoding='UTF-8'>
-Loaded: <_io.TextIOWrapper name='../dbpedia3.9//topical_concepts_en.nt.gz' encoding='UTF-8'>
-Loaded: <_io.TextIOWrapper name='../dbpedia3.9//mappingbased_properties_en.nt.gz' encoding='UTF-8'>
-Loaded: <_io.TextIOWrapper name='../dbpedia3.9//instance_types_en.nt.gz' encoding='UTF-8'>
-Loaded: <_io.TextIOWrapper name='../dbpedia3.9//persondata_en.nt.gz' encoding='UTF-8'>
-Loaded: <_io.TextIOWrapper name='../dbpedia3.9//article_categories_en.nt.gz' encoding='UTF-8'>
-Loaded: <_io.TextIOWrapper name='../dbpedia3.9//geo_coordinates_en.nt.gz' encoding='UTF-8'>
-Loaded: <_io.TextIOWrapper name='../dbpedia3.9//category_labels_en.nt.gz' encoding='UTF-8'>
+[2020-10-19 12:48:39,001] -       Summary  accuracy 0.897911666667%
+[2020-10-19 12:50:19,157] -       Summary  accuracy 0.973990929705%

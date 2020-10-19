@@ -244,3 +244,6 @@ ZeroDivisionError: division by zero
 [2020-10-19 12:13:12,515] -       Done
 [2020-10-19 12:13:12,544] -       Summary  accuracy 0.0546697882095%
 [2020-10-19 12:13:21,771] -       Running GLIMPSE on user: 3281fc5f2013da01fc918488c5882e2c
+[2020-10-19 12:34:41,558] -       Done
+[2020-10-19 12:34:41,581] -       Summary  accuracy 0.438254292575%
+[2020-10-19 12:34:49,211] -       Running GLIMPSE on user: 6d418da8de1b4e19787dc71797f22003
