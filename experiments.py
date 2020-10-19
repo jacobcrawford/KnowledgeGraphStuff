@@ -354,8 +354,8 @@ METHODS = {
 }
 
 VERSIONS = {
-    'v2': 'More users',
-    'v3': 'Normalizing query vector'
+    '2': 'More users',
+    '3': 'Normalizing query vector'
 }
 
 
