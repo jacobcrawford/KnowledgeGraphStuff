@@ -1,0 +1,13 @@
+[2020-10-16 11:35:34,658] - Loading DBPedia
+[2020-10-16 11:41:12,640] - Loaded DBPedia
+experiments.py:131: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  indexes = np.argpartition(ppr_v,-k)[-k:]
+loading from: ../dbpedia3.9/
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//long_abstract_en_mod.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//topical_concepts_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//mappingbased_properties_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//instance_types_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//persondata_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//article_categories_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//geo_coordinates_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//category_labels_en.nt.gz' encoding='UTF-8'>

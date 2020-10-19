@@ -1,0 +1,136 @@
+[2020-10-18 10:44:41,217] - Loading DBPedia
+[2020-10-18 10:49:42,958] - Loaded DBPedia
+[2020-10-18 10:49:42,958] - KG entities: 6589072
+[2020-10-18 10:49:42,958] - KG triples: 47408064
+[2020-10-18 10:49:43,315] - user answers:758139
+[2020-10-18 10:49:43,320] - user answers:7866
+[2020-10-18 10:49:43,321] - user answers:940
+[2020-10-18 10:49:43,348] - user answers:51067
+[2020-10-18 10:49:43,377] - user answers:50375
+[2020-10-18 10:49:43,381] - user answers:12491
+[2020-10-18 10:49:43,421] - user answers:60271
+[2020-10-18 10:49:43,585] - user answers:272520
+[2020-10-18 10:49:43,767] - user answers:237150
+[2020-10-18 10:49:43,768] - user answers:795
+[2020-10-18 10:49:43,841] - user answers:203699
+[2020-10-18 10:49:43,915] - user answers:163789
+[2020-10-18 10:49:43,917] - user answers:3582
+[2020-10-18 10:49:43,953] - user answers:62692
+[2020-10-18 10:49:44,056] - user answers:150151
+[2020-10-18 10:49:44,056] - Running for K=474.08064
+[2020-10-18 10:49:44,056] -   Running for e=0.01
+[2020-10-18 10:49:44,056] -       Running GLIMPSE on user: e501b61d45deb9937635cacba1c3b87a
+[2020-10-18 11:14:02,979] -       Done
+[2020-10-18 11:14:02,996] -       Summary contained 50/50486 :0.000990373568910193%
+[2020-10-18 11:14:10,876] -       Running GLIMPSE on user: 0126ace40b97576faafdc04d352bf2e2
+[2020-10-18 11:33:43,413] -       Done
+[2020-10-18 11:33:43,414] -       Summary contained 379/1274 :0.29748822605965464%
+[2020-10-18 11:33:46,642] -       Running GLIMPSE on user: d936a43387bad69a70f2adf35a7c80e4
+[2020-10-18 11:48:42,976] -       Done
+[2020-10-18 11:48:42,976] -       Summary contained 23/304 :0.0756578947368421%
+[2020-10-18 11:48:47,019] -       Running GLIMPSE on user: a61a81e4f9d8d569bfeaea6d4075fb8c
+[2020-10-18 12:11:46,634] -       Done
+[2020-10-18 12:11:46,634] -       Summary contained 18/370 :0.04864864864864865%
+[2020-10-18 12:11:49,931] -       Running GLIMPSE on user: 2898dabaa77d56a3b5276028ca875d90
+[2020-10-18 12:31:58,276] -       Done
+[2020-10-18 12:31:58,277] -       Summary contained 8/150 :0.05333333333333334%
+[2020-10-18 12:32:01,580] -       Running GLIMPSE on user: cdd5a53277177861c00f9a2c94337b26
+[2020-10-18 12:49:06,376] -       Done
+[2020-10-18 12:49:06,376] -       Summary contained 1022/3243 :0.31514030218933087%
+[2020-10-18 12:49:09,654] -       Running GLIMPSE on user: 5459e093980e751023cec2b325f14866
+[2020-10-18 13:10:52,967] -       Done
+[2020-10-18 13:10:52,968] -       Summary contained 1432/3616 :0.39601769911504425%
+[2020-10-18 13:10:56,286] -       Running GLIMPSE on user: f5a1c1793e4bbf386227a23af86cc580
+[2020-10-18 13:33:47,346] -       Done
+[2020-10-18 13:33:47,362] -       Summary contained 32/79178 :0.0004041526686705903%
+[2020-10-18 13:33:50,639] -       Running GLIMPSE on user: 3281fc5f2013da01fc918488c5882e2c
+[2020-10-18 13:52:20,769] -       Done
+[2020-10-18 13:52:20,783] -       Summary contained 139/82349 :0.0016879379227434455%
+[2020-10-18 13:52:24,077] -       Running GLIMPSE on user: 6d418da8de1b4e19787dc71797f22003
+[2020-10-18 14:09:41,272] -       Done
+[2020-10-18 14:09:41,272] -       Summary contained 2/135 :0.014814814814814815%
+[2020-10-18 14:09:46,829] -       Running GLIMPSE on user: 14bd03bd4ce49c81dc98369ff75bf1d9
+[2020-10-18 14:34:28,260] -       Done
+[2020-10-18 14:34:28,260] -       Summary contained 18/104 :0.17307692307692307%
+[2020-10-18 14:34:32,021] -       Running GLIMPSE on user: d0e1d796c308100bd2eef558311f8eae
+[2020-10-18 14:58:31,499] -       Done
+[2020-10-18 14:58:31,499] -       Summary contained 1/86 :0.011627906976744186%
+[2020-10-18 14:58:34,856] -       Running GLIMPSE on user: c1065e0ce541801df42f864ce5c0da31
+[2020-10-18 15:15:42,579] -       Done
+[2020-10-18 15:15:42,579] -       Summary contained 272/1642 :0.1656516443361754%
+[2020-10-18 15:15:45,879] -       Running GLIMPSE on user: b7f0932b03213ed5af523bce495c882e
+[2020-10-18 15:40:19,407] -       Done
+[2020-10-18 15:40:19,408] -       Summary contained 10/1742 :0.0057405281285878304%
+[2020-10-18 15:40:22,918] -       Running GLIMPSE on user: c437c7c6be16e7b5aa0b4fbed3aa3304
+[2020-10-18 16:00:47,231] -       Done
+[2020-10-18 16:00:47,232] -       Summary contained 7/7 :1.0%
+[2020-10-18 16:00:47,235] -   Running for e=0.001
+[2020-10-18 16:00:51,442] -       Running GLIMPSE on user: e501b61d45deb9937635cacba1c3b87a
+[2020-10-18 16:32:05,722] -       Done
+[2020-10-18 16:32:05,731] -       Summary contained 56/50486 :0.001109218397179416%
+[2020-10-18 16:32:09,357] -       Running GLIMPSE on user: 0126ace40b97576faafdc04d352bf2e2
+[2020-10-18 16:55:26,946] -       Done
+[2020-10-18 16:55:26,947] -       Summary contained 378/1274 :0.2967032967032967%
+[2020-10-18 16:55:30,263] -       Running GLIMPSE on user: d936a43387bad69a70f2adf35a7c80e4
+[2020-10-18 17:12:03,891] -       Done
+[2020-10-18 17:12:03,892] -       Summary contained 34/304 :0.1118421052631579%
+[2020-10-18 17:12:07,211] -       Running GLIMPSE on user: a61a81e4f9d8d569bfeaea6d4075fb8c
+[2020-10-18 17:41:26,018] -       Done
+[2020-10-18 17:41:26,018] -       Summary contained 19/370 :0.051351351351351354%
+[2020-10-18 17:41:29,338] -       Running GLIMPSE on user: 2898dabaa77d56a3b5276028ca875d90
+[2020-10-18 18:06:48,003] -       Done
+[2020-10-18 18:06:48,003] -       Summary contained 7/150 :0.04666666666666667%
+[2020-10-18 18:06:51,316] -       Running GLIMPSE on user: cdd5a53277177861c00f9a2c94337b26
+[2020-10-18 18:28:24,273] -       Done
+[2020-10-18 18:28:24,274] -       Summary contained 1015/3243 :0.312981806968856%
+[2020-10-18 18:28:27,567] -       Running GLIMPSE on user: 5459e093980e751023cec2b325f14866
+[2020-10-18 18:56:10,390] -       Done
+[2020-10-18 18:56:10,391] -       Summary contained 1396/3616 :0.3860619469026549%
+[2020-10-18 18:56:13,707] -       Running GLIMPSE on user: f5a1c1793e4bbf386227a23af86cc580
+[2020-10-18 19:25:19,750] -       Done
+[2020-10-18 19:25:19,761] -       Summary contained 34/79178 :0.0004294122104625022%
+[2020-10-18 19:25:23,062] -       Running GLIMPSE on user: 3281fc5f2013da01fc918488c5882e2c
+[2020-10-18 19:48:45,016] -       Done
+[2020-10-18 19:48:45,030] -       Summary contained 150/82349 :0.0018215157439677471%
+[2020-10-18 19:48:48,338] -       Running GLIMPSE on user: 6d418da8de1b4e19787dc71797f22003
+[2020-10-18 20:07:54,215] -       Done
+[2020-10-18 20:07:54,215] -       Summary contained 2/135 :0.014814814814814815%
+[2020-10-18 20:07:57,536] -       Running GLIMPSE on user: 14bd03bd4ce49c81dc98369ff75bf1d9
+[2020-10-18 20:39:07,982] -       Done
+[2020-10-18 20:39:07,982] -       Summary contained 18/104 :0.17307692307692307%
+[2020-10-18 20:39:11,285] -       Running GLIMPSE on user: d0e1d796c308100bd2eef558311f8eae
+[2020-10-18 21:10:23,152] -       Done
+[2020-10-18 21:10:23,152] -       Summary contained 0/86 :0.0%
+[2020-10-18 21:10:26,668] -       Running GLIMPSE on user: c1065e0ce541801df42f864ce5c0da31
+[2020-10-18 21:31:17,112] -       Done
+[2020-10-18 21:31:17,113] -       Summary contained 308/1642 :0.18757612667478685%
+[2020-10-18 21:31:20,385] -       Running GLIMPSE on user: b7f0932b03213ed5af523bce495c882e
+[2020-10-18 22:02:23,990] -       Done
+[2020-10-18 22:02:23,990] -       Summary contained 8/1742 :0.004592422502870264%
+[2020-10-18 22:02:27,278] -       Running GLIMPSE on user: c437c7c6be16e7b5aa0b4fbed3aa3304
+[2020-10-18 22:28:30,228] -       Done
+[2020-10-18 22:28:30,228] -       Summary contained 7/7 :1.0%
+loading from: ../dbpedia3.9/
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//long_abstract_en_mod.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//topical_concepts_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//mappingbased_properties_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//instance_types_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//persondata_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//article_categories_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//geo_coordinates_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//category_labels_en.nt.gz' encoding='UTF-8'>
+User log queries: 38
+User log queries: 139
+User log queries: 99
+User log queries: 28
+User log queries: 13
+User log queries: 44
+User log queries: 84
+User log queries: 56
+User log queries: 29
+User log queries: 50
+User log queries: 21
+User log queries: 27
+User log queries: 19
+User log queries: 21
+User log queries: 25

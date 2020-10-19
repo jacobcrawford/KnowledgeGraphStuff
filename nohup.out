@@ -1,0 +1,208 @@
+[2020-10-18 13:58:30,121] - Loading DBPedia
+[2020-10-18 14:03:32,274] - Loaded DBPedia
+[2020-10-18 14:03:32,274] - KG entities: 6589072
+[2020-10-18 14:03:32,274] - KG triples: 47408064
+[2020-10-18 14:03:32,661] - user answers:38
+[2020-10-18 14:03:32,667] - user answers:139
+[2020-10-18 14:03:32,668] - user answers:99
+[2020-10-18 14:03:32,696] - user answers:28
+[2020-10-18 14:03:32,728] - user answers:13
+[2020-10-18 14:03:32,750] - user answers:44
+[2020-10-18 14:03:32,791] - user answers:84
+[2020-10-18 14:03:32,947] - user answers:56
+[2020-10-18 14:03:33,126] - user answers:29
+[2020-10-18 14:03:33,127] - user answers:50
+[2020-10-18 14:03:33,201] - user answers:21
+[2020-10-18 14:03:33,276] - user answers:27
+[2020-10-18 14:03:33,277] - user answers:19
+[2020-10-18 14:03:33,313] - user answers:21
+[2020-10-18 14:03:33,428] - user answers:25
+[2020-10-18 14:03:33,428] - Running for K=4740806.4
+[2020-10-18 14:03:33,429] -   Running for e=0.01
+[2020-10-18 14:03:33,429] -       Running GLIMPSE on user: e501b61d45deb9937635cacba1c3b87a
+[2020-10-18 14:33:25,888] -       Done
+[2020-10-18 14:33:25,915] -       Summary  accuracy 0.912438333333%
+[2020-10-18 14:33:42,742] -       Running GLIMPSE on user: 0126ace40b97576faafdc04d352bf2e2
+[2020-10-18 14:55:13,505] -       Done
+[2020-10-18 14:55:13,506] -       Summary  accuracy 0.946825396825%
+[2020-10-18 14:55:38,452] -       Running GLIMPSE on user: d936a43387bad69a70f2adf35a7c80e4
+[2020-10-18 15:10:52,902] -       Done
+loading from: ../dbpedia3.9/
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//long_abstract_en_mod.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//topical_concepts_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//mappingbased_properties_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//instance_types_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//persondata_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//article_categories_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//geo_coordinates_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//category_labels_en.nt.gz' encoding='UTF-8'>
+User log queries: 38
+User log queries: 139
+User log queries: 99
+User log queries: 28
+User log queries: 13
+User log queries: 44
+User log queries: 84
+User log queries: 56
+User log queries: 29
+User log queries: 50
+User log queries: 21
+User log queries: 27
+User log queries: 19
+User log queries: 21
+User log queries: 25
+Traceback (most recent call last):
+  File "experiments.py", line 222, in <module>
+    runGLIMPSEExperiment()
+  File "experiments.py", line 208, in runGLIMPSEExperiment
+    accuracies.append(count/total_answers)
+ZeroDivisionError: division by zero
+[2020-10-18 15:59:17,893] - Loading DBPedia
+[2020-10-18 16:04:17,885] - Loaded DBPedia
+[2020-10-18 16:04:17,885] - KG entities: 6589072
+[2020-10-18 16:04:17,886] - KG triples: 47408064
+[2020-10-18 16:04:18,275] - user answers:38
+[2020-10-18 16:04:18,281] - user answers:139
+[2020-10-18 16:04:18,282] - user answers:99
+[2020-10-18 16:04:18,311] - user answers:28
+[2020-10-18 16:04:18,342] - user answers:13
+[2020-10-18 16:04:18,364] - user answers:44
+[2020-10-18 16:04:18,406] - user answers:84
+[2020-10-18 16:04:18,565] - user answers:56
+[2020-10-18 16:04:18,749] - user answers:29
+[2020-10-18 16:04:18,749] - user answers:50
+[2020-10-18 16:04:18,825] - user answers:21
+[2020-10-18 16:04:18,904] - user answers:27
+[2020-10-18 16:04:18,905] - user answers:19
+[2020-10-18 16:04:18,943] - user answers:21
+[2020-10-18 16:04:19,054] - user answers:25
+[2020-10-18 16:04:19,054] - Running for K=4740806.4
+[2020-10-18 16:04:19,054] -   Running for e=0.01
+[2020-10-18 16:04:19,054] -       Running GLIMPSE on user: e501b61d45deb9937635cacba1c3b87a
+[2020-10-18 16:32:24,131] -       Done
+[2020-10-18 16:32:24,157] -       Summary  accuracy 0.897541666667%
+[2020-10-18 16:32:40,141] -       Running GLIMPSE on user: 0126ace40b97576faafdc04d352bf2e2
+[2020-10-18 16:53:40,377] -       Done
+[2020-10-18 16:53:40,378] -       Summary  accuracy 0.965238095238%
+[2020-10-18 16:54:05,537] -       Running GLIMPSE on user: d936a43387bad69a70f2adf35a7c80e4
+[2020-10-18 17:09:01,017] -       Done
+[2020-10-18 17:09:01,017] -       Summary  accuracy 1.0%
+[2020-10-18 17:09:13,763] -       Running GLIMPSE on user: a61a81e4f9d8d569bfeaea6d4075fb8c
+[2020-10-18 17:35:43,813] -       Done
+[2020-10-18 17:35:43,814] -       Summary  accuracy 0.823529411765%
+[2020-10-18 17:36:02,668] -       Running GLIMPSE on user: 2898dabaa77d56a3b5276028ca875d90
+[2020-10-18 17:59:56,475] -       Done
+[2020-10-18 17:59:56,476] -       Summary  accuracy 0.7925%
+[2020-10-18 18:00:21,641] -       Running GLIMPSE on user: cdd5a53277177861c00f9a2c94337b26
+[2020-10-18 18:19:45,096] -       Done
+[2020-10-18 18:19:45,097] -       Summary  accuracy 0.961913951064%
+[2020-10-18 18:20:06,788] -       Running GLIMPSE on user: 5459e093980e751023cec2b325f14866
+[2020-10-18 18:46:09,942] -       Done
+[2020-10-18 18:46:09,943] -       Summary  accuracy 1.0%
+[2020-10-18 18:46:31,424] -       Running GLIMPSE on user: f5a1c1793e4bbf386227a23af86cc580
+[2020-10-18 19:13:46,772] -       Done
+[2020-10-18 19:13:46,807] -       Summary  accuracy 0.577818355011%
+[2020-10-18 19:14:14,286] -       Running GLIMPSE on user: 3281fc5f2013da01fc918488c5882e2c
+[2020-10-18 19:36:23,167] -       Done
+[2020-10-18 19:36:23,207] -       Summary  accuracy 0.944203972972%
+[2020-10-18 19:36:49,481] -       Running GLIMPSE on user: 6d418da8de1b4e19787dc71797f22003
+[2020-10-18 19:53:36,678] -       Done
+[2020-10-18 19:53:36,679] -       Summary  accuracy 0.994444444444%
+[2020-10-18 19:53:54,966] -       Running GLIMPSE on user: 14bd03bd4ce49c81dc98369ff75bf1d9
+[2020-10-18 20:22:32,286] -       Done
+[2020-10-18 20:22:32,286] -       Summary  accuracy 0.620879120879%
+[2020-10-18 20:22:54,074] -       Running GLIMPSE on user: d0e1d796c308100bd2eef558311f8eae
+[2020-10-18 20:51:53,125] -       Done
+[2020-10-18 20:51:53,125] -       Summary  accuracy 0.888888888889%
+[2020-10-18 20:52:24,792] -       Running GLIMPSE on user: c1065e0ce541801df42f864ce5c0da31
+[2020-10-18 21:12:51,449] -       Done
+[2020-10-18 21:12:51,450] -       Summary  accuracy 0.940545808967%
+[2020-10-18 21:13:19,880] -       Running GLIMPSE on user: b7f0932b03213ed5af523bce495c882e
+[2020-10-18 21:40:53,163] -       Done
+[2020-10-18 21:40:53,165] -       Summary  accuracy 0.679039355152%
+[2020-10-18 21:41:16,295] -       Running GLIMPSE on user: c437c7c6be16e7b5aa0b4fbed3aa3304
+[2020-10-18 22:04:18,885] -       Done
+[2020-10-18 22:04:18,885] -       Summary  accuracy 1.0%
+[2020-10-18 22:04:18,888] - Running for K=474080.64
+[2020-10-18 22:04:18,888] -   Running for e=0.01
+[2020-10-18 22:04:49,754] -       Running GLIMPSE on user: e501b61d45deb9937635cacba1c3b87a
+[2020-10-18 22:32:39,391] -       Done
+[2020-10-18 22:32:39,409] -       Summary  accuracy 0.767425%
+[2020-10-18 22:33:10,254] -       Running GLIMPSE on user: 0126ace40b97576faafdc04d352bf2e2
+[2020-10-18 22:52:50,820] -       Done
+[2020-10-18 22:52:50,821] -       Summary  accuracy 0.840725623583%
+[2020-10-18 22:53:14,731] -       Running GLIMPSE on user: d936a43387bad69a70f2adf35a7c80e4
+[2020-10-18 23:07:10,479] -       Done
+[2020-10-18 23:07:10,479] -       Summary  accuracy 1.0%
+[2020-10-18 23:07:20,834] -       Running GLIMPSE on user: a61a81e4f9d8d569bfeaea6d4075fb8c
+[2020-10-18 23:32:29,582] -       Done
+[2020-10-18 23:32:29,582] -       Summary  accuracy 0.683006535948%
+[2020-10-18 23:32:48,883] -       Running GLIMPSE on user: 2898dabaa77d56a3b5276028ca875d90
+[2020-10-18 23:55:28,988] -       Done
+[2020-10-18 23:55:28,988] -       Summary  accuracy 0.535%
+[2020-10-18 23:55:51,248] -       Running GLIMPSE on user: cdd5a53277177861c00f9a2c94337b26
+[2020-10-19 00:13:39,650] -       Done
+[2020-10-19 00:13:39,651] -       Summary  accuracy 0.615614805062%
+[2020-10-19 00:13:58,724] -       Running GLIMPSE on user: 5459e093980e751023cec2b325f14866
+[2020-10-19 00:38:34,457] -       Done
+[2020-10-19 00:38:34,458] -       Summary  accuracy 1.0%
+[2020-10-19 00:38:54,794] -       Running GLIMPSE on user: f5a1c1793e4bbf386227a23af86cc580
+[2020-10-19 01:04:37,105] -       Done
+[2020-10-19 01:04:37,128] -       Summary  accuracy 0.254111509926%
+[2020-10-19 01:05:01,573] -       Running GLIMPSE on user: 3281fc5f2013da01fc918488c5882e2c
+[2020-10-19 01:25:41,862] -       Done
+[2020-10-19 01:25:41,892] -       Summary  accuracy 0.744998971118%
+[2020-10-19 01:26:06,604] -       Running GLIMPSE on user: 6d418da8de1b4e19787dc71797f22003
+[2020-10-19 01:41:55,287] -       Done
+[2020-10-19 01:41:55,287] -       Summary  accuracy 0.423174603175%
+[2020-10-19 01:42:08,167] -       Running GLIMPSE on user: 14bd03bd4ce49c81dc98369ff75bf1d9
+[2020-10-19 02:09:04,383] -       Done
+[2020-10-19 02:09:04,383] -       Summary  accuracy 0.620879120879%
+[2020-10-19 02:09:25,364] -       Running GLIMPSE on user: d0e1d796c308100bd2eef558311f8eae
+[2020-10-19 02:36:43,092] -       Done
+[2020-10-19 02:36:43,092] -       Summary  accuracy 0.866666666667%
+[2020-10-19 02:37:10,075] -       Running GLIMPSE on user: c1065e0ce541801df42f864ce5c0da31
+[2020-10-19 02:55:23,582] -       Done
+[2020-10-19 02:55:23,583] -       Summary  accuracy 0.865984405458%
+[2020-10-19 02:55:46,290] -       Running GLIMPSE on user: b7f0932b03213ed5af523bce495c882e
+[2020-10-19 03:22:29,861] -       Done
+[2020-10-19 03:22:29,862] -       Summary  accuracy 0.353052771886%
+[2020-10-19 03:22:51,631] -       Running GLIMPSE on user: c437c7c6be16e7b5aa0b4fbed3aa3304
+[2020-10-19 03:44:50,685] -       Done
+[2020-10-19 03:44:50,685] -       Summary  accuracy 1.0%
+[2020-10-19 03:44:50,687] - Running for K=47408.064
+[2020-10-19 03:44:50,687] -   Running for e=0.01
+[2020-10-19 03:45:17,625] -       Running GLIMPSE on user: e501b61d45deb9937635cacba1c3b87a
+[2020-10-19 04:11:20,093] -       Done
+[2020-10-19 04:11:20,108] -       Summary  accuracy 0.513006666667%
+[2020-10-19 04:11:39,389] -       Running GLIMPSE on user: 0126ace40b97576faafdc04d352bf2e2
+[2020-10-19 04:31:31,484] -       Done
+[2020-10-19 04:31:31,484] -       Summary  accuracy 0.814875283447%
+[2020-10-19 04:31:44,694] -       Running GLIMPSE on user: d936a43387bad69a70f2adf35a7c80e4
+[2020-10-19 04:46:01,797] -       Done
+[2020-10-19 04:46:01,797] -       Summary  accuracy 1.0%
+[2020-10-19 04:46:08,089] -       Running GLIMPSE on user: a61a81e4f9d8d569bfeaea6d4075fb8c
+[2020-10-19 05:10:43,808] -       Done
+[2020-10-19 05:10:43,809] -       Summary  accuracy 0.591503267974%
+[2020-10-19 05:10:58,556] -       Running GLIMPSE on user: 2898dabaa77d56a3b5276028ca875d90
+[2020-10-19 05:32:56,771] -       Done
+[2020-10-19 05:32:56,771] -       Summary  accuracy 0.535%
+[2020-10-19 05:33:13,003] -       Running GLIMPSE on user: cdd5a53277177861c00f9a2c94337b26
+[2020-10-19 05:51:29,799] -       Done
+[2020-10-19 05:51:29,800] -       Summary  accuracy 0.487117346939%
+[2020-10-19 05:51:41,961] -       Running GLIMPSE on user: 5459e093980e751023cec2b325f14866
+[2020-10-19 06:15:35,899] -       Done
+[2020-10-19 06:15:35,920] -       Summary  accuracy 1.0%
+[2020-10-19 06:15:49,965] -       Running GLIMPSE on user: f5a1c1793e4bbf386227a23af86cc580
+[2020-10-19 06:40:15,011] -       Done
+[2020-10-19 06:40:15,029] -       Summary  accuracy 0.122566749781%
+[2020-10-19 06:40:31,352] -       Running GLIMPSE on user: 3281fc5f2013da01fc918488c5882e2c
+[2020-10-19 07:01:16,390] -       Done
+[2020-10-19 07:01:16,411] -       Summary  accuracy 0.550353963975%
+[2020-10-19 07:01:31,606] -       Running GLIMPSE on user: 6d418da8de1b4e19787dc71797f22003
+[2020-10-19 07:17:20,191] -       Done
+[2020-10-19 07:17:20,191] -       Summary  accuracy 0.0777777777778%
+[2020-10-19 07:17:27,787] -       Running GLIMPSE on user: 14bd03bd4ce49c81dc98369ff75bf1d9
+[2020-10-19 07:43:27,682] -       Done
+[2020-10-19 07:43:27,683] -       Summary  accuracy 0.604395604396%
+[2020-10-19 07:43:42,780] -       Running GLIMPSE on user: d0e1d796c308100bd2eef558311f8eae
