@@ -343,7 +343,7 @@ def f1skew(fn):
     return (2/(1 + fn))/(1+(1/(1+fn)))
 
 METHODS = {
-    'glimpse'
+    'glimpse',
     'ppr'
 }
 
