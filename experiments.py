@@ -311,6 +311,13 @@ def pageRankExperimentOnce(k,ppr,version,answers_version, kg_path):
     k = k*KG.number_of_entities()
 
     user_answers = []
+    user_ids = []
+
+    for file in user_log_answer_files:
+        df = pd.read_csv(path + str(file))
+        user_ids.append(file.split(".csv")[0])
+        # list of lists of answers as iris
+        user_answers.append([["<" + iri + ">" for iri in f.split(" ")] for f in df['answers']])
 
     user_log_train, user_log_test = makeTrainingAndTestData(number_of_users,user_answers, KG)
 
