@@ -1,0 +1,33 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "Stock prices of 5 Tech Companies over Time.",
+  "width": 500,
+  "height":500,
+  "data": {"values":[{"Accuracy": "0.8869273758703503", "Algorithm": "ppr2", "K in % of |T|": "10"}, {"Accuracy": "0.3725754295538239", "Algorithm": "ppr2", "K in % of |T|": "0.1"}, {"Accuracy": "0.12845357435843727", "Algorithm": "ppr2", "K in % of |T|": "0.001"}, {"Accuracy": "0.17354756013734585", "Algorithm": "ppr2", "K in % of |T|": "0.01"}, {"Accuracy": "0.5797718975887379", "Algorithm": "ppr2", "K in % of |T|": "1"}, {"Accuracy": "0.8919981250043096", "Algorithm": "ppr5", "K in % of |T|": "10"}, {"Accuracy": "0.11674378871142697", "Algorithm": "ppr5", "K in % of |T|": "0.001"}, {"Accuracy": "0.21878235126644757", "Algorithm": "ppr5", "K in % of |T|": "0.1"}, {"Accuracy": "0.49092653019624427", "Algorithm": "ppr5", "K in % of |T|": "1"}, {"Accuracy": "0.14623677354171888", "Algorithm": "ppr5", "K in % of |T|": "0.01"}, {"Accuracy": "0.4588558485993393", "Algorithm": "glimpse-2", "K in % of |T|": "0.1"}, {"Accuracy": "0.33864876884936473", "Algorithm": "glimpse-2", "K in % of |T|": "0.01"}, {"Accuracy": "0.8422239510888492", "Algorithm": "glimpse-2", "K in % of |T|": "10"}, {"Accuracy": "0.17068535903842824", "Algorithm": "glimpse-2", "K in % of |T|": "0.001"}, {"Accuracy": "0.5924736729813723", "Algorithm": "glimpse-2", "K in % of |T|": "1"}, {"Accuracy": "0.8325721444384016", "Algorithm": "glimpse-3", "K in % of |T|": "10"}, {"Accuracy": "0.3469181301841752", "Algorithm": "glimpse-3", "K in % of |T|": "0.01"}, {"Accuracy": "0.4611957554268201", "Algorithm": "glimpse-3", "K in % of |T|": "0.1"}, {"Accuracy": "0.5963952512680195", "Algorithm": "glimpse-3", "K in % of |T|": "1"}, {"Accuracy": "0.17260184048513255", "Algorithm": "glimpse-3", "K in % of |T|": "0.001"}]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+},
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": { "field": "K in % of |T|"},
+    "y": {"field": "Accuracy", "type": "quantitative"},
+    "color": {"field": "Algorithm", "type": "nominal"}
+  }
+}
