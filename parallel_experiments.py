@@ -23,12 +23,14 @@ if (False):
 
 for k in K:
     for ppr in [2,5]:
-        os.system('nohup python experiments.py'
-                  + ' --method ppr'
-                  + ' --walk '+str(ppr)
-                  + ' --percent-triples ' + str(k)
-                  + ' --version ' + version
-                  + ' --version-answers ' + answer_version
-                  + ' > ' + 'PPR'+str(ppr) + version+'a' + answer_version + '#K' + str(k) + '.out'
-                  + ' &')
+        call = 'nohup python experiments.py'\
+               + ' --method ppr'\
+               + ' --walk '+str(ppr)\
+               + ' --percent-triples ' + str(k)\
+               + ' --version ' + version\
+               + ' --version-answers ' + answer_version\
+               + ' > ' + 'PPR'+str(ppr) + version+'a' + answer_version + '#K' + str(k) + '.out'\
+               + ' &'
+        logging.info(call)
+        os.system(call)
         exit(1)
