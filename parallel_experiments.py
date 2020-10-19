@@ -33,4 +33,4 @@ for k in K:
                + ' &'
         logging.info(call)
         os.system(call)
-        exit(1)
+
