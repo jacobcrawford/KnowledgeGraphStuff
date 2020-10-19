@@ -4,10 +4,11 @@ import subprocess
 from os import listdir
 from os.path import isfile, join, getsize
 
+import numpy as np
 import pandas as pd
 import QueryLogReader
 from GLIMPSE_personalized_KGsummarization.src.base import KnowledgeGraph
-
+from experiments import loadDBPedia
 
 logging.basicConfig(format='[%(asctime)s] - %(message)s',
                     level=logging.DEBUG)
@@ -157,5 +158,48 @@ def analyseIRIUse(path):
     df = pd.DataFrame(rows)
     df.to_csv("query_log_iri_count.csv")
 
-def analyseRelationships(KG: KnowledgeGraph):
+def analyseAnswersFull(KG: KnowledgeGraph):
     logging.info("Number of relationships: "+ str(KG.number_of_relationships()))
+
+    path = "user_query_log_answers" + 2 + "/"
+    user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
+    number_of_users = len(user_log_answer_files)
+
+    user_answers = []
+    user_ids = []
+
+    for file in user_log_answer_files:
+        df = pd.read_csv(path + str(file))
+        user_ids.append(file.split(".csv")[0])
+        # list of lists of answers as iris
+        user_answers.append([["<" + iri + ">" for iri in f.split(" ")] for f in df['answers']])
+
+    unique_entity = []
+    unique_relation = []
+
+    for idx_u in range(number_of_users):
+        user_unique_entity = []
+        user_unique_relation = []
+
+        for answers in user_answers[idx_u]:
+            for answer in answers:
+                if KG.has_entity(answer):
+                    user_unique_entity.append(answer)
+                elif KG.has_relationship(answer):
+                    user_unique_relation.append(answer)
+                else:
+                    logging.info("NO entity or relation: " + answer)
+        unique_entity.append(set(user_unique_entity))
+        unique_relation.append(set(user_unique_relation))
+
+    unique_entity_len = [len(l) for l in unique_entity]
+    unique_relation_len = [len(l) for l in unique_relation]
+    logging.info("unique entities: " + str(unique_entity_len))
+    logging.info("unique relations: " + str(unique_relation_len))
+
+    logging.info("unique entities avg: " + str(np.mean(np.array(unique_entity_len))))
+    logging.info("unique relations avg: " + str(np.mean(np.array(unique_relation_len))))
+
+kg_path = "../dbpedia3.9/"
+KG = loadDBPedia(kg_path)
+analyseAnswersFull(KG)
