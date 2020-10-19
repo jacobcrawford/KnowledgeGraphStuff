@@ -394,7 +394,7 @@ def main():
         e = args.epsilon
         runGLIMPSEExperimentOnce(k,e,version, answer_version, kg_path)
     elif args.method == 'ppr':
-        ppr = args.walk
+        ppr = int(args.walk)
         pageRankExperimentOnce(k,ppr,version,answer_version, kg_path )
     else:
         logging.info("running nothing. method parameter not set")
