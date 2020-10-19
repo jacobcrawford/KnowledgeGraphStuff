@@ -14,6 +14,18 @@ def query_vector(KG, query_log_answers):
             x[entity_id] += 1/len(query_log_answers[i])
     return x
 
+def query_vector_old(KG, query_log_answers):
+    """
+    :param KG: KnowledgeGraph
+    :param query_log: list of answers to queries in iri format
+    :return x: query vector (n_entities,)
+    """
+    x = np.zeros(KG.number_of_entities())
+    for entity in query_log_answers:
+        entity_id = KG.entity_id(entity)
+        x[entity_id] += 1
+    return x
+
 def random_walk_with_restart(M, x, c=0.15, power=1):
     """
     :param M: scipy sparse transition matrix

@@ -225,13 +225,47 @@ def runGLIMPSEExperiment():
 
             pd.DataFrame(rows).to_csv("experiments_results/v"+version+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+ ".csv")
 
+def makeTrainingAndTestData(number_of_users, user_answers, KG):
+    user_log_train = []
+    user_log_test = []
+    for i in range(number_of_users):
+        # Split log in 70%
+        split_index_train = int(len(user_answers[i]) * 0.7)
+
+        user_log_train.append([[entity for entity in answers_to_query if KG.is_entity(entity)]
+                               for answers_to_query in user_answers[i][:split_index_train]])
+        user_log_test.append([[entity for entity in answers_to_query if KG.is_entity(entity)]
+                              for answers_to_query in user_answers[i][split_index_train:]])
+    return user_log_train, user_log_test
+
+def calculateAccuracyAndTotals(user_log_test_u, summary):
+    accuracies = []
+    total_count = 0
+    total_entities = 0
+    for answers_to_query in user_log_test_u:
+        count = 0
+        total_answers = len(answers_to_query)
+        if total_answers == 0:
+            continue
+        else:
+            total_entities += total_answers
+            for iri in answers_to_query:
+                if summary.has_entity(iri):
+                    count += 1
+                    total_count += 1
+            accuracies.append(count / total_answers)
+
+    return np.mean(np.array(accuracies)), total_entities, total_count
+
+
+
 def runGLIMPSEExperimentOnce(k, e,version, answers_version, kg_path):
     path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
     number_of_users = len(user_log_answer_files)
 
-    user_log_train = []
-    user_log_test = []
+    KG = loadDBPedia(kg_path)
+
     user_answers = []
     user_ids = []
 
@@ -241,23 +275,12 @@ def runGLIMPSEExperimentOnce(k, e,version, answers_version, kg_path):
         # list of lists of answers as iris
         user_answers.append([["<" + iri + ">" for iri in f.split(" ")] for f in df['answers']])
 
-
-    KG = loadDBPedia(kg_path)
+    user_log_train, user_log_test = makeTrainingAndTestData(number_of_users,user_answers, KG)
 
     k = k*KG.number_of_entities()
 
     logging.info("KG entities: " + str(len(KG.number_of_entities())))
     logging.info("KG triples: " + str(KG.number_of_triples_))
-
-    for i in range(number_of_users):
-        # Split log in 70%
-        split_index_train = int(len(user_answers[i]) * 0.7)
-
-        user_log_train.append([[entity for entity in answers_to_query if KG.is_entity(entity)]
-                               for answers_to_query in user_answers[i][:split_index_train]])
-        user_log_test.append([[entity for entity in answers_to_query if KG.is_entity(entity)]
-                              for answers_to_query in user_answers[i][split_index_train:]])
-
 
     logging.info("Running for K=" + str(k) + ", e=" + str(e))
     rows = []
@@ -269,24 +292,9 @@ def runGLIMPSEExperimentOnce(k, e,version, answers_version, kg_path):
         summary = GLIMPSE(KG, k, user_log_train[idx_u], e)
         logging.info("  Done")
         t2 = time.time()
-        total_count = 0
-        total_entities = 0
 
-        accuracies = []
-        for answers_to_query in user_log_test[idx_u]:
-            count = 0
-            total_answers = len(answers_to_query)
-            if total_answers == 0:
-                continue
-            else:
-                total_entities += total_answers
-                for iri in answers_to_query:
-                    if summary.has_entity(iri):
-                        count += 1
-                        total_count += 1
-                accuracies.append(count / total_answers)
+        mean_accuracy, total_entities,total_count = calculateAccuracyAndTotals(user_log_test[idx_u], summary)
 
-        mean_accuracy = np.mean(np.array(accuracies))
         logging.info("      Summary  accuracy " + str(mean_accuracy) + "%")
         rows.append({'match': total_count, 'total': total_entities, '%': mean_accuracy, 'runtime': t2 - t1})
 
@@ -302,23 +310,9 @@ def pageRankExperimentOnce(k,ppr,version,answers_version, kg_path):
 
     k = k*KG.number_of_entities()
 
-    user_log_train = []
-    user_log_test = []
     user_answers = []
 
-    for i in range(number_of_users):
-
-        for file in user_log_answer_files:
-            df = pd.read_csv(path + str(file))
-            # list of lists of answers as iris
-            user_answers.append([["<" + iri + ">" for iri in f.split(" ")] for f in df['answers']])
-
-        # Split log in 70%
-        split_index_train = int(len(user_answers[i]) * 0.7)
-
-        # collapse to one list of entities
-        user_log_train.append([f for c in user_answers[i][:split_index_train] for f in c if KG.is_entity(f)])
-        user_log_test.append([f for c in user_answers[i][split_index_train:] for f in c if KG.is_entity(f)])
+    user_log_train, user_log_test = makeTrainingAndTestData(number_of_users,user_answers, KG)
 
     rows = []
     for i in range(number_of_users):
