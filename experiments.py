@@ -244,6 +244,8 @@ def runGLIMPSEExperimentOnce(k, e,version, answers_version, kg_path):
 
     KG = loadDBPedia(kg_path)
 
+    k = k*KG.number_of_entities()
+
     logging.info("KG entities: " + str(len(KG.number_of_entities())))
     logging.info("KG triples: " + str(KG.number_of_triples_))
 
@@ -381,13 +383,6 @@ def parse_args():
 
 def main():
     args = parse_args()
-
-    KG = loadDBPedia(args.KG_path)
-
-    # Load the KG into memory
-    logging.info('Loading {}'.format(KG.name()))
-    KG.load()
-    logging.info('Loaded {}'.format(KG.name()))
 
     k = args.percent_triples
     version = args.version
