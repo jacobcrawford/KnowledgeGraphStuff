@@ -27,6 +27,6 @@ for k in K:
                   + ' --persent-triples ' + str(k)
                   + ' --version ' + version
                   + ' --version ' + answer_version
-                  + ' > ' + 'PPR'+str(ppr) + version+'a' + answer_version + ' #K' + str(k) + '.out'
+                  + ' > ' + 'PPR'+str(ppr) + version+'a' + answer_version + '#K' + str(k) + '.out'
                   + ' &')
         exit(1)
