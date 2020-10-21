@@ -273,3 +273,65 @@ ZeroDivisionError: division by zero
 [2020-10-19 15:31:57,227] -       Done
 [2020-10-19 15:31:57,227] -       Summary  accuracy 0.369744950754%
 [2020-10-19 15:32:00,417] -       Running GLIMPSE on user: d936a43387bad69a70f2adf35a7c80e4
+[2020-10-19 15:45:55,307] -       Done
+[2020-10-19 15:45:55,307] -       Summary  accuracy 0.430075860377%
+[2020-10-19 15:45:58,499] -       Running GLIMPSE on user: a61a81e4f9d8d569bfeaea6d4075fb8c
+[2020-10-19 16:08:46,473] -       Done
+[2020-10-19 16:08:46,477] -       Summary  accuracy 0.38954248366%
+[2020-10-19 16:08:49,697] -       Running GLIMPSE on user: 2898dabaa77d56a3b5276028ca875d90
+[2020-10-19 16:29:16,455] -       Done
+[2020-10-19 16:29:16,455] -       Summary  accuracy 0.4625%
+[2020-10-19 16:29:19,679] -       Running GLIMPSE on user: cdd5a53277177861c00f9a2c94337b26
+[2020-10-19 16:46:17,140] -       Done
+[2020-10-19 16:46:17,141] -       Summary  accuracy 0.232040816327%
+[2020-10-19 16:46:20,362] -       Running GLIMPSE on user: 5459e093980e751023cec2b325f14866
+[2020-10-19 17:08:08,083] -       Done
+[2020-10-19 17:08:08,084] -       Summary  accuracy 0.435065034182%
+[2020-10-19 17:08:11,324] -       Running GLIMPSE on user: f5a1c1793e4bbf386227a23af86cc580
+[2020-10-19 17:30:40,686] -       Done
+[2020-10-19 17:30:40,700] -       Summary  accuracy 0.0351286192068%
+[2020-10-19 17:30:43,942] -       Running GLIMPSE on user: 3281fc5f2013da01fc918488c5882e2c
+[2020-10-19 17:50:02,497] -       Done
+[2020-10-19 17:50:02,512] -       Summary  accuracy 0.282003965589%
+[2020-10-19 17:50:05,754] -       Running GLIMPSE on user: 6d418da8de1b4e19787dc71797f22003
+[2020-10-19 18:05:51,626] -       Done
+[2020-10-19 18:05:51,627] -       Summary  accuracy 0.0311111111111%
+[2020-10-19 18:05:54,859] -       Running GLIMPSE on user: 14bd03bd4ce49c81dc98369ff75bf1d9
+[2020-10-19 18:29:24,288] -       Done
+[2020-10-19 18:29:24,288] -       Summary  accuracy 0.428571428571%
+[2020-10-19 18:29:27,511] -       Running GLIMPSE on user: d0e1d796c308100bd2eef558311f8eae
+[2020-10-19 18:53:03,203] -       Done
+[2020-10-19 18:53:03,203] -       Summary  accuracy 0.666666666667%
+[2020-10-19 18:53:06,433] -       Running GLIMPSE on user: c1065e0ce541801df42f864ce5c0da31
+[2020-10-19 19:09:58,479] -       Done
+[2020-10-19 19:09:58,479] -       Summary  accuracy 0.0475%
+[2020-10-19 19:10:01,708] -       Running GLIMPSE on user: b7f0932b03213ed5af523bce495c882e
+[2020-10-19 19:33:21,159] -       Done
+[2020-10-19 19:33:21,160] -       Summary  accuracy 0.0291029297381%
+[2020-10-19 19:33:24,400] -       Running GLIMPSE on user: c437c7c6be16e7b5aa0b4fbed3aa3304
+[2020-10-19 19:55:21,143] -       Done
+[2020-10-19 19:55:21,144] -       Summary  accuracy 1.0%
+loading from: ../dbpedia3.9/
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//long_abstract_en_mod.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//topical_concepts_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//mappingbased_properties_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//instance_types_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//persondata_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//article_categories_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//geo_coordinates_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//category_labels_en.nt.gz' encoding='UTF-8'>
+User log queries: 38
+User log queries: 139
+User log queries: 99
+User log queries: 28
+User log queries: 13
+User log queries: 44
+User log queries: 84
+User log queries: 56
+User log queries: 29
+User log queries: 50
+User log queries: 21
+User log queries: 27
+User log queries: 19
+User log queries: 21
+User log queries: 25
