@@ -200,6 +200,10 @@ def analyseAnswersFull(KG: KnowledgeGraph):
     logging.info("unique entities avg: " + str(np.mean(np.array(unique_entity_len))))
     logging.info("unique relations avg: " + str(np.mean(np.array(unique_relation_len))))
 
+
+def analyseLanguage():
+
+
 kg_path = "../dbpedia3.9/"
 KG = loadDBPedia(kg_path)
 analyseAnswersFull(KG)

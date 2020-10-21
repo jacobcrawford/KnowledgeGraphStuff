@@ -22,7 +22,7 @@ if (False):
                       + ' &')
 
 for k in K:
-    for ppr in [2,5]:
+    for ppr in [2]:
         call = 'nohup python experiments.py'\
                + ' --method ppr'\
                + ' --walk '+str(ppr)\
