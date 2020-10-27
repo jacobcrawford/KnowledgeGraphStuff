@@ -279,7 +279,7 @@ def runGLIMPSEExperimentOnce(k, e,version, answers_version, kg_path):
 
     k = k*KG.number_of_triples()
 
-    logging.info("KG entities: " + str(len(KG.number_of_entities())))
+    logging.info("KG entities: " + str(KG.number_of_entities()))
     logging.info("KG triples: " + str(KG.number_of_triples_))
 
     logging.info("Running for K=" + str(k) + ", e=" + str(e))
@@ -344,7 +344,7 @@ def runGLIMPSEExperimentOnceRDF(k, e,version, answers_version, kg_path):
     KG = loadDBPedia(kg_path)
     k = k*KG.number_of_triples()
 
-    logging.info("KG entities: " + str(len(KG.number_of_entities())))
+    logging.info("KG entities: " + str(KG.number_of_entities()))
     logging.info("KG triples: " + str(KG.number_of_triples_))
 
     logging.info("Running for K=" + str(k) + ", e=" + str(e))
