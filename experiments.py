@@ -323,7 +323,15 @@ def runGLIMPSEExperimentOnceRDF(k, e,version, answers_version, kg_path):
 
                 iris = answer.split(" ")
                 while j < len(iris):
-                    triples.append((iris[j], iris[j + 1], iris[j + 2]))
+                    e1,r,e2 = iris[j], iris[j + 1], iris[j + 2]
+                    if "http" in e1:
+                        e1 = "<"+e1+">"
+                    if "http" in e2:
+                        e2 = "<" + e2 + ">"
+                    if "http" in r:
+                        r = "<" + r + ">"
+
+                    triples.append((e1,r,e2))
                     j = j + 3
                 user_answers.append(triples)
 
