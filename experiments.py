@@ -472,7 +472,7 @@ def main():
     kg_path = args.KG_path
 
     if args.method == 'glimpse':
-        e = args.epsilon
+        e = float(args.epsilon)
         if 'RDF' in answer_version:
             runGLIMPSEExperimentOnceRDF(k,e,version,answer_version,kg_path )
         else:
