@@ -6,17 +6,104 @@ from virtuoso_connector import makeQueryLogsUserList, VirtuosoConnector
 
 
 def extractAnswersToQueryInRDF():
+    total_succes = 0
+    total_answers = 0
+    total_nested_select_count = 0
+    total_union_count = 0
+    total_property_path_count = 0
+    total_rdf_no_result = 0
+    total_errors = 0
+
+    a = "SELECT ?property ?hasValue ?isValueOf" \
+        "WHERE { " \
+        "   { <http://dbpedia.org/resource/Category:Person> ?property ?hasValue }" \
+        "}"
+
+    b = " { <http://dbpedia.org/ontology/Work> ?property ?hasValue }" \
+        "UNION" \
+        "{ ?isValueOf ?property <http://dbpedia.org/ontology/Work> }"
+
+    c = "{ " \
+        "{?game <http://purl.org/dc/terms/subject> " \
+        "<http://dbpedia.org/resource/Category:Video_games> ." \
+        "?game foaf:name ?name .      } " \
+        "UNION " \
+        "{?game <http://purl.org/dc/terms/subject> " \
+        "<http://dbpedia.org/resource/Category:Party_games> .}" \
+        "}"
+
+    d = "{ " \
+        "  {?game <http://purl.org/dc/terms/subject>" \
+        "<http://dbpedia.org/resource/Category:Video_games> ." \
+        "?game foaf:name ?name .}" \
+        "UNION" \
+        "{?game <http://purl.org/dc/terms/subject>" \
+        "<http://dbpedia.org/resource/Category:Party_games> .}" \
+        "}  "
+
+    e = "SELECT ?name " \
+        "WHERE {" \
+        "{?game <http://purl.org/dc/terms/subject> " \
+        "<http://dbpedia.org/resource/Category:Video_games> . " \
+        "?game foaf:name ?name .}" \
+        "UNION" \
+        "{?game <http://purl.org/dc/terms/subject> " \
+        "<http://dbpedia.org/resource/Category:Party_games> .}" \
+        "}" \
+        "ORDER by ?name" \
+        "limit 10"
+
+    f= "SELECT ?property ?hasValue ?isValueOf " \
+       "WHERE { " \
+       "{ " \
+       "<http://dbpedia.org/resource/France> ?property ?hasValue . " \
+       "} " \
+       "UNION { " \
+       "?isValueOf ?property <http://dbpedia.org/resource/France> . " \
+       "}" \
+       "}" \
+       ""
+
     def removeOptional(query):
         o_idx = query.lower().find("optional")
         rem_o_end = query[o_idx:len(query)].find("}")
-        result = query[0: o_idx] + query[o_idx + rem_o_end: len(query)]
-        print(result)
+
+        result = query[0: o_idx] + query[o_idx + rem_o_end + 1: len(query)]
+
         if "optional" in result.lower():
-            print("MORE")
             return removeOptional(result)
         return result
 
-    def makeConstructQuery(q):
+    def handleUnion(where, debug=False):
+        parts = where.lower().replace("}","").replace("{","").split("union")
+        where_new = ""
+        for part in parts:
+            if debug:
+                print("     \n part")
+                print("     " + part)
+                print("\n")
+
+                print(part.replace(" ", "")[::-1][0])
+
+            if part.replace(" " ,"")[::-1][0] == ".":
+                if debug:
+                    print("     DOT")
+                where_new += part.replace("}","").replace("{","") + " \n"
+            else:
+                if debug:
+                    print("     NO DOT")
+                where_new += part.replace("}", "").replace("{", "") + " .\n"
+        return "{" + where_new + "}"
+    #print(handleUnion(d))
+
+    def makeConstructQuery(q, debug=False):
+        # Remove line comments
+        lines = q.splitlines()
+        q = ""
+        for line in lines:
+            if len(line) > 0 and line[0] == "#":
+                continue
+            q += line + "\n"
 
         select_idx = q.lower().find("select")
         # remove select
@@ -25,14 +112,28 @@ def extractAnswersToQueryInRDF():
         brac_start_idx = q.find('{')
         brac_end_idx = len(q)  - q[::-1].find('}') - 1
         where  = q[brac_start_idx:brac_end_idx + 1]
-        if "filter" in where.lower():
-            f = where.lower().find("filter")
-            where_c = where[0:f] + "}"
-        else:
-            where_c = where
+
+        # More brachets not supported in construct
+        where_c = where
+        if debug:
+            print("     Where START:")
+            print(where_c)
+            print("     Where END")
+
+        if (where.replace(" ","")[0] == "{" and where.replace(" ","")[1] == "{") and "union" not in where_c.lower():
+            if debug:
+                print("NO UNION")
+                print(where[1:len(where)-1])
+            where_c = where[1:len(where)-1]
         if "optional" in where.lower():
             where_c = removeOptional(where_c)
-        return first + "CONSTRUCT " + where_c + "WHERE" + where + q[brac_end_idx + 2: len(q)+1]
+        if "filter" in where_c.lower():
+            f = where_c.lower().find("filter")
+            where_c = where[0:f] + "}"
+        if "union" in where_c.lower():
+            where_c = handleUnion(where_c,debug)
+
+        return first + "CONSTRUCT " + where_c + "WHERE" + where + " LIMIT 1000"
 
     def extractTriples(results_rdf_lib):
         results_triple = []
@@ -47,60 +148,88 @@ def extractAnswersToQueryInRDF():
             results_triple.append(result)
         return results_triple
 
-    a = "SELECT ?name ?description_en ?description_de ?musician WHERE { \
-         ?musician <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:German_musicians> .\
-         ?musician foaf:name ?name .\
-         OPTIONAL {\
-             ?musician rdfs:comment ?description_en .\
-             FILTER (LANG(?description_en) = 'en') .\
-         }\
-         OPTIONAL {\
-             ?musician rdfs:comment ?description_de .\
-             FILTER (LANG(?description_de) = 'de') .\
-         }\
-       }\
-        "
-
     user_list = makeQueryLogsUserList()
     df = pd.read_csv("user_stats2.csv")
-    df = df[df['answers'] >= 20]
+    df = df[df['answers'] >= 15]
+
+    print("total answers in select:" + str(df['answers'].sum()))
     v = VirtuosoConnector(format=RDFXML)
     v1 = VirtuosoConnector()
+
     for uid in df['uid']:
         rows = []
         i = 0
         success = 0
+        nested_select_count = 0
+        union_count = 0
+        property_path_count = 0
+        errors_count = 0
+        rdf_no_result = 0
+
         for q in user_list[uid]:
             try:
                 results = v1.query(q)
+                results = v1.extractIRIsFromJsonResults(results)
                 if len(results) == 0:
                     continue
                 else:
                     success += 1
             except:
                 continue
+
+            where_idx = q.lower().find("where")
+            if "select" in q[where_idx:len(q)].lower():
+                nested_select_count +=1
+                continue
+            if "*" in q[where_idx:len(q)].lower():
+                property_path_count +=1
+                continue
+
             try:
                 qc = makeConstructQuery(q)
+                if "union" in qc.lower():
+                    union_count += 1
                 results = v.query(qc)
-
-                if len(results) == 0:
-                    continue
                 results = extractTriples(results)
+                if len(results) == 0:
+                    rdf_no_result += 1
+                    continue
                 if len(results) != 0:
                     rows.append({'id': i, 'answers': " ".join(results)})
                     i += 1
             except Exception as e:
-                print("ERROR")
-                print(e)
-                print("\n####################")
-                print(q)
-                print("&&&&&&&&&&&&&&&&&&&")
-                print(qc)
-                print("####################\n")
-        print("Number of success queries:" + str(success))
-        print("Queries with results:" + str(len(rows)))
+                errors_count +=1
+                #print("ERROR")
+                #print(e)
+                #print("\n####################")
+                #print(q)
+                #print("&&&&&&&&&&&&&&&&&&&")
+                #print(qc)
+                #print("####################\n")
+                #makeConstructQuery(q, True)
+        total_rdf_no_result += rdf_no_result
+        total_errors += errors_count
+        total_nested_select_count += nested_select_count
+        total_union_count += union_count
+        total_property_path_count += property_path_count
+        total_succes += success
+        total_answers += len(rows)
+        print("     Number of successfull normal queries :" + str(success))
+        print("     Queries with results:" + str(len(rows)))
+        print("     Queries with no results:" + str(rdf_no_result))
+        print("     Queries with nested: " + str(nested_select_count))
+        print("     Queries with union: " + str(union_count))
+        print("     Queries with prop path: " + str(property_path_count))
+        print("     Queries with error: " + str(errors_count))
+        print("\n")
         pd.DataFrame(rows).to_csv("user_query_log_answersRDF/" + uid + ".csv")
-
+    print("Total normal success " + str(total_succes))
+    print("total usefull answers " + str(total_answers))
+    print("total union queries " + str(total_union_count))
+    print("total prop path queries" +str(total_property_path_count))
+    print("Total nested select " + str(total_nested_select_count))
+    print("Total no result rdf " + str(total_rdf_no_result))
+    print("Total errors" + str(total_errors))
 
 def extractAnswersToQuery():
     user_list = makeQueryLogsUserList()
@@ -123,3 +252,6 @@ def extractAnswersToQuery():
                 print(e)
 
         pd.DataFrame(rows).to_csv("user_query_log_answers2/" + uid + ".csv")
+
+
+extractAnswersToQueryInRDF()

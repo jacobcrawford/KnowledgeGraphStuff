@@ -1,0 +1,14 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "A simple bar chart with embedded data.",
+  "data": {
+    "values": [{"lang": "en", "count": 1093}, {"lang": "it", "count": 52}, {"lang": "fr", "count": 81}, {"lang": "hr", "count": 4}, {"lang": "HR", "count": 1}, {"lang": "es", "count": 72}, {"lang": "Na", "count": 1}, {"lang": "de", "count": 2}, {"lang": "pl", "count": 23}, {"lang": " l", "count": 11}, {"lang": "fi", "count": 29}, {"lang": "sv", "count": 3}, {"lang": "EN", "count": 1}, {"lang": "pt", "count": 387}, {"lang": "Ad", "count": 1}, {"lang": "Co", "count": 1}, {"lang": "Pa", "count": 1}, {"lang": "ru", "count": 2}]
+
+
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "lang", "type": "nominal", "axis": {"labelAngle": 0}, "title":"Language"},
+    "y": {"field": "count", "type": "quantitative", "title": "Occurences"}
+  }
+}

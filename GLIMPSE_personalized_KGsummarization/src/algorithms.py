@@ -14,6 +14,18 @@ def query_vector(KG, query_log_answers):
             x[entity_id] += 1/len(query_log_answers[i])
     return x
 
+def query_vector_rdf(KG,query_log_answers):
+    x = np.zeros(KG.number_of_entities())
+    for i in range(len(query_log_answers)):
+        for triple in query_log_answers[i]:
+            e1,r,e2 = triple
+            e1_id = KG.entity_id(e1)
+            e2_id = KG.entity_id(e2)
+            x[e1_id] += 1/len(query_log_answers[i])
+            x[e2_id] += 1 / len(query_log_answers[i])
+            # TODO USE relationship
+    return x
+
 def query_vector_old(KG, query_log_answers):
     """
     :param KG: KnowledgeGraph

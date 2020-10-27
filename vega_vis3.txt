@@ -1,0 +1,19 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "Stock prices of 5 Tech Companies over Time.",
+  "width": 500,
+  "height":500,
+  "data": {"values":[{"Accuracy": "0.6920711427660603", "Algorithm": "ppr2", "K in % of |T|": "1"}, {"Accuracy": "0.20798367817269547", "Algorithm": "ppr2", "K in % of |T|": "0.001"}, {"Accuracy": "0.9316629731253031", "Algorithm": "ppr2", "K in % of |T|": "10"}, {"Accuracy": "0.48657199757813874", "Algorithm": "ppr2", "K in % of |T|": "0.1"}, {"Accuracy": "0.3185090845060479", "Algorithm": "ppr2", "K in % of |T|": "0.01"}, {"Accuracy": "0.49653594784307636", "Algorithm": "glimpse-2", "K in % of |T|": "0.01"}, {"Accuracy": "0.8724362047365429", "Algorithm": "glimpse-2", "K in % of |T|": "10"}, {"Accuracy": "0.6150140161134341", "Algorithm": "glimpse-2", "K in % of |T|": "0.1"}, {"Accuracy": "0.7047093342467394", "Algorithm": "glimpse-2", "K in % of |T|": "1"}, {"Accuracy": "0.34927070219000067", "Algorithm": "glimpse-2", "K in % of |T|": "0.001"}]
+
+
+},
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": { "field": "K in % of |T|"},
+    "y": {"field": "Accuracy", "type": "quantitative"},
+    "color": {"field": "Algorithm", "type": "nominal"}
+  }
+}

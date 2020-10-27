@@ -1,3 +1,4 @@
+import json
 import logging
 import re
 import subprocess
@@ -9,6 +10,7 @@ import pandas as pd
 import QueryLogReader
 from GLIMPSE_personalized_KGsummarization.src.base import KnowledgeGraph
 from experiments import loadDBPedia
+from virtuoso_connector import makeQueryLogsUserList
 
 logging.basicConfig(format='[%(asctime)s] - %(message)s',
                     level=logging.DEBUG)
@@ -200,10 +202,77 @@ def analyseAnswersFull(KG: KnowledgeGraph):
     logging.info("unique entities avg: " + str(np.mean(np.array(unique_entity_len))))
     logging.info("unique relations avg: " + str(np.mean(np.array(unique_relation_len))))
 
+def analyseLanguage(path):
+    logs = QueryLogReader.parseDirectoryOfLogs(path)
+    langs_count = {}
+    for l in logs:
+        if 'lang(' in l['query']:
+            for lang_string in re.findall('lang\(*.*\)\s*=\s*".*"', l['query']):
+                idx = lang_string.index('"')
+                lang = lang_string[idx + 1: idx + 3]
+                if langs_count.get(lang):
+                    langs_count[lang] += 1
+                else:
+                    langs_count[lang] = 1
+    print(langs_count)
 
-def analyseLanguage():
+def analyseLanguageInExperimentData():
+    userlist = makeQueryLogsUserList()
+    langs_count = {}
+    for i in userlist:
+        print(i)
+        queries = userlist[i]
+        for q in queries:
+            if 'lang(' in q:
+                for lang_string in re.findall('lang\(*.*\)\s*=\s*".*"', q):
+                    idx = lang_string.index('"')
+                    lang = lang_string[idx + 1: idx + 3]
+                    if langs_count.get(lang):
+                        langs_count[lang] += 1
+                    else:
+                        langs_count[lang] = 1
+    print(json.dumps([{'lang':k,'count':langs_count[k]} for k in langs_count.keys()]))
+
+def analyseRDFAnswers():
+    path = "user_query_log_answersRDF/"
+    user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
+    number_of_users = len(user_log_answer_files)
+
+    uids = []
+    answers = []
+
+    # filter out logs of size < 10
+    for i, file in enumerate(user_log_answer_files):
+        user_answers = []
+
+        df = pd.read_csv(path + str(file))
+        if len(df) > 10:
+            print("answers: " + str(len(df)))
+
+            for answer in df['answers']:
+                triples = []
+                j = 0
+
+                iris = answer.split(" ")
+                while j < len(iris):
+                    triples.append((iris[j],iris[j+1],iris[j+2]))
+                    j=j+3
+                user_answers.append(triples)
+
+            # Append answers
+            answers.append(user_answers)
+            # Append uid
+            uids.append(file.split(".")[0])
 
 
-kg_path = "../dbpedia3.9/"
-KG = loadDBPedia(kg_path)
-analyseAnswersFull(KG)
+    print(answers[0][0])
+    print(uids[0])
+
+        # list of lists of answers as iris
+        #user_answers.append([["<" + iri + ">" for iri in f.split(" ")] for f in df['answers']])
+analyseRDFAnswers()
+#kg_path = "../dbpedia3.9/"
+#KG = loadDBPedia(kg_path)
+#analyseAnswersFull(KG)
+#analyseLanguage('dbpedia3.9')
+#analyseLanguageInExperimentData()

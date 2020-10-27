@@ -301,6 +301,79 @@ def runGLIMPSEExperimentOnce(k, e,version, answers_version, kg_path):
     pd.DataFrame(rows).to_csv("experiments_results/v" + version + "T#" + str(KG.number_of_triples()) + "_E#" + str(
         KG.number_of_entities()) + "K#" + str(int(k)) + "e#" + str(e) + ".csv")
 
+def runGLIMPSEExperimentOnceRDF(k, e,version, answers_version, kg_path):
+    path = "user_query_log_answers" + answers_version + "/"
+    user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
+    number_of_users = len(user_log_answer_files)
+
+    uids = []
+    answers = []
+
+    # filter out logs of size < 10
+    for i, file in enumerate(user_log_answer_files):
+        user_answers = []
+
+        df = pd.read_csv(path + str(file))
+        if len(df) > 10:
+            print("answers: " + str(len(df)))
+
+            for answer in df['answers']:
+                triples = []
+                j = 0
+
+                iris = answer.split(" ")
+                while j < len(iris):
+                    triples.append((iris[j], iris[j + 1], iris[j + 2]))
+                    j = j + 3
+                user_answers.append(triples)
+
+            # Append answers
+            answers.append(user_answers)
+            # Append uid
+            uids.append(file.split(".")[0])
+
+    # Make train and test sets
+    user_log_train = []
+    user_log_test = []
+    for idx in range(len(uids)):
+        split = math.floor(len(answers[idx])*0.7)
+        user_log_train.append(answers[idx][0:split])
+        user_log_test.append(answers[idx][split:len(answers[idx])])
+
+
+    KG = loadDBPedia(kg_path)
+    k = k*KG.number_of_triples()
+
+    logging.info("KG entities: " + str(len(KG.number_of_entities())))
+    logging.info("KG triples: " + str(KG.number_of_triples_))
+
+    logging.info("Running for K=" + str(k) + ", e=" + str(e))
+    rows = []
+    for idx_u in range(len(uids)):
+        KG.reset()
+        # model user pref
+        logging.info("  Running GLIMPSE on user: " + uids[idx_u])
+        t1 = time.time()
+        summary = GLIMPSE(KG, k, user_log_train[idx_u], e)
+        logging.info("  Done")
+        t2 = time.time()
+
+
+        accuracies = []
+        for answer in user_log_test[idx_u]:
+            total_triples = len(answer)
+            triples_in_summary = len([triple for triple in answer if summary.has_triple(triple)])
+            accuracies.append(triples_in_summary/total_triples)
+
+        mean_accuracy = np.mean(np.array(accuracies))
+
+        logging.info("      Summary  accuracy " + str(mean_accuracy) + "%")
+        rows.append({'%': mean_accuracy, 'runtime': t2 - t1})
+
+    pd.DataFrame(rows).to_csv("experiments_results/v" + version + "T#" + str(KG.number_of_triples()) + "_E#" + str(
+        KG.number_of_entities()) + "K#" + str(int(k)) + "e#" + str(e) + ".csv")
+
+
 def pageRankExperimentOnce(k,ppr,version,answers_version, kg_path):
     logging.info("Starting ppr"+str(ppr)+" for k="+ str(k))
     KG = loadDBPedia(kg_path)
@@ -343,18 +416,16 @@ def pageRankExperimentOnce(k,ppr,version,answers_version, kg_path):
             KG.number_of_entities()) + "_K#" + str(int(k)) + "_PPR#" + str(ppr) + ".csv")
     logging.info("Done")
 
-
-def f1skew(fn):
-    return (2/(1 + fn))/(1+(1/(1+fn)))
-
 METHODS = {
     'glimpse',
-    'ppr'
+    'ppr',
+    'results'
 }
 
 VERSIONS = {
     '2': 'More users',
-    '3': 'Normalizing query vector'
+    '3': 'Normalizing query vector',
+    'RDF': 'Construct query results'
 }
 
 
@@ -391,9 +462,13 @@ def main():
     if args.method == 'glimpse':
         e = args.epsilon
         runGLIMPSEExperimentOnce(k,e,version, answer_version, kg_path)
+        if 'RDF' in answer_version:
+            runGLIMPSEExperimentOnceRDF(k,e,version,answer_version,kg_path )
     elif args.method == 'ppr':
         ppr = int(args.walk)
         pageRankExperimentOnce(k,ppr,version,answer_version, kg_path )
+    elif args.method == 'results':
+        printResults("v"+ str(args.version))
     else:
         logging.info("running nothing. method parameter not set")
 

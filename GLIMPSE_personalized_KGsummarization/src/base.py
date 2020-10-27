@@ -8,7 +8,7 @@ import logging
 from collections import defaultdict
 from scipy.sparse import csr_matrix
 
-from .algorithms import query_vector, random_walk_with_restart
+from .algorithms import query_vector, random_walk_with_restart, query_vector_rdf
 
 # TODO: Replace these data directories with your own paths
 FREEBASE_DATA_DIR = '/x/tsafavi/data/WebQSDP/data/'
@@ -209,7 +209,7 @@ class KnowledgeGraph(object):
         """
         return self.triple_value_[triple]
 
-    def model_user_pref(self, query_log, power=1):
+    def model_user_pref(self, query_log, power=1, rdf_query_log=False):
         """
         :param query_log: list of queries as dicts
         :param power: number of terms in Taylor expansion
@@ -217,7 +217,12 @@ class KnowledgeGraph(object):
         self.reset()
 
         # Perform random walk on the KG
-        x = query_vector(self, query_log)
+        if rdf_query_log:
+            x = query_vector_rdf(self,query_log)
+        else:
+            x = query_vector(self, query_log)
+
+
         M = self.transition_matrix()
         x = random_walk_with_restart(M, x, power=power)
         # x /= np.sum(x)
