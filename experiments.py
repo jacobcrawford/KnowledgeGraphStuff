@@ -466,7 +466,7 @@ def parse_args():
 
 def main():
     args = parse_args()
-    k = args.percent_triples
+    k = float(args.percent_triples)
     version = args.version
     answer_version = args.version_answers
     kg_path = args.KG_path
