@@ -425,7 +425,7 @@ METHODS = {
 VERSIONS = {
     '2': 'More users',
     '3': 'Normalizing query vector',
-    'RDF': 'Construct query results'
+    '4': 'Construct query results'
 }
 
 
