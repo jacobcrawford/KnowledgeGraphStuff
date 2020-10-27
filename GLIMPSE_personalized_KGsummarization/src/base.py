@@ -209,7 +209,7 @@ class KnowledgeGraph(object):
         """
         return self.triple_value_[triple]
 
-    def model_user_pref(self, query_log, power=1, rdf_query_log=False):
+    def model_user_pref(self, query_log, power=1, rdf_query_logs=False):
         """
         :param query_log: list of queries as dicts
         :param power: number of terms in Taylor expansion
@@ -217,7 +217,7 @@ class KnowledgeGraph(object):
         self.reset()
 
         # Perform random walk on the KG
-        if rdf_query_log:
+        if rdf_query_logs:
             x = query_vector_rdf(self,query_log)
         else:
             x = query_vector(self, query_log)
