@@ -370,10 +370,10 @@ def runGLIMPSEExperimentOnceRDF(k, e,version, answers_version, kg_path):
         accuracies = []
         for answer in user_log_test[idx_u]:
             total_triples = len(answer)
-            logging.info("  total triples: "+ str(total_triples))
+            #logging.info("  total triples: "+ str(total_triples))
             triples_in_summary = len([triple for triple in answer if summary.has_triple(triple)])
-            logging.info("  total triples in summary: "+ str(total_triples))
-            logging.info("  total accuracy: "+ str(triples_in_summary/total_triples) + "\n")
+            #logging.info("  total triples in summary: "+ str(total_triples))
+            #logging.info("  total accuracy: "+ str(triples_in_summary/total_triples) + "\n")
 
             accuracies.append(triples_in_summary/total_triples)
 
