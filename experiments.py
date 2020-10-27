@@ -461,9 +461,11 @@ def main():
 
     if args.method == 'glimpse':
         e = args.epsilon
-        runGLIMPSEExperimentOnce(k,e,version, answer_version, kg_path)
         if 'RDF' in answer_version:
             runGLIMPSEExperimentOnceRDF(k,e,version,answer_version,kg_path )
+        else:
+            runGLIMPSEExperimentOnce(k,e,version, answer_version, kg_path)
+
     elif args.method == 'ppr':
         ppr = int(args.walk)
         pageRankExperimentOnce(k,ppr,version,answer_version, kg_path )
