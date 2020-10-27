@@ -354,7 +354,7 @@ def runGLIMPSEExperimentOnceRDF(k, e,version, answers_version, kg_path):
         # model user pref
         logging.info("  Running GLIMPSE on user: " + uids[idx_u])
         t1 = time.time()
-        summary = GLIMPSE(KG, k, user_log_train[idx_u], e,True)
+        summary = GLIMPSE(KG, k, user_log_train[idx_u], e, 1, True)
         logging.info("  Done")
         t2 = time.time()
 
