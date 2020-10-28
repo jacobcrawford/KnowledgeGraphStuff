@@ -268,9 +268,23 @@ def analyseRDFAnswers():
     print(answers[0][0])
     print(uids[0])
 
-        # list of lists of answers as iris
-        #user_answers.append([["<" + iri + ">" for iri in f.split(" ")] for f in df['answers']])
-analyseRDFAnswers()
+def analyseAnswersStats(path):
+    user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
+    number_of_users = len(user_log_answer_files)
+
+    answers_count = []
+    for file in user_log_answer_files:
+        df = pd.read_csv(path + str(file))
+        answers_count.append(len(df['answers']))
+    answers_count = np.array(answers_count)
+    print("users count: "+ str(number_of_users))
+    print("min:" + str(np.min(answers_count)))
+    print("max:" + str(np.max(answers_count)))
+    print("mean:" + str(np.mean(answers_count)))
+    print("median:" +str(np.median(answers_count)))
+
+analyseAnswersStats("user_query_log_answersRDF/")
+#analyseRDFAnswers()
 #kg_path = "../dbpedia3.9/"
 #KG = loadDBPedia(kg_path)
 #analyseAnswersFull(KG)

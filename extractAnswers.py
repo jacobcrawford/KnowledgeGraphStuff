@@ -13,6 +13,7 @@ def extractAnswersToQueryInRDF():
     total_property_path_count = 0
     total_rdf_no_result = 0
     total_errors = 0
+    square_count_total = 0
 
     a = "SELECT ?property ?hasValue ?isValueOf" \
         "WHERE { " \
@@ -165,6 +166,7 @@ def extractAnswersToQueryInRDF():
         property_path_count = 0
         errors_count = 0
         rdf_no_result = 0
+        square_count = 0
 
         for q in user_list[uid]:
             try:
@@ -184,6 +186,9 @@ def extractAnswersToQueryInRDF():
             if "*" in q[where_idx:len(q)].lower():
                 property_path_count +=1
                 continue
+            if "[]" in q[where_idx:len(q)].lower():
+                square_count +=1
+                continue
 
             try:
                 qc = makeConstructQuery(q)
@@ -195,7 +200,7 @@ def extractAnswersToQueryInRDF():
                     rdf_no_result += 1
                     continue
                 if len(results) != 0:
-                    rows.append({'id': i, 'answers': " ".join(results)})
+                    rows.append({'id': i,'query':qc, 'answers': " ".join(results)})
                     i += 1
             except Exception as e:
                 errors_count +=1
@@ -214,6 +219,7 @@ def extractAnswersToQueryInRDF():
         total_property_path_count += property_path_count
         total_succes += success
         total_answers += len(rows)
+        square_count_total += square_count
         print("     Number of successfull normal queries :" + str(success))
         print("     Queries with results:" + str(len(rows)))
         print("     Queries with no results:" + str(rdf_no_result))
@@ -221,6 +227,7 @@ def extractAnswersToQueryInRDF():
         print("     Queries with union: " + str(union_count))
         print("     Queries with prop path: " + str(property_path_count))
         print("     Queries with error: " + str(errors_count))
+        print("     Queries with square" + str(square_count))
         print("\n")
         pd.DataFrame(rows).to_csv("user_query_log_answersRDF/" + uid + ".csv")
     print("Total normal success " + str(total_succes))
@@ -230,6 +237,7 @@ def extractAnswersToQueryInRDF():
     print("Total nested select " + str(total_nested_select_count))
     print("Total no result rdf " + str(total_rdf_no_result))
     print("Total errors" + str(total_errors))
+    print("Total square" + str(square_count_total))
 
 def extractAnswersToQuery():
     user_list = makeQueryLogsUserList()
