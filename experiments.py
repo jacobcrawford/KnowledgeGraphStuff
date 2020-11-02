@@ -537,7 +537,10 @@ def main():
 
     elif args.method == 'ppr':
         ppr = int(args.walk)
-        pageRankExperimentOnce(k,ppr,version,answer_version, kg_path )
+        if 'RDF' in answer_version:
+            runPagerankExperimentOnceRDF(k, ppr, version, answer_version, kg_path)
+        else:
+            pageRankExperimentOnce(k, ppr, version, answer_version, kg_path)
     elif args.method == 'results':
         printResults("v"+ str(args.version))
     else:
