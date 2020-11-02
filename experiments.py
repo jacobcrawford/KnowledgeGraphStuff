@@ -443,7 +443,7 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
         user_log_test.append(answers[idx][split:len(answers[idx])])
 
     rows = []
-    for idx_u in range(number_of_users):
+    for idx_u in range(len(uids)):
         t1 = time.time()
 
         qv = query_vector_rdf(KG, user_log_train[idx_u])
@@ -465,14 +465,14 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
                 KG.__getitem__(e1)
             except:
                 ppr_v[idx_max_entity] = 0
-                break
+                continue
             for r in KG[e1]:
                 for e2 in KG[e1][r]:
                     summary.add_triple((e1,r,e2))
                     if summary.number_of_triples() > k:
                         break
                 if summary.number_of_triples() > k:
-                    break
+                    continue
             ppr_v[idx_max_entity] = 0
 
         accuracies = []
