@@ -452,7 +452,7 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
 
         t2 = time.time()
         logging.info("First 10 Triples")
-        for i in KG.triples_.keys()[:10]:
+        for i in list(KG.triples_.keys())[:10]:
             logging.info(str(i))
         # Extract k triples
         summary = Summary(KG)
