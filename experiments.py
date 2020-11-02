@@ -460,6 +460,12 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
             # get highest entity
             idx_max_entity = np.argmax(ppr_v)
             e1 = KG.id_entity(idx_max_entity)
+            # Entity might not have outgoing edges
+            try:
+                KG.__getitem__(e1)
+            except:
+                ppr_v[idx_max_entity] = 0
+                break
             for r in KG[e1]:
                 for e2 in KG[e1][r]:
                     summary.add_triple((e1,r,e2))
@@ -467,6 +473,7 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
                         break
                 if summary.number_of_triples() > k:
                     break
+            ppr_v[idx_max_entity] = 0
 
         accuracies = []
         for answer in user_log_test[idx_u]:
