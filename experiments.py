@@ -454,28 +454,23 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
         # Extract k triples
         summary = Summary(KG)
         t = int(time.time())
-        while summary.number_of_triples() < k:
-            if (int(time.time()) - t) % 10 == 0:
-                logging.info("Size" + str(summary.number_of_triples()))
-            # get highest entity
-            idx_max_entity = np.argmax(ppr_v)
-            e1 = KG.id_entity(idx_max_entity)
-            if (int(time.time()) - t) % 10 == 0:
-                logging.info("entity" + str(e1))
+
+        argsort = np.argsort(ppr_v)
+
+        for entity_id in argsort:
+            e1 = KG.id_entity(entity_id)
             # Entity might not have outgoing edges
             try:
                 KG.__getitem__(e1)
             except:
-                ppr_v[idx_max_entity] = 0
                 continue
             for r in KG[e1]:
                 for e2 in KG[e1][r]:
-                    summary.add_triple((e1,r,e2))
+                    summary.add_triple((e1, r, e2))
                     if summary.number_of_triples() > k:
                         break
                 if summary.number_of_triples() > k:
                     continue
-            ppr_v[idx_max_entity] = 0
         t2 = time.time()
         accuracies = []
         for answer in user_log_test[idx_u]:
