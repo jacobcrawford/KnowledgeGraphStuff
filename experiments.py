@@ -10,7 +10,7 @@ import argparse
 import numpy as np
 import pandas as pd
 
-from GLIMPSE_personalized_KGsummarization.src.algorithms import query_vector, random_walk_with_restart
+from GLIMPSE_personalized_KGsummarization.src.algorithms import query_vector, random_walk_with_restart, query_vector_rdf
 from GLIMPSE_personalized_KGsummarization.src.base import DBPedia
 from GLIMPSE_personalized_KGsummarization.src.glimpse import GLIMPSE, Summary
 
@@ -257,8 +257,6 @@ def calculateAccuracyAndTotals(user_log_test_u, summary):
 
     return np.mean(np.array(accuracies)), total_entities, total_count
 
-
-
 def runGLIMPSEExperimentOnce(k, e,version, answers_version, kg_path):
     path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
@@ -301,37 +299,30 @@ def runGLIMPSEExperimentOnce(k, e,version, answers_version, kg_path):
     pd.DataFrame(rows).to_csv("experiments_results/v" + version + "T#" + str(KG.number_of_triples()) + "_E#" + str(
         KG.number_of_entities()) + "K#" + str(int(k)) + "e#" + str(e) + ".csv")
 
-def runGLIMPSEExperimentOnceRDF(k, e,version, answers_version, kg_path):
-    path = "user_query_log_answers" + answers_version + "/"
-    user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
-    number_of_users = len(user_log_answer_files)
-
-    uids = []
-    answers = []
-
+def makeRDFData(user_log_answer_files,path):
     # filter out logs of size < 10
+    answers = []
+    uids = []
     for i, file in enumerate(user_log_answer_files):
         user_answers = []
 
         df = pd.read_csv(path + str(file))
         if len(df) > 10:
-            print("answers: " + str(len(df)))
-
             for answer in df['answers']:
                 triples = []
                 j = 0
 
                 iris = answer.split(" ")
                 while j < len(iris):
-                    e1,r,e2 = iris[j], iris[j + 1], iris[j + 2]
+                    e1, r, e2 = iris[j], iris[j + 1], iris[j + 2]
                     if "http" in e1:
-                        e1 = "<"+e1+">"
+                        e1 = "<" + e1 + ">"
                     if "http" in e2:
                         e2 = "<" + e2 + ">"
                     if "http" in r:
                         r = "<" + r + ">"
 
-                    triples.append((e1,r,e2))
+                    triples.append((e1, r, e2))
                     j = j + 3
                 user_answers.append(triples)
 
@@ -339,6 +330,13 @@ def runGLIMPSEExperimentOnceRDF(k, e,version, answers_version, kg_path):
             answers.append(user_answers)
             # Append uid
             uids.append(file.split(".")[0])
+    return answers,uids
+
+def runGLIMPSEExperimentOnceRDF(k, e,version, answers_version, kg_path):
+    path = "user_query_log_answers" + answers_version + "/"
+    user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
+
+    answers, uids = makeRDFData(user_log_answer_files,path)
 
     # Make train and test sets
     user_log_train = []
@@ -370,10 +368,7 @@ def runGLIMPSEExperimentOnceRDF(k, e,version, answers_version, kg_path):
         accuracies = []
         for answer in user_log_test[idx_u]:
             total_triples = len(answer)
-            #logging.info("  total triples: "+ str(total_triples))
             triples_in_summary = len([triple for triple in answer if summary.has_triple(triple)])
-            #logging.info("  total triples in summary: "+ str(total_triples))
-            #logging.info("  total accuracy: "+ str(triples_in_summary/total_triples) + "\n")
 
             accuracies.append(triples_in_summary/total_triples)
 
@@ -427,6 +422,68 @@ def pageRankExperimentOnce(k,ppr,version,answers_version, kg_path):
         "experiments_results_pagerank/v" + version + "T#" + str(KG.number_of_triples()) + "_E#" + str(
             KG.number_of_entities()) + "_K#" + str(int(k)) + "_PPR#" + str(ppr) + ".csv")
     logging.info("Done")
+
+def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
+    logging.info("Starting ppr" + str(ppr) + " for k=" + str(k))
+    KG = loadDBPedia(kg_path)
+    path = "user_query_log_answers" + answers_version + "/"
+    user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
+    number_of_users = len(user_log_answer_files)
+
+    k = k * KG.number_of_triples()
+
+    answers, uids = makeRDFData(user_log_answer_files, path)
+
+    # Make train and test sets
+    user_log_train = []
+    user_log_test = []
+    for idx in range(len(uids)):
+        split = math.floor(len(answers[idx]) * 0.7)
+        user_log_train.append(answers[idx][0:split])
+        user_log_test.append(answers[idx][split:len(answers[idx])])
+
+    rows = []
+    for idx_u in range(number_of_users):
+        t1 = time.time()
+
+        qv = query_vector_rdf(KG, user_log_train[idx_u])
+        M = KG.transition_matrix()
+        ppr_v = random_walk_with_restart(M, qv, 0.15, ppr)
+
+        t2 = time.time()
+
+        # Extract k triples
+        summary = Summary(KG)
+        while summary.number_of_triples() < k:
+            # get highest entity
+            idx_max_entity = np.argmax(ppr_v)
+            e1 = KG.id_entity(idx_max_entity)
+            for r in KG[e1]:
+                for e2 in KG[e1][r]:
+                    summary.add_triple((e1,r,e2))
+                    if summary.number_of_triples() > k:
+                        break
+                if summary.number_of_triples() > k:
+                    break
+
+        accuracies = []
+        for answer in user_log_test[idx_u]:
+            total_triples = len(answer)
+            triples_in_summary = len([triple for triple in answer if summary.has_triple(triple)])
+
+            accuracies.append(triples_in_summary / total_triples)
+
+        mean_accuracy = np.mean(np.array(accuracies))
+
+        logging.info("      Summary  accuracy " + str(mean_accuracy) + "%")
+        rows.append({'%': mean_accuracy, 'runtime': t2 - t1})
+
+    pd.DataFrame(rows).to_csv(
+        "experiments_results_pagerank/v" + version + "T#" + str(KG.number_of_triples()) + "_E#" + str(
+            KG.number_of_entities()) + "_K#" + str(int(k)) + "_PPR#" + str(ppr) + ".csv")
+    logging.info("Done")
+
+
 
 METHODS = {
     'glimpse',

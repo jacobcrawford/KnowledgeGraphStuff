@@ -237,7 +237,7 @@ class KnowledgeGraph(object):
                 for e2 in self.triples_[e1][r]:
                     triple = (e1, r, e2)
                     eid1, eid2 = self.entity_id(e1), self.entity_id(e2)
-                    self.triple_value_[triple] = np.log(x[eid1] * x[eid2] + 1) # not the same calculation as the paper (where is the relation)
+                    self.triple_value_[triple] = np.log(x[eid1] * x[eid2] + 1) #TODO not the same calculation as the paper (where is the relation)
 
 
     def query_dir(self):
