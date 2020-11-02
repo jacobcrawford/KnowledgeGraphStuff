@@ -451,7 +451,9 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
         ppr_v = random_walk_with_restart(M, qv, 0.15, ppr)
 
         t2 = time.time()
-
+        logging.info("First 10 Triples")
+        for i in KG.triples_.keys()[:10]:
+            logging.info(str(i))
         # Extract k triples
         summary = Summary(KG)
         while summary.number_of_triples() < k:
