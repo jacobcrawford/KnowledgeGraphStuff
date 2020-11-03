@@ -6,6 +6,8 @@ from os.path import join, isfile
 import numpy as np
 import pandas as pd
 
+from experiments import runGLIMPSEExperiment
+
 
 def f1skew(acc):
     return (2*acc)/(1 + acc)
@@ -96,4 +98,5 @@ def merge_accuracy_for_old_and_normalization():
     #print(json.dumps(rows_low))
 
 
-merge_accuracy_for_old_and_normalization()
+#merge_accuracy_for_old_and_normalization()
+runGLIMPSEExperiment()

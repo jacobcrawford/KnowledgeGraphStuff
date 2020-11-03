@@ -177,7 +177,7 @@ def runGLIMPSEExperiment():
     logging.info("KG triples: " +str(KG.number_of_triples_))
 
     for i in range(number_of_users):
-        print("User log queries: " + str(len(user_answers[i])))
+        #print("User log queries: " + str(len(user_answers[i])))
         # Split log in 70%
         split_index_train = int(len(user_answers[i]) * 0.7)
 
@@ -191,21 +191,25 @@ def runGLIMPSEExperiment():
 
     for k in K:
         logging.info("Running for K=" + str(k))
+        entities_triple_factor = []
         for e in E:
             logging.info("  Running for e=" + str(e))
             rows = []
+
             for idx_u in range(number_of_users):
                 KG.reset()
                 # model user pref
-                logging.info("      Running GLIMPSE on user: " + user_ids[idx_u])
+                #logging.info("      Running GLIMPSE on user: " + user_ids[idx_u])
                 t1 = time.time()
                 summary = GLIMPSE(KG, k, user_log_train[idx_u], e)
-                logging.info("      Done")
+                entities_triple_factor.append(summary.number_of_entities()/summary.number_of_triples())
+                #logging.info("      Done")
                 t2 = time.time()
                 total_count = 0
                 total_entities = 0
 
                 accuracies = []
+
                 for answers_to_query in user_log_test[idx_u]:
                     count = 0
                     total_answers = len(answers_to_query)
@@ -220,10 +224,11 @@ def runGLIMPSEExperiment():
                         accuracies.append(count/total_answers)
 
                 mean_accuracy = np.mean(np.array(accuracies))
-                logging.info("      Summary  accuracy " + str(mean_accuracy) + "%")
+                #logging.info("      Summary  accuracy " + str(mean_accuracy) + "%")
                 rows.append({'match': total_count, 'total': total_entities, '%':mean_accuracy , 'runtime': t2-t1 })
-
-            pd.DataFrame(rows).to_csv("experiments_results/v"+version+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+ ".csv")
+            logging.info("Finish for k: " + str(k))
+            logging.info("Mean entities: " + np.mean(np.array(entities_triple_factor)))
+            #pd.DataFrame(rows).to_csv("experiments_results/v"+version+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+ ".csv")
 
 def makeTrainingAndTestData(number_of_users, user_answers, KG):
     user_log_train = []
@@ -346,7 +351,6 @@ def runGLIMPSEExperimentOnceRDF(k, e,version, answers_version, kg_path):
         user_log_train.append(answers[idx][0:split])
         user_log_test.append(answers[idx][split:len(answers[idx])])
 
-
     KG = loadDBPedia(kg_path)
     k = k*KG.number_of_triples()
 
@@ -363,7 +367,6 @@ def runGLIMPSEExperimentOnceRDF(k, e,version, answers_version, kg_path):
         summary = GLIMPSE(KG, k, user_log_train[idx_u], e, 1, True)
         logging.info("  Done")
         t2 = time.time()
-
 
         accuracies = []
         for answer in user_log_test[idx_u]:
