@@ -227,7 +227,7 @@ def runGLIMPSEExperiment():
                 #logging.info("      Summary  accuracy " + str(mean_accuracy) + "%")
                 rows.append({'match': total_count, 'total': total_entities, '%':mean_accuracy , 'runtime': t2-t1 })
             logging.info("Finish for k: " + str(k))
-            logging.info("Mean entities: " + np.mean(np.array(entities_triple_factor)))
+            logging.info("Mean entities: " + str(np.mean(np.array(entities_triple_factor))))
             #pd.DataFrame(rows).to_csv("experiments_results/v"+version+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+ ".csv")
 
 def makeTrainingAndTestData(number_of_users, user_answers, KG):
