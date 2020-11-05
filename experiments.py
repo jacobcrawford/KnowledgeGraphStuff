@@ -155,7 +155,6 @@ def runGLIMPSEExperiment():
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
     number_of_users = len(user_log_answer_files)
 
-
     user_log_train = []
     user_log_test = []
     user_answers = []
@@ -202,6 +201,7 @@ def runGLIMPSEExperiment():
                 #logging.info("      Running GLIMPSE on user: " + user_ids[idx_u])
                 t1 = time.time()
                 summary = GLIMPSE(KG, k, user_log_train[idx_u], e)
+                logging.info("Ent/tri: " + str(summary.number_of_entities()) + "/" + str(summary.number_of_triples()))
                 entities_triple_factor.append(summary.number_of_entities()/summary.number_of_triples())
                 #logging.info("      Done")
                 t2 = time.time()
