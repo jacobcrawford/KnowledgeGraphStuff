@@ -1,0 +1,25 @@
+[2020-11-03 17:40:33,166] - Starting ppr2 for k=1e-05
+[2020-11-03 17:40:33,166] - Loading DBPedia
+[2020-11-03 17:46:30,270] - Loaded DBPedia
+[2020-11-03 17:53:00,051] -       Summary  accuracy 0.0762444444444%
+[2020-11-03 17:59:17,311] -       Summary  accuracy 0.357761613688%
+[2020-11-03 18:05:38,061] -       Summary  accuracy 0.185107160667%
+[2020-11-03 18:11:50,035] -       Summary  accuracy 0.464589285714%
+[2020-11-03 18:18:07,609] -       Summary  accuracy 0.166666666667%
+[2020-11-03 18:24:28,533] -       Summary  accuracy 0.566666666667%
+[2020-11-03 18:30:29,065] -       Summary  accuracy 0.110105580694%
+[2020-11-03 18:36:22,562] -       Summary  accuracy 0.366666666667%
+[2020-11-03 18:42:31,454] -       Summary  accuracy 0.0916666666667%
+[2020-11-03 18:49:08,564] -       Summary  accuracy 0.560350520455%
+[2020-11-03 18:55:07,865] -       Summary  accuracy 0.0153846153846%
+[2020-11-03 19:01:01,733] -       Summary  accuracy 0.0376528269099%
+[2020-11-03 19:01:01,736] - Done
+loading from: ../dbpedia3.9/
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//long_abstract_en_mod.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//topical_concepts_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//mappingbased_properties_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//instance_types_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//persondata_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//article_categories_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//geo_coordinates_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//category_labels_en.nt.gz' encoding='UTF-8'>
