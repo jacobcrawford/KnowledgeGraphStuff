@@ -1,0 +1,20 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "Stock prices of 5 Tech Companies over Time.",
+  "width": 500,
+  "height":500,
+
+  "data": {"values":[{"etf": "2", "Algorithm": "glimpse-2", "K in % of |T|": "0.1"}, {"etf": "2", "Algorithm": "glimpse-2", "K in % of |T|": "10"}, {"etf": "2", "Algorithm": "glimpse-2", "K in % of |T|": "0.01"}, {"etf": "2", "Algorithm": "glimpse-2", "K in % of |T|": "0.001"}, {"etf": "2", "Algorithm": "glimpse-2", "K in % of |T|": "1"}]
+
+
+},
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": { "field": "K in % of |T|"},
+    "y": {"field": "etf", "type": "quantitative", "title": "entity-triple-factor", "scale": {"domain": [0, 3]}},
+    "color": {"field": "Algorithm", "type": "nominal"}
+  }
+}
