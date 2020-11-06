@@ -138,3 +138,18 @@ def main3(key):
             except:
                 print("error")
 
+user_data_split = []
+split = 0.2
+number_of_users = 15
+
+user_answers = [[list([i]) for i in range(100)] for _ in range(15)]
+for i in range(int(1/split)): #[0,1,2,3,4]
+    user_data_split.append([])
+    for j in range(number_of_users): #[0,...,14]
+        split_index_start = int(len(user_answers[j]) * (split*i))
+        split_index_end = int(len(user_answers[j]) * (split*(i+1)))
+        user_data_split[i].append([[entity for entity in answers_to_query] for answers_to_query in user_answers[j][split_index_start:split_index_end]])
+
+for i in user_data_split:
+    for j in i:
+        print(j)
