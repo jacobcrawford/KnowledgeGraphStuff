@@ -351,8 +351,8 @@ def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path):
         for j in range(number_of_users): #[0,...,14]
             split_index_start = int(len(user_answers[j]) * (split*i))
             split_index_end = int(len(user_answers[j]) * (split*(i+1)))
-            user_data_split[i].append([entity for entity in answers_to_query if KG.is_entity(entity)]
-                               for answers_to_query in user_answers[j][split_index_start:split_index_end])
+            user_data_split[i].append([[entity for entity in answers_to_query if KG.is_entity(entity)]
+                               for answers_to_query in user_answers[j][split_index_start:split_index_end]])
 
     rows = []
     for idx_u in range(number_of_users):
