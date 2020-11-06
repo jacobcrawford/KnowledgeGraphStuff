@@ -24,6 +24,26 @@ def float_in_zero_one(value):
         raise argparse.ArgumentTypeError('Value must be a float between 0 and 1')
     return value
 
+def summaryAccuracy(summary, user_log):
+    total_count = 0
+    total_entities = 0
+
+    accuracies = []
+
+    for answers_to_query in user_log:
+        count = 0
+        total_answers = len(answers_to_query)
+        if total_answers == 0:
+            continue
+        else:
+            total_entities += total_answers
+            for iri in answers_to_query:
+                if summary.has_entity(iri):
+                    count += 1
+                    total_count += 1
+            accuracies.append(count / total_answers)
+    return np.mean(np.array(accuracies))
+
 def loadDBPedia(path):
     print("loading from: " + path)
     KG = DBPedia(rdf_gz=path)
@@ -304,6 +324,46 @@ def runGLIMPSEExperimentOnce(k, e,version, answers_version, kg_path):
     pd.DataFrame(rows).to_csv("experiments_results/v" + version + "T#" + str(KG.number_of_triples()) + "_E#" + str(
         KG.number_of_entities()) + "K#" + str(int(k)) + "e#" + str(e) + ".csv")
 
+def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path):
+    path = "user_query_log_answers" + answers_version + "/"
+    user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
+    number_of_users = len(user_log_answer_files)
+
+    KG = loadDBPedia(kg_path)
+    k = k * KG.number_of_triples()
+
+    logging.info("KG entities: " + str(KG.number_of_entities()))
+    logging.info("KG triples: " + str(KG.number_of_triples_))
+
+    user_answers = []
+    user_ids = []
+
+    for file in user_log_answer_files:
+        df = pd.read_csv(path + str(file))
+        user_ids.append(file.split(".csv")[0])
+        # list of lists of answers as iris
+        user_answers.append([["<" + iri + ">" for iri in f.split(" ")] for f in df['answers']])
+
+    split = 0.2
+    user_data_split = []
+    for i in range(int(1/split)): #[0,1,2,3,4]
+        user_data_split.append([])
+        for j in range(number_of_users): #[0,...,14]
+            split_index_start = int(len(user_answers[j]) * (split*i))
+            split_index_end = int(len(user_answers[j]) * (split*(i+1)))
+            user_data_split[i].append([entity for entity in answers_to_query if KG.is_entity(entity)]
+                               for answers_to_query in user_answers[j][split_index_start:split_index_end])
+
+    rows = []
+    for idx_u in range(number_of_users):
+        KG.reset()
+        summary = GLIMPSE(KG, k, user_data_split[0][idx_u], e)
+        rows.append({str(split*i): summaryAccuracy(summary,user_data_split[i+1]) for i in range(1, int(1/split))})
+        logging.info("Finished for user: " + user_ids[idx_u])
+    pd.DataFrame(rows).to_csv("experiments_results/v"+str(5)+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+ ".csv")
+
+
+
 def makeRDFData(user_log_answer_files,path):
     # filter out logs of size < 10
     answers = []
@@ -461,6 +521,8 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
         argsort = np.argsort(ppr_v)
 
         for entity_id in argsort:
+            if summary.number_of_triples() > k:
+                break
             e1 = KG.id_entity(entity_id)
             # Entity might not have outgoing edges
             try:
@@ -473,7 +535,7 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
                     if summary.number_of_triples() > k:
                         break
                 if summary.number_of_triples() > k:
-                    continue
+                    break
         t2 = time.time()
         accuracies = []
         for answer in user_log_test[idx_u]:
@@ -491,6 +553,7 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
         "experiments_results_pagerank/v" + version + "T#" + str(KG.number_of_triples()) + "_E#" + str(
             KG.number_of_entities()) + "_K#" + str(int(k)) + "_PPR#" + str(ppr) + ".csv")
     logging.info("Done")
+
 
 
 
