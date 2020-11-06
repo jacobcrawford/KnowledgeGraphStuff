@@ -99,4 +99,4 @@ def merge_accuracy_for_old_and_normalization():
 
 
 #merge_accuracy_for_old_and_normalization()
-runGLIMPSEDynamicExperiment(answers_version=2,k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=5)
+runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=5)
