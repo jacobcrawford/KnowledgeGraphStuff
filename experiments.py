@@ -344,7 +344,7 @@ def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path):
         # list of lists of answers as iris
         user_answers.append([["<" + iri + ">" for iri in f.split(" ")] for f in df['answers']])
 
-    split = 0.2
+    split = 0.1
     user_data_split = []
     for i in range(int(1/split)): #[0,1,2,3,4]
         user_data_split.append([])
@@ -360,7 +360,7 @@ def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path):
         summary = GLIMPSE(KG, k, user_data_split[0][idx_u], e)
         rows.append({str(split*i): summaryAccuracy(summary,user_data_split[i][idx_u]) for i in range(1, int(1/split))})
         logging.info("Finished for user: " + user_ids[idx_u])
-    pd.DataFrame(rows).to_csv("experiments_results/v"+str(5)+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+ ".csv")
+    pd.DataFrame(rows).to_csv("experiments_results/v"+str(5)+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+"S"+str(split)+ ".csv")
 
 
 
