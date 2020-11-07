@@ -358,7 +358,7 @@ def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path):
     for idx_u in range(number_of_users):
         KG.reset()
         summary = GLIMPSE(KG, k, user_data_split[0][idx_u], e)
-        rows.append({str(split*i): summaryAccuracy(summary,user_data_split[i+1]) for i in range(1, int(1/split))})
+        rows.append({str(split*i): summaryAccuracy(summary,user_data_split[i+1][idx_u]) for i in range(1, int(1/split))})
         logging.info("Finished for user: " + user_ids[idx_u])
     pd.DataFrame(rows).to_csv("experiments_results/v"+str(5)+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+ ".csv")
 
