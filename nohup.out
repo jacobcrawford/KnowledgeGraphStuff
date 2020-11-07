@@ -1,19 +1,22 @@
-[2020-11-03 17:40:33,166] - Starting ppr2 for k=1e-05
-[2020-11-03 17:40:33,166] - Loading DBPedia
-[2020-11-03 17:46:30,270] - Loaded DBPedia
-[2020-11-03 17:53:00,051] -       Summary  accuracy 0.0762444444444%
-[2020-11-03 17:59:17,311] -       Summary  accuracy 0.357761613688%
-[2020-11-03 18:05:38,061] -       Summary  accuracy 0.185107160667%
-[2020-11-03 18:11:50,035] -       Summary  accuracy 0.464589285714%
-[2020-11-03 18:18:07,609] -       Summary  accuracy 0.166666666667%
-[2020-11-03 18:24:28,533] -       Summary  accuracy 0.566666666667%
-[2020-11-03 18:30:29,065] -       Summary  accuracy 0.110105580694%
-[2020-11-03 18:36:22,562] -       Summary  accuracy 0.366666666667%
-[2020-11-03 18:42:31,454] -       Summary  accuracy 0.0916666666667%
-[2020-11-03 18:49:08,564] -       Summary  accuracy 0.560350520455%
-[2020-11-03 18:55:07,865] -       Summary  accuracy 0.0153846153846%
-[2020-11-03 19:01:01,733] -       Summary  accuracy 0.0376528269099%
-[2020-11-03 19:01:01,736] - Done
+[2020-11-07 10:22:03,390] - Loading DBPedia
+[2020-11-07 10:27:03,453] - Loaded DBPedia
+[2020-11-07 10:27:03,453] - KG entities: 6589072
+[2020-11-07 10:27:03,453] - KG triples: 47408064
+[2020-11-07 10:43:29,414] - Finished for user: e501b61d45deb9937635cacba1c3b87a
+[2020-11-07 11:00:35,100] - Finished for user: 0126ace40b97576faafdc04d352bf2e2
+[2020-11-07 11:13:21,274] - Finished for user: d936a43387bad69a70f2adf35a7c80e4
+[2020-11-07 11:29:25,573] - Finished for user: a61a81e4f9d8d569bfeaea6d4075fb8c
+[2020-11-07 11:42:35,794] - Finished for user: 2898dabaa77d56a3b5276028ca875d90
+[2020-11-07 11:58:53,890] - Finished for user: cdd5a53277177861c00f9a2c94337b26
+[2020-11-07 12:16:41,945] - Finished for user: 5459e093980e751023cec2b325f14866
+[2020-11-07 12:32:47,813] - Finished for user: f5a1c1793e4bbf386227a23af86cc580
+[2020-11-07 12:47:56,320] - Finished for user: 3281fc5f2013da01fc918488c5882e2c
+[2020-11-07 13:01:07,340] - Finished for user: 6d418da8de1b4e19787dc71797f22003
+[2020-11-07 13:27:14,085] - Finished for user: 14bd03bd4ce49c81dc98369ff75bf1d9
+[2020-11-07 13:53:40,177] - Finished for user: d0e1d796c308100bd2eef558311f8eae
+[2020-11-07 14:10:51,567] - Finished for user: c1065e0ce541801df42f864ce5c0da31
+[2020-11-07 14:37:03,675] - Finished for user: b7f0932b03213ed5af523bce495c882e
+[2020-11-07 14:58:24,965] - Finished for user: c437c7c6be16e7b5aa0b4fbed3aa3304
 loading from: ../dbpedia3.9/
 Loaded: <_io.TextIOWrapper name='../dbpedia3.9//long_abstract_en_mod.nt.gz' encoding='UTF-8'>
 Loaded: <_io.TextIOWrapper name='../dbpedia3.9//topical_concepts_en.nt.gz' encoding='UTF-8'>
