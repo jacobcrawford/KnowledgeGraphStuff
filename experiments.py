@@ -98,6 +98,7 @@ def printResults(version, use_etf=False, key='K in % of |T|'):
         df = pd.read_csv(path1 + "/" + p)
         k = str(p.split("K#")[1].split("e#")[0])
         value = pctf(k) if not use_etf else int(etf[k]*int(k))
+        print(df)
         acc = df['%'].sum() / len(df['%'])
         rows.append({'Accuracy': str(acc), 'Algorithm': "glimpse-2", key: value})
 
@@ -537,6 +538,8 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
                         break
                 if summary.number_of_triples() > k:
                     break
+
+        print("number of triples in summary:" + str(summary.number_of_triples()))
         t2 = time.time()
         accuracies = []
         for answer in user_log_test[idx_u]:
@@ -567,7 +570,7 @@ METHODS = {
 VERSIONS = {
     '2': 'More users',
     '3': 'Normalizing query vector',
-    '4': 'Construct query results'
+    '4': 'Construct query results',
 }
 
 

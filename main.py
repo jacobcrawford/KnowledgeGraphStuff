@@ -109,6 +109,6 @@ def printDynamic():
         print(np.mean(np.array(df[c].values)))
 
 #printDynamic()
-printResults("v3", True, "Entities")
+printResults("v4")
 #merge_accuracy_for_old_and_normalization()
 #runGLIMPSEDynamicExperiment(answers_version="2",k=0.001,e=1e-2, kg_path="../dbpedia3.9/",version=5)
