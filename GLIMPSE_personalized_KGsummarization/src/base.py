@@ -434,8 +434,8 @@ class DBPedia(KnowledgeGraph):
                         continue
 
                     # remove property values
-                    if not (e1.startswith("<") and e1.endswith(">") and e2.startswith("<") and e2.endswith(">")):
-                        continue
+                    #if not (e1.startswith("<") and e1.endswith(">") and e2.startswith("<") and e2.endswith(">")):
+                    #    continue
 
                     triple = (e1, r, e2)
                     self.add_triple(triple)
