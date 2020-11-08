@@ -540,6 +540,8 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
                     break
 
         logging.info("number of triples in summary:" + str(summary.number_of_triples()))
+        logging.info("number of entities in summary:" + str(summary.number_of_entities()))
+        logging.info("number of relations in summary:" + str(summary.number_of_relationships()))
         t2 = time.time()
         accuracies = []
         for answer in user_log_test[idx_u]:
