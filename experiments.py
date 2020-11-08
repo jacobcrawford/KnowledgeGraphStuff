@@ -539,7 +539,7 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
                 if summary.number_of_triples() > k:
                     break
 
-        print("number of triples in summary:" + str(summary.number_of_triples()))
+        logging.info("number of triples in summary:" + str(summary.number_of_triples()))
         t2 = time.time()
         accuracies = []
         for answer in user_log_test[idx_u]:
