@@ -4,7 +4,7 @@
   "width": 500,
   "height":500,
 
-  "data": {"values":[{"etf": "2", "Algorithm": "glimpse-2", "K in % of |T|": "0.1"}, {"etf": "2", "Algorithm": "glimpse-2", "K in % of |T|": "10"}, {"etf": "2", "Algorithm": "glimpse-2", "K in % of |T|": "0.01"}, {"etf": "2", "Algorithm": "glimpse-2", "K in % of |T|": "0.001"}, {"etf": "2", "Algorithm": "glimpse-2", "K in % of |T|": "1"}]
+  "data": {"values":[{"etf": "1.3411616641", "Algorithm": "glimpse-2", "K in % of |T|": "0.1"}, {"etf": "0.479221758377", "Algorithm": "glimpse-2", "K in % of |T|": "10"}, {"etf": "1.66558391338", "Algorithm": "glimpse-2", "K in % of |T|": "0.01"}, {"etf": "1.89094736842", "Algorithm": "glimpse-2", "K in % of |T|": "0.001"}, {"etf": "0.703619142439", "Algorithm": "glimpse-2", "K in % of |T|": "1"}]
 
 
 },
@@ -14,7 +14,8 @@
   },
   "encoding": {
     "x": { "field": "K in % of |T|"},
-    "y": {"field": "etf", "type": "quantitative", "title": "entity-triple-factor", "scale": {"domain": [0, 3]}},
-    "color": {"field": "Algorithm", "type": "nominal"}
+    "y": {"field": "etf", "type": "quantitative", "title": "entity-triple-factor", "scale":     {"domain": [0, 2]}},
+    "color": {"field": "Algorithm", "type": "nominal", "legend": null}
+
   }
 }

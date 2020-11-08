@@ -6,7 +6,7 @@ from os.path import join, isfile
 import numpy as np
 import pandas as pd
 
-from experiments import runGLIMPSEExperiment, runGLIMPSEDynamicExperiment
+from experiments import runGLIMPSEExperiment, runGLIMPSEDynamicExperiment, printResults
 
 
 def f1skew(acc):
@@ -101,7 +101,7 @@ def merge_accuracy_for_old_and_normalization():
 def printDynamic():
     path1 = "experiments_results"
     files = [f for f in listdir(path1) if
-     isfile(join(path1, f)) and f.endswith(".csv") and "v5" in f ]
+     isfile(join(path1, f)) and f.endswith(".csv") and "v5" in f and "S0.1" in f ]
     file = files[0]
 
     df = pd.read_csv(path1+"/"+file)
@@ -109,6 +109,6 @@ def printDynamic():
         print(np.mean(np.array(df[c].values)))
 
 #printDynamic()
-
+printResults("v3", True, "Entities")
 #merge_accuracy_for_old_and_normalization()
-runGLIMPSEDynamicExperiment(answers_version="2",k=0.001,e=1e-2, kg_path="../dbpedia3.9/",version=5)
+#runGLIMPSEDynamicExperiment(answers_version="2",k=0.001,e=1e-2, kg_path="../dbpedia3.9/",version=5)

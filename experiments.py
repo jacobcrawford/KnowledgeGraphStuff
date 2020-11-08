@@ -53,10 +53,10 @@ def loadDBPedia(path):
     logging.info('Loaded {}'.format(KG.name()))
     return KG
 
-def printResults(version):
+def printResults(version, use_etf=False, key='K in % of |T|'):
     path1 = "experiments_results"
     path2 = "experiments_results_pagerank"
-
+    etf = {"474":1.89094736842, "4740":1.66558391338, "47408":1.3411616641, "474080":0.703619142439, "4740806":0.479221758377}
     version_string = version if version is not None else ""
 
     ppr2 = [f for f in listdir(path2) if isfile(join(path2, f)) and f.endswith(".csv") and "PPR#2" in f and version_string in f]
@@ -79,43 +79,38 @@ def printResults(version):
     for p in ppr2:
         df = pd.read_csv(path2+ "/"+p)
         k = str(p.split("K#")[1].split("_PPR")[0])
-        print("k = " +k )
-        pct = pctf(k)
+        value = pctf(k) if not use_etf else int(k)
         acc = df['%'].sum()/len(df['%'])
-        print(acc)
-        rows.append({'Accuracy':str(acc), 'Algorithm':"ppr2", 'K in % of |T|': pct})
+        rows.append({'Accuracy':str(acc), 'Algorithm':"ppr2", key: value})
 
     print("\nPPR5")
 
     for p in ppr5:
+        if etf: break
         df = pd.read_csv(path2+ "/"+p)
         k = str(p.split("K#")[1].split("_PPR")[0])
-        pct = pctf(k)
-        print("k = " + k)
+        value = pctf(k)
         acc = df['%'].sum() / len(df['%'])
-        print(acc)
-        rows.append({'Accuracy': str(acc), 'Algorithm': "ppr5", 'K in % of |T|': pct})
+        rows.append({'Accuracy': str(acc), 'Algorithm': "ppr5", key: value})
 
     print("\nGLIMPSE e=0.01")
     for p in glimpse1:
         df = pd.read_csv(path1 + "/" + p)
         k = str(p.split("K#")[1].split("e#")[0])
-        pct = pctf(k)
-        print("k = " + k)
+        value = pctf(k) if not use_etf else int(etf[k]*int(k))
         acc = df['%'].sum() / len(df['%'])
-        print(acc)
-        rows.append({'Accuracy': str(acc), 'Algorithm': "glimpse-2", 'K in % of |T|': pct})
+        rows.append({'Accuracy': str(acc), 'Algorithm': "glimpse-2", key: value})
 
     print("\nGLIMPSE e=0.001")
     for p in glimpse2:
+        if etf: break
         df = pd.read_csv(path1 + "/" + p)
         k = str(p.split("K#")[1].split("e#")[0])
-        pct = pctf(k)
-        print("k = " + k)
+        value = pctf(k)
         acc = df['%'].sum() / len(df['%'])
-        print(acc)
-        rows.append({'Accuracy': str(acc), 'Algorithm': "glimpse-3", 'K in % of |T|': pct})
+        rows.append({'Accuracy': str(acc), 'Algorithm': "glimpse-3", key: value})
     print(json.dumps(rows))
+
 
 def pageRankExperiment(path):
     KG = loadDBPedia(path)
@@ -167,6 +162,7 @@ def pageRankExperiment(path):
                         count += 1
                 rows.append({'match': count, 'total': total, '%': count / total, 'runtime': t2 - t1})
             pd.DataFrame(rows).to_csv("experiments_results_pagerank/v" +version+ "T#" + str(KG.number_of_triples()) + "_E#" + str(KG.number_of_entities()) + "_K#" + str(int(k)) +"_PPR#" + str(ppr)+ ".csv")
+
 
 def runGLIMPSEExperiment():
     version = "3"
@@ -250,6 +246,7 @@ def runGLIMPSEExperiment():
             logging.info("Mean entities: " + str(np.mean(np.array(entities_triple_factor))))
             #pd.DataFrame(rows).to_csv("experiments_results/v"+version+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+ ".csv")
 
+
 def makeTrainingAndTestData(number_of_users, user_answers, KG):
     user_log_train = []
     user_log_test = []
@@ -262,6 +259,7 @@ def makeTrainingAndTestData(number_of_users, user_answers, KG):
         user_log_test.append([[entity for entity in answers_to_query if KG.is_entity(entity)]
                               for answers_to_query in user_answers[i][split_index_train:]])
     return user_log_train, user_log_test
+
 
 def calculateAccuracyAndTotals(user_log_test_u, summary):
     accuracies = []
@@ -281,6 +279,7 @@ def calculateAccuracyAndTotals(user_log_test_u, summary):
             accuracies.append(count / total_answers)
 
     return np.mean(np.array(accuracies)), total_entities, total_count
+
 
 def runGLIMPSEExperimentOnce(k, e,version, answers_version, kg_path):
     path = "user_query_log_answers" + answers_version + "/"
@@ -324,6 +323,7 @@ def runGLIMPSEExperimentOnce(k, e,version, answers_version, kg_path):
     pd.DataFrame(rows).to_csv("experiments_results/v" + version + "T#" + str(KG.number_of_triples()) + "_E#" + str(
         KG.number_of_entities()) + "K#" + str(int(k)) + "e#" + str(e) + ".csv")
 
+
 def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path):
     path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
@@ -363,7 +363,6 @@ def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path):
     pd.DataFrame(rows).to_csv("experiments_results/v"+str(5)+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+"S"+str(split)+ ".csv")
 
 
-
 def makeRDFData(user_log_answer_files,path):
     # filter out logs of size < 10
     answers = []
@@ -396,6 +395,7 @@ def makeRDFData(user_log_answer_files,path):
             # Append uid
             uids.append(file.split(".")[0])
     return answers,uids
+
 
 def runGLIMPSEExperimentOnceRDF(k, e,version, answers_version, kg_path):
     path = "user_query_log_answers" + answers_version + "/"
@@ -485,6 +485,7 @@ def pageRankExperimentOnce(k,ppr,version,answers_version, kg_path):
         "experiments_results_pagerank/v" + version + "T#" + str(KG.number_of_triples()) + "_E#" + str(
             KG.number_of_entities()) + "_K#" + str(int(k)) + "_PPR#" + str(ppr) + ".csv")
     logging.info("Done")
+
 
 def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
     logging.info("Starting ppr" + str(ppr) + " for k=" + str(k))
