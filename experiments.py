@@ -515,12 +515,10 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
         M = KG.transition_matrix()
         ppr_v = random_walk_with_restart(M, qv, 0.15, ppr)
 
-
         # Extract k triples
         summary = Summary(KG)
-        t = int(time.time())
 
-        argsort = np.argsort(ppr_v)
+        argsort = np.flip(np.argsort(ppr_v))
 
         for entity_id in argsort:
             if summary.number_of_triples() > k:
