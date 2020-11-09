@@ -548,8 +548,8 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
         for answer in user_log_test[idx_u]:
             total_triples = len(answer)
             triples_in_summary = len([triple for triple in answer if summary.has_triple(triple)])
-            logging.info("triples in answer")
-            logging.info(answer[:10])
+            #logging.info("triples in answer")
+            #logging.info(answer[:10])
 
             accuracies.append(triples_in_summary / total_triples)
 
