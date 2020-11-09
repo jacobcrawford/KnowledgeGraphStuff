@@ -1,187 +1,55 @@
-[2020-11-09 09:57:43,610] - Starting ppr2 for k=0.01
-[2020-11-09 09:57:43,610] - Loading DBPedia
-[2020-11-09 10:03:38,785] - Loaded DBPedia
-[2020-11-09 10:06:17,564] - head of triples
-[2020-11-09 10:06:18,000] - ('<http://dbpedia.org/resource/1._FC_Tatran_Pre%C5%A1ov>', '<http://dbpedia.org/ontology/chairmanTitle>', '"President"@en')
-[2020-11-09 10:06:18,000] - ('<http://dbpedia.org/resource/Cape_Blanco_(horse)>', '<http://dbpedia.org/ontology/race>', '<http://dbpedia.org/resource/Tyros_Stakes>')
-[2020-11-09 10:06:18,000] - ('<http://dbpedia.org/resource/Ekaterina_Makarova>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/Agent>')
-[2020-11-09 10:06:18,000] - ('<http://dbpedia.org/resource/Polygonum_bidwelliae>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:Flora_of_California_chaparral_and_woodlands>')
-[2020-11-09 10:06:18,000] - ('<http://dbpedia.org/resource/Pearl_Necklace_(horse)>', '<http://dbpedia.org/ontology/owner>', '<http://dbpedia.org/resource/Reginald_N._Webster>')
-[2020-11-09 10:06:18,000] - ('<http://dbpedia.org/resource/Butabika>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://schema.org/Place>')
-[2020-11-09 10:06:18,000] - ('<http://dbpedia.org/resource/Eddie_Lewis_(American_football)>', '<http://dbpedia.org/ontology/draftRound>', '"2"@en')
-[2020-11-09 10:06:18,000] - ('<http://dbpedia.org/resource/Gcn2>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/Biomolecule>')
-[2020-11-09 10:06:18,000] - ('<http://dbpedia.org/resource/Dan_Tetsell>', '<http://dbpedia.org/ontology/abstract>', '"2614107"@en')
-[2020-11-09 10:06:18,000] - ('<http://dbpedia.org/resource/Ford_Torino>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://schema.org/Product>')
-[2020-11-09 10:06:18,000] - number of triples in summary:692137
-[2020-11-09 10:06:18,000] - number of entities in summary:323865
-[2020-11-09 10:06:18,000] - number of relations in summary:977
-[2020-11-09 10:06:18,004] -       Summary  accuracy 0.512%
-[2020-11-09 10:08:57,681] - head of triples
-[2020-11-09 10:08:58,378] - ('<http://dbpedia.org/resource/Erwin_Jaenecke>', '<http://dbpedia.org/ontology/birthDate>', '"1890-04-22"^^<http://www.w3.org/2001/XMLSchema#date>')
-[2020-11-09 10:08:58,378] - ('<http://dbpedia.org/resource/Stade_de_la_Beaujoire>', '<http://dbpedia.org/ontology/location>', '<http://dbpedia.org/resource/France>')
-[2020-11-09 10:08:58,378] - ('<http://dbpedia.org/resource/P%C3%ADo_Baroja>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://xmlns.com/foaf/0.1/Person>')
-[2020-11-09 10:08:58,378] - ('<http://dbpedia.org/resource/Pope_John_Paul_II>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:Christian_humanists>')
-[2020-11-09 10:08:58,378] - ('<http://dbpedia.org/resource/Finland>', '<http://www.w3.org/2003/01/geo/wgs84_pos#lat>', '"65.0"^^<http://www.w3.org/2001/XMLSchema#float>')
-[2020-11-09 10:08:58,378] - ('<http://dbpedia.org/resource/Allegheny_County,_Pennsylvania>', '<http://dbpedia.org/ontology/populationTotal>', '"1223348"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger>')
-[2020-11-09 10:08:58,378] - ('<http://dbpedia.org/resource/Nazz>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:American_rock_music_groups>')
-[2020-11-09 10:08:58,378] - ('<http://dbpedia.org/resource/Graham_Joyce>', '<http://dbpedia.org/ontology/influencedBy>', '<http://dbpedia.org/resource/Arthur_Machen>')
-[2020-11-09 10:08:58,378] - ('<http://dbpedia.org/resource/John_Elkann>', '<http://dbpedia.org/ontology/relative>', '<http://dbpedia.org/resource/Edoardo_Agnelli>')
-[2020-11-09 10:08:58,378] - ('<http://dbpedia.org/resource/Stockholm_County>', '<http://dbpedia.org/ontology/leaderTitle>', '"Council"@en')
-[2020-11-09 10:08:58,378] - number of triples in summary:692137
-[2020-11-09 10:08:58,378] - number of entities in summary:307433
-[2020-11-09 10:08:58,378] - number of relations in summary:850
-[2020-11-09 10:08:58,380] -       Summary  accuracy 0.725319078524441%
-[2020-11-09 10:11:51,982] - head of triples
-[2020-11-09 10:11:52,640] - ('<http://dbpedia.org/resource/Polygonum_bidwelliae>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:Flora_of_California_chaparral_and_woodlands>')
-[2020-11-09 10:11:52,640] - ('<http://dbpedia.org/resource/Category:German_people_of_Armenian_descent>', '<http://www.w3.org/2000/01/rdf-schema#label>', '"German people of Armenian descent"@en')
-[2020-11-09 10:11:52,640] - ('<http://dbpedia.org/resource/Ramsey,_West_Virginia>', '<http://www.georss.org/georss/point>', '"38.16972222222222 -81.03055555555555"@en')
-[2020-11-09 10:11:52,640] - ('<http://dbpedia.org/resource/The_Constellations>', '<http://dbpedia.org/ontology/associatedBand>', '<http://dbpedia.org/resource/Cee-lo>')
-[2020-11-09 10:11:52,640] - ('<http://dbpedia.org/resource/Gcn2>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/Biomolecule>')
-[2020-11-09 10:11:52,640] - ('<http://dbpedia.org/resource/Eddie_Lewis_(American_football)>', '<http://dbpedia.org/ontology/draftRound>', '"2"@en')
-[2020-11-09 10:11:52,640] - ('<http://dbpedia.org/resource/Callidula>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/Species>')
-[2020-11-09 10:11:52,640] - ('<http://dbpedia.org/resource/UiTM_Stadium>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:Football_venues_in_Malaysia>')
-[2020-11-09 10:11:52,641] - ('<http://dbpedia.org/resource/Mattress_Music>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://schema.org/CreativeWork>')
-[2020-11-09 10:11:52,641] - ('<http://dbpedia.org/resource/Finland>', '<http://www.w3.org/2003/01/geo/wgs84_pos#lat>', '"65.0"^^<http://www.w3.org/2001/XMLSchema#float>')
-[2020-11-09 10:11:52,641] - number of triples in summary:692137
-[2020-11-09 10:11:52,641] - number of entities in summary:329562
-[2020-11-09 10:11:52,641] - number of relations in summary:958
-[2020-11-09 10:11:52,642] -       Summary  accuracy 1.0%
-[2020-11-09 10:14:32,203] - head of triples
-[2020-11-09 10:14:32,872] - ('<http://dbpedia.org/resource/1._FC_Tatran_Pre%C5%A1ov>', '<http://dbpedia.org/ontology/chairmanTitle>', '"President"@en')
-[2020-11-09 10:14:32,872] - ('<http://dbpedia.org/resource/Polygonum_bidwelliae>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:Flora_of_California_chaparral_and_woodlands>')
-[2020-11-09 10:14:32,872] - ('<http://dbpedia.org/resource/Bradley_Nowell>', '<http://xmlns.com/foaf/0.1/givenName>', '"Bradley James Nowell"@en')
-[2020-11-09 10:14:32,872] - ('<http://dbpedia.org/resource/Ramsey,_West_Virginia>', '<http://www.georss.org/georss/point>', '"38.16972222222222 -81.03055555555555"@en')
-[2020-11-09 10:14:32,872] - ('<http://dbpedia.org/resource/Gcn2>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/Biomolecule>')
-[2020-11-09 10:14:32,872] - ('<http://dbpedia.org/resource/Eddie_Lewis_(American_football)>', '<http://dbpedia.org/ontology/draftRound>', '"2"@en')
-[2020-11-09 10:14:32,872] - ('<http://dbpedia.org/resource/Dan_Tetsell>', '<http://dbpedia.org/ontology/abstract>', '"2614107"@en')
-[2020-11-09 10:14:32,872] - ('<http://dbpedia.org/resource/Callidula>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/Species>')
-[2020-11-09 10:14:32,872] - ('<http://dbpedia.org/resource/Ford_Torino>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://schema.org/Product>')
-[2020-11-09 10:14:32,872] - ('<http://dbpedia.org/resource/UiTM_Stadium>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:Football_venues_in_Malaysia>')
-[2020-11-09 10:14:32,872] - number of triples in summary:692137
-[2020-11-09 10:14:32,872] - number of entities in summary:329258
-[2020-11-09 10:14:32,872] - number of relations in summary:1003
-[2020-11-09 10:14:32,876] -       Summary  accuracy 1.0%
-[2020-11-09 10:17:12,649] - head of triples
-[2020-11-09 10:17:13,344] - ('<http://dbpedia.org/resource/1._FC_Tatran_Pre%C5%A1ov>', '<http://dbpedia.org/ontology/chairmanTitle>', '"President"@en')
-[2020-11-09 10:17:13,344] - ('<http://dbpedia.org/resource/Larry_Morrissey>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/Politician>')
-[2020-11-09 10:17:13,344] - ('<http://dbpedia.org/resource/Bean_Station,_Tennessee>', '<http://dbpedia.org/ontology/elevation>', '"349.9104"^^<http://www.w3.org/2001/XMLSchema#double>')
-[2020-11-09 10:17:13,345] - ('<http://dbpedia.org/resource/Polygonum_bidwelliae>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:Flora_of_California_chaparral_and_woodlands>')
-[2020-11-09 10:17:13,345] - ('<http://dbpedia.org/resource/Ramsey,_West_Virginia>', '<http://www.georss.org/georss/point>', '"38.16972222222222 -81.03055555555555"@en')
-[2020-11-09 10:17:13,345] - ('<http://dbpedia.org/resource/Gcn2>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/Biomolecule>')
-[2020-11-09 10:17:13,345] - ('<http://dbpedia.org/resource/Eddie_Lewis_(American_football)>', '<http://dbpedia.org/ontology/draftRound>', '"2"@en')
-[2020-11-09 10:17:13,345] - ('<http://dbpedia.org/resource/UiTM_Stadium>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:Football_venues_in_Malaysia>')
-[2020-11-09 10:17:13,345] - ('<http://dbpedia.org/resource/Hansraj_Bhardwaj>', '<http://dbpedia.org/ontology/orderInOffice>', '"16th"@en')
-[2020-11-09 10:17:13,345] - ('<http://dbpedia.org/resource/Free_City_of_Krak%C3%B3w>', '<http://xmlns.com/foaf/0.1/name>', '"Wolne, Niepodleg\\u0142e i \\u015Aci\\u015Ble Neutralne Miasto Krak\\u00F3w z Okr\\u0119giem"@en')
-[2020-11-09 10:17:13,345] - number of triples in summary:692137
-[2020-11-09 10:17:13,345] - number of entities in summary:327710
-[2020-11-09 10:17:13,345] - number of relations in summary:938
-[2020-11-09 10:17:13,345] -       Summary  accuracy 0.0%
-[2020-11-09 10:19:52,846] - head of triples
-[2020-11-09 10:19:53,515] - ('<http://dbpedia.org/resource/Polygonum_bidwelliae>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:Flora_of_California_chaparral_and_woodlands>')
-[2020-11-09 10:19:53,515] - ('<http://dbpedia.org/resource/Ramsey,_West_Virginia>', '<http://www.georss.org/georss/point>', '"38.16972222222222 -81.03055555555555"@en')
-[2020-11-09 10:19:53,515] - ('<http://dbpedia.org/resource/The_Constellations>', '<http://dbpedia.org/ontology/associatedBand>', '<http://dbpedia.org/resource/Cee-lo>')
-[2020-11-09 10:19:53,515] - ('<http://dbpedia.org/resource/Eddie_Lewis_(American_football)>', '<http://dbpedia.org/ontology/draftRound>', '"2"@en')
-[2020-11-09 10:19:53,515] - ('<http://dbpedia.org/resource/Gcn2>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/Biomolecule>')
-[2020-11-09 10:19:53,515] - ('<http://dbpedia.org/resource/Callidula>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/Species>')
-[2020-11-09 10:19:53,515] - ('<http://dbpedia.org/resource/UiTM_Stadium>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:Football_venues_in_Malaysia>')
-[2020-11-09 10:19:53,515] - ('<http://dbpedia.org/resource/Mattress_Music>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://schema.org/CreativeWork>')
-[2020-11-09 10:19:53,515] - ('<http://dbpedia.org/resource/Kylix_alcyone>', '<http://xmlns.com/foaf/0.1/name>', '"Kylix alcyone"@en')
-[2020-11-09 10:19:53,515] - ('<http://dbpedia.org/resource/James_L._Bates>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://schema.org/Person>')
-[2020-11-09 10:19:53,515] - number of triples in summary:692137
-[2020-11-09 10:19:53,515] - number of entities in summary:326989
-[2020-11-09 10:19:53,516] - number of relations in summary:953
-[2020-11-09 10:19:53,516] -       Summary  accuracy 0.2791666666666667%
-[2020-11-09 10:22:32,837] - head of triples
-[2020-11-09 10:22:33,496] - ('<http://dbpedia.org/resource/Freakazoid!>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:English-language_television_series>')
-[2020-11-09 10:22:33,496] - ('<http://dbpedia.org/resource/1._FC_Tatran_Pre%C5%A1ov>', '<http://dbpedia.org/ontology/chairmanTitle>', '"President"@en')
-[2020-11-09 10:22:33,496] - ('<http://dbpedia.org/resource/Hubert_Humphrey__1>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/TimePeriod>')
-[2020-11-09 10:22:33,496] - ('<http://dbpedia.org/resource/Fred_Stoller>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://www.w3.org/2002/07/owl#Thing>')
-[2020-11-09 10:22:33,496] - ('<http://dbpedia.org/resource/John_Landis>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:American_television_directors>')
-[2020-11-09 10:22:33,496] - ('<http://dbpedia.org/resource/Last_of_the_Summer_Wine>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:Last_of_the_Summer_Wine>')
-[2020-11-09 10:22:33,496] - ('<http://dbpedia.org/resource/Playbox_(1980s_TV_series)>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/Work>')
-[2020-11-09 10:22:33,496] - ('<http://dbpedia.org/resource/Gcn2>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/Biomolecule>')
-[2020-11-09 10:22:33,496] - ('<http://dbpedia.org/resource/1973_Canadian_Grand_Prix>', '<http://dbpedia.org/ontology/distanceLaps>', '"80"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger>')
-[2020-11-09 10:22:33,496] - ('<http://dbpedia.org/resource/Rugrats>', '<http://dbpedia.org/ontology/composer>', '<http://dbpedia.org/resource/Mark_Mothersbaugh>')
-[2020-11-09 10:22:33,496] - number of triples in summary:692137
-[2020-11-09 10:22:33,496] - number of entities in summary:270990
-[2020-11-09 10:22:33,496] - number of relations in summary:913
-[2020-11-09 10:22:33,496] -       Summary  accuracy 0.0%
-[2020-11-09 10:25:12,967] - head of triples
-[2020-11-09 10:25:13,638] - ('<http://dbpedia.org/resource/Polygonum_bidwelliae>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:Flora_of_California_chaparral_and_woodlands>')
-[2020-11-09 10:25:13,638] - ('<http://dbpedia.org/resource/Ramsey,_West_Virginia>', '<http://www.georss.org/georss/point>', '"38.16972222222222 -81.03055555555555"@en')
-[2020-11-09 10:25:13,638] - ('<http://dbpedia.org/resource/The_Constellations>', '<http://dbpedia.org/ontology/associatedBand>', '<http://dbpedia.org/resource/Cee-lo>')
-[2020-11-09 10:25:13,638] - ('<http://dbpedia.org/resource/Eddie_Lewis_(American_football)>', '<http://dbpedia.org/ontology/draftRound>', '"2"@en')
-[2020-11-09 10:25:13,638] - ('<http://dbpedia.org/resource/Gcn2>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/Biomolecule>')
-[2020-11-09 10:25:13,638] - ('<http://dbpedia.org/resource/Callidula>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/Species>')
-[2020-11-09 10:25:13,638] - ('<http://dbpedia.org/resource/UiTM_Stadium>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:Football_venues_in_Malaysia>')
-[2020-11-09 10:25:13,638] - ('<http://dbpedia.org/resource/Mattress_Music>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://schema.org/CreativeWork>')
-[2020-11-09 10:25:13,638] - ('<http://dbpedia.org/resource/Kylix_alcyone>', '<http://xmlns.com/foaf/0.1/name>', '"Kylix alcyone"@en')
-[2020-11-09 10:25:13,638] - ('<http://dbpedia.org/resource/Finland>', '<http://www.w3.org/2003/01/geo/wgs84_pos#lat>', '"65.0"^^<http://www.w3.org/2001/XMLSchema#float>')
-[2020-11-09 10:25:13,638] - number of triples in summary:692137
-[2020-11-09 10:25:13,638] - number of entities in summary:330109
-[2020-11-09 10:25:13,638] - number of relations in summary:957
-[2020-11-09 10:25:13,638] -       Summary  accuracy 0.0%
-[2020-11-09 10:27:53,155] - head of triples
-[2020-11-09 10:27:53,787] - ('<http://dbpedia.org/resource/1._FC_Tatran_Pre%C5%A1ov>', '<http://dbpedia.org/ontology/chairmanTitle>', '"President"@en')
-[2020-11-09 10:27:53,787] - ('<http://dbpedia.org/resource/Polygonum_bidwelliae>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:Flora_of_California_chaparral_and_woodlands>')
-[2020-11-09 10:27:53,787] - ('<http://dbpedia.org/resource/John_Landis>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:American_television_directors>')
-[2020-11-09 10:27:53,787] - ('<http://dbpedia.org/resource/Ramsey,_West_Virginia>', '<http://www.georss.org/georss/point>', '"38.16972222222222 -81.03055555555555"@en')
-[2020-11-09 10:27:53,787] - ('<http://dbpedia.org/resource/The_Constellations>', '<http://dbpedia.org/ontology/associatedBand>', '<http://dbpedia.org/resource/Cee-lo>')
-[2020-11-09 10:27:53,787] - ('<http://dbpedia.org/resource/Eddie_Lewis_(American_football)>', '<http://dbpedia.org/ontology/draftRound>', '"2"@en')
-[2020-11-09 10:27:53,787] - ('<http://dbpedia.org/resource/Gcn2>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/Biomolecule>')
-[2020-11-09 10:27:53,787] - ('<http://dbpedia.org/resource/Callidula>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/Species>')
-[2020-11-09 10:27:53,787] - ('<http://dbpedia.org/resource/UiTM_Stadium>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:Football_venues_in_Malaysia>')
-[2020-11-09 10:27:53,787] - ('<http://dbpedia.org/resource/Mattress_Music>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://schema.org/CreativeWork>')
-[2020-11-09 10:27:53,787] - number of triples in summary:692137
-[2020-11-09 10:27:53,787] - number of entities in summary:326073
-[2020-11-09 10:27:53,787] - number of relations in summary:957
-[2020-11-09 10:27:53,787] -       Summary  accuracy 1.0%
-[2020-11-09 10:30:33,331] - head of triples
-[2020-11-09 10:30:33,968] - ('<http://dbpedia.org/resource/Susperia>', '<http://dbpedia.org/ontology/bandMember>', '<http://dbpedia.org/resource/Mustis>')
-[2020-11-09 10:30:33,968] - ('<http://dbpedia.org/resource/Raindancer>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://www.w3.org/2002/07/owl#Thing>')
-[2020-11-09 10:30:33,968] - ('<http://dbpedia.org/resource/Ramsey,_West_Virginia>', '<http://www.georss.org/georss/point>', '"38.16972222222222 -81.03055555555555"@en')
-[2020-11-09 10:30:33,968] - ('<http://dbpedia.org/resource/Mark_Karan>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:People_from_San_Francisco,_California>')
-[2020-11-09 10:30:33,968] - ('<http://dbpedia.org/resource/Gcn2>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/Biomolecule>')
-[2020-11-09 10:30:33,968] - ('<http://dbpedia.org/resource/List_of_Volbeat_members>', '<http://xmlns.com/foaf/0.1/homepage>', '<http://www.volbeat.dk>')
-[2020-11-09 10:30:33,968] - ('<http://dbpedia.org/resource/Callidula>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/Species>')
-[2020-11-09 10:30:33,968] - ('<http://dbpedia.org/resource/UiTM_Stadium>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:Football_venues_in_Malaysia>')
-[2020-11-09 10:30:33,968] - ('<http://dbpedia.org/resource/Morning_Musume>', '<http://dbpedia.org/ontology/associatedBand>', '<http://dbpedia.org/resource/Hello!_Project_shuffle_units>')
-[2020-11-09 10:30:33,968] - ('<http://dbpedia.org/resource/Fudge_Tunnel>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/Agent>')
-[2020-11-09 10:30:33,968] - number of triples in summary:692137
-[2020-11-09 10:30:33,968] - number of entities in summary:264493
-[2020-11-09 10:30:33,968] - number of relations in summary:879
-[2020-11-09 10:30:33,974] -       Summary  accuracy 0.6937826192205278%
-[2020-11-09 10:33:13,556] - head of triples
-[2020-11-09 10:33:14,240] - ('<http://dbpedia.org/resource/Khazar_raion>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/PopulatedPlace>')
-[2020-11-09 10:33:14,240] - ('<http://dbpedia.org/resource/Alan_Arkin>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:Independent_Spirit_Award_winners>')
-[2020-11-09 10:33:14,240] - ('<http://dbpedia.org/resource/John_Landis>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:American_television_directors>')
-[2020-11-09 10:33:14,240] - ('<http://dbpedia.org/resource/The_Race_for_Space>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:1950s_documentary_films>')
-[2020-11-09 10:33:14,240] - ('<http://dbpedia.org/resource/Julian_Lewis_Jones>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://schema.org/Person>')
-[2020-11-09 10:33:14,240] - ('<http://dbpedia.org/resource/Mojave_3>', '<http://dbpedia.org/ontology/associatedMusicalArtist>', '<http://dbpedia.org/resource/Chapterhouse>')
-[2020-11-09 10:33:14,240] - ('<http://dbpedia.org/resource/Gehrayee>', '<http://dbpedia.org/ontology/starring>', '<http://dbpedia.org/resource/Shriram_Lagoo>')
-[2020-11-09 10:33:14,240] - ('<http://dbpedia.org/resource/Morning_Musume>', '<http://dbpedia.org/ontology/associatedBand>', '<http://dbpedia.org/resource/Hello!_Project_shuffle_units>')
-[2020-11-09 10:33:14,240] - ('<http://dbpedia.org/resource/Hansraj_Bhardwaj>', '<http://dbpedia.org/ontology/orderInOffice>', '"16th"@en')
-[2020-11-09 10:33:14,240] - ('<http://dbpedia.org/resource/Jun_Matsumoto>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://dbpedia.org/ontology/Artist>')
-[2020-11-09 10:33:14,240] - number of triples in summary:692137
-[2020-11-09 10:33:14,240] - number of entities in summary:253326
-[2020-11-09 10:33:14,240] - number of relations in summary:772
-[2020-11-09 10:33:14,248] -       Summary  accuracy 0.8350427350427351%
-[2020-11-09 10:35:54,247] - head of triples
-[2020-11-09 10:35:54,924] - ("<http://dbpedia.org/resource/W's_Tragedy>", '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:Films_directed_by_Shinichir%C5%8D_Sawai>')
-[2020-11-09 10:35:54,924] - ('<http://dbpedia.org/resource/Washington_High_School_(Milwaukee)>', '<http://dbpedia.org/ontology/colour>', '<http://dbpedia.org/resource/Purple>')
-[2020-11-09 10:35:54,925] - ('<http://dbpedia.org/resource/Polygonum_bidwelliae>', '<http://purl.org/dc/terms/subject>', '<http://dbpedia.org/resource/Category:Flora_of_California_chaparral_and_woodlands>')
-[2020-11-09 10:35:54,925] - ('<http://dbpedia.org/resource/Old_New_York_Evening_Post_Building>', '<http://dbpedia.org/ontology/location>', '<http://dbpedia.org/resource/New_York_City>')
-[2020-11-09 10:35:54,925] - ('<http://dbpedia.org/resource/Eddie_Lewis_(American_football)>', '<http://dbpedia.org/ontology/draftRound>', '"2"@en')
-[2020-11-09 10:35:54,925] - ('<http://dbpedia.org/resource/Gehrayee>', '<http://dbpedia.org/ontology/starring>', '<http://dbpedia.org/resource/Shriram_Lagoo>')
-[2020-11-09 10:35:54,925] - ('<http://dbpedia.org/resource/Phyllodesma_americana>', '<http://dbpedia.org/ontology/genus>', '<http://dbpedia.org/resource/Phyllodesma>')
-[2020-11-09 10:35:54,925] - ('<http://dbpedia.org/resource/Finland>', '<http://www.w3.org/2003/01/geo/wgs84_pos#lat>', '"65.0"^^<http://www.w3.org/2001/XMLSchema#float>')
-[2020-11-09 10:35:54,925] - ('<http://dbpedia.org/resource/James_L._Bates>', '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>', '<http://schema.org/Person>')
-[2020-11-09 10:35:54,925] - ('<http://dbpedia.org/resource/Parkersburg,_West_Virginia>', '<http://www.georss.org/georss/point>', '"39.26611111111111 -81.54222222222222"@en')
-[2020-11-09 10:35:54,925] - number of triples in summary:692137
-[2020-11-09 10:35:54,925] - number of entities in summary:303272
-[2020-11-09 10:35:54,925] - number of relations in summary:920
-[2020-11-09 10:35:54,925] -       Summary  accuracy 0.2621997765779185%
-[2020-11-09 10:35:54,927] - Done
+[2020-11-09 16:01:58,291] - Starting ppr2 for k=0.0001
+[2020-11-09 16:01:58,292] - Loading DBPedia
+[2020-11-09 16:07:52,509] - Loaded DBPedia
+[2020-11-09 16:10:54,667] - number of triples in summary:6922
+[2020-11-09 16:10:54,667] - number of entities in summary:4978
+[2020-11-09 16:10:54,667] - number of relations in summary:181
+[2020-11-09 16:10:54,671] -       Summary  accuracy 0.4%
+[2020-11-09 16:13:38,142] - number of triples in summary:6922
+[2020-11-09 16:13:38,142] - number of entities in summary:4534
+[2020-11-09 16:13:38,142] - number of relations in summary:145
+[2020-11-09 16:13:38,143] -       Summary  accuracy 0.21486315694741537%
+[2020-11-09 16:16:20,970] - number of triples in summary:6922
+[2020-11-09 16:16:20,970] - number of entities in summary:4681
+[2020-11-09 16:16:20,970] - number of relations in summary:158
+[2020-11-09 16:16:20,970] -       Summary  accuracy 0.08321886446886448%
+[2020-11-09 16:19:03,907] - number of triples in summary:6922
+[2020-11-09 16:19:03,907] - number of entities in summary:4607
+[2020-11-09 16:19:03,907] - number of relations in summary:218
+[2020-11-09 16:19:03,908] -       Summary  accuracy 0.6265000000000001%
+[2020-11-09 16:21:47,605] - number of triples in summary:6922
+[2020-11-09 16:21:47,605] - number of entities in summary:4849
+[2020-11-09 16:21:47,605] - number of relations in summary:162
+[2020-11-09 16:21:47,606] -       Summary  accuracy 0.0%
+[2020-11-09 16:24:29,563] - number of triples in summary:6922
+[2020-11-09 16:24:29,564] - number of entities in summary:3990
+[2020-11-09 16:24:29,564] - number of relations in summary:210
+[2020-11-09 16:24:29,564] -       Summary  accuracy 0.025%
+[2020-11-09 16:27:11,281] - number of triples in summary:6922
+[2020-11-09 16:27:11,281] - number of entities in summary:4862
+[2020-11-09 16:27:11,281] - number of relations in summary:171
+[2020-11-09 16:27:11,281] -       Summary  accuracy 0.0%
+[2020-11-09 16:29:52,932] - number of triples in summary:6922
+[2020-11-09 16:29:52,933] - number of entities in summary:4860
+[2020-11-09 16:29:52,933] - number of relations in summary:238
+[2020-11-09 16:29:52,933] -       Summary  accuracy 0.0%
+[2020-11-09 16:32:34,816] - number of triples in summary:6922
+[2020-11-09 16:32:34,816] - number of entities in summary:4818
+[2020-11-09 16:32:34,816] - number of relations in summary:198
+[2020-11-09 16:32:34,816] -       Summary  accuracy 0.6%
+[2020-11-09 16:35:16,940] - number of triples in summary:6922
+[2020-11-09 16:35:16,940] - number of entities in summary:3793
+[2020-11-09 16:35:16,940] - number of relations in summary:144
+[2020-11-09 16:35:16,944] -       Summary  accuracy 0.005938513677075769%
+[2020-11-09 16:37:58,475] - number of triples in summary:6922
+[2020-11-09 16:37:58,475] - number of entities in summary:3620
+[2020-11-09 16:37:58,475] - number of relations in summary:129
+[2020-11-09 16:37:58,478] -       Summary  accuracy 0.0%
+[2020-11-09 16:40:40,169] - number of triples in summary:6922
+[2020-11-09 16:40:40,170] - number of entities in summary:5165
+[2020-11-09 16:40:40,170] - number of relations in summary:194
+[2020-11-09 16:40:40,170] -       Summary  accuracy 0.0%
+[2020-11-09 16:40:40,176] - Done
 loading from: ../dbpedia3.9/
 Loaded: <_io.TextIOWrapper name='../dbpedia3.9//long_abstract_en_mod.nt.gz' encoding='UTF-8'>
 Loaded: <_io.TextIOWrapper name='../dbpedia3.9//topical_concepts_en.nt.gz' encoding='UTF-8'>
@@ -191,3 +59,10 @@ Loaded: <_io.TextIOWrapper name='../dbpedia3.9//persondata_en.nt.gz' encoding='U
 Loaded: <_io.TextIOWrapper name='../dbpedia3.9//article_categories_en.nt.gz' encoding='UTF-8'>
 Loaded: <_io.TextIOWrapper name='../dbpedia3.9//geo_coordinates_en.nt.gz' encoding='UTF-8'>
 Loaded: <_io.TextIOWrapper name='../dbpedia3.9//category_labels_en.nt.gz' encoding='UTF-8'>
+[2020-11-09 17:55:37,620] - Starting ppr2 for k=1e-05
+[2020-11-09 17:55:37,620] - Loading DBPedia
+[2020-11-09 18:01:38,977] - Loaded DBPedia
+[2020-11-09 18:04:14,638] - number of triples in summary:693
+[2020-11-09 18:04:14,638] - number of entities in summary:566
+[2020-11-09 18:04:14,638] - number of relations in summary:94
+[2020-11-09 18:04:14,639] -       Summary  accuracy 0.4%
