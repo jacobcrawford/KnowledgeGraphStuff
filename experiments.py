@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 
 from GLIMPSE_personalized_KGsummarization.src.algorithms import query_vector, random_walk_with_restart, query_vector_rdf
-from GLIMPSE_personalized_KGsummarization.src.base import DBPedia
+from GLIMPSE_personalized_KGsummarization.src.base import DBPedia, KnowledgeGraph
 from GLIMPSE_personalized_KGsummarization.src.glimpse import GLIMPSE, Summary
 
 logging.basicConfig(format='[%(asctime)s] - %(message)s',
@@ -364,7 +364,7 @@ def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path):
     pd.DataFrame(rows).to_csv("experiments_results/v"+str(5)+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+"S"+str(split)+ ".csv")
 
 
-def makeRDFData(user_log_answer_files,path):
+def makeRDFData(user_log_answer_files,path, KG: KnowledgeGraph):
     # filter out logs of size < 10
     answers = []
     uids = []
@@ -386,8 +386,9 @@ def makeRDFData(user_log_answer_files,path):
                         e2 = "<" + e2 + ">"
                     if "http" in r:
                         r = "<" + r + ">"
-
-                    triples.append((e1, r, e2))
+                    triple = (e1, r, e2)
+                    if KG.has_triple(triple):
+                        triples.append(triple)
                     j = j + 3
                 user_answers.append(triples)
 
@@ -401,8 +402,8 @@ def makeRDFData(user_log_answer_files,path):
 def runGLIMPSEExperimentOnceRDF(k, e,version, answers_version, kg_path):
     path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
-
-    answers, uids = makeRDFData(user_log_answer_files,path)
+    KG = loadDBPedia(kg_path)
+    answers, uids = makeRDFData(user_log_answer_files,path, KG)
 
     # Make train and test sets
     user_log_train = []
@@ -412,7 +413,7 @@ def runGLIMPSEExperimentOnceRDF(k, e,version, answers_version, kg_path):
         user_log_train.append(answers[idx][0:split])
         user_log_test.append(answers[idx][split:len(answers[idx])])
 
-    KG = loadDBPedia(kg_path)
+
     k = k*KG.number_of_triples()
 
     logging.info("KG entities: " + str(KG.number_of_entities()))
@@ -497,7 +498,7 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
 
     k = k * KG.number_of_triples()
 
-    answers, uids = makeRDFData(user_log_answer_files, path)
+    answers, uids = makeRDFData(user_log_answer_files, path, KG)
 
     # Make train and test sets
     user_log_train = []
@@ -536,10 +537,7 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
                         break
                 if summary.number_of_triples() > k:
                     break
-        logging.info("head of triples")
-        triples = summary.triples()
-        for i in range(10):
-            logging.info(str(triples.pop()))
+
         logging.info("number of triples in summary:" + str(summary.number_of_triples()))
         logging.info("number of entities in summary:" + str(summary.number_of_entities()))
         logging.info("number of relations in summary:" + str(summary.number_of_relationships()))
@@ -548,8 +546,6 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
         for answer in user_log_test[idx_u]:
             total_triples = len(answer)
             triples_in_summary = len([triple for triple in answer if summary.has_triple(triple)])
-            #logging.info("triples in answer")
-            #logging.info(answer[:10])
 
             accuracies.append(triples_in_summary / total_triples)
 
