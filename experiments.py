@@ -538,7 +538,10 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
                         break
                 if summary.number_of_triples() > k:
                     break
-
+        logging.info("head of triples")
+        triples = summary.triples()
+        for i in range(10):
+            logging.info(str(triples.pop()))
         logging.info("number of triples in summary:" + str(summary.number_of_triples()))
         logging.info("number of entities in summary:" + str(summary.number_of_entities()))
         logging.info("number of relations in summary:" + str(summary.number_of_relationships()))
@@ -547,6 +550,8 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
         for answer in user_log_test[idx_u]:
             total_triples = len(answer)
             triples_in_summary = len([triple for triple in answer if summary.has_triple(triple)])
+            logging.info("triples in answer")
+            logging.info(answer[:10])
 
             accuracies.append(triples_in_summary / total_triples)
 
