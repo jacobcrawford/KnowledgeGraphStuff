@@ -59,8 +59,8 @@ class KnowledgeGraph(object):
         for e1 in self.triples_:
             for r in self.triples_[e1]:
                 for e2 in self.triples_[e1][r]:
-                    triples.add((e1, r, e2))
-        return triples
+                    yield (e1, r, e2)
+
 
     def number_of_entities(self):
         """
