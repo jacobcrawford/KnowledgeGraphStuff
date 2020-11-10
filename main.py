@@ -108,7 +108,25 @@ def printDynamic():
     for c in df.columns[1:]:
         print(np.mean(np.array(df[c].values)))
 
+def printRDF():
+    path1 = "user_query_log_answersRDF"
+    files = [f for f in listdir(path1) if
+             isfile(join(path1, f)) and f.endswith(".csv")]
+    for f in files:
+        df = pd.read_csv(path1 + "/" +f)
+        print(len(df))
+
+def printRDFResultPagerank():
+    path1 = "experiments_results_pagerank"
+    files = [f for f in listdir(path1) if
+             isfile(join(path1, f)) and f.endswith(".csv") and "v4" in f]
+    for f in files:
+        df = pd.read_csv(path1 + "/" +f)
+        print(len(df))
+
 #printDynamic()
-printResults("v4")
+#printResults("v4")
 #merge_accuracy_for_old_and_normalization()
-#runGLIMPSEDynamicExperiment(answers_version="2",k=0.001,e=1e-2, kg_path="../dbpedia3.9/",version=5)
+runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=5)
+#printRDFResultPagerank()
+

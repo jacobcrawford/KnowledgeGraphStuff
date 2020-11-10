@@ -328,7 +328,7 @@ def runGLIMPSEExperimentOnce(k, e,version, answers_version, kg_path):
 def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path):
     path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
-    number_of_users = len(user_log_answer_files)
+
 
     KG = loadDBPedia(kg_path)
     k = k * KG.number_of_triples()
@@ -341,9 +341,12 @@ def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path):
 
     for file in user_log_answer_files:
         df = pd.read_csv(path + str(file))
-        user_ids.append(file.split(".csv")[0])
-        # list of lists of answers as iris
-        user_answers.append([["<" + iri + ">" for iri in f.split(" ")] for f in df['answers']])
+        if len(df) > 40:
+            user_ids.append(file.split(".csv")[0])
+            # list of lists of answers as iris
+            user_answers.append([["<" + iri + ">" for iri in f.split(" ")] for f in df['answers']])
+
+    number_of_users = len(user_ids)
 
     split = 0.1
     user_data_split = []

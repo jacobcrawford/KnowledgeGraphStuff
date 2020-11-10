@@ -229,7 +229,7 @@ def extractAnswersToQueryInRDF():
         print("     Queries with error: " + str(errors_count))
         print("     Queries with square" + str(square_count))
         print("\n")
-        pd.DataFrame(rows).to_csv("user_query_log_answersRDF/" + uid + ".csv")
+        #pd.DataFrame(rows).to_csv("user_query_log_answersRDF/" + uid + ".csv")
     print("Total normal success " + str(total_succes))
     print("total usefull answers " + str(total_answers))
     print("total union queries " + str(total_union_count))
