@@ -66,3 +66,57 @@ Loaded: <_io.TextIOWrapper name='../dbpedia3.9//category_labels_en.nt.gz' encodi
 [2020-11-09 18:04:14,638] - number of entities in summary:566
 [2020-11-09 18:04:14,638] - number of relations in summary:94
 [2020-11-09 18:04:14,639] -       Summary  accuracy 0.4%
+[2020-11-09 18:06:50,866] - number of triples in summary:693
+[2020-11-09 18:06:50,866] - number of entities in summary:542
+[2020-11-09 18:06:50,866] - number of relations in summary:57
+[2020-11-09 18:06:50,866] -       Summary  accuracy 0.0582820899562981%
+[2020-11-09 18:09:26,959] - number of triples in summary:693
+[2020-11-09 18:09:26,959] - number of entities in summary:553
+[2020-11-09 18:09:26,959] - number of relations in summary:73
+[2020-11-09 18:09:26,960] -       Summary  accuracy 0.014285714285714287%
+[2020-11-09 18:12:03,108] - number of triples in summary:693
+[2020-11-09 18:12:03,108] - number of entities in summary:510
+[2020-11-09 18:12:03,108] - number of relations in summary:104
+[2020-11-09 18:12:03,108] -       Summary  accuracy 0.625%
+[2020-11-09 18:14:38,814] - number of triples in summary:693
+[2020-11-09 18:14:38,814] - number of entities in summary:668
+[2020-11-09 18:14:38,814] - number of relations in summary:75
+[2020-11-09 18:14:38,814] -       Summary  accuracy 0.0%
+[2020-11-09 18:17:14,762] - number of triples in summary:693
+[2020-11-09 18:17:14,762] - number of entities in summary:569
+[2020-11-09 18:17:14,762] - number of relations in summary:74
+[2020-11-09 18:17:14,762] -       Summary  accuracy 0.0%
+[2020-11-09 18:19:50,500] - number of triples in summary:693
+[2020-11-09 18:19:50,500] - number of entities in summary:610
+[2020-11-09 18:19:50,500] - number of relations in summary:65
+[2020-11-09 18:19:50,501] -       Summary  accuracy 0.0%
+[2020-11-09 18:22:26,274] - number of triples in summary:693
+[2020-11-09 18:22:26,274] - number of entities in summary:603
+[2020-11-09 18:22:26,274] - number of relations in summary:90
+[2020-11-09 18:22:26,274] -       Summary  accuracy 0.0%
+[2020-11-09 18:25:02,328] - number of triples in summary:693
+[2020-11-09 18:25:02,328] - number of entities in summary:564
+[2020-11-09 18:25:02,328] - number of relations in summary:79
+[2020-11-09 18:25:02,329] -       Summary  accuracy 0.0%
+[2020-11-09 18:27:38,521] - number of triples in summary:693
+[2020-11-09 18:27:38,521] - number of entities in summary:528
+[2020-11-09 18:27:38,521] - number of relations in summary:55
+[2020-11-09 18:27:38,523] -       Summary  accuracy 0.0%
+[2020-11-09 18:30:14,413] - number of triples in summary:693
+[2020-11-09 18:30:14,413] - number of entities in summary:549
+[2020-11-09 18:30:14,413] - number of relations in summary:65
+[2020-11-09 18:30:14,414] -       Summary  accuracy 0.0%
+[2020-11-09 18:32:50,569] - number of triples in summary:693
+[2020-11-09 18:32:50,569] - number of entities in summary:564
+[2020-11-09 18:32:50,569] - number of relations in summary:68
+[2020-11-09 18:32:50,570] -       Summary  accuracy 0.0%
+[2020-11-09 18:32:50,571] - Done
+loading from: ../dbpedia3.9/
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//long_abstract_en_mod.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//topical_concepts_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//mappingbased_properties_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//instance_types_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//persondata_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//article_categories_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//geo_coordinates_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//category_labels_en.nt.gz' encoding='UTF-8'>
