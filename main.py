@@ -98,11 +98,11 @@ def merge_accuracy_for_old_and_normalization():
     #print(json.dumps(rows_low))
 
 
-def printDynamic():
+def printDynamic(split):
     path1 = "experiments_results"
     files = [f for f in listdir(path1) if
-     isfile(join(path1, f)) and f.endswith(".csv") and "v5" in f and "S0.1" in f ]
-    file = files[0]
+     isfile(join(path1, f)) and f.endswith(".csv") and "v5" in f and "S0."+split in f ]
+    file = files[1]
 
     df = pd.read_csv(path1+"/"+file)
     for c in df.columns[1:]:
@@ -124,7 +124,7 @@ def printRDFResultPagerank():
         df = pd.read_csv(path1 + "/" +f)
         print(len(df))
 
-#printDynamic()
+#printDynamic("1")
 #printResults("v4")
 #merge_accuracy_for_old_and_normalization()
 runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=5)

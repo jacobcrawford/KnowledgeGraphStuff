@@ -44,9 +44,9 @@ def summaryAccuracy(summary, user_log):
             accuracies.append(count / total_answers)
     return np.mean(np.array(accuracies))
 
-def loadDBPedia(path):
+def loadDBPedia(path, include_properties=False):
     print("loading from: " + path)
-    KG = DBPedia(rdf_gz=path)
+    KG = DBPedia(rdf_gz=path,include_properties=include_properties)
     # Load the KG into memory
     logging.info('Loading {}'.format(KG.name()))
     KG.load()
@@ -405,7 +405,7 @@ def makeRDFData(user_log_answer_files,path, KG: KnowledgeGraph):
 def runGLIMPSEExperimentOnceRDF(k, e,version, answers_version, kg_path):
     path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
-    KG = loadDBPedia(kg_path)
+    KG = loadDBPedia(kg_path, include_properties=True)
     answers, uids = makeRDFData(user_log_answer_files,path, KG)
 
     # Make train and test sets
@@ -494,10 +494,9 @@ def pageRankExperimentOnce(k,ppr,version,answers_version, kg_path):
 
 def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
     logging.info("Starting ppr" + str(ppr) + " for k=" + str(k))
-    KG = loadDBPedia(kg_path)
+    KG = loadDBPedia(kg_path, include_properties=True)
     path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
-    number_of_users = len(user_log_answer_files)
 
     k = k * KG.number_of_triples()
 

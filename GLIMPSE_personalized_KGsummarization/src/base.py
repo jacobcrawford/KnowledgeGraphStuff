@@ -390,13 +390,14 @@ class YAGO(KnowledgeGraph):
 
 class DBPedia(KnowledgeGraph):
 
-    def __init__(self, rdf_gz='facts.gz', query_dir='queries/', mid_dir='by-mid/'):
+    def __init__(self, rdf_gz='facts.gz', query_dir='queries/', mid_dir='by-mid/', include_properties=False):
         """
         :param rdf_gz: folder for data
         :param query_dir: directory where queries are saved as json
         :param mid_dir: directory where lists of query IDs by MID are stored
         """
         super().__init__()
+        self.include_properties = include_properties
         self.name_ = 'DBPedia'
 
         self.rdf_gz_ = rdf_gz
@@ -433,9 +434,11 @@ class DBPedia(KnowledgeGraph):
                     if not e1 or not e2:
                         continue
 
+
                     # remove property values
-                    #if not (e1.startswith("<") and e1.endswith(">") and e2.startswith("<") and e2.endswith(">")):
-                    #    continue
+                    if not self.include_properties:
+                        if not (e1.startswith("<") and e1.endswith(">") and e2.startswith("<") and e2.endswith(">")):
+                           continue
 
                     triple = (e1, r, e2)
                     self.add_triple(triple)
