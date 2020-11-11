@@ -1,1 +1,50 @@
-[2020-11-10 21:10:02,626] - Loading DBPedia
+[2020-11-11 17:55:21,772] - Loading DBPedia
+[2020-11-11 18:01:24,126] - Loaded DBPedia
+[2020-11-11 18:01:24,485] - KG entities: 17849753
+[2020-11-11 18:01:24,485] - KG triples: 69213672
+[2020-11-11 18:01:24,485] - Running for K=692.1367200000001, e=0.01
+[2020-11-11 18:01:24,485] -   Running GLIMPSE on user: e501b61d45deb9937635cacba1c3b87a
+[2020-11-11 18:25:51,283] -   Done
+[2020-11-11 18:25:51,286] -       Summary  accuracy 0.0%
+[2020-11-11 18:26:00,746] -   Running GLIMPSE on user: 0126ace40b97576faafdc04d352bf2e2
+[2020-11-11 18:50:01,560] -   Done
+[2020-11-11 18:50:01,561] -       Summary  accuracy 0.05830498004411048%
+[2020-11-11 18:50:11,045] -   Running GLIMPSE on user: d936a43387bad69a70f2adf35a7c80e4
+[2020-11-11 19:07:31,496] -   Done
+[2020-11-11 19:07:31,497] -       Summary  accuracy 0.14777140996490676%
+[2020-11-11 19:07:41,061] -   Running GLIMPSE on user: a61a81e4f9d8d569bfeaea6d4075fb8c
+[2020-11-11 19:31:20,290] -   Done
+[2020-11-11 19:31:20,292] -       Summary  accuracy 0.05625%
+[2020-11-11 19:31:29,773] -   Running GLIMPSE on user: cdd5a53277177861c00f9a2c94337b26
+[2020-11-11 19:53:03,402] -   Done
+[2020-11-11 19:53:03,402] -       Summary  accuracy 0.0%
+[2020-11-11 19:53:12,864] -   Running GLIMPSE on user: 5459e093980e751023cec2b325f14866
+[2020-11-11 20:11:52,086] -   Done
+[2020-11-11 20:11:52,086] -       Summary  accuracy 0.0%
+[2020-11-11 20:12:01,631] -   Running GLIMPSE on user: f5a1c1793e4bbf386227a23af86cc580
+[2020-11-11 20:32:22,148] -   Done
+[2020-11-11 20:32:22,148] -       Summary  accuracy 0.0%
+[2020-11-11 20:32:31,700] -   Running GLIMPSE on user: 6d418da8de1b4e19787dc71797f22003
+[2020-11-11 20:50:37,220] -   Done
+[2020-11-11 20:50:37,221] -       Summary  accuracy 0.0%
+[2020-11-11 20:50:46,790] -   Running GLIMPSE on user: 14bd03bd4ce49c81dc98369ff75bf1d9
+[2020-11-11 21:09:52,625] -   Done
+[2020-11-11 21:09:52,625] -       Summary  accuracy 0.0%
+[2020-11-11 21:10:02,178] -   Running GLIMPSE on user: d0e1d796c308100bd2eef558311f8eae
+[2020-11-11 21:30:35,508] -   Done
+[2020-11-11 21:30:35,511] -       Summary  accuracy 0.0%
+[2020-11-11 21:30:45,072] -   Running GLIMPSE on user: c1065e0ce541801df42f864ce5c0da31
+[2020-11-11 21:49:30,183] -   Done
+[2020-11-11 21:49:30,185] -       Summary  accuracy 0.0008331668331668331%
+[2020-11-11 21:49:39,793] -   Running GLIMPSE on user: b7f0932b03213ed5af523bce495c882e
+[2020-11-11 22:06:05,684] -   Done
+[2020-11-11 22:06:05,684] -       Summary  accuracy 0.0003816793893129771%
+loading from: ../dbpedia3.9/
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//long_abstract_en_mod.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//topical_concepts_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//mappingbased_properties_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//instance_types_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//persondata_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//article_categories_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//geo_coordinates_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//category_labels_en.nt.gz' encoding='UTF-8'>
