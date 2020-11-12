@@ -31,6 +31,11 @@ class KnowledgeGraph(object):
         self.entity_id_ = {}
         self.id_entity_ = {}
 
+        # Map relationships to numeric IDs
+        self.rid_ = 0
+        self.relationship_id_ = {}
+        self.id_relationship_ = {}
+
         self.name_ = None
 
     def name(self):
@@ -123,7 +128,12 @@ class KnowledgeGraph(object):
         e1, r, e2 = triple
         if not self.has_triple(triple):
             self.number_of_triples_ += 1
-            self.relationships_.add(r)
+            # Record new relationship
+            if not self.has_relationship(r):
+                self.relationship_id_[r] = self.rid_
+                self.id_relationship_[self.rid_] = r
+                self.relationships_.add(r)
+                self.rid_ += 1
 
             # Record new entities
             for entity in (e1, e2):
@@ -209,7 +219,7 @@ class KnowledgeGraph(object):
         """
         return self.triple_value_[triple]
 
-    def model_user_pref(self, query_log, power=1, rdf_query_logs=False):
+    def model_user_pref(self, query_log, power=1, rdf_query_logs=False, include_relationship_prob=False):
         """
         :param query_log: list of queries as dicts
         :param power: number of terms in Taylor expansion
@@ -218,14 +228,14 @@ class KnowledgeGraph(object):
 
         # Perform random walk on the KG
         if rdf_query_logs:
-            x = query_vector_rdf(self,query_log)
+            x,y = query_vector_rdf(self,query_log),np.ones(self.number_of_relationships())
         else:
-            x = query_vector(self, query_log)
+            x,y = query_vector(self, query_log)
+            y = y if include_relationship_prob else np.ones(self.number_of_relationships())
 
 
         M = self.transition_matrix()
         x = random_walk_with_restart(M, x, power=power)
-        # x /= np.sum(x)
 
         # Store entity and triple values
         for eid, val in enumerate(x):
@@ -237,7 +247,8 @@ class KnowledgeGraph(object):
                 for e2 in self.triples_[e1][r]:
                     triple = (e1, r, e2)
                     eid1, eid2 = self.entity_id(e1), self.entity_id(e2)
-                    self.triple_value_[triple] = np.log(x[eid1] * x[eid2] + 1) #TODO not the same calculation as the paper (where is the relation)
+                    r_id = self.relationship_id_[r]
+                    self.triple_value_[triple] = np.log(x[eid1] * y[r_id] * x[eid2] + 1) #TODO not the same calculation as the paper (where is the relation)
 
 
     def query_dir(self):

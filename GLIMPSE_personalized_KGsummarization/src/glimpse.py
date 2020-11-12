@@ -77,7 +77,7 @@ class SummaryMethod(object):
         return self.fn_(KG, K, query_log, **self.kwargs_)
 
 
-def GLIMPSE(KG, K, query_log, epsilon=1e-3, power=1, rdf_query_logs=False):
+def GLIMPSE(KG, K, query_log, epsilon=1e-3, power=1, rdf_query_logs=False, include_relation_prob=False):
     """
     :param KG: KnowledgeGraph to summarize
     :param K: number of triples in summary
@@ -87,7 +87,7 @@ def GLIMPSE(KG, K, query_log, epsilon=1e-3, power=1, rdf_query_logs=False):
     :return S: Summary
     """
     # Estimate user preferences over KG
-    KG.model_user_pref(query_log, power=power,rdf_query_logs=rdf_query_logs)
+    KG.model_user_pref(query_log, power=power,rdf_query_logs=rdf_query_logs,include_relationship_prob=include_relation_prob)
 
     # Greedily select top-k triples for summary S
     heap = Heap(KG)

@@ -53,9 +53,10 @@ def loadDBPedia(path, include_properties=False):
     logging.info('Loaded {}'.format(KG.name()))
     return KG
 
-def printResults(version, use_etf=False, key='K in % of |T|'):
+def printResults(version, use_etf=False, key='K in % of |T|', include_properties=False):
     path1 = "experiments_results"
     path2 = "experiments_results_pagerank"
+
     etf = {"474":1.89094736842, "4740":1.66558391338, "47408":1.3411616641, "474080":0.703619142439, "4740806":0.479221758377}
     version_string = version if version is not None else ""
 
@@ -67,9 +68,11 @@ def printResults(version, use_etf=False, key='K in % of |T|'):
     rows = []
     div = 10000
     tms = 1000000
+    kg_triples = 69213000 if include_properties else 47408000
     print("PPR2")
+
     def pctf(x):
-        f = math.ceil(int(x)/47408000*tms)/div
+        f = math.ceil(int(x)/kg_triples*tms)/div
         if f > 1:
             print(f)
             return str(math.floor(f))
@@ -325,7 +328,7 @@ def runGLIMPSEExperimentOnce(k, e,version, answers_version, kg_path):
         KG.number_of_entities()) + "K#" + str(int(k)) + "e#" + str(e) + ".csv")
 
 
-def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path, split):
+def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path, split, retrain=False):
     path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
 
@@ -348,6 +351,7 @@ def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path, split):
 
     number_of_users = len(user_ids)
 
+    # Split data
     user_data_split = []
     for i in range(int(1/split)): #[0,1,2,3,4]
         user_data_split.append([])
@@ -361,9 +365,19 @@ def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path, split):
     for idx_u in range(number_of_users):
         KG.reset()
         summary = GLIMPSE(KG, k, user_data_split[0][idx_u], e)
-        rows.append({str(split*i): summaryAccuracy(summary,user_data_split[i][idx_u]) for i in range(1, int(1/split))})
+        if not retrain:
+            rows.append({str(split*i): summaryAccuracy(summary,user_data_split[i][idx_u]) for i in range(1, int(1/split))})
+        else:
+            for i in range(0,len(user_data_split)-1):
+                train = []
+                for j in range(0,i+1):
+                    train = train + user_data_split[j][idx_u]
+                test = user_data_split[i+1][idx_u]
+                summary = GLIMPSE(KG, k, train, e)
+                rows.append({str(split * i): summaryAccuracy(summary, test)})
+
         logging.info("Finished for user: " + user_ids[idx_u])
-    pd.DataFrame(rows).to_csv("experiments_results/v"+str(5)+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+"S"+str(split)+ ".csv")
+    pd.DataFrame(rows).to_csv("experiments_results/v"+str(version)+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+"S"+str(split)+ ".csv")
 
 
 def makeRDFData(user_log_answer_files,path, KG: KnowledgeGraph):
@@ -401,7 +415,7 @@ def makeRDFData(user_log_answer_files,path, KG: KnowledgeGraph):
     return answers,uids
 
 
-def runGLIMPSEExperimentOnceRDF(k, e,version, answers_version, kg_path):
+def runGLIMPSEExperimentOnceRDF(k_in_pct, e,version, answers_version, kg_path, include_relationship_prob=False):
     path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
     KG = loadDBPedia(kg_path, include_properties=True)
@@ -416,7 +430,7 @@ def runGLIMPSEExperimentOnceRDF(k, e,version, answers_version, kg_path):
         user_log_test.append(answers[idx][split:len(answers[idx])])
 
 
-    k = k*KG.number_of_triples()
+    k = k_in_pct*KG.number_of_triples()
 
     logging.info("KG entities: " + str(KG.number_of_entities()))
     logging.info("KG triples: " + str(KG.number_of_triples_))
@@ -428,7 +442,7 @@ def runGLIMPSEExperimentOnceRDF(k, e,version, answers_version, kg_path):
         # model user pref
         logging.info("  Running GLIMPSE on user: " + uids[idx_u])
         t1 = time.time()
-        summary = GLIMPSE(KG, k, user_log_train[idx_u], e, 1, True)
+        summary = GLIMPSE(KG, k, user_log_train[idx_u], e, 1, True, include_relation_prob=include_relationship_prob)
         logging.info("  Done")
         t2 = time.time()
 
@@ -561,8 +575,6 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
     logging.info("Done")
 
 
-
-
 METHODS = {
     'glimpse',
     'ppr',
@@ -573,6 +585,8 @@ VERSIONS = {
     '2': 'More users',
     '3': 'Normalizing query vector',
     '4': 'Construct query results',
+    '5': 'Dynamic setup',
+    '6': 'Construct query with relationship probabilities'
 }
 
 
@@ -609,7 +623,10 @@ def main():
     if args.method == 'glimpse':
         e = float(args.epsilon)
         if 'RDF' in answer_version:
-            runGLIMPSEExperimentOnceRDF(k,e,version,answer_version,kg_path )
+            if version == '6':
+                runGLIMPSEExperimentOnceRDF(k, e, version, answer_version, kg_path, include_relationship_prob=True)
+            else:
+                runGLIMPSEExperimentOnceRDF(k, e, version, answer_version, kg_path )
         else:
             runGLIMPSEExperimentOnce(k,e,version, answer_version, kg_path)
 

@@ -102,7 +102,7 @@ def printDynamic(split):
     path1 = "experiments_results"
     files = [f for f in listdir(path1) if
      isfile(join(path1, f)) and f.endswith(".csv") and "v5" in f and "S0."+split in f ]
-    file = files[1]
+    file = files[0]
 
     df = pd.read_csv(path1+"/"+file)
     for c in df.columns[1:]:
@@ -128,6 +128,6 @@ def printRDFResultPagerank():
 #printResults("v4")
 #merge_accuracy_for_old_and_normalization()
 #runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=5,split=0.1)
-runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=5,split=0.2)
+#runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=5,split=0.2)
 #printRDFResultPagerank()
 
