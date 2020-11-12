@@ -1,8 +1,5 @@
 import numpy as np
 
-from GLIMPSE_personalized_KGsummarization.src.base import KnowledgeGraph
-
-
 def query_vector(KG, query_log_answers):
     """
     :param KG: KnowledgeGraph
@@ -16,7 +13,7 @@ def query_vector(KG, query_log_answers):
             x[entity_id] += 1/len(query_log_answers[i])
     return x
 
-def query_vector_rdf(KG: KnowledgeGraph,query_log_answers):
+def query_vector_rdf(KG,query_log_answers):
     x = np.zeros(KG.number_of_entities())
     y = np.zeros(KG.number_of_relationships())
     for i in range(len(query_log_answers)):
