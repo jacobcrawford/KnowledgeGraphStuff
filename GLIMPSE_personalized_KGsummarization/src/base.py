@@ -228,10 +228,11 @@ class KnowledgeGraph(object):
 
         # Perform random walk on the KG
         if rdf_query_logs:
-            x,y = query_vector_rdf(self,query_log),np.ones(self.number_of_relationships())
-        else:
-            x,y = query_vector(self, query_log)
+            x,y = query_vector_rdf(self,query_log)
             y = y if include_relationship_prob else np.ones(self.number_of_relationships())
+        else:
+            x,y = query_vector(self, query_log), np.ones(self.number_of_relationships())
+
 
 
         M = self.transition_matrix()
