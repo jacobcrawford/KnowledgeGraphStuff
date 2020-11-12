@@ -325,7 +325,7 @@ def runGLIMPSEExperimentOnce(k, e,version, answers_version, kg_path):
         KG.number_of_entities()) + "K#" + str(int(k)) + "e#" + str(e) + ".csv")
 
 
-def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path):
+def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path, split):
     path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
 
@@ -348,7 +348,6 @@ def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path):
 
     number_of_users = len(user_ids)
 
-    split = 0.1
     user_data_split = []
     for i in range(int(1/split)): #[0,1,2,3,4]
         user_data_split.append([])
