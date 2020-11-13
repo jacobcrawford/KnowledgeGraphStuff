@@ -17,22 +17,6 @@ def listFD(url, ext=''):
     soup = BeautifulSoup(page, 'html.parser')
     return [url + '/' + node.get('href') for node in soup.find_all('a') if node.get('href').endswith(ext)]
 
-def downloadSelectedFiles(path_to_dest):
-    url = 'http://downloads.dbpedia.org/3.9/en/'
-    ext = 'nt.bz2'
-    print('Beginning file download with urllib2...')
-    selected = ["long_abstracts_en.nt.bz2"]
-    not_selected = ["article_categories_en.nt.bz2", "category_labels_en.nt.bz2",
-                    "geo_coordinates_en.nt.bz2", "instance_types_en.nt.bz2"
-                    , "mappingbased_properties_en.nt.bz2",
-                    "persondata_en.nt.bz2", "topical_concepts_en.nt.bz2" ]
-    for file in listFD(url, ext):
-        name = file.split("http://downloads.dbpedia.org/3.9/en//")[1]
-        if name in selected:
-            filepath = path_to_dest + "/" + name
-            urllib.request.urlretrieve(file, filepath)
-            print("Downloaded:" + str(name) + " at " + str(filepath))
-
 def downLoadDBPedia39():
     url = 'http://downloads.dbpedia.org/3.9/en/'
     ext = 'nt.bz2'
@@ -121,35 +105,18 @@ def main2():
         df = pd.DataFrame(rows)
         df.to_csv("user_query_logs/" + k + ".csv")
 
-def main3(key):
+def compareRemoteAndLocalKnowledgegraphQueries(uid):
     v = VirtuosoConnector()
     v2 = VirtuosoConnector("https://dbpedia.org/sparql", "http://dbpedia.org")
     logs = makeQueryLogsUserList()
-    for k in [key]:
-        for q in logs[k]:
-            try:
-                print("\n New:")
-                results = v.extractIRIsFromJsonResults(v.query(q))
-                print("local: " + str(len(results)))
-                results2 = v2.extractIRIsFromJsonResults(v2.query(q))
-                print("server: " + str(len(results2)))
-                if len(results) == 0 and len(results2) != 0:
-                    print(q)
-            except:
-                print("error")
-
-user_data_split = []
-split = 0.2
-number_of_users = 15
-
-user_answers = [[list([i]) for i in range(100)] for _ in range(15)]
-for i in range(int(1/split)): #[0,1,2,3,4]
-    user_data_split.append([])
-    for j in range(number_of_users): #[0,...,14]
-        split_index_start = int(len(user_answers[j]) * (split*i))
-        split_index_end = int(len(user_answers[j]) * (split*(i+1)))
-        user_data_split[i].append([[entity for entity in answers_to_query] for answers_to_query in user_answers[j][split_index_start:split_index_end]])
-
-for i in user_data_split:
-    for j in i:
-        print(j)
+    for q in logs[uid]:
+        try:
+            print("\n New:")
+            results = v.extractIRIsFromJsonResults(v.query(q))
+            print("local: " + str(len(results)))
+            results2 = v2.extractIRIsFromJsonResults(v2.query(q))
+            print("server: " + str(len(results2)))
+            if len(results) == 0 and len(results2) != 0:
+                print(q)
+        except:
+            print("error")

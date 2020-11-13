@@ -9,17 +9,18 @@ logging.basicConfig(format='[%(asctime)s] - %(message)s',
 answer_version = "2"
 version = "3"
 
-if (False):
-    for k in K:
-        for e in E:
-            os.system('nohup python experiments.py'
-                      + ' --method glimpse'
-                      + ' --percent-triples ' + str(k)
-                      + ' --version ' + version
-                      + ' --version-answers ' + answer_version
-                      + ' --epsilon ' + str(e)
-                      + ' > ' + 'GLIMPSE' + version+'a' + answer_version + ' #K' + str(k) + '#E' + str(e) + '.out'
-                      + ' &')
+# This code requires a shitton of memory
+
+for k in K:
+    for e in E:
+        os.system('nohup python experiments.py'
+                  + ' --method glimpse'
+                  + ' --percent-triples ' + str(k)
+                  + ' --version ' + version
+                  + ' --version-answers ' + answer_version
+                  + ' --epsilon ' + str(e)
+                  + ' > ' + 'GLIMPSE' + version+'a' + answer_version + ' #K' + str(k) + '#E' + str(e) + '.out'
+                  + ' &')
 
 for k in K:
     for ppr in [2]:

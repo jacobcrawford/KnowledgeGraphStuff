@@ -68,10 +68,10 @@ class VirtuosoConnector:
                 else:
                     no_ans += 1
             except SPARQLExceptions.QueryBadFormed:
-                #print("ERROR BAD QUERY")
+                print("ERROR BAD QUERY")
                 errors +=1
             except Exception as e:
-                #print("Error", e)
+                print("Error", e)
                 errors += 1
         return answers, errors, len(queries), no_ans
 
