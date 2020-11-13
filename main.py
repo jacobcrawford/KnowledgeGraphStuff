@@ -121,7 +121,7 @@ def printRDFResultPagerank():
 #printDynamic("1")
 #printResults("v4")
 #merge_accuracy_for_old_and_normalization()
-runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=5,split=0.1, retrain=True)
-#runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=5,split=0.2)
+runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=7,split=0.1, retrain=True)
+#runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=7,split=0.2)
 #printRDFResultPagerank()
 
