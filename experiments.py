@@ -333,7 +333,6 @@ def runGLIMPSEExperimentOnce(k, e,version, answers_version, kg_path):
     pd.DataFrame(rows).to_csv("experiments_results/v" + version + "T#" + str(KG.number_of_triples()) + "_E#" + str(
         KG.number_of_entities()) + "K#" + str(int(k)) + "e#" + str(e) + ".csv")
 
-
 def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path, split, retrain=False):
     path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
@@ -385,7 +384,6 @@ def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path, split, r
         logging.info("Finished for user: " + user_ids[idx_u])
     pd.DataFrame(rows).to_csv("experiments_results/v"+str(version)+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+"S"+str(split)+ ".csv")
 
-
 def makeRDFData(user_log_answer_files,path, KG: KnowledgeGraph):
     # filter out logs of size < 10
     answers = []
@@ -420,7 +418,25 @@ def makeRDFData(user_log_answer_files,path, KG: KnowledgeGraph):
             uids.append(file.split(".")[0])
     return answers,uids
 
+def makeSplitRDF(split,log):
+    user_log_train = []
+    user_log_test = []
+    for idx in range(len(log)):
+        split = math.floor(len(log[idx])*split)
+        user_log_train.append(log[idx][0:split])
+        user_log_test.append(log[idx][split:len(log[idx])])
+    return user_log_train, user_log_test
 
+
+def calculateMeanAccuracyRDF(test_log, summary):
+    accuracies = []
+    for answer in test_log:
+        total_triples = len(answer)
+        triples_in_summary = len([triple for triple in answer if summary.has_triple(triple)])
+
+        accuracies.append(triples_in_summary / total_triples)
+
+    return np.mean(np.array(accuracies))
 def runGLIMPSEExperimentOnceRDF(k_in_pct, e,version, answers_version, kg_path, include_relationship_prob=False):
     path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
@@ -428,13 +444,7 @@ def runGLIMPSEExperimentOnceRDF(k_in_pct, e,version, answers_version, kg_path, i
     answers, uids = makeRDFData(user_log_answer_files,path, KG)
 
     # Make train and test sets
-    user_log_train = []
-    user_log_test = []
-    for idx in range(len(uids)):
-        split = math.floor(len(answers[idx])*0.7)
-        user_log_train.append(answers[idx][0:split])
-        user_log_test.append(answers[idx][split:len(answers[idx])])
-
+    user_log_train, user_log_test = makeSplitRDF(0.7, answers)
 
     k = k_in_pct*KG.number_of_triples()
 
@@ -449,14 +459,7 @@ def runGLIMPSEExperimentOnceRDF(k_in_pct, e,version, answers_version, kg_path, i
         logging.info("  Done")
         t2 = time.time()
 
-        accuracies = []
-        for answer in user_log_test[idx_u]:
-            total_triples = len(answer)
-            triples_in_summary = len([triple for triple in answer if summary.has_triple(triple)])
-
-            accuracies.append(triples_in_summary/total_triples)
-
-        mean_accuracy = np.mean(np.array(accuracies))
+        mean_accuracy = calculateMeanAccuracyRDF(user_log_test[idx_u], summary)
 
         logging.info("      Summary  accuracy " + str(mean_accuracy) + "%")
         rows.append({'%': mean_accuracy, 'runtime': t2 - t1})
@@ -475,12 +478,7 @@ def runPagerankExperimentOnceRDF(k_in_pct,ppr,version,answers_version, kg_path):
     answers, uids = makeRDFData(user_log_answer_files, path, KG)
 
     # Make train and test sets
-    user_log_train = []
-    user_log_test = []
-    for idx in range(len(uids)):
-        split = math.floor(len(answers[idx]) * 0.7)
-        user_log_train.append(answers[idx][0:split])
-        user_log_test.append(answers[idx][split:len(answers[idx])])
+    user_log_train, user_log_test = makeSplitRDF(0.7, answers)
 
     rows = []
     for idx_u in range(len(uids)):
@@ -516,15 +514,8 @@ def runPagerankExperimentOnceRDF(k_in_pct,ppr,version,answers_version, kg_path):
         logging.info("number of entities in summary:" + str(summary.number_of_entities()))
         logging.info("number of relations in summary:" + str(summary.number_of_relationships()))
         t2 = time.time()
-        accuracies = []
-        for answer in user_log_test[idx_u]:
-            total_triples = len(answer)
-            triples_in_summary = len([triple for triple in answer if summary.has_triple(triple)])
 
-            accuracies.append(triples_in_summary / total_triples)
-
-        mean_accuracy = np.mean(np.array(accuracies))
-
+        mean_accuracy = calculateMeanAccuracyRDF(user_log_test[idx_u], summary)
         logging.info("      Summary  accuracy " + str(mean_accuracy) + "%")
         rows.append({'%': mean_accuracy, 'runtime': t2 - t1})
 
@@ -575,14 +566,9 @@ def pageRankExperimentOnce(k,ppr,version,answers_version, kg_path):
             KG.number_of_entities()) + "_K#" + str(int(k)) + "_PPR#" + str(ppr) + ".csv")
     logging.info("Done")
 
-
-
-
-
 METHODS = {
     'glimpse',
     'ppr',
-    'results'
 }
 
 VERSIONS = {
@@ -597,29 +583,23 @@ VERSIONS = {
 def parse_args():
 
     parser = argparse.ArgumentParser()
-
     parser.add_argument('--KG-path', default='../dbpedia3.9/', help='Path to the KG files')
-
     parser.add_argument('--percent-triples', type=float_in_zero_one, default=0.001,
             help='Ratio of number of triples of KG to use as K '
                  '(summary constraint). Default is 0.001.')
     parser.add_argument('--walk', help="length of ppr walk")
     parser.add_argument('--version', help='version of experiments', choices=list(VERSIONS.keys()))
     parser.add_argument('--version-answers', help='version of extracted user answers')
-
-
     parser.add_argument('--epsilon',
             help='Set this flag to the epsilon parameter.Defines the sampling size.', default=1e-2)
-
     parser.add_argument('--method', default=['glimpse'],
             choices=list(METHODS),
             help='Experiments to run')
-
     return parser.parse_args()
 
 def main():
     args = parse_args()
-    k = float(args.percent_triples)
+    k_in_pct = float(args.percent_triples)
     version = args.version
     answer_version = args.version_answers
     kg_path = args.KG_path
@@ -628,23 +608,20 @@ def main():
         e = float(args.epsilon)
         if 'RDF' in answer_version:
             if version == '6':
-                runGLIMPSEExperimentOnceRDF(k, e, version, answer_version, kg_path, include_relationship_prob=True)
+                runGLIMPSEExperimentOnceRDF(k_in_pct, e, version, answer_version, kg_path, include_relationship_prob=True)
             else:
-                runGLIMPSEExperimentOnceRDF(k, e, version, answer_version, kg_path )
+                runGLIMPSEExperimentOnceRDF(k_in_pct, e, version, answer_version, kg_path )
         else:
-            runGLIMPSEExperimentOnce(k,e,version, answer_version, kg_path)
+            runGLIMPSEExperimentOnce(k_in_pct,e,version, answer_version, kg_path)
 
     elif args.method == 'ppr':
         ppr = int(args.walk)
         if 'RDF' in answer_version:
-            runPagerankExperimentOnceRDF(k, ppr, version, answer_version, kg_path)
+            runPagerankExperimentOnceRDF(k_in_pct, ppr, version, answer_version, kg_path)
         else:
-            pageRankExperimentOnce(k, ppr, version, answer_version, kg_path)
-    elif args.method == 'results':
-        printResults("v"+ str(args.version))
+            pageRankExperimentOnce(k_in_pct, ppr, version, answer_version, kg_path)
     else:
         logging.info("running nothing. method parameter not set")
-
 
 if __name__ == '__main__':
     main()
