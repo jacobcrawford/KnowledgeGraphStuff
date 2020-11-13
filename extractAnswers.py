@@ -15,56 +15,6 @@ def extractAnswersToQueryInRDF():
     total_errors = 0
     square_count_total = 0
 
-    a = "SELECT ?property ?hasValue ?isValueOf" \
-        "WHERE { " \
-        "   { <http://dbpedia.org/resource/Category:Person> ?property ?hasValue }" \
-        "}"
-
-    b = " { <http://dbpedia.org/ontology/Work> ?property ?hasValue }" \
-        "UNION" \
-        "{ ?isValueOf ?property <http://dbpedia.org/ontology/Work> }"
-
-    c = "{ " \
-        "{?game <http://purl.org/dc/terms/subject> " \
-        "<http://dbpedia.org/resource/Category:Video_games> ." \
-        "?game foaf:name ?name .      } " \
-        "UNION " \
-        "{?game <http://purl.org/dc/terms/subject> " \
-        "<http://dbpedia.org/resource/Category:Party_games> .}" \
-        "}"
-
-    d = "{ " \
-        "  {?game <http://purl.org/dc/terms/subject>" \
-        "<http://dbpedia.org/resource/Category:Video_games> ." \
-        "?game foaf:name ?name .}" \
-        "UNION" \
-        "{?game <http://purl.org/dc/terms/subject>" \
-        "<http://dbpedia.org/resource/Category:Party_games> .}" \
-        "}  "
-
-    e = "SELECT ?name " \
-        "WHERE {" \
-        "{?game <http://purl.org/dc/terms/subject> " \
-        "<http://dbpedia.org/resource/Category:Video_games> . " \
-        "?game foaf:name ?name .}" \
-        "UNION" \
-        "{?game <http://purl.org/dc/terms/subject> " \
-        "<http://dbpedia.org/resource/Category:Party_games> .}" \
-        "}" \
-        "ORDER by ?name" \
-        "limit 10"
-
-    f= "SELECT ?property ?hasValue ?isValueOf " \
-       "WHERE { " \
-       "{ " \
-       "<http://dbpedia.org/resource/France> ?property ?hasValue . " \
-       "} " \
-       "UNION { " \
-       "?isValueOf ?property <http://dbpedia.org/resource/France> . " \
-       "}" \
-       "}" \
-       ""
-
     def removeOptional(query):
         o_idx = query.lower().find("optional")
         rem_o_end = query[o_idx:len(query)].find("}")
@@ -95,7 +45,6 @@ def extractAnswersToQueryInRDF():
                     print("     NO DOT")
                 where_new += part.replace("}", "").replace("{", "") + " .\n"
         return "{" + where_new + "}"
-    #print(handleUnion(d))
 
     def makeConstructQuery(q, debug=False):
         # Remove line comments
@@ -204,14 +153,9 @@ def extractAnswersToQueryInRDF():
                     i += 1
             except Exception as e:
                 errors_count +=1
-                #print("ERROR")
-                #print(e)
-                #print("\n####################")
-                #print(q)
-                #print("&&&&&&&&&&&&&&&&&&&")
-                #print(qc)
-                #print("####################\n")
-                #makeConstructQuery(q, True)
+                print("ERROR")
+                print(e)
+                makeConstructQuery(q, True)
         total_rdf_no_result += rdf_no_result
         total_errors += errors_count
         total_nested_select_count += nested_select_count
@@ -229,7 +173,7 @@ def extractAnswersToQueryInRDF():
         print("     Queries with error: " + str(errors_count))
         print("     Queries with square" + str(square_count))
         print("\n")
-        #pd.DataFrame(rows).to_csv("user_query_log_answersRDF/" + uid + ".csv")
+        pd.DataFrame(rows).to_csv("user_query_log_answersRDF/" + uid + ".csv")
     print("Total normal success " + str(total_succes))
     print("total usefull answers " + str(total_answers))
     print("total union queries " + str(total_union_count))
@@ -260,6 +204,3 @@ def extractAnswersToQuery():
                 print(e)
 
         pd.DataFrame(rows).to_csv("user_query_log_answers2/" + uid + ".csv")
-
-
-extractAnswersToQueryInRDF()
