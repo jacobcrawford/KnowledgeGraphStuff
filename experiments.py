@@ -69,7 +69,9 @@ def printResults(version, use_etf=False, key='K in % of |T|', include_properties
     div = 10000
     tms = 1000000
     kg_triples = 69213000 if include_properties else 47408000
-    print("PPR2")
+
+    exclude = [0,3,6]
+
 
     def pctf(x):
         f = math.ceil(int(x)/kg_triples*tms)/div
@@ -83,6 +85,8 @@ def printResults(version, use_etf=False, key='K in % of |T|', include_properties
         df = pd.read_csv(path2+ "/"+p)
         k = str(p.split("K#")[1].split("_PPR")[0])
         value = pctf(k) if not use_etf else int(k)
+        df_exclude = df.index.isin(exclude)
+        df = df[~df_exclude]
         acc = df['%'].sum()/len(df['%'])
         rows.append({'Accuracy':str(acc), 'Algorithm':"ppr2", key: value})
 
@@ -111,6 +115,8 @@ def printResults(version, use_etf=False, key='K in % of |T|', include_properties
         df = pd.read_csv(path1 + "/" + p)
         k = str(p.split("K#")[1].split("e#")[0])
         value = pctf(k)
+        df_exclude = df.index.isin(exclude)
+        df = df[~df_exclude]
         acc = df['%'].sum() / len(df['%'])
         rows.append({'Accuracy': str(acc), 'Algorithm': "glimpse-3", key: value})
     print(json.dumps(rows))
@@ -432,9 +438,6 @@ def runGLIMPSEExperimentOnceRDF(k_in_pct, e,version, answers_version, kg_path, i
 
     k = k_in_pct*KG.number_of_triples()
 
-    logging.info("KG entities: " + str(KG.number_of_entities()))
-    logging.info("KG triples: " + str(KG.number_of_triples_))
-
     logging.info("Running for K=" + str(k) + ", e=" + str(e))
     rows = []
     for idx_u in range(len(uids)):
@@ -461,57 +464,13 @@ def runGLIMPSEExperimentOnceRDF(k_in_pct, e,version, answers_version, kg_path, i
     pd.DataFrame(rows).to_csv("experiments_results/v" + version + "T#" + str(KG.number_of_triples()) + "_E#" + str(
         KG.number_of_entities()) + "K#" + str(int(k)) + "e#" + str(e) + ".csv")
 
-
-def pageRankExperimentOnce(k,ppr,version,answers_version, kg_path):
-    logging.info("Starting ppr"+str(ppr)+" for k="+ str(k))
-    KG = loadDBPedia(kg_path)
-    path = "user_query_log_answers" + answers_version + "/"
-    user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
-    number_of_users = len(user_log_answer_files)
-
-    k = k*KG.number_of_triples()
-
-    user_answers = []
-    user_ids = []
-
-    for file in user_log_answer_files:
-        df = pd.read_csv(path + str(file))
-        user_ids.append(file.split(".csv")[0])
-        # list of lists of answers as iris
-        user_answers.append([["<" + iri + ">" for iri in f.split(" ")] for f in df['answers']])
-
-    user_log_train, user_log_test = makeTrainingAndTestData(number_of_users,user_answers, KG)
-
-    rows = []
-    for idx_u in range(number_of_users):
-        t1 = time.time()
-        qv = query_vector(KG, user_log_train[idx_u])
-        M = KG.transition_matrix()
-        ppr_v = random_walk_with_restart(M, qv, 0.15, ppr)
-
-        t2 = time.time()
-
-        # Extract k indexes
-        indexes = np.argpartition(ppr_v, -k)[-k:]
-        summary = Summary(KG)
-        summary.entities_ = set([KG.id_entity(i) for i in indexes])
-
-        mean_accuracy, total_entities,total_count = calculateAccuracyAndTotals(user_log_test[idx_u], summary)
-        logging.info("      Summary  accuracy " + str(mean_accuracy) + "%")
-        rows.append({'match': total_count, 'total': total_entities, '%': mean_accuracy, 'runtime': t2 - t1})
-    pd.DataFrame(rows).to_csv(
-        "experiments_results_pagerank/v" + version + "T#" + str(KG.number_of_triples()) + "_E#" + str(
-            KG.number_of_entities()) + "_K#" + str(int(k)) + "_PPR#" + str(ppr) + ".csv")
-    logging.info("Done")
-
-
-def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
-    logging.info("Starting ppr" + str(ppr) + " for k=" + str(k))
+def runPagerankExperimentOnceRDF(k_in_pct,ppr,version,answers_version, kg_path):
+    logging.info("Starting ppr" + str(ppr) + " for k=" + str(k_in_pct))
     KG = loadDBPedia(kg_path, include_properties=True)
     path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
 
-    k = k * KG.number_of_triples()
+    k = k_in_pct * KG.number_of_triples()
 
     answers, uids = makeRDFData(user_log_answer_files, path, KG)
 
@@ -573,6 +532,51 @@ def runPagerankExperimentOnceRDF(k,ppr,version,answers_version, kg_path):
         "experiments_results_pagerank/v" + version + "T#" + str(KG.number_of_triples()) + "_E#" + str(
             KG.number_of_entities()) + "_K#" + str(int(k)) + "_PPR#" + str(ppr) + ".csv")
     logging.info("Done")
+
+def pageRankExperimentOnce(k,ppr,version,answers_version, kg_path):
+    logging.info("Starting ppr"+str(ppr)+" for k="+ str(k))
+    KG = loadDBPedia(kg_path)
+    path = "user_query_log_answers" + answers_version + "/"
+    user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
+    number_of_users = len(user_log_answer_files)
+
+    k = k*KG.number_of_triples()
+
+    user_answers = []
+    user_ids = []
+
+    for file in user_log_answer_files:
+        df = pd.read_csv(path + str(file))
+        user_ids.append(file.split(".csv")[0])
+        # list of lists of answers as iris
+        user_answers.append([["<" + iri + ">" for iri in f.split(" ")] for f in df['answers']])
+
+    user_log_train, user_log_test = makeTrainingAndTestData(number_of_users,user_answers, KG)
+
+    rows = []
+    for idx_u in range(number_of_users):
+        t1 = time.time()
+        qv = query_vector(KG, user_log_train[idx_u])
+        M = KG.transition_matrix()
+        ppr_v = random_walk_with_restart(M, qv, 0.15, ppr)
+
+        t2 = time.time()
+
+        # Extract k indexes
+        indexes = np.argpartition(ppr_v, -k)[-k:]
+        summary = Summary(KG)
+        summary.entities_ = set([KG.id_entity(i) for i in indexes])
+
+        mean_accuracy, total_entities,total_count = calculateAccuracyAndTotals(user_log_test[idx_u], summary)
+        logging.info("      Summary  accuracy " + str(mean_accuracy) + "%")
+        rows.append({'match': total_count, 'total': total_entities, '%': mean_accuracy, 'runtime': t2 - t1})
+    pd.DataFrame(rows).to_csv(
+        "experiments_results_pagerank/v" + version + "T#" + str(KG.number_of_triples()) + "_E#" + str(
+            KG.number_of_entities()) + "_K#" + str(int(k)) + "_PPR#" + str(ppr) + ".csv")
+    logging.info("Done")
+
+
+
 
 
 METHODS = {

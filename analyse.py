@@ -9,7 +9,6 @@ import numpy as np
 import pandas as pd
 import QueryLogReader
 from GLIMPSE_personalized_KGsummarization.src.base import KnowledgeGraph
-from experiments import loadDBPedia
 from virtuoso_connector import makeQueryLogsUserList
 
 logging.basicConfig(format='[%(asctime)s] - %(message)s',
@@ -44,40 +43,6 @@ def uid_analysis(df: pd.DataFrame):
     df_unique_id.columns = ["uid","count"]
     return df_unique_id
 
-def queryDBPediaResourceAnalysis(df:pd.DataFrame):
-    marker = "<http://dbpedia.org/"
-    counts = {}
-    for q in df['query']:
-        split = q.split(marker)
-        if len(split) > 1:
-            sub_key = split[1]
-            for sub_key in split:
-                rest = sub_key.split(">")[0]
-                #copy = (rest + '.')[:-1] # copy
-                #for r in rest[::-1]: #reverse
-                #    if r == "/":
-                #        break
-                #    else:
-                #        copy = copy[len(copy)-1]
-
-                key = marker + rest + ">"
-
-                if counts.get(key) is None:
-                    counts[key] = 1
-                else:
-                    counts[key] = counts[key] + 1
-    return counts
-
-def getFileContainingSlow(iri:str):
-    path = "./DBPedia3.9Full"
-    files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".nt")]
-    for f in files:
-        with open(path + "/" +f) as file:
-            if iri in file.read():
-                print(f)
-                break
-    print("no file contains iri" + str(iri))
-
 def getFileContaining(iri:str, path):
     """
     Use grep to search all files in a directory for an iri
@@ -87,33 +52,8 @@ def getFileContaining(iri:str, path):
     """
     files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".nt")]
     for f in files:
-        print(f)
         subprocess.call(["grep","-m","1", iri , path + "/" +f])
     print("no file contains iri" + str(iri))
-
-def analyseFilesForIriUse(path, df_iri):
-    """
-    Scan a folder for use of every iri in the iri frames 'iri' column. Prints the matching iri. If nothing printed there is no match.
-    :param path: Path to folder
-    :param df_iri: pandas dataframe with 'iri' column
-    :return: None
-    """
-    files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".nt")]
-    files_hold_any_iri = {f:False for f in files}
-
-    # Analyse smallest files first
-    files.sort(key=lambda x: getsize(path + "/" +x))
-
-    df = pd.read_csv("query_log_iri_count.csv")
-    for f in files:
-        print(" scanning file: " + str(f))
-        for iri in df['iri']:
-            p1 = subprocess.run(['grep', "-m", "1", '-F', iri, path + "/" + f], capture_output=True)
-            if p1.returncode == 0:
-                files_hold_any_iri[f] = True
-                print("MATCH! " + str(iri))
-                break
-    print(files_hold_any_iri)
 
 def analyseIRIUse(path):
     """
@@ -161,6 +101,11 @@ def analyseIRIUse(path):
     df.to_csv("query_log_iri_count.csv")
 
 def analyseAnswersFull(KG: KnowledgeGraph):
+    """
+    Analyse the unique entities and unique relationships in the query logs
+    :param KG:
+    :return:
+    """
     logging.info("Number of relationships: "+ str(KG.number_of_relationships()))
 
     path = "user_query_log_answers" + str(2) + "/"
@@ -202,25 +147,14 @@ def analyseAnswersFull(KG: KnowledgeGraph):
     logging.info("unique entities avg: " + str(np.mean(np.array(unique_entity_len))))
     logging.info("unique relations avg: " + str(np.mean(np.array(unique_relation_len))))
 
-def analyseLanguage(path):
-    logs = QueryLogReader.parseDirectoryOfLogs(path)
-    langs_count = {}
-    for l in logs:
-        if 'lang(' in l['query']:
-            for lang_string in re.findall('lang\(*.*\)\s*=\s*".*"', l['query']):
-                idx = lang_string.index('"')
-                lang = lang_string[idx + 1: idx + 3]
-                if langs_count.get(lang):
-                    langs_count[lang] += 1
-                else:
-                    langs_count[lang] = 1
-    print(langs_count)
-
 def analyseLanguageInExperimentData():
+    """
+    Analyse the use of the 'lang' keyword and the refered language.
+    :return:
+    """
     userlist = makeQueryLogsUserList()
     langs_count = {}
     for i in userlist:
-        print(i)
         queries = userlist[i]
         for q in queries:
             if 'lang(' in q:
@@ -233,42 +167,12 @@ def analyseLanguageInExperimentData():
                         langs_count[lang] = 1
     print(json.dumps([{'lang':k,'count':langs_count[k]} for k in langs_count.keys()]))
 
-def analyseRDFAnswers():
-    path = "user_query_log_answersRDF/"
-    user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
-    number_of_users = len(user_log_answer_files)
-
-    uids = []
-    answers = []
-
-    # filter out logs of size < 10
-    for i, file in enumerate(user_log_answer_files):
-        user_answers = []
-
-        df = pd.read_csv(path + str(file))
-        if len(df) > 10:
-            print("answers: " + str(len(df)))
-
-            for answer in df['answers']:
-                triples = []
-                j = 0
-
-                iris = answer.split(" ")
-                while j < len(iris):
-                    triples.append((iris[j],iris[j+1],iris[j+2]))
-                    j=j+3
-                user_answers.append(triples)
-
-            # Append answers
-            answers.append(user_answers)
-            # Append uid
-            uids.append(file.split(".")[0])
-
-
-    print(answers[0][0])
-    print(uids[0])
-
 def analyseAnswersStats(path):
+    """
+    Analyse the a query log folder for number of users and the corresponding query count
+    :param path:
+    :return:
+    """
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
     number_of_users = len(user_log_answer_files)
 
@@ -282,11 +186,3 @@ def analyseAnswersStats(path):
     print("max:" + str(np.max(answers_count)))
     print("mean:" + str(np.mean(answers_count)))
     print("median:" +str(np.median(answers_count)))
-
-analyseAnswersStats("user_query_log_answersRDF/")
-#analyseRDFAnswers()
-#kg_path = "../dbpedia3.9/"
-#KG = loadDBPedia(kg_path)
-#analyseAnswersFull(KG)
-#analyseLanguage('dbpedia3.9')
-#analyseLanguageInExperimentData()
