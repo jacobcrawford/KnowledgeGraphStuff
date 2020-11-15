@@ -1,0 +1,19 @@
+[2020-11-13 16:48:28,968] - Loading DBPedia
+[2020-11-13 16:53:30,542] - Loaded DBPedia
+[2020-11-13 16:53:30,542] - KG entities: 6589072
+[2020-11-13 16:53:30,542] - KG triples: 47408064
+[2020-11-13 19:51:28,052] - Finished for user: 0126ace40b97576faafdc04d352bf2e2
+[2020-11-13 21:55:36,169] - Finished for user: d936a43387bad69a70f2adf35a7c80e4
+[2020-11-14 00:40:30,501] - Finished for user: cdd5a53277177861c00f9a2c94337b26
+[2020-11-14 04:12:36,185] - Finished for user: 5459e093980e751023cec2b325f14866
+[2020-11-14 07:58:09,387] - Finished for user: f5a1c1793e4bbf386227a23af86cc580
+[2020-11-14 10:17:09,641] - Finished for user: 6d418da8de1b4e19787dc71797f22003
+loading from: ../dbpedia3.9/
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//long_abstract_en_mod.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//topical_concepts_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//mappingbased_properties_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//instance_types_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//persondata_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//article_categories_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//geo_coordinates_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//category_labels_en.nt.gz' encoding='UTF-8'>
