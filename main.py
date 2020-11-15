@@ -92,16 +92,39 @@ def merge_accuracy_for_old_and_normalization():
     #print(json.dumps(rows_low))
 
 
-def printDynamic(split):
+def printDynamic():
     path1 = "experiments_results"
     files = [f for f in listdir(path1) if
-     isfile(join(path1, f)) and f.endswith(".csv") and "v5" in f and "S0."+split in f ]
+     isfile(join(path1, f)) and f.endswith(".csv") and "v5" in f and "S0.1" in f ]
     file = files[0]
+    rows = []
 
     df = pd.read_csv(path1+"/"+file)
-    for c in df.columns[1:]:
-        print(np.mean(np.array(df[c].values)))
+    for i,c in enumerate(df.columns[1:]):
+        rows.append({'split':int(0.1*(i+1)*10)/10 , 'accuracy':np.mean(np.array(df[c].values)), 'method':'static'})
+    print(json.dumps(rows))
 
+
+def printDynamicRetrain():
+    """
+    The results were put into the csv file in a weird way, so we have to extract them differently.
+    :return:
+    """
+
+    path1 = "experiments_results"
+    files = [f for f in listdir(path1) if
+     isfile(join(path1, f)) and f.endswith(".csv") and "v7" in f and "S0.1" in f ]
+    file = files[0]
+    rows = []
+
+    df = pd.read_csv(path1 + "/" + file)
+    #print(df.columns)
+    for i,c in enumerate(df.columns[1:]):
+        values = []
+        for j in range(6):
+            values.append(df[c][i+9*j])
+        rows.append({'split':int(0.1*(i+1)*10)/10 , 'accuracy': np.mean(np.array(values)), 'method':'dynamic'})
+    print(json.dumps(rows))
 def printRDF():
     path1 = "user_query_log_answersRDF"
     files = [f for f in listdir(path1) if
@@ -118,10 +141,11 @@ def printRDFResultPagerank():
         df = pd.read_csv(path1 + "/" +f)
         print(len(df))
 
-#printDynamic("1")
-#printResults("v4")
+#printDynamic()
+#printDynamicRetrain()
+printResults("v6")
 #merge_accuracy_for_old_and_normalization()
-runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=7,split=0.1, retrain=True)
+#runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=7,split=0.1, retrain=True)
 #runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=7,split=0.2)
 #printRDFResultPagerank()
 

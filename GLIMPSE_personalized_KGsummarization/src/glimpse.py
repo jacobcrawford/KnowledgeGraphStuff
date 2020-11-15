@@ -2,9 +2,6 @@ import logging
 
 import numpy as np
 
-from operator import itemgetter
-from collections import defaultdict
-
 from .base import KnowledgeGraph
 from .heap import Heap
 
@@ -92,7 +89,8 @@ def GLIMPSE(KG, K, query_log, epsilon=1e-3, power=1, rdf_query_logs=False, inclu
     # Greedily select top-k triples for summary S
     heap = Heap(KG)
     S = Summary(KG)
-
+    logging.info("T delta not zero")
+    logging.info(len(heap))
     if len(heap) <= K:
         S.fill(heap.triples(), K)
     else:
