@@ -125,6 +125,8 @@ def printDynamicRetrain():
             values.append(df[c][i+9*j])
         rows.append({'split':int(0.1*(i+1)*10)/10 , 'accuracy': np.mean(np.array(values)), 'method':'dynamic'})
     print(json.dumps(rows))
+
+
 def printRDF():
     path1 = "user_query_log_answersRDF"
     files = [f for f in listdir(path1) if
@@ -141,9 +143,9 @@ def printRDFResultPagerank():
         df = pd.read_csv(path1 + "/" +f)
         print(len(df))
 
-#printDynamic()
+printDynamic()
 #printDynamicRetrain()
-printResults("v6")
+#printResults("v4")
 #merge_accuracy_for_old_and_normalization()
 #runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=7,split=0.1, retrain=True)
 #runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=7,split=0.2)

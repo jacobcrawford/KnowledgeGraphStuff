@@ -418,11 +418,12 @@ def makeRDFData(user_log_answer_files,path, KG: KnowledgeGraph):
             uids.append(file.split(".")[0])
     return answers,uids
 
-def makeSplitRDF(split,log):
+
+def makeSplitRDF(split_pct,log):
     user_log_train = []
     user_log_test = []
     for idx in range(len(log)):
-        split = math.floor(len(log[idx])*split)
+        split = math.floor(len(log[idx])*split_pct)
         user_log_train.append(log[idx][0:split])
         user_log_test.append(log[idx][split:len(log[idx])])
     return user_log_train, user_log_test
