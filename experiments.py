@@ -72,7 +72,6 @@ def printResults(version, use_etf=False, key='K in % of |T|', include_properties
 
     exclude = [0,3,6]
 
-
     def pctf(x):
         f = math.ceil(int(x)/kg_triples*tms)/div
         if f > 1:
@@ -85,8 +84,8 @@ def printResults(version, use_etf=False, key='K in % of |T|', include_properties
         df = pd.read_csv(path2+ "/"+p)
         k = str(p.split("K#")[1].split("_PPR")[0])
         value = pctf(k) if not use_etf else int(k)
-        df_exclude = df.index.isin(exclude)
-        df = df[~df_exclude]
+        #df_exclude = df.index.isin(exclude)
+        #df = df[~df_exclude]
         acc = df['%'].sum()/len(df['%'])
         rows.append({'Accuracy':str(acc), 'Algorithm':"ppr2", key: value})
 
@@ -105,7 +104,6 @@ def printResults(version, use_etf=False, key='K in % of |T|', include_properties
         df = pd.read_csv(path1 + "/" + p)
         k = str(p.split("K#")[1].split("e#")[0])
         value = pctf(k) if not use_etf else int(etf[k]*int(k))
-        print(df)
         acc = df['%'].sum() / len(df['%'])
         rows.append({'Accuracy': str(acc), 'Algorithm': "glimpse-2", key: value})
 
@@ -115,8 +113,8 @@ def printResults(version, use_etf=False, key='K in % of |T|', include_properties
         df = pd.read_csv(path1 + "/" + p)
         k = str(p.split("K#")[1].split("e#")[0])
         value = pctf(k)
-        df_exclude = df.index.isin(exclude)
-        df = df[~df_exclude]
+        #df_exclude = df.index.isin(exclude)
+        #df = df[~df_exclude]
         acc = df['%'].sum() / len(df['%'])
         rows.append({'Accuracy': str(acc), 'Algorithm': "glimpse-3", key: value})
     print(json.dumps(rows))
@@ -373,13 +371,20 @@ def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path, split, r
         if not retrain:
             rows.append({str(split*i): summaryAccuracy(summary,user_data_split[i][idx_u]) for i in range(1, int(1/split))})
         else:
-            for i in range(0,len(user_data_split)-1):
-                train = []
-                for j in range(0,i+1):
-                    train = train + user_data_split[j][idx_u]
-                test = user_data_split[i+1][idx_u]
-                summary = GLIMPSE(KG, k, train, e)
-                rows.append({str(split * i): summaryAccuracy(summary, test)})
+
+                res = {}
+                for i in range(0,len(user_data_split)-1):
+                    train = []
+                    if str(version) == "7":
+                        for j in range(0,i+1):
+                            train = train + user_data_split[j][idx_u]
+                    elif str(version) == "8":
+                        train = user_data_split[i][idx_u]
+                        logging.info("training only on last interval")
+                    test = user_data_split[i+1][idx_u]
+                    summary = GLIMPSE(KG, k, train, e)
+                    res[str(split * i)] = summaryAccuracy(summary, test)
+                rows.append(res)
 
         logging.info("Finished for user: " + user_ids[idx_u])
     pd.DataFrame(rows).to_csv("experiments_results/v"+str(version)+ "T#" +str(KG.number_of_triples())+"_E#"+str(KG.number_of_entities()) +"K#"+str(int(k))+"e#"+str(e)+"S"+str(split)+ ".csv")
@@ -626,3 +631,6 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+
