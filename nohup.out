@@ -1,70 +1,66 @@
-[2020-11-15 11:20:12,538] - Loading DBPedia
-[2020-11-15 11:26:12,266] - Loaded DBPedia
-[2020-11-15 11:26:12,624] - Running for K=692.1367200000001, e=0.01
-[2020-11-15 11:26:12,624] -   Running GLIMPSE on user: e501b61d45deb9937635cacba1c3b87a
-[2020-11-15 11:37:45,188] - T delta not zero
-[2020-11-15 11:37:45,188] - 25737995
-[2020-11-15 11:51:16,492] -   Done
-[2020-11-15 11:51:16,494] -       Summary  accuracy 0.3555555555555555%
-[2020-11-15 11:51:26,423] -   Running GLIMPSE on user: 0126ace40b97576faafdc04d352bf2e2
-[2020-11-15 12:03:12,915] - T delta not zero
-[2020-11-15 12:03:12,915] - 28904872
-[2020-11-15 12:21:10,039] -   Done
-/home/jacobcrawford/miniconda3/envs/glimpse/lib/python3.7/site-packages/numpy/core/fromnumeric.py:3373: RuntimeWarning: Mean of empty slice.
-  out=out, **kwargs)
-/home/jacobcrawford/miniconda3/envs/glimpse/lib/python3.7/site-packages/numpy/core/_methods.py:170: RuntimeWarning: invalid value encountered in double_scalars
-  ret = ret.dtype.type(ret / rcount)
-[2020-11-15 12:21:10,042] -       Summary  accuracy nan%
-[2020-11-15 12:21:24,418] -   Running GLIMPSE on user: d936a43387bad69a70f2adf35a7c80e4
-[2020-11-15 12:32:17,148] - T delta not zero
-[2020-11-15 12:32:17,148] - 13262964
-[2020-11-15 12:40:29,360] -   Done
-[2020-11-15 12:40:29,361] -       Summary  accuracy nan%
-[2020-11-15 12:40:40,311] -   Running GLIMPSE on user: a61a81e4f9d8d569bfeaea6d4075fb8c
-[2020-11-15 12:52:04,078] - T delta not zero
-[2020-11-15 12:52:04,078] - 25390571
-[2020-11-15 13:08:11,737] -   Done
-[2020-11-15 13:08:11,738] -       Summary  accuracy nan%
-[2020-11-15 13:08:31,443] -   Running GLIMPSE on user: cdd5a53277177861c00f9a2c94337b26
-[2020-11-15 13:22:31,282] - T delta not zero
-[2020-11-15 13:22:31,282] - 22181860
-[2020-11-15 13:35:56,585] -   Done
-[2020-11-15 13:35:56,586] -       Summary  accuracy nan%
-[2020-11-15 13:36:09,562] -   Running GLIMPSE on user: 5459e093980e751023cec2b325f14866
-[2020-11-15 13:46:46,779] - T delta not zero
-[2020-11-15 13:46:46,780] - 14580316
-[2020-11-15 13:56:29,948] -   Done
-[2020-11-15 13:56:29,948] -       Summary  accuracy nan%
-[2020-11-15 13:56:41,194] -   Running GLIMPSE on user: f5a1c1793e4bbf386227a23af86cc580
-[2020-11-15 14:07:48,648] - T delta not zero
-[2020-11-15 14:07:48,648] - 19703479
-[2020-11-15 14:20:37,561] -   Done
-[2020-11-15 14:20:37,562] -       Summary  accuracy nan%
-[2020-11-15 14:20:54,127] -   Running GLIMPSE on user: 6d418da8de1b4e19787dc71797f22003
-[2020-11-15 14:31:43,867] - T delta not zero
-[2020-11-15 14:31:43,867] - 13634880
-[2020-11-15 14:40:48,511] -   Done
-[2020-11-15 14:40:48,512] -       Summary  accuracy nan%
-[2020-11-15 14:40:59,368] -   Running GLIMPSE on user: 14bd03bd4ce49c81dc98369ff75bf1d9
-[2020-11-15 14:51:52,898] - T delta not zero
-[2020-11-15 14:51:52,898] - 15882956
-[2020-11-15 15:02:12,325] -   Done
-[2020-11-15 15:02:12,325] -       Summary  accuracy nan%
-[2020-11-15 15:02:31,662] -   Running GLIMPSE on user: d0e1d796c308100bd2eef558311f8eae
-[2020-11-15 15:13:45,059] - T delta not zero
-[2020-11-15 15:13:45,059] - 21054236
-[2020-11-15 15:27:28,492] -   Done
-[2020-11-15 15:27:28,492] -       Summary  accuracy nan%
-[2020-11-15 15:27:45,847] -   Running GLIMPSE on user: c1065e0ce541801df42f864ce5c0da31
-[2020-11-15 15:39:23,910] - T delta not zero
-[2020-11-15 15:39:23,911] - 19581827
-[2020-11-15 15:51:49,464] -   Done
-[2020-11-15 15:51:49,464] -       Summary  accuracy nan%
-[2020-11-15 15:52:01,415] -   Running GLIMPSE on user: b7f0932b03213ed5af523bce495c882e
-[2020-11-15 16:02:38,456] - T delta not zero
-[2020-11-15 16:02:38,456] - 12281409
-[2020-11-15 16:09:08,755] -   Done
-[2020-11-15 16:09:08,755] -       Summary  accuracy nan%
+[2020-11-15 16:28:27,854] - Loading DBPedia
+[2020-11-15 16:34:28,403] - Loaded DBPedia
+[2020-11-15 16:34:28,763] - Running for K=692.1367200000001, e=0.01
+[2020-11-15 16:34:28,763] -   Running GLIMPSE on user: e501b61d45deb9937635cacba1c3b87a
+[2020-11-15 16:45:55,939] - T delta not zero
+[2020-11-15 16:45:55,939] - 25737995
+[2020-11-15 16:59:24,382] -   Done
+[2020-11-15 16:59:24,384] -       Summary  accuracy 0.26666666666666666%
+[2020-11-15 16:59:34,419] -   Running GLIMPSE on user: 0126ace40b97576faafdc04d352bf2e2
+[2020-11-15 17:11:24,141] - T delta not zero
+[2020-11-15 17:11:24,141] - 28042330
+[2020-11-15 17:27:54,628] -   Done
+[2020-11-15 17:27:54,630] -       Summary  accuracy 0.06946109446109446%
+[2020-11-15 17:28:14,702] -   Running GLIMPSE on user: d936a43387bad69a70f2adf35a7c80e4
+[2020-11-15 17:39:12,989] - T delta not zero
+[2020-11-15 17:39:12,989] - 13262964
+[2020-11-15 17:47:21,372] -   Done
+[2020-11-15 17:47:21,372] -       Summary  accuracy 0.14141533218025754%
+[2020-11-15 17:47:32,050] -   Running GLIMPSE on user: a61a81e4f9d8d569bfeaea6d4075fb8c
+[2020-11-15 17:58:48,598] - T delta not zero
+[2020-11-15 17:58:48,599] - 25380572
+[2020-11-15 18:15:08,133] -   Done
+[2020-11-15 18:15:08,134] -       Summary  accuracy 0.0%
+[2020-11-15 18:15:22,190] -   Running GLIMPSE on user: cdd5a53277177861c00f9a2c94337b26
+[2020-11-15 18:26:36,841] - T delta not zero
+[2020-11-15 18:26:36,842] - 22153794
+[2020-11-15 18:40:23,149] -   Done
+[2020-11-15 18:40:23,149] -       Summary  accuracy 0.0%
+[2020-11-15 18:40:38,004] -   Running GLIMPSE on user: 5459e093980e751023cec2b325f14866
+[2020-11-15 18:51:30,570] - T delta not zero
+[2020-11-15 18:51:30,570] - 14128193
+[2020-11-15 19:01:01,968] -   Done
+[2020-11-15 19:01:01,968] -       Summary  accuracy 0.0%
+[2020-11-15 19:01:12,819] -   Running GLIMPSE on user: f5a1c1793e4bbf386227a23af86cc580
+[2020-11-15 19:11:52,963] - T delta not zero
+[2020-11-15 19:11:52,963] - 19283268
+[2020-11-15 19:24:20,181] -   Done
+[2020-11-15 19:24:20,182] -       Summary  accuracy 0.0%
+[2020-11-15 19:24:37,331] -   Running GLIMPSE on user: 6d418da8de1b4e19787dc71797f22003
+[2020-11-15 19:35:48,057] - T delta not zero
+[2020-11-15 19:35:48,057] - 13541285
+[2020-11-15 19:44:56,373] -   Done
+[2020-11-15 19:44:56,374] -       Summary  accuracy 0.0%
+[2020-11-15 19:45:06,948] -   Running GLIMPSE on user: 14bd03bd4ce49c81dc98369ff75bf1d9
+[2020-11-15 19:55:43,939] - T delta not zero
+[2020-11-15 19:55:43,939] - 15882956
+[2020-11-15 20:05:57,809] -   Done
+[2020-11-15 20:05:57,810] -       Summary  accuracy 0.0%
+[2020-11-15 20:06:15,563] -   Running GLIMPSE on user: d0e1d796c308100bd2eef558311f8eae
+[2020-11-15 20:17:26,335] - T delta not zero
+[2020-11-15 20:17:26,336] - 18588939
+[2020-11-15 20:29:02,995] -   Done
+[2020-11-15 20:29:02,999] -       Summary  accuracy 0.0%
+[2020-11-15 20:29:28,750] -   Running GLIMPSE on user: c1065e0ce541801df42f864ce5c0da31
+[2020-11-15 20:40:36,619] - T delta not zero
+[2020-11-15 20:40:36,619] - 16356187
+[2020-11-15 20:50:46,942] -   Done
+[2020-11-15 20:50:46,944] -       Summary  accuracy 0.0003331668331668332%
+[2020-11-15 20:50:59,934] -   Running GLIMPSE on user: b7f0932b03213ed5af523bce495c882e
+[2020-11-15 21:01:29,410] - T delta not zero
+[2020-11-15 21:01:29,410] - 11480554
+[2020-11-15 21:07:37,406] -   Done
+[2020-11-15 21:07:37,406] -       Summary  accuracy 0.0003816793893129771%
 loading from: ../dbpedia3.9/
 Loaded: <_io.TextIOWrapper name='../dbpedia3.9//long_abstract_en_mod.nt.gz' encoding='UTF-8'>
 Loaded: <_io.TextIOWrapper name='../dbpedia3.9//topical_concepts_en.nt.gz' encoding='UTF-8'>
