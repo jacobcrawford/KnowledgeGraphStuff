@@ -1,0 +1,193 @@
+[2020-11-16 09:15:18,378] - Loading DBPedia
+[2020-11-16 09:20:21,681] - Loaded DBPedia
+[2020-11-16 09:20:21,681] - KG entities: 6589072
+[2020-11-16 09:20:21,681] - KG triples: 47408064
+[2020-11-16 09:27:27,875] - T delta not zero
+[2020-11-16 09:27:27,875] - 17045099
+[2020-11-16 09:36:30,083] - training only on last interval
+[2020-11-16 09:43:47,495] - T delta not zero
+[2020-11-16 09:43:47,495] - 17045099
+[2020-11-16 09:52:54,464] - training only on last interval
+[2020-11-16 09:59:51,102] - T delta not zero
+[2020-11-16 09:59:51,102] - 13713943
+[2020-11-16 10:07:13,939] - training only on last interval
+[2020-11-16 10:14:18,334] - T delta not zero
+[2020-11-16 10:14:18,335] - 15793865
+[2020-11-16 10:22:48,084] - training only on last interval
+[2020-11-16 10:29:52,931] - T delta not zero
+[2020-11-16 10:29:52,931] - 15279857
+[2020-11-16 10:38:05,087] - training only on last interval
+[2020-11-16 10:45:20,463] - T delta not zero
+[2020-11-16 10:45:20,463] - 14854481
+[2020-11-16 10:53:20,374] - training only on last interval
+[2020-11-16 11:00:17,370] - T delta not zero
+[2020-11-16 11:00:17,370] - 14586756
+[2020-11-16 11:08:09,370] - training only on last interval
+[2020-11-16 11:15:25,733] - T delta not zero
+[2020-11-16 11:15:25,734] - 14872387
+[2020-11-16 11:23:23,886] - training only on last interval
+[2020-11-16 11:30:19,327] - T delta not zero
+[2020-11-16 11:30:19,327] - 14359879
+[2020-11-16 11:38:02,513] - training only on last interval
+[2020-11-16 11:45:20,468] - T delta not zero
+[2020-11-16 11:45:20,469] - 15895067
+[2020-11-16 11:53:52,974] - Finished for user: 0126ace40b97576faafdc04d352bf2e2
+[2020-11-16 12:00:32,984] - T delta not zero
+[2020-11-16 12:00:32,984] - 8830168
+[2020-11-16 12:05:15,275] - training only on last interval
+[2020-11-16 12:11:55,231] - T delta not zero
+[2020-11-16 12:11:55,231] - 8830168
+[2020-11-16 12:16:37,176] - training only on last interval
+[2020-11-16 12:23:26,419] - T delta not zero
+[2020-11-16 12:23:26,419] - 8709394
+[2020-11-16 12:28:03,331] - training only on last interval
+[2020-11-16 12:34:54,077] - T delta not zero
+[2020-11-16 12:34:54,077] - 8191184
+[2020-11-16 12:39:15,161] - training only on last interval
+[2020-11-16 12:45:55,587] - T delta not zero
+[2020-11-16 12:45:55,587] - 8854087
+[2020-11-16 12:50:39,511] - training only on last interval
+[2020-11-16 12:57:29,649] - T delta not zero
+[2020-11-16 12:57:29,650] - 9935571
+[2020-11-16 13:02:50,406] - training only on last interval
+[2020-11-16 13:09:38,688] - T delta not zero
+[2020-11-16 13:09:38,688] - 8928599
+[2020-11-16 13:14:23,008] - training only on last interval
+[2020-11-16 13:21:12,239] - T delta not zero
+[2020-11-16 13:21:12,240] - 8533472
+[2020-11-16 13:25:44,604] - training only on last interval
+[2020-11-16 13:32:24,479] - T delta not zero
+[2020-11-16 13:32:24,479] - 8234697
+[2020-11-16 13:36:45,883] - training only on last interval
+[2020-11-16 13:43:36,933] - T delta not zero
+[2020-11-16 13:43:36,933] - 10042932
+[2020-11-16 13:49:09,085] - Finished for user: d936a43387bad69a70f2adf35a7c80e4
+[2020-11-16 13:56:12,905] - T delta not zero
+[2020-11-16 13:56:12,906] - 14420795
+[2020-11-16 14:04:00,544] - training only on last interval
+[2020-11-16 14:11:10,302] - T delta not zero
+[2020-11-16 14:11:10,302] - 14420795
+[2020-11-16 14:19:07,167] - training only on last interval
+[2020-11-16 14:26:17,600] - T delta not zero
+[2020-11-16 14:26:17,600] - 14719163
+[2020-11-16 14:34:16,793] - training only on last interval
+[2020-11-16 14:41:27,898] - T delta not zero
+[2020-11-16 14:41:27,899] - 14986988
+[2020-11-16 14:49:37,816] - training only on last interval
+[2020-11-16 14:56:33,055] - T delta not zero
+[2020-11-16 14:56:33,055] - 12840820
+[2020-11-16 15:03:34,678] - training only on last interval
+[2020-11-16 15:10:24,146] - T delta not zero
+[2020-11-16 15:10:24,146] - 9576037
+[2020-11-16 15:15:31,389] - training only on last interval
+[2020-11-16 15:22:34,799] - T delta not zero
+[2020-11-16 15:22:34,799] - 12011248
+[2020-11-16 15:29:01,662] - training only on last interval
+[2020-11-16 15:35:55,562] - T delta not zero
+[2020-11-16 15:35:55,563] - 12233683
+[2020-11-16 15:42:29,622] - training only on last interval
+[2020-11-16 15:49:35,346] - T delta not zero
+[2020-11-16 15:49:35,347] - 13756287
+[2020-11-16 15:56:57,528] - training only on last interval
+[2020-11-16 16:03:53,337] - T delta not zero
+[2020-11-16 16:03:53,337] - 13700974
+[2020-11-16 16:11:15,040] - Finished for user: cdd5a53277177861c00f9a2c94337b26
+[2020-11-16 16:18:33,652] - T delta not zero
+[2020-11-16 16:18:33,652] - 17549252
+[2020-11-16 16:28:00,672] - training only on last interval
+[2020-11-16 16:35:10,146] - T delta not zero
+[2020-11-16 16:35:10,146] - 17549252
+[2020-11-16 16:44:40,201] - training only on last interval
+[2020-11-16 16:51:32,240] - T delta not zero
+[2020-11-16 16:51:32,240] - 10831422
+[2020-11-16 16:57:19,090] - training only on last interval
+[2020-11-16 17:04:25,509] - T delta not zero
+[2020-11-16 17:04:25,509] - 14574357
+[2020-11-16 17:12:13,845] - training only on last interval
+[2020-11-16 17:19:52,804] - T delta not zero
+[2020-11-16 17:19:52,804] - 26751014
+[2020-11-16 17:34:25,789] - training only on last interval
+[2020-11-16 17:41:33,370] - T delta not zero
+[2020-11-16 17:41:33,371] - 16064098
+[2020-11-16 17:50:18,187] - training only on last interval
+[2020-11-16 17:57:35,880] - T delta not zero
+[2020-11-16 17:57:35,880] - 15435306
+[2020-11-16 18:05:53,217] - training only on last interval
+[2020-11-16 18:12:48,324] - T delta not zero
+[2020-11-16 18:12:48,324] - 13671099
+[2020-11-16 18:20:11,650] - training only on last interval
+[2020-11-16 18:27:14,725] - T delta not zero
+[2020-11-16 18:27:14,725] - 13248608
+[2020-11-16 18:34:22,307] - training only on last interval
+[2020-11-16 18:41:26,914] - T delta not zero
+[2020-11-16 18:41:26,915] - 13532651
+[2020-11-16 18:48:42,464] - Finished for user: 5459e093980e751023cec2b325f14866
+[2020-11-16 18:55:47,740] - T delta not zero
+[2020-11-16 18:55:47,740] - 14774265
+[2020-11-16 19:03:42,744] - training only on last interval
+[2020-11-16 19:10:49,138] - T delta not zero
+[2020-11-16 19:10:49,138] - 14774265
+[2020-11-16 19:18:45,588] - training only on last interval
+[2020-11-16 19:25:51,045] - T delta not zero
+[2020-11-16 19:25:51,045] - 13422780
+[2020-11-16 19:33:03,007] - training only on last interval
+[2020-11-16 19:40:55,496] - T delta not zero
+[2020-11-16 19:40:55,496] - 29877527
+[2020-11-16 19:57:14,158] - training only on last interval
+[2020-11-16 20:04:49,598] - T delta not zero
+[2020-11-16 20:04:49,598] - 19410225
+[2020-11-16 20:15:27,338] - training only on last interval
+[2020-11-16 20:22:43,759] - T delta not zero
+[2020-11-16 20:22:43,759] - 19607261
+[2020-11-16 20:33:23,133] - training only on last interval
+[2020-11-16 20:40:17,939] - T delta not zero
+[2020-11-16 20:40:17,939] - 12078840
+[2020-11-16 20:46:32,705] - training only on last interval
+[2020-11-16 20:54:08,257] - T delta not zero
+[2020-11-16 20:54:08,257] - 21366146
+[2020-11-16 21:05:37,671] - training only on last interval
+[2020-11-16 21:13:06,949] - T delta not zero
+[2020-11-16 21:13:06,949] - 22521477
+[2020-11-16 21:25:14,917] - training only on last interval
+[2020-11-16 21:32:29,099] - T delta not zero
+[2020-11-16 21:32:29,100] - 13584005
+[2020-11-16 21:39:47,694] - Finished for user: f5a1c1793e4bbf386227a23af86cc580
+[2020-11-16 21:46:42,813] - T delta not zero
+[2020-11-16 21:46:42,813] - 9700994
+[2020-11-16 21:52:22,989] - training only on last interval
+[2020-11-16 21:59:23,250] - T delta not zero
+[2020-11-16 21:59:23,250] - 9700994
+[2020-11-16 22:04:59,423] - training only on last interval
+[2020-11-16 22:12:09,703] - T delta not zero
+[2020-11-16 22:12:09,703] - 8306788
+[2020-11-16 22:16:57,225] - training only on last interval
+[2020-11-16 22:24:08,069] - T delta not zero
+[2020-11-16 22:24:08,070] - 8447245
+[2020-11-16 22:29:08,092] - training only on last interval
+[2020-11-16 22:36:22,834] - T delta not zero
+[2020-11-16 22:36:22,834] - 11545286
+[2020-11-16 22:43:03,141] - training only on last interval
+[2020-11-16 22:50:15,938] - T delta not zero
+[2020-11-16 22:50:15,938] - 9153539
+[2020-11-16 22:55:40,270] - training only on last interval
+[2020-11-16 23:02:40,513] - T delta not zero
+[2020-11-16 23:02:40,513] - 7787570
+[2020-11-16 23:07:08,954] - training only on last interval
+[2020-11-16 23:14:10,220] - T delta not zero
+[2020-11-16 23:14:10,220] - 8187416
+[2020-11-16 23:18:57,431] - training only on last interval
+[2020-11-16 23:26:09,594] - T delta not zero
+[2020-11-16 23:26:09,594] - 8190172
+[2020-11-16 23:30:52,911] - training only on last interval
+[2020-11-16 23:37:55,275] - T delta not zero
+[2020-11-16 23:37:55,275] - 7974057
+[2020-11-16 23:42:31,470] - Finished for user: 6d418da8de1b4e19787dc71797f22003
+loading from: ../dbpedia3.9/
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//long_abstract_en_mod.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//topical_concepts_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//mappingbased_properties_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//instance_types_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//persondata_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//article_categories_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//geo_coordinates_en.nt.gz' encoding='UTF-8'>
+Loaded: <_io.TextIOWrapper name='../dbpedia3.9//category_labels_en.nt.gz' encoding='UTF-8'>
