@@ -443,6 +443,7 @@ def calculateMeanAccuracyRDF(test_log, summary):
         accuracies.append(triples_in_summary / total_triples)
 
     return np.mean(np.array(accuracies))
+
 def runGLIMPSEExperimentOnceRDF(k_in_pct, e,version, answers_version, kg_path, include_relationship_prob=False):
     path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]

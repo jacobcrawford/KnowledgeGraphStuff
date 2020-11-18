@@ -37,6 +37,8 @@ class Heap(object):
         :param KG: KnowledgeGraph
         """
         self.heap_ = []
+        self.i = 0
+        self.u = 0
 
         for triple in KG.triples():
             e1, r, e2 = triple
@@ -108,7 +110,10 @@ class Heap(object):
         before, after = self._lazy_greedy(S, triples)
         if before == after:
             self._move_to_top(after.index_)
+            self.i +=1
             return
+        else:
+            self.u +=1
 
         # If lazy fails, update marginals of sampled set
         top, argmax = self.heap_[0], 0

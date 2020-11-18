@@ -118,7 +118,6 @@ def printDynamicRetrain():
     rows = []
 
     df = pd.read_csv(path1 + "/" + file)
-    #print(df.columns)
     for i,c in enumerate(df.columns[1:]):
         values = []
         for j in range(6):
@@ -144,11 +143,11 @@ def printRDFResultPagerank():
         print(len(df))
 
 #printDynamic()
-#printDynamicRetrain()
+printDynamicRetrain()
 #printResults("v4",include_properties=True)
 #printResults("v6",include_properties=True)
 #merge_accuracy_for_old_and_normalization()
-runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=8,split=0.1, retrain=True)
+#runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=8,split=0.1, retrain=True)
 #runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=7,split=0.2)
 #printRDFResultPagerank()
 

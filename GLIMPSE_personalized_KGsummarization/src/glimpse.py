@@ -103,7 +103,8 @@ def GLIMPSE(KG, K, query_log, epsilon=1e-3, power=1, rdf_query_logs=False, inclu
             triple = heap.pop()
             S.add_triple(triple)
             heap.update(S, sample_size)
-
+    logging.info("lazy " + str(heap.i))
+    logging.info("updates " + str(heap.u))
     S.fill(KG.triples(), K)
     return S
 
