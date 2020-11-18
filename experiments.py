@@ -583,7 +583,10 @@ VERSIONS = {
     '3': 'Normalizing query vector',
     '4': 'Construct query results',
     '5': 'Dynamic setup',
-    '6': 'Construct query with relationship probabilities'
+    '6': 'Construct query with relationship probabilities',
+    '7': 'Dynamic retrain', #TODO
+    '8': 'Dynamic retrain on last interval',#TODO
+    '9': 'prints and logs'
 }
 
 
