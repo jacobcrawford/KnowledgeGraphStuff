@@ -70,8 +70,6 @@ def printResults(version, use_etf=False, key='K in % of |T|', include_properties
     tms = 1000000
     kg_triples = 69213000 if include_properties else 47408000
 
-    exclude = [0,3,6]
-
     def pctf(x):
         f = math.ceil(int(x)/kg_triples*tms)/div
         if f > 1:
@@ -444,10 +442,10 @@ def calculateMeanAccuracyRDF(test_log, summary):
 
     return np.mean(np.array(accuracies))
 
-def runGLIMPSEExperimentOnceRDF(k_in_pct, e,version, answers_version, kg_path, include_relationship_prob=False):
+def runGLIMPSEExperimentOnceRDF(k_in_pct, e,version, answers_version, kg_path=None, include_relationship_prob=False, include_properties=False,KG_in=None):
     path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
-    KG = loadDBPedia(kg_path, include_properties=True)
+    KG = loadDBPedia(kg_path, include_properties=include_properties) if KG_in is None else KG_in
     answers, uids = makeRDFData(user_log_answer_files,path, KG)
 
     # Make train and test sets
@@ -474,9 +472,9 @@ def runGLIMPSEExperimentOnceRDF(k_in_pct, e,version, answers_version, kg_path, i
     pd.DataFrame(rows).to_csv("experiments_results/v" + version + "T#" + str(KG.number_of_triples()) + "_E#" + str(
         KG.number_of_entities()) + "K#" + str(int(k)) + "e#" + str(e) + ".csv")
 
-def runPagerankExperimentOnceRDF(k_in_pct,ppr,version,answers_version, kg_path):
+def runPagerankExperimentOnceRDF(k_in_pct,ppr,version,answers_version, kg_path=None, KG_in=None):
     logging.info("Starting ppr" + str(ppr) + " for k=" + str(k_in_pct))
-    KG = loadDBPedia(kg_path, include_properties=True)
+    KG = loadDBPedia(kg_path, include_properties=True) if KG_in is None else KG_in
     path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
 

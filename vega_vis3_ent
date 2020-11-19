@@ -1,0 +1,19 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "Stock prices of 5 Tech Companies over Time.",
+  "width": 500,
+  "height":500,
+  "data": {"values":[{"Accuracy": "0.6920711427660603", "Algorithm": "ppr2", "Entities": 474080}, {"Accuracy": "0.20798367817269547", "Algorithm": "ppr2", "Entities": 474}, {"Accuracy": "0.9316629731253031", "Algorithm": "ppr2", "Entities": 4740806}, {"Accuracy": "0.48657199757813874", "Algorithm": "ppr2", "Entities": 47408}, {"Accuracy": "0.3185090845060479", "Algorithm": "ppr2", "Entities": 4740}, {"Accuracy": "0.49653594784307636", "Algorithm": "glimpse-2", "Entities": 7894}, {"Accuracy": "0.8724362047365429", "Algorithm": "glimpse-2", "Entities": 2271897}, {"Accuracy": "0.6150140161134341", "Algorithm": "glimpse-2", "Entities": 63581}, {"Accuracy": "0.7047093342467394", "Algorithm": "glimpse-2", "Entities": 333571}, {"Accuracy": "0.34927070219000067", "Algorithm": "glimpse-2", "Entities": 896}]
+
+
+},
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": { "field": "Entities", "axis": {"labelFontSize":14, "titleFontSize":16}, "scale":{"type": "log"}},
+    "y": {"field": "Accuracy", "type": "quantitative", "axis": {"labelFontSize":14, "titleFontSize":16}},
+    "color": {"field": "Algorithm", "type": "nominal", "legend":null}
+  }
+}

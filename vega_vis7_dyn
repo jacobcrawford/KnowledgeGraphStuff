@@ -1,0 +1,21 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "Stock prices of 5 Tech Companies over Time.",
+  "width": 500,
+  "height":500,
+  "data": {"values":[{"split": 0.1, "accuracy": 0.396196796944485, "method": "static"}, {"split": 0.2, "accuracy": 0.28681966802338704, "method": "static"}, {"split": 0.3, "accuracy": 0.18005768949895692, "method": "static"}, {"split": 0.4, "accuracy": 0.1335274163728473, "method": "static"}, {"split": 0.5, "accuracy": 0.17817312821746778, "method": "static"}, {"split": 0.6, "accuracy": 0.20536743450904524, "method": "static"}, {"split": 0.7, "accuracy": 0.13071250034995238, "method": "static"}, {"split": 0.8, "accuracy": 0.11337421027898877, "method": "static"}, {"split": 0.9, "accuracy": 0.2636799359787248, "method": "static"},{"split": 0.1, "accuracy": 0.417304139016067, "method": "retrain-only-last"}, {"split": 0.2, "accuracy": 0.4771968219729888, "method": "retrain-only-last"}, {"split": 0.3, "accuracy": 0.2776694552541394, "method": "retrain-only-last"}, {"split": 0.4, "accuracy": 0.3235247783503183, "method": "retrain-only-last"}, {"split": 0.5, "accuracy": 0.7406058687424947, "method": "retrain-only-last"}, {"split": 0.6, "accuracy": 0.456890529246418, "method": "retrain-only-last"}, {"split": 0.7, "accuracy": 0.43016241313190884, "method": "retrain-only-last"}, {"split": 0.8, "accuracy": 0.47088154311891167, "method": "retrain-only-last"}, {"split": 0.9, "accuracy": 0.35183634141702624, "method": "retrain-only-last"},{"split": 0.1, "accuracy": 0.3962255094926323, "method": "dynamic"}, {"split": 0.2, "accuracy": 0.47771870970561414, "method": "dynamic"}, {"split": 0.3, "accuracy": 0.28054763122697285, "method": "dynamic"}, {"split": 0.4, "accuracy": 0.42959111772804026, "method": "dynamic"}, {"split": 0.5, "accuracy": 0.8475495073082624, "method": "dynamic"}, {"split": 0.6, "accuracy": 0.6795394099158764, "method": "dynamic"}, {"split": 0.7, "accuracy": 0.6232302420699865, "method": "dynamic"}, {"split": 0.8, "accuracy": 0.6799799129731056, "method": "dynamic"}, {"split": 0.9, "accuracy": 0.6984634098442878, "method": "dynamic"}]
+
+
+},
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": { "field": "split"},
+    "y": {"field": "accuracy", "type": "quantitative"},
+    "color": {"field": "method", "type": "nominal", "scale":{
+      "domain": ["dynamic","static", "retrain-only-last" ]
+    }}
+  }
+}

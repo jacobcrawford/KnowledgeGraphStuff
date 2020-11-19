@@ -11,8 +11,8 @@
     "point": true
   },
   "encoding": {
-    "x": { "field": "K in % of |T|"},
-    "y": {"field": "Accuracy", "type": "quantitative"},
-    "color": {"field": "Algorithm", "type": "nominal"}
+    "x": { "field": "K in % of |T|", "axis": {"labelFontSize":14, "titleFontSize":16}},
+    "y": {"field": "Accuracy", "type": "quantitative", "axis": {"labelFontSize":14, "titleFontSize":16}},
+    "color": {"field": "Algorithm", "type": "nominal", "legend":{"labelFontSize":14, "titleFontSize":16}}
   }
 }

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "Stock prices of 5 Tech Companies over Time.",
+  "width": 500,
+  "height":500,
+  "data": {"values":[{"Accuracy": "0.6530724111840127", "Algorithm": "glimpse-2 -old", "K in % of |T|": "0.1"}, {"Accuracy": "0.554379759725936", "Algorithm": "glimpse-2 -old", "K in % of |T|": "0.01"}, {"Accuracy": "0.9461741001639495", "Algorithm": "glimpse-2 -old", "K in % of |T|": "10"}, {"Accuracy": "0.2745837450671645", "Algorithm": "glimpse-2 -old", "K in % of |T|": "0.001"}, {"Accuracy": "0.7183963162712753", "Algorithm": "glimpse-2 -old", "K in % of |T|": "1"}, {"Accuracy": "0.5605265811004483", "Algorithm": "glimpse-2 -norm", "K in % of |T|": "0.01"}, {"Accuracy": "0.9513015365889305", "Algorithm": "glimpse-2 -norm", "K in % of |T|": "10"}, {"Accuracy": "0.6572935228853289", "Algorithm": "glimpse-2 -norm", "K in % of |T|": "0.1"}, {"Accuracy": "0.7273141040277418", "Algorithm": "glimpse-2 -norm", "K in % of |T|": "1"}, {"Accuracy": "0.29012799289930885", "Algorithm": "glimpse-2 -norm", "K in % of |T|": "0.001"}, {"Accuracy": "0.9190272056288672", "Algorithm": "ppr2 -old", "K in % of |T|": "10"}, {"Accuracy": "0.5998626068635657", "Algorithm": "ppr2 -old", "K in % of |T|": "0.1"}, {"Accuracy": "0.23138173226390665", "Algorithm": "ppr2 -old", "K in % of |T|": "0.001"}, {"Accuracy": "0.29975294801224084", "Algorithm": "ppr2 -old", "K in % of |T|": "0.01"}, {"Accuracy": "0.674414932546268", "Algorithm": "ppr2 -old", "K in % of |T|": "1"}, {"Accuracy": "0.673462551593887", "Algorithm": "ppr2 -norm", "K in % of |T|": "1"}, {"Accuracy": "0.25450721682451316", "Algorithm": "ppr2 -norm", "K in % of |T|": "0.001"}, {"Accuracy": "0.9190272056288672", "Algorithm": "ppr2 -norm", "K in % of |T|": "10"}, {"Accuracy": "0.6030368582762206", "Algorithm": "ppr2 -norm", "K in % of |T|": "0.1"}, {"Accuracy": "0.3208889736333028", "Algorithm": "ppr2 -norm", "K in % of |T|": "0.01"}]
+
+},
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": { "field": "K in % of |T|", "axis": {"labelFontSize":14, "titleFontSize":16}},
+    "y": {"field": "Accuracy", "type": "quantitative", "axis": {"labelFontSize":14, "titleFontSize":16}},
+    "color": {"field": "Algorithm", "type": "nominal", "legend":{"labelFontSize":14, "titleFontSize":16}}
+  }
+}

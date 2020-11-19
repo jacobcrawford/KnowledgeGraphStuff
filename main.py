@@ -6,13 +6,14 @@ from os.path import join, isfile
 import numpy as np
 import pandas as pd
 
-from experiments import runGLIMPSEExperiment, runGLIMPSEDynamicExperiment, printResults
+from experiments import runGLIMPSEExperiment, runGLIMPSEDynamicExperiment, printResults, runGLIMPSEExperimentOnceRDF, \
+    loadDBPedia, runPagerankExperimentOnceRDF
 
 
 def f1skew(acc):
     return (2*acc)/(1 + acc)
 
-def merge_accuracy_for_old_and_normalization():
+def merge_accuracy_for_old_and_normalization(split_low_high=False):
     path1 = "experiments_results"
     path2 = "experiments_results_pagerank"
 
@@ -41,9 +42,7 @@ def merge_accuracy_for_old_and_normalization():
          49251])
     split_low = [i[0] for i in np.argwhere(unique_entities < np.median(unique_entities))]
     split_high =[i[0] for i in np.argwhere(unique_entities >= np.median(unique_entities))]
-    print("median: " + str(np.median(unique_entities)))
-    rows_low = []
-    rows_high = []
+    all_indexes = [i for i in range(len(unique_entities))]
 
     def addPPR2(files,output,algo="",indexes=None):
         if indexes == None:
@@ -77,19 +76,42 @@ def merge_accuracy_for_old_and_normalization():
             acc2 = np.mean(acc2)
             output.append({'Accuracy': str(acc2), 'Algorithm': "glimpse-2 "+algo, 'K in % of |T|': pct})
 
-    addGLIMPSE(glimpse1_old, rows_low,'-old',split_low )
-    addGLIMPSE(glimpse1,rows_low,'-norm',split_low)
-    addPPR2(ppr2_old,rows_low,'-old',split_low)
-    addPPR2(ppr2, rows_low, '-norm', split_low)
 
-    addGLIMPSE(glimpse1_old, rows_high,'-old',split_high )
-    addGLIMPSE(glimpse1,rows_high,'-norm',split_high)
-    addPPR2(ppr2_old, rows_high, '-old', split_high)
-    addPPR2(ppr2, rows_high, '-norm', split_high)
+    if split_low_high:
+        rows_low = []
+        rows_high = []
+        addGLIMPSE(glimpse1_old, rows_low,'-old',split_low )
+        addGLIMPSE(glimpse1,rows_low,'-norm',split_low)
+        addPPR2(ppr2_old,rows_low,'-old',split_low)
+        addPPR2(ppr2, rows_low, '-norm', split_low)
+
+        addGLIMPSE(glimpse1_old, rows_high,'-old',split_high )
+        addGLIMPSE(glimpse1,rows_high,'-norm',split_high)
+        addPPR2(ppr2_old, rows_high, '-old', split_high)
+        addPPR2(ppr2, rows_high, '-norm', split_high)
+        print("high")
+        old = [a for a in filter(lambda x: 'glimpse-2 -old' in x['Algorithm'],rows_high)]
+        old.sort(key=lambda x: x["K in % of |T|"])
+        new = [a for a in filter(lambda x: 'glimpse-2 -norm' in x['Algorithm'],rows_high)]
+        new.sort(key=lambda x: x["K in % of |T|"])
 
 
-    print(json.dumps(rows_high))
-    #print(json.dumps(rows_low))
+        increase = [float(i['Accuracy']) for i,j in zip(old,new)][0:4]
+
+        for i in increase:
+            print(i)
+
+        #print(json.dumps(old))
+        #print("Low")
+        #print(json.dumps(rows_low))
+    else:
+        all =[]
+        addGLIMPSE(glimpse1_old, all, '-old', all_indexes)
+        addGLIMPSE(glimpse1, all, '-norm', all_indexes)
+        addPPR2(ppr2_old, all, '-old', all_indexes)
+        addPPR2(ppr2, all, '-norm', all_indexes)
+        print(json.dumps(all))
+
 
 
 def printDynamic():
@@ -143,11 +165,19 @@ def printRDFResultPagerank():
         print(len(df))
 
 #printDynamic()
-printDynamicRetrain()
-#printResults("v4",include_properties=True)
+#printDynamicRetrain()
+#printResults("v2",, key='Entities')
 #printResults("v6",include_properties=True)
-#merge_accuracy_for_old_and_normalization()
+#merge_accuracy_for_old_and_normalization(True)
 #runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=8,split=0.1, retrain=True)
 #runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=7,split=0.2)
 #printRDFResultPagerank()
-
+#merge_accuracy_for_old_and_normalization(split_low_high=True)
+KG = loadDBPedia('../dbpedia3.9/', include_properties=False)
+K = [10*(10**-i) for i in range(2, 7)]
+for k in K:
+    runGLIMPSEExperimentOnceRDF(k, 1e-2, "10","RDF",KG_in=KG)
+    KG.reset()
+    runGLIMPSEExperimentOnceRDF(k, 1e-2, "11", "RDF", KG_in=KG, include_relationship_prob=True)
+    KG.reset()
+    runPagerankExperimentOnceRDF(k, 2, "10",answers_version="RDF", KG_in=KG)
