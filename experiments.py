@@ -467,7 +467,7 @@ def runGLIMPSEExperimentOnceRDF(k_in_pct, e,version, answers_version, kg_path=No
         mean_accuracy = calculateMeanAccuracyRDF(user_log_test[idx_u], summary)
 
         logging.info("      Summary  accuracy " + str(mean_accuracy) + "%")
-        rows.append({'%': mean_accuracy, 'runtime': t2 - t1})
+        rows.append({'%': mean_accuracy, 'runtime': t2 - t1,'entities':str(summary.entities()),'relationships': str(summary.number_of_relationships())})
 
     pd.DataFrame(rows).to_csv("experiments_results/v" + version + "T#" + str(KG.number_of_triples()) + "_E#" + str(
         KG.number_of_entities()) + "K#" + str(int(k)) + "e#" + str(e) + ".csv")
@@ -522,7 +522,7 @@ def runPagerankExperimentOnceRDF(k_in_pct,ppr,version,answers_version, kg_path=N
 
         mean_accuracy = calculateMeanAccuracyRDF(user_log_test[idx_u], summary)
         logging.info("      Summary  accuracy " + str(mean_accuracy) + "%")
-        rows.append({'%': mean_accuracy, 'runtime': t2 - t1})
+        rows.append({'%': mean_accuracy, 'runtime': t2 - t1,'entities':str(summary.entities()),'relationships': str(summary.number_of_relationships())})
 
     pd.DataFrame(rows).to_csv(
         "experiments_results_pagerank/v" + version + "T#" + str(KG.number_of_triples()) + "_E#" + str(
