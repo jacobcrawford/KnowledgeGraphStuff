@@ -489,7 +489,7 @@ def runPagerankExperimentOnceRDF(k_in_pct,ppr,version,answers_version, kg_path=N
     for idx_u in range(len(uids)):
         t1 = time.time()
 
-        qv = query_vector_rdf(KG, user_log_train[idx_u])
+        qv,y = query_vector_rdf(KG, user_log_train[idx_u])
         M = KG.transition_matrix()
         ppr_v = random_walk_with_restart(M, qv, 0.15, ppr)
 
