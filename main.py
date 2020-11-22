@@ -174,7 +174,7 @@ def printRDFResultPagerank():
 #printRDFResultPagerank()
 #merge_accuracy_for_old_and_normalization(split_low_high=True)
 KG = loadDBPedia('../dbpedia3.9/', include_properties=False)
-for k in [10*(10**-i) for i in range(2, 7)]:
+for k in [10*(10**-i) for i in range(5, 7)]:
     runPagerankExperimentOnceRDF(k, 2, "10",answers_version="RDF", KG_in=KG)
     KG.reset()
     runGLIMPSEExperimentOnceRDF(k, 1e-2, "10", "RDF", KG_in=KG)
