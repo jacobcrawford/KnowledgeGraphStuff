@@ -173,13 +173,44 @@ def printRDFResultPagerank():
 #runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=7,split=0.2)
 #printRDFResultPagerank()
 #merge_accuracy_for_old_and_normalization(split_low_high=True)
-KG = loadDBPedia('../dbpedia3.9/', include_properties=False)
-for k in [10*(10**-i) for i in range(5, 7)]:
-    runPagerankExperimentOnceRDF(k, 2, "10",answers_version="RDF", KG_in=KG)
-    KG.reset()
-    runGLIMPSEExperimentOnceRDF(k, 1e-2, "10", "RDF", KG_in=KG)
-    KG.reset()
-    runGLIMPSEExperimentOnceRDF(k, 1e-2, "11", "RDF", KG_in=KG, include_relationship_prob=True)
-    KG.reset()
+#KG = loadDBPedia('../dbpedia3.9/', include_properties=False)
+#for k in [10*(10**-i) for i in range(5, 7)]:
+#    runPagerankExperimentOnceRDF(k, 2, "10",answers_version="RDF", KG_in=KG)
+#    KG.reset()
+#    runGLIMPSEExperimentOnceRDF(k, 1e-2, "10", "RDF", KG_in=KG)
+#    KG.reset()
+#    runGLIMPSEExperimentOnceRDF(k, 1e-2, "11", "RDF", KG_in=KG, include_relationship_prob=True)
+#    KG.reset()
+path = "experiments_results/"
+path2 = "experiments_results_pagerank/"
+files = [f for f in listdir(path) if
+             isfile(join(path, f)) and f.endswith(".csv") and "v10" in f or "v11" in f]
+
+files2 = [f for f in listdir(path2) if
+             isfile(join(path2, f)) and f.endswith(".csv") and "v10" in f]
+
+for file in files:
+    print(file)
+    df = pd.read_csv(path+file)
+    df1 = df
+    if type(df['entities'][0]) == np.int64:
+        print("did not change: " + file)
+        continue
+    else:
+        print("Changed: " + file)
+        df1.entities = [e.count("http") for e in df['entities']]
+        df1.to_csv(path+file)
+
+for file in files2:
+    print(file)
+    df = pd.read_csv(path+file)
+    df1 = df
+    if type(df['entities'][0]) == np.int64:
+        print("did not change: " + file)
+        continue
+    else:
+        print("Changed: " + file)
+        df1.entities = [e.count("http") for e in df['entities']]
+        df1.to_csv(path+file)
 
 
