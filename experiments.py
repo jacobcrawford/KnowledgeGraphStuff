@@ -82,8 +82,6 @@ def printResults(version, use_etf=False, key='K in % of |T|', include_properties
         df = pd.read_csv(path2+ "/"+p)
         k = str(p.split("K#")[1].split("_PPR")[0])
         value = pctf(k) if not use_etf else int(k)
-        #df_exclude = df.index.isin(exclude)
-        #df = df[~df_exclude]
         acc = df['%'].sum()/len(df['%'])
         rows.append({'Accuracy':str(acc), 'Algorithm':"ppr2", key: value})
 
@@ -103,7 +101,7 @@ def printResults(version, use_etf=False, key='K in % of |T|', include_properties
         k = str(p.split("K#")[1].split("e#")[0])
         value = pctf(k) if not use_etf else int(etf[k]*int(k))
         acc = df['%'].sum() / len(df['%'])
-        rows.append({'Accuracy': str(acc), 'Algorithm': "glimpse-2", key: value})
+        rows.append({'Accuracy': str(acc), 'Algorithm': "glimpse-2 prob", key: value})
 
     print("\nGLIMPSE e=0.001")
     for p in glimpse2:

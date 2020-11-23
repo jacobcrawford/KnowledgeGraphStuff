@@ -167,50 +167,108 @@ def printRDFResultPagerank():
 #printDynamic()
 #printDynamicRetrain()
 #printResults("v2",, key='Entities')
-#printResults("v6",include_properties=True)
+#printResults("v11")
 #merge_accuracy_for_old_and_normalization(True)
 #runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=8,split=0.1, retrain=True)
 #runGLIMPSEDynamicExperiment(answers_version="2",k=0.01,e=1e-2, kg_path="../dbpedia3.9/",version=7,split=0.2)
 #printRDFResultPagerank()
 #merge_accuracy_for_old_and_normalization(split_low_high=True)
-#KG = loadDBPedia('../dbpedia3.9/', include_properties=False)
-#for k in [10*(10**-i) for i in range(5, 7)]:
+KG = loadDBPedia('../dbpedia3.9/', include_properties=False)
+for k in [10*(10**-i) for i in range(2, 7)]:
 #    runPagerankExperimentOnceRDF(k, 2, "10",answers_version="RDF", KG_in=KG)
 #    KG.reset()
 #    runGLIMPSEExperimentOnceRDF(k, 1e-2, "10", "RDF", KG_in=KG)
 #    KG.reset()
-#    runGLIMPSEExperimentOnceRDF(k, 1e-2, "11", "RDF", KG_in=KG, include_relationship_prob=True)
+    runGLIMPSEExperimentOnceRDF(k, 1e-5, "12", "RDF", KG_in=KG, include_relationship_prob=True)
 #    KG.reset()
-path = "experiments_results/"
-path2 = "experiments_results_pagerank/"
-files = [f for f in listdir(path) if
-             isfile(join(path, f)) and f.endswith(".csv") and "v10" in f or "v11" in f]
 
-files2 = [f for f in listdir(path2) if
-             isfile(join(path2, f)) and f.endswith(".csv") and "v10" in f]
+def fixRDFResults():
+    path = "experiments_results/"
+    path2 = "experiments_results_pagerank/"
+    files = [f for f in listdir(path) if
+                 isfile(join(path, f)) and f.endswith(".csv") and "v10" in f or "v11" in f]
 
-for file in files:
-    print(file)
-    df = pd.read_csv(path+file)
-    df1 = df
-    if type(df['entities'][0]) == np.int64:
-        print("did not change: " + file)
-        continue
-    else:
-        print("Changed: " + file)
-        df1.entities = [e.count("http") for e in df['entities']]
-        df1.to_csv(path+file)
+    files2 = [f for f in listdir(path2) if
+                 isfile(join(path2, f)) and f.endswith(".csv") and "v10" in f]
 
-for file in files2:
-    print(file)
-    df = pd.read_csv(path2+file)
-    df1 = df
-    if type(df['entities'][0]) == np.int64:
-        print("did not change: " + file)
-        continue
-    else:
-        print("Changed: " + file)
-        df1.entities = [e.count("http") for e in df['entities']]
-        df1.to_csv(path2+file)
+    for file in files:
+        print(file)
+        df = pd.read_csv(path+file)
+        df1 = df
+        if type(df['entities'][0]) == np.int64:
+            print("did not change: " + file)
+            continue
+        else:
+            print("Changed: " + file)
+            df1.entities = [e.count("http") for e in df['entities']]
+            df1.to_csv(path+file)
+
+    for file in files2:
+        print(file)
+        df = pd.read_csv(path2+file)
+        df1 = df
+        if type(df['entities'][0]) == np.int64:
+            print("did not change: " + file)
+            continue
+        else:
+            print("Changed: " + file)
+            df1.entities = [e.count("http") for e in df['entities']]
+            df1.to_csv(path2+file)
 
 
+def versionStats():
+    path = "experiments_results/"
+    path2 = "experiments_results_pagerank/"
+    files = [path+f for f in listdir(path) if
+             isfile(join(path, f)) and f.endswith(".csv") and "v10" in f]
+
+    files_prob = [path+f for f in listdir(path) if
+             isfile(join(path, f)) and f.endswith(".csv") and "v11" in f]
+
+    files2 = [path2+f for f in listdir(path2) if
+              isfile(join(path2, f)) and f.endswith(".csv") and "v10" in f]
+
+    rows = []
+    div = 10000
+    tms = 1000000
+    kg_triples = 47408000
+
+    def pctf(x):
+        f = math.ceil(int(x) / kg_triples * tms) / div
+        if f > 1:
+            print(f)
+            return str(math.floor(f))
+        f = str(f)
+        return f[0:f.find("1") + 1]
+
+    def makeEntitiesStats(files, algorithm):
+        rows = []
+        for f in files:
+            df = pd.read_csv(f)
+            avg  = df['entities'].sum()/len(df['entities'])
+            if "PPR" in f:
+                k = str(f.split("K#")[1].split("_PPR")[0])
+            else:
+                k = str(f.split("K#")[1].split("e#")[0])
+            k = pctf(int(k))
+            rows.append({'entities':avg,'k':k, 'algorithm':algorithm})
+        print(json.dumps(rows))
+
+    def makeRelationshipStats(files, algorithm):
+        rows = []
+        for f in files:
+            df = pd.read_csv(f)
+            avg = df['relationships'].sum() / len(df['relationships'])
+            if "PPR" in f:
+                k = str(f.split("K#")[1].split("_PPR")[0])
+            else:
+                k = str(f.split("K#")[1].split("e#")[0])
+            k = pctf(int(k))
+            rows.append({'relationships': avg, 'k': k, 'algorithm': algorithm})
+        print(json.dumps(rows))
+
+    makeRelationshipStats(files, 'glimpse-2')
+    makeRelationshipStats(files_prob, 'glimpse-2 prob')
+    makeRelationshipStats(files2, 'ppr2')
+
+#versionStats()

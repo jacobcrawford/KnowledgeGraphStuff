@@ -22,7 +22,7 @@ def query_vector_rdf(KG,query_log_answers):
             e1_id = KG.entity_id(e1)
             e2_id = KG.entity_id(e2)
             r_id = KG.relationship_id_[r]
-            x[e1_id] += 1/len(query_log_answers[i])
+            x[e1_id] += 1 / len(query_log_answers[i])
             x[e2_id] += 1 / len(query_log_answers[i])
             y[r_id] += 1 / len(query_log_answers[i])
     return x,y

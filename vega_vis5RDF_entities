@@ -1,0 +1,21 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "Stock prices of 5 Tech Companies over Time.",
+  "width": 500,
+  "height":500,
+  "data": {"values":[{"entities": 290404.5, "k": "1", "algorithm": "glimpse-2"}, {"entities": 6789.75, "k": "0.01", "algorithm": "glimpse-2"}, {"entities": 32195.666666666668, "k": "0.1", "algorithm": "glimpse-2"}, {"entities": 863.25, "k": "0.001", "algorithm": "glimpse-2"}, {"entities": 1602029.75, "k": "10", "algorithm": "glimpse-2"},{"entities": 6089.75, "k": "0.01", "algorithm": "glimpse-2 prob"}, {"entities": 1605835.0833333333, "k": "10", "algorithm": "glimpse-2 prob"}, {"entities": 307886.1666666667, "k": "1", "algorithm": "glimpse-2 prob"}, {"entities": 37334.75, "k": "0.1", "algorithm": "glimpse-2 prob"}, {"entities": 767.25, "k": "0.001", "algorithm": "glimpse-2 prob"},{"entities": 18040.416666666668, "k": "0.1", "algorithm": "ppr2"}, {"entities": 2602.5, "k": "0.01", "algorithm": "ppr2"}, {"entities": 872028.0833333334, "k": "10", "algorithm": "ppr2"}, {"entities": 116746.41666666667, "k": "1", "algorithm": "ppr2"}, {"entities": 345.75, "k": "0.001", "algorithm": "ppr2"}]
+
+
+},
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": { "field": "k","title":"K in % of |T|",  "axis": {"labelFontSize":14, "titleFontSize":16}},
+    "y": {"field": "entities", "type": "quantitative", "axis": {"labelFontSize":14, "titleFontSize":16}, "scale":{"type": "log"}},
+    "color": {"field": "algorithm", "type": "nominal", "scale":{
+      "domain": ["glimpse-2","glimpse-2 prob","ppr2" ]
+    },  "legend":{"labelFontSize":14, "titleFontSize":16}}
+  }
+}
