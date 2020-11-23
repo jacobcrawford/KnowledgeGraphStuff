@@ -203,7 +203,7 @@ for file in files:
 
 for file in files2:
     print(file)
-    df = pd.read_csv(path+file)
+    df = pd.read_csv(path2+file)
     df1 = df
     if type(df['entities'][0]) == np.int64:
         print("did not change: " + file)
