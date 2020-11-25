@@ -62,7 +62,7 @@ def printResults(version, use_etf=False, key='K in % of |T|', include_properties
 
     ppr2 = [f for f in listdir(path2) if isfile(join(path2, f)) and f.endswith(".csv") and "PPR#2" in f and version_string in f]
     ppr5 = [f for f in listdir(path2) if isfile(join(path2, f)) and f.endswith(".csv") and "PPR#5" in f and version_string in f]
-    glimpse1 = [f for f in listdir(path1) if isfile(join(path1, f)) and f.endswith(".csv") and "e#0.01" in f and version_string in f]
+    glimpse1 = [f for f in listdir(path1) if isfile(join(path1, f)) and f.endswith(".csv") and "e#1e-05" in f and version_string in f]
     glimpse2 = [f for f in listdir(path1) if isfile(join(path1, f)) and f.endswith(".csv") and "e#0.001" in f and version_string in f]
 
     rows = []
@@ -101,7 +101,7 @@ def printResults(version, use_etf=False, key='K in % of |T|', include_properties
         k = str(p.split("K#")[1].split("e#")[0])
         value = pctf(k) if not use_etf else int(etf[k]*int(k))
         acc = df['%'].sum() / len(df['%'])
-        rows.append({'Accuracy': str(acc), 'Algorithm': "glimpse-2 prob", key: value})
+        rows.append({'Accuracy': str(acc), 'Algorithm': "glimpse-5 prob", key: value})
 
     print("\nGLIMPSE e=0.001")
     for p in glimpse2:

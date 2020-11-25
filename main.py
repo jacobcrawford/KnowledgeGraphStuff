@@ -177,9 +177,9 @@ KG = loadDBPedia('../dbpedia3.9/', include_properties=False)
 for k in [10*(10**-i) for i in range(2, 7)]:
 #    runPagerankExperimentOnceRDF(k, 2, "10",answers_version="RDF", KG_in=KG)
 #    KG.reset()
-#    runGLIMPSEExperimentOnceRDF(k, 1e-2, "10", "RDF", KG_in=KG)
+    runGLIMPSEExperimentOnceRDF(k, 1e-5, "13", "RDF", KG_in=KG)
 #    KG.reset()
-    runGLIMPSEExperimentOnceRDF(k, 1e-5, "12", "RDF", KG_in=KG, include_relationship_prob=True)
+#    runGLIMPSEExperimentOnceRDF(k, 1e-5, "12", "RDF", KG_in=KG, include_relationship_prob=True)
 #    KG.reset()
 
 def fixRDFResults():
