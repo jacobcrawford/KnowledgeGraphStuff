@@ -108,4 +108,3 @@ def GLIMPSE(KG, K, query_log, epsilon=1e-3, power=1, rdf_query_logs=False, inclu
     logging.info("Size of summary before random fill: " + str(S.number_of_triples()))
     S.fill(KG.triples(), K)
     return S
-
