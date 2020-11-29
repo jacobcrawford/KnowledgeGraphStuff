@@ -1,7 +1,7 @@
 # KnowledgeGraphStuff
 
 This is the readme for the implementation work dome in the master thesis of Jacob Crawford.
-The project can be cloned from: https://github.com/jacobcrawford/KnowledgeGraphStuff/blob/master/README.md
+The project can be cloned from: https://github.com/jacobcrawford/KnowledgeGraphStuff
 
 
 The folders of the repo are:
