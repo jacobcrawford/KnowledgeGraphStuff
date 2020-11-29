@@ -6,7 +6,7 @@ This is the readme for the implementation work dome in the master thesis of Jaco
 The folders of the repo are:
 
 * GLIMPSE_personalized_KGsummarization:
-Contains the implementation of the GLIMPSE framework. Code has been modified from the original project. The original project can be found here: https://github.com/GemsLab/GLIMPSE-personalized-KGsummarizationhttps://github.com/GemsLab/GLIMPSE-personalized-KGsummarization
+Contains the implementation of the GLIMPSE framework. Code has been modified from the original project. The original project can be found here: https://github.com/GemsLab/GLIMPSE-personalized-KGsummarization
 
 * experiments_results:
 Contains all results of GLIMPSE experiments
