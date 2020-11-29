@@ -285,7 +285,16 @@ def calculateAccuracyAndTotals(user_log_test_u, summary):
     return np.mean(np.array(accuracies)), total_entities, total_count
 
 
-def runGLIMPSEExperimentOnce(k, e,version, answers_version, kg_path):
+def runGLIMPSEExperimentOnce(k_pct, e,version, answers_version, kg_path):
+    """
+    Run one instance of the
+    :param k: k in pct of T
+    :param e: sampling parameter
+    :param version: Version to use in output file
+    :param answers_version: Version of answers to use. Most recent is 2
+    :param kg_path: Path to the folder of the DBPedia3.9 files
+    :return:
+    """
     path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
     number_of_users = len(user_log_answer_files)
@@ -303,7 +312,7 @@ def runGLIMPSEExperimentOnce(k, e,version, answers_version, kg_path):
 
     user_log_train, user_log_test = makeTrainingAndTestData(number_of_users,user_answers, KG)
 
-    k = k*KG.number_of_triples()
+    k = k_pct*KG.number_of_triples()
 
     logging.info("KG entities: " + str(KG.number_of_entities()))
     logging.info("KG triples: " + str(KG.number_of_triples_))
@@ -327,13 +336,25 @@ def runGLIMPSEExperimentOnce(k, e,version, answers_version, kg_path):
     pd.DataFrame(rows).to_csv("experiments_results/v" + version + "T#" + str(KG.number_of_triples()) + "_E#" + str(
         KG.number_of_entities()) + "K#" + str(int(k)) + "e#" + str(e) + ".csv")
 
-def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path, split, retrain=False):
+def runGLIMPSEDynamicExperiment(k_pct, e,version, answers_version, kg_path, split, retrain=False, only_last=False):
+    """
+    Run dynamic experiments of glimpse
+    :param k_pct: k in pct of T
+    :param e: Sampling parameter
+    :param version: Version of experiment. Output file depends on the version
+    :param answers_version: Version of answer to use. Last i 2
+    :param kg_path: Path to the folder of the DBPedia3.9 files
+    :param split: number in [0,1]. Decides the size of one split.
+    :param retrain: Weather or not to retrain
+    :param only_last: Weather or not to retrain only on last interval.
+    :return: Output file to "experiments_results"
+    """
     path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
 
 
     KG = loadDBPedia(kg_path)
-    k = k * KG.number_of_triples()
+    k = k_pct * KG.number_of_triples()
 
     logging.info("KG entities: " + str(KG.number_of_entities()))
     logging.info("KG triples: " + str(KG.number_of_triples_))
@@ -371,10 +392,10 @@ def runGLIMPSEDynamicExperiment(k, e,version, answers_version, kg_path, split, r
                 res = {}
                 for i in range(0,len(user_data_split)-1):
                     train = []
-                    if str(version) == "7":
+                    if not only_last:
                         for j in range(0,i+1):
                             train = train + user_data_split[j][idx_u]
-                    elif str(version) == "8":
+                    else:
                         train = user_data_split[i][idx_u]
                         logging.info("training only on last interval")
                     test = user_data_split[i+1][idx_u]
@@ -441,6 +462,18 @@ def calculateMeanAccuracyRDF(test_log, summary):
     return np.mean(np.array(accuracies))
 
 def runGLIMPSEExperimentOnceRDF(k_in_pct, e,version, answers_version, kg_path=None, include_relationship_prob=False, include_properties=False,KG_in=None):
+    """
+
+    :param k_in_pct: k in pct of T
+    :param e: sampling parameter
+    :param version: Version to use in output file
+    :param answers_version: Version of answers to use. Most recent is 2
+    :param kg_path: Path to the folder of the DBPedia3.9 files
+    :param include_relationship_prob:  Include probability of a relationship or not
+    :param include_properties: Include properties or not
+    :param KG_in: Input KG object to use. If none is given the KG will be loaded.
+    :return:
+    """
     path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
     KG = loadDBPedia(kg_path, include_properties=include_properties) if KG_in is None else KG_in
@@ -471,6 +504,16 @@ def runGLIMPSEExperimentOnceRDF(k_in_pct, e,version, answers_version, kg_path=No
         KG.number_of_entities()) + "K#" + str(int(k)) + "e#" + str(e) + ".csv")
 
 def runPagerankExperimentOnceRDF(k_in_pct,ppr,version,answers_version, kg_path=None, KG_in=None):
+    """
+
+    :param k_in_pct: k in pct of T
+    :param ppr: random walk length
+    :param version: Version to use in output file
+    :param answers_version: Version of answers to use. Most recent is 2
+    :param kg_path: Path to the folder of the DBPedia3.9 files
+    :param KG_in: Input KG object to use. If none is given the KG will be loaded.
+    :return:
+    """
     logging.info("Starting ppr" + str(ppr) + " for k=" + str(k_in_pct))
     KG = loadDBPedia(kg_path, include_properties=True) if KG_in is None else KG_in
     path = "user_query_log_answers" + answers_version + "/"
@@ -527,14 +570,23 @@ def runPagerankExperimentOnceRDF(k_in_pct,ppr,version,answers_version, kg_path=N
             KG.number_of_entities()) + "_K#" + str(int(k)) + "_PPR#" + str(ppr) + ".csv")
     logging.info("Done")
 
-def pageRankExperimentOnce(k,ppr,version,answers_version, kg_path):
+def pageRankExperimentOnce(k_in_pct,ppr,version,answers_version, kg_path):
+    """
+
+    :param k_in_pct: k in pct of T
+    :param ppr: random walk length
+    :param version: Version to use in output file
+    :param answers_version: Version of answers to use. Most recent is 2
+    :param kg_path: Path to the folder of the DBPedia3.9 files
+    :return:
+    """
     logging.info("Starting ppr"+str(ppr)+" for k="+ str(k))
     KG = loadDBPedia(kg_path)
     path = "user_query_log_answers" + answers_version + "/"
     user_log_answer_files = [f for f in listdir(path) if isfile(join(path, f)) and f.endswith(".csv")]
     number_of_users = len(user_log_answer_files)
 
-    k = k*KG.number_of_triples()
+    k = k_in_pct*KG.number_of_triples()
 
     user_answers = []
     user_ids = []

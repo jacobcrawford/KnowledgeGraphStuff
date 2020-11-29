@@ -21,18 +21,15 @@ def downLoadDBPedia39():
     url = 'http://downloads.dbpedia.org/3.9/en/'
     ext = 'nt.bz2'
     print('Beginning file download with urllib2...')
-    download = False
+
     for file in listFD(url, ext):
         name = str(file)
         print(name)
-        if name == "http://downloads.dbpedia.org/3.9/en//old_interlanguage_links_see_also_chapters_en.nt.bz2":
-            print("Resume download")
-            download = True
-        if download:
-            name = file.split("http://downloads.dbpedia.org/3.9/en//")[1]
 
-            urllib.request.urlretrieve(file, './DBPedia3.9Full/' + name)
-            print("Downloaded")
+        name = file.split("http://downloads.dbpedia.org/3.9/en//")[1]
+
+        urllib.request.urlretrieve(file, './DBPedia3.9Full/' + name)
+        print("Downloaded")
 
 def makeUniqueIriFiles():
     path = "./DBPedia3.9Full"
